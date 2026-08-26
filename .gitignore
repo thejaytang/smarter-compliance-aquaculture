@@ -1,0 +1,6 @@
+# Customer source material is retained locally but must not be committed.
+04_Customer_Examples_CONFIDENTIAL/**
+!04_Customer_Examples_CONFIDENTIAL/README.txt
+
+# Customer onboarding data and internal links are retained locally only.
+01_Project_Documents/Onboarding process and templates/
