@@ -1,0 +1,755 @@
+{
+  "schema_version": "2.0",
+  "sample_id": "salmon-cod-standard-p027-p028-holdout",
+  "source": {
+    "file_name": "ASC-STD-010-ASC-Salmon-and-Cod-Standard-V1.5-Oct-2025-1.pdf",
+    "sha256": "a34e5f4fc78486136ddbf3d661d26aad85e4b8a1990b2e6eda3f3ac1df7f7b5c",
+    "language": "en",
+    "document_family": "certification_standard",
+    "page_count": 134
+  },
+  "sample": {
+    "round_id": "goal04-round3",
+    "split": "holdout",
+    "page_numbers": [27, 28],
+    "selection_rationale": "Human pages 27-28 contain one Requirement template spanning two pages. The template header appears on page 27 and is not repeated on page 28; all six numbered Requirement rows are complete by the end of page 28."
+  },
+  "annotation": {
+    "status": "frozen",
+    "frozen_at": "2026-08-28",
+    "verification": ["visual_page", "native_text"],
+    "notes": [
+      "All bounding boxes use PDF points with a top-left origin and were checked against rendered pages and the native text layer.",
+      "The page-27 INDICATOR and REQUIREMENT headers are related context for all rows on both pages; page 28 intentionally has no repeated template header.",
+      "Footnote 36 is physically attached to the page-28 Requirement value immediately above the Requirement that it explicitly scopes; both physical and semantic links are preserved."
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "p027-header",
+      "page_number": 27,
+      "page_index": 26,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 396.91, "y0": 37.54, "x1": 545.89, "y1": 45.10},
+      "role": "header",
+      "object_kind": "text_block",
+      "segment_order": 0,
+      "source_text": "Aquaculture Stewardship Council"
+    },
+    {
+      "segment_id": "p027-prior-rationale",
+      "page_number": 27,
+      "page_index": 26,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 56.64, "y0": 64.57, "x1": 542.42, "y1": 328.98},
+      "role": "rationale",
+      "object_kind": "text_block",
+      "segment_order": 1,
+      "source_text": "consider include marine-protected areas or national parks, established migratory routes for marine mammals, threatened or endangered species, the habitat needed for endangered and threatened species to recover, eelgrass beds and HCVAs, where these have been defined. These requirements are consistent with the Global Reporting Index indicators GRI 304 and GRI 305, which relate to the identification and description of significant impacts of activities on biodiversity, protected habitats and threatened species, and the communication of strategies to manage these impacts and restore sensitive habitats (as defined by the assessment carried out for indicator 2.4.1).28\nThe requirements under Criteria 2.4 ensure that a farm is aware of any nearby critical, sensitive or protected areas, understands the impacts it might have on those areas, and has a functioning plan in place to address those potential impacts. They also ensure that extra care is taken in areas that are recognised for ecological importance either through designation as a protected area or through designation as being an area of high conservation value, by not allowing production in these areas to be eligible for certification, with some exceptions made if extra conditions are met to ensure that the farms are compatible with the conservation goals of the areas."
+    },
+    {
+      "segment_id": "p027-criterion-heading",
+      "page_number": 27,
+      "page_index": 26,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 92.18, "y0": 346.08, "x1": 485.54, "y1": 358.26},
+      "role": "criterion_heading",
+      "object_kind": "text_block",
+      "segment_order": 2,
+      "source_text": "Criterion 2.5 Interaction with wildlife, including predators29"
+    },
+    {
+      "segment_id": "p027-template-header-indicator",
+      "page_number": 27,
+      "page_index": 26,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 172.34, "y0": 391.26, "x1": 244.27, "y1": 403.26},
+      "role": "other",
+      "object_kind": "table_cell",
+      "segment_order": 3,
+      "source_text": "INDICATOR"
+    },
+    {
+      "segment_id": "p027-template-header-requirement",
+      "page_number": 27,
+      "page_index": 26,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 412.87, "y0": 391.26, "x1": 506.76, "y1": 403.26},
+      "role": "other",
+      "object_kind": "table_cell",
+      "segment_order": 4,
+      "source_text": "REQUIREMENT"
+    },
+    {
+      "segment_id": "p027-req-2-5-1-id",
+      "page_number": 27,
+      "page_index": 26,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 62.54, "y0": 435.68, "x1": 83.80, "y1": 446.72},
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 5,
+      "source_text": "2.5.1"
+    },
+    {
+      "segment_id": "p027-req-2-5-1-indicator",
+      "page_number": 27,
+      "page_index": 26,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 92.30, "y0": 435.68, "x1": 346.89, "y1": 473.60},
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 6,
+      "source_text": "Number of days in the production cycle when acoustic deterrent devices (ADDs) or acoustic harassment devices (AHDs) were used"
+    },
+    {
+      "segment_id": "p027-req-2-5-1-value",
+      "page_number": 27,
+      "page_index": 26,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 456.10, "y0": 449.12, "x1": 463.41, "y1": 460.16},
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 7,
+      "source_text": "0"
+    },
+    {
+      "segment_id": "p027-req-2-5-2-id",
+      "page_number": 27,
+      "page_index": 26,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 62.54, "y0": 506.00, "x1": 86.08, "y1": 517.04},
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 8,
+      "source_text": "2.5.2"
+    },
+    {
+      "segment_id": "p027-req-2-5-2-indicator",
+      "page_number": 27,
+      "page_index": 26,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 94.58, "y0": 505.46, "x1": 349.17, "y1": 530.48},
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 9,
+      "source_text": "Number of mortalities30 of endangered or red-listed31 marine mammals or birds on the farm"
+    },
+    {
+      "segment_id": "p027-req-2-5-2-value",
+      "page_number": 27,
+      "page_index": 26,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 456.10, "y0": 512.72, "x1": 463.41, "y1": 523.76},
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 10,
+      "source_text": "0"
+    },
+    {
+      "segment_id": "p027-footnote-28",
+      "page_number": 27,
+      "page_index": 26,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 56.64, "y0": 586.01, "x1": 548.91, "y1": 617.48},
+      "role": "auditor_action",
+      "object_kind": "footnote",
+      "segment_order": 11,
+      "source_text": "28 Verification at the aquaculture facility shall include whether restoration is necessary to what degree (evidence could include maps, aerial photos, satellite images, government certification etc.) and whether that the active restoration is suitable (i.e., will it be successful and restore a suitable area of sensitive habitat)."
+    },
+    {
+      "segment_id": "p027-footnote-29",
+      "page_number": 27,
+      "page_index": 26,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 56.64, "y0": 625.01, "x1": 359.32, "y1": 634.40},
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 12,
+      "source_text": "29 See Appendix VI for transparency requirements for 2.5.2 and 2.5.5."
+    },
+    {
+      "segment_id": "p027-footnote-30",
+      "page_number": 27,
+      "page_index": 26,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 56.64, "y0": 641.93, "x1": 546.36, "y1": 662.36},
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 13,
+      "source_text": "30 Mortalities: Includes animals intentionally killed through lethal action as well as accidental deaths through entanglement or other means."
+    },
+    {
+      "segment_id": "p027-footnote-31",
+      "page_number": 27,
+      "page_index": 26,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 56.64, "y0": 669.89, "x1": 545.05, "y1": 679.28},
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 14,
+      "source_text": "31 Species listed as endangered or critically endangered by the IUCN or on a national endangered species list."
+    },
+    {
+      "segment_id": "p027-footer",
+      "page_number": 27,
+      "page_index": 26,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 88.82, "y0": 705.40, "x1": 513.13, "y1": 740.68},
+      "role": "footer",
+      "object_kind": "table_cell",
+      "segment_order": 15,
+      "source_text": "Document Name: ASC Salmon and Cod Standard Document ID: ASC-STD-010 Date issued: 13/10/2025 Document Owner: Director of Standards and Science Version: 1.5 Last reviewed: 13/10/2025 Classification: EXTERNAL (PUBLIC) Page 27 of 134"
+    },
+    {
+      "segment_id": "p028-header",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 396.91, "y0": 37.54, "x1": 545.89, "y1": 45.10},
+      "role": "header",
+      "object_kind": "text_block",
+      "segment_order": 16,
+      "source_text": "Aquaculture Stewardship Council"
+    },
+    {
+      "segment_id": "p028-req-2-5-3-id",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 62.54, "y0": 82.95, "x1": 86.04, "y1": 93.99},
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 17,
+      "source_text": "2.5.3"
+    },
+    {
+      "segment_id": "p028-req-2-5-3-indicator",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 94.58, "y0": 82.95, "x1": 350.79, "y1": 237.27},
+      "role": "indicator_text",
+      "object_kind": "list",
+      "segment_order": 18,
+      "source_text": "Evidence that the following steps were taken prior to lethal action32 against a predator:\n1. All other avenues were pursued prior to using lethal action\n2. Approval was given from a senior manager above the farm manager\n3. Explicit permission was granted to take lethal action against the specific animal from the relevant regulatory authority"
+    },
+    {
+      "segment_id": "p028-req-2-5-3-value",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 446.71, "y0": 151.05, "x1": 472.95, "y1": 162.63},
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 19,
+      "source_text": "Yes33"
+    },
+    {
+      "segment_id": "p028-req-2-5-4-id",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 62.54, "y0": 263.70, "x1": 87.00, "y1": 274.74},
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 20,
+      "source_text": "2.5.4"
+    },
+    {
+      "segment_id": "p028-req-2-5-4-indicator",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 95.66, "y0": 263.70, "x1": 337.22, "y1": 301.50},
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 21,
+      "source_text": "Evidence that information about any lethal incidents on the farm has been made easily publicly available34"
+    },
+    {
+      "segment_id": "p028-req-2-5-4-value",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 450.34, "y0": 277.14, "x1": 469.40, "y1": 288.18},
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 22,
+      "source_text": "Yes"
+    },
+    {
+      "segment_id": "p028-req-2-5-5-id",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 62.54, "y0": 340.62, "x1": 86.06, "y1": 351.66},
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 23,
+      "source_text": "2.5.5"
+    },
+    {
+      "segment_id": "p028-req-2-5-5-indicator",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 94.58, "y0": 340.08, "x1": 346.21, "y1": 365.10},
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 24,
+      "source_text": "Maximum number of lethal incidents35 on the farm over the prior two years"
+    },
+    {
+      "segment_id": "p028-req-2-5-5-value",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 374.23, "y0": 333.36, "x1": 545.27, "y1": 371.82},
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 25,
+      "source_text": "< 9 lethal incidents,36 with no more than two of the incidents being marine mammals"
+    },
+    {
+      "segment_id": "p028-req-2-5-6-id",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 62.54, "y0": 404.22, "x1": 86.53, "y1": 415.26},
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 26,
+      "source_text": "2.5.6"
+    },
+    {
+      "segment_id": "p028-req-2-5-6-indicator",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 95.06, "y0": 404.22, "x1": 347.24, "y1": 468.92},
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 27,
+      "source_text": "In the event of a lethal incident, evidence that an assessment of the risk of lethal incident(s) has been undertaken and demonstration of concrete steps taken by the farm to reduce the risk of future incidences"
+    },
+    {
+      "segment_id": "p028-req-2-5-6-value",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 450.34, "y0": 431.12, "x1": 469.40, "y1": 442.16},
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 28,
+      "source_text": "Yes"
+    },
+    {
+      "segment_id": "p028-footnote-32",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 56.64, "y0": 547.22, "x1": 495.56, "y1": 556.61},
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 29,
+      "source_text": "32 Lethal action: Action taken to deliberately kill an animal, including marine mammals and birds."
+    },
+    {
+      "segment_id": "p028-footnote-33",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 56.64, "y0": 564.02, "x1": 552.00, "y1": 595.52},
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 30,
+      "source_text": "33 Exception to these conditions may be made for a rare situation where human safety is endangered. Should this be required, post-incident approval from a senior manager should be made and relevant authorities must be informed."
+    },
+    {
+      "segment_id": "p028-footnote-34",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 56.64, "y0": 602.93, "x1": 522.60, "y1": 623.48},
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 31,
+      "source_text": "34 Posting results on a public website is an example of “easily publicly available.” Shall be made available within 30 days of the incident"
+    },
+    {
+      "segment_id": "p028-footnote-35",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 56.64, "y0": 630.89, "x1": 543.90, "y1": 651.44},
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 32,
+      "source_text": "35 Lethal incident: Includes all lethal actions as well as entanglements or other accidental mortalities of non-salmonids."
+    },
+    {
+      "segment_id": "p028-footnote-36",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 56.64, "y0": 658.85, "x1": 546.46, "y1": 679.28},
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 33,
+      "source_text": "36 Standard 2.5.6 applicable to incidents related to non-endangered and non-red-listed species. This standard complements, and does not contradict, 2.5.3."
+    },
+    {
+      "segment_id": "p028-footer",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 88.82, "y0": 705.40, "x1": 513.13, "y1": 740.68},
+      "role": "footer",
+      "object_kind": "table_cell",
+      "segment_order": 34,
+      "source_text": "Document Name: ASC Salmon and Cod Standard Document ID: ASC-STD-010 Date issued: 13/10/2025 Document Owner: Director of Standards and Science Version: 1.5 Last reviewed: 13/10/2025 Classification: EXTERNAL (PUBLIC) Page 28 of 134"
+    }
+  ],
+  "requirements": [
+    {
+      "requirement_id": "2.5.1",
+      "requirement_form": "indicator_plus_value",
+      "criterion_path": [
+        "PRINCIPLE 2: CONSERVE NATURAL HABITAT, LOCAL BIODIVERSITY AND ECOSYSTEM FUNCTION",
+        "Criterion 2.5 Interaction with wildlife, including predators"
+      ],
+      "language": "en",
+      "indicator_text": "Number of days in the production cycle when acoustic deterrent devices (ADDs) or acoustic harassment devices (AHDs) were used",
+      "requirement_value": "0",
+      "normative_text": "Number of days in the production cycle when acoustic deterrent devices (ADDs) or acoustic harassment devices (AHDs) were used\n0",
+      "normative_subjects": [],
+      "applicability": ["production cycle"],
+      "modalities": [],
+      "negations": [],
+      "clauses": [
+        {"clause_id": "2.5.1-a", "parent_clause_id": null, "marker": null, "text": "Number of days in the production cycle when acoustic deterrent devices (ADDs) or acoustic harassment devices (AHDs) were used: 0", "joins_next": null}
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [
+        {
+          "raw_text": "0",
+          "operator": "eq",
+          "normalized_value": 0,
+          "unit": "days per production cycle",
+          "applies_to": "use of acoustic deterrent devices or acoustic harassment devices",
+          "basis": "explicit",
+          "source_segment_ids": ["p027-req-2-5-1-value"]
+        }
+      ],
+      "dates": [],
+      "cross_references": [],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["p027-criterion-heading", "p027-template-header-indicator", "p027-template-header-requirement"],
+      "source_segment_ids": ["p027-req-2-5-1-id", "p027-req-2-5-1-indicator", "p027-req-2-5-1-value"],
+      "source_anomalies": [],
+      "gold_notes": []
+    },
+    {
+      "requirement_id": "2.5.2",
+      "requirement_form": "indicator_plus_value",
+      "criterion_path": [
+        "PRINCIPLE 2: CONSERVE NATURAL HABITAT, LOCAL BIODIVERSITY AND ECOSYSTEM FUNCTION",
+        "Criterion 2.5 Interaction with wildlife, including predators"
+      ],
+      "language": "en",
+      "indicator_text": "Number of mortalities of endangered or red-listed marine mammals or birds on the farm",
+      "requirement_value": "0",
+      "normative_text": "Number of mortalities of endangered or red-listed marine mammals or birds on the farm\n0",
+      "normative_subjects": [],
+      "applicability": ["endangered or red-listed marine mammals or birds on the farm"],
+      "modalities": [],
+      "negations": [],
+      "clauses": [
+        {"clause_id": "2.5.2-a", "parent_clause_id": null, "marker": null, "text": "Number of mortalities of endangered or red-listed marine mammals or birds on the farm: 0", "joins_next": null}
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [
+        {
+          "raw_text": "0",
+          "operator": "eq",
+          "normalized_value": 0,
+          "unit": "mortalities",
+          "applies_to": "endangered or red-listed marine mammals or birds on the farm",
+          "basis": "explicit",
+          "source_segment_ids": ["p027-req-2-5-2-value"]
+        }
+      ],
+      "dates": [],
+      "cross_references": [
+        {"text": "Appendix VI", "target": "Appendix VI", "type": "internal_exact"},
+        {"text": "IUCN", "target": "IUCN endangered and critically endangered species list", "type": "external_document"},
+        {"text": "national endangered species list", "target": "national endangered species list", "type": "external_document"}
+      ],
+      "footnote_refs": [
+        {"marker": "29", "text": "See Appendix VI for transparency requirements for 2.5.2 and 2.5.5.", "link_type": "inherited", "source_segment_ids": ["p027-footnote-29"]},
+        {"marker": "30", "text": "Mortalities: Includes animals intentionally killed through lethal action as well as accidental deaths through entanglement or other means.", "link_type": "direct", "source_segment_ids": ["p027-footnote-30"]},
+        {"marker": "31", "text": "Species listed as endangered or critically endangered by the IUCN or on a national endangered species list.", "link_type": "direct", "source_segment_ids": ["p027-footnote-31"]}
+      ],
+      "associated_instructions": [
+        {"marker": "29", "text": "See Appendix VI for transparency requirements for 2.5.2 and 2.5.5.", "effect": "procedure", "source_segment_ids": ["p027-footnote-29"]}
+      ],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["p027-criterion-heading", "p027-template-header-indicator", "p027-template-header-requirement"],
+      "source_segment_ids": ["p027-req-2-5-2-id", "p027-req-2-5-2-indicator", "p027-req-2-5-2-value", "p027-footnote-29", "p027-footnote-30", "p027-footnote-31"],
+      "source_anomalies": [],
+      "gold_notes": []
+    },
+    {
+      "requirement_id": "2.5.3",
+      "requirement_form": "indicator_plus_value",
+      "criterion_path": [
+        "PRINCIPLE 2: CONSERVE NATURAL HABITAT, LOCAL BIODIVERSITY AND ECOSYSTEM FUNCTION",
+        "Criterion 2.5 Interaction with wildlife, including predators"
+      ],
+      "language": "en",
+      "indicator_text": "Evidence that the following steps were taken prior to lethal action against a predator: 1. All other avenues were pursued prior to using lethal action; 2. Approval was given from a senior manager above the farm manager; 3. Explicit permission was granted to take lethal action against the specific animal from the relevant regulatory authority",
+      "requirement_value": "Yes",
+      "normative_text": "Evidence that the following steps were taken prior to lethal action against a predator: 1. All other avenues were pursued prior to using lethal action; 2. Approval was given from a senior manager above the farm manager; 3. Explicit permission was granted to take lethal action against the specific animal from the relevant regulatory authority\nYes",
+      "normative_subjects": [],
+      "applicability": ["lethal action against a predator"],
+      "modalities": [
+        {"token": "should", "type": "recommendation", "scope": "post-incident approval from a senior manager should be made"},
+        {"token": "must", "type": "obligation", "scope": "relevant authorities must be informed"}
+      ],
+      "negations": [],
+      "clauses": [
+        {"clause_id": "2.5.3-root", "parent_clause_id": null, "marker": null, "text": "Evidence that the following steps were taken prior to lethal action against a predator:", "joins_next": null},
+        {"clause_id": "2.5.3-a", "parent_clause_id": "2.5.3-root", "marker": "1", "text": "All other avenues were pursued prior to using lethal action", "joins_next": "and"},
+        {"clause_id": "2.5.3-b", "parent_clause_id": "2.5.3-root", "marker": "2", "text": "Approval was given from a senior manager above the farm manager", "joins_next": "and"},
+        {"clause_id": "2.5.3-c", "parent_clause_id": "2.5.3-root", "marker": "3", "text": "Explicit permission was granted to take lethal action against the specific animal from the relevant regulatory authority", "joins_next": null}
+      ],
+      "conditions": [
+        {"text": "prior to lethal action against a predator", "applies_to": "the three required steps"}
+      ],
+      "exceptions": [
+        {"text": "Exception to these conditions may be made for a rare situation where human safety is endangered.", "applies_to": "the three pre-action conditions"}
+      ],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [
+        {"text": "lethal action", "target": "Footnote 32", "type": "defined_term"}
+      ],
+      "footnote_refs": [
+        {"marker": "32", "text": "Lethal action: Action taken to deliberately kill an animal, including marine mammals and birds.", "link_type": "direct", "source_segment_ids": ["p028-footnote-32"]},
+        {"marker": "33", "text": "Exception to these conditions may be made for a rare situation where human safety is endangered. Should this be required, post-incident approval from a senior manager should be made and relevant authorities must be informed.", "link_type": "direct", "source_segment_ids": ["p028-footnote-33"]}
+      ],
+      "associated_instructions": [
+        {"marker": "33", "text": "Exception to these conditions may be made for a rare situation where human safety is endangered. Should this be required, post-incident approval from a senior manager should be made and relevant authorities must be informed.", "effect": "exception", "source_segment_ids": ["p028-footnote-33"]}
+      ],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["p027-criterion-heading", "p027-template-header-indicator", "p027-template-header-requirement"],
+      "source_segment_ids": ["p028-req-2-5-3-id", "p028-req-2-5-3-indicator", "p028-req-2-5-3-value", "p028-footnote-32", "p028-footnote-33"],
+      "source_anomalies": [],
+      "gold_notes": []
+    },
+    {
+      "requirement_id": "2.5.4",
+      "requirement_form": "indicator_plus_value",
+      "criterion_path": [
+        "PRINCIPLE 2: CONSERVE NATURAL HABITAT, LOCAL BIODIVERSITY AND ECOSYSTEM FUNCTION",
+        "Criterion 2.5 Interaction with wildlife, including predators"
+      ],
+      "language": "en",
+      "indicator_text": "Evidence that information about any lethal incidents on the farm has been made easily publicly available",
+      "requirement_value": "Yes",
+      "normative_text": "Evidence that information about any lethal incidents on the farm has been made easily publicly available\nYes",
+      "normative_subjects": [],
+      "applicability": ["any lethal incidents on the farm"],
+      "modalities": [
+        {"token": "Shall", "type": "obligation", "scope": "information shall be made available within 30 days of the incident"}
+      ],
+      "negations": [],
+      "clauses": [
+        {"clause_id": "2.5.4-a", "parent_clause_id": null, "marker": null, "text": "Evidence that information about any lethal incidents on the farm has been made easily publicly available", "joins_next": null}
+      ],
+      "conditions": [
+        {"text": "within 30 days of the incident", "applies_to": "making lethal-incident information publicly available"}
+      ],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [
+        {
+          "raw_text": "within 30 days of the incident",
+          "operator": "lte",
+          "normalized_value": 30,
+          "unit": "days",
+          "applies_to": "time from incident to public availability",
+          "basis": "explicit",
+          "source_segment_ids": ["p028-footnote-34"]
+        }
+      ],
+      "dates": [],
+      "cross_references": [],
+      "footnote_refs": [
+        {"marker": "34", "text": "Posting results on a public website is an example of “easily publicly available.” Shall be made available within 30 days of the incident", "link_type": "direct", "source_segment_ids": ["p028-footnote-34"]}
+      ],
+      "associated_instructions": [
+        {"marker": "34", "text": "Posting results on a public website is an example of “easily publicly available.” Shall be made available within 30 days of the incident", "effect": "procedure", "source_segment_ids": ["p028-footnote-34"]}
+      ],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["p027-criterion-heading", "p027-template-header-indicator", "p027-template-header-requirement"],
+      "source_segment_ids": ["p028-req-2-5-4-id", "p028-req-2-5-4-indicator", "p028-req-2-5-4-value", "p028-footnote-34"],
+      "source_anomalies": [],
+      "gold_notes": []
+    },
+    {
+      "requirement_id": "2.5.5",
+      "requirement_form": "indicator_plus_value",
+      "criterion_path": [
+        "PRINCIPLE 2: CONSERVE NATURAL HABITAT, LOCAL BIODIVERSITY AND ECOSYSTEM FUNCTION",
+        "Criterion 2.5 Interaction with wildlife, including predators"
+      ],
+      "language": "en",
+      "indicator_text": "Maximum number of lethal incidents on the farm over the prior two years",
+      "requirement_value": "< 9 lethal incidents, with no more than two of the incidents being marine mammals",
+      "normative_text": "Maximum number of lethal incidents on the farm over the prior two years\n< 9 lethal incidents, with no more than two of the incidents being marine mammals",
+      "normative_subjects": [],
+      "applicability": ["lethal incidents on the farm over the prior two years"],
+      "modalities": [],
+      "negations": [
+        {"text": "no more than two of the incidents being marine mammals", "applies_to": "the lethal-incident total"}
+      ],
+      "clauses": [
+        {"clause_id": "2.5.5-a", "parent_clause_id": null, "marker": null, "text": "< 9 lethal incidents", "joins_next": "and"},
+        {"clause_id": "2.5.5-b", "parent_clause_id": null, "marker": null, "text": "no more than two of the incidents being marine mammals", "joins_next": null}
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [
+        {
+          "raw_text": "< 9 lethal incidents",
+          "operator": "lt",
+          "normalized_value": 9,
+          "unit": "lethal incidents",
+          "applies_to": "all lethal incidents on the farm over the prior two years",
+          "basis": "explicit",
+          "source_segment_ids": ["p028-req-2-5-5-value"]
+        },
+        {
+          "raw_text": "no more than two of the incidents being marine mammals",
+          "operator": "lte",
+          "normalized_value": 2,
+          "unit": "incidents",
+          "applies_to": "lethal incidents involving marine mammals within the total",
+          "basis": "explicit",
+          "source_segment_ids": ["p028-req-2-5-5-value"]
+        }
+      ],
+      "dates": [
+        {"text": "over the prior two years", "applies_to": "the lethal-incident counting window"}
+      ],
+      "cross_references": [
+        {"text": "Appendix VI", "target": "Appendix VI", "type": "internal_exact"},
+        {"text": "lethal incident", "target": "Footnote 35", "type": "defined_term"},
+        {"text": "Standard 2.5.6", "target": "2.5.6", "type": "internal_exact"},
+        {"text": "2.5.3", "target": "2.5.3", "type": "internal_exact"}
+      ],
+      "footnote_refs": [
+        {"marker": "29", "text": "See Appendix VI for transparency requirements for 2.5.2 and 2.5.5.", "link_type": "inherited", "source_segment_ids": ["p027-footnote-29"]},
+        {"marker": "35", "text": "Lethal incident: Includes all lethal actions as well as entanglements or other accidental mortalities of non-salmonids.", "link_type": "direct", "source_segment_ids": ["p028-footnote-35"]},
+        {"marker": "36", "text": "Standard 2.5.6 applicable to incidents related to non-endangered and non-red-listed species. This standard complements, and does not contradict, 2.5.3.", "link_type": "anomalous", "source_segment_ids": ["p028-footnote-36"]}
+      ],
+      "associated_instructions": [
+        {"marker": "29", "text": "See Appendix VI for transparency requirements for 2.5.2 and 2.5.5.", "effect": "procedure", "source_segment_ids": ["p027-footnote-29"]}
+      ],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["p027-criterion-heading", "p027-template-header-indicator", "p027-template-header-requirement"],
+      "source_segment_ids": ["p028-req-2-5-5-id", "p028-req-2-5-5-indicator", "p028-req-2-5-5-value", "p027-footnote-29", "p028-footnote-35", "p028-footnote-36"],
+      "source_anomalies": ["Footnote marker 36 is physically attached to this Requirement value, but the footnote text explicitly scopes Requirement 2.5.6."],
+      "gold_notes": []
+    },
+    {
+      "requirement_id": "2.5.6",
+      "requirement_form": "indicator_plus_value",
+      "criterion_path": [
+        "PRINCIPLE 2: CONSERVE NATURAL HABITAT, LOCAL BIODIVERSITY AND ECOSYSTEM FUNCTION",
+        "Criterion 2.5 Interaction with wildlife, including predators"
+      ],
+      "language": "en",
+      "indicator_text": "In the event of a lethal incident, evidence that an assessment of the risk of lethal incident(s) has been undertaken and demonstration of concrete steps taken by the farm to reduce the risk of future incidences",
+      "requirement_value": "Yes",
+      "normative_text": "In the event of a lethal incident, evidence that an assessment of the risk of lethal incident(s) has been undertaken and demonstration of concrete steps taken by the farm to reduce the risk of future incidences\nYes",
+      "normative_subjects": ["farm"],
+      "applicability": ["incidents related to non-endangered and non-red-listed species"],
+      "modalities": [],
+      "negations": [],
+      "clauses": [
+        {"clause_id": "2.5.6-a", "parent_clause_id": null, "marker": null, "text": "In the event of a lethal incident, evidence that an assessment of the risk of lethal incident(s) has been undertaken and demonstration of concrete steps taken by the farm to reduce the risk of future incidences", "joins_next": null}
+      ],
+      "conditions": [
+        {"text": "In the event of a lethal incident", "applies_to": "risk assessment and concrete risk-reduction steps"}
+      ],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [
+        {"text": "lethal incident", "target": "Footnote 35", "type": "defined_term"},
+        {"text": "2.5.3", "target": "2.5.3", "type": "internal_exact"}
+      ],
+      "footnote_refs": [
+        {"marker": "35", "text": "Lethal incident: Includes all lethal actions as well as entanglements or other accidental mortalities of non-salmonids.", "link_type": "semantic", "source_segment_ids": ["p028-footnote-35"]},
+        {"marker": "36", "text": "Standard 2.5.6 applicable to incidents related to non-endangered and non-red-listed species. This standard complements, and does not contradict, 2.5.3.", "link_type": "semantic", "source_segment_ids": ["p028-footnote-36"]}
+      ],
+      "associated_instructions": [
+        {"marker": "36", "text": "Standard 2.5.6 applicable to incidents related to non-endangered and non-red-listed species. This standard complements, and does not contradict, 2.5.3.", "effect": "condition", "source_segment_ids": ["p028-footnote-36"]}
+      ],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["p027-criterion-heading", "p027-template-header-indicator", "p027-template-header-requirement"],
+      "source_segment_ids": ["p028-req-2-5-6-id", "p028-req-2-5-6-indicator", "p028-req-2-5-6-value", "p028-footnote-35", "p028-footnote-36"],
+      "source_anomalies": ["Footnote 36 is physically attached to Requirement 2.5.5 but explicitly applies to this Requirement."],
+      "gold_notes": []
+    }
+  ],
+  "excluded_regions": [
+    {
+      "source_segment_ids": ["p027-header", "p027-footer", "p028-header", "p028-footer"],
+      "classification": "header_footer",
+      "reason": "Repeated document furniture, not Requirement content."
+    },
+    {
+      "source_segment_ids": ["p027-prior-rationale"],
+      "classification": "rationale",
+      "reason": "Continuation of the preceding criterion's Rationale, outside the sampled Requirement template."
+    },
+    {
+      "source_segment_ids": ["p027-footnote-28"],
+      "classification": "auditor_action",
+      "reason": "Auditor verification instruction linked to the preceding criterion, not to a sampled Requirement."
+    },
+    {
+      "source_segment_ids": ["p027-criterion-heading", "p027-template-header-indicator", "p027-template-header-requirement"],
+      "classification": "other_non_requirement",
+      "reason": "Criterion and template headers used as hierarchy and inherited table context, not standalone Requirements."
+    }
+  ],
+  "summary": {
+    "requirement_count": 6,
+    "cross_page_requirement_count": 1,
+    "client_action_count": 0,
+    "auditor_action_count": 0,
+    "critical_gold_ambiguities": [
+      "Footnote 36 is physically attached to the Requirement value above the Requirement that its text explicitly scopes; the Gold records an anomalous physical link and a semantic link."
+    ]
+  }
+}

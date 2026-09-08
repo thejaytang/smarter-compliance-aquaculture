@@ -1,0 +1,39 @@
+{
+  "schema_version": "2.0",
+  "round_id": "goal04-round1",
+  "schema": "schema-v2.json",
+  "documents": [
+    {
+      "id": "farm-standard-p028-p029",
+      "split": "active",
+      "pdf": "../../data/inputs/ASC-STD-001-ASC-Farm-Standard-V1.0.1-Aug-2025.pdf",
+      "pages": [28, 29],
+      "gold": "annotations/farm-standard-p028-p029.json",
+      "prediction": "../../outputs/runs/goal04-round1/farm-standard-p028-p029/regulatory-ir.json"
+    },
+    {
+      "id": "interpretation-manual-p019-p021",
+      "split": "active",
+      "pdf": "../../data/inputs/ASC-INT-001-ASC-Farm-Standard-Interpretation-Manual-V1.0-May-2025.pdf",
+      "pages": [19, 20, 21],
+      "gold": "annotations/interpretation-manual-p019-p021.json",
+      "prediction": "../../outputs/runs/goal04-round1/interpretation-manual-p019-p021/regulatory-ir.json"
+    },
+    {
+      "id": "audit-manual-p001-p003",
+      "split": "active",
+      "pdf": "../../data/inputs/download-module-691-ASC-Salmon-Audit-Manual_v1.4.pdf",
+      "pages": [1, 2, 3],
+      "gold": "annotations/audit-manual-p001-p003.json",
+      "prediction": "../../outputs/runs/goal04-round1/audit-manual-p001-p003/regulatory-ir.json"
+    },
+    {
+      "id": "salmon-cod-standard-p018",
+      "split": "holdout",
+      "pdf": "../../data/inputs/ASC-STD-010-ASC-Salmon-and-Cod-Standard-V1.5-Oct-2025-1.pdf",
+      "pages": [18],
+      "gold": "annotations/salmon-cod-standard-p018.json",
+      "prediction": "../../outputs/runs/goal04-round1/salmon-cod-standard-p018/regulatory-ir.json"
+    }
+  ]
+}

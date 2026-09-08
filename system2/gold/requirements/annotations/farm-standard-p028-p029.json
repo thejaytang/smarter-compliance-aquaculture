@@ -1,0 +1,581 @@
+{
+  "schema_version": "2.0",
+  "sample_id": "farm-standard-p028-p029",
+  "source": {
+    "file_name": "ASC-STD-001-ASC-Farm-Standard-V1.0.1-Aug-2025.pdf",
+    "sha256": "3b0cdf01f72b518710d5af9c1d8ccaa653c381f45053c7b20a102e06c1de4b20",
+    "language": "en",
+    "document_family": "certification_standard",
+    "page_count": 256
+  },
+  "sample": {
+    "round_id": "goal04-round1",
+    "split": "active",
+    "page_numbers": [28, 29],
+    "selection_rationale": "Active sample covering adjacent criterion templates and six normative indicator rows, including multi-line requirements, a quantified lower bound, generic and defined-term references, and coordinated actions with a scoped condition."
+  },
+  "annotation": {
+    "status": "frozen",
+    "frozen_at": "2026-08-28",
+    "verification": ["visual_page", "native_text"],
+    "notes": [
+      "The PDF page numbers and printed footer page numbers are identical for this sample.",
+      "Rows under the Indicators label are formal normative indicators even though the table has no separate Requirement column heading.",
+      "Footnote 4 on page 28 supports the rationale only and is not linked to requirements 1.1.1 or 1.1.2."
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "farm-p028-header",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 394.27, "y0": 33.84192, "x1": 543.26248, "y1": 43.05756},
+      "role": "header",
+      "object_kind": "text_block",
+      "segment_order": 0,
+      "source_text": "Aquaculture Stewardship Council"
+    },
+    {
+      "segment_id": "farm-p028-criterion-1.1",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 66.144, "y0": 70.50128, "x1": 234.632, "y1": 94.93004},
+      "role": "criterion_heading",
+      "object_kind": "text_block",
+      "segment_order": 1,
+      "source_text": "1.1 Legal Compliance"
+    },
+    {
+      "segment_id": "farm-p028-rationale",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 51.0, "y0": 130.57328, "x1": 528.28956, "y1": 277.22948},
+      "role": "rationale",
+      "object_kind": "text_block",
+      "segment_order": 2,
+      "source_text": "Rationale\n\nA legal business complies with applicable laws, licensing, and permit requirements.\n\nA wide variety of laws and regulations apply to aquaculture. Ensuring national laws are followed, and necessary permits and licences are acquired helps to promote a socially and environmentally responsible aquaculture industry. Compliance also benefits a business by enhancing customer trust, increasing revenue, strengthening reputation, and avoiding legal sanctions and fines 4.\n\nThis criterion focuses on the legal compliance of ASC certified farms as the basis of a well-managed business."
+    },
+    {
+      "segment_id": "farm-p028-intent",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 51.0, "y0": 310.07336, "x1": 441.18976, "y1": 321.62948},
+      "role": "other",
+      "object_kind": "text_block",
+      "segment_order": 3,
+      "source_text": "Intent - The aquaculture industry complies with all applicable legal requirements."
+    },
+    {
+      "segment_id": "farm-p028-indicators-label",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.88, "y0": 342.12872, "x1": 109.06952, "y1": 354.26996},
+      "role": "other",
+      "object_kind": "text_block",
+      "segment_order": 4,
+      "source_text": "Indicators:"
+    },
+    {
+      "segment_id": "farm-p028-r1.1.1-id",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.88, "y0": 382.93928, "x1": 77.7462, "y1": 400.05404},
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 5,
+      "source_text": "1.1.1"
+    },
+    {
+      "segment_id": "farm-p028-r1.1.1-text",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.98, "y0": 383.018, "x1": 385.352, "y1": 393.989},
+      "role": "normative_text",
+      "object_kind": "table_cell",
+      "segment_order": 6,
+      "source_text": "The UoC shall hold all applicable legal licences and permits."
+    },
+    {
+      "segment_id": "farm-p028-r1.1.2-id",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.88, "y0": 430.59928, "x1": 80.52612, "y1": 447.71404},
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 7,
+      "source_text": "1.1.2"
+    },
+    {
+      "segment_id": "farm-p028-r1.1.2-text",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.98, "y0": 430.658, "x1": 530.234, "y1": 457.009},
+      "role": "normative_text",
+      "object_kind": "table_cell",
+      "segment_order": 8,
+      "source_text": "The UoC shall comply with all applicable legal requirements, including those relevant to the Criteria within the ASC Farm Standard."
+    },
+    {
+      "segment_id": "farm-p028-rationale-footnote-4",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 51.0, "y0": 752.65728, "x1": 525.13944, "y1": 772.27404},
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 9,
+      "source_text": "4 Widjaja, G. (2024). Managing Legal and Corporate Compliance to Induce and Enhance Business. Law and Humanities Quarterly Reviews, 3(2). https://doi.org/10.31014/aior.1996.03.02.115"
+    },
+    {
+      "segment_id": "farm-p028-footer",
+      "page_number": 28,
+      "page_index": 27,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 59.304, "y0": 792.53664, "x1": 538.77928, "y1": 799.26552},
+      "role": "footer",
+      "object_kind": "text_block",
+      "segment_order": 10,
+      "source_text": "Document Name ASC Farm Standard Document ID ASC-STD-001 Version V1.0.1 Page 28 of 256"
+    },
+    {
+      "segment_id": "farm-p029-header",
+      "page_number": 29,
+      "page_index": 28,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 394.27, "y0": 33.84192, "x1": 543.26248, "y1": 43.05756},
+      "role": "header",
+      "object_kind": "text_block",
+      "segment_order": 11,
+      "source_text": "Aquaculture Stewardship Council"
+    },
+    {
+      "segment_id": "farm-p029-criterion-1.2",
+      "page_number": 29,
+      "page_index": 28,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 68.664, "y0": 71.10128, "x1": 267.284, "y1": 95.53004},
+      "role": "criterion_heading",
+      "object_kind": "text_block",
+      "segment_order": 12,
+      "source_text": "1.2 Management Systems"
+    },
+    {
+      "segment_id": "farm-p029-rationale",
+      "page_number": 29,
+      "page_index": 28,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 51.0, "y0": 134.41328, "x1": 529.09536, "y1": 257.87948},
+      "role": "rationale",
+      "object_kind": "text_block",
+      "segment_order": 13,
+      "source_text": "Rationale\n\nA management system supports an organisation to manage the interrelated parts of the business to achieve its objectives. Management systems include policies, processes and procedures, and vary in complexity depending on the organisation’s context. They can support compliance with laws and regulations, detection and resolution of issues, and monitoring of essential operational activities.\n\nThis Criterion focuses on the development of a management system for the implementation and maintenance of ASC Requirements on ASC certified farms."
+    },
+    {
+      "segment_id": "farm-p029-intent",
+      "page_number": 29,
+      "page_index": 28,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 51.0, "y0": 290.75336, "x1": 538.3038, "y1": 318.50948},
+      "role": "other",
+      "object_kind": "text_block",
+      "segment_order": 14,
+      "source_text": "Intent - The aquaculture industry continuously manages and improves processes to deliver consistent performance against the ASC requirements."
+    },
+    {
+      "segment_id": "farm-p029-indicators-label",
+      "page_number": 29,
+      "page_index": 28,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.88, "y0": 339.12872, "x1": 109.06952, "y1": 351.26996},
+      "role": "other",
+      "object_kind": "text_block",
+      "segment_order": 15,
+      "source_text": "Indicators:"
+    },
+    {
+      "segment_id": "farm-p029-r1.2.1-id",
+      "page_number": 29,
+      "page_index": 28,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.88, "y0": 379.81928, "x1": 80.52766, "y1": 396.93404},
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 16,
+      "source_text": "1.2.1"
+    },
+    {
+      "segment_id": "farm-p029-r1.2.1-text",
+      "page_number": 29,
+      "page_index": 28,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 379.898, "x1": 525.206, "y1": 421.589},
+      "role": "normative_text",
+      "object_kind": "table_cell",
+      "segment_order": 17,
+      "source_text": "The UoC shall develop, implement and maintain a management system to support the implementation of the ASC Requirements that is appropriate to the size and complexity of the UoC."
+    },
+    {
+      "segment_id": "farm-p029-r1.2.2-id",
+      "page_number": 29,
+      "page_index": 28,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.88, "y0": 449.67928, "x1": 83.42758, "y1": 466.79404},
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 18,
+      "source_text": "1.2.2"
+    },
+    {
+      "segment_id": "farm-p029-r1.2.2-text",
+      "page_number": 29,
+      "page_index": 28,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 449.758, "x1": 475.553, "y1": 476.089},
+      "role": "normative_text",
+      "object_kind": "table_cell",
+      "segment_order": 19,
+      "source_text": "The UoC shall appoint at least one member of management responsible for the implementation of the ASC Requirements."
+    },
+    {
+      "segment_id": "farm-p029-r1.2.3-id",
+      "page_number": 29,
+      "page_index": 28,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.88, "y0": 504.27928, "x1": 83.37804, "y1": 521.39404},
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 20,
+      "source_text": "1.2.3"
+    },
+    {
+      "segment_id": "farm-p029-r1.2.3-text",
+      "page_number": 29,
+      "page_index": 28,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 504.358, "x1": 508.393, "y1": 530.689},
+      "role": "normative_text",
+      "object_kind": "table_cell",
+      "segment_order": 21,
+      "source_text": "The UoC shall ensure that relevant employees have the necessary skills and training to implement the ASC Requirements."
+    },
+    {
+      "segment_id": "farm-p029-r1.2.4-id",
+      "page_number": 29,
+      "page_index": 28,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.88, "y0": 558.75928, "x1": 84.65568, "y1": 575.87404},
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 22,
+      "source_text": "1.2.4"
+    },
+    {
+      "segment_id": "farm-p029-r1.2.4-text",
+      "page_number": 29,
+      "page_index": 28,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 558.838, "x1": 515.171, "y1": 600.529},
+      "role": "normative_text",
+      "object_kind": "table_cell",
+      "segment_order": 23,
+      "source_text": "The UoC shall annually review the management system and revise it where necessary to ensure its continued suitability, adequacy and effectiveness in implementing the ASC Requirements."
+    },
+    {
+      "segment_id": "farm-p029-footer",
+      "page_number": 29,
+      "page_index": 28,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 59.304, "y0": 792.53664, "x1": 538.77928, "y1": 799.26552},
+      "role": "footer",
+      "object_kind": "text_block",
+      "segment_order": 24,
+      "source_text": "Document Name ASC Farm Standard Document ID ASC-STD-001 Version V1.0.1 Page 29 of 256"
+    }
+  ],
+  "requirements": [
+    {
+      "requirement_id": "1.1.1",
+      "requirement_form": "normative_indicator",
+      "criterion_path": [
+        "Principle 1: The aquaculture industry ensures legal compliance and effective business management",
+        "Criterion 1.1 - Legal Compliance"
+      ],
+      "language": "en",
+      "indicator_text": "The UoC shall hold all applicable legal licences and permits.",
+      "requirement_value": null,
+      "normative_text": "The UoC shall hold all applicable legal licences and permits.",
+      "normative_subjects": ["The UoC"],
+      "applicability": [],
+      "modalities": [
+        {"token": "shall", "type": "obligation", "scope": "hold all applicable legal licences and permits"}
+      ],
+      "negations": [],
+      "clauses": [
+        {"clause_id": "farm-r1.1.1-c1", "parent_clause_id": null, "marker": null, "text": "hold all applicable legal licences and permits", "joins_next": null}
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["farm-p028-criterion-1.1"],
+      "source_segment_ids": ["farm-p028-r1.1.1-id", "farm-p028-r1.1.1-text"],
+      "source_anomalies": [],
+      "gold_notes": []
+    },
+    {
+      "requirement_id": "1.1.2",
+      "requirement_form": "normative_indicator",
+      "criterion_path": [
+        "Principle 1: The aquaculture industry ensures legal compliance and effective business management",
+        "Criterion 1.1 - Legal Compliance"
+      ],
+      "language": "en",
+      "indicator_text": "The UoC shall comply with all applicable legal requirements, including those relevant to the Criteria within the ASC Farm Standard.",
+      "requirement_value": null,
+      "normative_text": "The UoC shall comply with all applicable legal requirements, including those relevant to the Criteria within the ASC Farm Standard.",
+      "normative_subjects": ["The UoC"],
+      "applicability": [],
+      "modalities": [
+        {"token": "shall", "type": "obligation", "scope": "comply with all applicable legal requirements, including those relevant to the Criteria within the ASC Farm Standard"}
+      ],
+      "negations": [],
+      "clauses": [
+        {"clause_id": "farm-r1.1.2-c1", "parent_clause_id": null, "marker": null, "text": "comply with all applicable legal requirements, including those relevant to the Criteria within the ASC Farm Standard", "joins_next": null}
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [
+        {"text": "the Criteria within the ASC Farm Standard", "target": "ASC Farm Standard criteria", "type": "internal_generic"}
+      ],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["farm-p028-criterion-1.1"],
+      "source_segment_ids": ["farm-p028-r1.1.2-id", "farm-p028-r1.1.2-text"],
+      "source_anomalies": [],
+      "gold_notes": [
+        "The including phrase expands the scope of applicable legal requirements; it is not a condition or exception."
+      ]
+    },
+    {
+      "requirement_id": "1.2.1",
+      "requirement_form": "normative_indicator",
+      "criterion_path": [
+        "Principle 1: The aquaculture industry ensures legal compliance and effective business management",
+        "Criterion 1.2 - Management Systems"
+      ],
+      "language": "en",
+      "indicator_text": "The UoC shall develop, implement and maintain a management system to support the implementation of the ASC Requirements that is appropriate to the size and complexity of the UoC.",
+      "requirement_value": null,
+      "normative_text": "The UoC shall develop, implement and maintain a management system to support the implementation of the ASC Requirements that is appropriate to the size and complexity of the UoC.",
+      "normative_subjects": ["The UoC"],
+      "applicability": [],
+      "modalities": [
+        {"token": "shall", "type": "obligation", "scope": "develop, implement and maintain a management system to support the implementation of the ASC Requirements that is appropriate to the size and complexity of the UoC"}
+      ],
+      "negations": [],
+      "clauses": [
+        {"clause_id": "farm-r1.2.1-c1", "parent_clause_id": null, "marker": null, "text": "develop, implement and maintain a management system to support the implementation of the ASC Requirements that is appropriate to the size and complexity of the UoC", "joins_next": null}
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [
+        {"text": "the ASC Requirements", "target": "ASC Requirements", "type": "defined_term"}
+      ],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["farm-p029-criterion-1.2"],
+      "source_segment_ids": ["farm-p029-r1.2.1-id", "farm-p029-r1.2.1-text"],
+      "source_anomalies": [],
+      "gold_notes": [
+        "The relative clause 'that is appropriate to the size and complexity of the UoC' is annotated as modifying the management system, not the immediately preceding ASC Requirements."
+      ]
+    },
+    {
+      "requirement_id": "1.2.2",
+      "requirement_form": "normative_indicator",
+      "criterion_path": [
+        "Principle 1: The aquaculture industry ensures legal compliance and effective business management",
+        "Criterion 1.2 - Management Systems"
+      ],
+      "language": "en",
+      "indicator_text": "The UoC shall appoint at least one member of management responsible for the implementation of the ASC Requirements.",
+      "requirement_value": null,
+      "normative_text": "The UoC shall appoint at least one member of management responsible for the implementation of the ASC Requirements.",
+      "normative_subjects": ["The UoC"],
+      "applicability": [],
+      "modalities": [
+        {"token": "shall", "type": "obligation", "scope": "appoint at least one member of management responsible for the implementation of the ASC Requirements"}
+      ],
+      "negations": [],
+      "clauses": [
+        {"clause_id": "farm-r1.2.2-c1", "parent_clause_id": null, "marker": null, "text": "appoint at least one member of management responsible for the implementation of the ASC Requirements", "joins_next": null}
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [
+        {
+          "raw_text": "at least one",
+          "operator": "gte",
+          "normalized_value": 1,
+          "unit": "member of management",
+          "applies_to": "members of management appointed responsible for the implementation of the ASC Requirements",
+          "basis": "explicit",
+          "source_segment_ids": ["farm-p029-r1.2.2-text"]
+        }
+      ],
+      "dates": [],
+      "cross_references": [
+        {"text": "the ASC Requirements", "target": "ASC Requirements", "type": "defined_term"}
+      ],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["farm-p029-criterion-1.2"],
+      "source_segment_ids": ["farm-p029-r1.2.2-id", "farm-p029-r1.2.2-text"],
+      "source_anomalies": [],
+      "gold_notes": [
+        "The explicit lower bound 'at least one' is part of the normative sentence and is not a separate requirement-value column."
+      ]
+    },
+    {
+      "requirement_id": "1.2.3",
+      "requirement_form": "normative_indicator",
+      "criterion_path": [
+        "Principle 1: The aquaculture industry ensures legal compliance and effective business management",
+        "Criterion 1.2 - Management Systems"
+      ],
+      "language": "en",
+      "indicator_text": "The UoC shall ensure that relevant employees have the necessary skills and training to implement the ASC Requirements.",
+      "requirement_value": null,
+      "normative_text": "The UoC shall ensure that relevant employees have the necessary skills and training to implement the ASC Requirements.",
+      "normative_subjects": ["The UoC"],
+      "applicability": [],
+      "modalities": [
+        {"token": "shall", "type": "obligation", "scope": "ensure that relevant employees have the necessary skills and training to implement the ASC Requirements"}
+      ],
+      "negations": [],
+      "clauses": [
+        {"clause_id": "farm-r1.2.3-c1", "parent_clause_id": null, "marker": null, "text": "ensure that relevant employees have the necessary skills and training to implement the ASC Requirements", "joins_next": null}
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [
+        {"text": "the ASC Requirements", "target": "ASC Requirements", "type": "defined_term"}
+      ],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["farm-p029-criterion-1.2"],
+      "source_segment_ids": ["farm-p029-r1.2.3-id", "farm-p029-r1.2.3-text"],
+      "source_anomalies": [],
+      "gold_notes": []
+    },
+    {
+      "requirement_id": "1.2.4",
+      "requirement_form": "normative_indicator",
+      "criterion_path": [
+        "Principle 1: The aquaculture industry ensures legal compliance and effective business management",
+        "Criterion 1.2 - Management Systems"
+      ],
+      "language": "en",
+      "indicator_text": "The UoC shall annually review the management system and revise it where necessary to ensure its continued suitability, adequacy and effectiveness in implementing the ASC Requirements.",
+      "requirement_value": null,
+      "normative_text": "The UoC shall annually review the management system and revise it where necessary to ensure its continued suitability, adequacy and effectiveness in implementing the ASC Requirements.",
+      "normative_subjects": ["The UoC"],
+      "applicability": [],
+      "modalities": [
+        {"token": "shall", "type": "obligation", "scope": "annually review the management system and revise it where necessary to ensure its continued suitability, adequacy and effectiveness in implementing the ASC Requirements"}
+      ],
+      "negations": [],
+      "clauses": [
+        {"clause_id": "farm-r1.2.4-c1", "parent_clause_id": null, "marker": null, "text": "annually review the management system", "joins_next": "and"},
+        {"clause_id": "farm-r1.2.4-c2", "parent_clause_id": null, "marker": null, "text": "revise it where necessary to ensure its continued suitability, adequacy and effectiveness in implementing the ASC Requirements", "joins_next": null}
+      ],
+      "conditions": [
+        {"text": "where necessary", "applies_to": "revise the management system"}
+      ],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [
+        {"text": "annually", "applies_to": "review the management system"}
+      ],
+      "cross_references": [
+        {"text": "the ASC Requirements", "target": "ASC Requirements", "type": "defined_term"}
+      ],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["farm-p029-criterion-1.2"],
+      "source_segment_ids": ["farm-p029-r1.2.4-id", "farm-p029-r1.2.4-text"],
+      "source_anomalies": [],
+      "gold_notes": [
+        "The shall modality governs both coordinated actions. 'Annually' modifies review, while 'where necessary' modifies revise."
+      ]
+    }
+  ],
+  "excluded_regions": [
+    {
+      "source_segment_ids": ["farm-p028-header", "farm-p028-footer", "farm-p029-header", "farm-p029-footer"],
+      "classification": "header_footer",
+      "reason": "Repeated publisher and document-control furniture is not normative content."
+    },
+    {
+      "source_segment_ids": ["farm-p028-rationale", "farm-p028-rationale-footnote-4", "farm-p029-rationale"],
+      "classification": "rationale",
+      "reason": "The explanatory rationale and its citation motivate the criteria but do not impose auditable obligations."
+    },
+    {
+      "source_segment_ids": ["farm-p028-intent", "farm-p029-intent"],
+      "classification": "other_non_requirement",
+      "reason": "Intent statements describe the intended outcome and are not numbered normative indicators."
+    },
+    {
+      "source_segment_ids": ["farm-p028-indicators-label", "farm-p029-indicators-label"],
+      "classification": "other_non_requirement",
+      "reason": "The Indicators labels are structural table headers, not requirements."
+    }
+  ],
+  "summary": {
+    "requirement_count": 6,
+    "cross_page_requirement_count": 0,
+    "client_action_count": 0,
+    "auditor_action_count": 0,
+    "critical_gold_ambiguities": [
+      "For 1.2.1, the relative clause beginning 'that is appropriate' is resolved as modifying the management system rather than ASC Requirements.",
+      "For 1.2.4, 'annually' is scoped to review and 'where necessary' is scoped to revise; the shall modality governs both actions."
+    ]
+  }
+}

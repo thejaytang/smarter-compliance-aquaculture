@@ -1,0 +1,5246 @@
+{
+  "schema_version": "4.0",
+  "gold_revision": 2,
+  "supersedes": "annotations/audit-manual-p017-p018-round7-holdout.json",
+  "supersedes_sha256": "863987077dc2e1ae8023a9a2f50fc1cb90fd1ea0e30e166cf976cb8152d19e61",
+  "revision_reason": "Migrate semantic scope to source-exact v4 anchors and correct source-adjudicated condition, date, threshold and clause boundaries without changing the source window, source segments or exclusions.",
+  "sample_id": "audit-manual-p017-p018-round7-holdout",
+  "source": {
+    "file_name": "download-module-691-ASC-Salmon-Audit-Manual_v1.4.pdf",
+    "sha256": "911b716d6e4f9aacc1e0c7999dbcf1e009f08c3b322269c748d867006521e76d",
+    "language": "en",
+    "document_family": "audit_manual",
+    "page_count": 30
+  },
+  "sample": {
+    "round_id": "goal04-round7",
+    "split": "holdout",
+    "page_numbers": [
+      17,
+      18
+    ],
+    "selection_rationale": "Untouched dense audit-matrix window containing thirteen formal Requirement rows, Yes/None/percentage/inequality values, linked footnotes, shared and row-specific instructions, numbered clauses, client/CAB actions, source anomalies, and cross-page semantic footnote ownership."
+  },
+  "annotation": {
+    "status": "frozen",
+    "frozen_at": "2026-08-28",
+    "verification": [
+      "visual_page",
+      "native_text",
+      "second_annotator"
+    ],
+    "notes": [
+      "Frozen before any parser prediction or current output for pages 17-18 was inspected.",
+      "Pass 1 transcribed all formal cells, action cells, footnotes and instructions from native source lines while checking the rendered pages.",
+      "Pass 2 independently reconciled the 13-ID sequence, 34 client actions, 35 CAB actions, direct bboxes, footnote ownership and source anomalies against the source-only evidence.",
+      "The dash in the 5.2.2 client-action column is a visual placeholder and is not annotated as an action.",
+      "Source typos and the lowercase 5.2.9 CAB marker are preserved as evidence rather than silently corrected.",
+      "Revision 2 preserves every predecessor source segment and excluded region byte-for-structure; only semantic representation and the one non-source-exact 5.2.5 clause label are revised.",
+      "All v4 scope anchors were recomputed against the frozen segment text after a separate rendered-page review of pages 17-18.",
+      "5.1.6 retains one applicability threshold (> 6%) plus its explicit condition; the repeated wording in the Indicator and Applicability cells is not double-counted as two legal thresholds.",
+      "5.2.4 'after treatments' modifies withholding periods and is not annotated as a conditional trigger.",
+      "5.2.5 includes both source-explicit production-cycle temporal scopes.",
+      "5.2.11 removes the predecessor's complement-clause false condition while retaining the source-explicit before-prescribing temporal scope from footnote 88."
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "p17-r5.1.6-client-a",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 92.03999999999996,
+        "x1": 365.3959999999995,
+        "y1": 109.32000000000005
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 0,
+      "source_text": "a. Use records in 5.1.4a to calculate the unexplained mortality rate (%) for the previous production cycle. If rate was ≤ 6%, then the requirement of 5.1.6 does not apply. If total mortality rate was > 6%, proceed to 5.1.6b."
+    },
+    {
+      "segment_id": "p17-r5.1.6-cab-a",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 95.15999999999997,
+        "x1": 549.3915999999995,
+        "y1": 106.20000000000005
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 1,
+      "source_text": "A. Review, confirm, and document whether 5.1.6 is applicable to the client. If applicable, proceed to 5.1.6B."
+    },
+    {
+      "segment_id": "p17-r5.1.6-indicator",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 100.91999999999996,
+        "x1": 185.5392,
+        "y1": 118.20000000000005
+      },
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 2,
+      "source_text": "Maximum unexplained mortality rate from each of the previous two production cycles, for farms with total mortality > 6%"
+    },
+    {
+      "segment_id": "p17-r5.1.6-client-b",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 121.31999999999994,
+        "x1": 370.6951999999996,
+        "y1": 138.62
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 3,
+      "source_text": "b. Calculate the unexplained mortality rate (%) for each of the two prior production cycles. For first audit, calculation must cover one full production cycle immediately prior to the current cycle."
+    },
+    {
+      "segment_id": "p17-r5.1.6-id",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 60.24,
+        "y0": 122.75999999999999,
+        "x1": 69.8832,
+        "y1": 127.56000000000006
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 4,
+      "source_text": "5.1.6"
+    },
+    {
+      "segment_id": "p17-r5.1.6-cab-b",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 124.43999999999994,
+        "x1": 557.8971999999998,
+        "y1": 135.5
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 5,
+      "source_text": "B. Review and confirm that ≤ 40% of total mortalities were from unexplained causes for each of the two prior production cycles"
+    },
+    {
+      "segment_id": "p17-r5.1.6-value",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 125.88,
+        "x1": 158.36240000000004,
+        "y1": 130.68000000000006
+      },
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 6,
+      "source_text": "≤ 40% of total mortalities"
+    },
+    {
+      "segment_id": "p17-r5.1.6-applicability",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 138.38,
+        "x1": 187.8008000000001,
+        "y1": 149.42000000000007
+      },
+      "role": "applicability",
+      "object_kind": "table_cell",
+      "segment_order": 7,
+      "source_text": "All farms with > 6% total mortality in the most recent complete production cycle."
+    },
+    {
+      "segment_id": "p17-r5.1.6-client-c",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 149.41999999999996,
+        "x1": 361.32079999999934,
+        "y1": 160.46000000000004
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 8,
+      "source_text": "c. Submit data on maximum unexplained mortality to ASC as per Appendix VI for each production cycle."
+    },
+    {
+      "segment_id": "p17-r5.1.6-cab-c",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 152.53999999999996,
+        "x1": 549.305199999999,
+        "y1": 157.34000000000003
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 9,
+      "source_text": "C. Confirm that client has submitted data on unexplained mortality to ASC (Appendix VI)."
+    },
+    {
+      "segment_id": "p17-r5.1.7-option-note",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 170.53999999999996,
+        "x1": 469.2067999999992,
+        "y1": 175.34000000000003
+      },
+      "role": "other",
+      "object_kind": "text_block",
+      "segment_order": 10,
+      "source_text": "Note: Farms have the option to integrate their farm-specific mortality reduction program into the farm's fish health management plan (5.1.1)."
+    },
+    {
+      "segment_id": "p17-r5.1.7-indicator",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 184.10000000000002,
+        "x1": 188.39520000000013,
+        "y1": 207.62
+      },
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 11,
+      "source_text": "A farm-specific mortalities reduction programme that includes defined annual targets for reductions in mortalities and reductions in unexplained mortalities"
+    },
+    {
+      "segment_id": "p17-r5.1.7-client-a",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 186.38,
+        "x1": 372.1975999999995,
+        "y1": 197.42000000000007
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 12,
+      "source_text": "a. Use records in 5.1.4a to assemble a time-series dataset on farm-specific mortalities rates and unexplained mortality rates."
+    },
+    {
+      "segment_id": "p17-r5.1.7-cab-a",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 186.38,
+        "x1": 539.9211999999992,
+        "y1": 197.42000000000007
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 13,
+      "source_text": "A. Confirm that the farm used mortalities records to assemble a detailed dataset on mortality rates which covers the required timeframe (see 5.1.4)."
+    },
+    {
+      "segment_id": "p17-r5.1.7-id",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 60.24,
+        "y0": 205.93999999999994,
+        "x1": 69.8832,
+        "y1": 210.74
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 14,
+      "source_text": "5.1.7"
+    },
+    {
+      "segment_id": "p17-r5.1.7-client-b",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 208.34000000000003,
+        "x1": 370.9111999999996,
+        "y1": 225.62
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 15,
+      "source_text": "b. Use the data in 5.1.7a and advice from the veterinarian and/or fish health manager to develop a mortalities-reduction program that defines annual targets for reductions in total mortality and unexplained mortality."
+    },
+    {
+      "segment_id": "p17-r5.1.7-cab-b",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 211.45999999999992,
+        "x1": 556.2219999999996,
+        "y1": 222.5
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 16,
+      "source_text": "B. Review program to confirm that targets for mortality reduction are reasonable and based on historical data."
+    },
+    {
+      "segment_id": "p17-r5.1.7-value",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 215.29999999999995,
+        "x1": 116.1224,
+        "y1": 220.10000000000002
+      },
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 17,
+      "source_text": "Yes"
+    },
+    {
+      "segment_id": "p17-r5.1.7-applicability",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 227.77999999999997,
+        "x1": 113.204,
+        "y1": 232.58000000000004
+      },
+      "role": "applicability",
+      "object_kind": "table_cell",
+      "segment_order": 18,
+      "source_text": "All"
+    },
+    {
+      "segment_id": "p17-r5.1.7-client-c",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 236.41999999999996,
+        "x1": 372.93199999999945,
+        "y1": 247.46000000000004
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 19,
+      "source_text": "c. Ensure that farm management communicates with the veterinarian, fish health manager, and staff about annual targets and planned actions to meet targets."
+    },
+    {
+      "segment_id": "p17-r5.1.7-cab-c",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 236.41999999999996,
+        "x1": 553.9420000000001,
+        "y1": 247.46000000000004
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 20,
+      "source_text": "C. Interview workers to confirm their understanding of mortalities recording, classification, and annual targets for reduction (see also 5.1.1, 5.1.3)."
+    },
+    {
+      "segment_id": "p17-criterion-5.2",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 51.96,
+        "y0": 252.26,
+        "x1": 131.95680000000007,
+        "y1": 257.06000000000006
+      },
+      "role": "criterion_heading",
+      "object_kind": "text_block",
+      "segment_order": 21,
+      "source_text": "Criterion 5.2 Therapeutic treatments [83]"
+    },
+    {
+      "segment_id": "p17-audit-table-header-5.2",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 56.16,
+        "y0": 258.98,
+        "x1": 510.3771999999999,
+        "y1": 271.58000000000004
+      },
+      "role": "other",
+      "object_kind": "other",
+      "segment_order": 22,
+      "source_text": "Compliance Criteria (Required Client Actions): Auditor Evaluation (Required CAB Actions): Footnote"
+    },
+    {
+      "segment_id": "p17-footnote-83",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 266.29999999999995,
+        "x1": 244.92479999999998,
+        "y1": 271.1
+      },
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 23,
+      "source_text": "[83] See Appendix VI for transparency requirements for 5.2.1, 5.2.6, 5.2.7 and 5.2.10."
+    },
+    {
+      "segment_id": "p17-shared-instruction-5.2",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 51.96,
+        "y0": 278.81000000000006,
+        "x1": 538.7951999999987,
+        "y1": 302.33
+      },
+      "role": "other",
+      "object_kind": "text_block",
+      "segment_order": 24,
+      "source_text": "Instruction to Clients and CABs for Criterion 5.2 - Records Related to Therapeutic Treatments\nIndicator 5.2.1 requires that farms maintain detailed record of all chemical and therapeutant use. Those records maintained for compliance with 5.2.1, if all consolidated into a single place, can be used to demonstrate performance against subsequent Indicators (5.2.1 through 5.2.15) under Criterion 5.2."
+    },
+    {
+      "segment_id": "p17-r5.2.1-client-a",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 316.60999999999996,
+        "x1": 350.75599999999935,
+        "y1": 377.57
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 25,
+      "source_text": "a. Maintain a detailed record of all chemical and therapeutant use that includes: - name of the veterinarian prescribing treatment; - product name and chemical name; - reason for use (specific disease) - date(s) of treatment; - amount (g) of product used; - dosage; - t of fish treated; - the WHO classification of antibiotics (also see note under 5.2.8); and - the supplier of the chemical or therapeutant."
+    },
+    {
+      "segment_id": "p17-r5.2.1-cab-a",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 338.45,
+        "x1": 551.4075999999991,
+        "y1": 355.72999999999996
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 26,
+      "source_text": "A. Review records of chemical and therapeutant use. Verify accuracy through cross-check with purchase orders and sales records, inventories, documentation from feed manufacturer for any in-feed treatment, and veterinary records."
+    },
+    {
+      "segment_id": "p17-r5.2.1-indicator",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 341.45,
+        "x1": 191.0544000000001,
+        "y1": 389.93
+      },
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 27,
+      "source_text": "On-farm documentation that includes, at a minimum, detailed information on all chemicals [84] and therapeutants used during the most recent production cycle, the amounts used (including grams per ton of fish produced), the dates used, which group of fish were treated and against which diseases, proof of proper dosing, and all disease and pathogens detected on the site"
+    },
+    {
+      "segment_id": "p17-r5.2.1-id",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 60.24,
+        "y0": 375.77,
+        "x1": 69.8832,
+        "y1": 380.57
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 28,
+      "source_text": "5.2.1"
+    },
+    {
+      "segment_id": "p17-r5.2.1-client-b",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 394.13,
+        "x1": 373.8919999999995,
+        "y1": 411.43
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 29,
+      "source_text": "b. If not already available, assemble records of chemical and therapeutant use to address all points in 5.2.1a for the two prior production cycles. For first audits, available records must cover one full production cycle immediately prior to the current cycle."
+    },
+    {
+      "segment_id": "p17-r5.2.1-cab-b",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 397.25,
+        "x1": 556.461999999999,
+        "y1": 408.28999999999996
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 30,
+      "source_text": "B. Confirm that farm has detailed records for chemical and therapeutant use that covers the prior two production cycles."
+    },
+    {
+      "segment_id": "p17-r5.2.1-value",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 397.60999999999996,
+        "x1": 116.1224,
+        "y1": 402.40999999999997
+      },
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 31,
+      "source_text": "Yes"
+    },
+    {
+      "segment_id": "p17-r5.2.1-applicability",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 410.10999999999996,
+        "x1": 113.204,
+        "y1": 414.90999999999997
+      },
+      "role": "applicability",
+      "object_kind": "table_cell",
+      "segment_order": 32,
+      "source_text": "All"
+    },
+    {
+      "segment_id": "p17-r5.2.1-client-c",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 428.83,
+        "x1": 371.41519999999946,
+        "y1": 439.87
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 33,
+      "source_text": "c. Submit information on therapeutant use (data from 5.2.1a) to ASC as per Appendix VI on an ongoing basis (i.e., at least once per year and for each production cycle)."
+    },
+    {
+      "segment_id": "p17-r5.2.1-cab-c",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 431.95,
+        "x1": 539.580399999999,
+        "y1": 436.75
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 34,
+      "source_text": "C. Confirm that client has submitted therapeutant information to ASC (Appendix VI)."
+    },
+    {
+      "segment_id": "p17-footnote-84",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 450.31,
+        "x1": 168.2496,
+        "y1": 455.11
+      },
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 35,
+      "source_text": "[84] Chemicals used for the treatment of fish."
+    },
+    {
+      "segment_id": "p17-r5.2.2-client-a",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 463.39,
+        "x1": 373.30159999999955,
+        "y1": 480.67
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 36,
+      "source_text": "a. Prepare a list of therapeutants, including antibiotics and chemicals, that are proactively banned for use in food fish for the primary salmon producing and importing countries listed in [86]."
+    },
+    {
+      "segment_id": "p17-r5.2.2-cab-a",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 469.63,
+        "x1": 452.68119999999976,
+        "y1": 474.43
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 37,
+      "source_text": "A. Review list and supporting evidence."
+    },
+    {
+      "segment_id": "p17-r5.2.2-indicator",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 472.27,
+        "x1": 192.00960000000012,
+        "y1": 495.78999999999996
+      },
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 38,
+      "source_text": "Allowance for use of therapeutic treatments that include antibiotics or chemicals that are banned [85] in any of the primary salmon producing or importing countries [86]"
+    },
+    {
+      "segment_id": "p17-r5.2.2-id",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 60.24,
+        "y0": 494.10999999999996,
+        "x1": 69.8832,
+        "y1": 498.90999999999997
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 39,
+      "source_text": "5.2.2"
+    },
+    {
+      "segment_id": "p17-r5.2.2-client-b",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 495.78999999999996,
+        "x1": 369.83599999999956,
+        "y1": 506.83
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 40,
+      "source_text": "b. Maintain records of voluntary and/or mandatory chemical residue testing conducted or commissioned by the farm from the prior and current production cycles."
+    },
+    {
+      "segment_id": "p17-r5.2.2-cab-b",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 498.54999999999995,
+        "x1": 410.9403999999999,
+        "y1": 503.34999999999997
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 41,
+      "source_text": "B. Verify records."
+    },
+    {
+      "segment_id": "p17-r5.2.2-value",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 503.46999999999997,
+        "x1": 120.0104,
+        "y1": 508.27
+      },
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 42,
+      "source_text": "None"
+    },
+    {
+      "segment_id": "p17-r5.2.2-applicability",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 515.95,
+        "x1": 113.204,
+        "y1": 520.75
+      },
+      "role": "applicability",
+      "object_kind": "table_cell",
+      "segment_order": 43,
+      "source_text": "All"
+    },
+    {
+      "segment_id": "p17-r5.2.2-cab-c",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 520.75,
+        "x1": 555.8571999999995,
+        "y1": 531.79
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 44,
+      "source_text": "C. Cross-check records of therapeutant use (5.2.1a) against the list of banned therapeutants to verify compliance with requirements."
+    },
+    {
+      "segment_id": "p17-footnote-85",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 539.95,
+        "x1": 554.5583999999988,
+        "y1": 551.02
+      },
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 45,
+      "source_text": "[85] 'Banned' means proactively prohibited by a government entity because of concerns around the substance. A substance banned in any of the primary salmon-producing or importing countries, as defined here, cannot be used in any salmon farm certified under the SAD, regardless of country of production or destination of the product."
+    },
+    {
+      "segment_id": "p17-footnote-86",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 556.66,
+        "x1": 320.2463999999996,
+        "y1": 561.46
+      },
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 46,
+      "source_text": "[86] For purposes of this standard, those countries are Norway, the UK, Canada, Chile, the United States, Japan and France."
+    },
+    {
+      "segment_id": "p17-r5.2.3-cab-a",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 569.98,
+        "x1": 557.1915999999992,
+        "y1": 587.26
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 47,
+      "source_text": "A. Review documentary evidence (on-farm records, veterinary records, and prescriptions) to confirm all therapeutants were prescribed by a qualified individual. See [78] for definition of veterinarian."
+    },
+    {
+      "segment_id": "p17-r5.2.3-client-a",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 573.1,
+        "x1": 362.27599999999944,
+        "y1": 584.14
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 48,
+      "source_text": "a. Obtain prescription for all therapeutant use in advance of application from the farm veterinarian (or equivalent, see [78] for definition of veterinarian)."
+    },
+    {
+      "segment_id": "p17-r5.2.3-indicator",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 574.78,
+        "x1": 182.99520000000012,
+        "y1": 585.8199999999999
+      },
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 49,
+      "source_text": "Percentage of medication events that are prescribed by a veterinarian"
+    },
+    {
+      "segment_id": "p17-r5.2.3-id",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 60.24,
+        "y0": 590.38,
+        "x1": 69.8832,
+        "y1": 595.18
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 50,
+      "source_text": "5.2.3"
+    },
+    {
+      "segment_id": "p17-r5.2.3-value",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 593.5,
+        "x1": 120.09199999999998,
+        "y1": 598.3
+      },
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 51,
+      "source_text": "100%"
+    },
+    {
+      "segment_id": "p17-r5.2.3-client-b",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 599.26,
+        "x1": 368.9815999999995,
+        "y1": 616.54
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 52,
+      "source_text": "b. Maintain copies of all prescriptions and records of veterinarian responsible for all medication events. Records can be kept in conjunction with those for 5.2.1 and should be kept for the current and two prior production cycles."
+    },
+    {
+      "segment_id": "p17-r5.2.3-cab-b",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 605.5,
+        "x1": 532.8219999999995,
+        "y1": 610.3
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 53,
+      "source_text": "B. Cross-check with results from chemical residue testing provided under 5.2.2b."
+    },
+    {
+      "segment_id": "p17-r5.2.3-applicability",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 605.98,
+        "x1": 113.204,
+        "y1": 610.78
+      },
+      "role": "applicability",
+      "object_kind": "table_cell",
+      "segment_order": 54,
+      "source_text": "All"
+    },
+    {
+      "segment_id": "p17-r5.2.4-cab-a",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 627.34,
+        "x1": 544.4667999999994,
+        "y1": 638.38
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 55,
+      "source_text": "A. Review the farm's fish health management plan to confirm inclusion of withholding periods and interview farm staff to verify implementation."
+    },
+    {
+      "segment_id": "p17-r5.2.4-client-a",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 630.46,
+        "x1": 373.78159999999957,
+        "y1": 635.26
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 56,
+      "source_text": "a. Incorporate withholding periods into the farm's fish health management plan (see 5.1.1a)."
+    },
+    {
+      "segment_id": "p17-r5.2.4-indicator",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 645.94,
+        "x1": 190.9152000000001,
+        "y1": 656.98
+      },
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 57,
+      "source_text": "Compliance with all withholding periods after treatments"
+    },
+    {
+      "segment_id": "p17-r5.2.4-client-b",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 651.58,
+        "x1": 372.23599999999954,
+        "y1": 668.86
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 58,
+      "source_text": "b. Compile and maintain documentation on legally-required withholding periods for all treatments used on-farm. Withholding period is the time interval after the withdrawal of a drug from the treatment of the salmon before the salmon can be harvested for use as food."
+    },
+    {
+      "segment_id": "p17-r5.2.4-cab-b",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 654.7,
+        "x1": 534.9819999999992,
+        "y1": 665.74
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 59,
+      "source_text": "B. Review documentation for completeness and accuracy. Compare to records of therapeutant use (5.2.1a)."
+    },
+    {
+      "segment_id": "p17-r5.2.4-id",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 60.24,
+        "y0": 661.54,
+        "x1": 69.8832,
+        "y1": 666.34
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 60,
+      "source_text": "5.2.4"
+    },
+    {
+      "segment_id": "p17-r5.2.4-value",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 664.66,
+        "x1": 116.1224,
+        "y1": 669.46
+      },
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 61,
+      "source_text": "Yes"
+    },
+    {
+      "segment_id": "p17-r5.2.4-applicability",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 677.14,
+        "x1": 113.204,
+        "y1": 681.94
+      },
+      "role": "applicability",
+      "object_kind": "table_cell",
+      "segment_order": 62,
+      "source_text": "All"
+    },
+    {
+      "segment_id": "p17-r5.2.4-client-c",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 686.28,
+        "x1": 374.1271999999998,
+        "y1": 697.32
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 63,
+      "source_text": "c. Show compliance with all withholding periods by providing treatment records (see 5.2.1a) and harvest dates."
+    },
+    {
+      "segment_id": "p17-r5.2.4-cab-c",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 686.28,
+        "x1": 550.4619999999994,
+        "y1": 697.32
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 64,
+      "source_text": "C. Review documentary evidence and, if applicable, results from chemical residue testing (5.2.2b), to confirm legal withholding periods were met."
+    },
+    {
+      "segment_id": "p17-footer",
+      "page_number": 17,
+      "page_index": 16,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 54.0,
+        "y0": 757.23,
+        "x1": 556.4558800000004,
+        "y1": 768.51
+      },
+      "role": "footer",
+      "object_kind": "text_block",
+      "segment_order": 65,
+      "source_text": "Audit Manual - ASC Salmon Standard v1.4 Oct 2022\nCopyright (c) Aquaculture Stewardship Council. All rights reserved by Aquaculture Stewardship Council\nPage 17 of 30"
+    },
+    {
+      "segment_id": "p18-r5.2.5-indicator",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 129.60000000000002,
+        "x1": 192.48960000000005,
+        "y1": 178.10000000000002
+      },
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 66,
+      "source_text": "The farm shall publicly report (via Appendix VI) the: 1. Weighted Number of Medicinal Treatments (see Appendix VII) for each production cycle 2. The parasiticide load for each agent over the production cycle 3. The benthic parasiticide residue levels"
+    },
+    {
+      "segment_id": "p18-r5.2.5-client-a",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 137.41999999999996,
+        "x1": 370.08079999999933,
+        "y1": 160.94000000000005
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 67,
+      "source_text": "a. Using farm data for therapeutants usage (5..2.1a) and the calculation presented in Appendix VII, calculate the Weighted Number of Medicinal Treatments (WNMT) score for the most recent production cycle. Calculation should be made and updated on an ongoing basis throughout the cycle by farm manager, fish health manager, and/or veterinarian."
+    },
+    {
+      "segment_id": "p18-r5.2.5-cab-a",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 143.65999999999997,
+        "x1": 549.7323999999993,
+        "y1": 154.70000000000005
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 68,
+      "source_text": "A. Review the farm's calculations to verify that the WNMT score was calculated correctly and that the scores are accurate."
+    },
+    {
+      "segment_id": "p18-r5.2.5-id",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 60.24,
+        "y0": 167.05999999999995,
+        "x1": 69.8832,
+        "y1": 171.86
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 69,
+      "source_text": "5.2.5"
+    },
+    {
+      "segment_id": "p18-r5.2.5-client-b",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 175.10000000000002,
+        "x1": 370.1527999999995,
+        "y1": 186.1400000000001
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 70,
+      "source_text": "b. Provide the auditor with access to records showing how the farm calculated the WMNT score."
+    },
+    {
+      "segment_id": "p18-r5.2.5-cab-b",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 178.22000000000003,
+        "x1": 519.0171999999994,
+        "y1": 183.0200000000001
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 71,
+      "source_text": "B. Verify that the farm level WNMT score is based on the correct records."
+    },
+    {
+      "segment_id": "p18-r5.2.5-value",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 192.01999999999998,
+        "x1": 116.1224,
+        "y1": 196.82000000000005
+      },
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 72,
+      "source_text": "Yes"
+    },
+    {
+      "segment_id": "p18-r5.2.5-client-c",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 195.86,
+        "x1": 366.7255999999995,
+        "y1": 206.9000000000001
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 73,
+      "source_text": "c. Submit data on farm level WMNT score to ASC as per Appendix VI for each production cycle."
+    },
+    {
+      "segment_id": "p18-r5.2.5-cab-c",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 198.98000000000002,
+        "x1": 531.0459999999991,
+        "y1": 203.7800000000001
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 74,
+      "source_text": "C. Confirm that client has submitted data on WMNT score to ASC (Appendix VI)."
+    },
+    {
+      "segment_id": "p18-r5.2.5-applicability",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 204.5,
+        "x1": 113.204,
+        "y1": 209.30000000000007
+      },
+      "role": "applicability",
+      "object_kind": "table_cell",
+      "segment_order": 75,
+      "source_text": "All"
+    },
+    {
+      "segment_id": "p18-r5.2.6-indicator",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 212.05999999999995,
+        "x1": 188.99040000000005,
+        "y1": 229.34000000000003
+      },
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 76,
+      "source_text": "The Weighted Number of Medicinal Treatments shall be at or below the country Entry Level (see Appendix VII)"
+    },
+    {
+      "segment_id": "p18-r5.2.6-client-a",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 217.69999999999993,
+        "x1": 366.70159999999953,
+        "y1": 228.74
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 77,
+      "source_text": "a. Review WNMT scores from 5.2.5a to determine if the score is at or below the Country Entry Level (see Appendix VII)"
+    },
+    {
+      "segment_id": "p18-r5.2.6-cab-a",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 217.69999999999993,
+        "x1": 545.2875999999992,
+        "y1": 228.74
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 78,
+      "source_text": "A. Review farms WNMT scores from 5.2.5a to determine if the score is at or below the Country Entry Level (see Appendix VII)"
+    },
+    {
+      "segment_id": "p18-r5.2.6-id",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 60.24,
+        "y0": 230.65999999999997,
+        "x1": 69.8832,
+        "y1": 235.46000000000004
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 79,
+      "source_text": "5.2.6"
+    },
+    {
+      "segment_id": "p18-r5.2.6-value",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 237.01999999999998,
+        "x1": 116.1224,
+        "y1": 241.82000000000005
+      },
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 80,
+      "source_text": "Yes"
+    },
+    {
+      "segment_id": "p18-r5.2.6-client-b",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 239.41999999999996,
+        "x1": 370.5415999999996,
+        "y1": 250.46000000000004
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 81,
+      "source_text": "b. As applicable, submit data to ASC on WNMT score for the most recent production cycle (Appendix VI)."
+    },
+    {
+      "segment_id": "p18-r5.2.6-cab-b",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 239.41999999999996,
+        "x1": 536.3115999999991,
+        "y1": 250.46000000000004
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 82,
+      "source_text": "B. Confirm that client has submitted data on WNMT score to ASC (Appendix VI) as applicable."
+    },
+    {
+      "segment_id": "p18-r5.2.6-applicability",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 249.5,
+        "x1": 114.2648,
+        "y1": 254.30000000000007
+      },
+      "role": "applicability",
+      "object_kind": "table_cell",
+      "segment_order": 83,
+      "source_text": "All"
+    },
+    {
+      "segment_id": "p18-r5.2.7-cab-a",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 259.22,
+        "x1": 548.1915999999991,
+        "y1": 282.77
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 84,
+      "source_text": "A. Review farm's calculations to verify that WMNT score for the most recent production cycle is at least: 1. 25% less than that of the cycle two years before. 2. At or below the Global Level (see Appendix VII)"
+    },
+    {
+      "segment_id": "p18-r5.2.7-client-a",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 262.34000000000003,
+        "x1": 371.8471999999996,
+        "y1": 279.6500000000001
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 85,
+      "source_text": "a. Every 2 years after achieving 5.2.6, check the WNMT score calculated 2 years before as above (5.2.5a). Calculate the percent difference in WMNT score between current cycle and cycle of 2 years before."
+    },
+    {
+      "segment_id": "p18-r5.2.7-indicator",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 263.78,
+        "x1": 190.08480000000006,
+        "y1": 287.33
+      },
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 86,
+      "source_text": "The farm shall reduce the Weighted Number of Medicinal Treatments, after achieving indicator 5.2.6, with 25% per 2 years until the WNMT is at or below the Global Level (see Appendix VII)."
+    },
+    {
+      "segment_id": "p18-r5.2.7-id",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 60.24,
+        "y0": 285.65,
+        "x1": 69.8832,
+        "y1": 290.45
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 87,
+      "source_text": "5.2.7"
+    },
+    {
+      "segment_id": "p18-r5.2.7-value",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 295.01,
+        "x1": 116.1224,
+        "y1": 299.81
+      },
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 88,
+      "source_text": "Yes"
+    },
+    {
+      "segment_id": "p18-r5.2.7-client-b",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 298.60999999999996,
+        "x1": 369.45679999999965,
+        "y1": 309.65
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 89,
+      "source_text": "b. As applicable, submit data to ASC on WMNT score for the most recent production cycle and the two previous production cycles (Appendix VI)."
+    },
+    {
+      "segment_id": "p18-r5.2.7-cab-b",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 298.60999999999996,
+        "x1": 536.3115999999991,
+        "y1": 309.65
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 90,
+      "source_text": "B. Confirm that client has submitted data on WMNT score to ASC (Appendix VI) as applicable."
+    },
+    {
+      "segment_id": "p18-r5.2.7-applicability",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 307.48999999999995,
+        "x1": 114.2648,
+        "y1": 312.28999999999996
+      },
+      "role": "applicability",
+      "object_kind": "table_cell",
+      "segment_order": 91,
+      "source_text": "All"
+    },
+    {
+      "segment_id": "p18-r5.2.8-indicator",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 325.01,
+        "x1": 182.28000000000003,
+        "y1": 342.28999999999996
+      },
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 92,
+      "source_text": "The farm shall implement Integrated Pest Management (IPM) according to the guidance in Appendix VII."
+    },
+    {
+      "segment_id": "p18-r5.2.8-client-a",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 328.37,
+        "x1": 357.5671999999998,
+        "y1": 339.40999999999997
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 93,
+      "source_text": "a. Implement Integrated Pest Management (IPM) into farm management plans (see Appendix VII)."
+    },
+    {
+      "segment_id": "p18-r5.2.8-cab-a",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 328.37,
+        "x1": 551.3115999999991,
+        "y1": 339.40999999999997
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 94,
+      "source_text": "A. Verify if IMP is implemented at the farms and integrated in the farm management plan (see Appendix VII)."
+    },
+    {
+      "segment_id": "p18-r5.2.8-id",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 60.24,
+        "y0": 343.72999999999996,
+        "x1": 69.8832,
+        "y1": 348.53
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 95,
+      "source_text": "5.2.8"
+    },
+    {
+      "segment_id": "p18-r5.2.8-value",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 349.96999999999997,
+        "x1": 116.1224,
+        "y1": 354.77
+      },
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 96,
+      "source_text": "Yes"
+    },
+    {
+      "segment_id": "p18-r5.2.8-client-b",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 356.45,
+        "x1": 373.40239999999955,
+        "y1": 367.49
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 97,
+      "source_text": "b. Review and update IPM on a production cycle basis to reflect the effectiveness of applied methods and to determine next approaches."
+    },
+    {
+      "segment_id": "p18-r5.2.8-cab-b",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 356.45,
+        "x1": 521.6811999999993,
+        "y1": 361.25
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 98,
+      "source_text": "B. Verify if plan is being reviewed and updated on a production cycle basis."
+    },
+    {
+      "segment_id": "p18-r5.2.8-applicability",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 362.45,
+        "x1": 114.26480000000001,
+        "y1": 367.25
+      },
+      "role": "applicability",
+      "object_kind": "table_cell",
+      "segment_order": 99,
+      "source_text": "All"
+    },
+    {
+      "segment_id": "p18-r5.2.9-indicator",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 376.13,
+        "x1": 189.11520000000007,
+        "y1": 399.65
+      },
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 100,
+      "source_text": "The farm shall public present (e.g., via company website) the IPM-measures that the company applies which need to be approved by a authorised veterinarian."
+    },
+    {
+      "segment_id": "p18-r5.2.9-cab-a",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 382.84999999999997,
+        "x1": 544.2219999999992,
+        "y1": 393.89
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 101,
+      "source_text": "a. Check the company website to verify if the latest version of the IPM is public on the company website."
+    },
+    {
+      "segment_id": "p18-r5.2.9-client-a",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 385.96999999999997,
+        "x1": 334.1575999999997,
+        "y1": 390.77
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 102,
+      "source_text": "a. Ensure the latest version of the IPM is public on the company website"
+    },
+    {
+      "segment_id": "p18-r5.2.9-id",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 60.24,
+        "y0": 397.96999999999997,
+        "x1": 69.8832,
+        "y1": 402.77
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 103,
+      "source_text": "5.2.9"
+    },
+    {
+      "segment_id": "p18-r5.2.9-value",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 407.34999999999997,
+        "x1": 116.1224,
+        "y1": 412.15
+      },
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 104,
+      "source_text": "Yes"
+    },
+    {
+      "segment_id": "p18-r5.2.9-client-b",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 415.15,
+        "x1": 312.94639999999976,
+        "y1": 419.95
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 105,
+      "source_text": "b. Ensure the IPM is signed-off by an authorized veterinarian."
+    },
+    {
+      "segment_id": "p18-r5.2.9-cab-b",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 415.15,
+        "x1": 497.19639999999947,
+        "y1": 419.95
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 106,
+      "source_text": "B. Verify if the IPM is signed-off by an authorized veterinarian."
+    },
+    {
+      "segment_id": "p18-r5.2.9-applicability",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 419.83,
+        "x1": 114.26480000000001,
+        "y1": 424.63
+      },
+      "role": "applicability",
+      "object_kind": "table_cell",
+      "segment_order": 107,
+      "source_text": "All"
+    },
+    {
+      "segment_id": "p18-r5.2.10-guidance-note",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 93.384,
+        "y0": 434.34999999999997,
+        "x1": 543.3895999999987,
+        "y1": 445.39
+      },
+      "role": "other",
+      "object_kind": "text_block",
+      "segment_order": 108,
+      "source_text": "Note Indicator 5.2.10: Guidance on the actual collection/sampling and analysis regarding parasiticide residue levels is pending. ASC will communicate the guidance through the interpretation platform. See QA 111: https://www.asc- aqua.org/what-you-can-do/get-certified/variance-request-interpretation-platform/QA0111/"
+    },
+    {
+      "segment_id": "p18-r5.2.10-client-a",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 467.34999999999997,
+        "x1": 369.9223999999995,
+        "y1": 478.39
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 109,
+      "source_text": "a. Prepare a map of the farm showing boundary of AZE and GPS locations of all sediment collections stations. If the farm uses a site-specific AZE, provide justification [3] to the CAB."
+    },
+    {
+      "segment_id": "p18-r5.2.10-cab-a",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 467.34999999999997,
+        "x1": 554.661999999999,
+        "y1": 478.39
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 110,
+      "source_text": "A. Review map to verify appropriate siting of sampling stations (Appendix I-1) and evidence (if applicable) to justify use of a site specific AZE."
+    },
+    {
+      "segment_id": "p18-r5.2.10-indicator",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 500.46999999999997,
+        "x1": 188.03520000000012,
+        "y1": 517.75
+      },
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 111,
+      "source_text": "The farm shall monitor parasiticide residue levels annually in the benthic sediment directly outside the AZE."
+    },
+    {
+      "segment_id": "p18-r5.2.10-client-b",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 505.98999999999995,
+        "x1": 362.7511999999996,
+        "y1": 517.03
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 112,
+      "source_text": "b. If benthos throughout the full AZE is hard bottom, provide evidence to the CAB and request an exemption from 5.2.10"
+    },
+    {
+      "segment_id": "p18-r5.2.10-cab-b",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 509.10999999999996,
+        "x1": 524.8059999999995,
+        "y1": 513.91
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 113,
+      "source_text": "B. Review evidence of benthic type and confirm whether exemption applies."
+    },
+    {
+      "segment_id": "p18-r5.2.10-id",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 59.04,
+        "y0": 519.19,
+        "x1": 71.0736,
+        "y1": 523.99
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 114,
+      "source_text": "5.2.10"
+    },
+    {
+      "segment_id": "p18-r5.2.10-value",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 525.43,
+        "x1": 116.1224,
+        "y1": 530.23
+      },
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 115,
+      "source_text": "Yes"
+    },
+    {
+      "segment_id": "p18-r5.2.10-applicability",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 537.91,
+        "x1": 114.2648,
+        "y1": 542.71
+      },
+      "role": "applicability",
+      "object_kind": "table_cell",
+      "segment_order": 116,
+      "source_text": "All"
+    },
+    {
+      "segment_id": "p18-r5.2.10-client-c",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 538.75,
+        "x1": 367.91119999999944,
+        "y1": 549.8199999999999
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 117,
+      "source_text": "c. Submit test results to ASC as per Appendix VI at least once for each production cycle. If site has hard bottom and cannot complete tests, report this to ASC."
+    },
+    {
+      "segment_id": "p18-r5.2.10-cab-c",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 541.66,
+        "x1": 511.2507999999993,
+        "y1": 546.46
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 118,
+      "source_text": "C. Confirm that client has submitted test results to ASC (Appendix VI)."
+    },
+    {
+      "segment_id": "p18-r5.2.10-client-d",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 571.54,
+        "x1": 360.3079999999997,
+        "y1": 582.5799999999999
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 119,
+      "source_text": "d. Retain documentary evidence to show how scores were obtained. If samples were analysed an independent laboratory, obtain copies of results."
+    },
+    {
+      "segment_id": "p18-r5.2.10-cab-d",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 571.54,
+        "x1": 551.5707999999992,
+        "y1": 582.5799999999999
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 120,
+      "source_text": "D. Confirm that an approved method was used or that a qualified independent laboratory performed the sampling and analysed the samples."
+    },
+    {
+      "segment_id": "p18-r5.2.11-client-a",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 598.3,
+        "x1": 369.33199999999977,
+        "y1": 609.3399999999999
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 121,
+      "source_text": "a. Maintain records for all purchases of antibiotics (invoices, prescriptions) for the current and prior production cycles."
+    },
+    {
+      "segment_id": "p18-r5.2.11-cab-a",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 598.3,
+        "x1": 553.2219999999992,
+        "y1": 609.3399999999999
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 122,
+      "source_text": "A. Review purchase records and calculate total amount procured by client. Inspect storage areas to verify quantities on-site."
+    },
+    {
+      "segment_id": "p18-r5.2.11-indicator",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 606.1,
+        "x1": 167.40960000000004,
+        "y1": 617.14
+      },
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 123,
+      "source_text": "Allowance for prophylactic use of antimicrobial treatments [88]"
+    },
+    {
+      "segment_id": "p18-r5.2.11-cab-b",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 619.06,
+        "x1": 549.645999999999,
+        "y1": 630.1
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 124,
+      "source_text": "B. Review log of medication events to verify that the quantity of antibiotic applied by the client does not suggest prophylactic use."
+    },
+    {
+      "segment_id": "p18-r5.2.11-id",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 59.04,
+        "y0": 621.7,
+        "x1": 71.0736,
+        "y1": 626.5
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 125,
+      "source_text": "5.2.11"
+    },
+    {
+      "segment_id": "p18-r5.2.11-client-b",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 622.1800000000001,
+        "x1": 357.8455999999999,
+        "y1": 626.98
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 126,
+      "source_text": "b. Maintain a detailed log of all medication-related events (see also 5.2.1a and 5.2.3)"
+    },
+    {
+      "segment_id": "p18-r5.2.11-value",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 624.8199999999999,
+        "x1": 120.0104,
+        "y1": 629.62
+      },
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 127,
+      "source_text": "None"
+    },
+    {
+      "segment_id": "p18-r5.2.11-applicability",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 637.3,
+        "x1": 113.204,
+        "y1": 642.1
+      },
+      "role": "applicability",
+      "object_kind": "table_cell",
+      "segment_order": 128,
+      "source_text": "All"
+    },
+    {
+      "segment_id": "p18-r5.2.11-client-c",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 639.8199999999999,
+        "x1": 368.2663999999995,
+        "y1": 650.86
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 129,
+      "source_text": "c. Calculate the total amount (g) and treatments (#) of antibiotics used during the current and prior production cycles (see also 5.2.13)."
+    },
+    {
+      "segment_id": "p18-r5.2.11-cab-c",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 639.8199999999999,
+        "x1": 555.6507999999991,
+        "y1": 650.86
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 130,
+      "source_text": "C. Verify that the total amount of antibiotics used in the current production cycle is equal to the total amount prescribed."
+    },
+    {
+      "segment_id": "p18-footnote-88",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.944,
+        "y0": 657.22,
+        "x1": 301.65119999999996,
+        "y1": 662.02
+      },
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 131,
+      "source_text": "[88] The designated veterinarian must certify that a pathogen or disease is present before prescribing medication."
+    },
+    {
+      "segment_id": "p18-footer",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 54.0,
+        "y0": 757.23,
+        "x1": 556.4558800000004,
+        "y1": 768.51
+      },
+      "role": "footer",
+      "object_kind": "text_block",
+      "segment_order": 132,
+      "source_text": "Audit Manual - ASC Salmon Standard v1.4 Oct 2022\nCopyright (c) Aquaculture Stewardship Council. All rights reserved by Aquaculture Stewardship Council\nPage 18 of 30"
+    }
+  ],
+  "requirements": [
+    {
+      "requirement_id": "5.1.6",
+      "requirement_form": "audit_matrix",
+      "criterion_path": [
+        "Principle 5",
+        "Criterion 5.1"
+      ],
+      "language": "en",
+      "indicator_text": "Maximum unexplained mortality rate from each of the previous two production cycles, for farms with total mortality > 6%",
+      "requirement_value": "≤ 40% of total mortalities",
+      "normative_text": "Indicator: Maximum unexplained mortality rate from each of the previous two production cycles, for farms with total mortality > 6%\nRequirement: ≤ 40% of total mortalities\nApplicability: All farms with > 6% total mortality in the most recent complete production cycle.",
+      "normative_subjects": [],
+      "applicability": [
+        "All farms with > 6% total mortality in the most recent complete production cycle."
+      ],
+      "modalities": [],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "5.1.6-main",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Indicator: Maximum unexplained mortality rate from each of the previous two production cycles, for farms with total mortality > 6%\nRequirement: ≤ 40% of total mortalities\nApplicability: All farms with > 6% total mortality in the most recent complete production cycle.",
+          "joins_next": null
+        }
+      ],
+      "conditions": [
+        {
+          "text": "for farms with total mortality > 6%",
+          "applies_to": "Maximum unexplained mortality rate from each of the previous two production cycles",
+          "scope_ref": {
+            "kind": "source_span",
+            "target": "indicator_text",
+            "anchors": [
+              {
+                "source_segment_id": "p17-r5.1.6-indicator",
+                "start_char": 0,
+                "end_char": 82,
+                "text": "Maximum unexplained mortality rate from each of the previous two production cycles"
+              }
+            ]
+          }
+        }
+      ],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [
+        {
+          "raw_text": "≤ 40% of total mortalities",
+          "operator": "lte",
+          "normalized_value": 40,
+          "unit": "%",
+          "applies_to": "Maximum unexplained mortality rate",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p17-r5.1.6-value"
+          ],
+          "scope_ref": {
+            "kind": "field",
+            "target": "indicator_text",
+            "anchors": [
+              {
+                "source_segment_id": "p17-r5.1.6-indicator",
+                "start_char": 0,
+                "end_char": 34,
+                "text": "Maximum unexplained mortality rate"
+              }
+            ]
+          }
+        },
+        {
+          "raw_text": "> 6% total mortality",
+          "operator": "gt",
+          "normalized_value": 6,
+          "unit": "%",
+          "applies_to": "All farms with > 6% total mortality in the most recent complete production cycle.",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p17-r5.1.6-applicability"
+          ],
+          "scope_ref": {
+            "kind": "field",
+            "target": "applicability",
+            "anchors": [
+              {
+                "source_segment_id": "p17-r5.1.6-applicability",
+                "start_char": 0,
+                "end_char": 81,
+                "text": "All farms with > 6% total mortality in the most recent complete production cycle."
+              }
+            ]
+          }
+        }
+      ],
+      "dates": [
+        {
+          "text": "each of the previous two production cycles",
+          "applies_to": "Maximum unexplained mortality rate",
+          "scope_ref": {
+            "kind": "source_span",
+            "target": "indicator_text",
+            "anchors": [
+              {
+                "source_segment_id": "p17-r5.1.6-indicator",
+                "start_char": 0,
+                "end_char": 34,
+                "text": "Maximum unexplained mortality rate"
+              }
+            ]
+          }
+        },
+        {
+          "text": "the most recent complete production cycle",
+          "applies_to": "All farms with > 6% total mortality",
+          "scope_ref": {
+            "kind": "source_span",
+            "target": "applicability",
+            "anchors": [
+              {
+                "source_segment_id": "p17-r5.1.6-applicability",
+                "start_char": 0,
+                "end_char": 35,
+                "text": "All farms with > 6% total mortality"
+              }
+            ]
+          }
+        }
+      ],
+      "cross_references": [],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [
+        {
+          "marker": "a",
+          "text": "Use records in 5.1.4a to calculate the unexplained mortality rate (%) for the previous production cycle. If rate was ≤ 6%, then the requirement of 5.1.6 does not apply. If total mortality rate was > 6%, proceed to 5.1.6b.",
+          "source_segment_ids": [
+            "p17-r5.1.6-client-a"
+          ]
+        },
+        {
+          "marker": "b",
+          "text": "Calculate the unexplained mortality rate (%) for each of the two prior production cycles. For first audit, calculation must cover one full production cycle immediately prior to the current cycle.",
+          "source_segment_ids": [
+            "p17-r5.1.6-client-b"
+          ]
+        },
+        {
+          "marker": "c",
+          "text": "Submit data on maximum unexplained mortality to ASC as per Appendix VI for each production cycle.",
+          "source_segment_ids": [
+            "p17-r5.1.6-client-c"
+          ]
+        }
+      ],
+      "auditor_actions": [
+        {
+          "marker": "A",
+          "text": "Review, confirm, and document whether 5.1.6 is applicable to the client. If applicable, proceed to 5.1.6B.",
+          "source_segment_ids": [
+            "p17-r5.1.6-cab-a"
+          ]
+        },
+        {
+          "marker": "B",
+          "text": "Review and confirm that ≤ 40% of total mortalities were from unexplained causes for each of the two prior production cycles",
+          "source_segment_ids": [
+            "p17-r5.1.6-cab-b"
+          ]
+        },
+        {
+          "marker": "C",
+          "text": "Confirm that client has submitted data on unexplained mortality to ASC (Appendix VI).",
+          "source_segment_ids": [
+            "p17-r5.1.6-cab-c"
+          ]
+        }
+      ],
+      "related_context_ids": [],
+      "source_segment_ids": [
+        "p17-r5.1.6-id",
+        "p17-r5.1.6-indicator",
+        "p17-r5.1.6-value",
+        "p17-r5.1.6-applicability"
+      ],
+      "source_anomalies": [],
+      "gold_notes": [
+        "The formal Requirement is the audit-matrix combination of indicator_text, requirement_value and applicability; client and CAB actions remain separate provenance fields."
+      ],
+      "normative_subject_evidence": [],
+      "applicability_evidence": [
+        {
+          "text": "All farms with > 6% total mortality in the most recent complete production cycle.",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p17-r5.1.6-applicability"
+          ],
+          "anchors": [
+            {
+              "source_segment_id": "p17-r5.1.6-applicability",
+              "start_char": 0,
+              "end_char": 81,
+              "text": "All farms with > 6% total mortality in the most recent complete production cycle."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "5.1.7",
+      "requirement_form": "audit_matrix",
+      "criterion_path": [
+        "Principle 5",
+        "Criterion 5.1"
+      ],
+      "language": "en",
+      "indicator_text": "A farm-specific mortalities reduction programme that includes defined annual targets for reductions in mortalities and reductions in unexplained mortalities",
+      "requirement_value": "Yes",
+      "normative_text": "Indicator: A farm-specific mortalities reduction programme that includes defined annual targets for reductions in mortalities and reductions in unexplained mortalities\nRequirement: Yes\nApplicability: All",
+      "normative_subjects": [],
+      "applicability": [
+        "All"
+      ],
+      "modalities": [],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "5.1.7-main",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Indicator: A farm-specific mortalities reduction programme that includes defined annual targets for reductions in mortalities and reductions in unexplained mortalities\nRequirement: Yes\nApplicability: All",
+          "joins_next": null
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [
+        {
+          "text": "annual targets",
+          "applies_to": "reductions in mortalities and reductions in unexplained mortalities",
+          "scope_ref": {
+            "kind": "source_span",
+            "target": "indicator_text",
+            "anchors": [
+              {
+                "source_segment_id": "p17-r5.1.7-indicator",
+                "start_char": 89,
+                "end_char": 156,
+                "text": "reductions in mortalities and reductions in unexplained mortalities"
+              }
+            ]
+          }
+        }
+      ],
+      "cross_references": [
+        {
+          "text": "5.1.1",
+          "target": "Indicator 5.1.1",
+          "type": "internal_exact"
+        }
+      ],
+      "footnote_refs": [],
+      "associated_instructions": [
+        {
+          "marker": "Note",
+          "text": "Note: Farms have the option to integrate their farm-specific mortality reduction program into the farm's fish health management plan (5.1.1).",
+          "effect": "method",
+          "source_segment_ids": [
+            "p17-r5.1.7-option-note"
+          ]
+        }
+      ],
+      "client_actions": [
+        {
+          "marker": "a",
+          "text": "Use records in 5.1.4a to assemble a time-series dataset on farm-specific mortalities rates and unexplained mortality rates.",
+          "source_segment_ids": [
+            "p17-r5.1.7-client-a"
+          ]
+        },
+        {
+          "marker": "b",
+          "text": "Use the data in 5.1.7a and advice from the veterinarian and/or fish health manager to develop a mortalities-reduction program that defines annual targets for reductions in total mortality and unexplained mortality.",
+          "source_segment_ids": [
+            "p17-r5.1.7-client-b"
+          ]
+        },
+        {
+          "marker": "c",
+          "text": "Ensure that farm management communicates with the veterinarian, fish health manager, and staff about annual targets and planned actions to meet targets.",
+          "source_segment_ids": [
+            "p17-r5.1.7-client-c"
+          ]
+        }
+      ],
+      "auditor_actions": [
+        {
+          "marker": "A",
+          "text": "Confirm that the farm used mortalities records to assemble a detailed dataset on mortality rates which covers the required timeframe (see 5.1.4).",
+          "source_segment_ids": [
+            "p17-r5.1.7-cab-a"
+          ]
+        },
+        {
+          "marker": "B",
+          "text": "Review program to confirm that targets for mortality reduction are reasonable and based on historical data.",
+          "source_segment_ids": [
+            "p17-r5.1.7-cab-b"
+          ]
+        },
+        {
+          "marker": "C",
+          "text": "Interview workers to confirm their understanding of mortalities recording, classification, and annual targets for reduction (see also 5.1.1, 5.1.3).",
+          "source_segment_ids": [
+            "p17-r5.1.7-cab-c"
+          ]
+        }
+      ],
+      "related_context_ids": [
+        "p17-r5.1.7-option-note"
+      ],
+      "source_segment_ids": [
+        "p17-r5.1.7-id",
+        "p17-r5.1.7-indicator",
+        "p17-r5.1.7-value",
+        "p17-r5.1.7-applicability"
+      ],
+      "source_anomalies": [],
+      "gold_notes": [
+        "The formal Requirement is the audit-matrix combination of indicator_text, requirement_value and applicability; client and CAB actions remain separate provenance fields."
+      ],
+      "normative_subject_evidence": [],
+      "applicability_evidence": [
+        {
+          "text": "All",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p17-r5.1.7-applicability"
+          ],
+          "anchors": [
+            {
+              "source_segment_id": "p17-r5.1.7-applicability",
+              "start_char": 0,
+              "end_char": 3,
+              "text": "All"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "5.2.1",
+      "requirement_form": "audit_matrix",
+      "criterion_path": [
+        "Principle 5",
+        "Criterion 5.2"
+      ],
+      "language": "en",
+      "indicator_text": "On-farm documentation that includes, at a minimum, detailed information on all chemicals [84] and therapeutants used during the most recent production cycle, the amounts used (including grams per ton of fish produced), the dates used, which group of fish were treated and against which diseases, proof of proper dosing, and all disease and pathogens detected on the site",
+      "requirement_value": "Yes",
+      "normative_text": "Indicator: On-farm documentation that includes, at a minimum, detailed information on all chemicals [84] and therapeutants used during the most recent production cycle, the amounts used (including grams per ton of fish produced), the dates used, which group of fish were treated and against which diseases, proof of proper dosing, and all disease and pathogens detected on the site\nRequirement: Yes\nApplicability: All",
+      "normative_subjects": [],
+      "applicability": [
+        "All"
+      ],
+      "modalities": [],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "5.2.1-main",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Indicator: On-farm documentation that includes, at a minimum, detailed information on all chemicals [84] and therapeutants used during the most recent production cycle, the amounts used (including grams per ton of fish produced), the dates used, which group of fish were treated and against which diseases, proof of proper dosing, and all disease and pathogens detected on the site\nRequirement: Yes\nApplicability: All",
+          "joins_next": null
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [
+        {
+          "text": "during the most recent production cycle",
+          "applies_to": "chemicals [84] and therapeutants used",
+          "scope_ref": {
+            "kind": "source_span",
+            "target": "indicator_text",
+            "anchors": [
+              {
+                "source_segment_id": "p17-r5.2.1-indicator",
+                "start_char": 79,
+                "end_char": 116,
+                "text": "chemicals [84] and therapeutants used"
+              }
+            ]
+          }
+        }
+      ],
+      "cross_references": [
+        {
+          "text": "[83]",
+          "target": "footnote 83",
+          "type": "internal_exact"
+        },
+        {
+          "text": "[84]",
+          "target": "footnote 84",
+          "type": "internal_exact"
+        },
+        {
+          "text": "Appendix VI",
+          "target": "Appendix VI",
+          "type": "internal_exact"
+        }
+      ],
+      "footnote_refs": [
+        {
+          "marker": "83",
+          "text": "See Appendix VI for transparency requirements for 5.2.1, 5.2.6, 5.2.7 and 5.2.10.",
+          "link_type": "semantic",
+          "source_segment_ids": [
+            "p17-footnote-83"
+          ]
+        },
+        {
+          "marker": "84",
+          "text": "Chemicals used for the treatment of fish.",
+          "link_type": "direct",
+          "source_segment_ids": [
+            "p17-footnote-84"
+          ]
+        }
+      ],
+      "associated_instructions": [
+        {
+          "marker": null,
+          "text": "Instruction to Clients and CABs for Criterion 5.2 - Records Related to Therapeutic Treatments\nIndicator 5.2.1 requires that farms maintain detailed record of all chemical and therapeutant use. Those records maintained for compliance with 5.2.1, if all consolidated into a single place, can be used to demonstrate performance against subsequent Indicators (5.2.1 through 5.2.15) under Criterion 5.2.",
+          "effect": "method",
+          "source_segment_ids": [
+            "p17-shared-instruction-5.2"
+          ]
+        }
+      ],
+      "client_actions": [
+        {
+          "marker": "a",
+          "text": "Maintain a detailed record of all chemical and therapeutant use that includes: - name of the veterinarian prescribing treatment; - product name and chemical name; - reason for use (specific disease) - date(s) of treatment; - amount (g) of product used; - dosage; - t of fish treated; - the WHO classification of antibiotics (also see note under 5.2.8); and - the supplier of the chemical or therapeutant.",
+          "source_segment_ids": [
+            "p17-r5.2.1-client-a"
+          ]
+        },
+        {
+          "marker": "b",
+          "text": "If not already available, assemble records of chemical and therapeutant use to address all points in 5.2.1a for the two prior production cycles. For first audits, available records must cover one full production cycle immediately prior to the current cycle.",
+          "source_segment_ids": [
+            "p17-r5.2.1-client-b"
+          ]
+        },
+        {
+          "marker": "c",
+          "text": "Submit information on therapeutant use (data from 5.2.1a) to ASC as per Appendix VI on an ongoing basis (i.e., at least once per year and for each production cycle).",
+          "source_segment_ids": [
+            "p17-r5.2.1-client-c"
+          ]
+        }
+      ],
+      "auditor_actions": [
+        {
+          "marker": "A",
+          "text": "Review records of chemical and therapeutant use. Verify accuracy through cross-check with purchase orders and sales records, inventories, documentation from feed manufacturer for any in-feed treatment, and veterinary records.",
+          "source_segment_ids": [
+            "p17-r5.2.1-cab-a"
+          ]
+        },
+        {
+          "marker": "B",
+          "text": "Confirm that farm has detailed records for chemical and therapeutant use that covers the prior two production cycles.",
+          "source_segment_ids": [
+            "p17-r5.2.1-cab-b"
+          ]
+        },
+        {
+          "marker": "C",
+          "text": "Confirm that client has submitted therapeutant information to ASC (Appendix VI).",
+          "source_segment_ids": [
+            "p17-r5.2.1-cab-c"
+          ]
+        }
+      ],
+      "related_context_ids": [
+        "p17-criterion-5.2",
+        "p17-shared-instruction-5.2"
+      ],
+      "source_segment_ids": [
+        "p17-r5.2.1-id",
+        "p17-r5.2.1-indicator",
+        "p17-r5.2.1-value",
+        "p17-r5.2.1-applicability",
+        "p17-footnote-83",
+        "p17-footnote-84"
+      ],
+      "source_anomalies": [],
+      "gold_notes": [
+        "The formal Requirement is the audit-matrix combination of indicator_text, requirement_value and applicability; client and CAB actions remain separate provenance fields."
+      ],
+      "normative_subject_evidence": [],
+      "applicability_evidence": [
+        {
+          "text": "All",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p17-r5.2.1-applicability"
+          ],
+          "anchors": [
+            {
+              "source_segment_id": "p17-r5.2.1-applicability",
+              "start_char": 0,
+              "end_char": 3,
+              "text": "All"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "5.2.2",
+      "requirement_form": "audit_matrix",
+      "criterion_path": [
+        "Principle 5",
+        "Criterion 5.2"
+      ],
+      "language": "en",
+      "indicator_text": "Allowance for use of therapeutic treatments that include antibiotics or chemicals that are banned [85] in any of the primary salmon producing or importing countries [86]",
+      "requirement_value": "None",
+      "normative_text": "Indicator: Allowance for use of therapeutic treatments that include antibiotics or chemicals that are banned [85] in any of the primary salmon producing or importing countries [86]\nRequirement: None\nApplicability: All",
+      "normative_subjects": [],
+      "applicability": [
+        "All"
+      ],
+      "modalities": [],
+      "negations": [
+        {
+          "text": "None",
+          "applies_to": "Allowance for use of therapeutic treatments that include antibiotics or chemicals that are banned [85] in any of the primary salmon producing or importing countries [86]",
+          "scope_ref": {
+            "kind": "field",
+            "target": "indicator_text",
+            "anchors": [
+              {
+                "source_segment_id": "p17-r5.2.2-indicator",
+                "start_char": 0,
+                "end_char": 169,
+                "text": "Allowance for use of therapeutic treatments that include antibiotics or chemicals that are banned [85] in any of the primary salmon producing or importing countries [86]"
+              }
+            ]
+          }
+        }
+      ],
+      "clauses": [
+        {
+          "clause_id": "5.2.2-main",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Indicator: Allowance for use of therapeutic treatments that include antibiotics or chemicals that are banned [85] in any of the primary salmon producing or importing countries [86]\nRequirement: None\nApplicability: All",
+          "joins_next": null
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [
+        {
+          "text": "[85]",
+          "target": "footnote 85",
+          "type": "internal_exact"
+        },
+        {
+          "text": "[86]",
+          "target": "footnote 86",
+          "type": "internal_exact"
+        }
+      ],
+      "footnote_refs": [
+        {
+          "marker": "85",
+          "text": "'Banned' means proactively prohibited by a government entity because of concerns around the substance. A substance banned in any of the primary salmon-producing or importing countries, as defined here, cannot be used in any salmon farm certified under the SAD, regardless of country of production or destination of the product.",
+          "link_type": "direct",
+          "source_segment_ids": [
+            "p17-footnote-85"
+          ]
+        },
+        {
+          "marker": "86",
+          "text": "For purposes of this standard, those countries are Norway, the UK, Canada, Chile, the United States, Japan and France.",
+          "link_type": "direct",
+          "source_segment_ids": [
+            "p17-footnote-86"
+          ]
+        }
+      ],
+      "associated_instructions": [],
+      "client_actions": [
+        {
+          "marker": "a",
+          "text": "Prepare a list of therapeutants, including antibiotics and chemicals, that are proactively banned for use in food fish for the primary salmon producing and importing countries listed in [86].",
+          "source_segment_ids": [
+            "p17-r5.2.2-client-a"
+          ]
+        },
+        {
+          "marker": "b",
+          "text": "Maintain records of voluntary and/or mandatory chemical residue testing conducted or commissioned by the farm from the prior and current production cycles.",
+          "source_segment_ids": [
+            "p17-r5.2.2-client-b"
+          ]
+        }
+      ],
+      "auditor_actions": [
+        {
+          "marker": "A",
+          "text": "Review list and supporting evidence.",
+          "source_segment_ids": [
+            "p17-r5.2.2-cab-a"
+          ]
+        },
+        {
+          "marker": "B",
+          "text": "Verify records.",
+          "source_segment_ids": [
+            "p17-r5.2.2-cab-b"
+          ]
+        },
+        {
+          "marker": "C",
+          "text": "Cross-check records of therapeutant use (5.2.1a) against the list of banned therapeutants to verify compliance with requirements.",
+          "source_segment_ids": [
+            "p17-r5.2.2-cab-c"
+          ]
+        }
+      ],
+      "related_context_ids": [
+        "p17-criterion-5.2"
+      ],
+      "source_segment_ids": [
+        "p17-r5.2.2-id",
+        "p17-r5.2.2-indicator",
+        "p17-r5.2.2-value",
+        "p17-r5.2.2-applicability",
+        "p17-footnote-85",
+        "p17-footnote-86"
+      ],
+      "source_anomalies": [],
+      "gold_notes": [
+        "The formal Requirement is the audit-matrix combination of indicator_text, requirement_value and applicability; client and CAB actions remain separate provenance fields."
+      ],
+      "normative_subject_evidence": [],
+      "applicability_evidence": [
+        {
+          "text": "All",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p17-r5.2.2-applicability"
+          ],
+          "anchors": [
+            {
+              "source_segment_id": "p17-r5.2.2-applicability",
+              "start_char": 0,
+              "end_char": 3,
+              "text": "All"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "5.2.3",
+      "requirement_form": "audit_matrix",
+      "criterion_path": [
+        "Principle 5",
+        "Criterion 5.2"
+      ],
+      "language": "en",
+      "indicator_text": "Percentage of medication events that are prescribed by a veterinarian",
+      "requirement_value": "100%",
+      "normative_text": "Indicator: Percentage of medication events that are prescribed by a veterinarian\nRequirement: 100%\nApplicability: All",
+      "normative_subjects": [],
+      "applicability": [
+        "All"
+      ],
+      "modalities": [],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "5.2.3-main",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Indicator: Percentage of medication events that are prescribed by a veterinarian\nRequirement: 100%\nApplicability: All",
+          "joins_next": null
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [
+        {
+          "raw_text": "100%",
+          "operator": "eq",
+          "normalized_value": 100,
+          "unit": "%",
+          "applies_to": "Percentage of medication events that are prescribed by a veterinarian",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p17-r5.2.3-value"
+          ],
+          "scope_ref": {
+            "kind": "field",
+            "target": "indicator_text",
+            "anchors": [
+              {
+                "source_segment_id": "p17-r5.2.3-indicator",
+                "start_char": 0,
+                "end_char": 69,
+                "text": "Percentage of medication events that are prescribed by a veterinarian"
+              }
+            ]
+          }
+        }
+      ],
+      "dates": [],
+      "cross_references": [],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [
+        {
+          "marker": "a",
+          "text": "Obtain prescription for all therapeutant use in advance of application from the farm veterinarian (or equivalent, see [78] for definition of veterinarian).",
+          "source_segment_ids": [
+            "p17-r5.2.3-client-a"
+          ]
+        },
+        {
+          "marker": "b",
+          "text": "Maintain copies of all prescriptions and records of veterinarian responsible for all medication events. Records can be kept in conjunction with those for 5.2.1 and should be kept for the current and two prior production cycles.",
+          "source_segment_ids": [
+            "p17-r5.2.3-client-b"
+          ]
+        }
+      ],
+      "auditor_actions": [
+        {
+          "marker": "A",
+          "text": "Review documentary evidence (on-farm records, veterinary records, and prescriptions) to confirm all therapeutants were prescribed by a qualified individual. See [78] for definition of veterinarian.",
+          "source_segment_ids": [
+            "p17-r5.2.3-cab-a"
+          ]
+        },
+        {
+          "marker": "B",
+          "text": "Cross-check with results from chemical residue testing provided under 5.2.2b.",
+          "source_segment_ids": [
+            "p17-r5.2.3-cab-b"
+          ]
+        }
+      ],
+      "related_context_ids": [
+        "p17-criterion-5.2"
+      ],
+      "source_segment_ids": [
+        "p17-r5.2.3-id",
+        "p17-r5.2.3-indicator",
+        "p17-r5.2.3-value",
+        "p17-r5.2.3-applicability"
+      ],
+      "source_anomalies": [],
+      "gold_notes": [
+        "The formal Requirement is the audit-matrix combination of indicator_text, requirement_value and applicability; client and CAB actions remain separate provenance fields."
+      ],
+      "normative_subject_evidence": [],
+      "applicability_evidence": [
+        {
+          "text": "All",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p17-r5.2.3-applicability"
+          ],
+          "anchors": [
+            {
+              "source_segment_id": "p17-r5.2.3-applicability",
+              "start_char": 0,
+              "end_char": 3,
+              "text": "All"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "5.2.4",
+      "requirement_form": "audit_matrix",
+      "criterion_path": [
+        "Principle 5",
+        "Criterion 5.2"
+      ],
+      "language": "en",
+      "indicator_text": "Compliance with all withholding periods after treatments",
+      "requirement_value": "Yes",
+      "normative_text": "Indicator: Compliance with all withholding periods after treatments\nRequirement: Yes\nApplicability: All",
+      "normative_subjects": [],
+      "applicability": [
+        "All"
+      ],
+      "modalities": [],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "5.2.4-main",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Indicator: Compliance with all withholding periods after treatments\nRequirement: Yes\nApplicability: All",
+          "joins_next": null
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [
+        {
+          "marker": "a",
+          "text": "Incorporate withholding periods into the farm's fish health management plan (see 5.1.1a).",
+          "source_segment_ids": [
+            "p17-r5.2.4-client-a"
+          ]
+        },
+        {
+          "marker": "b",
+          "text": "Compile and maintain documentation on legally-required withholding periods for all treatments used on-farm. Withholding period is the time interval after the withdrawal of a drug from the treatment of the salmon before the salmon can be harvested for use as food.",
+          "source_segment_ids": [
+            "p17-r5.2.4-client-b"
+          ]
+        },
+        {
+          "marker": "c",
+          "text": "Show compliance with all withholding periods by providing treatment records (see 5.2.1a) and harvest dates.",
+          "source_segment_ids": [
+            "p17-r5.2.4-client-c"
+          ]
+        }
+      ],
+      "auditor_actions": [
+        {
+          "marker": "A",
+          "text": "Review the farm's fish health management plan to confirm inclusion of withholding periods and interview farm staff to verify implementation.",
+          "source_segment_ids": [
+            "p17-r5.2.4-cab-a"
+          ]
+        },
+        {
+          "marker": "B",
+          "text": "Review documentation for completeness and accuracy. Compare to records of therapeutant use (5.2.1a).",
+          "source_segment_ids": [
+            "p17-r5.2.4-cab-b"
+          ]
+        },
+        {
+          "marker": "C",
+          "text": "Review documentary evidence and, if applicable, results from chemical residue testing (5.2.2b), to confirm legal withholding periods were met.",
+          "source_segment_ids": [
+            "p17-r5.2.4-cab-c"
+          ]
+        }
+      ],
+      "related_context_ids": [
+        "p17-criterion-5.2"
+      ],
+      "source_segment_ids": [
+        "p17-r5.2.4-id",
+        "p17-r5.2.4-indicator",
+        "p17-r5.2.4-value",
+        "p17-r5.2.4-applicability"
+      ],
+      "source_anomalies": [],
+      "gold_notes": [
+        "The formal Requirement is the audit-matrix combination of indicator_text, requirement_value and applicability; client and CAB actions remain separate provenance fields."
+      ],
+      "normative_subject_evidence": [],
+      "applicability_evidence": [
+        {
+          "text": "All",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p17-r5.2.4-applicability"
+          ],
+          "anchors": [
+            {
+              "source_segment_id": "p17-r5.2.4-applicability",
+              "start_char": 0,
+              "end_char": 3,
+              "text": "All"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "5.2.5",
+      "requirement_form": "audit_matrix",
+      "criterion_path": [
+        "Principle 5",
+        "Criterion 5.2"
+      ],
+      "language": "en",
+      "indicator_text": "The farm shall publicly report (via Appendix VI) the: 1. Weighted Number of Medicinal Treatments (see Appendix VII) for each production cycle 2. The parasiticide load for each agent over the production cycle 3. The benthic parasiticide residue levels",
+      "requirement_value": "Yes",
+      "normative_text": "Indicator: The farm shall publicly report (via Appendix VI) the: 1. Weighted Number of Medicinal Treatments (see Appendix VII) for each production cycle 2. The parasiticide load for each agent over the production cycle 3. The benthic parasiticide residue levels\nRequirement: Yes\nApplicability: All",
+      "normative_subjects": [
+        "The farm"
+      ],
+      "applicability": [
+        "All"
+      ],
+      "modalities": [
+        {
+          "token": "shall",
+          "type": "obligation",
+          "scope": "publicly report (via Appendix VI) the: 1. Weighted Number of Medicinal Treatments (see Appendix VII) for each production cycle 2. The parasiticide load for each agent over the production cycle 3. The benthic parasiticide residue levels",
+          "scope_ref": {
+            "kind": "source_span",
+            "target": "indicator_text",
+            "anchors": [
+              {
+                "source_segment_id": "p18-r5.2.5-indicator",
+                "start_char": 15,
+                "end_char": 250,
+                "text": "publicly report (via Appendix VI) the: 1. Weighted Number of Medicinal Treatments (see Appendix VII) for each production cycle 2. The parasiticide load for each agent over the production cycle 3. The benthic parasiticide residue levels"
+              }
+            ]
+          }
+        }
+      ],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "5.2.5-main",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "The farm shall publicly report (via Appendix VI) the:",
+          "joins_next": null
+        },
+        {
+          "clause_id": "5.2.5-1",
+          "parent_clause_id": "5.2.5-main",
+          "marker": "1",
+          "text": "Weighted Number of Medicinal Treatments (see Appendix VII) for each production cycle",
+          "joins_next": null
+        },
+        {
+          "clause_id": "5.2.5-2",
+          "parent_clause_id": "5.2.5-main",
+          "marker": "2",
+          "text": "The parasiticide load for each agent over the production cycle",
+          "joins_next": null
+        },
+        {
+          "clause_id": "5.2.5-3",
+          "parent_clause_id": "5.2.5-main",
+          "marker": "3",
+          "text": "The benthic parasiticide residue levels",
+          "joins_next": null
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [
+        {
+          "text": "for each production cycle",
+          "applies_to": "Weighted Number of Medicinal Treatments (see Appendix VII)",
+          "scope_ref": {
+            "kind": "source_span",
+            "target": "indicator_text",
+            "anchors": [
+              {
+                "source_segment_id": "p18-r5.2.5-indicator",
+                "start_char": 57,
+                "end_char": 115,
+                "text": "Weighted Number of Medicinal Treatments (see Appendix VII)"
+              }
+            ]
+          }
+        },
+        {
+          "text": "over the production cycle",
+          "applies_to": "The parasiticide load for each agent",
+          "scope_ref": {
+            "kind": "source_span",
+            "target": "indicator_text",
+            "anchors": [
+              {
+                "source_segment_id": "p18-r5.2.5-indicator",
+                "start_char": 145,
+                "end_char": 181,
+                "text": "The parasiticide load for each agent"
+              }
+            ]
+          }
+        }
+      ],
+      "cross_references": [
+        {
+          "text": "Appendix VI",
+          "target": "Appendix VI",
+          "type": "internal_exact"
+        },
+        {
+          "text": "Appendix VII",
+          "target": "Appendix VII",
+          "type": "internal_exact"
+        }
+      ],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [
+        {
+          "marker": "a",
+          "text": "Using farm data for therapeutants usage (5..2.1a) and the calculation presented in Appendix VII, calculate the Weighted Number of Medicinal Treatments (WNMT) score for the most recent production cycle. Calculation should be made and updated on an ongoing basis throughout the cycle by farm manager, fish health manager, and/or veterinarian.",
+          "source_segment_ids": [
+            "p18-r5.2.5-client-a"
+          ]
+        },
+        {
+          "marker": "b",
+          "text": "Provide the auditor with access to records showing how the farm calculated the WMNT score.",
+          "source_segment_ids": [
+            "p18-r5.2.5-client-b"
+          ]
+        },
+        {
+          "marker": "c",
+          "text": "Submit data on farm level WMNT score to ASC as per Appendix VI for each production cycle.",
+          "source_segment_ids": [
+            "p18-r5.2.5-client-c"
+          ]
+        }
+      ],
+      "auditor_actions": [
+        {
+          "marker": "A",
+          "text": "Review the farm's calculations to verify that the WNMT score was calculated correctly and that the scores are accurate.",
+          "source_segment_ids": [
+            "p18-r5.2.5-cab-a"
+          ]
+        },
+        {
+          "marker": "B",
+          "text": "Verify that the farm level WNMT score is based on the correct records.",
+          "source_segment_ids": [
+            "p18-r5.2.5-cab-b"
+          ]
+        },
+        {
+          "marker": "C",
+          "text": "Confirm that client has submitted data on WMNT score to ASC (Appendix VI).",
+          "source_segment_ids": [
+            "p18-r5.2.5-cab-c"
+          ]
+        }
+      ],
+      "related_context_ids": [
+        "p17-criterion-5.2"
+      ],
+      "source_segment_ids": [
+        "p18-r5.2.5-id",
+        "p18-r5.2.5-indicator",
+        "p18-r5.2.5-value",
+        "p18-r5.2.5-applicability"
+      ],
+      "source_anomalies": [
+        "client_action_source_typo:5..2.1a",
+        "client_action_acronym_inconsistency:WNMT/WMNT"
+      ],
+      "gold_notes": [
+        "The formal Requirement is the audit-matrix combination of indicator_text, requirement_value and applicability; client and CAB actions remain separate provenance fields."
+      ],
+      "normative_subject_evidence": [
+        {
+          "text": "The farm",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p18-r5.2.5-indicator"
+          ],
+          "anchors": [
+            {
+              "source_segment_id": "p18-r5.2.5-indicator",
+              "start_char": 0,
+              "end_char": 8,
+              "text": "The farm"
+            }
+          ]
+        }
+      ],
+      "applicability_evidence": [
+        {
+          "text": "All",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p18-r5.2.5-applicability"
+          ],
+          "anchors": [
+            {
+              "source_segment_id": "p18-r5.2.5-applicability",
+              "start_char": 0,
+              "end_char": 3,
+              "text": "All"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "5.2.6",
+      "requirement_form": "audit_matrix",
+      "criterion_path": [
+        "Principle 5",
+        "Criterion 5.2"
+      ],
+      "language": "en",
+      "indicator_text": "The Weighted Number of Medicinal Treatments shall be at or below the country Entry Level (see Appendix VII)",
+      "requirement_value": "Yes",
+      "normative_text": "Indicator: The Weighted Number of Medicinal Treatments shall be at or below the country Entry Level (see Appendix VII)\nRequirement: Yes\nApplicability: All",
+      "normative_subjects": [
+        "The Weighted Number of Medicinal Treatments"
+      ],
+      "applicability": [
+        "All"
+      ],
+      "modalities": [
+        {
+          "token": "shall",
+          "type": "obligation",
+          "scope": "be at or below the country Entry Level (see Appendix VII)",
+          "scope_ref": {
+            "kind": "source_span",
+            "target": "indicator_text",
+            "anchors": [
+              {
+                "source_segment_id": "p18-r5.2.6-indicator",
+                "start_char": 50,
+                "end_char": 107,
+                "text": "be at or below the country Entry Level (see Appendix VII)"
+              }
+            ]
+          }
+        }
+      ],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "5.2.6-main",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Indicator: The Weighted Number of Medicinal Treatments shall be at or below the country Entry Level (see Appendix VII)\nRequirement: Yes\nApplicability: All",
+          "joins_next": null
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [
+        {
+          "raw_text": "at or below the country Entry Level",
+          "operator": "lte",
+          "normalized_value": "country Entry Level",
+          "unit": null,
+          "applies_to": "The Weighted Number of Medicinal Treatments",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p18-r5.2.6-indicator"
+          ],
+          "scope_ref": {
+            "kind": "source_span",
+            "target": "indicator_text",
+            "anchors": [
+              {
+                "source_segment_id": "p18-r5.2.6-indicator",
+                "start_char": 0,
+                "end_char": 43,
+                "text": "The Weighted Number of Medicinal Treatments"
+              }
+            ]
+          }
+        }
+      ],
+      "dates": [],
+      "cross_references": [
+        {
+          "text": "[83]",
+          "target": "footnote 83",
+          "type": "internal_exact"
+        },
+        {
+          "text": "Appendix VI",
+          "target": "Appendix VI",
+          "type": "internal_exact"
+        },
+        {
+          "text": "Appendix VII",
+          "target": "Appendix VII",
+          "type": "internal_exact"
+        }
+      ],
+      "footnote_refs": [
+        {
+          "marker": "83",
+          "text": "See Appendix VI for transparency requirements for 5.2.1, 5.2.6, 5.2.7 and 5.2.10.",
+          "link_type": "semantic",
+          "source_segment_ids": [
+            "p17-footnote-83"
+          ]
+        }
+      ],
+      "associated_instructions": [],
+      "client_actions": [
+        {
+          "marker": "a",
+          "text": "Review WNMT scores from 5.2.5a to determine if the score is at or below the Country Entry Level (see Appendix VII)",
+          "source_segment_ids": [
+            "p18-r5.2.6-client-a"
+          ]
+        },
+        {
+          "marker": "b",
+          "text": "As applicable, submit data to ASC on WNMT score for the most recent production cycle (Appendix VI).",
+          "source_segment_ids": [
+            "p18-r5.2.6-client-b"
+          ]
+        }
+      ],
+      "auditor_actions": [
+        {
+          "marker": "A",
+          "text": "Review farms WNMT scores from 5.2.5a to determine if the score is at or below the Country Entry Level (see Appendix VII)",
+          "source_segment_ids": [
+            "p18-r5.2.6-cab-a"
+          ]
+        },
+        {
+          "marker": "B",
+          "text": "Confirm that client has submitted data on WNMT score to ASC (Appendix VI) as applicable.",
+          "source_segment_ids": [
+            "p18-r5.2.6-cab-b"
+          ]
+        }
+      ],
+      "related_context_ids": [
+        "p17-criterion-5.2"
+      ],
+      "source_segment_ids": [
+        "p18-r5.2.6-id",
+        "p18-r5.2.6-indicator",
+        "p18-r5.2.6-value",
+        "p18-r5.2.6-applicability",
+        "p17-footnote-83"
+      ],
+      "source_anomalies": [],
+      "gold_notes": [
+        "The formal Requirement is the audit-matrix combination of indicator_text, requirement_value and applicability; client and CAB actions remain separate provenance fields."
+      ],
+      "normative_subject_evidence": [
+        {
+          "text": "The Weighted Number of Medicinal Treatments",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p18-r5.2.6-indicator"
+          ],
+          "anchors": [
+            {
+              "source_segment_id": "p18-r5.2.6-indicator",
+              "start_char": 0,
+              "end_char": 43,
+              "text": "The Weighted Number of Medicinal Treatments"
+            }
+          ]
+        }
+      ],
+      "applicability_evidence": [
+        {
+          "text": "All",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p18-r5.2.6-applicability"
+          ],
+          "anchors": [
+            {
+              "source_segment_id": "p18-r5.2.6-applicability",
+              "start_char": 0,
+              "end_char": 3,
+              "text": "All"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "5.2.7",
+      "requirement_form": "audit_matrix",
+      "criterion_path": [
+        "Principle 5",
+        "Criterion 5.2"
+      ],
+      "language": "en",
+      "indicator_text": "The farm shall reduce the Weighted Number of Medicinal Treatments, after achieving indicator 5.2.6, with 25% per 2 years until the WNMT is at or below the Global Level (see Appendix VII).",
+      "requirement_value": "Yes",
+      "normative_text": "Indicator: The farm shall reduce the Weighted Number of Medicinal Treatments, after achieving indicator 5.2.6, with 25% per 2 years until the WNMT is at or below the Global Level (see Appendix VII).\nRequirement: Yes\nApplicability: All",
+      "normative_subjects": [
+        "The farm"
+      ],
+      "applicability": [
+        "All"
+      ],
+      "modalities": [
+        {
+          "token": "shall",
+          "type": "obligation",
+          "scope": "reduce the Weighted Number of Medicinal Treatments",
+          "scope_ref": {
+            "kind": "source_span",
+            "target": "indicator_text",
+            "anchors": [
+              {
+                "source_segment_id": "p18-r5.2.7-indicator",
+                "start_char": 15,
+                "end_char": 65,
+                "text": "reduce the Weighted Number of Medicinal Treatments"
+              }
+            ]
+          }
+        }
+      ],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "5.2.7-main",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Indicator: The farm shall reduce the Weighted Number of Medicinal Treatments, after achieving indicator 5.2.6, with 25% per 2 years until the WNMT is at or below the Global Level (see Appendix VII).\nRequirement: Yes\nApplicability: All",
+          "joins_next": null
+        }
+      ],
+      "conditions": [
+        {
+          "text": "after achieving indicator 5.2.6",
+          "applies_to": "reduce the Weighted Number of Medicinal Treatments",
+          "scope_ref": {
+            "kind": "source_span",
+            "target": "indicator_text",
+            "anchors": [
+              {
+                "source_segment_id": "p18-r5.2.7-indicator",
+                "start_char": 15,
+                "end_char": 65,
+                "text": "reduce the Weighted Number of Medicinal Treatments"
+              }
+            ]
+          }
+        },
+        {
+          "text": "until the WNMT is at or below the Global Level (see Appendix VII)",
+          "applies_to": "reduce the Weighted Number of Medicinal Treatments",
+          "scope_ref": {
+            "kind": "source_span",
+            "target": "indicator_text",
+            "anchors": [
+              {
+                "source_segment_id": "p18-r5.2.7-indicator",
+                "start_char": 15,
+                "end_char": 65,
+                "text": "reduce the Weighted Number of Medicinal Treatments"
+              }
+            ]
+          }
+        }
+      ],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [
+        {
+          "raw_text": "25%",
+          "operator": "eq",
+          "normalized_value": 25,
+          "unit": "%",
+          "applies_to": "reduce the Weighted Number of Medicinal Treatments",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p18-r5.2.7-indicator"
+          ],
+          "scope_ref": {
+            "kind": "source_span",
+            "target": "indicator_text",
+            "anchors": [
+              {
+                "source_segment_id": "p18-r5.2.7-indicator",
+                "start_char": 15,
+                "end_char": 65,
+                "text": "reduce the Weighted Number of Medicinal Treatments"
+              }
+            ]
+          }
+        },
+        {
+          "raw_text": "at or below the Global Level",
+          "operator": "lte",
+          "normalized_value": "Global Level",
+          "unit": null,
+          "applies_to": "the WNMT",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p18-r5.2.7-indicator"
+          ],
+          "scope_ref": {
+            "kind": "source_span",
+            "target": "indicator_text",
+            "anchors": [
+              {
+                "source_segment_id": "p18-r5.2.7-indicator",
+                "start_char": 127,
+                "end_char": 135,
+                "text": "the WNMT"
+              }
+            ]
+          }
+        }
+      ],
+      "dates": [
+        {
+          "text": "per 2 years",
+          "applies_to": "reduce the Weighted Number of Medicinal Treatments",
+          "scope_ref": {
+            "kind": "source_span",
+            "target": "indicator_text",
+            "anchors": [
+              {
+                "source_segment_id": "p18-r5.2.7-indicator",
+                "start_char": 15,
+                "end_char": 65,
+                "text": "reduce the Weighted Number of Medicinal Treatments"
+              }
+            ]
+          }
+        }
+      ],
+      "cross_references": [
+        {
+          "text": "5.2.6",
+          "target": "Indicator 5.2.6",
+          "type": "internal_exact"
+        },
+        {
+          "text": "[83]",
+          "target": "footnote 83",
+          "type": "internal_exact"
+        },
+        {
+          "text": "Appendix VI",
+          "target": "Appendix VI",
+          "type": "internal_exact"
+        },
+        {
+          "text": "Appendix VII",
+          "target": "Appendix VII",
+          "type": "internal_exact"
+        }
+      ],
+      "footnote_refs": [
+        {
+          "marker": "83",
+          "text": "See Appendix VI for transparency requirements for 5.2.1, 5.2.6, 5.2.7 and 5.2.10.",
+          "link_type": "semantic",
+          "source_segment_ids": [
+            "p17-footnote-83"
+          ]
+        }
+      ],
+      "associated_instructions": [],
+      "client_actions": [
+        {
+          "marker": "a",
+          "text": "Every 2 years after achieving 5.2.6, check the WNMT score calculated 2 years before as above (5.2.5a). Calculate the percent difference in WMNT score between current cycle and cycle of 2 years before.",
+          "source_segment_ids": [
+            "p18-r5.2.7-client-a"
+          ]
+        },
+        {
+          "marker": "b",
+          "text": "As applicable, submit data to ASC on WMNT score for the most recent production cycle and the two previous production cycles (Appendix VI).",
+          "source_segment_ids": [
+            "p18-r5.2.7-client-b"
+          ]
+        }
+      ],
+      "auditor_actions": [
+        {
+          "marker": "A",
+          "text": "Review farm's calculations to verify that WMNT score for the most recent production cycle is at least: 1. 25% less than that of the cycle two years before. 2. At or below the Global Level (see Appendix VII)",
+          "source_segment_ids": [
+            "p18-r5.2.7-cab-a"
+          ]
+        },
+        {
+          "marker": "B",
+          "text": "Confirm that client has submitted data on WMNT score to ASC (Appendix VI) as applicable.",
+          "source_segment_ids": [
+            "p18-r5.2.7-cab-b"
+          ]
+        }
+      ],
+      "related_context_ids": [
+        "p17-criterion-5.2"
+      ],
+      "source_segment_ids": [
+        "p18-r5.2.7-id",
+        "p18-r5.2.7-indicator",
+        "p18-r5.2.7-value",
+        "p18-r5.2.7-applicability",
+        "p17-footnote-83"
+      ],
+      "source_anomalies": [
+        "client_and_auditor_action_acronym_inconsistency:WNMT/WMNT"
+      ],
+      "gold_notes": [
+        "The formal Requirement is the audit-matrix combination of indicator_text, requirement_value and applicability; client and CAB actions remain separate provenance fields."
+      ],
+      "normative_subject_evidence": [
+        {
+          "text": "The farm",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p18-r5.2.7-indicator"
+          ],
+          "anchors": [
+            {
+              "source_segment_id": "p18-r5.2.7-indicator",
+              "start_char": 0,
+              "end_char": 8,
+              "text": "The farm"
+            }
+          ]
+        }
+      ],
+      "applicability_evidence": [
+        {
+          "text": "All",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p18-r5.2.7-applicability"
+          ],
+          "anchors": [
+            {
+              "source_segment_id": "p18-r5.2.7-applicability",
+              "start_char": 0,
+              "end_char": 3,
+              "text": "All"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "5.2.8",
+      "requirement_form": "audit_matrix",
+      "criterion_path": [
+        "Principle 5",
+        "Criterion 5.2"
+      ],
+      "language": "en",
+      "indicator_text": "The farm shall implement Integrated Pest Management (IPM) according to the guidance in Appendix VII.",
+      "requirement_value": "Yes",
+      "normative_text": "Indicator: The farm shall implement Integrated Pest Management (IPM) according to the guidance in Appendix VII.\nRequirement: Yes\nApplicability: All",
+      "normative_subjects": [
+        "The farm"
+      ],
+      "applicability": [
+        "All"
+      ],
+      "modalities": [
+        {
+          "token": "shall",
+          "type": "obligation",
+          "scope": "implement Integrated Pest Management (IPM) according to the guidance in Appendix VII",
+          "scope_ref": {
+            "kind": "source_span",
+            "target": "indicator_text",
+            "anchors": [
+              {
+                "source_segment_id": "p18-r5.2.8-indicator",
+                "start_char": 15,
+                "end_char": 99,
+                "text": "implement Integrated Pest Management (IPM) according to the guidance in Appendix VII"
+              }
+            ]
+          }
+        }
+      ],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "5.2.8-main",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Indicator: The farm shall implement Integrated Pest Management (IPM) according to the guidance in Appendix VII.\nRequirement: Yes\nApplicability: All",
+          "joins_next": null
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [
+        {
+          "text": "Appendix VII",
+          "target": "Appendix VII",
+          "type": "internal_exact"
+        }
+      ],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [
+        {
+          "marker": "a",
+          "text": "Implement Integrated Pest Management (IPM) into farm management plans (see Appendix VII).",
+          "source_segment_ids": [
+            "p18-r5.2.8-client-a"
+          ]
+        },
+        {
+          "marker": "b",
+          "text": "Review and update IPM on a production cycle basis to reflect the effectiveness of applied methods and to determine next approaches.",
+          "source_segment_ids": [
+            "p18-r5.2.8-client-b"
+          ]
+        }
+      ],
+      "auditor_actions": [
+        {
+          "marker": "A",
+          "text": "Verify if IMP is implemented at the farms and integrated in the farm management plan (see Appendix VII).",
+          "source_segment_ids": [
+            "p18-r5.2.8-cab-a"
+          ]
+        },
+        {
+          "marker": "B",
+          "text": "Verify if plan is being reviewed and updated on a production cycle basis.",
+          "source_segment_ids": [
+            "p18-r5.2.8-cab-b"
+          ]
+        }
+      ],
+      "related_context_ids": [
+        "p17-criterion-5.2"
+      ],
+      "source_segment_ids": [
+        "p18-r5.2.8-id",
+        "p18-r5.2.8-indicator",
+        "p18-r5.2.8-value",
+        "p18-r5.2.8-applicability"
+      ],
+      "source_anomalies": [
+        "auditor_action_source_typo:IMP"
+      ],
+      "gold_notes": [
+        "The formal Requirement is the audit-matrix combination of indicator_text, requirement_value and applicability; client and CAB actions remain separate provenance fields."
+      ],
+      "normative_subject_evidence": [
+        {
+          "text": "The farm",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p18-r5.2.8-indicator"
+          ],
+          "anchors": [
+            {
+              "source_segment_id": "p18-r5.2.8-indicator",
+              "start_char": 0,
+              "end_char": 8,
+              "text": "The farm"
+            }
+          ]
+        }
+      ],
+      "applicability_evidence": [
+        {
+          "text": "All",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p18-r5.2.8-applicability"
+          ],
+          "anchors": [
+            {
+              "source_segment_id": "p18-r5.2.8-applicability",
+              "start_char": 0,
+              "end_char": 3,
+              "text": "All"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "5.2.9",
+      "requirement_form": "audit_matrix",
+      "criterion_path": [
+        "Principle 5",
+        "Criterion 5.2"
+      ],
+      "language": "en",
+      "indicator_text": "The farm shall public present (e.g., via company website) the IPM-measures that the company applies which need to be approved by a authorised veterinarian.",
+      "requirement_value": "Yes",
+      "normative_text": "Indicator: The farm shall public present (e.g., via company website) the IPM-measures that the company applies which need to be approved by a authorised veterinarian.\nRequirement: Yes\nApplicability: All",
+      "normative_subjects": [
+        "The farm"
+      ],
+      "applicability": [
+        "All"
+      ],
+      "modalities": [
+        {
+          "token": "shall",
+          "type": "obligation",
+          "scope": "public present (e.g., via company website) the IPM-measures that the company applies",
+          "scope_ref": {
+            "kind": "source_span",
+            "target": "indicator_text",
+            "anchors": [
+              {
+                "source_segment_id": "p18-r5.2.9-indicator",
+                "start_char": 15,
+                "end_char": 99,
+                "text": "public present (e.g., via company website) the IPM-measures that the company applies"
+              }
+            ]
+          }
+        },
+        {
+          "token": "need to",
+          "type": "obligation",
+          "scope": "be approved by a authorised veterinarian",
+          "scope_ref": {
+            "kind": "source_span",
+            "target": "indicator_text",
+            "anchors": [
+              {
+                "source_segment_id": "p18-r5.2.9-indicator",
+                "start_char": 114,
+                "end_char": 154,
+                "text": "be approved by a authorised veterinarian"
+              }
+            ]
+          }
+        }
+      ],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "5.2.9-main",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Indicator: The farm shall public present (e.g., via company website) the IPM-measures that the company applies which need to be approved by a authorised veterinarian.\nRequirement: Yes\nApplicability: All",
+          "joins_next": null
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [
+        {
+          "marker": "a",
+          "text": "Ensure the latest version of the IPM is public on the company website",
+          "source_segment_ids": [
+            "p18-r5.2.9-client-a"
+          ]
+        },
+        {
+          "marker": "b",
+          "text": "Ensure the IPM is signed-off by an authorized veterinarian.",
+          "source_segment_ids": [
+            "p18-r5.2.9-client-b"
+          ]
+        }
+      ],
+      "auditor_actions": [
+        {
+          "marker": "a",
+          "text": "Check the company website to verify if the latest version of the IPM is public on the company website.",
+          "source_segment_ids": [
+            "p18-r5.2.9-cab-a"
+          ]
+        },
+        {
+          "marker": "B",
+          "text": "Verify if the IPM is signed-off by an authorized veterinarian.",
+          "source_segment_ids": [
+            "p18-r5.2.9-cab-b"
+          ]
+        }
+      ],
+      "related_context_ids": [
+        "p17-criterion-5.2"
+      ],
+      "source_segment_ids": [
+        "p18-r5.2.9-id",
+        "p18-r5.2.9-indicator",
+        "p18-r5.2.9-value",
+        "p18-r5.2.9-applicability"
+      ],
+      "source_anomalies": [
+        "source_grammar:shall_public_present",
+        "source_grammar:a_authorised",
+        "auditor_action_marker_lowercase:a"
+      ],
+      "gold_notes": [
+        "The formal Requirement is the audit-matrix combination of indicator_text, requirement_value and applicability; client and CAB actions remain separate provenance fields."
+      ],
+      "normative_subject_evidence": [
+        {
+          "text": "The farm",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p18-r5.2.9-indicator"
+          ],
+          "anchors": [
+            {
+              "source_segment_id": "p18-r5.2.9-indicator",
+              "start_char": 0,
+              "end_char": 8,
+              "text": "The farm"
+            }
+          ]
+        }
+      ],
+      "applicability_evidence": [
+        {
+          "text": "All",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p18-r5.2.9-applicability"
+          ],
+          "anchors": [
+            {
+              "source_segment_id": "p18-r5.2.9-applicability",
+              "start_char": 0,
+              "end_char": 3,
+              "text": "All"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "5.2.10",
+      "requirement_form": "audit_matrix",
+      "criterion_path": [
+        "Principle 5",
+        "Criterion 5.2"
+      ],
+      "language": "en",
+      "indicator_text": "The farm shall monitor parasiticide residue levels annually in the benthic sediment directly outside the AZE.",
+      "requirement_value": "Yes",
+      "normative_text": "Indicator: The farm shall monitor parasiticide residue levels annually in the benthic sediment directly outside the AZE.\nRequirement: Yes\nApplicability: All",
+      "normative_subjects": [
+        "The farm"
+      ],
+      "applicability": [
+        "All"
+      ],
+      "modalities": [
+        {
+          "token": "shall",
+          "type": "obligation",
+          "scope": "monitor parasiticide residue levels annually in the benthic sediment directly outside the AZE",
+          "scope_ref": {
+            "kind": "source_span",
+            "target": "indicator_text",
+            "anchors": [
+              {
+                "source_segment_id": "p18-r5.2.10-indicator",
+                "start_char": 15,
+                "end_char": 108,
+                "text": "monitor parasiticide residue levels annually in the benthic sediment directly outside the AZE"
+              }
+            ]
+          }
+        }
+      ],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "5.2.10-main",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Indicator: The farm shall monitor parasiticide residue levels annually in the benthic sediment directly outside the AZE.\nRequirement: Yes\nApplicability: All",
+          "joins_next": null
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [
+        {
+          "text": "annually",
+          "applies_to": "monitor parasiticide residue levels",
+          "scope_ref": {
+            "kind": "source_span",
+            "target": "indicator_text",
+            "anchors": [
+              {
+                "source_segment_id": "p18-r5.2.10-indicator",
+                "start_char": 15,
+                "end_char": 50,
+                "text": "monitor parasiticide residue levels"
+              }
+            ]
+          }
+        }
+      ],
+      "cross_references": [
+        {
+          "text": "[83]",
+          "target": "footnote 83",
+          "type": "internal_exact"
+        },
+        {
+          "text": "Appendix VI",
+          "target": "Appendix VI",
+          "type": "internal_exact"
+        },
+        {
+          "text": "QA 111",
+          "target": "ASC interpretation platform QA0111",
+          "type": "external_document"
+        }
+      ],
+      "footnote_refs": [
+        {
+          "marker": "83",
+          "text": "See Appendix VI for transparency requirements for 5.2.1, 5.2.6, 5.2.7 and 5.2.10.",
+          "link_type": "semantic",
+          "source_segment_ids": [
+            "p17-footnote-83"
+          ]
+        }
+      ],
+      "associated_instructions": [
+        {
+          "marker": "Note Indicator 5.2.10",
+          "text": "Note Indicator 5.2.10: Guidance on the actual collection/sampling and analysis regarding parasiticide residue levels is pending. ASC will communicate the guidance through the interpretation platform. See QA 111: https://www.asc- aqua.org/what-you-can-do/get-certified/variance-request-interpretation-platform/QA0111/",
+          "effect": "method",
+          "source_segment_ids": [
+            "p18-r5.2.10-guidance-note"
+          ]
+        }
+      ],
+      "client_actions": [
+        {
+          "marker": "a",
+          "text": "Prepare a map of the farm showing boundary of AZE and GPS locations of all sediment collections stations. If the farm uses a site-specific AZE, provide justification [3] to the CAB.",
+          "source_segment_ids": [
+            "p18-r5.2.10-client-a"
+          ]
+        },
+        {
+          "marker": "b",
+          "text": "If benthos throughout the full AZE is hard bottom, provide evidence to the CAB and request an exemption from 5.2.10",
+          "source_segment_ids": [
+            "p18-r5.2.10-client-b"
+          ]
+        },
+        {
+          "marker": "c",
+          "text": "Submit test results to ASC as per Appendix VI at least once for each production cycle. If site has hard bottom and cannot complete tests, report this to ASC.",
+          "source_segment_ids": [
+            "p18-r5.2.10-client-c"
+          ]
+        },
+        {
+          "marker": "d",
+          "text": "Retain documentary evidence to show how scores were obtained. If samples were analysed an independent laboratory, obtain copies of results.",
+          "source_segment_ids": [
+            "p18-r5.2.10-client-d"
+          ]
+        }
+      ],
+      "auditor_actions": [
+        {
+          "marker": "A",
+          "text": "Review map to verify appropriate siting of sampling stations (Appendix I-1) and evidence (if applicable) to justify use of a site specific AZE.",
+          "source_segment_ids": [
+            "p18-r5.2.10-cab-a"
+          ]
+        },
+        {
+          "marker": "B",
+          "text": "Review evidence of benthic type and confirm whether exemption applies.",
+          "source_segment_ids": [
+            "p18-r5.2.10-cab-b"
+          ]
+        },
+        {
+          "marker": "C",
+          "text": "Confirm that client has submitted test results to ASC (Appendix VI).",
+          "source_segment_ids": [
+            "p18-r5.2.10-cab-c"
+          ]
+        },
+        {
+          "marker": "D",
+          "text": "Confirm that an approved method was used or that a qualified independent laboratory performed the sampling and analysed the samples.",
+          "source_segment_ids": [
+            "p18-r5.2.10-cab-d"
+          ]
+        }
+      ],
+      "related_context_ids": [
+        "p17-criterion-5.2",
+        "p18-r5.2.10-guidance-note"
+      ],
+      "source_segment_ids": [
+        "p18-r5.2.10-id",
+        "p18-r5.2.10-indicator",
+        "p18-r5.2.10-value",
+        "p18-r5.2.10-applicability",
+        "p17-footnote-83"
+      ],
+      "source_anomalies": [
+        "client_action_source_grammar:collections_stations",
+        "client_action_source_grammar:analysed_an_independent_laboratory"
+      ],
+      "gold_notes": [
+        "The formal Requirement is the audit-matrix combination of indicator_text, requirement_value and applicability; client and CAB actions remain separate provenance fields."
+      ],
+      "normative_subject_evidence": [
+        {
+          "text": "The farm",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p18-r5.2.10-indicator"
+          ],
+          "anchors": [
+            {
+              "source_segment_id": "p18-r5.2.10-indicator",
+              "start_char": 0,
+              "end_char": 8,
+              "text": "The farm"
+            }
+          ]
+        }
+      ],
+      "applicability_evidence": [
+        {
+          "text": "All",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p18-r5.2.10-applicability"
+          ],
+          "anchors": [
+            {
+              "source_segment_id": "p18-r5.2.10-applicability",
+              "start_char": 0,
+              "end_char": 3,
+              "text": "All"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "5.2.11",
+      "requirement_form": "audit_matrix",
+      "criterion_path": [
+        "Principle 5",
+        "Criterion 5.2"
+      ],
+      "language": "en",
+      "indicator_text": "Allowance for prophylactic use of antimicrobial treatments [88]",
+      "requirement_value": "None",
+      "normative_text": "Indicator: Allowance for prophylactic use of antimicrobial treatments [88]\nRequirement: None\nApplicability: All",
+      "normative_subjects": [
+        "The designated veterinarian"
+      ],
+      "applicability": [
+        "All"
+      ],
+      "modalities": [
+        {
+          "token": "must",
+          "type": "obligation",
+          "scope": "certify that a pathogen or disease is present before prescribing medication",
+          "scope_ref": {
+            "kind": "footnote",
+            "target": "footnote:88",
+            "anchors": [
+              {
+                "source_segment_id": "p18-footnote-88",
+                "start_char": 38,
+                "end_char": 113,
+                "text": "certify that a pathogen or disease is present before prescribing medication"
+              }
+            ]
+          }
+        }
+      ],
+      "negations": [
+        {
+          "text": "None",
+          "applies_to": "Allowance for prophylactic use of antimicrobial treatments [88]",
+          "scope_ref": {
+            "kind": "field",
+            "target": "indicator_text",
+            "anchors": [
+              {
+                "source_segment_id": "p18-r5.2.11-indicator",
+                "start_char": 0,
+                "end_char": 63,
+                "text": "Allowance for prophylactic use of antimicrobial treatments [88]"
+              }
+            ]
+          }
+        }
+      ],
+      "clauses": [
+        {
+          "clause_id": "5.2.11-main",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Indicator: Allowance for prophylactic use of antimicrobial treatments [88]\nRequirement: None\nApplicability: All",
+          "joins_next": null
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [
+        {
+          "text": "before prescribing medication",
+          "applies_to": "certify that a pathogen or disease is present",
+          "scope_ref": {
+            "kind": "footnote",
+            "target": "footnote:88",
+            "anchors": [
+              {
+                "source_segment_id": "p18-footnote-88",
+                "start_char": 38,
+                "end_char": 83,
+                "text": "certify that a pathogen or disease is present"
+              }
+            ]
+          }
+        }
+      ],
+      "cross_references": [
+        {
+          "text": "[88]",
+          "target": "footnote 88",
+          "type": "internal_exact"
+        }
+      ],
+      "footnote_refs": [
+        {
+          "marker": "88",
+          "text": "The designated veterinarian must certify that a pathogen or disease is present before prescribing medication.",
+          "link_type": "direct",
+          "source_segment_ids": [
+            "p18-footnote-88"
+          ]
+        }
+      ],
+      "associated_instructions": [],
+      "client_actions": [
+        {
+          "marker": "a",
+          "text": "Maintain records for all purchases of antibiotics (invoices, prescriptions) for the current and prior production cycles.",
+          "source_segment_ids": [
+            "p18-r5.2.11-client-a"
+          ]
+        },
+        {
+          "marker": "b",
+          "text": "Maintain a detailed log of all medication-related events (see also 5.2.1a and 5.2.3)",
+          "source_segment_ids": [
+            "p18-r5.2.11-client-b"
+          ]
+        },
+        {
+          "marker": "c",
+          "text": "Calculate the total amount (g) and treatments (#) of antibiotics used during the current and prior production cycles (see also 5.2.13).",
+          "source_segment_ids": [
+            "p18-r5.2.11-client-c"
+          ]
+        }
+      ],
+      "auditor_actions": [
+        {
+          "marker": "A",
+          "text": "Review purchase records and calculate total amount procured by client. Inspect storage areas to verify quantities on-site.",
+          "source_segment_ids": [
+            "p18-r5.2.11-cab-a"
+          ]
+        },
+        {
+          "marker": "B",
+          "text": "Review log of medication events to verify that the quantity of antibiotic applied by the client does not suggest prophylactic use.",
+          "source_segment_ids": [
+            "p18-r5.2.11-cab-b"
+          ]
+        },
+        {
+          "marker": "C",
+          "text": "Verify that the total amount of antibiotics used in the current production cycle is equal to the total amount prescribed.",
+          "source_segment_ids": [
+            "p18-r5.2.11-cab-c"
+          ]
+        }
+      ],
+      "related_context_ids": [
+        "p17-criterion-5.2"
+      ],
+      "source_segment_ids": [
+        "p18-r5.2.11-id",
+        "p18-r5.2.11-indicator",
+        "p18-r5.2.11-value",
+        "p18-r5.2.11-applicability",
+        "p18-footnote-88"
+      ],
+      "source_anomalies": [],
+      "gold_notes": [
+        "The formal Requirement is the audit-matrix combination of indicator_text, requirement_value and applicability; client and CAB actions remain separate provenance fields."
+      ],
+      "normative_subject_evidence": [
+        {
+          "text": "The designated veterinarian",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p18-footnote-88"
+          ],
+          "anchors": [
+            {
+              "source_segment_id": "p18-footnote-88",
+              "start_char": 5,
+              "end_char": 32,
+              "text": "The designated veterinarian"
+            }
+          ]
+        }
+      ],
+      "applicability_evidence": [
+        {
+          "text": "All",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p18-r5.2.11-applicability"
+          ],
+          "anchors": [
+            {
+              "source_segment_id": "p18-r5.2.11-applicability",
+              "start_char": 0,
+              "end_char": 3,
+              "text": "All"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "excluded_regions": [
+    {
+      "source_segment_ids": [
+        "p17-footer",
+        "p18-footer"
+      ],
+      "classification": "header_footer",
+      "reason": "Repeated footer branding, copyright and page numbers are not Requirement content."
+    },
+    {
+      "source_segment_ids": [
+        "p17-criterion-5.2",
+        "p17-audit-table-header-5.2"
+      ],
+      "classification": "other_non_requirement",
+      "reason": "Criterion and matrix column headings establish hierarchy and roles but are not formal Requirement evidence."
+    },
+    {
+      "source_segment_ids": [
+        "p17-r5.1.7-option-note",
+        "p17-shared-instruction-5.2",
+        "p18-r5.2.10-guidance-note"
+      ],
+      "classification": "other_non_requirement",
+      "reason": "Notes and instructions are preserved through associated_instructions but remain outside the formal Requirement cells."
+    },
+    {
+      "source_segment_ids": [
+        "p17-r5.1.6-client-a",
+        "p17-r5.1.6-client-b",
+        "p17-r5.1.6-client-c",
+        "p17-r5.1.7-client-a",
+        "p17-r5.1.7-client-b",
+        "p17-r5.1.7-client-c",
+        "p17-r5.2.1-client-a",
+        "p17-r5.2.1-client-b",
+        "p17-r5.2.1-client-c",
+        "p17-r5.2.2-client-a",
+        "p17-r5.2.2-client-b",
+        "p17-r5.2.3-client-a",
+        "p17-r5.2.3-client-b",
+        "p17-r5.2.4-client-a",
+        "p17-r5.2.4-client-b",
+        "p17-r5.2.4-client-c",
+        "p18-r5.2.5-client-a",
+        "p18-r5.2.5-client-b",
+        "p18-r5.2.5-client-c",
+        "p18-r5.2.6-client-a",
+        "p18-r5.2.6-client-b",
+        "p18-r5.2.7-client-a",
+        "p18-r5.2.7-client-b",
+        "p18-r5.2.8-client-a",
+        "p18-r5.2.8-client-b",
+        "p18-r5.2.9-client-a",
+        "p18-r5.2.9-client-b",
+        "p18-r5.2.10-client-a",
+        "p18-r5.2.10-client-b",
+        "p18-r5.2.10-client-c",
+        "p18-r5.2.10-client-d",
+        "p18-r5.2.11-client-a",
+        "p18-r5.2.11-client-b",
+        "p18-r5.2.11-client-c"
+      ],
+      "classification": "client_action",
+      "reason": "Required client actions are linked to their Requirement but never merged into normative_text."
+    },
+    {
+      "source_segment_ids": [
+        "p17-r5.1.6-cab-a",
+        "p17-r5.1.6-cab-b",
+        "p17-r5.1.6-cab-c",
+        "p17-r5.1.7-cab-a",
+        "p17-r5.1.7-cab-b",
+        "p17-r5.1.7-cab-c",
+        "p17-r5.2.1-cab-a",
+        "p17-r5.2.1-cab-b",
+        "p17-r5.2.1-cab-c",
+        "p17-r5.2.2-cab-a",
+        "p17-r5.2.2-cab-b",
+        "p17-r5.2.2-cab-c",
+        "p17-r5.2.3-cab-a",
+        "p17-r5.2.3-cab-b",
+        "p17-r5.2.4-cab-a",
+        "p17-r5.2.4-cab-b",
+        "p17-r5.2.4-cab-c",
+        "p18-r5.2.5-cab-a",
+        "p18-r5.2.5-cab-b",
+        "p18-r5.2.5-cab-c",
+        "p18-r5.2.6-cab-a",
+        "p18-r5.2.6-cab-b",
+        "p18-r5.2.7-cab-a",
+        "p18-r5.2.7-cab-b",
+        "p18-r5.2.8-cab-a",
+        "p18-r5.2.8-cab-b",
+        "p18-r5.2.9-cab-a",
+        "p18-r5.2.9-cab-b",
+        "p18-r5.2.10-cab-a",
+        "p18-r5.2.10-cab-b",
+        "p18-r5.2.10-cab-c",
+        "p18-r5.2.10-cab-d",
+        "p18-r5.2.11-cab-a",
+        "p18-r5.2.11-cab-b",
+        "p18-r5.2.11-cab-c"
+      ],
+      "classification": "auditor_action",
+      "reason": "Required CAB actions are linked in an independent provenance bucket and never merged into normative_text or client actions."
+    }
+  ],
+  "summary": {
+    "requirement_count": 13,
+    "cross_page_requirement_count": 3,
+    "client_action_count": 34,
+    "auditor_action_count": 35,
+    "critical_gold_ambiguities": []
+  }
+}

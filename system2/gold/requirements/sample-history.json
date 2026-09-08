@@ -1,0 +1,135 @@
+{
+  "schema_version": "1.0",
+  "policy": "A sample becomes permanently active as soon as its prediction differences or Gold content are used for diagnosis. Active samples can never be counted as untouched holdout again.",
+  "samples": [
+    {
+      "sample_id": "farm-standard-p028-p029",
+      "annotation": "annotations/farm-standard-p028-p029.json",
+      "initial_split": "active",
+      "current_status": "active_regression",
+      "first_scored_round": "goal04-round1"
+    },
+    {
+      "sample_id": "interpretation-manual-p019-p021",
+      "annotation": "annotations/interpretation-manual-p019-p021.json",
+      "initial_split": "active",
+      "current_status": "active_regression",
+      "first_scored_round": "goal04-round1"
+    },
+    {
+      "sample_id": "audit-manual-p001-p003",
+      "annotation": "annotations/audit-manual-p001-p003.json",
+      "initial_split": "active",
+      "current_status": "active_regression",
+      "first_scored_round": "goal04-round1"
+    },
+    {
+      "sample_id": "salmon-cod-standard-p018",
+      "annotation": "annotations/salmon-cod-standard-p018-v2.json",
+      "initial_split": "holdout",
+      "current_status": "active_regression",
+      "first_scored_round": "goal04-round1",
+      "revealed_round": "goal04-round1",
+      "reason": "Baseline prediction failure was used for architecture diagnosis."
+    },
+    {
+      "sample_id": "salmon-cod-standard-p019-p020-holdout",
+      "annotation": "annotations/salmon-cod-standard-p019-p020-holdout.json",
+      "initial_split": "active",
+      "current_status": "active_diagnostic",
+      "first_scored_round": null,
+      "reason": "Gold details were exposed before a blind evaluation and the sample is permanently ineligible as holdout."
+    },
+    {
+      "sample_id": "farm-standard-p064-p065-holdout",
+      "annotation": "annotations/farm-standard-p064-p065-holdout.json",
+      "initial_split": "holdout",
+      "current_status": "active_regression",
+      "first_scored_round": "goal04-round2",
+      "revealed_round": "goal04-round2",
+      "reason": "The headerless continuation failure was diagnosed and repaired after the first blind score."
+    },
+    {
+      "sample_id": "salmon-cod-standard-p027-p028-holdout",
+      "annotation": "annotations/salmon-cod-standard-p027-p028-holdout.json",
+      "initial_split": "holdout",
+      "current_status": "active_regression",
+      "first_scored_round": "goal04-round3",
+      "revealed_round": "goal04-round3",
+      "reason": "The blind score was recorded before its field-level differences were opened for Round 3 diagnosis."
+    },
+    {
+      "sample_id": "interpretation-manual-p103-p106-round4-holdout",
+      "annotation": "annotations/interpretation-manual-p103-p106-round4-holdout.json",
+      "initial_split": "holdout",
+      "current_status": "active_diagnostic",
+      "first_scored_round": null,
+      "revealed_round": "goal04-round4-pre-score",
+      "reason": "The first parser run failed before scoring because it emitted a duplicate Requirement ID; that failure is now used for diagnosis, so the sample is permanently ineligible as untouched holdout."
+    },
+    {
+      "sample_id": "audit-manual-p011-p012-round4-holdout",
+      "annotation": "annotations/audit-manual-p011-p012-round4-holdout.json",
+      "annotation_revisions": [
+        "annotations/audit-manual-p011-p012-round4-holdout-v2.json"
+      ],
+      "initial_split": "holdout",
+      "current_status": "active_diagnostic",
+      "first_scored_round": "goal04-round4",
+      "revealed_round": "goal04-round4",
+      "reason": "Independently annotated and frozen before the first prediction; the prediction fingerprint was locked and the blind score recorded before differences were opened for diagnosis."
+    },
+    {
+      "sample_id": "audit-manual-p005-round5-holdout",
+      "annotation": "annotations/audit-manual-p005-round5-holdout.json",
+      "initial_split": "holdout",
+      "current_status": "active_diagnostic",
+      "first_scored_round": "goal04-round5",
+      "revealed_round": "goal04-round5",
+      "reason": "Independently annotated and second-reviewed before prediction; parser and prediction fingerprints were locked and the blind score was recorded before differences were opened for diagnosis."
+    },
+    {
+      "sample_id": "farm-standard-p055-round6-holdout",
+      "annotation": "annotations/farm-standard-p055-round6-holdout.json",
+      "annotation_sha256": "4bc8db5f33cc46d505d46eabdf2136b2898838cb07788c01cf1aa7f3e3bed878",
+      "initial_split": "holdout",
+      "current_status": "active_diagnostic",
+      "first_scored_round": "goal04-round6",
+      "revealed_round": "goal04-round6",
+      "reason": "Independently annotated and second-reviewed before prediction; parser and prediction fingerprints were locked and the blind score was recorded before differences were opened for diagnosis."
+    },
+    {
+      "sample_id": "audit-manual-p017-p018-round7-holdout",
+      "annotation": "annotations/audit-manual-p017-p018-round7-holdout.json",
+      "annotation_revisions": [
+        "annotations/audit-manual-p017-p018-round7-holdout-v4.json",
+        "annotations/audit-manual-p017-p018-round7-holdout-v5.json"
+      ],
+      "initial_split": "holdout",
+      "current_status": "active_diagnostic",
+      "first_scored_round": "goal04-round7",
+      "revealed_round": "goal04-round7",
+      "selected_round": "goal04-round7",
+      "selection_record": "selections/goal04-round7-audit-manual-p017-p018.json",
+      "parser_state_sha256": "55d489e3a2913216daef4d5278839b71d9b9c39d4ad46e02c600647345f2bd76",
+      "gold_sha256": "863987077dc2e1ae8023a9a2f50fc1cb90fd1ea0e30e166cf976cb8152d19e61",
+      "reason": "Selected before source inspection and frozen before prediction; the blind zero-recall score was recorded before its differences were opened for diagnosis."
+    },
+    {
+      "sample_id": "interpretation-manual-p080-p082-round8-holdout",
+      "annotation": "annotations/interpretation-manual-p080-p082-round8-holdout.json",
+      "annotation_revisions": [
+        "annotations/interpretation-manual-p080-p082-round8-holdout-v2.json"
+      ],
+      "initial_split": "holdout",
+      "current_status": "active_diagnostic",
+      "first_scored_round": "goal04-round8",
+      "revealed_round": "goal04-round8",
+      "selected_round": "goal04-round8",
+      "selection_record": "selections/goal04-round8-interpretation-manual-p080-p082.json",
+      "parser_state_sha256": "02fe91e7c754a73e044e1039c8ce65e8ec02b44bbe29c6f40146c0e14a74536c",
+      "gold_sha256": "3eccab23059f67e8520950486efe2014c40db17fea4422fbd73cd0b80f98b543",
+      "reason": "Selected and parser-fingerprinted before source inspection; Gold was frozen before prediction, and the blind score was recorded before post-reveal source adjudication."
+    }
+  ]
+}

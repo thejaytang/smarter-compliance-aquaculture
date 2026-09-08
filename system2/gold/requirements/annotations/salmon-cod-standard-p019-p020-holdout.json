@@ -1,0 +1,899 @@
+{
+  "schema_version": "2.0",
+  "sample_id": "salmon-cod-standard-p019-p020-holdout",
+  "source": {
+    "file_name": "ASC-STD-010-ASC-Salmon-and-Cod-Standard-V1.5-Oct-2025-1.pdf",
+    "sha256": "a34e5f4fc78486136ddbf3d661d26aad85e4b8a1990b2e6eda3f3ac1df7f7b5c",
+    "language": "en",
+    "document_family": "certification_standard",
+    "page_count": 134
+  },
+  "sample": {
+    "round_id": "goal04-round2-diagnostic",
+    "split": "active",
+    "page_numbers": [19, 20],
+    "selection_rationale": "Human pages 19-20 contain four complete Requirement rows under Criterion 2.1. Page 20 ends after the rows and continues with Rationale, so page 21 is not needed to complete a Requirement."
+  },
+  "annotation": {
+    "status": "frozen",
+    "frozen_at": "2026-08-28",
+    "verification": ["visual_page", "native_text"],
+    "notes": [
+      "All bounding boxes use PDF points with a top-left origin and were checked against the rendered pages and native text layer.",
+      "Footnote 4 is attached at Criterion 2.1 and is linked as an inherited exemption to all four sampled Requirement rows.",
+      "Footnote 10 is referenced only from Rationale and is excluded as a resource rather than linked to a Requirement.",
+      "This sample is retained only as active diagnostic data because its annotation content was disclosed before Round 2 evaluation."
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "p019-header",
+      "page_number": 19,
+      "page_index": 18,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 396.91, "y0": 37.54, "x1": 545.89, "y1": 45.10},
+      "role": "header",
+      "object_kind": "text_block",
+      "segment_order": 0,
+      "source_text": "Aquaculture Stewardship Council"
+    },
+    {
+      "segment_id": "p019-principle-heading",
+      "page_number": 19,
+      "page_index": 18,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 56.64, "y0": 65.98, "x1": 544.85, "y1": 105.94},
+      "role": "other",
+      "object_kind": "text_block",
+      "segment_order": 1,
+      "source_text": "PRINCIPLE 2: CONSERVE NATURAL HABITAT, LOCAL BIODIVERSITY AND ECOSYSTEM FUNCTION"
+    },
+    {
+      "segment_id": "p019-principle-intro",
+      "page_number": 19,
+      "page_index": 18,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 56.64, "y0": 120.39, "x1": 552.07, "y1": 179.67},
+      "role": "other",
+      "object_kind": "text_block",
+      "segment_order": 2,
+      "source_text": "Principle 2 is intended to address potential impacts from salmon farms on natural habitat, local biodiversity, and ecosystem function. Specifically, the key impact areas of benthic impacts, siting, effects of chemical inputs and effects of nutrient loading are addressed within this principle."
+    },
+    {
+      "segment_id": "p019-criterion-heading",
+      "page_number": 19,
+      "page_index": 18,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 92.18, "y0": 196.89, "x1": 453.00, "y1": 209.07},
+      "role": "criterion_heading",
+      "object_kind": "text_block",
+      "segment_order": 3,
+      "source_text": "Criterion 2.1 Benthic biodiversity and benthic effects4"
+    },
+    {
+      "segment_id": "p019-table-header-indicator",
+      "page_number": 19,
+      "page_index": 18,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 165.02, "y0": 242.10, "x1": 236.95, "y1": 254.10},
+      "role": "other",
+      "object_kind": "table_cell",
+      "segment_order": 4,
+      "source_text": "INDICATOR"
+    },
+    {
+      "segment_id": "p019-table-header-requirement",
+      "page_number": 19,
+      "page_index": 18,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 412.63, "y0": 242.10, "x1": 506.52, "y1": 254.10},
+      "role": "other",
+      "object_kind": "table_cell",
+      "segment_order": 5,
+      "source_text": "REQUIREMENT"
+    },
+    {
+      "segment_id": "p019-req-2-1-1-id",
+      "page_number": 19,
+      "page_index": 18,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 62.54, "y0": 286.50, "x1": 81.52, "y1": 297.54},
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 6,
+      "source_text": "2.1.1"
+    },
+    {
+      "segment_id": "p019-req-2-1-1-indicator",
+      "page_number": 19,
+      "page_index": 18,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 96.74, "y0": 285.96, "x1": 329.79, "y1": 337.74},
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 7,
+      "source_text": "Redox potential or5 sulphide levels in sediment outside of the Allowable Zone of Effect (AZE), following the sampling methodology outlined in Appendix I-1"
+    },
+    {
+      "segment_id": "p019-req-2-1-1-value",
+      "page_number": 19,
+      "page_index": 18,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 393.55, "y0": 287.22, "x1": 525.60, "y1": 337.02},
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 8,
+      "source_text": "Redox potential > 0 mV,\nor,\nSulphide ≤ 1,500 μMol /L"
+    },
+    {
+      "segment_id": "p019-req-2-1-2-id",
+      "page_number": 19,
+      "page_index": 18,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 62.54, "y0": 390.30, "x1": 83.81, "y1": 401.34},
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 9,
+      "source_text": "2.1.2"
+    },
+    {
+      "segment_id": "p019-req-2-1-2-indicator",
+      "page_number": 19,
+      "page_index": 18,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 96.74, "y0": 389.76, "x1": 337.11, "y1": 441.56},
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 10,
+      "source_text": "Faunal index score indicating good6 to high ecological quality in sediment outside the AZE, following the sampling methodology outlined in Appendix I-1"
+    },
+    {
+      "segment_id": "p019-req-2-1-2-value",
+      "page_number": 19,
+      "page_index": 18,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 351.55, "y0": 370.14, "x1": 567.67, "y1": 461.72},
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 11,
+      "source_text": "AZTI Marine Biotic Index (AMBI) score ≤ 3.3, or,\nShannon Index score > 3,\nor,\nBenthic Quality Index (BQI) score ≥ 15,\nor,\nInfaunal Trophic Index (ITI) score ≥ 25"
+    },
+    {
+      "segment_id": "p019-footnote-4",
+      "page_number": 19,
+      "page_index": 18,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 56.64, "y0": 580.97, "x1": 544.06, "y1": 612.44},
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 12,
+      "source_text": "4 Closed production systems that can demonstrate that they collect and responsibly dispose of > 75% of solid nutrients from the production system are exempt from standards under Criterion 2.1. See Appendix VI for requirements on transparency for 2.1.1 and 2.1.2."
+    },
+    {
+      "segment_id": "p019-footnote-5",
+      "page_number": 19,
+      "page_index": 18,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 56.64, "y0": 619.97, "x1": 544.82, "y1": 640.40},
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 13,
+      "source_text": "5 Farm sites can choose whether to use redox or sulphide. Farms do not have to demonstrate that they meet both."
+    },
+    {
+      "segment_id": "p019-footnote-6",
+      "page_number": 19,
+      "page_index": 18,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 56.64, "y0": 647.93, "x1": 543.23, "y1": 679.28},
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 14,
+      "source_text": "6 “Good” Ecological Quality Classification: The level of diversity and abundance of invertebrate taxa is slightly outside the range associated with the type-specific conditions. Most of the sensitive taxa of the type-specific communities are present."
+    },
+    {
+      "segment_id": "p019-footer",
+      "page_number": 19,
+      "page_index": 18,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 88.82, "y0": 705.40, "x1": 513.13, "y1": 740.68},
+      "role": "footer",
+      "object_kind": "table_cell",
+      "segment_order": 15,
+      "source_text": "Document Name: ASC Salmon and Cod Standard Document ID: ASC-STD-010 Date issued: 13/10/2025 Document Owner: Director of Standards and Science Version: 1.5 Last reviewed: 13/10/2025 Classification: EXTERNAL (PUBLIC) Page 19 of 134"
+    },
+    {
+      "segment_id": "p020-header",
+      "page_number": 20,
+      "page_index": 19,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 396.91, "y0": 37.54, "x1": 545.89, "y1": 45.10},
+      "role": "header",
+      "object_kind": "text_block",
+      "segment_order": 0,
+      "source_text": "Aquaculture Stewardship Council"
+    },
+    {
+      "segment_id": "p020-req-2-1-3-id",
+      "page_number": 20,
+      "page_index": 19,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 62.54, "y0": 82.95, "x1": 83.76, "y1": 93.99},
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 1,
+      "source_text": "2.1.3"
+    },
+    {
+      "segment_id": "p020-req-2-1-3-indicator",
+      "page_number": 20,
+      "page_index": 19,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 96.74, "y0": 82.95, "x1": 311.52, "y1": 134.19},
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 2,
+      "source_text": "Number of macrofaunal taxa in the sediment within the AZE, following the sampling methodology outlined in Appendix I-1"
+    },
+    {
+      "segment_id": "p020-req-2-1-3-value",
+      "page_number": 20,
+      "page_index": 19,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 355.51, "y0": 95.73, "x1": 563.64, "y1": 120.75},
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 3,
+      "source_text": "≥ 2 highly abundant7 taxa that are not pollution indicator species"
+    },
+    {
+      "segment_id": "p020-req-2-1-4-id",
+      "page_number": 20,
+      "page_index": 19,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 62.54, "y0": 166.59, "x1": 84.83, "y1": 177.63},
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 4,
+      "source_text": "2.1.4"
+    },
+    {
+      "segment_id": "p020-req-2-1-4-indicator",
+      "page_number": 20,
+      "page_index": 19,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 96.74, "y0": 166.59, "x1": 330.52, "y1": 191.07},
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 5,
+      "source_text": "Definition of a site-specific AZE based on a robust and credible8 modelling system9"
+    },
+    {
+      "segment_id": "p020-req-2-1-4-value",
+      "page_number": 20,
+      "page_index": 19,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 450.10, "y0": 173.31, "x1": 469.16, "y1": 184.35},
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 6,
+      "source_text": "Yes"
+    },
+    {
+      "segment_id": "p020-rationale-1",
+      "page_number": 20,
+      "page_index": 19,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 56.64, "y0": 217.83, "x1": 545.95, "y1": 373.74},
+      "role": "rationale",
+      "object_kind": "text_block",
+      "segment_order": 7,
+      "source_text": "Rationale - This suite of indicators provides multiple layers of security related to benthic impacts, using a chemical proxy for health combined with biodiversity measurements both below and a distance from the cages. Technical experts suggest the chemical proxy of redox potential and sulphide levels, which are good chemical indicators for benthic health. Given that both methods are valid, audited farms can choose their preference for one or the other. Requirements have been set for both. Through the consultation of technical experts and review of Hargrave et al.10 (2008), a level of μMol /L sulphide levels and equivalent redox potential of > 0 mV was set to ensure acceptable and transitory benthic conditions. As a precautionary approach, these requirements are applicable regardless of the depth of the site."
+    },
+    {
+      "segment_id": "p020-rationale-2",
+      "page_number": 20,
+      "page_index": 19,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 56.64, "y0": 390.78, "x1": 552.05, "y1": 466.16},
+      "role": "rationale",
+      "object_kind": "text_block",
+      "segment_order": 8,
+      "source_text": "When considering benthic effects, experts recommended measuring effects below the cages and away from the cages, within and outside the AZE. All certified farms must have undertaken the appropriate analysis to determine the site-specific AZE and depositional patterns. This will help ensure that sampling is taking place in areas most appropriate to protect benthic health around farms."
+    },
+    {
+      "segment_id": "p020-footnote-7",
+      "page_number": 20,
+      "page_index": 19,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 56.64, "y0": 531.14, "x1": 552.14, "y1": 551.57},
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 9,
+      "source_text": "7 Highly abundant: Greater than 100 organisms per square metre (or equally high to reference site(s) if natural abundance is lower than this level)."
+    },
+    {
+      "segment_id": "p020-footnote-8",
+      "page_number": 20,
+      "page_index": 19,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 56.64, "y0": 559.10, "x1": 544.05, "y1": 590.48},
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 10,
+      "source_text": "8 Robust and credible: The SEPA AUTODEPOMOD modelling system is considered to be an example of a credible and robust system. The model must include a multi-parameter approach. Monitoring must be used to ground-truth the AZE proposed through the model."
+    },
+    {
+      "segment_id": "p020-footnote-9",
+      "page_number": 20,
+      "page_index": 19,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 56.64, "y0": 598.01, "x1": 542.23, "y1": 629.48},
+      "role": "auditor_action",
+      "object_kind": "footnote",
+      "segment_order": 11,
+      "source_text": "9 The CAB shall confirm that the AZE is correct and then to default to the social principles (P6 and P7) to ensure the farm is responding to stakeholder comments with the intention that the AZE is not arbitrary and meets stakeholder expectations."
+    },
+    {
+      "segment_id": "p020-footnote-10",
+      "page_number": 20,
+      "page_index": 19,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 56.64, "y0": 636.89, "x1": 549.29, "y1": 679.28},
+      "role": "resource",
+      "object_kind": "footnote",
+      "segment_order": 12,
+      "source_text": "10 Hargrave, B.T., Holmer, M. and Newcombe, C.P. 2008. Towards a classification of organic enrichment in marine sediments based on biogeochemical indicators. Marine Pollution Bulletin 56, 810–824. https://www.researchgate.net/publication/5509807_Towards_a_classification_of_organic_enrichment_in_marine_sediments_based_on_biogeochemical_indicators"
+    },
+    {
+      "segment_id": "p020-footer",
+      "page_number": 20,
+      "page_index": 19,
+      "page_size": {"width": 612, "height": 792, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 88.82, "y0": 705.40, "x1": 513.13, "y1": 740.68},
+      "role": "footer",
+      "object_kind": "table_cell",
+      "segment_order": 13,
+      "source_text": "Document Name: ASC Salmon and Cod Standard Document ID: ASC-STD-010 Date issued: 13/10/2025 Document Owner: Director of Standards and Science Version: 1.5 Last reviewed: 13/10/2025 Classification: EXTERNAL (PUBLIC) Page 20 of 134"
+    }
+  ],
+  "requirements": [
+    {
+      "requirement_id": "2.1.1",
+      "requirement_form": "indicator_plus_value",
+      "criterion_path": [
+        "PRINCIPLE 2: CONSERVE NATURAL HABITAT, LOCAL BIODIVERSITY AND ECOSYSTEM FUNCTION",
+        "Criterion 2.1 Benthic biodiversity and benthic effects"
+      ],
+      "language": "en",
+      "indicator_text": "Redox potential or sulphide levels in sediment outside of the Allowable Zone of Effect (AZE), following the sampling methodology outlined in Appendix I-1",
+      "requirement_value": "Redox potential > 0 mV, or, Sulphide ≤ 1,500 μMol /L",
+      "normative_text": "Redox potential or sulphide levels in sediment outside of the Allowable Zone of Effect (AZE), following the sampling methodology outlined in Appendix I-1\nRedox potential > 0 mV, or, Sulphide ≤ 1,500 μMol /L",
+      "normative_subjects": ["farm sites"],
+      "applicability": ["sediment outside of the Allowable Zone of Effect (AZE)"],
+      "modalities": [
+        {
+          "token": "can",
+          "type": "permission",
+          "scope": "Farm sites can choose whether to use redox or sulphide."
+        }
+      ],
+      "negations": [
+        {
+          "text": "Farms do not have to demonstrate that they meet both.",
+          "applies_to": "the alternative redox or sulphide methods"
+        }
+      ],
+      "clauses": [
+        {
+          "clause_id": "2.1.1-a",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Redox potential > 0 mV",
+          "joins_next": "or"
+        },
+        {
+          "clause_id": "2.1.1-b",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Sulphide ≤ 1,500 μMol /L",
+          "joins_next": null
+        }
+      ],
+      "conditions": [
+        {
+          "text": "following the sampling methodology outlined in Appendix I-1",
+          "applies_to": "redox potential or sulphide measurements"
+        }
+      ],
+      "exceptions": [],
+      "exemptions": [
+        {
+          "text": "Closed production systems that can demonstrate that they collect and responsibly dispose of > 75% of solid nutrients from the production system are exempt from standards under Criterion 2.1.",
+          "applies_to": "Requirement 2.1.1"
+        }
+      ],
+      "thresholds": [
+        {
+          "raw_text": "Redox potential > 0 mV",
+          "operator": "gt",
+          "normalized_value": 0,
+          "unit": "mV",
+          "applies_to": "redox potential in sediment outside the AZE",
+          "basis": "explicit",
+          "source_segment_ids": ["p019-req-2-1-1-value"]
+        },
+        {
+          "raw_text": "Sulphide ≤ 1,500 μMol /L",
+          "operator": "lte",
+          "normalized_value": 1500,
+          "unit": "μMol /L",
+          "applies_to": "sulphide levels in sediment outside the AZE",
+          "basis": "explicit",
+          "source_segment_ids": ["p019-req-2-1-1-value"]
+        },
+        {
+          "raw_text": "> 75% of solid nutrients",
+          "operator": "gt",
+          "normalized_value": 75,
+          "unit": "%",
+          "applies_to": "solid nutrients collected and responsibly disposed of by closed production systems for exemption eligibility",
+          "basis": "explicit",
+          "source_segment_ids": ["p019-footnote-4"]
+        }
+      ],
+      "dates": [],
+      "cross_references": [
+        {"text": "Appendix I-1", "target": "Appendix I-1", "type": "internal_exact"},
+        {"text": "Criterion 2.1", "target": "Criterion 2.1", "type": "internal_exact"},
+        {"text": "Appendix VI", "target": "Appendix VI", "type": "internal_exact"}
+      ],
+      "footnote_refs": [
+        {
+          "marker": "4",
+          "text": "Closed production systems that can demonstrate that they collect and responsibly dispose of > 75% of solid nutrients from the production system are exempt from standards under Criterion 2.1. See Appendix VI for requirements on transparency for 2.1.1 and 2.1.2.",
+          "link_type": "inherited",
+          "source_segment_ids": ["p019-footnote-4"]
+        },
+        {
+          "marker": "5",
+          "text": "Farm sites can choose whether to use redox or sulphide. Farms do not have to demonstrate that they meet both.",
+          "link_type": "direct",
+          "source_segment_ids": ["p019-footnote-5"]
+        }
+      ],
+      "associated_instructions": [
+        {
+          "marker": "5",
+          "text": "Farm sites can choose whether to use redox or sulphide. Farms do not have to demonstrate that they meet both.",
+          "effect": "method",
+          "source_segment_ids": ["p019-footnote-5"]
+        }
+      ],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["p019-principle-heading", "p019-criterion-heading"],
+      "source_segment_ids": [
+        "p019-req-2-1-1-id",
+        "p019-req-2-1-1-indicator",
+        "p019-req-2-1-1-value",
+        "p019-footnote-4",
+        "p019-footnote-5"
+      ],
+      "source_anomalies": [],
+      "gold_notes": []
+    },
+    {
+      "requirement_id": "2.1.2",
+      "requirement_form": "indicator_plus_value",
+      "criterion_path": [
+        "PRINCIPLE 2: CONSERVE NATURAL HABITAT, LOCAL BIODIVERSITY AND ECOSYSTEM FUNCTION",
+        "Criterion 2.1 Benthic biodiversity and benthic effects"
+      ],
+      "language": "en",
+      "indicator_text": "Faunal index score indicating good to high ecological quality in sediment outside the AZE, following the sampling methodology outlined in Appendix I-1",
+      "requirement_value": "AZTI Marine Biotic Index (AMBI) score ≤ 3.3, or, Shannon Index score > 3, or, Benthic Quality Index (BQI) score ≥ 15, or, Infaunal Trophic Index (ITI) score ≥ 25",
+      "normative_text": "Faunal index score indicating good to high ecological quality in sediment outside the AZE, following the sampling methodology outlined in Appendix I-1\nAZTI Marine Biotic Index (AMBI) score ≤ 3.3, or, Shannon Index score > 3, or, Benthic Quality Index (BQI) score ≥ 15, or, Infaunal Trophic Index (ITI) score ≥ 25",
+      "normative_subjects": [],
+      "applicability": ["sediment outside the AZE"],
+      "modalities": [],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "2.1.2-a",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "AZTI Marine Biotic Index (AMBI) score ≤ 3.3",
+          "joins_next": "or"
+        },
+        {
+          "clause_id": "2.1.2-b",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Shannon Index score > 3",
+          "joins_next": "or"
+        },
+        {
+          "clause_id": "2.1.2-c",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Benthic Quality Index (BQI) score ≥ 15",
+          "joins_next": "or"
+        },
+        {
+          "clause_id": "2.1.2-d",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Infaunal Trophic Index (ITI) score ≥ 25",
+          "joins_next": null
+        }
+      ],
+      "conditions": [
+        {
+          "text": "following the sampling methodology outlined in Appendix I-1",
+          "applies_to": "faunal index scoring"
+        }
+      ],
+      "exceptions": [],
+      "exemptions": [
+        {
+          "text": "Closed production systems that can demonstrate that they collect and responsibly dispose of > 75% of solid nutrients from the production system are exempt from standards under Criterion 2.1.",
+          "applies_to": "Requirement 2.1.2"
+        }
+      ],
+      "thresholds": [
+        {
+          "raw_text": "AZTI Marine Biotic Index (AMBI) score ≤ 3.3",
+          "operator": "lte",
+          "normalized_value": 3.3,
+          "unit": "AMBI score",
+          "applies_to": "AZTI Marine Biotic Index",
+          "basis": "explicit",
+          "source_segment_ids": ["p019-req-2-1-2-value"]
+        },
+        {
+          "raw_text": "Shannon Index score > 3",
+          "operator": "gt",
+          "normalized_value": 3,
+          "unit": "Shannon Index score",
+          "applies_to": "Shannon Index",
+          "basis": "explicit",
+          "source_segment_ids": ["p019-req-2-1-2-value"]
+        },
+        {
+          "raw_text": "Benthic Quality Index (BQI) score ≥ 15",
+          "operator": "gte",
+          "normalized_value": 15,
+          "unit": "BQI score",
+          "applies_to": "Benthic Quality Index",
+          "basis": "explicit",
+          "source_segment_ids": ["p019-req-2-1-2-value"]
+        },
+        {
+          "raw_text": "Infaunal Trophic Index (ITI) score ≥ 25",
+          "operator": "gte",
+          "normalized_value": 25,
+          "unit": "ITI score",
+          "applies_to": "Infaunal Trophic Index",
+          "basis": "explicit",
+          "source_segment_ids": ["p019-req-2-1-2-value"]
+        },
+        {
+          "raw_text": "> 75% of solid nutrients",
+          "operator": "gt",
+          "normalized_value": 75,
+          "unit": "%",
+          "applies_to": "solid nutrients collected and responsibly disposed of by closed production systems for exemption eligibility",
+          "basis": "explicit",
+          "source_segment_ids": ["p019-footnote-4"]
+        }
+      ],
+      "dates": [],
+      "cross_references": [
+        {"text": "Appendix I-1", "target": "Appendix I-1", "type": "internal_exact"},
+        {"text": "good", "target": "Footnote 6", "type": "defined_term"},
+        {"text": "Criterion 2.1", "target": "Criterion 2.1", "type": "internal_exact"},
+        {"text": "Appendix VI", "target": "Appendix VI", "type": "internal_exact"}
+      ],
+      "footnote_refs": [
+        {
+          "marker": "4",
+          "text": "Closed production systems that can demonstrate that they collect and responsibly dispose of > 75% of solid nutrients from the production system are exempt from standards under Criterion 2.1. See Appendix VI for requirements on transparency for 2.1.1 and 2.1.2.",
+          "link_type": "inherited",
+          "source_segment_ids": ["p019-footnote-4"]
+        },
+        {
+          "marker": "6",
+          "text": "“Good” Ecological Quality Classification: The level of diversity and abundance of invertebrate taxa is slightly outside the range associated with the type-specific conditions. Most of the sensitive taxa of the type-specific communities are present.",
+          "link_type": "direct",
+          "source_segment_ids": ["p019-footnote-6"]
+        }
+      ],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["p019-principle-heading", "p019-criterion-heading"],
+      "source_segment_ids": [
+        "p019-req-2-1-2-id",
+        "p019-req-2-1-2-indicator",
+        "p019-req-2-1-2-value",
+        "p019-footnote-4",
+        "p019-footnote-6"
+      ],
+      "source_anomalies": [],
+      "gold_notes": []
+    },
+    {
+      "requirement_id": "2.1.3",
+      "requirement_form": "indicator_plus_value",
+      "criterion_path": [
+        "PRINCIPLE 2: CONSERVE NATURAL HABITAT, LOCAL BIODIVERSITY AND ECOSYSTEM FUNCTION",
+        "Criterion 2.1 Benthic biodiversity and benthic effects"
+      ],
+      "language": "en",
+      "indicator_text": "Number of macrofaunal taxa in the sediment within the AZE, following the sampling methodology outlined in Appendix I-1",
+      "requirement_value": "≥ 2 highly abundant taxa that are not pollution indicator species",
+      "normative_text": "Number of macrofaunal taxa in the sediment within the AZE, following the sampling methodology outlined in Appendix I-1\n≥ 2 highly abundant taxa that are not pollution indicator species",
+      "normative_subjects": [],
+      "applicability": ["sediment within the AZE"],
+      "modalities": [],
+      "negations": [
+        {
+          "text": "not pollution indicator species",
+          "applies_to": "the highly abundant taxa counted toward the minimum"
+        }
+      ],
+      "clauses": [
+        {
+          "clause_id": "2.1.3-a",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "≥ 2 highly abundant taxa that are not pollution indicator species",
+          "joins_next": null
+        }
+      ],
+      "conditions": [
+        {
+          "text": "following the sampling methodology outlined in Appendix I-1",
+          "applies_to": "the macrofaunal taxa count"
+        },
+        {
+          "text": "if natural abundance is lower than this level",
+          "applies_to": "use of abundance equally high to reference site(s)"
+        }
+      ],
+      "exceptions": [],
+      "exemptions": [
+        {
+          "text": "Closed production systems that can demonstrate that they collect and responsibly dispose of > 75% of solid nutrients from the production system are exempt from standards under Criterion 2.1.",
+          "applies_to": "Requirement 2.1.3"
+        }
+      ],
+      "thresholds": [
+        {
+          "raw_text": "≥ 2 highly abundant taxa",
+          "operator": "gte",
+          "normalized_value": 2,
+          "unit": "taxa",
+          "applies_to": "highly abundant taxa in sediment within the AZE that are not pollution indicator species",
+          "basis": "explicit",
+          "source_segment_ids": ["p020-req-2-1-3-value"]
+        },
+        {
+          "raw_text": "Greater than 100 organisms per square metre",
+          "operator": "gt",
+          "normalized_value": 100,
+          "unit": "organisms per square metre",
+          "applies_to": "definition of highly abundant",
+          "basis": "explicit",
+          "source_segment_ids": ["p020-footnote-7"]
+        },
+        {
+          "raw_text": "equally high to reference site(s) if natural abundance is lower than this level",
+          "operator": "other",
+          "normalized_value": "equally high to reference site(s)",
+          "unit": null,
+          "applies_to": "alternative definition of highly abundant where natural abundance is lower",
+          "basis": "explicit",
+          "source_segment_ids": ["p020-footnote-7"]
+        },
+        {
+          "raw_text": "> 75% of solid nutrients",
+          "operator": "gt",
+          "normalized_value": 75,
+          "unit": "%",
+          "applies_to": "solid nutrients collected and responsibly disposed of by closed production systems for exemption eligibility",
+          "basis": "explicit",
+          "source_segment_ids": ["p019-footnote-4"]
+        }
+      ],
+      "dates": [],
+      "cross_references": [
+        {"text": "Appendix I-1", "target": "Appendix I-1", "type": "internal_exact"},
+        {"text": "highly abundant", "target": "Footnote 7", "type": "defined_term"},
+        {"text": "Criterion 2.1", "target": "Criterion 2.1", "type": "internal_exact"},
+        {"text": "Appendix VI", "target": "Appendix VI", "type": "internal_exact"}
+      ],
+      "footnote_refs": [
+        {
+          "marker": "4",
+          "text": "Closed production systems that can demonstrate that they collect and responsibly dispose of > 75% of solid nutrients from the production system are exempt from standards under Criterion 2.1. See Appendix VI for requirements on transparency for 2.1.1 and 2.1.2.",
+          "link_type": "inherited",
+          "source_segment_ids": ["p019-footnote-4"]
+        },
+        {
+          "marker": "7",
+          "text": "Highly abundant: Greater than 100 organisms per square metre (or equally high to reference site(s) if natural abundance is lower than this level).",
+          "link_type": "direct",
+          "source_segment_ids": ["p020-footnote-7"]
+        }
+      ],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["p019-principle-heading", "p019-criterion-heading"],
+      "source_segment_ids": [
+        "p020-req-2-1-3-id",
+        "p020-req-2-1-3-indicator",
+        "p020-req-2-1-3-value",
+        "p019-footnote-4",
+        "p020-footnote-7"
+      ],
+      "source_anomalies": [],
+      "gold_notes": []
+    },
+    {
+      "requirement_id": "2.1.4",
+      "requirement_form": "indicator_plus_value",
+      "criterion_path": [
+        "PRINCIPLE 2: CONSERVE NATURAL HABITAT, LOCAL BIODIVERSITY AND ECOSYSTEM FUNCTION",
+        "Criterion 2.1 Benthic biodiversity and benthic effects"
+      ],
+      "language": "en",
+      "indicator_text": "Definition of a site-specific AZE based on a robust and credible modelling system",
+      "requirement_value": "Yes",
+      "normative_text": "Definition of a site-specific AZE based on a robust and credible modelling system\nYes",
+      "normative_subjects": ["CAB"],
+      "applicability": ["site-specific AZE"],
+      "modalities": [
+        {
+          "token": "must",
+          "type": "obligation",
+          "scope": "The model must include a multi-parameter approach."
+        },
+        {
+          "token": "must",
+          "type": "obligation",
+          "scope": "Monitoring must be used to ground-truth the AZE proposed through the model."
+        },
+        {
+          "token": "shall",
+          "type": "obligation",
+          "scope": "The CAB shall confirm that the AZE is correct and then to default to the social principles (P6 and P7)."
+        }
+      ],
+      "negations": [
+        {
+          "text": "the AZE is not arbitrary",
+          "applies_to": "CAB confirmation and stakeholder-response check"
+        }
+      ],
+      "clauses": [
+        {
+          "clause_id": "2.1.4-a",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Definition of a site-specific AZE based on a robust and credible modelling system",
+          "joins_next": null
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [
+        {
+          "text": "Closed production systems that can demonstrate that they collect and responsibly dispose of > 75% of solid nutrients from the production system are exempt from standards under Criterion 2.1.",
+          "applies_to": "Requirement 2.1.4"
+        }
+      ],
+      "thresholds": [
+        {
+          "raw_text": "> 75% of solid nutrients",
+          "operator": "gt",
+          "normalized_value": 75,
+          "unit": "%",
+          "applies_to": "solid nutrients collected and responsibly disposed of by closed production systems for exemption eligibility",
+          "basis": "explicit",
+          "source_segment_ids": ["p019-footnote-4"]
+        }
+      ],
+      "dates": [],
+      "cross_references": [
+        {"text": "robust and credible", "target": "Footnote 8", "type": "defined_term"},
+        {"text": "Criterion 2.1", "target": "Criterion 2.1", "type": "internal_exact"},
+        {"text": "Appendix VI", "target": "Appendix VI", "type": "internal_exact"},
+        {"text": "social principles (P6 and P7)", "target": "Principles 6 and 7", "type": "internal_generic"}
+      ],
+      "footnote_refs": [
+        {
+          "marker": "4",
+          "text": "Closed production systems that can demonstrate that they collect and responsibly dispose of > 75% of solid nutrients from the production system are exempt from standards under Criterion 2.1. See Appendix VI for requirements on transparency for 2.1.1 and 2.1.2.",
+          "link_type": "inherited",
+          "source_segment_ids": ["p019-footnote-4"]
+        },
+        {
+          "marker": "8",
+          "text": "Robust and credible: The SEPA AUTODEPOMOD modelling system is considered to be an example of a credible and robust system. The model must include a multi-parameter approach. Monitoring must be used to ground-truth the AZE proposed through the model.",
+          "link_type": "direct",
+          "source_segment_ids": ["p020-footnote-8"]
+        },
+        {
+          "marker": "9",
+          "text": "The CAB shall confirm that the AZE is correct and then to default to the social principles (P6 and P7) to ensure the farm is responding to stakeholder comments with the intention that the AZE is not arbitrary and meets stakeholder expectations.",
+          "link_type": "direct",
+          "source_segment_ids": ["p020-footnote-9"]
+        }
+      ],
+      "associated_instructions": [
+        {
+          "marker": "8",
+          "text": "Robust and credible: The SEPA AUTODEPOMOD modelling system is considered to be an example of a credible and robust system. The model must include a multi-parameter approach. Monitoring must be used to ground-truth the AZE proposed through the model.",
+          "effect": "method",
+          "source_segment_ids": ["p020-footnote-8"]
+        }
+      ],
+      "client_actions": [],
+      "auditor_actions": [
+        {
+          "marker": "9",
+          "text": "The CAB shall confirm that the AZE is correct and then to default to the social principles (P6 and P7) to ensure the farm is responding to stakeholder comments with the intention that the AZE is not arbitrary and meets stakeholder expectations.",
+          "source_segment_ids": ["p020-footnote-9"]
+        }
+      ],
+      "related_context_ids": ["p019-principle-heading", "p019-criterion-heading"],
+      "source_segment_ids": [
+        "p020-req-2-1-4-id",
+        "p020-req-2-1-4-indicator",
+        "p020-req-2-1-4-value",
+        "p019-footnote-4",
+        "p020-footnote-8",
+        "p020-footnote-9"
+      ],
+      "source_anomalies": [],
+      "gold_notes": []
+    }
+  ],
+  "excluded_regions": [
+    {
+      "source_segment_ids": ["p019-header", "p019-footer", "p020-header", "p020-footer"],
+      "classification": "header_footer",
+      "reason": "Repeated document furniture, not Requirement content."
+    },
+    {
+      "source_segment_ids": ["p019-principle-heading", "p019-principle-intro", "p019-criterion-heading", "p019-table-header-indicator", "p019-table-header-requirement"],
+      "classification": "other_non_requirement",
+      "reason": "Section context and table labels used for hierarchy, not standalone Requirements."
+    },
+    {
+      "source_segment_ids": ["p020-rationale-1", "p020-rationale-2"],
+      "classification": "rationale",
+      "reason": "Explanatory Rationale prose, including normative-sounding wording, is not a standalone Requirement row."
+    },
+    {
+      "source_segment_ids": ["p020-footnote-9"],
+      "classification": "auditor_action",
+      "reason": "Linked CAB instruction attached to Requirement 2.1.4, not a standalone farm Requirement."
+    },
+    {
+      "source_segment_ids": ["p020-footnote-10"],
+      "classification": "resource",
+      "reason": "Bibliographic source cited only by the Rationale."
+    }
+  ],
+  "summary": {
+    "requirement_count": 4,
+    "cross_page_requirement_count": 0,
+    "client_action_count": 0,
+    "auditor_action_count": 1,
+    "critical_gold_ambiguities": []
+  }
+}

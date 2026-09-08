@@ -1,0 +1,312 @@
+{
+  "schema_version": "2.0",
+  "sample_id": "interpretation-manual-p019-p021",
+  "source": {
+    "file_name": "ASC-INT-001-ASC-Farm-Standard-Interpretation-Manual-V1.0-May-2025.pdf",
+    "sha256": "804ead3d1d1a53019869b5385dabfb86356b8276b990538c0d782e750167777e",
+    "language": "en",
+    "document_family": "interpretation_manual",
+    "page_count": 511
+  },
+  "sample": {
+    "round_id": "goal04-round1",
+    "split": "active",
+    "page_numbers": [19, 20, 21],
+    "selection_rationale": "Repeated Indicator/Requirement tables, a long nested Requirement, modal-bearing interpretation text that must be excluded, and Requirement 1.4.3 continuing across a page boundary."
+  },
+  "annotation": {
+    "status": "frozen",
+    "frozen_at": "2026-08-28",
+    "verification": ["visual_page", "native_text"],
+    "notes": [
+      "The formal Requirement boundary is the Indicator/Requirement table, not every sentence containing shall or may.",
+      "Requirement 1.4.3 begins on PDF page 20 and continues without a repeated header on page 21."
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "int-p19-criterion",
+      "page_number": 19,
+      "page_index": 18,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 51.0, "y0": 68.084, "x1": 314.144, "y1": 82.712},
+      "role": "criterion_heading",
+      "object_kind": "text_block",
+      "segment_order": 0,
+      "source_text": "Criterion 1.4 – Traceability and Disclosure",
+      "continues_segment_id": null
+    },
+    {
+      "segment_id": "int-1.4.1-id",
+      "page_number": 19,
+      "page_index": 18,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.904, "y0": 157.669, "x1": 81.93, "y1": 174.785},
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 1,
+      "source_text": "1.4.1",
+      "continues_segment_id": null
+    },
+    {
+      "segment_id": "int-1.4.1-text",
+      "page_number": 19,
+      "page_index": 18,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 157.763, "x1": 504.597, "y1": 185.52},
+      "role": "normative_text",
+      "object_kind": "table_cell",
+      "segment_order": 2,
+      "source_text": "The UoC shall identify, evaluate and mitigate risks of mixing and substituting ASC certified products with non-certified products at all sites.",
+      "continues_segment_id": null
+    },
+    {
+      "segment_id": "int-1.4.2-id",
+      "page_number": 19,
+      "page_index": 18,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.904, "y0": 213.949, "x1": 84.694, "y1": 231.065},
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 3,
+      "source_text": "1.4.2",
+      "continues_segment_id": null
+    },
+    {
+      "segment_id": "int-1.4.2-text",
+      "page_number": 19,
+      "page_index": 18,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 214.043, "x1": 540.061, "y1": 484.37},
+      "role": "normative_text",
+      "object_kind": "table_cell",
+      "segment_order": 4,
+      "source_text": "The UoC shall develop, implement and maintain a traceability system, covering all sites, to ensure that the following conditions are met: a. only larvae/juveniles that conform with the requirements in Criterion 1.5 are used to produce certified product; and b. all stocked animals are traceable back to the supplier; and c. all batches of ASC certified and non-certified product are identifiable and segregated at all sites and at all times; and d. all batches of ASC certified product are traceable at all times to: o the site(s) used ; and o the production unit(s) used; and e. corrective actions are taken if non-conforming product is identified, sold or dispatched; and f. accompanying documentation shall identify product sold or dispatched as ASC certified or non-certified.",
+      "continues_segment_id": null
+    },
+    {
+      "segment_id": "int-p19-interpretation",
+      "page_number": 19,
+      "page_index": 18,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.904, "y0": 509.548, "x1": 540.0, "y1": 733.0},
+      "role": "interpretation",
+      "object_kind": "list",
+      "segment_order": 5,
+      "source_text": "How do I interpret this requirement? The UoC is responsible for ensuring it mitigates risks of substitution and mixing of certified and non-certified products. The UoC may use the Risk Assessment Method outlined in Appendix 3 of the ASC Farm Standard, Section 3.2. Certified and non-certified products shall be identifiable and segregated at all sites and at all times within the UoC. Certified products shall be traceable at all sites and at all times within the UoC.",
+      "continues_segment_id": null
+    },
+    {
+      "segment_id": "int-p20-context",
+      "page_number": 20,
+      "page_index": 19,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.904, "y0": 70.0, "x1": 540.0, "y1": 477.29},
+      "role": "interpretation",
+      "object_kind": "list",
+      "segment_order": 6,
+      "source_text": "The UoC may decide to sell products from the UoC as non-certified. In this case, the products shall be identified as non-certified when sold or dispatched. Evidence of implementation should be maintained, e.g. Auditors should confirm. Useful Resources N/A.",
+      "continues_segment_id": "int-p19-interpretation"
+    },
+    {
+      "segment_id": "int-1.4.3-id",
+      "page_number": 20,
+      "page_index": 19,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.904, "y0": 582.309, "x1": 84.776, "y1": 599.425},
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 7,
+      "source_text": "1.4.3",
+      "continues_segment_id": null
+    },
+    {
+      "segment_id": "int-1.4.3-applicability",
+      "page_number": 20,
+      "page_index": 19,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 582.403, "x1": 384.261, "y1": 593.96},
+      "role": "applicability",
+      "object_kind": "table_cell",
+      "segment_order": 8,
+      "source_text": "Indicator applicability: every UoC using compound feed",
+      "continues_segment_id": null
+    },
+    {
+      "segment_id": "int-1.4.3-text-p20",
+      "page_number": 20,
+      "page_index": 19,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 604.603, "x1": 537.958, "y1": 725.36},
+      "role": "normative_text",
+      "object_kind": "table_cell",
+      "segment_order": 9,
+      "source_text": "The UoC shall demonstrate that feed products, subject to conformance with Indicator 2.12.1, are accompanied by the following information: a. the originating feed mill holds valid certification against the ASC Feed Standard with the appropriate scope of certification in relation to the ASC Production Model (i.e. Mass Balance Production Model or Segregation Production Model product); and b. feed is traceable as ASC-conforming throughout all steps between the feed mill and site; and",
+      "continues_segment_id": null
+    },
+    {
+      "segment_id": "int-1.4.3-text-p21",
+      "page_number": 21,
+      "page_index": 20,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 73.763, "x1": 536.109, "y1": 178.44},
+      "role": "requirement_continuation",
+      "object_kind": "table_cell",
+      "segment_order": 10,
+      "source_text": "c. documentation accompanying the feed identifies the feed as ASC-conforming; and d. documentation accompanying the feed identifies the production model applied (i.e. Mass Balance Production Model or Segregation Production Model); and e. for ASC-conforming Segregation Production Model feed, the product is identifiable by a distinct feed name in formal documentation accompanying the product and is listed on the schedule to the feed mill certificate.",
+      "continues_segment_id": "int-1.4.3-text-p20"
+    },
+    {
+      "segment_id": "int-p21-context",
+      "page_number": 21,
+      "page_index": 20,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.904, "y0": 203.618, "x1": 540.0, "y1": 540.0},
+      "role": "interpretation",
+      "object_kind": "list",
+      "segment_order": 11,
+      "source_text": "How do I interpret this requirement? Indicator 2.12.1 requires the UoC to only use ASC-conforming compound feed. Evidence of implementation should be maintained, e.g. Auditors should confirm. Useful Resources N/A.",
+      "continues_segment_id": null
+    }
+  ],
+  "requirements": [
+    {
+      "requirement_id": "1.4.1",
+      "requirement_form": "requirement_table",
+      "criterion_path": ["Criterion 1.4 – Traceability and Disclosure"],
+      "language": "en",
+      "indicator_text": null,
+      "requirement_value": null,
+      "normative_text": "The UoC shall identify, evaluate and mitigate risks of mixing and substituting ASC certified products with non-certified products at all sites.",
+      "normative_subjects": ["The UoC"],
+      "applicability": [],
+      "modalities": [
+        {"token": "shall", "type": "obligation", "scope": "identify, evaluate and mitigate risks of mixing and substituting ASC certified products with non-certified products at all sites"}
+      ],
+      "negations": [],
+      "clauses": [],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["int-p19-interpretation", "int-p20-context"],
+      "source_segment_ids": ["int-1.4.1-id", "int-1.4.1-text"],
+      "source_anomalies": [],
+      "gold_notes": ["Modal-bearing interpretation below the table is related guidance, not part of the formal Requirement."]
+    },
+    {
+      "requirement_id": "1.4.2",
+      "requirement_form": "requirement_table",
+      "criterion_path": ["Criterion 1.4 – Traceability and Disclosure"],
+      "language": "en",
+      "indicator_text": null,
+      "requirement_value": null,
+      "normative_text": "The UoC shall develop, implement and maintain a traceability system, covering all sites, to ensure that the following conditions are met: a. only larvae/juveniles that conform with the requirements in Criterion 1.5 are used to produce certified product; and b. all stocked animals are traceable back to the supplier; and c. all batches of ASC certified and non-certified product are identifiable and segregated at all sites and at all times; and d. all batches of ASC certified product are traceable at all times to: o the site(s) used ; and o the production unit(s) used; and e. corrective actions are taken if non-conforming product is identified, sold or dispatched; and f. accompanying documentation shall identify product sold or dispatched as ASC certified or non-certified.",
+      "normative_subjects": ["The UoC", "accompanying documentation"],
+      "applicability": ["all sites"],
+      "modalities": [
+        {"token": "shall", "type": "obligation", "scope": "develop, implement and maintain a traceability system covering conditions a–f"},
+        {"token": "shall", "type": "obligation", "scope": "accompanying documentation identifies product sold or dispatched as ASC certified or non-certified"}
+      ],
+      "negations": [],
+      "clauses": [
+        {"clause_id": "1.4.2-a", "parent_clause_id": null, "marker": "a.", "text": "only larvae/juveniles that conform with the requirements in Criterion 1.5 are used to produce certified product", "joins_next": "and"},
+        {"clause_id": "1.4.2-b", "parent_clause_id": null, "marker": "b.", "text": "all stocked animals are traceable back to the supplier", "joins_next": "and"},
+        {"clause_id": "1.4.2-c", "parent_clause_id": null, "marker": "c.", "text": "all batches of ASC certified and non-certified product are identifiable and segregated at all sites and at all times", "joins_next": "and"},
+        {"clause_id": "1.4.2-d", "parent_clause_id": null, "marker": "d.", "text": "all batches of ASC certified product are traceable at all times to", "joins_next": "and"},
+        {"clause_id": "1.4.2-d-i", "parent_clause_id": "1.4.2-d", "marker": "o", "text": "the site(s) used", "joins_next": "and"},
+        {"clause_id": "1.4.2-d-ii", "parent_clause_id": "1.4.2-d", "marker": "o", "text": "the production unit(s) used", "joins_next": null},
+        {"clause_id": "1.4.2-e", "parent_clause_id": null, "marker": "e.", "text": "corrective actions are taken if non-conforming product is identified, sold or dispatched", "joins_next": "and"},
+        {"clause_id": "1.4.2-f", "parent_clause_id": null, "marker": "f.", "text": "accompanying documentation shall identify product sold or dispatched as ASC certified or non-certified", "joins_next": null}
+      ],
+      "conditions": [
+        {"text": "if non-conforming product is identified, sold or dispatched", "applies_to": "corrective actions are taken"}
+      ],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [
+        {"text": "Criterion 1.5", "target": "Criterion 1.5", "type": "internal_exact"}
+      ],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["int-p19-interpretation", "int-p20-context"],
+      "source_segment_ids": ["int-1.4.2-id", "int-1.4.2-text"],
+      "source_anomalies": [],
+      "gold_notes": ["The printed source marker for the two nested items under d is the letter o; it must remain distinguishable from a normalized Markdown bullet."]
+    },
+    {
+      "requirement_id": "1.4.3",
+      "requirement_form": "requirement_table",
+      "criterion_path": ["Criterion 1.4 – Traceability and Disclosure"],
+      "language": "en",
+      "indicator_text": null,
+      "requirement_value": null,
+      "normative_text": "The UoC shall demonstrate that feed products, subject to conformance with Indicator 2.12.1, are accompanied by the following information: a. the originating feed mill holds valid certification against the ASC Feed Standard with the appropriate scope of certification in relation to the ASC Production Model (i.e. Mass Balance Production Model or Segregation Production Model product); and b. feed is traceable as ASC-conforming throughout all steps between the feed mill and site; and c. documentation accompanying the feed identifies the feed as ASC-conforming; and d. documentation accompanying the feed identifies the production model applied (i.e. Mass Balance Production Model or Segregation Production Model); and e. for ASC-conforming Segregation Production Model feed, the product is identifiable by a distinct feed name in formal documentation accompanying the product and is listed on the schedule to the feed mill certificate.",
+      "normative_subjects": ["The UoC"],
+      "applicability": ["every UoC using compound feed"],
+      "modalities": [
+        {"token": "shall", "type": "obligation", "scope": "demonstrate that feed products are accompanied by information a–e"}
+      ],
+      "negations": [],
+      "clauses": [
+        {"clause_id": "1.4.3-a", "parent_clause_id": null, "marker": "a.", "text": "the originating feed mill holds valid certification against the ASC Feed Standard with the appropriate scope of certification in relation to the ASC Production Model (i.e. Mass Balance Production Model or Segregation Production Model product)", "joins_next": "and"},
+        {"clause_id": "1.4.3-b", "parent_clause_id": null, "marker": "b.", "text": "feed is traceable as ASC-conforming throughout all steps between the feed mill and site", "joins_next": "and"},
+        {"clause_id": "1.4.3-c", "parent_clause_id": null, "marker": "c.", "text": "documentation accompanying the feed identifies the feed as ASC-conforming", "joins_next": "and"},
+        {"clause_id": "1.4.3-d", "parent_clause_id": null, "marker": "d.", "text": "documentation accompanying the feed identifies the production model applied (i.e. Mass Balance Production Model or Segregation Production Model)", "joins_next": "and"},
+        {"clause_id": "1.4.3-e", "parent_clause_id": null, "marker": "e.", "text": "for ASC-conforming Segregation Production Model feed, the product is identifiable by a distinct feed name in formal documentation accompanying the product and is listed on the schedule to the feed mill certificate", "joins_next": null}
+      ],
+      "conditions": [
+        {"text": "subject to conformance with Indicator 2.12.1", "applies_to": "feed products"},
+        {"text": "for ASC-conforming Segregation Production Model feed", "applies_to": "clause e"}
+      ],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [
+        {"text": "Indicator 2.12.1", "target": "2.12.1", "type": "internal_exact"},
+        {"text": "ASC Feed Standard", "target": "ASC Feed Standard", "type": "external_document"}
+      ],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["int-p21-context"],
+      "source_segment_ids": ["int-1.4.3-id", "int-1.4.3-applicability", "int-1.4.3-text-p20", "int-1.4.3-text-p21"],
+      "source_anomalies": [],
+      "gold_notes": ["The Requirement is one logical unit spanning pages 20 and 21; page 21 has no repeated Indicator/Requirement header before clauses c–e."]
+    }
+  ],
+  "excluded_regions": [
+    {
+      "source_segment_ids": ["int-p19-interpretation", "int-p20-context"],
+      "classification": "interpretation",
+      "reason": "Interpretive guidance contains shall/may tokens but is outside the formal Requirement table."
+    },
+    {
+      "source_segment_ids": ["int-p21-context"],
+      "classification": "interpretation",
+      "reason": "Interpretation, evidence examples, auditor guidance and resources are related context, not Requirement 1.4.3 itself."
+    }
+  ],
+  "summary": {
+    "requirement_count": 3,
+    "cross_page_requirement_count": 1,
+    "client_action_count": 0,
+    "auditor_action_count": 0,
+    "critical_gold_ambiguities": [
+      "Modal-bearing interpretation text must not be promoted to a formal Requirement.",
+      "Requirement 1.4.3 must be joined across pages before clause and logical-operator evaluation."
+    ]
+  }
+}

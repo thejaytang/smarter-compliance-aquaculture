@@ -1,0 +1,10 @@
+{
+  "text": "SCANNED SAFETY NOTICE\nThe dosage shall be 0.01 mg.\nIt must not exceed 0.02 mg.\nValid until 2027-12-31.",
+  "block_types": ["heading", "paragraph", "paragraph", "paragraph"],
+  "heading_levels": [1],
+  "cross_page_merges": 0,
+  "cells": [],
+  "cell_spans": [],
+  "critical_spans": ["shall", "0.01", "mg", "must", "not", "0.02", "mg", "2027-12-31"],
+  "critical_conflicts": []
+}

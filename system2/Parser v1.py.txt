@@ -1,0 +1,690 @@
+from pathlib import Path
+from bs4 import BeautifulSoup
+import json
+import re
+
+# =====================================================
+# CONFIG
+# =====================================================
+
+INPUT_FOLDER = "html"
+OUTPUT_FOLDER = "output"
+
+laws = []
+chapters = []
+paragraphs = []
+references = []
+footnotes = []
+
+# =====================================================
+# HELPERS
+# =====================================================
+
+def clean(text):
+
+    if not text:
+        return ""
+
+    return " ".join(
+        text.replace("\xa0", " ").split()
+    )
+
+
+def law_id_from_filename(filename):
+
+    match = re.match(
+        r"(PA\d+-\d+)",
+        filename
+    )
+
+    if match:
+        return match.group(1)
+
+    return filename
+
+
+# =====================================================
+# METADATA
+# =====================================================
+
+def parse_metadata(soup):
+
+    metadata = {}
+
+    for row in soup.select(
+        "#documentMeta table.meta tr"
+    ):
+
+        th = row.find("th")
+        td = row.find("td")
+
+        if not th or not td:
+            continue
+
+        metadata[
+            clean(th.get_text())
+        ] = clean(td.get_text())
+
+    return metadata
+
+
+# =====================================================
+# REFERENCES
+# =====================================================
+
+def extract_references(element):
+
+    refs = []
+
+    for a in element.select(
+        "a.reference"
+    ):
+
+        ref_id = a.get("data-id")
+
+        if not ref_id:
+            continue
+
+        ref_type = "other"
+
+        if ref_id.startswith("lov/"):
+            ref_type = "law"
+
+        elif ref_id.startswith("forskrift/"):
+            ref_type = "regulation"
+
+        elif ref_id.startswith("eu/"):
+            ref_type = "eu"
+
+        elif ref_id.startswith("external/"):
+            ref_type = "external"
+
+        refs.append({
+
+            "reference_id":
+                ref_id,
+
+            "reference_type":
+                ref_type,
+
+            "text":
+                clean(
+                    a.get_text()
+                )
+        })
+
+    return refs
+
+
+# =====================================================
+# LIST ITEMS
+# =====================================================
+
+def extract_list_items(element):
+
+    items = []
+
+    for table in element.select(
+        "table.listeItem"
+    ):
+
+        cells = table.find_all(
+            "td"
+        )
+
+        if len(cells) < 2:
+            continue
+
+        level = int(
+            table.get(
+                "data-level",
+                1
+            )
+        )
+
+        items.append({
+
+            "level":
+                level,
+
+            "parent_level":
+                level - 1
+                if level > 1
+                else None,
+
+            "label":
+                clean(
+                    cells[0].get_text()
+                ),
+
+            "text":
+                clean(
+                    cells[1].get_text()
+                )
+
+        })
+
+    return items
+
+
+# =====================================================
+# FOOTNOTES
+# =====================================================
+
+def extract_footnotes(element):
+
+    result = []
+
+    for note in element.select(
+        "td.fotnote"
+    ):
+
+        txt = clean(
+            note.get_text(
+                " ",
+                strip=True
+            )
+        )
+
+        if txt:
+
+            result.append({
+                "text": txt
+            })
+
+    return result
+
+
+# =====================================================
+# CHAPTER
+# =====================================================
+
+def parse_chapter(
+    div,
+    law_id
+):
+
+    heading = div.find(
+        ["h1", "h2", "h3", "h4"]
+    )
+
+    return {
+
+        "law_id":
+            law_id,
+
+        "chapter_id":
+            div.get("id"),
+
+        "level":
+            int(
+                div.get(
+                    "data-level",
+                    1
+                )
+            ),
+
+        "title":
+            clean(
+                heading.get_text()
+            )
+            if heading
+            else ""
+
+    }
+
+
+# =====================================================
+# PARAGRAPH
+# =====================================================
+
+def parse_paragraph(
+    div,
+    law_id,
+    chapter_id
+):
+
+    paragraph_number = ""
+    paragraph_title = ""
+
+    value = div.select_one(
+        ".paragrafValue"
+    )
+
+    if value:
+        paragraph_number = clean(
+            value.get_text()
+        )
+
+    title = div.select_one(
+        ".paragrafTittel"
+    )
+
+    if title:
+        paragraph_title = clean(
+            title.get_text()
+        )
+
+    text_parts = []
+
+    #
+    # Capture ALL visible paragraph text
+    #
+
+    for p in div.find_all("p"):
+
+        classes = p.get(
+            "class",
+            []
+        )
+
+        if (
+            "share-paragraf-title"
+            in classes
+        ):
+            continue
+
+        txt = clean(
+            p.get_text(
+                " ",
+                strip=True
+            )
+        )
+
+        if txt:
+            text_parts.append(
+                txt
+            )
+
+    refs = extract_references(
+        div
+    )
+
+    lists = extract_list_items(
+        div
+    )
+
+    notes = extract_footnotes(
+        div
+    )
+
+    return {
+
+        "law_id":
+            law_id,
+
+        "chapter_id":
+            chapter_id,
+
+        "paragraph_id":
+            div.get("id"),
+
+        "paragraph_number":
+            paragraph_number,
+
+        "title":
+            paragraph_title,
+
+        "text":
+            "\n".join(
+                text_parts
+            ),
+
+        "list_items":
+            lists,
+
+        "references":
+            refs,
+
+        "footnotes":
+            notes
+    }
+
+
+# =====================================================
+# LAW FILE PARSER
+# =====================================================
+
+def parse_file(path):
+
+    law_id = law_id_from_filename(
+        path.name
+    )
+
+    html = path.read_text(
+        encoding="utf-8",
+        errors="ignore"
+    )
+
+    soup = BeautifulSoup(
+        html,
+        "lxml"
+    )
+
+    metadata = parse_metadata(
+        soup
+    )
+
+    title = ""
+
+    title_element = soup.select_one(
+        "#documentMeta h1"
+    )
+
+    if title_element:
+
+        title = clean(
+            title_element.get_text()
+        )
+
+    law_record = {
+
+        "law_id":
+            law_id,
+
+        "title":
+            title,
+
+        "date":
+            metadata.get(
+                "Dato"
+            ),
+
+        "department":
+            metadata.get(
+                "Departement"
+            ),
+
+        "effective_date":
+            metadata.get(
+                "Ikrafttredelse"
+            ),
+
+        "short_title":
+            metadata.get(
+                "Korttittel"
+            )
+    }
+
+    laws.append(
+        law_record
+    )
+
+    raw_document = {
+
+        "law_id":
+            law_id,
+
+        "title":
+            title,
+
+        "metadata":
+            metadata,
+
+        "chapters":
+            [],
+
+        "paragraphs":
+            []
+    }
+
+    body = soup.select_one(
+        "#documentBody"
+    )
+
+    if not body:
+        return raw_document
+
+    current_chapter = None
+
+    #
+    # Process elements in true document order
+    #
+
+    for div in body.find_all("div"):
+
+        classes = div.get(
+            "class",
+            []
+        )
+
+        if (
+            "kapittel" not in classes
+            and
+            "paragraf" not in classes
+        ):
+            continue
+
+        # -------------------------------
+
+        # CHAPTER
+
+        # -------------------------------
+
+        if "kapittel" in classes:
+
+            chapter = parse_chapter(
+                div,
+                law_id
+            )
+
+            chapters.append(
+                chapter
+            )
+
+            raw_document[
+                "chapters"
+            ].append(
+                chapter
+            )
+
+            current_chapter = (
+                chapter[
+                    "chapter_id"
+                ]
+            )
+
+        # -------------------------------
+
+        # PARAGRAPH
+
+        # -------------------------------
+
+        elif "paragraf" in classes:
+
+            paragraph = parse_paragraph(
+
+                div,
+
+                law_id,
+
+                current_chapter
+
+            )
+
+            paragraphs.append(
+                paragraph
+            )
+
+            raw_document[
+                "paragraphs"
+            ].append(
+                paragraph
+            )
+
+            # References
+
+            for ref in paragraph[
+                "references"
+            ]:
+
+                references.append({
+
+                    "law_id":
+                        law_id,
+
+                    "paragraph_id":
+                        paragraph[
+                            "paragraph_id"
+                        ],
+
+                    "reference_id":
+                        ref[
+                            "reference_id"
+                        ],
+
+                    "reference_type":
+                        ref[
+                            "reference_type"
+                        ],
+
+                    "reference_text":
+                        ref[
+                            "text"
+                        ]
+                })
+
+            # Footnotes
+
+            for note in paragraph[
+                "footnotes"
+            ]:
+
+                footnotes.append({
+
+                    "law_id":
+                        law_id,
+
+                    "paragraph_id":
+                        paragraph[
+                            "paragraph_id"
+                        ],
+
+                    "footnote":
+                        note[
+                            "text"
+                        ]
+                })
+
+    return raw_document
+
+
+# =====================================================
+# SAVE OUTPUT
+# =====================================================
+
+def save_output():
+
+    output = Path(
+        OUTPUT_FOLDER
+    )
+
+    output.mkdir(
+        exist_ok=True
+    )
+
+    datasets = {
+
+        "laws.json":
+            laws,
+
+        "chapters.json":
+            chapters,
+
+        "paragraphs.json":
+            paragraphs,
+
+        "references.json":
+            references,
+
+        "footnotes.json":
+            footnotes
+    }
+
+    for filename, data in datasets.items():
+
+        with open(
+            output / filename,
+            "w",
+            encoding="utf-8"
+        ) as f:
+
+            json.dump(
+                data,
+                f,
+                indent=2,
+                ensure_ascii=False
+            )
+
+
+# =====================================================
+# MAIN
+# =====================================================
+
+def main():
+
+    html_folder = Path(
+        INPUT_FOLDER
+    )
+
+    output_folder = Path(
+        OUTPUT_FOLDER
+    )
+
+    raw_folder = (
+        output_folder / "raw"
+    )
+
+    raw_folder.mkdir(
+        parents=True,
+        exist_ok=True
+    )
+
+    files = list(
+        html_folder.glob(
+            "*.html"
+        )
+    )
+
+    print(
+        f"Found {len(files)} HTML files"
+    )
+
+    for file in files:
+
+        print(
+            f"Parsing {file.name}"
+        )
+
+        document = parse_file(
+            file
+        )
+
+        with open(
+            raw_folder /
+            f"{file.stem}.json",
+            "w",
+            encoding="utf-8"
+        ) as f:
+
+            json.dump(
+
+                document,
+
+                f,
+
+                indent=2,
+
+                ensure_ascii=False
+
+            )
+
+    save_output()
+
+    print(
+        "\nCompleted successfully."
+    )
+
+
+if __name__ == "__main__":
+    main()

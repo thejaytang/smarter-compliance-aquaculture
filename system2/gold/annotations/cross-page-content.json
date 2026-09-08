@@ -1,0 +1,10 @@
+{
+  "text": "Section 2 - Cross-page Evidence\nThis paragraph deliberately continues across the page boundary with a hyphenated word and ends on the next page.",
+  "block_types": ["heading", "paragraph", "table"],
+  "heading_levels": [1],
+  "cross_page_merges": 2,
+  "cells": ["Item", "Min", "Max", "A", "1", "5", "B", "2", "8", "C", "3", "9"],
+  "cell_spans": ["1x1", "1x1", "1x1", "1x1", "1x1", "1x1", "1x1", "1x1", "1x1", "1x1", "1x1", "1x1"],
+  "critical_spans": ["2", "1", "5", "2", "8", "3", "9", "2"],
+  "critical_conflicts": []
+}

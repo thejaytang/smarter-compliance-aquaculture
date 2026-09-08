@@ -1,0 +1,17 @@
+{
+  "selection_version": "1.0",
+  "round_id": "goal04-round8",
+  "selected_before_source_inspection": true,
+  "selected_at": "2026-08-28",
+  "sample_id": "interpretation-manual-p080-p082-round8-holdout",
+  "source_file": "ASC-INT-001-ASC-Farm-Standard-Interpretation-Manual-V1.0-May-2025.pdf",
+  "page_numbers": [80, 81, 82],
+  "split": "holdout",
+  "selection_rationale": "Untouched three-page Interpretation Manual window from the predefined risk pool. It tests repeated Requirement/interpretation separation, local headings, cross-page continuation and source-backed references in a document family different from the Round 7 Audit Matrix active sample.",
+  "parser_state_sha256": "02fe91e7c754a73e044e1039c8ce65e8ec02b44bbe29c6f40146c0e14a74536c",
+  "prediction_generated": true,
+  "prediction_sha256": "0ef007a41d5638ec6f03e2e6fd0584f9cc044db85ab56774bf834dd42b841c56",
+  "gold_opened": true,
+  "gold_frozen": true,
+  "gold_sha256": "3eccab23059f67e8520950486efe2014c40db17fea4422fbd73cd0b80f98b543"
+}

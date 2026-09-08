@@ -1,0 +1,203 @@
+{
+  "$defs": {
+    "Snapshot": {
+      "additionalProperties": false,
+      "properties": {
+        "source_id": {
+          "pattern": "^[A-Z]{2}\\d{3}$",
+          "title": "Source Id",
+          "type": "string"
+        },
+        "snapshot_id": {
+          "pattern": "^[A-Z]{2}\\d{3}-\\d{3}$",
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "relative_path": {
+          "title": "Relative Path",
+          "type": "string"
+        },
+        "content_hash": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Content Hash",
+          "type": "string"
+        },
+        "file_format": {
+          "title": "File Format",
+          "type": "string"
+        },
+        "operator_selection_decision": {
+          "const": "INCLUDE",
+          "title": "Operator Selection Decision",
+          "type": "string"
+        },
+        "selection_status": {
+          "const": "INCLUDE",
+          "title": "Selection Status",
+          "type": "string"
+        },
+        "snapshot_status": {
+          "const": "STORED",
+          "title": "Snapshot Status",
+          "type": "string"
+        },
+        "source_status": {
+          "const": "CURRENT",
+          "title": "Source Status",
+          "type": "string"
+        },
+        "download_status": {
+          "const": "SUCCESS",
+          "title": "Download Status",
+          "type": "string"
+        },
+        "registry_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Registry Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_id",
+        "snapshot_id",
+        "relative_path",
+        "content_hash",
+        "file_format",
+        "operator_selection_decision",
+        "selection_status",
+        "snapshot_status",
+        "source_status",
+        "download_status",
+        "registry_sha256"
+      ],
+      "title": "Snapshot",
+      "type": "object"
+    },
+    "StructureNode": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "title": "Kind",
+          "type": "string"
+        },
+        "parent_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Parent Id"
+        },
+        "locator": {
+          "title": "Locator",
+          "type": "string"
+        },
+        "data": {
+          "additionalProperties": true,
+          "title": "Data",
+          "type": "object"
+        },
+        "confidence": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidence"
+        },
+        "review_policy": {
+          "const": "review_required",
+          "default": "review_required",
+          "title": "Review Policy",
+          "type": "string"
+        },
+        "reason": {
+          "default": "uncalibrated_template_extraction",
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "locator",
+        "data"
+      ],
+      "title": "StructureNode",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "html-structure/1",
+      "default": "html-structure/1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source": {
+      "$ref": "#/$defs/Snapshot"
+    },
+    "parser_version": {
+      "title": "Parser Version",
+      "type": "string"
+    },
+    "config_hash": {
+      "title": "Config Hash",
+      "type": "string"
+    },
+    "encoding": {
+      "title": "Encoding",
+      "type": "string"
+    },
+    "nodes": {
+      "items": {
+        "$ref": "#/$defs/StructureNode"
+      },
+      "title": "Nodes",
+      "type": "array"
+    },
+    "requirement_status": {
+      "const": "not_extracted",
+      "default": "not_extracted",
+      "title": "Requirement Status",
+      "type": "string"
+    },
+    "review_policy": {
+      "const": "review_required",
+      "default": "review_required",
+      "title": "Review Policy",
+      "type": "string"
+    },
+    "issues": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Issues",
+      "type": "array"
+    }
+  },
+  "required": [
+    "source",
+    "parser_version",
+    "config_hash",
+    "encoding",
+    "nodes"
+  ],
+  "title": "HtmlStructure",
+  "type": "object"
+}

@@ -1,0 +1,662 @@
+{
+  "title": "Requirement 工作流对齐提案",
+  "goal": "帮助三名 Requirement 实习生对齐工作范围、输入输出、核心工作模块、决策责任，以及与 Site Model 团队共同定义的 handoff interface。",
+  "audience": "Requirement 实习生团队及相邻项目工作流",
+  "owner": "Requirement Workstream",
+  "language": "zh",
+  "randomSeed": "requirement-alignment-zh-20260826-dnv-blue",
+  "pageCount": 13,
+  "allowMediaReuse": true,
+  "themePack": "theme01",
+  "slides": [
+    {
+      "id": "cover",
+      "layout": "theme01_page002",
+      "props": {
+        "enKicker": "内部讨论提案",
+        "titleTop": "Requirement",
+        "titleBottom": "工作流对齐",
+        "subtitle": "从共同范围走向 Site Model-ready handoff",
+        "pills": [
+          "团队目标一致",
+          "明确工作边界",
+          "共同定义接口"
+        ],
+        "meta": "Requirement 实习生团队",
+        "footnote": "讨论稿，不代表已批准的正式模型",
+        "pillCount": 3,
+        "accentColor": "#0072CE",
+        "showOrb": true,
+        "showBokeh": true,
+        "showSubtitle": true,
+        "showCaption": true
+      }
+    },
+    {
+      "id": "team-position",
+      "layout": "theme01_page030",
+      "props": {
+        "kicker": "01A | 全局位置",
+        "title": "我们在项目中的位置",
+        "en": "TEAM POSITION",
+        "cn": "Requirement 位于资产模型的一侧",
+        "lead": "Requirement、Site Model 与 Evidence 相互连接，但由不同 workstream 分工负责。",
+        "highlightWord": "Requirement",
+        "caption": "",
+        "images": [
+          "assets/user-media/slide-43.png"
+        ],
+        "backgroundMode": "image",
+        "imageSlotCount": 1,
+        "imageFit": "contain",
+        "plate": "bottom-right",
+        "statCount": 0,
+        "highlight": true,
+        "highlightIndex": 0,
+        "showHighlighter": true,
+        "accentColor": "#0072CE",
+        "showCaption": false
+      }
+    },
+    {
+      "id": "source-landscape-base",
+      "layout": "theme01_page063",
+      "props": {
+        "kicker": "",
+        "titleLines": [
+          {
+            "text": ""
+          }
+        ],
+        "en": "",
+        "bigStat": {
+          "value": "",
+          "unit": "",
+          "label": ""
+        },
+        "notes": [],
+        "caption": "",
+        "images": [
+          "assets/user-media/codex-clipboard-44762e6d-8d85-4e0e-ba17-013b53446b1a.png"
+        ],
+        "backgroundMode": "media",
+        "imageSlotCount": 1,
+        "imageFit": "contain",
+        "titleLineCount": 1,
+        "noteCount": 0,
+        "showBigStat": false,
+        "showEn": false,
+        "accentColor": "#0072CE",
+        "showCaption": false
+      }
+    },
+    {
+      "id": "source-landscape-reveal",
+      "layout": "theme01_page041",
+      "props": {
+        "kicker": "01B | SOURCE 视角",
+        "title": "我们的 Source 输入",
+        "en": "聚焦 REQUIREMENT SIDE",
+        "cn": "Sources → Requirements",
+        "lead": "我们筛选并结构化 Requirement sources；Evidence sources 由其他 workstream 负责。",
+        "highlightWord": "Requirement 侧",
+        "caption": "",
+        "images": [
+          "assets/user-media/codex-clipboard-44762e6d-8d85-4e0e-ba17-013b53446b1a.png"
+        ],
+        "backgroundMode": "image",
+        "imageSlotCount": 1,
+        "imageFit": "contain",
+        "plate": "bottom-right",
+        "statCount": 0,
+        "highlight": true,
+        "highlightIndex": 0,
+        "showHighlighter": true,
+        "accentColor": "#0072CE",
+        "showCaption": false
+      }
+    },
+    {
+      "id": "input-output",
+      "layout": "theme01_page033",
+      "props": {
+        "kicker": "02 | REQUIREMENT",
+        "title": "什么是好的法规来源",
+        "en": "先定义输入质量",
+        "cn": "提取开始前的六项检查",
+        "columns": [
+          "检查维度",
+          "需要记录",
+          "Good 的标准"
+        ],
+        "rows": [
+          [
+            "范围匹配",
+            "覆盖范围 + 入选理由",
+            "纳入/排除清楚"
+          ],
+          [
+            "权威性",
+            "来源角色",
+            "角色分类明确"
+          ],
+          [
+            "时效性",
+            "版本 + 生效日期",
+            "状态已确认"
+          ],
+          [
+            "完整性",
+            "来源清单 + 缺口",
+            "约定范围已覆盖"
+          ],
+          [
+            "可追溯性",
+            "官方链接 + 标识",
+            "原始来源可恢复"
+          ],
+          [
+            "可维护性",
+            "负责人 + 复核周期",
+            "变更持续记录"
+          ]
+        ],
+        "footer": [
+          "Good sources",
+          "完整、准确、可维护",
+          "可开始提取"
+        ],
+        "caption": "来源：项目材料与团队讨论",
+        "rowCount": 6,
+        "emphasizeCol": 2,
+        "showBars": false,
+        "highlight": true,
+        "highlightIndex": 3,
+        "striped": true,
+        "showFooter": true,
+        "accentColor": "#0072CE",
+        "showCaption": true
+      }
+    },
+    {
+      "id": "work-modules",
+      "layout": "theme01_page040",
+      "props": {
+        "kicker": "03 | 工作设计",
+        "title": "三阶段工作流",
+        "en": "先建立原始库，再对齐使用",
+        "cn": "下游需求明确后再定义转化",
+        "phases": [
+          {
+            "period": "M1 · 来源库",
+            "step": "01",
+            "heading": "建立原始来源",
+            "points": [
+              "定义 sources 入选规则",
+              "人工 / API / 爬虫获取"
+            ],
+            "verdict": "HTML / PDF 来源库"
+          },
+          {
+            "period": "M2 · 原始数据",
+            "step": "02",
+            "heading": "建立模型数据集",
+            "points": [
+              "识别 PDF / 转化 HTML",
+              "提取字段与 labels"
+            ],
+            "verdict": "未做下游加工的原始库"
+          },
+          {
+            "period": "M3 · 下游对齐",
+            "step": "03",
+            "heading": "确认下游需求",
+            "points": [
+              "与 Model 团队核对需求",
+              "再定义必要、有效数据"
+            ],
+            "verdict": "约定 interface 范围"
+          }
+        ],
+        "caption": "现有 taxonomy 是讨论输入，不是默认标准",
+        "itemCount": 3,
+        "highlight": true,
+        "highlightIndex": 2,
+        "accentColor": "#0072CE",
+        "showRail": true,
+        "showVerdict": true,
+        "showCaption": true
+      }
+    },
+    {
+      "id": "source-inventory",
+      "layout": "theme01_page009",
+      "props": {
+        "kicker": "04 | 模块 1",
+        "title": "Source Inventory",
+        "en": "先定义 Good",
+        "cn": "先定规则，再填内容",
+        "chapters": [
+          {
+            "no": "01",
+            "label": "范围边界",
+            "en": "谁来决定？",
+            "desc": "第一版究竟应纳入哪些来源和地区？"
+          },
+          {
+            "no": "02",
+            "label": "来源角色",
+            "en": "它是什么？",
+            "desc": "Normative、guidance、audit tool，还是 draft？"
+          },
+          {
+            "no": "03",
+            "label": "版本状态",
+            "en": "使用哪版？",
+            "desc": "已生效、未来生效、过期，还是状态未知？"
+          },
+          {
+            "no": "04",
+            "label": "筛选逻辑",
+            "en": "为何纳入？",
+            "desc": "记录每份来源被纳入或排除的理由。"
+          },
+          {
+            "no": "05",
+            "label": "范围确认",
+            "en": "谁来批准？",
+            "desc": "由上游确认覆盖是否完整，而非实习生自行承诺。"
+          },
+          {
+            "no": "06",
+            "label": "质量与维护标准",
+            "en": "有待讨论",
+            "desc": "先定义完整、准确、定期维护的标准，再填充内容。"
+          }
+        ],
+        "caption": "来源：All aqwua regulations.docx",
+        "chapterCount": 6,
+        "highlight": true,
+        "highlightIndex": 5,
+        "accentColor": "#0072CE",
+        "showDesc": true,
+        "showCaption": true
+      }
+    },
+    {
+      "id": "requirement-model",
+      "layout": "theme01_page069",
+      "props": {
+        "kicker": "05 | 模块 2",
+        "headChunks": [
+          {
+            "text": "推测的"
+          },
+          {
+            "text": "Requirement"
+          },
+          {
+            "text": "必要字段"
+          }
+        ],
+        "sub": "下游无特殊要求时，团队讨论后再扩展",
+        "meta": "工作假设",
+        "tags": [
+          {
+            "term": "source_ref",
+            "note": "来源、条款与位置",
+            "big": true
+          },
+          {
+            "term": "requirement_text",
+            "note": "忠实原文的义务文本",
+            "big": true
+          },
+          {
+            "term": "atomicity",
+            "note": "一条记录只含一个义务",
+            "big": false
+          },
+          {
+            "term": "provenance",
+            "note": "来源与转换信息",
+            "big": false
+          },
+          {
+            "term": "applicability",
+            "note": "仅记录一般适用条件",
+            "big": false
+          },
+          {
+            "term": "version_status",
+            "note": "当前、未来或过期",
+            "big": false
+          }
+        ],
+        "takeaway": "先保必要字段，再扩展可用字段；先闭环，再优化。",
+        "takeawayHighlight": "",
+        "caption": "来源：现有项目文件；推测的必要字段",
+        "itemCount": 6,
+        "highlight": true,
+        "highlightIndex": 0,
+        "headTilt": -2,
+        "showSub": true,
+        "showTakeaway": true,
+        "accentColor": "#0072CE",
+        "showCaption": true
+      }
+    },
+    {
+      "id": "quality-gates",
+      "layout": "theme01_page028",
+      "props": {
+        "kicker": "06 | SITE 对齐",
+        "title": "需要 Site Model 回答什么",
+        "en": "接口对齐议程",
+        "cn": "在设计字段前，先回答四个问题",
+        "events": [
+          {
+            "date": "QUESTION 1",
+            "round": "使用场景",
+            "amount": "Q1",
+            "unit": "用途",
+            "note": "Requirement 数据将如何被 Site Model 使用？"
+          },
+          {
+            "date": "QUESTION 2",
+            "round": "字段与格式",
+            "amount": "Q2",
+            "unit": "SCHEMA",
+            "note": "哪些字段、标识符和格式是必需的？"
+          },
+          {
+            "date": "QUESTION 3",
+            "round": "数据粒度",
+            "amount": "Q3",
+            "unit": "单位",
+            "note": "需要法条、原子义务，还是其他单位？"
+          },
+          {
+            "date": "QUESTION 4",
+            "round": "适用性与变更",
+            "amount": "Q4",
+            "unit": "反馈",
+            "note": "需要哪些适用信息？变更如何反馈给我们？"
+          }
+        ],
+        "caption": "来源：团队讨论；需由 Site Model 确认",
+        "itemCount": 4,
+        "highlight": true,
+        "highlightIndex": 0,
+        "accentColor": "#0072CE",
+        "layout": "below",
+        "showConnector": true,
+        "showCaption": true
+      }
+    },
+    {
+      "id": "interface-principle",
+      "layout": "theme01_page031",
+      "props": {
+        "kicker": "07 | 内部执行规则",
+        "title": "接口明确后，我们需要定义什么",
+        "en": "建议的内部规则",
+        "cn": "下游先定需求，我们再定执行规则",
+        "quadrants": [
+          {
+            "title": "法条提取规则",
+            "en": "忠实于原文",
+            "desc": "定义如何识别义务、拆分原子 Requirement，并记录歧义。",
+            "chips": [
+              "原文摘录",
+              "义务主体",
+              "动作/约束",
+              "开放问题"
+            ]
+          },
+          {
+            "title": "来源与追溯",
+            "en": "可回到原始法条",
+            "desc": "每条记录保留来源、条款位置、版本和生效状态。",
+            "chips": [
+              "source_ref",
+              "条款位置",
+              "版本状态",
+              "文件角色"
+            ]
+          },
+          {
+            "title": "内部质量复核",
+            "en": "一致且可检查",
+            "desc": "团队定义格式检查、一致性检查、peer review 和问题记录方式。",
+            "chips": [
+              "格式检查",
+              "一致性检查",
+              "Peer review",
+              "Issue log"
+            ]
+          },
+          {
+            "title": "维护与更新",
+            "en": "可持续维护",
+            "desc": "明确来源监测、变更记录和重新交付的内部流程。",
+            "chips": [
+              "更新频率",
+              "变更日志",
+              "影响检查",
+              "重新交付"
+            ]
+          }
+        ],
+        "axisY": {
+          "high": "",
+          "low": ""
+        },
+        "axisX": {
+          "low": "",
+          "high": ""
+        },
+        "caption": "原则：字段由接口需求驱动，内部执行规则由 Requirement 团队维护",
+        "highlight": true,
+        "highlightIndex": 0,
+        "showAxisLabels": false,
+        "chipCount": 4,
+        "showCaption": true
+      }
+    },
+    {
+      "id": "team-diagnosis",
+      "layout": "theme01_page082",
+      "props": {
+        "kicker": "08 | 团队现状",
+        "lines": [
+          [
+            {
+              "t": "工作分散在"
+            },
+            {
+              "t": "不同支线",
+              "mark": "hi"
+            },
+            {
+              "t": "，没有汇聚"
+            }
+          ],
+          [
+            {
+              "t": "推进缺少"
+            },
+            {
+              "t": "目标与期限",
+              "mark": "hi"
+            },
+            {
+              "t": "，交付不清"
+            }
+          ]
+        ],
+        "sub": "当前问题不是大家没有工作，而是支线之间缺少共享目标、协作机制、明确交付物和交付时间。",
+        "stats": [
+          {
+            "value": "01",
+            "label": "协作方式需统一"
+          },
+          {
+            "value": "02",
+            "label": "交付产物需明确"
+          },
+          {
+            "value": "03",
+            "label": "交付时间需确认"
+          }
+        ],
+        "caption": "来源：个人观察，供团队讨论",
+        "accentColor": "#0072CE",
+        "showHighlighter": true,
+        "showSub": true,
+        "statCount": 3,
+        "highlight": true,
+        "highlightIndex": 0,
+        "align": "left",
+        "showCaption": true
+      }
+    },
+    {
+      "id": "decision-ownership",
+      "layout": "theme01_page066",
+      "props": {
+        "kicker": "09 | 决策责任",
+        "title": "谁主导，谁参与",
+        "en": "建议的责任分布",
+        "cn": "用于团队讨论，而非最终授权",
+        "cornerLabel": "决策 / 责任方",
+        "dims": [
+          "Req 团队",
+          "上游负责人",
+          "SME",
+          "Site Model",
+          "Evidence 团队"
+        ],
+        "rows": [
+          {
+            "name": "来源范围",
+            "tag": "确认",
+            "scores": [
+              2,
+              3,
+              2,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "提取规则",
+            "tag": "定义",
+            "scores": [
+              3,
+              1,
+              2,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "法律含义",
+            "tag": "授权解释",
+            "scores": [
+              2,
+              2,
+              3,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Interface 契约",
+            "tag": "共同设计",
+            "scores": [
+              3,
+              1,
+              1,
+              3,
+              1
+            ]
+          },
+          {
+            "name": "Evidence 工作",
+            "tag": "不在本组范围",
+            "scores": [
+              1,
+              1,
+              1,
+              2,
+              3
+            ]
+          }
+        ],
+        "legend": [
+          "1 不负责",
+          "2 参与讨论",
+          "3 主导",
+          "两个 3 = 共同负责"
+        ],
+        "caption": "来源：项目材料与团队范围讨论",
+        "rowCount": 5,
+        "dimCount": 5,
+        "highlight": true,
+        "highlightIndex": 3,
+        "showScoreNum": true,
+        "showLegend": true,
+        "accentColor": "#0072CE",
+        "showCaption": true
+      }
+    },
+    {
+      "id": "next-sprint",
+      "layout": "theme01_page058",
+      "props": {
+        "kicker": "10 | 下一阶段",
+        "title": "从对齐到执行",
+        "en": "先明确，再拆解，再交付",
+        "cn": "建议的项目推进结构",
+        "events": [
+          {
+            "date": "STEP 1",
+            "title": "先对齐所有不确定项",
+            "desc": "确认 interface、法规范围、任务目标、交付产物和验收标准。"
+          },
+          {
+            "date": "SETUP",
+            "title": "建立三模块责任制",
+            "desc": "每个模块明确负责人、验收人和可见任务目标。"
+          },
+          {
+            "date": "MODULE 1",
+            "title": "数据收集与来源整理",
+            "desc": "建立 source inventory，整理范围、版本、角色和状态。"
+          },
+          {
+            "date": "MODULE 2",
+            "title": "内容解析与数据化",
+            "desc": "从法规法条提取 requirement，形成可追溯结构化数据。"
+          },
+          {
+            "date": "MODULE 3",
+            "title": "信息处理与接口转化",
+            "desc": "处理信息，并转化为 Site Model 可接收的数据。"
+          }
+        ],
+        "note": "结果：形成三个目标清晰、可负责、可验收的模块。",
+        "caption": "来源：个人提出的项目推进结构",
+        "itemCount": 5,
+        "highlight": true,
+        "highlightIndex": 0,
+        "showSpine": true,
+        "alternate": true,
+        "accentColor": "#0072CE",
+        "showNote": true,
+        "showCaption": true
+      }
+    }
+  ]
+}

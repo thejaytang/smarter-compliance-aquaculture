@@ -1,0 +1,63 @@
+{
+  "schema_version": "2.1",
+  "round_id": "goal04-round4",
+  "schema": "schema-v2.json",
+  "sample_history": "sample-history.json",
+  "documents": [
+    {
+      "id": "farm-standard-p064-p065-holdout",
+      "split": "active",
+      "gold_split": "holdout",
+      "gold_round_id": "goal04-round2",
+      "pdf": "../../data/inputs/ASC-STD-001-ASC-Farm-Standard-V1.0.1-Aug-2025.pdf",
+      "pages": [64, 65],
+      "gold": "annotations/farm-standard-p064-p065-holdout.json",
+      "prediction": "../../outputs/runs/goal04-round4/farm-standard-p064-p065-active/regulatory-ir.json",
+      "prediction_sha256": "4c487ff5aa5ba7ccc2c3ada59c9a33c0e9d75dad45c82304d12d5adadcc2b28f"
+    },
+    {
+      "id": "salmon-cod-standard-p027-p028-holdout",
+      "split": "active",
+      "gold_split": "holdout",
+      "gold_round_id": "goal04-round3",
+      "pdf": "../../data/inputs/ASC-STD-010-ASC-Salmon-and-Cod-Standard-V1.5-Oct-2025-1.pdf",
+      "pages": [27, 28],
+      "gold": "annotations/salmon-cod-standard-p027-p028-holdout.json",
+      "prediction": "../../outputs/runs/goal04-round4/salmon-cod-standard-p027-p028-active/regulatory-ir.json",
+      "prediction_sha256": "9d9f0421df2c9ccbcdfe17d82c50cded7a03dd9ab11c2a6d6de329d60bbf21f5"
+    },
+    {
+      "id": "salmon-cod-standard-p018",
+      "split": "active",
+      "gold_split": "holdout",
+      "gold_round_id": "goal04-round1",
+      "schema": "schema-v3.json",
+      "pdf": "../../data/inputs/ASC-STD-010-ASC-Salmon-and-Cod-Standard-V1.5-Oct-2025-1.pdf",
+      "pages": [18],
+      "gold": "annotations/salmon-cod-standard-p018-v2.json",
+      "prediction": "../../outputs/runs/goal04-round4/salmon-cod-standard-p018-active/regulatory-ir.json",
+      "prediction_sha256": "cb44e252994b80593a9b3e086664acc860c6ca23ea1fa5ef5351e8899809f619"
+    },
+    {
+      "id": "interpretation-manual-p103-p106-round4-holdout",
+      "split": "active",
+      "gold_split": "holdout",
+      "gold_round_id": "goal04-round4",
+      "pdf": "../../data/inputs/ASC-INT-001-ASC-Farm-Standard-Interpretation-Manual-V1.0-May-2025.pdf",
+      "pages": [103, 104, 105, 106],
+      "gold": "annotations/interpretation-manual-p103-p106-round4-holdout.json",
+      "prediction": "../../outputs/runs/goal04-round4/interpretation-manual-p103-p106-active/regulatory-ir.json",
+      "prediction_sha256": "d4068d04aee9823c4f1ccabed571b29b519d1f4c5c44d5eb2d26fdf79018a937"
+    },
+    {
+      "id": "audit-manual-p011-p012-round4-holdout",
+      "split": "holdout",
+      "gold_round_id": "goal04-round4",
+      "pdf": "../../data/inputs/download-module-691-ASC-Salmon-Audit-Manual_v1.4.pdf",
+      "pages": [11, 12],
+      "gold": "annotations/audit-manual-p011-p012-round4-holdout.json",
+      "prediction": "../../outputs/runs/goal04-round4/audit-manual-p011-p012-holdout/regulatory-ir.json",
+      "prediction_sha256": "54e96b3d60c6706d335b22d69bd64df8f4bea9fcbb2dc7fc5474f87a8a4520bf"
+    }
+  ]
+}

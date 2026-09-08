@@ -1,0 +1,285 @@
+{
+  "$defs": {
+    "MappedText": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Text"
+        },
+        "references": {
+          "items": {
+            "$ref": "#/$defs/TextReference"
+          },
+          "title": "References",
+          "type": "array"
+        },
+        "status": {
+          "enum": [
+            "present",
+            "empty",
+            "missing"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "confidence": {
+          "default": null,
+          "title": "Confidence",
+          "type": "null"
+        },
+        "review_policy": {
+          "const": "review_required",
+          "default": "review_required",
+          "title": "Review Policy",
+          "type": "string"
+        }
+      },
+      "required": [
+        "text",
+        "references",
+        "status"
+      ],
+      "title": "MappedText",
+      "type": "object"
+    },
+    "ResidualReference": {
+      "additionalProperties": false,
+      "properties": {
+        "reference": {
+          "$ref": "#/$defs/TextReference"
+        },
+        "reason": {
+          "enum": [
+            "outside_record_mapping",
+            "source_control",
+            "unmapped_record_content",
+            "nonliteral_formula"
+          ],
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "reference",
+        "reason"
+      ],
+      "title": "ResidualReference",
+      "type": "object"
+    },
+    "SourceRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "standard_principle",
+            "source_clause"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "source_anchor": {
+          "title": "Source Anchor",
+          "type": "string"
+        },
+        "locator": {
+          "title": "Locator",
+          "type": "string"
+        },
+        "fields": {
+          "additionalProperties": {
+            "items": {
+              "$ref": "#/$defs/MappedText"
+            },
+            "type": "array"
+          },
+          "propertyNames": {
+            "enum": [
+              "identifier",
+              "title",
+              "body",
+              "criteria",
+              "level",
+              "context",
+              "notes",
+              "standard",
+              "version",
+              "category",
+              "national_interpretation"
+            ]
+          },
+          "title": "Fields",
+          "type": "object"
+        },
+        "issues": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Issues",
+          "type": "array"
+        },
+        "confidence": {
+          "default": null,
+          "title": "Confidence",
+          "type": "null"
+        },
+        "review_policy": {
+          "const": "review_required",
+          "default": "review_required",
+          "title": "Review Policy",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "source_anchor",
+        "locator",
+        "fields"
+      ],
+      "title": "SourceRecord",
+      "type": "object"
+    },
+    "TextReference": {
+      "additionalProperties": false,
+      "properties": {
+        "pointer": {
+          "title": "Pointer",
+          "type": "string"
+        },
+        "locator": {
+          "title": "Locator",
+          "type": "string"
+        }
+      },
+      "required": [
+        "pointer",
+        "locator"
+      ],
+      "title": "TextReference",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "source-records/1",
+      "default": "source-records/1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "mapper_version": {
+      "default": "source-records/1.0.0",
+      "title": "Mapper Version",
+      "type": "string"
+    },
+    "canonical_schema_version": {
+      "title": "Canonical Schema Version",
+      "type": "string"
+    },
+    "canonical_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Canonical Sha256",
+      "type": "string"
+    },
+    "source_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Source Sha256",
+      "type": "string"
+    },
+    "source_verification_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Source Verification Sha256",
+      "type": "string"
+    },
+    "profile": {
+      "enum": [
+        "lovdata_clauses",
+        "globalgap_ifa_aq",
+        "unsupported"
+      ],
+      "title": "Profile",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "review_required",
+        "not_supported"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "interpretation": {
+      "const": "source_structure_only",
+      "default": "source_structure_only",
+      "title": "Interpretation",
+      "type": "string"
+    },
+    "records": {
+      "items": {
+        "$ref": "#/$defs/SourceRecord"
+      },
+      "title": "Records",
+      "type": "array"
+    },
+    "residual": {
+      "items": {
+        "$ref": "#/$defs/ResidualReference"
+      },
+      "title": "Residual",
+      "type": "array"
+    },
+    "issues": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Issues",
+      "type": "array"
+    },
+    "source_reference_count": {
+      "title": "Source Reference Count",
+      "type": "integer"
+    },
+    "mapped_reference_count": {
+      "title": "Mapped Reference Count",
+      "type": "integer"
+    },
+    "confidence": {
+      "default": null,
+      "title": "Confidence",
+      "type": "null"
+    },
+    "review_policy": {
+      "const": "review_required",
+      "default": "review_required",
+      "title": "Review Policy",
+      "type": "string"
+    }
+  },
+  "required": [
+    "canonical_schema_version",
+    "canonical_sha256",
+    "source_sha256",
+    "source_verification_sha256",
+    "profile",
+    "status",
+    "records",
+    "residual",
+    "issues",
+    "source_reference_count",
+    "mapped_reference_count"
+  ],
+  "title": "SourceRecords",
+  "type": "object"
+}

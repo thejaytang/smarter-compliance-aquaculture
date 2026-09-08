@@ -1,0 +1,12 @@
+.venv/
+.venv.*/
+.cache/
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+tmp/
+outputs/
+:memory:.ses

@@ -1,0 +1,26 @@
+{
+  "schema_version": "2.1",
+  "round_id": "goal04-round7-v4-active",
+  "evaluation_mode": "active_diagnostic",
+  "schema": "schema-v4.json",
+  "sample_history": "sample-history.json",
+  "parser_state_artifact": "../../outputs/runs/goal04-round7/parser-state-v4-active22-final.json",
+  "parser_state_sha256": "4fac186326485792e2c2e51b4059252099c5e3ceb79ded1f945d2a6276cf4dce",
+  "documents": [
+    {
+      "id": "audit-manual-p017-p018-round7-holdout",
+      "split": "active",
+      "gold_split": "holdout",
+      "gold_round_id": "goal04-round7",
+      "schema": "schema-v4.json",
+      "pdf": "../../data/inputs/download-module-691-ASC-Salmon-Audit-Manual_v1.4.pdf",
+      "pages": [
+        17,
+        18
+      ],
+      "gold": "annotations/audit-manual-p017-p018-round7-holdout-v5.json",
+      "prediction": "../../outputs/runs/goal04-round7/audit-manual-p017-p018-active22-context-links/regulatory-ir.json",
+      "prediction_sha256": "0e79cc72e3cd3e45aed60ebc576cfe6cdf816e400145b039b2c350e2a01bac5f"
+    }
+  ]
+}

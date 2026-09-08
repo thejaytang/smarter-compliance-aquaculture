@@ -1,0 +1,49 @@
+{
+  "source": {
+    "source_id": "CS003",
+    "snapshot_id": "CS003-001",
+    "relative_path": "C_Certification_Scheme/CS003-001_ASC_Salmon_Audit_Manual.pdf",
+    "content_hash": "911b716d6e4f9aacc1e0c7999dbcf1e009f08c3b322269c748d867006521e76d",
+    "file_format": "pdf",
+    "operator_selection_decision": "INCLUDE",
+    "selection_status": "INCLUDE",
+    "snapshot_status": "STORED",
+    "source_status": "CURRENT",
+    "download_status": "SUCCESS",
+    "registry_sha256": "96aebadfbb42265c8a0e050cc0014006372b33711a5ed371a3ce0e61a7bf1fab"
+  },
+  "processed_pages": [
+    0
+  ],
+  "canonical_sha256": "0308578517fe0a1f0b0e666d99f186dcfc17317796da3c7c16104d31185f8d36",
+  "quality": {
+    "status": "review_required",
+    "input_page_count": 30,
+    "processed_page_count": 1,
+    "block_counts": {
+      "document": 1,
+      "section": 1,
+      "paragraph": 49,
+      "heading": 8,
+      "list": 25,
+      "footer": 2
+    },
+    "unknown_block_count": 0,
+    "unassigned_native_object_count": 0,
+    "low_confidence_block_ids": [],
+    "suspected_cross_page_fragments": [],
+    "validation_errors": [],
+    "warnings": [
+      "partial_page_selection:1-1"
+    ],
+    "accepted_result_precision": null,
+    "automatic_coverage": 1.0,
+    "provenance_anchor_coverage": 1.0,
+    "human_review_rate": 0.0
+  },
+  "requirement_count": 5,
+  "review_item_count": 2,
+  "source_pinned_hash": "911b716d6e4f9aacc1e0c7999dbcf1e009f08c3b322269c748d867006521e76d",
+  "visual_observation": "Source is a multi-column audit table; derived Markdown interleaves client and auditor columns. Fidelity not accepted.",
+  "independent_verifier_failure": "pdftotext subprocess SIGABRT recorded in native/quality-report.json"
+}

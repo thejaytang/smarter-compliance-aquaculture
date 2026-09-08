@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en-GB">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Smarter Compliance · Requirement Workbench</title><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/system2-review.css"><script src="/app.js" type="module"></script></head>
+<body>
+<aside class="rail">
+  <div class="brand">Smarter<br>Compliance<span>Requirement workbench</span></div>
+  <nav aria-label="System navigation">
+    <button data-view="overview" class="nav active">Overview <small>All three systems</small></button>
+    <div class="nav-system"><button type="button" class="system-toggle" data-system="system1" aria-expanded="true" aria-controls="nav-system1">System1 <span aria-hidden="true">⌄</span><small>Source management</small></button><div class="nav-children" id="nav-system1"><button class="nav" data-view="system1">Pending review</button><button class="nav" data-view="history">Review history</button></div></div>
+    <div class="nav-system"><button type="button" class="system-toggle" data-system="system2" aria-expanded="false" aria-controls="nav-system2">System2 <span aria-hidden="true">⌄</span><small>Extraction review</small></button><div class="nav-children" id="nav-system2" hidden><button class="nav" data-view="system2">Pending review</button><button class="nav" data-view="system2History">Review history</button></div></div>
+    <div class="nav-system"><button type="button" class="system-toggle" data-system="system3" aria-expanded="false" aria-controls="nav-system3">System3 <span aria-hidden="true">⌄</span><small>Semantic enrichment</small></button><div class="nav-children" id="nav-system3" hidden><button class="nav" data-view="system3">Pending review</button><button class="nav" data-view="system3History">Review history</button></div></div>
+  </nav>
+  <div class="rail-bottom"><span class="local-dot"></span> Local workspace<button id="stop" class="text-button">Exit workbench</button></div>
+</aside>
+<div class="workspace"><header><div><h1 id="heading">Requirement overview</h1></div><form id="actor-form"><label for="actor">Current reviewer</label><div class="actor-controls"><select id="actor" required aria-label="Current reviewer"><option value="">Select a reviewer</option></select><button type="submit" id="actor-save">Use this name</button></div></form></header>
+<div id="notice" role="status" aria-live="polite"></div><button id="reload-task" hidden>Reload current task</button><main id="main"><p>Loading requirement workspace…</p></main><section id="requests" aria-label="Recent submissions"></section></div>
+</body></html>

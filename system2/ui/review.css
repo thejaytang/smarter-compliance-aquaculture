@@ -1,0 +1,15 @@
+:root { color-scheme: light; font-family: system-ui, sans-serif; }
+body { margin: 0; background: #f4f6f8; color: #17212b; }
+header { height: 48px; display: flex; align-items: center; justify-content: space-between; padding: 0 18px; background: #12324a; color: white; }
+main { display: grid; grid-template-columns: minmax(420px, 3fr) minmax(360px, 2fr); height: calc(100vh - 48px); }
+.source { overflow: auto; text-align: center; padding: 12px; }
+canvas { max-width: 100%; background: white; box-shadow: 0 2px 12px #0003; }
+nav { position: sticky; bottom: 0; padding: 10px; background: #f4f6f8ee; }
+.review { overflow: auto; padding: 14px; background: white; border-left: 1px solid #ccd5dd; }
+.filters, .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+select, textarea, input { box-sizing: border-box; width: 100%; margin: 4px 0 10px; }
+textarea { min-height: 74px; font-family: ui-monospace, monospace; }
+button { padding: 7px 12px; }
+dl { font-size: 13px; }
+dt { font-weight: 650; } dd { margin: 0 0 6px; }
+@media (max-width: 900px) { main { grid-template-columns: 1fr; height: auto; } .source { min-height: 60vh; } }

@@ -1,6 +1,40 @@
-# Customer source material is retained locally but must not be committed.
-04_Customer_Examples_CONFIDENTIAL/**
-!04_Customer_Examples_CONFIDENTIAL/README.txt
+# Local environments, generated caches and build products.
+**/.venv/
+**/.venv.*/
+**/.cache/
+**/__pycache__/
+**/node_modules/
+**/.pytest_cache/
+**/htmlcov/
+**/build/
+**/dist/
+**/*.egg-info/
+*.py[cod]
+.coverage
+.coverage.*
+.DS_Store
+**/.DS_Store
 
-# Customer onboarding data and internal links are retained locally only.
-01_Project_Documents/Onboarding process and templates/
+# Local execution history, service sessions and generated parsing results.
+**/runtime/
+**/tmp/
+system2/outputs/
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.ses
+*.log
+
+# Local secrets and editor state. Keep sanitized examples only.
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+*.pem
+*.key
+.idea/
+.vscode/
+.playwright-cli/

@@ -1,0 +1,1598 @@
+{
+  "schema_version": "3.0",
+  "gold_revision": 1,
+  "supersedes": null,
+  "supersedes_sha256": null,
+  "revision_reason": "Initial frozen annotation for the untouched goal04 Round 5 holdout.",
+  "sample_id": "audit-manual-p005-round5-holdout",
+  "source": {
+    "file_name": "download-module-691-ASC-Salmon-Audit-Manual_v1.4.pdf",
+    "sha256": "911b716d6e4f9aacc1e0c7999dbcf1e009f08c3b322269c748d867006521e76d",
+    "language": "en",
+    "document_family": "audit_manual",
+    "page_count": 30
+  },
+  "sample": {
+    "round_id": "goal04-round5",
+    "split": "holdout",
+    "page_numbers": [
+      5
+    ],
+    "selection_rationale": "Untouched dense audit-matrix page selected before prediction generation; it contains three complete Requirements, dense client/auditor action matrices, a multi-exception qualifier, and direct/inherited footnote relationships."
+  },
+  "annotation": {
+    "status": "frozen",
+    "frozen_at": "2026-08-28",
+    "verification": [
+      "visual_page",
+      "native_text",
+      "second_annotator"
+    ],
+    "notes": [
+      "Annotated only from the source PDF before any Round 5 prediction was generated or inspected.",
+      "A second source-only review confirmed the Requirement inventory, action counts, footnote links, qualifiers, and empty action placeholders."
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "audit-p005-s001",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 108.6,
+        "x1": 447.17,
+        "y1": 119.64
+      },
+      "role": "interpretation",
+      "object_kind": "text_block",
+      "segment_order": 0,
+      "source_text": "Instruction to Clients for Indicator 2.4.2 - Exceptions to Requirements that Farms are not sited within Protected Areas or HCVAs\nThe following exceptions shall be made for Indicator 2.4.2:"
+    },
+    {
+      "segment_id": "audit-p005-s002",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 127.32,
+        "x1": 554.54,
+        "y1": 138.38
+      },
+      "role": "interpretation",
+      "object_kind": "text_block",
+      "segment_order": 1,
+      "source_text": "Exception #1: For protected areas classified by the International Union for the Conservation of Nature (IUCN) as Category V or VI (these are areas preserved primarily for their landscapes or for sustainable resource management)."
+    },
+    {
+      "segment_id": "audit-p005-s003",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 146.06,
+        "x1": 556.03,
+        "y1": 157.1
+      },
+      "role": "interpretation",
+      "object_kind": "text_block",
+      "segment_order": 2,
+      "source_text": "Exception #2: For HCVAs if the farm can demonstrate that its environmental impacts are compatible with the conservation objectives of the HCVA designation. The burden of proof would be placed on the farm to demonstrate that it is not negatively impacting the core reason an area has been identified as a HCVA."
+    },
+    {
+      "segment_id": "audit-p005-s004",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 164.78,
+        "x1": 548.03,
+        "y1": 188.3
+      },
+      "role": "interpretation",
+      "object_kind": "text_block",
+      "segment_order": 3,
+      "source_text": "Exception #3: For farms located in a protected area if it was designated as such after the farm was already in operation and provided the farm can demonstrate that its environmental impacts are compatible with the conservation objectives of the protected area and it is in compliance with any relevant conditions or regulations placed on the farm as a result of the formation/designation of the protected area. The burden of proof would be placed on the farm to demonstrate that it is not negatively impacting the core reason an area has been protected."
+    },
+    {
+      "segment_id": "audit-p005-s005",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 195.98,
+        "x1": 552.2,
+        "y1": 213.26
+      },
+      "role": "interpretation",
+      "object_kind": "text_block",
+      "segment_order": 4,
+      "source_text": "Definitions\nProtected area: “A clearly defined geographical space, recognized, dedicated and managed through legal or other effective means, to achieve the long-term conservation of nature with associated ecosystem services and cultural values.”"
+    },
+    {
+      "segment_id": "audit-p005-s006",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 220.94,
+        "x1": 556.29,
+        "y1": 238.22
+      },
+      "role": "interpretation",
+      "object_kind": "text_block",
+      "segment_order": 5,
+      "source_text": "High Conservation Value Areas (HCVA): Natural habitats where conservation values are considered to be of outstanding significance or critical importance. HCVA are designated through a multi-stakeholder approach that provides a systematic basis for identifying critical conservation values—both social and environmental—and for planning ecosystem management in order to ensure that these high conservation values are maintained or enhanced"
+    },
+    {
+      "segment_id": "audit-p005-s007",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 60.24,
+        "y0": 248.78,
+        "x1": 69.88,
+        "y1": 253.58
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 6,
+      "source_text": "2.4.2"
+    },
+    {
+      "segment_id": "audit-p005-s008",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 84.02,
+        "y0": 230.06,
+        "x1": 187.88,
+        "y1": 272.33
+      },
+      "role": "normative_text",
+      "object_kind": "table_cell",
+      "segment_order": 7,
+      "source_text": "Indicator: Allowance for the farm to be sited in a protected area [20] or High Conservation Value Areas [21] (HCVAs)\nRequirement: None [22]\nApplicability: All farms except as noted in [22]"
+    },
+    {
+      "segment_id": "audit-p005-s009",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 247.01,
+        "y0": 263.54,
+        "x1": 503.77,
+        "y1": 268.34
+      },
+      "role": "resource",
+      "object_kind": "table_cell",
+      "segment_order": 8,
+      "source_text": "Note: The guidelines on collecting spatial data for ASC can be found on https://www.asc-aqua.org/resources/for-farms/gis-portal-2/"
+    },
+    {
+      "segment_id": "audit-p005-s010",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 288.77,
+        "x1": 372.68,
+        "y1": 306.05
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 9,
+      "source_text": "a. Provide Geographical Information System (GIS) files according to ASC guidelines (see note above) showing the boundaries of the farm relative to nearby protected areas or High Conservation Value Areas (HCVAs) as defined above (see also 1.1.1a)."
+    },
+    {
+      "segment_id": "audit-p005-s011",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 291.89,
+        "x1": 549.37,
+        "y1": 302.93
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 10,
+      "source_text": "A. Review GIS files and cross-check against independent information sources (e.g., 1.1.1d and ASC GIS app) to determine if the farm is sited in a protected area or HCVA."
+    },
+    {
+      "segment_id": "audit-p005-s012",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 318.05,
+        "x1": 371.85,
+        "y1": 335.33
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 11,
+      "source_text": "b. If the farm is not sited in a protected area or High Conservation Value Area as defined above, prepare a declaration attesting to this fact. In this case, the requirements of 2.4.2c-d do not apply."
+    },
+    {
+      "segment_id": "audit-p005-s013",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 321.17,
+        "x1": 548.78,
+        "y1": 332.21
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 12,
+      "source_text": "B. Obtain a copy of the farm's declaration stating that the farm is not sited in a protected area or HCVA (as applicable)."
+    },
+    {
+      "segment_id": "audit-p005-s014",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 347.09,
+        "x1": 371.99,
+        "y1": 370.61
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 13,
+      "source_text": "c. If the farm is sited in a protected area or HCVA, review the scope of applicability of Indicator 2.4.2 (see Instructions above) to determine if your farm is allowed an exception to the requirements. If yes, inform the CAB which exception (#1, #2, or #3) is allowed and provide supporting evidence."
+    },
+    {
+      "segment_id": "audit-p005-s015",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 350.21,
+        "x1": 539.9,
+        "y1": 367.49
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 14,
+      "source_text": "C. Review the applicability of the exception requested by the farm together with the supporting evidence to determine if the farm is eligible. If yes, Indicator 2.4.2 is not applicable."
+    },
+    {
+      "segment_id": "audit-p005-s016",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 382.37,
+        "x1": 372.27,
+        "y1": 399.65
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 15,
+      "source_text": "d. If the farm is sited in a protected area or HCVA and the exceptions provided for Indicator 2.4.2 do not apply, then the farm does not comply with the requirement and is ineligible for ASC certification."
+    },
+    {
+      "segment_id": "audit-p005-s017",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 385.49,
+        "x1": 556.83,
+        "y1": 396.53
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 16,
+      "source_text": "D. Review evidence to determine whether the farm is allowed to be sited in a protected area or HCVA and hence eligible for ASC certification."
+    },
+    {
+      "segment_id": "audit-p005-s018",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.94,
+        "y0": 408.79,
+        "x1": 547.89,
+        "y1": 419.83
+      },
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 17,
+      "source_text": "[20] Protected area: “A clearly defined geographical space, recognised, dedicated and managed through legal or other effective means, to achieve the long-term conservation of nature with associated ecosystem services and cultural values.” Source: Dudley, N. (Editor) (2008), Guidelines for Applying Protected Area Management Categories, Gland, Switzerland: IUCN. x + 86pp."
+    },
+    {
+      "segment_id": "audit-p005-s019",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.94,
+        "y0": 428.35,
+        "x1": 536.31,
+        "y1": 445.63
+      },
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 18,
+      "source_text": "[21] High Conservation Value Areas (HCVA): Natural habitats where conservation values are considered to be of outstanding significance or critical importance. HCVA are designated through a multi-stakeholder approach that provides a systematic basis for identifying critical conservation values—both social and environmental—and for planning ecosystem management in order to ensure that these high conservation values are maintained or enhanced (http://www.hcvnetwork.org/)."
+    },
+    {
+      "segment_id": "audit-p005-s020",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.94,
+        "y0": 457.15,
+        "x1": 554.04,
+        "y1": 499.39
+      },
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 19,
+      "source_text": "[22] The following exceptions shall be made for Standard 2.4.2: • For protected areas classified by the International Union for the Conservation of Nature (IUCN) as Category V or VI (these are areas preserved primarily for their landscapes or for sustainable resource management). • For HCVAs if the farm can demonstrate that its environmental impacts are compatible with the conservation objectives of the HCVA designation. The burden of proof would be placed on the farm to demonstrate that it is not negatively impacting the core reason an area has been identified as a HCVA. • For farms located in a protected area if it was designated as such after the farm was already in operation and provided the farm can demonstrate that its environmental impacts are compatible with the conservation objectives of the protected area and it is in compliance with any relevant conditions or regulations placed on the farm as a result of the formation/designation of the protected area. The burden of proof would be placed on the farm to demonstrate that it is not negatively impacting the core reason an area has been protected."
+    },
+    {
+      "segment_id": "audit-p005-s021",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 51.96,
+        "y0": 506.47,
+        "x1": 172.46,
+        "y1": 511.27
+      },
+      "role": "criterion_heading",
+      "object_kind": "text_block",
+      "segment_order": 20,
+      "source_text": "Criterion 2.5 Interaction with wildlife, including predators [23]"
+    },
+    {
+      "segment_id": "audit-p005-s022",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 238.97,
+        "y0": 513.31,
+        "x1": 509.29,
+        "y1": 518.11
+      },
+      "role": "other",
+      "object_kind": "table_cell",
+      "segment_order": 21,
+      "source_text": "Compliance Criteria (Required Client Actions):\nAuditor Evaluation (Required CAB Actions):"
+    },
+    {
+      "segment_id": "audit-p005-s023",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.94,
+        "y0": 520.63,
+        "x1": 230.64,
+        "y1": 525.43
+      },
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 22,
+      "source_text": "[23] See Appendix VI for transparency requirements for 2.5.2, 2.5.5 and 2.5.6."
+    },
+    {
+      "segment_id": "audit-p005-s024",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 60.24,
+        "y0": 550.06,
+        "x1": 69.88,
+        "y1": 554.86
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 23,
+      "source_text": "2.5.1"
+    },
+    {
+      "segment_id": "audit-p005-s025",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.94,
+        "y0": 531.31,
+        "x1": 190.07,
+        "y1": 573.58
+      },
+      "role": "normative_text",
+      "object_kind": "table_cell",
+      "segment_order": 24,
+      "source_text": "Indicator: Number of days in the production cycle when acoustic deterrent devices (ADDs) or acoustic harassment devices (AHDs) were used\nRequirement: 0\nApplicability: All"
+    },
+    {
+      "segment_id": "audit-p005-s026",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 537.07,
+        "x1": 365.84,
+        "y1": 548.14
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 25,
+      "source_text": "a. Compile documentary evidence to show that no ADDs or AHDs have been used by the farm."
+    },
+    {
+      "segment_id": "audit-p005-s027",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 537.07,
+        "x1": 556.21,
+        "y1": 548.14
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 26,
+      "source_text": "A. Review documentary evidence (e.g., predator management policies, records of predator incidents) and cross-check against interviews with farm staff and local community members."
+    },
+    {
+      "segment_id": "audit-p005-s028",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 565.18,
+        "x1": 195.41,
+        "y1": 569.98
+      },
+      "role": "other",
+      "object_kind": "table_cell",
+      "segment_order": 27,
+      "source_text": "-"
+    },
+    {
+      "segment_id": "audit-p005-s029",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 562.06,
+        "x1": 555.42,
+        "y1": 573.1
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 28,
+      "source_text": "B. During the on-site audit, inspect the farm to confirm that no ADDs or AHDs are present at the facilities."
+    },
+    {
+      "segment_id": "audit-p005-s030",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 60.24,
+        "y0": 624.7,
+        "x1": 69.88,
+        "y1": 629.5
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 29,
+      "source_text": "2.5.2"
+    },
+    {
+      "segment_id": "audit-p005-s031",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.94,
+        "y0": 609.1,
+        "x1": 188.28,
+        "y1": 645.1
+      },
+      "role": "normative_text",
+      "object_kind": "table_cell",
+      "segment_order": 30,
+      "source_text": "Indicator: Number of mortalities [25] of endangered or red-listed [26] marine mammals or birds on the farm\nRequirement: 0 (zero)\nApplicability: All"
+    },
+    {
+      "segment_id": "audit-p005-s032",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 583.66,
+        "x1": 321.96,
+        "y1": 588.46
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 31,
+      "source_text": "a. Prepare a list of all predator control devices and their locations."
+    },
+    {
+      "segment_id": "audit-p005-s033",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 583.66,
+        "x1": 403.51,
+        "y1": 588.46
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 32,
+      "source_text": "A. Review list."
+    },
+    {
+      "segment_id": "audit-p005-s034",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 602.14,
+        "x1": 282.14,
+        "y1": 606.94
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 33,
+      "source_text": "b. Maintain a record of all predator incidents."
+    },
+    {
+      "segment_id": "audit-p005-s035",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 599.02,
+        "x1": 554.53,
+        "y1": 610.06
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 34,
+      "source_text": "B. Review farm records of predator incidents and cross-check against relevant records (e.g., escapes)."
+    },
+    {
+      "segment_id": "audit-p005-s036",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 619.78,
+        "x1": 370.54,
+        "y1": 630.82
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 35,
+      "source_text": "c. Maintain a record of all mortalities of marine mammals and birds on the farm identifying the species, date, and apparent cause of death."
+    },
+    {
+      "segment_id": "audit-p005-s037",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 619.78,
+        "x1": 552.22,
+        "y1": 630.82
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 36,
+      "source_text": "C. Review records for completeness. Cross-check mortality records against interviews with farm staff and community representatives."
+    },
+    {
+      "segment_id": "audit-p005-s038",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 640.54,
+        "x1": 371.62,
+        "y1": 651.58
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 37,
+      "source_text": "d. Maintain an up-to-date list of endangered or red-listed marine mammals and birds in the area (see 2.4.1)"
+    },
+    {
+      "segment_id": "audit-p005-s039",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 643.42,
+        "x1": 453.43,
+        "y1": 648.22
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 38,
+      "source_text": "D. Review list for consistency with 2.4.1"
+    },
+    {
+      "segment_id": "audit-p005-s040",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 193.94,
+        "y0": 664.42,
+        "x1": 195.41,
+        "y1": 669.22
+      },
+      "role": "other",
+      "object_kind": "table_cell",
+      "segment_order": 39,
+      "source_text": "-"
+    },
+    {
+      "segment_id": "audit-p005-s041",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.39,
+        "y0": 661.3,
+        "x1": 552.18,
+        "y1": 672.34
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 40,
+      "source_text": "E. Compare results from (a) through (d) above to confirm that there were no mortalities of endangered or red-listed marine mammals or birds on farm."
+    },
+    {
+      "segment_id": "audit-p005-s042",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.94,
+        "y0": 678.72,
+        "x1": 355.41,
+        "y1": 683.52
+      },
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 41,
+      "source_text": "[25] Mortalities: Includes animals intentionally killed through lethal action as well as accidental deaths through entanglement or other means."
+    },
+    {
+      "segment_id": "audit-p005-s043",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 79.94,
+        "y0": 687.48,
+        "x1": 295.64,
+        "y1": 692.28
+      },
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 42,
+      "source_text": "[26] Species listed as endangered or critically endangered by the IUCN or on a national endangered species list."
+    },
+    {
+      "segment_id": "audit-p005-s044",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 54,
+        "y0": 757.23,
+        "x1": 198.97,
+        "y1": 765.39
+      },
+      "role": "footer",
+      "object_kind": "text_block",
+      "segment_order": 43,
+      "source_text": "Audit Manual - ASC Salmon Standard v1.4 Oct 2022\nCopyright (c) Aquaculture Stewardship Council. All rights reserved by Aquaculture Stewardship Council"
+    },
+    {
+      "segment_id": "audit-p005-s045",
+      "page_number": 5,
+      "page_index": 4,
+      "page_size": {
+        "width": 612,
+        "height": 792,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 538.66,
+        "y0": 765.03,
+        "x1": 556.46,
+        "y1": 768.51
+      },
+      "role": "footer",
+      "object_kind": "text_block",
+      "segment_order": 44,
+      "source_text": "Page 5 of 30"
+    }
+  ],
+  "requirements": [
+    {
+      "requirement_id": "2.4.2",
+      "requirement_form": "audit_matrix",
+      "criterion_path": [
+        "Criterion 2.4 Interaction with critical or sensitive habitats and species"
+      ],
+      "language": "en",
+      "indicator_text": "Allowance for the farm to be sited in a protected area [20] or High Conservation Value Areas [21] (HCVAs)",
+      "requirement_value": "None [22]",
+      "normative_text": "Indicator: Allowance for the farm to be sited in a protected area [20] or High Conservation Value Areas [21] (HCVAs)\nRequirement: None [22]\nApplicability: All farms except as noted in [22]",
+      "normative_subjects": [
+        "the farm"
+      ],
+      "applicability": [
+        "All farms except as noted in [22]"
+      ],
+      "modalities": [
+        {
+          "token": "shall",
+          "type": "obligation",
+          "scope": "the following exceptions be made for Standard 2.4.2"
+        }
+      ],
+      "negations": [
+        {
+          "text": "None",
+          "applies_to": "allowance for the farm to be sited in a protected area or High Conservation Value Areas (HCVAs)"
+        }
+      ],
+      "clauses": [
+        {
+          "clause_id": "audit-p005-r242-c1",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Allowance for the farm to be sited in a protected area [20] or High Conservation Value Areas [21] (HCVAs): None [22]",
+          "joins_next": null
+        },
+        {
+          "clause_id": "audit-p005-r242-c2",
+          "parent_clause_id": "audit-p005-r242-c1",
+          "marker": "Exception #1",
+          "text": "For protected areas classified by the International Union for the Conservation of Nature (IUCN) as Category V or VI (these are areas preserved primarily for their landscapes or for sustainable resource management).",
+          "joins_next": "or"
+        },
+        {
+          "clause_id": "audit-p005-r242-c3",
+          "parent_clause_id": "audit-p005-r242-c1",
+          "marker": "Exception #2",
+          "text": "For HCVAs",
+          "joins_next": "or"
+        },
+        {
+          "clause_id": "audit-p005-r242-c3a",
+          "parent_clause_id": "audit-p005-r242-c3",
+          "marker": null,
+          "text": "if the farm can demonstrate that its environmental impacts are compatible with the conservation objectives of the HCVA designation",
+          "joins_next": "and"
+        },
+        {
+          "clause_id": "audit-p005-r242-c3b",
+          "parent_clause_id": "audit-p005-r242-c3",
+          "marker": null,
+          "text": "The burden of proof would be placed on the farm to demonstrate that it is not negatively impacting the core reason an area has been identified as a HCVA.",
+          "joins_next": null
+        },
+        {
+          "clause_id": "audit-p005-r242-c4",
+          "parent_clause_id": "audit-p005-r242-c1",
+          "marker": "Exception #3",
+          "text": "For farms located in a protected area",
+          "joins_next": null
+        },
+        {
+          "clause_id": "audit-p005-r242-c4a",
+          "parent_clause_id": "audit-p005-r242-c4",
+          "marker": null,
+          "text": "if it was designated as such after the farm was already in operation",
+          "joins_next": "and"
+        },
+        {
+          "clause_id": "audit-p005-r242-c4b",
+          "parent_clause_id": "audit-p005-r242-c4",
+          "marker": null,
+          "text": "provided the farm can demonstrate that its environmental impacts are compatible with the conservation objectives of the protected area",
+          "joins_next": "and"
+        },
+        {
+          "clause_id": "audit-p005-r242-c4c",
+          "parent_clause_id": "audit-p005-r242-c4",
+          "marker": null,
+          "text": "it is in compliance with any relevant conditions or regulations placed on the farm as a result of the formation/designation of the protected area",
+          "joins_next": "and"
+        },
+        {
+          "clause_id": "audit-p005-r242-c4d",
+          "parent_clause_id": "audit-p005-r242-c4",
+          "marker": null,
+          "text": "The burden of proof would be placed on the farm to demonstrate that it is not negatively impacting the core reason an area has been protected.",
+          "joins_next": null
+        }
+      ],
+      "conditions": [
+        {
+          "text": "if the farm can demonstrate that its environmental impacts are compatible with the conservation objectives of the HCVA designation",
+          "applies_to": "Exception #2"
+        },
+        {
+          "text": "if it was designated as such after the farm was already in operation",
+          "applies_to": "Exception #3"
+        },
+        {
+          "text": "provided the farm can demonstrate that its environmental impacts are compatible with the conservation objectives of the protected area",
+          "applies_to": "Exception #3"
+        },
+        {
+          "text": "it is in compliance with any relevant conditions or regulations placed on the farm as a result of the formation/designation of the protected area",
+          "applies_to": "Exception #3"
+        }
+      ],
+      "exceptions": [
+        {
+          "text": "For protected areas classified by the International Union for the Conservation of Nature (IUCN) as Category V or VI (these are areas preserved primarily for their landscapes or for sustainable resource management).",
+          "applies_to": "Requirement: None [22]"
+        },
+        {
+          "text": "For HCVAs if the farm can demonstrate that its environmental impacts are compatible with the conservation objectives of the HCVA designation. The burden of proof would be placed on the farm to demonstrate that it is not negatively impacting the core reason an area has been identified as a HCVA.",
+          "applies_to": "Requirement: None [22]"
+        },
+        {
+          "text": "For farms located in a protected area if it was designated as such after the farm was already in operation and provided the farm can demonstrate that its environmental impacts are compatible with the conservation objectives of the protected area and it is in compliance with any relevant conditions or regulations placed on the farm as a result of the formation/designation of the protected area. The burden of proof would be placed on the farm to demonstrate that it is not negatively impacting the core reason an area has been protected.",
+          "applies_to": "Requirement: None [22]"
+        }
+      ],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [
+        {
+          "text": "protected area [20]",
+          "target": "[20] Protected area",
+          "type": "defined_term"
+        },
+        {
+          "text": "High Conservation Value Areas [21] (HCVAs)",
+          "target": "[21] High Conservation Value Areas (HCVA)",
+          "type": "defined_term"
+        }
+      ],
+      "footnote_refs": [
+        {
+          "marker": "[20]",
+          "text": "Protected area: “A clearly defined geographical space, recognised, dedicated and managed through legal or other effective means, to achieve the long-term conservation of nature with associated ecosystem services and cultural values.” Source: Dudley, N. (Editor) (2008), Guidelines for Applying Protected Area Management Categories, Gland, Switzerland: IUCN. x + 86pp.",
+          "link_type": "direct",
+          "source_segment_ids": [
+            "audit-p005-s018"
+          ]
+        },
+        {
+          "marker": "[21]",
+          "text": "High Conservation Value Areas (HCVA): Natural habitats where conservation values are considered to be of outstanding significance or critical importance. HCVA are designated through a multi-stakeholder approach that provides a systematic basis for identifying critical conservation values—both social and environmental—and for planning ecosystem management in order to ensure that these high conservation values are maintained or enhanced (http://www.hcvnetwork.org/).",
+          "link_type": "direct",
+          "source_segment_ids": [
+            "audit-p005-s019"
+          ]
+        },
+        {
+          "marker": "[22]",
+          "text": "The following exceptions shall be made for Standard 2.4.2: • For protected areas classified by the International Union for the Conservation of Nature (IUCN) as Category V or VI (these are areas preserved primarily for their landscapes or for sustainable resource management). • For HCVAs if the farm can demonstrate that its environmental impacts are compatible with the conservation objectives of the HCVA designation. The burden of proof would be placed on the farm to demonstrate that it is not negatively impacting the core reason an area has been identified as a HCVA. • For farms located in a protected area if it was designated as such after the farm was already in operation and provided the farm can demonstrate that its environmental impacts are compatible with the conservation objectives of the protected area and it is in compliance with any relevant conditions or regulations placed on the farm as a result of the formation/designation of the protected area. The burden of proof would be placed on the farm to demonstrate that it is not negatively impacting the core reason an area has been protected.",
+          "link_type": "direct",
+          "source_segment_ids": [
+            "audit-p005-s020"
+          ]
+        }
+      ],
+      "associated_instructions": [
+        {
+          "marker": "Exception #1",
+          "text": "For protected areas classified by the International Union for the Conservation of Nature (IUCN) as Category V or VI (these are areas preserved primarily for their landscapes or for sustainable resource management).",
+          "effect": "exception",
+          "source_segment_ids": [
+            "audit-p005-s002"
+          ]
+        },
+        {
+          "marker": "Exception #2",
+          "text": "For HCVAs if the farm can demonstrate that its environmental impacts are compatible with the conservation objectives of the HCVA designation. The burden of proof would be placed on the farm to demonstrate that it is not negatively impacting the core reason an area has been identified as a HCVA.",
+          "effect": "exception",
+          "source_segment_ids": [
+            "audit-p005-s003"
+          ]
+        },
+        {
+          "marker": "Exception #3",
+          "text": "For farms located in a protected area if it was designated as such after the farm was already in operation and provided the farm can demonstrate that its environmental impacts are compatible with the conservation objectives of the protected area and it is in compliance with any relevant conditions or regulations placed on the farm as a result of the formation/designation of the protected area. The burden of proof would be placed on the farm to demonstrate that it is not negatively impacting the core reason an area has been protected.",
+          "effect": "exception",
+          "source_segment_ids": [
+            "audit-p005-s004"
+          ]
+        }
+      ],
+      "client_actions": [
+        {
+          "marker": "a",
+          "text": "Provide Geographical Information System (GIS) files according to ASC guidelines (see note above) showing the boundaries of the farm relative to nearby protected areas or High Conservation Value Areas (HCVAs) as defined above (see also 1.1.1a).",
+          "source_segment_ids": [
+            "audit-p005-s010"
+          ]
+        },
+        {
+          "marker": "b",
+          "text": "If the farm is not sited in a protected area or High Conservation Value Area as defined above, prepare a declaration attesting to this fact. In this case, the requirements of 2.4.2c-d do not apply.",
+          "source_segment_ids": [
+            "audit-p005-s012"
+          ]
+        },
+        {
+          "marker": "c",
+          "text": "If the farm is sited in a protected area or HCVA, review the scope of applicability of Indicator 2.4.2 (see Instructions above) to determine if your farm is allowed an exception to the requirements. If yes, inform the CAB which exception (#1, #2, or #3) is allowed and provide supporting evidence.",
+          "source_segment_ids": [
+            "audit-p005-s014"
+          ]
+        },
+        {
+          "marker": "d",
+          "text": "If the farm is sited in a protected area or HCVA and the exceptions provided for Indicator 2.4.2 do not apply, then the farm does not comply with the requirement and is ineligible for ASC certification.",
+          "source_segment_ids": [
+            "audit-p005-s016"
+          ]
+        }
+      ],
+      "auditor_actions": [
+        {
+          "marker": "A",
+          "text": "Review GIS files and cross-check against independent information sources (e.g., 1.1.1d and ASC GIS app) to determine if the farm is sited in a protected area or HCVA.",
+          "source_segment_ids": [
+            "audit-p005-s011"
+          ]
+        },
+        {
+          "marker": "B",
+          "text": "Obtain a copy of the farm's declaration stating that the farm is not sited in a protected area or HCVA (as applicable).",
+          "source_segment_ids": [
+            "audit-p005-s013"
+          ]
+        },
+        {
+          "marker": "C",
+          "text": "Review the applicability of the exception requested by the farm together with the supporting evidence to determine if the farm is eligible. If yes, Indicator 2.4.2 is not applicable.",
+          "source_segment_ids": [
+            "audit-p005-s015"
+          ]
+        },
+        {
+          "marker": "D",
+          "text": "Review evidence to determine whether the farm is allowed to be sited in a protected area or HCVA and hence eligible for ASC certification.",
+          "source_segment_ids": [
+            "audit-p005-s017"
+          ]
+        }
+      ],
+      "related_context_ids": [
+        "audit-p005-s001",
+        "audit-p005-s002",
+        "audit-p005-s003",
+        "audit-p005-s004",
+        "audit-p005-s005",
+        "audit-p005-s006",
+        "audit-p005-s009"
+      ],
+      "source_segment_ids": [
+        "audit-p005-s007",
+        "audit-p005-s008",
+        "audit-p005-s018",
+        "audit-p005-s019",
+        "audit-p005-s020"
+      ],
+      "source_anomalies": [],
+      "gold_notes": [
+        "The source repeats the three exceptions in the instruction box and footnote [22]; the semantic exceptions are recorded once while both source regions remain separately traceable."
+      ]
+    },
+    {
+      "requirement_id": "2.5.1",
+      "requirement_form": "audit_matrix",
+      "criterion_path": [
+        "Criterion 2.5 Interaction with wildlife, including predators [23]"
+      ],
+      "language": "en",
+      "indicator_text": "Number of days in the production cycle when acoustic deterrent devices (ADDs) or acoustic harassment devices (AHDs) were used",
+      "requirement_value": "0",
+      "normative_text": "Indicator: Number of days in the production cycle when acoustic deterrent devices (ADDs) or acoustic harassment devices (AHDs) were used\nRequirement: 0\nApplicability: All",
+      "normative_subjects": [
+        "the farm"
+      ],
+      "applicability": [
+        "All"
+      ],
+      "modalities": [],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "audit-p005-r251-c1",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Number of days in the production cycle when acoustic deterrent devices (ADDs) or acoustic harassment devices (AHDs) were used: 0",
+          "joins_next": null
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [
+        {
+          "raw_text": "0",
+          "operator": "eq",
+          "normalized_value": 0,
+          "unit": "days",
+          "applies_to": "number of days in the production cycle when acoustic deterrent devices (ADDs) or acoustic harassment devices (AHDs) were used",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "audit-p005-s025"
+          ]
+        }
+      ],
+      "dates": [],
+      "cross_references": [],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [
+        {
+          "marker": "a",
+          "text": "Compile documentary evidence to show that no ADDs or AHDs have been used by the farm.",
+          "source_segment_ids": [
+            "audit-p005-s026"
+          ]
+        }
+      ],
+      "auditor_actions": [
+        {
+          "marker": "A",
+          "text": "Review documentary evidence (e.g., predator management policies, records of predator incidents) and cross-check against interviews with farm staff and local community members.",
+          "source_segment_ids": [
+            "audit-p005-s027"
+          ]
+        },
+        {
+          "marker": "B",
+          "text": "During the on-site audit, inspect the farm to confirm that no ADDs or AHDs are present at the facilities.",
+          "source_segment_ids": [
+            "audit-p005-s029"
+          ]
+        }
+      ],
+      "related_context_ids": [
+        "audit-p005-s021"
+      ],
+      "source_segment_ids": [
+        "audit-p005-s024",
+        "audit-p005-s025"
+      ],
+      "source_anomalies": [],
+      "gold_notes": [
+        "The dash in the second client-action cell is an empty placeholder and is not an action."
+      ]
+    },
+    {
+      "requirement_id": "2.5.2",
+      "requirement_form": "audit_matrix",
+      "criterion_path": [
+        "Criterion 2.5 Interaction with wildlife, including predators [23]"
+      ],
+      "language": "en",
+      "indicator_text": "Number of mortalities [25] of endangered or red-listed [26] marine mammals or birds on the farm",
+      "requirement_value": "0 (zero)",
+      "normative_text": "Indicator: Number of mortalities [25] of endangered or red-listed [26] marine mammals or birds on the farm\nRequirement: 0 (zero)\nApplicability: All",
+      "normative_subjects": [
+        "the farm"
+      ],
+      "applicability": [
+        "All"
+      ],
+      "modalities": [],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "audit-p005-r252-c1",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Number of mortalities [25] of endangered or red-listed [26] marine mammals or birds on the farm: 0 (zero)",
+          "joins_next": null
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [
+        {
+          "raw_text": "0 (zero)",
+          "operator": "eq",
+          "normalized_value": 0,
+          "unit": "mortalities",
+          "applies_to": "number of mortalities of endangered or red-listed marine mammals or birds on the farm",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "audit-p005-s031"
+          ]
+        }
+      ],
+      "dates": [],
+      "cross_references": [
+        {
+          "text": "mortalities [25]",
+          "target": "[25] Mortalities",
+          "type": "defined_term"
+        },
+        {
+          "text": "endangered or red-listed [26]",
+          "target": "[26] Species listed as endangered or critically endangered",
+          "type": "defined_term"
+        },
+        {
+          "text": "Appendix VI",
+          "target": "Appendix VI",
+          "type": "internal_exact"
+        }
+      ],
+      "footnote_refs": [
+        {
+          "marker": "[25]",
+          "text": "Mortalities: Includes animals intentionally killed through lethal action as well as accidental deaths through entanglement or other means.",
+          "link_type": "direct",
+          "source_segment_ids": [
+            "audit-p005-s042"
+          ]
+        },
+        {
+          "marker": "[26]",
+          "text": "Species listed as endangered or critically endangered by the IUCN or on a national endangered species list.",
+          "link_type": "direct",
+          "source_segment_ids": [
+            "audit-p005-s043"
+          ]
+        },
+        {
+          "marker": "[23]",
+          "text": "See Appendix VI for transparency requirements for 2.5.2, 2.5.5 and 2.5.6.",
+          "link_type": "inherited",
+          "source_segment_ids": [
+            "audit-p005-s023"
+          ]
+        }
+      ],
+      "associated_instructions": [],
+      "client_actions": [
+        {
+          "marker": "a",
+          "text": "Prepare a list of all predator control devices and their locations.",
+          "source_segment_ids": [
+            "audit-p005-s032"
+          ]
+        },
+        {
+          "marker": "b",
+          "text": "Maintain a record of all predator incidents.",
+          "source_segment_ids": [
+            "audit-p005-s034"
+          ]
+        },
+        {
+          "marker": "c",
+          "text": "Maintain a record of all mortalities of marine mammals and birds on the farm identifying the species, date, and apparent cause of death.",
+          "source_segment_ids": [
+            "audit-p005-s036"
+          ]
+        },
+        {
+          "marker": "d",
+          "text": "Maintain an up-to-date list of endangered or red-listed marine mammals and birds in the area (see 2.4.1)",
+          "source_segment_ids": [
+            "audit-p005-s038"
+          ]
+        }
+      ],
+      "auditor_actions": [
+        {
+          "marker": "A",
+          "text": "Review list.",
+          "source_segment_ids": [
+            "audit-p005-s033"
+          ]
+        },
+        {
+          "marker": "B",
+          "text": "Review farm records of predator incidents and cross-check against relevant records (e.g., escapes).",
+          "source_segment_ids": [
+            "audit-p005-s035"
+          ]
+        },
+        {
+          "marker": "C",
+          "text": "Review records for completeness. Cross-check mortality records against interviews with farm staff and community representatives.",
+          "source_segment_ids": [
+            "audit-p005-s037"
+          ]
+        },
+        {
+          "marker": "D",
+          "text": "Review list for consistency with 2.4.1",
+          "source_segment_ids": [
+            "audit-p005-s039"
+          ]
+        },
+        {
+          "marker": "E",
+          "text": "Compare results from (a) through (d) above to confirm that there were no mortalities of endangered or red-listed marine mammals or birds on farm.",
+          "source_segment_ids": [
+            "audit-p005-s041"
+          ]
+        }
+      ],
+      "related_context_ids": [
+        "audit-p005-s021"
+      ],
+      "source_segment_ids": [
+        "audit-p005-s030",
+        "audit-p005-s031",
+        "audit-p005-s042",
+        "audit-p005-s043"
+      ],
+      "source_anomalies": [],
+      "gold_notes": [
+        "Criterion-level footnote [23] explicitly names 2.5.2 and is linked as inherited context.",
+        "The dash in the fifth client-action cell is an empty placeholder and is not an action."
+      ]
+    }
+  ],
+  "excluded_regions": [
+    {
+      "source_segment_ids": [
+        "audit-p005-s001",
+        "audit-p005-s002",
+        "audit-p005-s003",
+        "audit-p005-s004",
+        "audit-p005-s005",
+        "audit-p005-s006"
+      ],
+      "classification": "interpretation",
+      "reason": "Instruction-box exceptions and definitions are linked context or associated instructions, not direct audit-matrix normative_text."
+    },
+    {
+      "source_segment_ids": [
+        "audit-p005-s009"
+      ],
+      "classification": "resource",
+      "reason": "The GIS portal note is a linked resource and is not direct Requirement text."
+    },
+    {
+      "source_segment_ids": [
+        "audit-p005-s010",
+        "audit-p005-s012",
+        "audit-p005-s014",
+        "audit-p005-s016",
+        "audit-p005-s026",
+        "audit-p005-s032",
+        "audit-p005-s034",
+        "audit-p005-s036",
+        "audit-p005-s038"
+      ],
+      "classification": "client_action",
+      "reason": "Required Client Actions remain linked fields and are excluded from normative_text."
+    },
+    {
+      "source_segment_ids": [
+        "audit-p005-s011",
+        "audit-p005-s013",
+        "audit-p005-s015",
+        "audit-p005-s017",
+        "audit-p005-s027",
+        "audit-p005-s029",
+        "audit-p005-s033",
+        "audit-p005-s035",
+        "audit-p005-s037",
+        "audit-p005-s039",
+        "audit-p005-s041"
+      ],
+      "classification": "auditor_action",
+      "reason": "Required CAB Actions remain linked fields and are excluded from normative_text."
+    },
+    {
+      "source_segment_ids": [
+        "audit-p005-s021",
+        "audit-p005-s022",
+        "audit-p005-s028",
+        "audit-p005-s040"
+      ],
+      "classification": "other_non_requirement",
+      "reason": "Criterion/table headers and dash placeholders are structural context, not Requirement or action content."
+    },
+    {
+      "source_segment_ids": [
+        "audit-p005-s044",
+        "audit-p005-s045"
+      ],
+      "classification": "header_footer",
+      "reason": "Repeated document footer and page number are not Requirement content."
+    }
+  ],
+  "summary": {
+    "requirement_count": 3,
+    "cross_page_requirement_count": 0,
+    "client_action_count": 9,
+    "auditor_action_count": 11,
+    "critical_gold_ambiguities": []
+  }
+}

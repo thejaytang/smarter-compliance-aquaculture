@@ -1,0 +1,1209 @@
+{
+  "schema_version": "2.0",
+  "sample_id": "interpretation-manual-p103-p106-round4-holdout",
+  "source": {
+    "file_name": "ASC-INT-001-ASC-Farm-Standard-Interpretation-Manual-V1.0-May-2025.pdf",
+    "sha256": "804ead3d1d1a53019869b5385dabfb86356b8276b990538c0d782e750167777e",
+    "language": "en",
+    "document_family": "interpretation_manual",
+    "page_count": 511
+  },
+  "sample": {
+    "round_id": "goal04-round4",
+    "split": "holdout",
+    "page_numbers": [
+      103,
+      104,
+      105,
+      106
+    ],
+    "selection_rationale": "Untouched risk window with repeated Indicator/Requirement tables, dense and/or clause logic, multiple explicit numeric thresholds and time windows, a direct footnote exemption, and interpretation/evidence/auditor/resource continuations that must remain outside normative Requirement text."
+  },
+  "annotation": {
+    "status": "frozen",
+    "frozen_at": "2026-08-28",
+    "verification": [
+      "visual_page",
+      "native_text"
+    ],
+    "notes": [
+      "Frozen before any parser prediction for this window was inspected.",
+      "Requirement text was transcribed from the visible table cells and checked against native text.",
+      "Interpretation, evidence examples, auditor guidance and resources are retained as related context or excluded regions, never as normative_text."
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "p103-header",
+      "page_number": 103,
+      "page_index": 102,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 394.39,
+        "y0": 35.28,
+        "x1": 543.37,
+        "y1": 44.5
+      },
+      "role": "header",
+      "object_kind": "text_block",
+      "segment_order": 0,
+      "source_text": "Aquaculture Stewardship Council"
+    },
+    {
+      "segment_id": "p103-table-header",
+      "page_number": 103,
+      "page_index": 102,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 56.78,
+        "y0": 90.46,
+        "x1": 192.26,
+        "y1": 102.6
+      },
+      "role": "other",
+      "object_kind": "table_cell",
+      "segment_order": 1,
+      "source_text": "Indicator: Requirement:"
+    },
+    {
+      "segment_id": "p103-r2.6.10-id",
+      "page_number": 103,
+      "page_index": 102,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 53.9,
+        "y0": 131.15,
+        "x1": 93.53,
+        "y1": 148.26
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 2,
+      "source_text": "2.6.10"
+    },
+    {
+      "segment_id": "p103-r2.6.10-normative",
+      "page_number": 103,
+      "page_index": 102,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 117.74,
+        "y0": 131.24,
+        "x1": 540.5,
+        "y1": 286.35
+      },
+      "role": "normative_text",
+      "object_kind": "table_cell",
+      "segment_order": 3,
+      "source_text": "The UoC shall, after the determination of the water quality baseline, conduct monitoring of the water quality parameters listed below, following the method outlined in Appendix 8 (8.8)13:\nTotal Nitrogen (TN); and,\nTotal Phosphorous (TP); and,\nDissolved Oxygen (DO); and,\nSecchi Disk (SD) depth; and,\nChlorophyll-a (Chl-a)."
+    },
+    {
+      "segment_id": "p103-r2.6.10-interpretation",
+      "page_number": 103,
+      "page_index": 102,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 53.9,
+        "y0": 311.53,
+        "x1": 542.0,
+        "y1": 534.8
+      },
+      "role": "interpretation",
+      "object_kind": "list",
+      "segment_order": 4,
+      "source_text": "How do I interpret this requirement?\nQuarterly monitoring ensures the UoC can capture any seasonal or inter-annual variations in the data collected.\nMeasurements should be timed to coincide with, or immediately follow, annual turnover events when the waterbody is not permanently stratified (holomictic).\nThe UoC should calibrate equipment used to measure DO, TN, TP, SD and Chl-a according to the technical specifications of the equipment.\nThe UoC should conduct measurements of the parameters in-situ.\nSamples may be sent for laboratory analysis, however variability with sample maintenance during transit can lead to inconsistent results. This is particularly evident with DO and Chl-a samples."
+    },
+    {
+      "segment_id": "p103-r2.6.10-evidence",
+      "page_number": 103,
+      "page_index": 102,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 53.9,
+        "y0": 561.9,
+        "x1": 526.6,
+        "y1": 658.3
+      },
+      "role": "evidence_example",
+      "object_kind": "list",
+      "segment_order": 5,
+      "source_text": "Evidence of implementation should be maintained, e.g.:\nDocumentation outlining the sampling plan to conduct quarterly monitoring and that is in accordance with Appendix 8 (8.8).\nQuarterly monitoring data has been collected and submitted to the ASC Water Quality Calculator. Data should be submitted at least annually."
+    },
+    {
+      "segment_id": "p103-r2.6.10-footnote-13",
+      "page_number": 103,
+      "page_index": 102,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 51.0,
+        "y0": 734.8,
+        "x1": 522.0,
+        "y1": 756.7
+      },
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 6,
+      "source_text": "13 An exemption applies if the mean of Secchi Disk (SD) depth calculated over any rolling two-year period remains ≥10m."
+    },
+    {
+      "segment_id": "p103-footer",
+      "page_number": 103,
+      "page_index": 102,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 59.1,
+        "y0": 772.3,
+        "x1": 538.5,
+        "y1": 788.3
+      },
+      "role": "footer",
+      "object_kind": "text_block",
+      "segment_order": 7,
+      "source_text": "Document Name ASC Farm Standard - Interpretation Manual Document ID ASC-INT-001 Version 1.0 Page 103 of 511"
+    },
+    {
+      "segment_id": "p104-header",
+      "page_number": 104,
+      "page_index": 103,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 394.39,
+        "y0": 35.28,
+        "x1": 543.37,
+        "y1": 44.5
+      },
+      "role": "header",
+      "object_kind": "text_block",
+      "segment_order": 8,
+      "source_text": "Aquaculture Stewardship Council"
+    },
+    {
+      "segment_id": "p104-r2.6.10-evidence-continuation",
+      "page_number": 104,
+      "page_index": 103,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 53.9,
+        "y0": 71.0,
+        "x1": 536.8,
+        "y1": 142.3
+      },
+      "role": "evidence_example",
+      "object_kind": "list",
+      "segment_order": 9,
+      "source_text": "Evidence that quarterly monitoring data has been timed with annual turnover events (where applicable).\nThat equipment to measure DO, TN, TP, SD and Chl-a has been calibrated according to technical specifications.",
+      "continues_segment_id": "p103-r2.6.10-evidence"
+    },
+    {
+      "segment_id": "p104-r2.6.10-auditor-guidance",
+      "page_number": 104,
+      "page_index": 103,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 53.9,
+        "y0": 167.5,
+        "x1": 544.2,
+        "y1": 300.0
+      },
+      "role": "auditor_guidance",
+      "object_kind": "list",
+      "segment_order": 10,
+      "source_text": "Auditors should confirm:\nThe sampling methodology to conduct quarterly monitoring is in accordance with Appendix 8 (8.8).\nThe UoC has conducted quarterly monitoring of the water quality parameters and submitted data to the ASC Water Quality Calculator at least annually.\nEvidence has been provided demonstrating the UoC has calibrated equipment to measure DO, TN, TP, SD and Chl-a in accordance with the technical specifications."
+    },
+    {
+      "segment_id": "p104-r2.6.10-resources",
+      "page_number": 104,
+      "page_index": 103,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 53.9,
+        "y0": 325.2,
+        "x1": 536.1,
+        "y1": 703.8
+      },
+      "role": "resource",
+      "object_kind": "list",
+      "segment_order": 11,
+      "source_text": "Useful Resources\nPaerl, H.W., Scott, J.T., McCarthy, M.J., Newell, S.E., Gardner, W.S., Havens, K.E., Hoffman, D.K., Wilhelm, S.W. and Wurtsbaugh, W.A., 2016. It takes two to tango: when and where dual nutrient (N & P) reductions are needed to protect lakes and downstream ecosystems. Environmental science & technology, 50(20), pp.10805-10813.\nInformation on the appropriate use of Secchi Disks can be found here: ‘What is a Secchi disk’, accessed November 22, 2023: https://www.nalms.org/secchidipin/monitoring-methods/the-secchi-disk/what-is-a-secchi-disk/\nExample of a method for Chl-a measurements made using ethanol extraction followed by spectrophotometric measurement at wavelengths 665 and 750nm (using accredited methods: EPA method 445.0: Method 445.0 In Vitro Determination of Chlorophyll a and Pheophytin a in Marine and Freshwater Algae by Fluorescence, accessed November 22, 2023: https://cfpub.epa.gov/si/si_public_record_report.cfm?Lab=NERL&dirEntryId=309417\nCost effective example for measuring using in-situ Chl-a using a field spectroflurometer include the FluoroSense handheld fluorometer manufactured by Turner Designs and the YSI handheld meter with EXO1 (#599080) or EXO2 (#599201) sondes.\nHamdhani, H., Eppehimer, D.E., Walker, D. and Bogan, M.T. (2021) Performance of a Handheld Chlorophyll-a Fluorometer: Potential Use for Rapid Algae Monitoring. Water, 13, 1409: https://doi.org/10.3390/w13101409\nKuha, J., Järvinen, M., Salmi, P. and Karjalainen, J. (2020). Calibration of in situ chlorophyll fluorometers for organic matter. Restoration of Eutrophic Lakes, 847, 4377-4387: https://doi.org/10.1007/s10750-019-04086-z"
+    },
+    {
+      "segment_id": "p104-footer",
+      "page_number": 104,
+      "page_index": 103,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 59.1,
+        "y0": 772.3,
+        "x1": 538.5,
+        "y1": 788.3
+      },
+      "role": "footer",
+      "object_kind": "text_block",
+      "segment_order": 12,
+      "source_text": "Document Name ASC Farm Standard - Interpretation Manual Document ID ASC-INT-001 Version 1.0 Page 104 of 511"
+    },
+    {
+      "segment_id": "p105-header",
+      "page_number": 105,
+      "page_index": 104,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 394.39,
+        "y0": 35.28,
+        "x1": 543.37,
+        "y1": 44.5
+      },
+      "role": "header",
+      "object_kind": "text_block",
+      "segment_order": 13,
+      "source_text": "Aquaculture Stewardship Council"
+    },
+    {
+      "segment_id": "p105-table-header",
+      "page_number": 105,
+      "page_index": 104,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 56.78,
+        "y0": 90.46,
+        "x1": 192.26,
+        "y1": 102.6
+      },
+      "role": "other",
+      "object_kind": "table_cell",
+      "segment_order": 14,
+      "source_text": "Indicator: Requirement:"
+    },
+    {
+      "segment_id": "p105-r2.6.11-id",
+      "page_number": 105,
+      "page_index": 104,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 53.9,
+        "y0": 131.15,
+        "x1": 89.5,
+        "y1": 148.26
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 15,
+      "source_text": "2.6.11"
+    },
+    {
+      "segment_id": "p105-r2.6.11-normative",
+      "page_number": 105,
+      "page_index": 104,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 117.74,
+        "y0": 131.24,
+        "x1": 535.7,
+        "y1": 175.32
+      },
+      "role": "normative_text",
+      "object_kind": "table_cell",
+      "segment_order": 16,
+      "source_text": "The UoC shall, based on the monitoring of the water quality parameters, ensure that there is no decline in trophic status compared to the water quality baseline determined, following the method outlined in Appendix 8 (8.8)."
+    },
+    {
+      "segment_id": "p105-r2.6.12-id",
+      "page_number": 105,
+      "page_index": 104,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 53.9,
+        "y0": 203.6,
+        "x1": 92.3,
+        "y1": 220.7
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 17,
+      "source_text": "2.6.12"
+    },
+    {
+      "segment_id": "p105-r2.6.12-normative",
+      "page_number": 105,
+      "page_index": 104,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 117.74,
+        "y0": 203.7,
+        "x1": 541.2,
+        "y1": 336.6
+      },
+      "role": "normative_text",
+      "object_kind": "table_cell",
+      "segment_order": 18,
+      "source_text": "The UoC shall, based on the monitoring of the water quality parameters, ensure that there is no upward rate of change >25% over the previous 24 months, for any of the water quality parameters listed below, following the method outlined in Appendix 8 (8.8):\nTN; and,\nTP; and,\nChl-a; and,\nBiological Oxygen Demand (BOD)."
+    },
+    {
+      "segment_id": "p105-r2.6.13-id",
+      "page_number": 105,
+      "page_index": 104,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 53.9,
+        "y0": 364.9,
+        "x1": 92.3,
+        "y1": 382.1
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 19,
+      "source_text": "2.6.13"
+    },
+    {
+      "segment_id": "p105-r2.6.13-normative",
+      "page_number": 105,
+      "page_index": 104,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 117.74,
+        "y0": 365.0,
+        "x1": 534.5,
+        "y1": 536.3
+      },
+      "role": "normative_text",
+      "object_kind": "table_cell",
+      "segment_order": 20,
+      "source_text": "The UoC shall implement a nutrient reduction plan when at least one of the following is identified:\nTN, TP or Chl-a has increased by ≥5 index points according to Table 2 in Appendix 8 (8.8), compared to the water quality baseline; or,\nTN, TP or Chl-a increased by ≥15% over the past 24 months; or,\nThe distance from the surface to the zone of oxygen depletion or to the zone of anoxia has decreased by ≥25% over the past 24 months; or,\nBOD has increased by ≥15% over the past 24 months; or,\n≥1 adverse turnover event or ≥1 harmful algal bloom within the past 10 years."
+    },
+    {
+      "segment_id": "p105-r2.6.11-r2.6.13-interpretation",
+      "page_number": 105,
+      "page_index": 104,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 53.9,
+        "y0": 561.5,
+        "x1": 535.2,
+        "y1": 734.3
+      },
+      "role": "interpretation",
+      "object_kind": "list",
+      "segment_order": 21,
+      "source_text": "How do I interpret this requirement?\nQuarterly monitoring of TN, TP and Chl-a will determine whether there has been a change in the status of the limiting nutrients or a decline in trophic status. BOD will also need to be calculated annually. The calculated data will be compared to the water quality baseline.\nQuarterly monitoring data will be submitted to the ASC Water Quality Calculator at least annually. The ASC Water Quality Calculator will determine rates of change in the limiting nutrient(s) and trophic status compared to the baseline.\nA decline in trophic status will be determined when the next Trophic Status Index (TSI) breakpoint has been exceeded, in accordance with Table 2 in Appendix 8 (8.8)."
+    },
+    {
+      "segment_id": "p105-footer",
+      "page_number": 105,
+      "page_index": 104,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 59.1,
+        "y0": 772.3,
+        "x1": 538.5,
+        "y1": 788.3
+      },
+      "role": "footer",
+      "object_kind": "text_block",
+      "segment_order": 22,
+      "source_text": "Document Name ASC Farm Standard - Interpretation Manual Document ID ASC-INT-001 Version 1.0 Page 105 of 511"
+    },
+    {
+      "segment_id": "p106-header",
+      "page_number": 106,
+      "page_index": 105,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 394.39,
+        "y0": 35.28,
+        "x1": 543.37,
+        "y1": 44.5
+      },
+      "role": "header",
+      "object_kind": "text_block",
+      "segment_order": 23,
+      "source_text": "Aquaculture Stewardship Council"
+    },
+    {
+      "segment_id": "p106-r2.6.11-r2.6.13-interpretation-continuation",
+      "page_number": 106,
+      "page_index": 105,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 53.9,
+        "y0": 71.0,
+        "x1": 530.2,
+        "y1": 210.6
+      },
+      "role": "interpretation",
+      "object_kind": "list",
+      "segment_order": 24,
+      "source_text": "Exceedance of the next TSI breakpoint will occur when one parameter falls into the next TSI category.\nThe ASC Water Quality Calculator also determines whether one of the scenarios in Indicator 2.6.13 has occurred based on the quarterly monitoring data.\nIf one of scenarios has occurred, an action plan needs to be implemented to reduce nutrients released by the site and/or to have improved the efficiency of the feed used.\nThe action plan should be specific, measurable, achievable, relevant and time bound.",
+      "continues_segment_id": "p105-r2.6.11-r2.6.13-interpretation"
+    },
+    {
+      "segment_id": "p106-r2.6.11-r2.6.13-evidence",
+      "page_number": 106,
+      "page_index": 105,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 53.9,
+        "y0": 237.8,
+        "x1": 544.8,
+        "y1": 640.2
+      },
+      "role": "evidence_example",
+      "object_kind": "list",
+      "segment_order": 25,
+      "source_text": "Evidence of implementation should be maintained, e.g.:\nMonitoring data has been submitted annually to the ASC Water Quality Calculator and results have been obtained.\nResults will determine the trophic status and status of TN, TP, Chl-a and BOD, in accordance with Indicator 2.6.12. Results will also be compared to the water quality baseline after the first annual submission.\nAny upward transitions in trophic status at the compared to the water quality baseline will be determined based on the results from the ASC Water Quality Calculator.\nResults from the ASC Water Quality will determine rate of change for TN, TP, Chl-a and BOD compared to the water quality baseline, specifically whether this exceeds 25% over the previous 24 months.\nResults from the ASC Water Quality Calculator will be obtained to determine whether one of the scenarios in Indicator 2.6.13 has occurred.\nThis will be based on the TN, TP, Chl-a and BOD data submitted to the ASC Water Quality Calculator.\nIt will also be based on submissions of the number of HABs and ATEs to the ASC Water Quality Calculator.\nIf one of the scenarios has occurred, an action plan will have been documented which will reduce nutrient nutrients released by the site and/or to have improved the efficiency of the feed used."
+    },
+    {
+      "segment_id": "p106-r2.6.11-r2.6.13-auditor-guidance",
+      "page_number": 106,
+      "page_index": 105,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 53.9,
+        "y0": 665.2,
+        "x1": 533.3,
+        "y1": 717.6
+      },
+      "role": "auditor_guidance",
+      "object_kind": "list",
+      "segment_order": 26,
+      "source_text": "Auditors should confirm:\nThe UoC presents evidence demonstrating monitoring data has been submitted annually to the ASC Water Quality Calculator."
+    },
+    {
+      "segment_id": "p106-footer",
+      "page_number": 106,
+      "page_index": 105,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 59.1,
+        "y0": 772.3,
+        "x1": 538.5,
+        "y1": 788.3
+      },
+      "role": "footer",
+      "object_kind": "text_block",
+      "segment_order": 27,
+      "source_text": "Document Name ASC Farm Standard - Interpretation Manual Document ID ASC-INT-001 Version 1.0 Page 106 of 511"
+    }
+  ],
+  "requirements": [
+    {
+      "requirement_id": "2.6.10",
+      "requirement_form": "requirement_table",
+      "criterion_path": [
+        "Principle 2",
+        "Criterion 2.6"
+      ],
+      "language": "en",
+      "indicator_text": null,
+      "requirement_value": null,
+      "normative_text": "The UoC shall, after the determination of the water quality baseline, conduct monitoring of the water quality parameters listed below, following the method outlined in Appendix 8 (8.8): Total Nitrogen (TN); and, Total Phosphorous (TP); and, Dissolved Oxygen (DO); and, Secchi Disk (SD) depth; and, Chlorophyll-a (Chl-a).",
+      "normative_subjects": [
+        "The UoC"
+      ],
+      "applicability": [],
+      "modalities": [
+        {
+          "token": "shall",
+          "type": "obligation",
+          "scope": "conduct monitoring of the listed water quality parameters following the method outlined in Appendix 8 (8.8)"
+        }
+      ],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "2.6.10-main",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "The UoC shall, after the determination of the water quality baseline, conduct monitoring of the water quality parameters listed below, following the method outlined in Appendix 8 (8.8):",
+          "joins_next": null
+        },
+        {
+          "clause_id": "2.6.10-a",
+          "parent_clause_id": "2.6.10-main",
+          "marker": "o",
+          "text": "Total Nitrogen (TN);",
+          "joins_next": "and"
+        },
+        {
+          "clause_id": "2.6.10-b",
+          "parent_clause_id": "2.6.10-main",
+          "marker": "o",
+          "text": "Total Phosphorous (TP);",
+          "joins_next": "and"
+        },
+        {
+          "clause_id": "2.6.10-c",
+          "parent_clause_id": "2.6.10-main",
+          "marker": "o",
+          "text": "Dissolved Oxygen (DO);",
+          "joins_next": "and"
+        },
+        {
+          "clause_id": "2.6.10-d",
+          "parent_clause_id": "2.6.10-main",
+          "marker": "o",
+          "text": "Secchi Disk (SD) depth;",
+          "joins_next": "and"
+        },
+        {
+          "clause_id": "2.6.10-e",
+          "parent_clause_id": "2.6.10-main",
+          "marker": "o",
+          "text": "Chlorophyll-a (Chl-a).",
+          "joins_next": null
+        }
+      ],
+      "conditions": [
+        {
+          "text": "after the determination of the water quality baseline",
+          "applies_to": "conduct monitoring of the listed water quality parameters"
+        }
+      ],
+      "exceptions": [],
+      "exemptions": [
+        {
+          "text": "An exemption applies if the mean of Secchi Disk (SD) depth calculated over any rolling two-year period remains ≥10m.",
+          "applies_to": "monitoring of Secchi Disk (SD) depth"
+        }
+      ],
+      "thresholds": [
+        {
+          "raw_text": "≥10m",
+          "operator": "gte",
+          "normalized_value": 10,
+          "unit": "m",
+          "applies_to": "mean of Secchi Disk (SD) depth calculated over any rolling two-year period",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p103-r2.6.10-footnote-13"
+          ]
+        }
+      ],
+      "dates": [
+        {
+          "text": "over any rolling two-year period",
+          "applies_to": "calculation of the mean Secchi Disk (SD) depth in the footnote 13 exemption"
+        }
+      ],
+      "cross_references": [
+        {
+          "text": "Appendix 8 (8.8)",
+          "target": "Appendix 8 (8.8)",
+          "type": "internal_exact"
+        }
+      ],
+      "footnote_refs": [
+        {
+          "marker": "13",
+          "text": "An exemption applies if the mean of Secchi Disk (SD) depth calculated over any rolling two-year period remains ≥10m.",
+          "link_type": "direct",
+          "source_segment_ids": [
+            "p103-r2.6.10-footnote-13"
+          ]
+        }
+      ],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": [
+        "p103-r2.6.10-interpretation",
+        "p103-r2.6.10-evidence",
+        "p104-r2.6.10-evidence-continuation",
+        "p104-r2.6.10-auditor-guidance",
+        "p104-r2.6.10-resources"
+      ],
+      "source_segment_ids": [
+        "p103-r2.6.10-id",
+        "p103-r2.6.10-normative",
+        "p103-r2.6.10-footnote-13"
+      ],
+      "source_anomalies": [
+        "Footnote marker 13 is rendered as a superscript immediately after Appendix 8 (8.8)."
+      ],
+      "gold_notes": [
+        "Footnote 13 is direct normative evidence because it creates an exemption; it is not interpretation or resource content."
+      ]
+    },
+    {
+      "requirement_id": "2.6.11",
+      "requirement_form": "requirement_table",
+      "criterion_path": [
+        "Principle 2",
+        "Criterion 2.6"
+      ],
+      "language": "en",
+      "indicator_text": null,
+      "requirement_value": null,
+      "normative_text": "The UoC shall, based on the monitoring of the water quality parameters, ensure that there is no decline in trophic status compared to the water quality baseline determined, following the method outlined in Appendix 8 (8.8).",
+      "normative_subjects": [
+        "The UoC"
+      ],
+      "applicability": [],
+      "modalities": [
+        {
+          "token": "shall",
+          "type": "obligation",
+          "scope": "ensure that there is no decline in trophic status compared to the water quality baseline determined"
+        }
+      ],
+      "negations": [
+        {
+          "text": "no decline in trophic status compared to the water quality baseline determined",
+          "applies_to": "trophic status compared to the determined water quality baseline"
+        }
+      ],
+      "clauses": [
+        {
+          "clause_id": "2.6.11-main",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "The UoC shall, based on the monitoring of the water quality parameters, ensure that there is no decline in trophic status compared to the water quality baseline determined, following the method outlined in Appendix 8 (8.8).",
+          "joins_next": null
+        }
+      ],
+      "conditions": [
+        {
+          "text": "based on the monitoring of the water quality parameters",
+          "applies_to": "ensuring no decline in trophic status"
+        }
+      ],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [
+        {
+          "text": "Appendix 8 (8.8)",
+          "target": "Appendix 8 (8.8)",
+          "type": "internal_exact"
+        }
+      ],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": [
+        "p105-r2.6.11-r2.6.13-interpretation",
+        "p106-r2.6.11-r2.6.13-interpretation-continuation",
+        "p106-r2.6.11-r2.6.13-evidence",
+        "p106-r2.6.11-r2.6.13-auditor-guidance"
+      ],
+      "source_segment_ids": [
+        "p105-r2.6.11-id",
+        "p105-r2.6.11-normative"
+      ],
+      "source_anomalies": [],
+      "gold_notes": [
+        "The interpretation, evidence and auditor-guidance sections below the three-row table are shared related context for Indicators 2.6.11-2.6.13 and are excluded from normative_text."
+      ]
+    },
+    {
+      "requirement_id": "2.6.12",
+      "requirement_form": "requirement_table",
+      "criterion_path": [
+        "Principle 2",
+        "Criterion 2.6"
+      ],
+      "language": "en",
+      "indicator_text": null,
+      "requirement_value": null,
+      "normative_text": "The UoC shall, based on the monitoring of the water quality parameters, ensure that there is no upward rate of change >25% over the previous 24 months, for any of the water quality parameters listed below, following the method outlined in Appendix 8 (8.8): TN; and, TP; and, Chl-a; and, Biological Oxygen Demand (BOD).",
+      "normative_subjects": [
+        "The UoC"
+      ],
+      "applicability": [],
+      "modalities": [
+        {
+          "token": "shall",
+          "type": "obligation",
+          "scope": "ensure that there is no upward rate of change >25% over the previous 24 months for the listed water quality parameters"
+        }
+      ],
+      "negations": [
+        {
+          "text": "no upward rate of change >25% over the previous 24 months",
+          "applies_to": "each listed water quality parameter"
+        }
+      ],
+      "clauses": [
+        {
+          "clause_id": "2.6.12-main",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "The UoC shall, based on the monitoring of the water quality parameters, ensure that there is no upward rate of change >25% over the previous 24 months, for any of the water quality parameters listed below, following the method outlined in Appendix 8 (8.8):",
+          "joins_next": null
+        },
+        {
+          "clause_id": "2.6.12-a",
+          "parent_clause_id": "2.6.12-main",
+          "marker": "o",
+          "text": "TN;",
+          "joins_next": "and"
+        },
+        {
+          "clause_id": "2.6.12-b",
+          "parent_clause_id": "2.6.12-main",
+          "marker": "o",
+          "text": "TP;",
+          "joins_next": "and"
+        },
+        {
+          "clause_id": "2.6.12-c",
+          "parent_clause_id": "2.6.12-main",
+          "marker": "o",
+          "text": "Chl-a;",
+          "joins_next": "and"
+        },
+        {
+          "clause_id": "2.6.12-d",
+          "parent_clause_id": "2.6.12-main",
+          "marker": "o",
+          "text": "Biological Oxygen Demand (BOD).",
+          "joins_next": null
+        }
+      ],
+      "conditions": [
+        {
+          "text": "based on the monitoring of the water quality parameters",
+          "applies_to": "ensuring the limit on upward rate of change"
+        }
+      ],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [
+        {
+          "raw_text": ">25%",
+          "operator": "gt",
+          "normalized_value": 25,
+          "unit": "%",
+          "applies_to": "upward rate of change over the previous 24 months for any listed water quality parameter",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p105-r2.6.12-normative"
+          ]
+        }
+      ],
+      "dates": [
+        {
+          "text": "over the previous 24 months",
+          "applies_to": "upward rate of change for each listed water quality parameter"
+        }
+      ],
+      "cross_references": [
+        {
+          "text": "Appendix 8 (8.8)",
+          "target": "Appendix 8 (8.8)",
+          "type": "internal_exact"
+        }
+      ],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": [
+        "p105-r2.6.11-r2.6.13-interpretation",
+        "p106-r2.6.11-r2.6.13-interpretation-continuation",
+        "p106-r2.6.11-r2.6.13-evidence",
+        "p106-r2.6.11-r2.6.13-auditor-guidance"
+      ],
+      "source_segment_ids": [
+        "p105-r2.6.12-id",
+        "p105-r2.6.12-normative"
+      ],
+      "source_anomalies": [],
+      "gold_notes": [
+        "The literal threshold token is >25%; the surrounding negation expresses the prohibition on exceeding that rate."
+      ]
+    },
+    {
+      "requirement_id": "2.6.13",
+      "requirement_form": "requirement_table",
+      "criterion_path": [
+        "Principle 2",
+        "Criterion 2.6"
+      ],
+      "language": "en",
+      "indicator_text": null,
+      "requirement_value": null,
+      "normative_text": "The UoC shall implement a nutrient reduction plan when at least one of the following is identified: TN, TP or Chl-a has increased by ≥5 index points according to Table 2 in Appendix 8 (8.8), compared to the water quality baseline; or, TN, TP or Chl-a increased by ≥15% over the past 24 months; or, The distance from the surface to the zone of oxygen depletion or to the zone of anoxia has decreased by ≥25% over the past 24 months; or, BOD has increased by ≥15% over the past 24 months; or, ≥1 adverse turnover event or ≥1 harmful algal bloom within the past 10 years.",
+      "normative_subjects": [
+        "The UoC"
+      ],
+      "applicability": [],
+      "modalities": [
+        {
+          "token": "shall",
+          "type": "obligation",
+          "scope": "implement a nutrient reduction plan when at least one listed trigger is identified"
+        }
+      ],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "2.6.13-main",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "The UoC shall implement a nutrient reduction plan when at least one of the following is identified:",
+          "joins_next": null
+        },
+        {
+          "clause_id": "2.6.13-a",
+          "parent_clause_id": "2.6.13-main",
+          "marker": "o",
+          "text": "TN, TP or Chl-a has increased by ≥5 index points according to Table 2 in Appendix 8 (8.8), compared to the water quality baseline;",
+          "joins_next": "or"
+        },
+        {
+          "clause_id": "2.6.13-b",
+          "parent_clause_id": "2.6.13-main",
+          "marker": "o",
+          "text": "TN, TP or Chl-a increased by ≥15% over the past 24 months;",
+          "joins_next": "or"
+        },
+        {
+          "clause_id": "2.6.13-c",
+          "parent_clause_id": "2.6.13-main",
+          "marker": "o",
+          "text": "The distance from the surface to the zone of oxygen depletion or to the zone of anoxia has decreased by ≥25% over the past 24 months;",
+          "joins_next": "or"
+        },
+        {
+          "clause_id": "2.6.13-d",
+          "parent_clause_id": "2.6.13-main",
+          "marker": "o",
+          "text": "BOD has increased by ≥15% over the past 24 months;",
+          "joins_next": "or"
+        },
+        {
+          "clause_id": "2.6.13-e",
+          "parent_clause_id": "2.6.13-main",
+          "marker": "o",
+          "text": "≥1 adverse turnover event or ≥1 harmful algal bloom within the past 10 years.",
+          "joins_next": null
+        }
+      ],
+      "conditions": [
+        {
+          "text": "when at least one of the following is identified",
+          "applies_to": "implementation of a nutrient reduction plan"
+        }
+      ],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [
+        {
+          "raw_text": "≥5 index points",
+          "operator": "gte",
+          "normalized_value": 5,
+          "unit": "index points",
+          "applies_to": "increase in TN, TP or Chl-a compared to the water quality baseline according to Table 2 in Appendix 8 (8.8)",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p105-r2.6.13-normative"
+          ]
+        },
+        {
+          "raw_text": "≥15%",
+          "operator": "gte",
+          "normalized_value": 15,
+          "unit": "%",
+          "applies_to": "increase in TN, TP or Chl-a over the past 24 months",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p105-r2.6.13-normative"
+          ]
+        },
+        {
+          "raw_text": "≥25%",
+          "operator": "gte",
+          "normalized_value": 25,
+          "unit": "%",
+          "applies_to": "decrease in distance from the surface to the zone of oxygen depletion or anoxia over the past 24 months",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p105-r2.6.13-normative"
+          ]
+        },
+        {
+          "raw_text": "≥15%",
+          "operator": "gte",
+          "normalized_value": 15,
+          "unit": "%",
+          "applies_to": "increase in BOD over the past 24 months",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p105-r2.6.13-normative"
+          ]
+        },
+        {
+          "raw_text": "≥1",
+          "operator": "gte",
+          "normalized_value": 1,
+          "unit": "adverse turnover event",
+          "applies_to": "adverse turnover events within the past 10 years",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p105-r2.6.13-normative"
+          ]
+        },
+        {
+          "raw_text": "≥1",
+          "operator": "gte",
+          "normalized_value": 1,
+          "unit": "harmful algal bloom",
+          "applies_to": "harmful algal blooms within the past 10 years",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p105-r2.6.13-normative"
+          ]
+        }
+      ],
+      "dates": [
+        {
+          "text": "over the past 24 months",
+          "applies_to": "increase in TN, TP or Chl-a"
+        },
+        {
+          "text": "over the past 24 months",
+          "applies_to": "decrease in distance from the surface to the zone of oxygen depletion or anoxia"
+        },
+        {
+          "text": "over the past 24 months",
+          "applies_to": "increase in BOD"
+        },
+        {
+          "text": "within the past 10 years",
+          "applies_to": "adverse turnover event or harmful algal bloom trigger"
+        }
+      ],
+      "cross_references": [
+        {
+          "text": "Table 2 in Appendix 8 (8.8)",
+          "target": "Table 2 in Appendix 8 (8.8)",
+          "type": "internal_exact"
+        }
+      ],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": [
+        "p105-r2.6.11-r2.6.13-interpretation",
+        "p106-r2.6.11-r2.6.13-interpretation-continuation",
+        "p106-r2.6.11-r2.6.13-evidence",
+        "p106-r2.6.11-r2.6.13-auditor-guidance"
+      ],
+      "source_segment_ids": [
+        "p105-r2.6.13-id",
+        "p105-r2.6.13-normative"
+      ],
+      "source_anomalies": [],
+      "gold_notes": [
+        "The five trigger bullets are alternatives joined by or; the final bullet contains two alternative event types within the same trigger clause."
+      ]
+    }
+  ],
+  "excluded_regions": [
+    {
+      "source_segment_ids": [
+        "p103-header",
+        "p103-footer",
+        "p104-header",
+        "p104-footer",
+        "p105-header",
+        "p105-footer",
+        "p106-header",
+        "p106-footer"
+      ],
+      "classification": "header_footer",
+      "reason": "Repeated document branding, metadata and page-number furniture are not Requirement content."
+    },
+    {
+      "source_segment_ids": [
+        "p103-table-header",
+        "p105-table-header"
+      ],
+      "classification": "other_non_requirement",
+      "reason": "Indicator/Requirement column labels are structural table headers, not normative content."
+    },
+    {
+      "source_segment_ids": [
+        "p103-r2.6.10-interpretation",
+        "p105-r2.6.11-r2.6.13-interpretation",
+        "p106-r2.6.11-r2.6.13-interpretation-continuation"
+      ],
+      "classification": "interpretation",
+      "reason": "These sections explain how to interpret formal Requirements but do not replace or extend the normative table-cell text."
+    },
+    {
+      "source_segment_ids": [
+        "p103-r2.6.10-evidence",
+        "p104-r2.6.10-evidence-continuation",
+        "p106-r2.6.11-r2.6.13-evidence"
+      ],
+      "classification": "evidence_example",
+      "reason": "Evidence examples are implementation guidance and are not direct Requirement text."
+    },
+    {
+      "source_segment_ids": [
+        "p104-r2.6.10-auditor-guidance",
+        "p106-r2.6.11-r2.6.13-auditor-guidance"
+      ],
+      "classification": "auditor_guidance",
+      "reason": "Auditor confirmation guidance is a separate provenance bucket and is not normative UoC Requirement text."
+    },
+    {
+      "source_segment_ids": [
+        "p104-r2.6.10-resources"
+      ],
+      "classification": "resource",
+      "reason": "Bibliography, examples and external links are resources, not Requirements."
+    }
+  ],
+  "summary": {
+    "requirement_count": 4,
+    "cross_page_requirement_count": 0,
+    "client_action_count": 0,
+    "auditor_action_count": 0,
+    "critical_gold_ambiguities": []
+  }
+}

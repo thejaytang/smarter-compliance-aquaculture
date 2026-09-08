@@ -1,0 +1,58 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pdf-extraction-product"
+version = "0.4.0"
+description = "Evidence-preserving PDF extraction pipeline"
+readme = "USER_GUIDE.md"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "jsonschema>=4.23,<5",
+  "numpy>=2.0,<2.4",
+  "opencv-contrib-python>=4.10,<4.11",
+  "pillow>=11,<13",
+  "pydantic>=2.10,<3",
+  "pypdf>=5,<7",
+  "pypdfium2>=4.30,<6",
+  "pytesseract>=0.3.13,<0.4",
+  "pyyaml>=6,<7",
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.34,<1",
+  "rdflib>=7.1,<8",
+  "pyshacl>=0.30,<1",
+  "beautifulsoup4>=4.13,<5",
+  "lxml>=5,<7",
+  "openpyxl>=3.1,<4",
+]
+
+[project.optional-dependencies]
+docling = ["docling-parse>=7,<8"]
+paddle = [
+  "onnxruntime>=1.20,<2",
+  "paddlepaddle>=3.3,<4",
+  "paddleocr>=3.4,<4",
+  "paddlex[ocr]>=3.7,<4",
+]
+dev = ["pytest>=8,<10", "pytest-cov>=6,<8", "reportlab>=4,<5", "httpx>=0.28,<1"]
+table-fallbacks = ["img2table>=1.4,<2", "gmft>=0.4,<1", "transformers>=4.40,<5"]
+
+[project.scripts]
+pdf-extract = "pdf_extraction.cli:main"
+pdf-extract-evaluate = "pdf_extraction.evaluation.cli:main"
+pdf-extract-api = "pdf_extraction.api.app:main"
+pdf-extract-worker = "pdf_extraction.api.worker:main"
+pdf-extract-release-gate = "pdf_extraction.release_gate:main"
+pdf-extract-system-evaluate = "pdf_extraction.evaluation.full_cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pdf_extraction"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.coverage.run]
+source = ["pdf_extraction"]

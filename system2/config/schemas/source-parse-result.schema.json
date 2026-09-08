@@ -1,0 +1,192 @@
+{
+  "$defs": {
+    "Snapshot": {
+      "additionalProperties": false,
+      "properties": {
+        "source_id": {
+          "pattern": "^[A-Z]{2}\\d{3}$",
+          "title": "Source Id",
+          "type": "string"
+        },
+        "snapshot_id": {
+          "pattern": "^[A-Z]{2}\\d{3}-\\d{3}$",
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "relative_path": {
+          "title": "Relative Path",
+          "type": "string"
+        },
+        "content_hash": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Content Hash",
+          "type": "string"
+        },
+        "file_format": {
+          "title": "File Format",
+          "type": "string"
+        },
+        "operator_selection_decision": {
+          "const": "INCLUDE",
+          "title": "Operator Selection Decision",
+          "type": "string"
+        },
+        "selection_status": {
+          "const": "INCLUDE",
+          "title": "Selection Status",
+          "type": "string"
+        },
+        "snapshot_status": {
+          "const": "STORED",
+          "title": "Snapshot Status",
+          "type": "string"
+        },
+        "source_status": {
+          "const": "CURRENT",
+          "title": "Source Status",
+          "type": "string"
+        },
+        "download_status": {
+          "const": "SUCCESS",
+          "title": "Download Status",
+          "type": "string"
+        },
+        "registry_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Registry Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_id",
+        "snapshot_id",
+        "relative_path",
+        "content_hash",
+        "file_format",
+        "operator_selection_decision",
+        "selection_status",
+        "snapshot_status",
+        "source_status",
+        "download_status",
+        "registry_sha256"
+      ],
+      "title": "Snapshot",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "source-parse-result/1",
+      "default": "source-parse-result/1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source": {
+      "$ref": "#/$defs/Snapshot"
+    },
+    "format": {
+      "enum": [
+        "html",
+        "pdf",
+        "excel",
+        "unknown"
+      ],
+      "title": "Format",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "review_required",
+        "blocked",
+        "failed",
+        "not_implemented"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "reason_codes": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Reason Codes",
+      "type": "array"
+    },
+    "canonical_path": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Canonical Path"
+    },
+    "canonical_sha256": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Canonical Sha256"
+    },
+    "canonical_schema_version": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Canonical Schema Version"
+    },
+    "verification_path": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Verification Path"
+    },
+    "verification_sha256": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Verification Sha256"
+    },
+    "requirement_status": {
+      "default": "not_extracted",
+      "enum": [
+        "not_extracted",
+        "native_pdf_pipeline"
+      ],
+      "title": "Requirement Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source",
+    "format",
+    "status"
+  ],
+  "title": "ParseResult",
+  "type": "object"
+}

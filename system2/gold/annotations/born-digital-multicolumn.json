@@ -1,0 +1,10 @@
+{
+  "text": "Section 1 - Digital Evidence\nThe limit is 5 mg.\nEffective date: 2026-08-25.\nIt shall remain below 10 mg.\nThe value must not exceed 7 mg.\nSee Table 1.\nAnnex 2 applies.",
+  "block_types": ["heading", "paragraph", "paragraph", "paragraph", "paragraph", "paragraph", "paragraph", "table"],
+  "heading_levels": [1],
+  "cross_page_merges": 0,
+  "cells": ["Item", "Limit", "A", "5 mg", "B", "7 mg"],
+  "cell_spans": ["1x1", "1x1", "1x1", "1x1", "1x1", "1x1"],
+  "critical_spans": ["1", "5", "mg", "2026-08-25", "shall", "10", "mg", "must", "not", "7", "mg", "1", "2", "5", "mg", "7", "mg", "1"],
+  "critical_conflicts": []
+}

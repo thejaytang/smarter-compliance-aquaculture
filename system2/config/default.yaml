@@ -1,0 +1,170 @@
+pipeline:
+  render_dpi: 200
+  crop_dpi: 300
+  page_index_origin: 0
+
+native_extraction:
+  backend: auto
+  preserve_object_refs: true
+
+layout:
+  backend: auto
+  paddle_model: PP-DocLayoutV3
+  paddle_engine: onnxruntime
+  min_confidence: 0.35
+
+ocr:
+  backend: auto
+  paddle_version: PP-OCRv6
+  paddle_engine: onnxruntime
+  language: eng
+  min_confidence: 0.25
+
+text_routing:
+  enabled: true
+  min_word_count: 8
+  min_character_count: 40
+  max_suspicious_character_ratio: 0.02
+  min_valid_bbox_ratio: 0.95
+
+tables:
+  backend: auto
+  paddle_pipeline: PP-TableMagic
+  paddle_engine: onnxruntime
+  recognition_pipeline_enabled: true
+  min_width: 80
+  min_height: 40
+  img2table_enabled: true
+  gmft_enabled: true
+  cell_review_confidence: 0.80
+  cell_auto_resolve_confidence: 0.96
+  structure_auto_accept_confidence: 0.85
+
+figures:
+  preserve_original_crop: true
+  figure_ocr: false
+  visual_understanding: false
+
+code:
+  infer_language: true
+  special_character_review: true
+
+equations:
+  transcription_enabled: true
+  backend: auto
+  model_name: PP-FormulaNet_plus-M
+  paddle_engine: paddle
+  crop_padding_px: 8
+  high_risk_validation: true
+
+conflicts:
+  critical_patterns: true
+
+completeness:
+  enabled: true
+  min_visual_region_area: 180
+  max_unexplained_regions: 0
+  duplicate_iou_threshold: 0.85
+
+assembly:
+  paragraph_auto_merge_threshold: 0.82
+  paragraph_review_threshold: 0.62
+  table_auto_merge_threshold: 0.88
+  table_review_threshold: 0.68
+
+precision_review:
+  enabled: true
+  mode: conflicts_only
+  backend: auto
+  model_name: PaddleOCR-VL-1.6
+  auto_resolve_confidence: 0.96
+  crop_scale: 3.0
+
+verification:
+  depth: source
+  default_review_threshold: 0.80
+  criticality_thresholds:
+    general: 0.80
+    section_reference: 0.95
+    modality: 0.99
+    negation: 0.99
+    numeric: 0.99
+    unit: 0.99
+    date: 0.99
+    comparison_operator: 0.99
+  require_confidence: true
+  force_review_on_disagreement: true
+  force_review_on_missing_provenance: true
+
+links:
+  inferred_link_confidence: 0.72
+  inferred_links_require_review: true
+
+profiling:
+  enabled: true
+  min_requirement_template_support: 3
+  template_repair_confidence: 0.90
+  validate_requirement_sequence: true
+  validate_cross_page_columns: true
+  validate_terminal_evidence: true
+
+evaluation:
+  gold_manifest: gold/manifest.json
+  regression_thresholds:
+    critical_span_exact_match: 0.98
+    critical_conflict_recall: 1.0
+    accepted_result_precision: 0.98
+    block_type_f1: 0.98
+    heading_hierarchy_f1: 0.98
+    cross_page_merge_precision: 0.98
+    cross_page_merge_recall: 0.98
+    cell_exact_match: 0.85
+    row_column_span_f1: 0.92
+    max_cer: 0.02
+    max_wer: 0.03
+    max_block_omission_rate: 0.02
+
+outputs:
+  canonical_json: true
+  markdown: true
+  quality_report: true
+  html: true
+  xml: true
+  jsonl: true
+  rag_chunks: true
+  overlay: true
+
+regulatory_ir:
+  enabled: true
+  require_provenance: true
+
+ontology:
+  enabled: true
+  namespace: https://example.org/regulatory/
+  shacl_enabled: true
+
+security:
+  max_file_size_mb: 250
+  max_pages: 5000
+  max_page_dimension_points: 20000
+  reject_javascript: true
+  reject_embedded_files: true
+  external_models_enabled: false
+  redact_document_text_in_logs: true
+  processing_timeout_seconds: 3600
+  max_memory_mb: 8192
+
+runtime:
+  page_workers: 1
+  batch_size: 1
+  cache_enabled: true
+  retry_limit: 2
+  random_seed: 0
+  deterministic: true
+  job_database: runtime/jobs.sqlite3
+
+release:
+  min_provenance_anchor_coverage: 0.99
+  max_human_review_rate: 0.35
+  max_seconds_per_page: 120
+  max_peak_memory_mb: 8192

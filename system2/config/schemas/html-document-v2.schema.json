@@ -1,0 +1,670 @@
+{
+  "$defs": {
+    "HtmlAtom": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "node_id": {
+          "title": "Node Id",
+          "type": "string"
+        },
+        "text_index": {
+          "minimum": 1,
+          "title": "Text Index",
+          "type": "integer"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "confidence": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidence"
+        },
+        "review_policy": {
+          "const": "review_required",
+          "default": "review_required",
+          "title": "Review Policy",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "node_id",
+        "text_index",
+        "text"
+      ],
+      "title": "HtmlAtom",
+      "type": "object"
+    },
+    "HtmlCell": {
+      "additionalProperties": false,
+      "properties": {
+        "node_id": {
+          "title": "Node Id",
+          "type": "string"
+        },
+        "row": {
+          "title": "Row",
+          "type": "integer"
+        },
+        "column": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Column"
+        },
+        "rowspan": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Rowspan"
+        },
+        "colspan": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Colspan"
+        },
+        "is_header": {
+          "title": "Is Header",
+          "type": "boolean"
+        },
+        "confidence": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidence"
+        },
+        "review_policy": {
+          "const": "review_required",
+          "default": "review_required",
+          "title": "Review Policy",
+          "type": "string"
+        }
+      },
+      "required": [
+        "node_id",
+        "row",
+        "column",
+        "rowspan",
+        "colspan",
+        "is_header"
+      ],
+      "title": "HtmlCell",
+      "type": "object"
+    },
+    "HtmlLink": {
+      "additionalProperties": false,
+      "properties": {
+        "node_id": {
+          "title": "Node Id",
+          "type": "string"
+        },
+        "target": {
+          "title": "Target",
+          "type": "string"
+        },
+        "confidence": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidence"
+        },
+        "review_policy": {
+          "const": "review_required",
+          "default": "review_required",
+          "title": "Review Policy",
+          "type": "string"
+        },
+        "target_node_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Target Node Ids",
+          "type": "array"
+        },
+        "relation": {
+          "enum": [
+            "internal",
+            "external",
+            "embedded_footnote",
+            "modal_footnote",
+            "blocked_scheme"
+          ],
+          "title": "Relation",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "resolved",
+            "external_not_fetched",
+            "missing",
+            "ambiguous",
+            "blocked"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "node_id",
+        "target",
+        "target_node_ids",
+        "relation",
+        "status"
+      ],
+      "title": "HtmlLink",
+      "type": "object"
+    },
+    "HtmlList": {
+      "additionalProperties": false,
+      "properties": {
+        "node_id": {
+          "title": "Node Id",
+          "type": "string"
+        },
+        "ordered": {
+          "title": "Ordered",
+          "type": "boolean"
+        },
+        "confidence": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidence"
+        },
+        "review_policy": {
+          "const": "review_required",
+          "default": "review_required",
+          "title": "Review Policy",
+          "type": "string"
+        },
+        "item_node_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Item Node Ids",
+          "type": "array"
+        },
+        "source_label_node_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Label Node Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "node_id",
+        "ordered",
+        "item_node_ids"
+      ],
+      "title": "HtmlList",
+      "type": "object"
+    },
+    "HtmlNode": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "locator": {
+          "title": "Locator",
+          "type": "string"
+        },
+        "parent_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Parent Id"
+        },
+        "ordinal": {
+          "title": "Ordinal",
+          "type": "integer"
+        },
+        "tag": {
+          "title": "Tag",
+          "type": "string"
+        },
+        "kind": {
+          "title": "Kind",
+          "type": "string"
+        },
+        "attributes": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            ]
+          },
+          "title": "Attributes",
+          "type": "object"
+        },
+        "role": {
+          "default": "content",
+          "enum": [
+            "content",
+            "metadata",
+            "navigation",
+            "control"
+          ],
+          "title": "Role",
+          "type": "string"
+        },
+        "heading_level": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Heading Level"
+        },
+        "section_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Section Id"
+        },
+        "confidence": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidence"
+        },
+        "review_policy": {
+          "const": "review_required",
+          "default": "review_required",
+          "title": "Review Policy",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "locator",
+        "parent_id",
+        "ordinal",
+        "tag",
+        "kind",
+        "attributes"
+      ],
+      "title": "HtmlNode",
+      "type": "object"
+    },
+    "HtmlOmission": {
+      "additionalProperties": false,
+      "properties": {
+        "locator": {
+          "title": "Locator",
+          "type": "string"
+        },
+        "tag": {
+          "title": "Tag",
+          "type": "string"
+        },
+        "reason": {
+          "enum": [
+            "non_content_script",
+            "non_content_style",
+            "comment"
+          ],
+          "title": "Reason",
+          "type": "string"
+        },
+        "text_sha256": {
+          "title": "Text Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "locator",
+        "tag",
+        "reason",
+        "text_sha256"
+      ],
+      "title": "HtmlOmission",
+      "type": "object"
+    },
+    "HtmlTable": {
+      "additionalProperties": false,
+      "properties": {
+        "node_id": {
+          "title": "Node Id",
+          "type": "string"
+        },
+        "row_count": {
+          "title": "Row Count",
+          "type": "integer"
+        },
+        "column_count": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Column Count"
+        },
+        "cells": {
+          "items": {
+            "$ref": "#/$defs/HtmlCell"
+          },
+          "title": "Cells",
+          "type": "array"
+        },
+        "confidence": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidence"
+        },
+        "issues": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Issues",
+          "type": "array"
+        },
+        "review_policy": {
+          "const": "review_required",
+          "default": "review_required",
+          "title": "Review Policy",
+          "type": "string"
+        }
+      },
+      "required": [
+        "node_id",
+        "row_count",
+        "column_count",
+        "cells"
+      ],
+      "title": "HtmlTable",
+      "type": "object"
+    },
+    "Snapshot": {
+      "additionalProperties": false,
+      "properties": {
+        "source_id": {
+          "pattern": "^[A-Z]{2}\\d{3}$",
+          "title": "Source Id",
+          "type": "string"
+        },
+        "snapshot_id": {
+          "pattern": "^[A-Z]{2}\\d{3}-\\d{3}$",
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "relative_path": {
+          "title": "Relative Path",
+          "type": "string"
+        },
+        "content_hash": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Content Hash",
+          "type": "string"
+        },
+        "file_format": {
+          "title": "File Format",
+          "type": "string"
+        },
+        "operator_selection_decision": {
+          "const": "INCLUDE",
+          "title": "Operator Selection Decision",
+          "type": "string"
+        },
+        "selection_status": {
+          "const": "INCLUDE",
+          "title": "Selection Status",
+          "type": "string"
+        },
+        "snapshot_status": {
+          "const": "STORED",
+          "title": "Snapshot Status",
+          "type": "string"
+        },
+        "source_status": {
+          "const": "CURRENT",
+          "title": "Source Status",
+          "type": "string"
+        },
+        "download_status": {
+          "const": "SUCCESS",
+          "title": "Download Status",
+          "type": "string"
+        },
+        "registry_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Registry Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_id",
+        "snapshot_id",
+        "relative_path",
+        "content_hash",
+        "file_format",
+        "operator_selection_decision",
+        "selection_status",
+        "snapshot_status",
+        "source_status",
+        "download_status",
+        "registry_sha256"
+      ],
+      "title": "Snapshot",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "html-document/2",
+      "default": "html-document/2",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source": {
+      "$ref": "#/$defs/Snapshot"
+    },
+    "parser_version": {
+      "title": "Parser Version",
+      "type": "string"
+    },
+    "config_hash": {
+      "title": "Config Hash",
+      "type": "string"
+    },
+    "profile": {
+      "title": "Profile",
+      "type": "string"
+    },
+    "encoding": {
+      "title": "Encoding",
+      "type": "string"
+    },
+    "root_node_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Root Node Ids",
+      "type": "array"
+    },
+    "nodes": {
+      "items": {
+        "$ref": "#/$defs/HtmlNode"
+      },
+      "title": "Nodes",
+      "type": "array"
+    },
+    "atoms": {
+      "items": {
+        "$ref": "#/$defs/HtmlAtom"
+      },
+      "title": "Atoms",
+      "type": "array"
+    },
+    "tables": {
+      "items": {
+        "$ref": "#/$defs/HtmlTable"
+      },
+      "title": "Tables",
+      "type": "array"
+    },
+    "lists": {
+      "items": {
+        "$ref": "#/$defs/HtmlList"
+      },
+      "title": "Lists",
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "$ref": "#/$defs/HtmlLink"
+      },
+      "title": "Links",
+      "type": "array"
+    },
+    "omitted": {
+      "items": {
+        "$ref": "#/$defs/HtmlOmission"
+      },
+      "title": "Omitted",
+      "type": "array"
+    },
+    "issues": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Issues",
+      "type": "array"
+    },
+    "confidence": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Confidence"
+    },
+    "review_policy": {
+      "const": "review_required",
+      "default": "review_required",
+      "title": "Review Policy",
+      "type": "string"
+    },
+    "requirement_status": {
+      "const": "not_extracted",
+      "default": "not_extracted",
+      "title": "Requirement Status",
+      "type": "string"
+    },
+    "display_policy": {
+      "const": "static_snapshot_all_dom_variants_preserved",
+      "default": "static_snapshot_all_dom_variants_preserved",
+      "title": "Display Policy",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source",
+    "parser_version",
+    "config_hash",
+    "profile",
+    "encoding",
+    "root_node_ids",
+    "nodes",
+    "atoms",
+    "tables",
+    "lists",
+    "links",
+    "omitted",
+    "issues"
+  ],
+  "title": "HtmlDocument",
+  "type": "object"
+}

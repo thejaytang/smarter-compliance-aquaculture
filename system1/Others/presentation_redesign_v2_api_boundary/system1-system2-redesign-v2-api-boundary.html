@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Requirement Workstream | System1 + System2</title>
+  <style>
+    :root {
+      --ink: #14324a;
+      --navy: #0d2d4b;
+      --blue: #246b99;
+      --teal: #0f766e;
+      --teal-2: #2a968a;
+      --aqua: #dff4f1;
+      --amber: #d89020;
+      --amber-soft: #fff2d8;
+      --violet: #7456a4;
+      --violet-soft: #eee9f7;
+      --green: #18765a;
+      --red: #b84b4b;
+      --paper: #f5f8fb;
+      --white: #ffffff;
+      --muted: #61788a;
+      --line: #b9cad6;
+      --shadow: 0 8px 24px rgba(13, 45, 75, .08);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: #dbe4eb; }
+    body { font-family: Arial, Helvetica, sans-serif; color: var(--ink); }
+    body:has(.slide:target) .slide:not(:target) { display: none; }
+    .slide:target { margin-bottom: 0; }
+
+    .slide {
+      position: relative;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 92% 8%, rgba(42,150,138,.09), transparent 20%),
+        linear-gradient(180deg, #f8fbfd 0%, #f2f6f9 100%);
+      margin: 0 0 28px;
+    }
+    .slide::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(20,50,74,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(20,50,74,.025) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .header { position: absolute; left: 72px; right: 72px; top: 48px; z-index: 4; }
+    .eyebrow { color: var(--teal); font-size: 18px; font-weight: 800; letter-spacing: 1.8px; text-transform: uppercase; }
+    h1 { margin: 10px 0 0; font-size: 54px; line-height: 1.05; color: var(--navy); letter-spacing: -.8px; }
+    .subtitle { margin-top: 14px; font-size: 24px; color: var(--muted); max-width: 1250px; line-height: 1.35; }
+    .status {
+      position: absolute; right: 0; top: 10px; min-width: 300px; padding: 13px 22px;
+      border: 1.5px solid #c7d5de; border-radius: 999px; background: rgba(255,255,255,.85);
+      color: var(--navy); font-size: 15px; font-weight: 800; letter-spacing: .7px; text-align: center;
+    }
+
+    .card {
+      background: rgba(255,255,255,.96); border: 2px solid #c9d7e1; border-radius: 20px;
+      box-shadow: var(--shadow); z-index: 3;
+    }
+    .card-title { color: var(--navy); font-size: 28px; font-weight: 800; line-height: 1.12; }
+    .card-sub { color: var(--muted); font-size: 18px; line-height: 1.36; }
+    .pill {
+      display: inline-flex; align-items: center; justify-content: center; min-height: 32px;
+      padding: 7px 14px; border-radius: 999px; font-size: 14px; font-weight: 800; letter-spacing: .4px;
+      white-space: nowrap;
+    }
+    .pill.green { background: #def2ea; color: var(--green); }
+    .pill.teal { background: var(--aqua); color: var(--teal); }
+    .pill.amber { background: var(--amber-soft); color: #9b6110; }
+    .pill.violet { background: var(--violet-soft); color: var(--violet); }
+    .pill.navy { background: #e3edf4; color: var(--navy); }
+    .pill.red { background: #f8e4e4; color: var(--red); }
+    .pill.outline { background: #fff; color: var(--ink); border: 1px solid #b8c9d6; }
+    .number { font-variant-numeric: tabular-nums; }
+    .connector { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+    .connector path, .connector line, .connector polyline { fill: none; stroke: var(--blue); stroke-width: 4; }
+    .connector .human { stroke: var(--amber); stroke-dasharray: 12 10; }
+    .connector .soft { stroke: #8aa6b8; stroke-width: 3; }
+    .connector text { font-family: Arial, Helvetica, sans-serif; fill: var(--muted); font-size: 16px; font-weight: 700; }
+    .footer-note { position: absolute; left: 72px; bottom: 30px; color: var(--muted); font-size: 15px; z-index: 4; }
+    .page-no { position: absolute; right: 72px; bottom: 28px; color: #8ca0ad; font-size: 15px; font-weight: 800; z-index: 4; }
+
+    /* Page 1 */
+    .plan-row { position: absolute; left: 78px; top: 252px; width: 1764px; height: 420px; display: flex; align-items: stretch; z-index: 3; }
+    .plan-stage { width: 382px; padding: 28px 28px 24px; position: relative; }
+    .plan-arrow { width: 72px; display: flex; align-items: center; justify-content: center; color: var(--blue); font-size: 58px; font-weight: 700; }
+    .stage-index { width: 54px; height: 54px; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 23px; font-weight: 900; margin-bottom: 20px; }
+    .stage-list { margin: 18px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: 16px; line-height: 1.35; }
+    .stage-list li { margin: 6px 0; padding-left: 20px; position: relative; }
+    .stage-list li::before { content: "•"; position: absolute; left: 0; color: var(--teal); font-weight: 900; }
+    .stage-foot { position: absolute; left: 28px; bottom: 20px; }
+    .plan-stage.s1 { border-color: #8ab8d0; }
+    .plan-stage.s1 .stage-index { background: var(--navy); }
+    .plan-stage.contract { border-color: #b7a8d3; }
+    .plan-stage.contract .stage-index { background: var(--violet); }
+    .plan-stage.s2 { border-color: #75beb5; }
+    .plan-stage.s2 .stage-index { background: var(--teal); }
+    .plan-stage.output { border-color: #dfb05f; }
+    .plan-stage.output .stage-index { background: var(--amber); }
+    .capability-band { position: absolute; left: 78px; top: 690px; width: 1764px; height: 126px; padding: 15px 24px 30px; display: grid; grid-template-columns: 1fr 126px 1fr; align-items: center; gap: 18px; z-index: 3; border-left: 8px solid var(--violet); }
+    .cap-side { height: 72px; padding: 6px 16px; }
+    .cap-side.current { border-right: 1px solid #d3dee6; }
+    .cap-side h3 { margin: 0 0 7px; font-size: 19px; color: var(--navy); }
+    .cap-side p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.35; }
+    .cap-shift { text-align: center; color: var(--violet); font-size: 14px; font-weight: 900; letter-spacing: .6px; }
+    .cap-shift b { display: block; font-size: 32px; line-height: .9; }
+    .cap-rule { position: absolute; left: 26px; right: 26px; bottom: 8px; padding-top: 7px; border-top: 1px solid #d7e1e8; color: var(--ink); font-size: 12px; font-weight: 800; text-align: center; letter-spacing: .25px; }
+    .outcome-row { position: absolute; left: 78px; top: 835px; width: 1764px; height: 132px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; z-index: 3; }
+    .outcome { padding: 19px 28px; }
+    .outcome b { display: block; color: var(--teal); font-size: 16px; letter-spacing: 1px; margin-bottom: 10px; }
+    .outcome strong { font-size: 25px; color: var(--navy); }
+    .outcome p { margin: 9px 0 0; color: var(--muted); font-size: 16px; line-height: 1.35; }
+
+    /* Page 2 */
+    .arch-trigger { position: absolute; top: 208px; width: 510px; height: 92px; padding: 24px 28px; display: flex; align-items: center; gap: 20px; z-index: 3; }
+    .arch-trigger.left { left: 94px; }
+    .arch-trigger.right { right: 94px; }
+    .trigger-icon { width: 48px; height: 48px; border-radius: 14px; background: #e5eef5; color: var(--navy); display: flex; align-items: center; justify-content: center; font-size: 25px; font-weight: 900; }
+    .arch-leader { position: absolute; left: 520px; top: 330px; width: 880px; height: 124px; padding: 25px 32px; background: var(--navy); border-color: var(--navy); color: #fff; display: flex; align-items: center; justify-content: space-between; z-index: 3; }
+    .arch-leader .card-title { color: #fff; font-size: 36px; }
+    .arch-leader .card-sub { color: #d9e7f0; margin-top: 8px; font-size: 18px; }
+    .leader-badges { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; width: 390px; }
+    .leader-badges .pill { background: rgba(255,255,255,.12); color: #fff; }
+    .module { position: absolute; top: 510px; width: 365px; height: 188px; padding: 22px 26px; background: linear-gradient(135deg, #0f766e, #208a81); border-color: #0f766e; color: #fff; z-index: 3; }
+    .module.m1 { left: 66px; }
+    .module.m2 { left: 465px; }
+    .module.m3 { left: 864px; }
+    .module .card-title { color: #fff; font-size: 27px; }
+    .module .card-sub { color: #dff7f3; margin-top: 10px; font-size: 15px; }
+    .api-augment { margin-top: 10px; padding: 7px 10px; border-radius: 9px; background: rgba(116,86,164,.25); color: #fff; font-size: 12px; font-weight: 800; line-height: 1.25; }
+    .human-gate { position: absolute; left: 1290px; top: 510px; width: 560px; height: 188px; padding: 25px 28px; background: linear-gradient(135deg, #c88114, #e2a33a); border-color: #c88114; color: #fff; z-index: 3; }
+    .human-gate .card-title { color: #fff; font-size: 29px; }
+    .human-gate .card-sub { color: #fff8e9; margin-top: 12px; font-size: 17px; }
+    .data-layer { position: absolute; left: 100px; top: 748px; width: 1110px; height: 114px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; z-index: 3; }
+    .data-card { padding: 24px; text-align: center; }
+    .data-card strong { color: var(--navy); font-size: 24px; }
+    .data-card p { margin: 9px 0 0; color: var(--muted); font-size: 15px; }
+    .arch-output { position: absolute; left: 170px; top: 912px; width: 1580px; height: 86px; display: flex; align-items: center; justify-content: center; gap: 34px; z-index: 3; }
+    .output-box { padding: 18px 28px; min-width: 510px; text-align: center; border-radius: 15px; border: 2px solid #a8bdcc; background: #fff; color: var(--navy); font-size: 25px; font-weight: 800; }
+    .output-arrow { color: var(--blue); font-size: 42px; }
+    .guardrails { position: absolute; left: 1288px; top: 728px; width: 562px; height: 160px; padding: 17px 20px; z-index: 3; }
+    .guardrails h3 { margin: 0 0 10px; font-size: 18px; color: var(--navy); }
+    .boundary-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .boundary-col { padding: 9px 10px; border-radius: 10px; background: #edf3f7; color: var(--muted); font-size: 12px; line-height: 1.3; }
+    .boundary-col.api { background: var(--violet-soft); }
+    .boundary-col b { display: block; margin-bottom: 4px; color: var(--navy); font-size: 13px; }
+    .boundary-invariant { margin-top: 8px; color: #8b570f; font-size: 11px; font-weight: 800; text-align: center; }
+
+    /* Page 3 */
+    .lane-label { position: absolute; left: 72px; padding: 10px 18px; border-radius: 10px; font-size: 15px; font-weight: 900; letter-spacing: 1px; z-index: 4; }
+    .lane-label.auto { top: 204px; background: #e3edf4; color: var(--navy); }
+    .lane-label.human-lane { top: 738px; background: var(--amber-soft); color: #9b6110; }
+    .flow-node { position: absolute; padding: 20px; text-align: center; z-index: 3; }
+    .flow-node strong { display: block; color: var(--navy); font-size: 21px; line-height: 1.2; }
+    .flow-node span { display: block; color: var(--muted); font-size: 14px; line-height: 1.35; margin-top: 8px; }
+    .diamond { position: absolute; width: 150px; height: 150px; transform: rotate(45deg); border-radius: 18px; background: #fff8e9; border: 3px solid var(--amber); box-shadow: var(--shadow); z-index: 3; }
+    .diamond-inner { position: absolute; inset: 15px; transform: rotate(-45deg); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+    .diamond-inner strong { color: var(--navy); font-size: 18px; line-height: 1.12; }
+    .diamond-inner span { margin-top: 6px; color: var(--muted); font-size: 13px; }
+    .detail-row { position: absolute; left: 72px; top: 476px; width: 1776px; height: 220px; display: grid; grid-template-columns: 1fr 1.26fr 1fr 1.2fr; gap: 22px; z-index: 3; }
+    .detail-card { padding: 22px 24px; }
+    .detail-card h3 { margin: 0; color: var(--navy); font-size: 22px; }
+    .detail-card p { margin: 10px 0 14px; color: var(--muted); font-size: 15px; line-height: 1.35; }
+    .mini-steps { display: flex; flex-wrap: wrap; gap: 7px; }
+    .human-lane-box { position: absolute; top: 786px; height: 150px; z-index: 3; }
+    .human-desktop { left: 90px; width: 540px; padding: 26px 28px; background: var(--amber-soft); border-color: #e1aa50; }
+    .human-desktop .card-title { font-size: 27px; }
+    .human-desktop .card-sub { margin-top: 12px; font-size: 16px; }
+    .human-decision { left: 700px; top: 790px; width: 138px; height: 138px; }
+    .human-apply { left: 920px; width: 260px; padding: 25px; }
+    .human-return { left: 1210px; width: 260px; padding: 25px; }
+    .human-result { left: 1510px; width: 330px; padding: 25px; }
+    .technical-footer { position: absolute; left: 72px; top: 976px; width: 1776px; height: 58px; display: flex; align-items: center; gap: 12px; z-index: 3; }
+
+    /* Page 4 */
+    .s2-input { position: absolute; left: 58px; top: 250px; width: 344px; height: 650px; padding: 25px; z-index: 3; border-top: 9px solid var(--navy); }
+    .s2-input h2 { margin: 0 0 18px; color: var(--navy); font-size: 25px; }
+    .s2-input .source-step { padding: 14px 13px; margin: 11px 0; border: 1.5px solid #b8cad7; border-radius: 12px; background: #fafdff; text-align: center; }
+    .s2-input .source-step strong { display: block; font-size: 17px; }
+    .s2-input .source-step span { display: block; margin-top: 5px; color: var(--muted); font-size: 13px; }
+    .s2-contract { position: absolute; left: 430px; top: 500px; width: 158px; height: 104px; padding: 16px; text-align: center; border-color: #b7a8d3; background: var(--violet-soft); z-index: 3; }
+    .s2-contract strong { color: var(--violet); font-size: 17px; }
+    .s2-contract span { display: block; margin-top: 8px; color: var(--muted); font-size: 13px; }
+    .s2-zone { position: absolute; left: 620px; top: 214px; width: 1230px; height: 716px; border: 2px solid #8cc6be; border-radius: 22px; background: rgba(255,255,255,.7); z-index: 2; }
+    .s2-zone-title { height: 60px; padding: 18px 24px; background: var(--teal); color: #fff; border-radius: 20px 20px 0 0; font-size: 22px; font-weight: 900; letter-spacing: .5px; }
+    .s2-badges { position: absolute; top: 78px; left: 25px; display: flex; gap: 10px; }
+    .s2-node { position: absolute; padding: 18px; text-align: center; border-radius: 15px; background: #fff; border: 2px solid #bfd1dc; box-shadow: 0 6px 16px rgba(13,45,75,.06); z-index: 3; }
+    .s2-node strong { display: block; color: var(--navy); font-size: 18px; line-height: 1.18; }
+    .s2-node span { display: block; margin-top: 7px; color: var(--muted); font-size: 13px; line-height: 1.3; }
+    .s2-diamond { position: absolute; width: 118px; height: 118px; transform: rotate(45deg); background: #fff8e9; border: 3px solid var(--amber); border-radius: 15px; z-index: 3; }
+    .s2-diamond .diamond-inner { inset: 10px; }
+    .s2-diamond .diamond-inner strong { font-size: 15px; }
+    .s2-parser-stack { position: absolute; left: 900px; top: 230px; width: 160px; height: 270px; z-index: 3; }
+    .s2-parser-stack h3 { margin: 0 0 12px; color: var(--navy); font-size: 18px; text-align: center; }
+    .parser { padding: 10px 8px; margin: 7px 0; border-radius: 10px; border: 1.5px solid #d5b26d; background: var(--amber-soft); color: #8b570f; font-size: 13px; font-weight: 800; text-align: center; }
+    .s2-output { position: absolute; left: 1000px; top: 542px; width: 200px; height: 134px; padding: 17px; background: var(--violet-soft); border-color: #a893cb; text-align: center; z-index: 3; }
+    .s2-output strong { color: var(--violet); font-size: 18px; line-height: 1.1; }
+    .s2-output span { display: block; margin-top: 7px; color: var(--muted); font-size: 12px; line-height: 1.25; }
+    .s2-zone .connector path { stroke-width: 3; }
+    .exception-bar { position: absolute; left: 58px; right: 70px; top: 956px; height: 70px; padding: 17px 22px; display: flex; align-items: center; gap: 18px; z-index: 3; border-left: 7px solid var(--violet); }
+    .exception-bar strong { color: var(--violet); font-size: 18px; min-width: 190px; }
+    .exception-bar span { color: var(--muted); font-size: 15px; line-height: 1.3; }
+  </style>
+</head>
+<body>
+
+  <section id="slide-1" class="slide" data-document-role="page" data-label="01 Overall plan" data-speaker-notes="System 1 controls source identity, retrieval, human governance and maintained files. System 2 converts the governed source package into traceable Requirement records. Human approval and traceability span the whole workstream.">
+    <div class="header">
+      <div class="eyebrow">Requirement workstream · master plan</div>
+      <h1>From Trusted Sources to Traceable Requirements</h1>
+      <div class="subtitle">System 1 governs what may enter the pipeline. System 2 extracts structured Requirements with traceable anchors and explicit quality gates.</div>
+      <div class="status">CURRENT: NO API · FUTURE: OPTIONAL API LAYER</div>
+    </div>
+
+    <div class="plan-row">
+      <div class="plan-stage card s1">
+        <div class="stage-index">01</div>
+        <div class="card-title">Source Universe</div>
+        <div class="card-sub">Official and relevant material enters as a governed candidate, not as an assumed Requirement.</div>
+        <ul class="stage-list">
+          <li>Public authorities and laws</li>
+          <li>Standards and certification schemes</li>
+          <li>Manual files and future discovery providers</li>
+        </ul>
+        <div class="stage-foot"><span class="pill navy">CONTROLLED INPUT</span></div>
+      </div>
+      <div class="plan-arrow">→</div>
+      <div class="plan-stage card s1">
+        <div class="stage-index">S1</div>
+        <div class="card-title">System 1<br>Source Management</div>
+        <div class="card-sub">A deterministic Python control system with one Leader, three bounded modules and one human gate.</div>
+        <ul class="stage-list">
+          <li>Collect, validate and version original files</li>
+          <li>Consolidate every unresolved task</li>
+          <li>Maintain workbook, data and runtime state</li>
+        </ul>
+        <div class="stage-foot"><span class="pill green">OPERATIONAL CONTROL PLANE</span></div>
+      </div>
+      <div class="plan-arrow">→</div>
+      <div class="plan-stage card contract">
+        <div class="stage-index">SC</div>
+        <div class="card-title">Source Contract</div>
+        <div class="card-sub">Only a maintained, eligible and traceable source package crosses the interface.</div>
+        <ul class="stage-list">
+          <li>Source ID, version and language authority</li>
+          <li>Original format, hash and stored file</li>
+          <li>Selection and review state</li>
+        </ul>
+        <div class="stage-foot"><span class="pill violet">TRACEABILITY INTERFACE</span></div>
+      </div>
+      <div class="plan-arrow">→</div>
+      <div class="plan-stage card s2">
+        <div class="stage-index">S2</div>
+        <div class="card-title">System 2<br>Requirement Extraction</div>
+        <div class="card-sub">Format- and document-aware parsing turns controlled sources into reviewable Requirement records.</div>
+        <ul class="stage-list">
+          <li>HTML and PDF routing</li>
+          <li>Document-specific parser profiles</li>
+          <li>Quality gate and downstream handoff</li>
+        </ul>
+        <div class="stage-foot"><span class="pill teal">CURRENT BUILD</span></div>
+      </div>
+    </div>
+
+    <div class="capability-band card">
+      <div class="cap-side current">
+        <h3>WITHOUT API · CURRENT CORE</h3>
+        <p>Manual intake and structured candidate inbox · scheduled retrieval · payload validation · hash/version checks · rules-based QA · workbook synchronization.</p>
+      </div>
+      <div class="cap-shift"><b>→</b>OPTIONAL<br>INTEGRATION</div>
+      <div class="cap-side">
+        <h3>API CONNECTED · EXTENDED CAPABILITY</h3>
+        <p>Active source discovery · regulatory search providers · semantic deduplication and change summaries · draft assessments · natural-language operator interaction.</p>
+      </div>
+      <div class="cap-rule">UNCHANGED BOUNDARY: human acceptance remains mandatory · APIs never become legal authority · no paywall bypass · governed writes only</div>
+    </div>
+
+    <div class="outcome-row">
+      <div class="outcome card">
+        <b>FOUNDATION</b>
+        <strong>Controlled Source Library</strong>
+        <p>Original-format files, stable identity, version history and audit evidence.</p>
+      </div>
+      <div class="outcome card">
+        <b>PRIMARY OUTPUT</b>
+        <strong>Traceable Requirement Dataset</strong>
+        <p>Clause-aware records with exact source anchors and review state.</p>
+      </div>
+      <div class="outcome card">
+        <b>DOWNSTREAM VALUE</b>
+        <strong>Compliance and Site Workflows</strong>
+        <p>Reusable Requirements feed Site Model alignment, evidence mapping and verification.</p>
+      </div>
+    </div>
+    <div class="footer-note">Design principle: automate repeatable mechanics, preserve human authority at every judgment boundary.</div>
+    <div class="page-no">01 / 04</div>
+  </section>
+
+  <section id="slide-2" class="slide" data-document-role="page" data-label="02 System1 architecture" data-speaker-notes="System 1 is deterministic Python automation today. The Leader coordinates Discovery and Intake, Retrieval and Monitoring, and Governance and QA. Human Operation Desktop is the only normal human write surface.">
+    <div class="header">
+      <div class="eyebrow">System 1 · architecture</div>
+      <h1>One Leader, Three Bounded Modules, One Human Gate</h1>
+      <div class="subtitle">A portable control system for source maintenance, workbook synchronization and operator review.</div>
+      <div class="status">CORE RUNS WITHOUT API · API LAYER IS OPTIONAL</div>
+    </div>
+
+    <div class="arch-trigger card left">
+      <div class="trigger-icon">U</div>
+      <div><div class="card-title">User / Schedule</div><div class="card-sub">Manual menu or opt-in routine</div></div>
+    </div>
+    <div class="arch-trigger card right">
+      <div class="trigger-icon">OS</div>
+      <div><div class="card-title">Cross-platform Launchers</div><div class="card-sub">macOS and Windows adapters</div></div>
+    </div>
+
+    <div class="arch-leader card">
+      <div>
+        <div class="card-title">SYSTEM1 LEADER</div>
+        <div class="card-sub">Coordinates a complete cycle and produces one authoritative run result.</div>
+      </div>
+      <div class="leader-badges">
+        <span class="pill">Schedule</span><span class="pill">Lock</span><span class="pill">Persist state</span>
+        <span class="pill">Merge tasks</span><span class="pill">Retry</span><span class="pill">Report</span>
+      </div>
+    </div>
+
+    <div class="module card m1">
+      <div class="card-title">Discovery &amp; Intake</div>
+      <div class="card-sub">Core: manual intake, structured inbox, duplicate and coverage checks.</div>
+      <div class="api-augment">API EXTENSION: active discovery + regulatory search</div>
+    </div>
+    <div class="module card m2">
+      <div class="card-title">Retrieval &amp; Monitoring</div>
+      <div class="card-sub">Core: official retrieval, validation, hash comparison and safe versioning.</div>
+      <div class="api-augment">API EXTENSION: semantic change summary + document matching</div>
+    </div>
+    <div class="module card m3">
+      <div class="card-title">Governance &amp; QA</div>
+      <div class="card-sub">Core: selection gates, consistency audit and monthly Random QA.</div>
+      <div class="api-augment">API EXTENSION: draft assessment + explainable triage</div>
+    </div>
+    <div class="human-gate card">
+      <div class="card-title">HUMAN OPERATION DESKTOP</div>
+      <div class="card-sub">Review · Accept · Correct · Apply<br>Authority remains human-owned before and after API integration.</div>
+    </div>
+
+    <div class="data-layer">
+      <div class="data-card card"><strong>WORKBOOK</strong><p>Generated views and human operation queue</p></div>
+      <div class="data-card card"><strong>SOURCE FILES</strong><p>Original formats and controlled folder structure</p></div>
+      <div class="data-card card"><strong>RUNTIME</strong><p>Backups, locks, state, logs and run reports</p></div>
+    </div>
+    <div class="guardrails card">
+      <h3>Capability boundary</h3>
+      <div class="boundary-columns">
+        <div class="boundary-col"><b>NO API · CURRENT</b>Deterministic intake, retrieval, versioning, QA and workbook sync. No autonomous discovery or semantic reasoning.</div>
+        <div class="boundary-col api"><b>API CONNECTED · OPTIONAL</b>Search and LLM providers augment discovery, comparison, draft assessment and operator dialogue.</div>
+      </div>
+      <div class="boundary-invariant">UNCHANGED: human approval · original format · no paywall bypass · safe writes</div>
+    </div>
+
+    <div class="arch-output card">
+      <div class="output-box">CONTROLLED SOURCE LIBRARY</div>
+      <div class="output-arrow">→</div>
+      <div class="output-box">SYSTEM 2 · REQUIREMENT EXTRACTION</div>
+    </div>
+
+    <svg class="connector" viewBox="0 0 1920 1080" aria-hidden="true">
+      <defs><marker id="a2" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 Z" fill="#246b99"/></marker><marker id="h2" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 Z" fill="#d89020"/></marker></defs>
+      <path d="M604 254 L880 254 L880 330" marker-end="url(#a2)"/>
+      <path d="M1316 254 L1040 254 L1040 330" marker-end="url(#a2)"/>
+      <path d="M960 454 L960 478 L248 478 L248 510" marker-end="url(#a2)"/>
+      <path d="M960 454 L960 510" marker-end="url(#a2)"/>
+      <path d="M960 478 L1046 478 L1046 510" marker-end="url(#a2)"/>
+      <path d="M431 596 L465 596" marker-end="url(#a2)"/>
+      <path d="M830 596 L864 596" marker-end="url(#a2)"/>
+      <path d="M1229 596 L1290 596" marker-end="url(#a2)"/>
+      <path class="human" d="M1570 510 L1570 420 L1400 420" marker-end="url(#h2)"/>
+      <path d="M248 698 L248 748" marker-end="url(#a2)"/>
+      <path d="M648 698 L648 748" marker-end="url(#a2)"/>
+      <path d="M1046 698 L1046 748" marker-end="url(#a2)"/>
+      <path d="M650 862 L650 912" marker-end="url(#a2)"/>
+    </svg>
+    <div class="page-no">02 / 04</div>
+  </section>
+
+  <section id="slide-3" class="slide" data-document-role="page" data-label="03 System1 technical flow" data-speaker-notes="A System 1 cycle fails closed. Workbook locks and stale fingerprints protect state. Retrieval status is independent from selection. New candidates and all unresolved decisions flow to Human Operation Desktop. Successful writes use backup, temporary validation and replacement.">
+    <div class="header">
+      <div class="eyebrow">System 1 · technical design</div>
+      <h1>Fail-Closed Operations with a Single Human Workbench</h1>
+      <div class="subtitle">Automatic paths produce validated state or a visible operator task. Failed updates never remove the current valid file.</div>
+      <div class="status">API FAILURE → CORE CONTINUES · NO AUTO-ACCEPT</div>
+    </div>
+    <div class="lane-label auto">AUTOMATIC CONTROL LANE</div>
+
+    <div class="flow-node card" style="left:90px;top:262px;width:230px;height:146px;">
+      <strong>Trigger Cycle</strong><span>Routine, Full Source Check or scheduled catch-up</span>
+    </div>
+    <div class="diamond" style="left:375px;top:260px;"><div class="diamond-inner"><strong>Workbook available?</strong><span>No → defer safely</span></div></div>
+    <div class="flow-node card" style="left:590px;top:262px;width:270px;height:146px;background:#e8f0f6;border-color:#8eacbf;">
+      <strong>Leader Coordinates</strong><span>Lock · due state · module wake-up · task merge</span>
+    </div>
+    <div class="flow-node card" style="left:920px;top:262px;width:300px;height:146px;background:#e4f4f1;border-color:#7cbab2;">
+      <strong>Run Bounded Modules</strong><span>Discovery &amp; Intake · Retrieval &amp; Monitoring · Governance &amp; QA</span>
+    </div>
+    <div class="diamond" style="left:1285px;top:260px;"><div class="diamond-inner"><strong>Human decision needed?</strong><span>Yes → workbench</span></div></div>
+    <div class="flow-node card" style="left:1510px;top:262px;width:320px;height:146px;background:#edf5f9;border-color:#8eacbf;">
+      <strong>Atomic Workbook Sync</strong><span>Backup → temporary write → validate → replace → report</span>
+    </div>
+
+    <div class="detail-row">
+      <div class="detail-card card">
+        <h3>Discovery &amp; Intake</h3>
+        <p>Scan manual files and structured candidates. Detect duplicates and missing identity.</p>
+        <div class="mini-steps"><span class="pill navy">INBOX</span><span class="pill outline">DUPLICATE?</span><span class="pill amber">HUMAN ACCEPT</span><span class="pill violet">API: ACTIVE SEARCH</span></div>
+      </div>
+      <div class="detail-card card">
+        <h3>Retrieval &amp; Monitoring</h3>
+        <p>Prefer complete official HTML, preserve original format, validate payload and compare hash.</p>
+        <div class="mini-steps"><span class="pill green">SUCCESS</span><span class="pill red">FAIL</span><span class="pill amber">PAYWALL_BLOCKED</span><span class="pill teal">CHANGED?</span><span class="pill violet">API: CHANGE SUMMARY</span></div>
+      </div>
+      <div class="detail-card card">
+        <h3>Governance &amp; QA</h3>
+        <p>Check selection fields, file consistency and create at most one Random QA batch each month.</p>
+        <div class="mini-steps"><span class="pill green">INCLUDE</span><span class="pill amber">PENDING</span><span class="pill red">EXCLUDE</span><span class="pill violet">API: DRAFT ASSESSMENT</span></div>
+      </div>
+      <div class="detail-card card">
+        <h3>Safe Version Promotion</h3>
+        <p>Quarantine new content. If valid and changed, archive the prior snapshot and promote the new one.</p>
+        <div class="mini-steps"><span class="pill outline">QUARANTINE</span><span class="pill navy">VALIDATE</span><span class="pill violet">ARCHIVE</span><span class="pill green">PROMOTE</span><span class="pill red">API NEVER PROMOTES</span></div>
+      </div>
+    </div>
+
+    <div class="lane-label human-lane">HUMAN OPERATION LANE</div>
+    <div class="human-lane-box human-desktop card">
+      <div class="card-title">Human Operation Desktop</div>
+      <div class="card-sub">Existing source review · Selection review · New candidate · Manual intake / replacement · Random QA</div>
+    </div>
+    <div class="diamond human-decision"><div class="diamond-inner"><strong>Fingerprint current?</strong><span>Protect newer state</span></div></div>
+    <div class="human-lane-box human-apply card"><div class="card-title" style="font-size:23px;">Apply Decision</div><div class="card-sub" style="font-size:15px;margin-top:10px;">Update governed fields and program timestamps.</div></div>
+    <div class="human-lane-box human-return card"><div class="card-title" style="font-size:23px;">Return / Stale</div><div class="card-sub" style="font-size:15px;margin-top:10px;">Keep task visible with a precise reason.</div></div>
+    <div class="human-lane-box human-result card"><div class="card-title" style="font-size:23px;">Refresh Views</div><div class="card-sub" style="font-size:15px;margin-top:10px;">Hide completed history, update Dashboard and write the Leader report.</div></div>
+
+    <div class="technical-footer">
+      <span class="pill navy">CORE: deterministic + auditable</span><span class="pill violet">API: optional, non-mutating augmentation</span><span class="pill amber">Provider timeout → core continues</span><span class="pill red">No autonomous acceptance</span><span class="pill green">Named human decision</span>
+    </div>
+    <svg class="connector" viewBox="0 0 1920 1080" aria-hidden="true">
+      <defs><marker id="a3" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 Z" fill="#246b99"/></marker><marker id="h3" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 Z" fill="#d89020"/></marker></defs>
+      <path d="M320 335 L365 335" marker-end="url(#a3)"/>
+      <path d="M525 335 L590 335" marker-end="url(#a3)"/>
+      <path d="M860 335 L920 335" marker-end="url(#a3)"/>
+      <path d="M1220 335 L1275 335" marker-end="url(#a3)"/>
+      <path d="M1435 335 L1510 335" marker-end="url(#a3)"/>
+      <path class="soft" d="M450 260 L450 222 L350 222"/><text x="360" y="215">DEFERRED_WORKBOOK_OPEN</text>
+      <text x="1465" y="320">NO</text>
+      <path class="human" d="M1360 410 L1360 734 L630 734 L630 815" marker-end="url(#h3)"/><text x="1180" y="722">QUEUE ONE CONSOLIDATED TASK</text>
+      <path d="M630 861 L690 861" marker-end="url(#a3)"/>
+      <path d="M838 860 L920 860" marker-end="url(#a3)"/><text x="854" y="845">YES</text>
+      <path class="human" d="M770 928 L770 956 L1340 956 L1340 936" marker-end="url(#h3)"/><text x="1040" y="950">NO / STALE</text>
+      <path d="M1180 861 L1180 946 L1510 946 L1510 900" marker-end="url(#a3)"/>
+      <path d="M1470 861 L1510 861" marker-end="url(#a3)"/>
+    </svg>
+    <div class="page-no">03 / 04</div>
+  </section>
+
+  <section id="slide-4" class="slide" data-document-role="page" data-label="04 System2 retained technical design" data-speaker-notes="This page preserves the current System 2 technical design: governed source intake, HTML or PDF routing, PDF-type branching, parser profiles, structured extraction, quality gate, targeted reparse and downstream handoff.">
+    <div class="header">
+      <div class="eyebrow">System 2 · retained technical design</div>
+      <h1>Requirement Parsing and Quality-Controlled Handoff</h1>
+      <div class="subtitle">The maintained eligible source package enters a format- and document-aware extraction route. Exceptions return to targeted review; no silent pass.</div>
+      <div class="status">CURRENT SYSTEM 2 DESIGN · PRESERVED</div>
+    </div>
+
+    <div class="s2-input card">
+      <h2>SYSTEM 1 OUTPUT</h2>
+      <div class="source-step"><strong>Candidate Source Inventory</strong><span>scope and official provenance</span></div>
+      <div class="source-step"><strong>Source Registry + Quality Gate</strong><span>identity · authority · applicability</span></div>
+      <div class="source-step"><strong>Leader + 3 Modules</strong><span>controlled maintenance cycle</span></div>
+      <div class="source-step"><strong>Safe Collection + Version Store</strong><span>validate · hash · archive · promote</span></div>
+      <div class="source-step" style="border-color:#79b7aa;background:#e9f6f3;"><strong>Maintained Eligible Source Package</strong><span>approved · current · traceable</span></div>
+      <div style="margin-top:24px;padding:18px;border-radius:12px;background:#edf3f7;color:#567083;font-size:14px;line-height:1.45;">
+        <strong style="color:#14324a;">Source contract</strong><br>source_id · version · original format<br>stored file · hash · review state
+      </div>
+    </div>
+    <div class="s2-contract card"><strong>SOURCE CONTRACT</strong><span>ID · version · anchor-ready identity</span></div>
+
+    <div class="s2-zone">
+      <div class="s2-zone-title">SYSTEM 2 · REQUIREMENT PARSING + HANDOFF</div>
+      <div class="s2-badges">
+        <span class="pill green">PDF CORE IMPLEMENTED</span>
+        <span class="pill amber">LAW + STANDARD TUNING</span>
+        <span class="pill violet">HTML PLANNED</span>
+        <span class="pill outline">HANDOFF CONTRACT PENDING</span>
+      </div>
+
+      <div class="s2-node" style="left:28px;top:225px;width:158px;height:112px;"><strong>Integrated Intake</strong><span>eligible source package</span></div>
+      <div class="s2-diamond" style="left:225px;top:220px;"><div class="diamond-inner"><strong>File format?</strong><span>HTML / PDF</span></div></div>
+      <div class="s2-node" style="left:408px;top:160px;width:174px;height:105px;border-color:#7cbab2;background:#edf9f7;"><strong>HTML Route</strong><span>DOM structure + stable anchors</span></div>
+      <div class="s2-diamond" style="left:435px;top:350px;"><div class="diamond-inner"><strong>PDF type?</strong><span>native / scan / hybrid</span></div></div>
+      <div class="s2-node" style="left:605px;top:305px;width:145px;height:82px;"><strong>Born-digital</strong><span>native text</span></div>
+      <div class="s2-node" style="left:605px;top:405px;width:145px;height:82px;"><strong>Scanned</strong><span>OCR route</span></div>
+      <div class="s2-node" style="left:605px;top:505px;width:145px;height:82px;"><strong>Hybrid</strong><span>selective OCR</span></div>
+      <div class="s2-diamond" style="left:760px;top:360px;"><div class="diamond-inner"><strong>Document type?</strong><span>select profile</span></div></div>
+      <div class="s2-parser-stack">
+        <h3>Parser Profiles</h3>
+        <div class="parser">Law / Regulation</div>
+        <div class="parser">Technical Standard</div>
+        <div class="parser">Certification Standard</div>
+      </div>
+      <div class="s2-node" style="left:1070px;top:330px;width:130px;height:160px;border-color:#d7ae5f;background:#fff9ec;"><strong>Extract + Structure</strong><span>clause tree · tables · Requirement records · exact anchors</span></div>
+      <div class="s2-diamond" style="left:835px;top:520px;"><div class="diamond-inner"><strong>Quality gate pass?</strong><span>PASS / REVIEW</span></div></div>
+      <div class="s2-node" style="left:620px;top:574px;width:190px;height:100px;border-color:#b7a8d3;background:#f4f0fa;"><strong>Targeted Reparse</strong><span>focused correction + human review</span></div>
+      <div class="s2-output card"><strong>Traceable Requirement Dataset</strong><span>target output for downstream use</span></div>
+
+      <svg class="connector" viewBox="0 0 1230 716" aria-hidden="true">
+        <defs><marker id="a4" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto"><path d="M0,0 L11,5.5 L0,11 Z" fill="#246b99"/></marker><marker id="h4" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto"><path d="M0,0 L11,5.5 L0,11 Z" fill="#d89020"/></marker></defs>
+        <path d="M186 281 L215 281" marker-end="url(#a4)"/>
+        <path d="M313 220 L313 190 L408 190" marker-end="url(#a4)"/><text x="328" y="180">HTML</text>
+        <path d="M313 338 L313 409 L425 409" marker-end="url(#a4)"/><text x="328" y="397">PDF</text>
+        <path d="M553 409 L585 409 L585 346 L605 346" marker-end="url(#a4)"/>
+        <path d="M553 409 L605 446" marker-end="url(#a4)"/>
+        <path d="M553 409 L585 409 L585 546 L605 546" marker-end="url(#a4)"/>
+        <path d="M582 212 L819 212 L819 350" marker-end="url(#a4)"/>
+        <path d="M750 346 L760 400" marker-end="url(#a4)"/>
+        <path d="M750 446 L760 430" marker-end="url(#a4)"/>
+        <path d="M750 546 L790 480" marker-end="url(#a4)"/>
+        <path d="M878 419 L900 419" marker-end="url(#a4)"/>
+        <path d="M1060 410 L1070 410" marker-end="url(#a4)"/>
+        <path d="M1135 490 L1135 510 L894 510 L894 520" marker-end="url(#a4)"/>
+        <path d="M953 579 L1000 609" marker-end="url(#a4)"/><text x="963" y="568">PASS</text>
+        <path class="human" d="M835 579 L810 624" marker-end="url(#h4)"/><text x="776" y="566">REVIEW</text>
+        <path class="human" d="M715 574 L715 515 L1120 515 L1120 490" marker-end="url(#h4)"/>
+      </svg>
+    </div>
+    <svg class="connector" viewBox="0 0 1920 1080" aria-hidden="true"><defs><marker id="c4" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 Z" fill="#7456a4"/></marker></defs><path d="M402 552 L430 552" marker-end="url(#c4)"/><path d="M588 552 L620 552" marker-end="url(#c4)"/></svg>
+    <div class="exception-bar card"><strong>↩ EXCEPTION FEEDBACK</strong><span>Version, access or unsupported-format issue → Source review. Parsing exception → targeted reparse and human review. HTML implementation and final Site Model handoff remain explicit future gates.</span></div>
+    <div class="page-no">04 / 04</div>
+  </section>
+
+</body>
+</html>

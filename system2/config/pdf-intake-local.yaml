@@ -1,0 +1,17 @@
+native_extraction:
+  backend: pypdf
+layout:
+  backend: heuristic
+ocr:
+  backend: tesseract
+tables:
+  backend: native
+  recognition_pipeline_enabled: false
+  img2table_enabled: false
+  gmft_enabled: false
+equations:
+  transcription_enabled: false
+precision_review:
+  enabled: false
+security:
+  external_models_enabled: false
