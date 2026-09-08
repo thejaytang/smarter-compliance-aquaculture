@@ -2,11 +2,15 @@
 
 Updated: 2026-09-08
 
+## Repository visibility | 2026-09-08
+
+At the user's request, GitHub visibility was changed to `PUBLIC` and verified through the repository API. Repository: [thejaytang/smarter-compliance-aquaculture](https://github.com/thejaytang/smarter-compliance-aquaculture). The published root layout and component contents are unchanged.
+
 ## GitHub workstream publication | 2026-09-08
 
 The user authorized replacing the contents of the existing private repository [thejaytang/smarter-compliance-aquaculture](https://github.com/thejaytang/smarter-compliance-aquaculture) on `main`. The verified [publication snapshot](https://github.com/thejaytang/smarter-compliance-aquaculture/commit/1947336efc61c0ba51390db5426ae958f7c92762) is `1947336efc61c0ba51390db5426ae958f7c92762`, containing 964 files. Its root directly contains the entry documents, `system1/`, `system2/`, `system3/` and `workbench/`. The former `01` through `05` wrapper/reference tree is absent from the published current tree. Existing Git commit history remains; this was a normal forward commit replacing file contents.
 
-The publication includes current source, documentation, configuration, the System1 workbook and snapshots, System2 inputs/Gold, and retained project assets. `.gitignore` excludes local environments, caches, runtime sessions/records and generated parsing outputs, including approximately 5 GB of historical System2 results. Those local artifacts and the original parent reference folders were not deleted by this publication. The repository remains private.
+The publication includes current source, documentation, configuration, the System1 workbook and snapshots, System2 inputs/Gold, and retained project assets. `.gitignore` excludes local environments, caches, runtime sessions/records and generated parsing outputs, including approximately 5 GB of historical System2 results. Those local artifacts and the original parent reference folders were not deleted by this publication. The repository was private at that checkpoint; current visibility is recorded above.
 
 Validation: the 964-file publication copy matched local SHA-256 values. GitHub's recursive tree and `main` reference matched the published commit, including every file object ID and executable mode. The isolated copy passed System1 Environment Doctor, System2/Workbench source-import checks and launcher syntax checks. Repository-owned entry/guide links resolved; seven links explicitly refer to local historical evidence. No dependency installation, production service launch or business-data write was part of the publication. This state entry records that verified snapshot; its subsequent documentation-only commit adds the publication receipt.
 
