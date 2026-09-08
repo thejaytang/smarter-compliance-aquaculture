@@ -2,6 +2,14 @@
 
 Updated: 2026-09-08
 
+## GitHub workstream publication | 2026-09-08
+
+The user authorized replacing the contents of the existing private repository [thejaytang/smarter-compliance-aquaculture](https://github.com/thejaytang/smarter-compliance-aquaculture) on `main`. The verified [publication snapshot](https://github.com/thejaytang/smarter-compliance-aquaculture/commit/1947336efc61c0ba51390db5426ae958f7c92762) is `1947336efc61c0ba51390db5426ae958f7c92762`, containing 964 files. Its root directly contains the entry documents, `system1/`, `system2/`, `system3/` and `workbench/`. The former `01` through `05` wrapper/reference tree is absent from the published current tree. Existing Git commit history remains; this was a normal forward commit replacing file contents.
+
+The publication includes current source, documentation, configuration, the System1 workbook and snapshots, System2 inputs/Gold, and retained project assets. `.gitignore` excludes local environments, caches, runtime sessions/records and generated parsing outputs, including approximately 5 GB of historical System2 results. Those local artifacts and the original parent reference folders were not deleted by this publication. The repository remains private.
+
+Validation: the 964-file publication copy matched local SHA-256 values. GitHub's recursive tree and `main` reference matched the published commit, including every file object ID and executable mode. The isolated copy passed System1 Environment Doctor, System2/Workbench source-import checks and launcher syntax checks. Repository-owned entry/guide links resolved; seven links explicitly refer to local historical evidence. No dependency installation, production service launch or business-data write was part of the publication. This state entry records that verified snapshot; its subsequent documentation-only commit adds the publication receipt.
+
 ## Shared environment guide | 2026-09-08
 
 [ENVIRONMENT.md](ENVIRONMENT.md) is the shared setup and verification guide. README and AGENTS link to it, and component guides refer to it instead of maintaining separate installation recipes. Dependency declarations and the System2 lockfile remain in their owning components. System1, System2 and Workbench retain independent environments; System3 remains design-only.
