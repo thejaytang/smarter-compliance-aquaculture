@@ -1,0 +1,15 @@
+# Full-data supplement in progress
+
+The user explicitly authorized publishing all previously omitted 05 content, including real human review data, to the existing PUBLIC repository. Current databases were published first so the other computer can begin restoration while the remaining files upload.
+
+Release: https://github.com/thejaytang/smarter-compliance-aquaculture/releases/tag/full-workspace-20260914
+
+The verified current-database ZIP is 24,550,336 bytes, SHA256 2ff117bd47de3384ba3eff26c1950fd9e1ca95d0bed2635ae268d68b4fcf9a79. All eight owning-store snapshots pass integrity_check and contain saved source-review data naming Ana Jokic, Daniel Restad and Weijie Tang. Preserve the separate save/review/confirmation states.
+
+Five priority ZIPs cover 8,269 of 8,332 priority files. The original 63 cloud-only paths are listed in PRIORITY-DATA-INDEX.json; subsequently recovered paths, if any, are in DEFERRED-DATA-INDEX.json. The remaining 243,746 file/symlink entries are divided into 178 first-pass batches. FULL-DATA-INDEX.json records uploaded 02 packages; DEFERRED-DATA-INDEX.json records the independently uploaded 03 cloud-recovery packages. The initial-pass deferred count includes paths later uploaded in 03, so subtract that index's uploaded_paths when calculating the live missing count. DIRECTORY-INVENTORY-INDEX.json verifies all 18,826 directory entries and the original metadata inventory. No original file/symlink path falls outside the source, priority and remaining inventories.
+
+CURRENT-RUN.json is a timestamped local checkpoint, not live completion. The release indices and /tmp/sc-full-backup-20260914 are the live authority. Do not claim all content uploaded until original path coverage and remote checksums pass with no missing paths. No Windows acceptance has been established.
+
+The active scripts are /tmp/sc-upload-remaining.py and /tmp/sc-upload-deferred.py. Logs are /tmp/sc-remaining-upload-progress.txt and /tmp/sc-deferred-upload-progress.txt. The former resumes numbered batches from full-progress-state.json, not the slim public FULL-DATA-INDEX.json. Preserve this local state together with full-uploaded-file-manifest.jsonl, DEFERRED-DATA-INDEX.json and deferred-uploaded-file-manifest.jsonl before relocating execution. Original input inventories are preserved here as Zstandard files. Uploaded temporary ZIPs are removed only after remote SHA256/size verification; original files are untouched. No automation was created.
+
+The other computer must follow CONTINUE-ON-OTHER-COMPUTER.md, restore to an isolated directory, rebuild Windows environments and verify required original/Canonical paths. Extract the consistent 00 database ZIP last. Once the other computer writes its own reviews, receive subsequent packages in staging and use existing conflict-aware snapshot workflows; do not overlay an active or newly edited database.

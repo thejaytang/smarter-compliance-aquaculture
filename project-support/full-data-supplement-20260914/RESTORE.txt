@@ -1,0 +1,14 @@
+INCREMENTAL WORKSPACE BACKUP - UPLOAD IN PROGRESS
+
+The GitHub main branch contains source/documents. These assets add the previously omitted local data.
+
+1. Clone/download the current main branch to a NEW workspace. Do not overwrite an open/running workspace.
+2. Download the numbered data supplement ZIPs as they become available and extract all into that repository root.
+3. Extract 00-current-review-databases.zip LAST into the same root. These are SQLite online backups checked with integrity_check. For each database listed in DATABASE-SNAPSHOT.json, remove any matching -wal and -shm file ONLY in this new restored copy before launch.
+4. Follow ENVIRONMENT.md and workbench/deployment/setup_windows.cmd. Copied macOS environments are preserved as archive material; they are not Windows environments.
+
+The first database asset alone is NOT a complete runnable state. Its migration workbook, source originals, Canonical and material assets arrive in the priority data supplement. Remaining historical outputs, environments and caches continue in later parts. The COMPLETE manifest will identify when all previously omitted files are uploaded.
+
+Do not infer upload completion from the release's existence. This is a backup, not product acceptance.
+
+Live indices: PRIORITY-DATA-INDEX.json (01 packages), FULL-DATA-INDEX.json (02 packages), DEFERRED-DATA-INDEX.json (03 cloud-recovered packages), DIRECTORY-INVENTORY-INDEX.json (04 directories and source inventory). The FULL deferred count describes the first pass and includes files subsequently recovered by 03; compare against the DEFERRED uploaded_paths. Download new increments into staging after starting to edit on another computer. Do not blindly overwrite that computer's new review work.
