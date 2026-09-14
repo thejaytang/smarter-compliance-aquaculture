@@ -1,0 +1,37 @@
+{
+  "status": "COMPLETE",
+  "updated_utc": "2026-09-14T16:53:34.554741+00:00",
+  "original_files_and_symlinks": 260759,
+  "uploaded_unique_original_paths": 260759,
+  "missing_original_paths": 0,
+  "first_pass_parts": 178,
+  "first_pass_planned_parts": 178,
+  "cloud_recovery_parts": 581,
+  "cloud_recovery_uploaded_paths": 104659,
+  "processes": {
+    "main": {
+      "pid": 3902,
+      "needle": "/tmp/sc-upload-remaining.py"
+    },
+    "recovery": {
+      "pid": 46802,
+      "needle": "/tmp/sc-upload-deferred.py"
+    },
+    "cloud": {
+      "pid": 46803,
+      "needle": "/tmp/sc-download-cloud-bulk"
+    },
+    "priority_cloud": {
+      "pid": 1250,
+      "needle": "/tmp/sc-download-cloud-keepalive"
+    }
+  },
+  "restarts": {
+    "main": 0,
+    "recovery": 3,
+    "cloud": 6
+  },
+  "free_bytes": 14796230656,
+  "full_completion_requires_zero_missing_paths": true,
+  "verification_asset": "FINAL-VERIFICATION.json"
+}

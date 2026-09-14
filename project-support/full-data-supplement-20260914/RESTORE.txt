@@ -1,16 +1,13 @@
-INCREMENTAL WORKSPACE BACKUP - UPLOAD IN PROGRESS
+COMPLETE WORKSPACE BACKUP - VERIFIED 2026-09-14
 
-The GitHub main branch contains source/documents. These assets add the previously omitted local data.
+All 260,759 original file/symlink paths and 18,826 directories are covered. FINAL-VERIFICATION.json records remote SHA-256/size checks for all 766 data ZIPs. FINAL-MISSING-PATHS.json is empty.
 
-1. Clone/download the current main branch to a NEW workspace. Do not overwrite an open/running workspace.
-2. Download the numbered data supplement ZIPs as they become available and extract all into that repository root.
-3. Extract 00-current-review-databases.zip LAST into the same root. These are SQLite online backups checked with integrity_check. For each database listed in DATABASE-SNAPSHOT.json, remove any matching -wal and -shm file ONLY in this new restored copy before launch.
-4. Follow ENVIRONMENT.md and workbench/deployment/setup_windows.cmd. Copied macOS environments are preserved as archive material; they are not Windows environments.
+1. Clone/download main into a NEW isolated workspace.
+2. Download and checksum-verify all 01, 02, 03 and 04 numbered ZIPs, using the release indices, then extract them into the repository root.
+3. Extract 00-current-review-databases.zip LAST. For each of the eight database paths in DATABASE-SNAPSHOT.json, remove matching -wal and -shm files ONLY in this new restored copy before opening. Never overwrite a running or newly edited workspace.
+4. Follow ENVIRONMENT.md and workbench/deployment/setup_windows.cmd. Copied macOS environments are archive material; rebuild Windows environments.
+5. Preserve historical evidence paths. Use existing recovery-mapping/serve-restored support and verify required original/Canonical paths. Do not blindly rewrite history or enable business schedules.
 
-The first database asset alone is NOT a complete runnable state. Its migration workbook, source originals, Canonical and material assets arrive in the priority data supplement. Remaining historical outputs, environments and caches continue in later parts. The COMPLETE manifest will identify when all previously omitted files are uploaded.
+If the other computer already has new reviews, receive packages into staging and use the existing conflict-aware synchronization workflow. The consistent database ZIP alone is not a full workspace. Edits after this inventory/snapshot are separate increments. Windows execution and acceptance remain to be tested.
 
-Do not infer upload completion from the release's existence. This is a backup, not product acceptance.
-
-Live indices: PRIORITY-DATA-INDEX.json (01 packages), FULL-DATA-INDEX.json (02 packages), DEFERRED-DATA-INDEX.json (03 cloud-recovered packages), DIRECTORY-INVENTORY-INDEX.json (04 directories and source inventory). The FULL deferred count describes the first pass and includes files subsequently recovered by 03; compare against the DEFERRED uploaded_paths. Download new increments into staging after starting to edit on another computer. Do not blindly overwrite that computer's new review work.
-
-UPLOAD-STATUS.json is the combined live coverage report. It counts unique original inventory paths across main, 01, 02 and 03 packages; full completion requires missing_original_paths = 0 and status COMPLETE. Background upload supervision retries stopped upload workers and reissues outstanding iCloud requests for up to four hours. It stops requesting downloads below 3 GiB free space and reports an incomplete state rather than declaring success.
+Indices: PRIORITY-DATA-INDEX.json (01), FULL-DATA-INDEX.json (02), DEFERRED-DATA-INDEX.json (03), DIRECTORY-INVENTORY-INDEX.json (04). UPLOAD-STATUS.json and FINAL-VERIFICATION.json record combined completion.
