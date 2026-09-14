@@ -12,3 +12,5 @@ The first database asset alone is NOT a complete runnable state. Its migration w
 Do not infer upload completion from the release's existence. This is a backup, not product acceptance.
 
 Live indices: PRIORITY-DATA-INDEX.json (01 packages), FULL-DATA-INDEX.json (02 packages), DEFERRED-DATA-INDEX.json (03 cloud-recovered packages), DIRECTORY-INVENTORY-INDEX.json (04 directories and source inventory). The FULL deferred count describes the first pass and includes files subsequently recovered by 03; compare against the DEFERRED uploaded_paths. Download new increments into staging after starting to edit on another computer. Do not blindly overwrite that computer's new review work.
+
+UPLOAD-STATUS.json is the combined live coverage report. It counts unique original inventory paths across main, 01, 02 and 03 packages; full completion requires missing_original_paths = 0 and status COMPLETE. Background upload supervision retries stopped upload workers and reissues outstanding iCloud requests for up to four hours. It stops requesting downloads below 3 GiB free space and reports an incomplete state rather than declaring success.
