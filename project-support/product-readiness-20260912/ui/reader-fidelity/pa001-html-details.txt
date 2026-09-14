@@ -1,0 +1,13 @@
+Offline HTML reading view
+
+This view reflows the saved HTML for reading. It does not reproduce the source website's styling. Scripts and external assets are blocked; the saved source file is unchanged.
+
+External styles, images and scripts are unavailable in this offline preview. Verify layout-dependent content against the full original.
+
+14 external stylesheet references are not loaded. The saved page's original layout cannot be reproduced by this reading view.
+
+1 image references cannot be displayed offline. Their locations are marked in the reading view.
+
+Isolated complete saved markup with selectable text. Source scripts, styles and external assets are disabled; all static disclosure content is opened. This reading view does not claim native website styling fidelity.
+
+Close

@@ -1,0 +1,24 @@
+{
+  "coordinator": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/runtime/offline-collaboration-acceptance/coordinator-82612ac7",
+  "status": "PREPARED_NOT_SENT",
+  "packages": [
+    {
+      "source_id": "TS001",
+      "file": "windows-review-work-TS001.zip",
+      "sha256": "1a2a26c9a39fca34e120a67ef8ecbaa6b34d3a24b2db900d80b4289bf4d374af",
+      "bytes": 4976
+    },
+    {
+      "source_id": "TS002",
+      "file": "windows-review-work-TS002.zip",
+      "sha256": "fb74532beb1dd7a229603644884fd86d44e9ab2c979ab8ec64c14e2e01b78485",
+      "bytes": 7065
+    },
+    {
+      "source_id": "TS003",
+      "file": "windows-review-work-TS003.zip",
+      "sha256": "2ad42f48f77d89ccb88fa032f85d99f02201e7f631a2e8215dd46ddcd0dad155",
+      "bytes": 6284
+    }
+  ]
+}

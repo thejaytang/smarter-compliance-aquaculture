@@ -1,4 +1,23 @@
-# System3 Project State
+# System3 current state
+
+Updated: 2026-09-13. The user clarified one passage may yield multiple Requirements with a `verb`, an `object` (action target, explicitly confirmed), and multiple conditions. The direction and inspected existing models are recorded in [DESIGN.md](DESIGN.md#user-clarification-passage-to-requirement-decomposition). This narrows the design gap but does not provide a frozen semantic schema, connected processor, measured decomposition quality or consumer acceptance. The subsequent recursive parent/child count-range and ontology question is recorded as a discussion proposal in the same design file: typed groups, atomic statements, scoped conditions and distinct recurrence/deadline concepts. Next: validate these distinctions on source-backed examples before freezing a schema.
+
+Updated: 2026-09-11. **Reserved third pane and dormant extension contract implemented; semantic processor not connected.** The shared workspace visibly separates content-review completion from Requirement structuring. Process is disabled with a reason; direct processing requests return unavailable without changing content.
+
+The generic `material-processor/1` boundary records source/material/request identity, confirmed input revision, scope/dependency closure, input hash, future candidate payload/evidence/errors and separate human adoption. Output bindings, distinct empty/partial/failed/unavailable states and preserved unknown payloads are tested. No nested domain fields, final forms, semantic algorithm or System3 runtime environment were invented.
+
+The exact nested structure and processor await the user's specification. This explicit deferral does not block the bounded human workbench delivery and does not represent complete structured Requirement processing. See [contract](../system2/docs/contracts/human-material-workbench.md), [acceptance report](../project-support/reports/human-led-workbench-20260911/acceptance.md) and [integration state](../PROJECT_STATE.md). Site-instance grounding and final compliance decisions remain outside scope.
+
+## Historical interfaces and design evidence
+
+## Input interface | 2026-09-09
+
+System2 now provides `system3-input/1` through the shared workbench, including ordered delivery/suspension/withdrawal events, source versions, evidence and incomplete scopes. Settings can store the future System3 threshold. The interface reports `consumer_connected: false`; no semantic processing or consumer acknowledgment has run.
+
+The input contract is [two-stage review and delivery](../system2/docs/contracts/two-stage-review.md). Existing semantic design and Site Model mapping work remain separate. The next acceptance gate is consumer review of a small set of actually accepted Requirements and invalidation events. Older current-facts statements about absent automatic handoff refer to the prior design checkpoint; semantic runtime and consumer acceptance are still absent.
+
+## Retained earlier checkpoints
+
 
 State updated: 2026-09-07. Documentation updated: 2026-09-08.
 

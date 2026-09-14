@@ -1,0 +1,40 @@
+Verified resource reads: 1000
+Verified resource reads: 2000
+Verified resource reads: 3000
+Verified resource reads: 4000
+Verified resource reads: 5000
+Verified resource reads: 6000
+Verified resource reads: 7000
+Restored hash-bound historical crop: system2/runtime/workflow/artifacts/ecd506cd90695697577fcca2065a0a49/attempt-45/native/crops/p0132_paragraph_0004.png
+Restored hash-bound historical crop: system2/runtime/workflow/artifacts/ecd506cd90695697577fcca2065a0a49/attempt-45/native/crops/p0132_paragraph_0005.png
+Restored hash-bound historical crop: system2/runtime/workflow/artifacts/ecd506cd90695697577fcca2065a0a49/attempt-45/native/crops/p0132_paragraph_0012.png
+Restored hash-bound historical crop: system2/runtime/workflow/artifacts/ecd506cd90695697577fcca2065a0a49/attempt-45/native/crops/p0132_paragraph_0015.png
+Restored hash-bound historical crop: system2/runtime/workflow/artifacts/ecd506cd90695697577fcca2065a0a49/attempt-45/native/crops/p0133_paragraph_0011.png
+Restored hash-bound historical crop: system2/runtime/workflow/artifacts/ecd506cd90695697577fcca2065a0a49/attempt-45/native/pages/page-0132.png
+Traceback (most recent call last):
+  File "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/ui-redesign-20260914/run_recovery.py", line 12, in progress
+    try:result=original(path)
+               ^^^^^^^^^^^^^^
+  File "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/ui-redesign-20260914/candidate/workbench/src/local_workbench/recovery.py", line 30, in digest
+    raise OSError('Incomplete recovery resource: ' + str(path))
+OSError: Incomplete recovery resource: /Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/runtime/workflow/artifacts/ecd506cd90695697577fcca2065a0a49/attempt-5/native/crops/p0011_paragraph_0008.png
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/ui-redesign-20260914/run_recovery.py", line 23, in <module>
+    result=recovery.backup(root,area/'pre-activation-recovery')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/ui-redesign-20260914/candidate/workbench/src/local_workbench/recovery.py", line 200, in backup
+    hashes = {p.relative_to(root).as_posix(): value for p, value in digests(p for p in files if p not in info['stores']).items()}
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/ui-redesign-20260914/candidate/workbench/src/local_workbench/recovery.py", line 35, in digests
+    return {path: digest(path) for path in paths}
+                  ^^^^^^^^^^^^
+  File "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/ui-redesign-20260914/run_recovery.py", line 16, in progress
+    restored=restore(path);restored_count+=1
+             ^^^^^^^^^^^^^
+  File "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/ui-redesign-20260914/restore_verified_crop.py", line 27, in restore
+    if len(valid)<2 or len(hashes)!=1:raise ValueError('No two readable historical copies agree with recorded identity and current Canonical.')
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: No two readable historical copies agree with recorded identity and current Canonical.

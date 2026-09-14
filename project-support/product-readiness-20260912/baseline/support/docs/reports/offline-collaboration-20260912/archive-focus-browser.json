@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "scope": "Isolated synthetic archive and browser UI; no normal business decisions",
+  "browser_entry": "http://127.0.0.1:57880/",
+  "viewport": [
+    1600,
+    1000
+  ],
+  "normal_panes": {
+    "x": 464,
+    "y": 284.3828,
+    "width": 1119,
+    "height": 780
+  },
+  "expanded_panes": {
+    "x": 0,
+    "y": 53.59375,
+    "width": 1600,
+    "height": 946.40625
+  },
+  "original_widths": [
+    546.6875,
+    676.8515625,
+    364.4609375
+  ],
+  "after_left_drag_120": [
+    666.6875,
+    556.8515625,
+    364.4609375
+  ],
+  "after_right_arrow_left": [
+    666.6875,
+    536.8515625,
+    384.4609375
+  ],
+  "after_browser_reload_expanded_widths": [
+    666.6875,
+    536.8515625,
+    384.4609375
+  ],
+  "escape_restores_normal_view": true,
+  "auxiliary_toolbar_hidden_expanded": true,
+  "narrow": {
+    "viewport": [
+      600,
+      900
+    ],
+    "document_scroll_width": 600
+  },
+  "inspection_browser_actions": [
+    "Open pending archived check",
+    "Save partial check progress",
+    "Create a new spot-check from Archive",
+    "Fill actual displayed note, selected scope and explicit confirmation",
+    "Pass selected checks; accepted archive retained"
+  ],
+  "observed_and_fixed": [
+    "Initial unmounted focus cleanup guarded",
+    "Inspection submission reads displayed form values even when cached edit state diverges"
+  ],
+  "test_driver_notes": [
+    "Reload encountered expected unsaved-beforeunload dialog; accepted only for synthetic unsaved test fields",
+    "CLI cached help JSON read failed transiently; subsequent reads succeeded",
+    "Synthetic source state request timed out during earlier browser attempt; later UI loaded and final scenario passed. Normal runtime separately checked healthy."
+  ],
+  "screenshots": [
+    "output/playwright/offline-collaboration/expanded-archive-check.png",
+    "output/playwright/offline-collaboration/expanded-archive-narrow.png"
+  ],
+  "windows": "PENDING_ACTUAL_WINDOWS",
+  "offline_spot_check_task_exchange": "NOT_CONNECTED",
+  "normal_browser_entry": {
+    "url": "http://127.0.0.1:62742/",
+    "pending_visible": true,
+    "archive_visible": true,
+    "standalone_system3": false,
+    "business_material_opened": false
+  },
+  "isolated_browser_service": "Stopped after verification; synthetic data and screenshots retained."
+}

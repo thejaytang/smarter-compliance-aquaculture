@@ -1,0 +1,83 @@
+- link "Skip to content":
+  - /url: "#main"
+- complementary:
+  - text: Smarter Compliance
+  - generic: Requirement workbench
+  - navigation "Workspace navigation":
+    - button "Overview Sources and materials":
+      - text: Overview
+      - generic: Sources and materials
+    - button "Source Management System Sources and original files" [expanded]:
+      - text: Source Management System
+      - generic: ⌄
+      - generic: Sources and original files
+    - button "Pending review"
+    - button "Source records"
+    - button "Review history"
+    - button "Requirement Extraction System Human content review":
+      - text: Requirement Extraction System
+      - generic: ⌄
+      - generic: Human content review
+    - button "Confidence settings"
+  - text: Local workspace
+  - button "Exit workbench"
+- banner:
+  - button "Collapse navigation" [expanded]:
+  - heading "Requirement overview" [level=1]
+  - button "Runtime status"
+  - generic: Current reviewer
+  - combobox "Current reviewer":
+    - option "Select a reviewer"
+    - option "Ana Jokic"
+    - option "Daniel Restad"
+    - option "Weijie Tang" [selected]
+  - button "Switch reviewer"
+- main:
+  - generic: Sources → Material workbench
+  - generic: Data read at 13 Sept, 17:11
+  - paragraph: Read the saved original, correct extracted content and explicitly confirm each material. The third pane inside each material is reserved for Requirement structuring; Process is not connected.
+  - region "Source management and material review":
+    - article "Source Management System":
+      - generic: Source governance
+      - generic: Live review
+      - heading "Source Management System" [level=2]
+      - paragraph: Select and maintain trustworthy original sources.
+      - generic: "30"
+      - generic: Sources awaiting review
+      - term: Registered sources
+      - definition: "87"
+      - term: Included sources
+      - definition: "38"
+      - paragraph: Review source ratings, original files and reported issues.
+      - button "Review sources"
+    - article "Requirement Extraction System":
+      - generic: Human content review
+      - generic: Human review available
+      - heading "Requirement Extraction System" [level=2]
+      - paragraph: Read, correct, save and confirm one source material at a time.
+      - generic: "0"
+      - generic: Current materials awaiting content review
+      - term: Opened material snapshots
+      - definition: "0"
+      - term: Current content reviews complete
+      - definition: "0"
+      - term: Registered sources available to open
+      - definition: "38"
+      - term: Historical source snapshots
+      - definition: "0"
+      - paragraph: Counts are materials, not content blocks or legacy review items. Saving a draft does not confirm its review. Requirement structuring remains unconnected.
+      - button "Open materials"
+  - paragraph:
+    - text: Material states read at 17:11:55. Historical extraction records remain available in
+    - button "Legacy review"
+    - text: and
+    - button "Legacy history"
+    - text: .
+  - generic "Retained weekly inspection records"
+  - generic "Source Management System details Source selection, originals and review priorities":
+    - strong: Source Management System details
+    - generic: Source selection, originals and review priorities
+  - generic "Metric definitions and data sources"
+- region "Recent submissions":
+  - strong: Applied
+  - generic: Weijie Tang · Decision applied. Source tasks and statistics are updated.

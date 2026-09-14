@@ -1,0 +1,6 @@
+{
+  "workbench/ui/collaboration.js": "9fb8c7bb1a9a34b0b6dd5b1a309920af02af5964077eb5d25135527aceeab385",
+  "workbench/ui/collaboration-relationships.js": "a308ee7239c415fef36b44276fe6b3f6d6e80fd4d7ec637de72303c181152712",
+  "workbench/tests/collaboration-relationships.test.mjs": "f736c8f0277b2b5c3079475cc7d89fa4de3691bf85fb6a0e68a8cd37913450d1",
+  "workbench/tests/test_frontend_module_routes.py": "1f95fc7a90bb9db4108b270daedd4f2ea368797ad57a1d78f2de3c915782fc4e"
+}

@@ -1,0 +1,248 @@
+[
+  {
+    "name": "isolation_setup",
+    "status": "PASS",
+    "seconds": 0.1608709580032155,
+    "details": {
+      "fixture": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/runtime/product-readiness-20260912/workload-frozen-candidate-02",
+      "source_count": 5,
+      "live_business_writes": false
+    },
+    "rss_peak_bytes": 27869184
+  },
+  {
+    "name": "initialize_TS001",
+    "status": "PASS",
+    "seconds": 11.342941667011473,
+    "details": {
+      "source": "TS001",
+      "material_id": "100ee263961895f64dd57c71d3db8b5c",
+      "parser_status": "candidate_available",
+      "candidate_status": "ready",
+      "automatic_quality_claim": false
+    },
+    "rss_peak_bytes": 28082176
+  },
+  {
+    "name": "TS001_cycle_1",
+    "status": "PASS",
+    "seconds": 16.429141250031535,
+    "details": {
+      "source": "TS001",
+      "cycle": 1,
+      "saved_revision": 5,
+      "conflict_id": "69974aae-fc6b-4d5f-b416-9248e38173b3",
+      "same_preparation_after_reopen": true
+    },
+    "rss_peak_bytes": 28672000
+  },
+  {
+    "name": "TS001_cycle_2",
+    "status": "PASS",
+    "seconds": 17.420706624980085,
+    "details": {
+      "source": "TS001",
+      "cycle": 2,
+      "saved_revision": 2,
+      "conflict_id": "8d30fa40-bcbf-45ba-8c4f-a1a5d51b7b10",
+      "same_preparation_after_reopen": true
+    },
+    "rss_peak_bytes": 30392320
+  },
+  {
+    "name": "TS001_cycle_3",
+    "status": "PASS",
+    "seconds": 18.070372583984863,
+    "details": {
+      "source": "TS001",
+      "cycle": 3,
+      "saved_revision": 3,
+      "conflict_id": "9a8064e2-5616-419a-aabb-6b9e2bde7a51",
+      "same_preparation_after_reopen": true
+    },
+    "rss_peak_bytes": 30392320
+  },
+  {
+    "name": "TS001_cycle_4",
+    "status": "PASS",
+    "seconds": 16.692348874988966,
+    "details": {
+      "source": "TS001",
+      "cycle": 4,
+      "saved_revision": 4,
+      "conflict_id": "3f1bd01c-cbcd-4ede-8f57-d9e8a8d42283",
+      "same_preparation_after_reopen": true
+    },
+    "rss_peak_bytes": 30392320
+  },
+  {
+    "name": "initialize_TS002",
+    "status": "PASS",
+    "seconds": 12.0498436660273,
+    "details": {
+      "source": "TS002",
+      "material_id": "93550bff6bf51023da74b3acf5c3d895",
+      "parser_status": "candidate_available",
+      "candidate_status": "ready",
+      "automatic_quality_claim": false
+    },
+    "rss_peak_bytes": 30392320
+  },
+  {
+    "name": "TS002_cycle_1",
+    "status": "PASS",
+    "seconds": 16.189209458010737,
+    "details": {
+      "source": "TS002",
+      "cycle": 1,
+      "saved_revision": 5,
+      "conflict_id": "c6cd731c-1bfd-4778-98a2-c95246435c65",
+      "same_preparation_after_reopen": true
+    },
+    "rss_peak_bytes": 30392320
+  },
+  {
+    "name": "TS002_cycle_2",
+    "status": "PASS",
+    "seconds": 19.028278458979912,
+    "details": {
+      "source": "TS002",
+      "cycle": 2,
+      "saved_revision": 2,
+      "conflict_id": "5e029a02-1b03-4cbf-8715-1d2e7a2841b4",
+      "same_preparation_after_reopen": true
+    },
+    "rss_peak_bytes": 30392320
+  },
+  {
+    "name": "TS002_cycle_3",
+    "status": "PASS",
+    "seconds": 18.104754458006937,
+    "details": {
+      "source": "TS002",
+      "cycle": 3,
+      "saved_revision": 3,
+      "conflict_id": "ff96ac4c-17c8-4b23-a1a8-ce0b1e5ef2f1",
+      "same_preparation_after_reopen": true
+    },
+    "rss_peak_bytes": 30392320
+  },
+  {
+    "name": "TS002_cycle_4",
+    "status": "PASS",
+    "seconds": 18.43939495901577,
+    "details": {
+      "source": "TS002",
+      "cycle": 4,
+      "saved_revision": 4,
+      "conflict_id": "a9d05d6c-ebb7-4e98-9f6f-38e5a38dd1f1",
+      "same_preparation_after_reopen": true
+    },
+    "rss_peak_bytes": 30392320
+  },
+  {
+    "name": "initialize_TS003",
+    "status": "PASS",
+    "seconds": 13.590143874986097,
+    "details": {
+      "source": "TS003",
+      "material_id": "15312db4aa675d8c085c2f283eb523ed",
+      "parser_status": "partial",
+      "candidate_status": "partial",
+      "automatic_quality_claim": false
+    },
+    "rss_peak_bytes": 31162368
+  },
+  {
+    "name": "TS003_cycle_1",
+    "status": "PASS",
+    "seconds": 16.09213525004452,
+    "details": {
+      "source": "TS003",
+      "cycle": 1,
+      "saved_revision": 5,
+      "conflict_id": "cdb7062e-7da5-4988-847e-ca844ce2e3c0",
+      "same_preparation_after_reopen": true
+    },
+    "rss_peak_bytes": 34504704
+  },
+  {
+    "name": "TS003_cycle_2",
+    "status": "PASS",
+    "seconds": 17.155186374962796,
+    "details": {
+      "source": "TS003",
+      "cycle": 2,
+      "saved_revision": 2,
+      "conflict_id": "d8d0076e-f2db-4289-926b-f29f9de24ed0",
+      "same_preparation_after_reopen": true
+    },
+    "rss_peak_bytes": 34504704
+  },
+  {
+    "name": "TS003_cycle_3",
+    "status": "PASS",
+    "seconds": 18.241053666977677,
+    "details": {
+      "source": "TS003",
+      "cycle": 3,
+      "saved_revision": 3,
+      "conflict_id": "62d117ae-fe25-49d7-a629-c35315f1d75d",
+      "same_preparation_after_reopen": true
+    },
+    "rss_peak_bytes": 34504704
+  },
+  {
+    "name": "TS003_cycle_4",
+    "status": "PASS",
+    "seconds": 16.81282533297781,
+    "details": {
+      "source": "TS003",
+      "cycle": 4,
+      "saved_revision": 4,
+      "conflict_id": "0bd2699b-3794-4e8e-ab39-b3f53e28f214",
+      "same_preparation_after_reopen": true
+    },
+    "rss_peak_bytes": 34504704
+  },
+  {
+    "name": "worker_and_save_faults",
+    "status": "PASS",
+    "seconds": 9.992477459018119,
+    "details": {
+      "worker_exit": 73,
+      "worker_resumed": true,
+      "lock_conflict": "busy",
+      "failed_save_preserved_revision": 7
+    },
+    "rss_peak_bytes": 34504704
+  },
+  {
+    "name": "three_workspace_exchange",
+    "status": "PASS",
+    "seconds": 50.25385679199826,
+    "details": {
+      "reviewers": [
+        "Ana Jokic",
+        "Daniel Restad"
+      ],
+      "receipt_count": 3,
+      "parallel_conflict": true,
+      "archive_retained": true,
+      "partial_check_still_pending": true,
+      "actual_windows": false
+    },
+    "rss_peak_bytes": 39370752
+  },
+  {
+    "name": "final_preservation",
+    "status": "PASS",
+    "seconds": 0.09646970796165988,
+    "details": {
+      "source_files": 5,
+      "immutable_revisions": 126,
+      "parser_artifacts": 18
+    },
+    "rss_peak_bytes": 46055424
+  }
+]

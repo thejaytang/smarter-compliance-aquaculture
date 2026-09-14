@@ -1,0 +1,86 @@
+{
+  "schema_version": "material-structural-parser/4",
+  "parser_version": "material-structural-parser/4",
+  "source_sha256": "1d2fdae4d0289238e3b6a3f9fb424a096e33deb10df9383e68bbf7f0c43b28b1",
+  "snapshot_id": "QS008-001",
+  "config_hash": "8ea2433849e058d0ba409fbc5eeaea9dbe0b6f700f49a4c22eb8f968f9a702b9",
+  "blocks": [
+    {
+      "id": "block-5f846e6d72ad27065d4ffaea",
+      "type": "image",
+      "text": "",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:1",
+          "page_index": 0,
+          "page": 1,
+          "bbox": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ]
+        }
+      ],
+      "image": {
+        "source_ref": {
+          "scope_id": "page:1",
+          "page_index": 0,
+          "page": 1,
+          "bbox": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ]
+        },
+        "attachment": null,
+        "attribution": "Embedded image in the bound original PDF."
+      }
+    }
+  ],
+  "scope": [
+    {
+      "id": "page:1",
+      "kind": "page",
+      "label": "Page 1",
+      "location": {
+        "page": 1
+      }
+    }
+  ],
+  "covered_scope": [
+    "page:1"
+  ],
+  "processed_scope": [
+    "page:1"
+  ],
+  "usable_scope": [],
+  "unprocessed_scope": [],
+  "warnings": [
+    "Native text can differ from visible page marks. Compare it with the original page image. Scanned pages may require manual transcription; no OCR is run when viewing.",
+    "Page 1 has no positioned native text. Inspect the complete original page and manually transcribe or supplement omitted text. No OCR/model was run.",
+    "PDF candidate uses the existing positioned PDFium parser in mapped three-page windows. Ruled-table grids use existing local geometry assembly. Reading order, headings and unruled tables may need manual correction; source page images and complete native evidence are retained. No Requirement classifier, semantic processor, OCR model or external service runs."
+  ],
+  "unresolved": [
+    {
+      "scope_id": "page:1",
+      "code": "native_text_unavailable",
+      "message": "Page 1 has no usable native text or table content. Inspect the original; a scan or a blank page still requires an explicit human check."
+    }
+  ],
+  "canonical_artifacts": [
+    "pdf-window-0001.pdf",
+    "pdf-native-0001.json",
+    "pdf-page-0001.png",
+    "pdf-order-repairs.json",
+    "pdf-paragraph-groups.json"
+  ],
+  "status": "empty",
+  "review_policy": "human_material_confirmation_required",
+  "requirement_status": "not_connected"
+}

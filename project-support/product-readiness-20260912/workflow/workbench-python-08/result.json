@@ -1,0 +1,18 @@
+{
+  "returncode": 0,
+  "duration_seconds": 21.34994112496497,
+  "code_changed": [],
+  "summary": "test_reported_source_problem_keeps_batch_incomplete (test_weekly_qa.WeeklyDashboardTests.test_reported_source_problem_keeps_batch_incomplete) ... ok\n\n----------------------------------------------------------------------\nRan 160 tests in 21.206s\n\nOK\n",
+  "command": [
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/.venv/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/tests",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "scope": "Full Workbench Python after import compatibility assertion correction; /07 failure retained; frontend /07 unchanged"
+}

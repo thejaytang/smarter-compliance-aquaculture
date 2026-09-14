@@ -1,0 +1,9 @@
+{
+  "sample": "asc-farm",
+  "backend": "docling",
+  "stage": "import_ready",
+  "readiness_elapsed_seconds": 0.9793209169874899,
+  "ready_monotonic": 495562.2676885,
+  "ready_utc": "2026-09-13T11:34:29.875842+00:00",
+  "boundary": "No parser instantiated before readiness; includes adapter/source preparation and dependency imports."
+}

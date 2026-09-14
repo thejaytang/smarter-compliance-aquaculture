@@ -1,0 +1,57 @@
+[
+  {
+    "name": "isolation_setup",
+    "status": "PASS",
+    "seconds": 9.798164166975766,
+    "details": {
+      "fixture": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/runtime/product-readiness-20260912/workload-machine-order-target-01",
+      "source_count": 5,
+      "live_business_writes": false
+    },
+    "rss_peak_bytes": 28573696
+  },
+  {
+    "name": "initialize_TS001",
+    "status": "PASS",
+    "seconds": 20.70725387503626,
+    "details": {
+      "source": "TS001",
+      "material_id": "100ee263961895f64dd57c71d3db8b5c",
+      "parser_status": "candidate_available",
+      "candidate_status": "ready",
+      "automatic_quality_claim": false
+    },
+    "rss_peak_bytes": 28672000
+  },
+  {
+    "name": "machine_order_content_resume",
+    "status": "PASS",
+    "seconds": 18.659383666992653,
+    "details": {
+      "source": "TS001",
+      "merge_version": 2,
+      "merge_id": "c5adb549-8b0f-4081-a10e-48b430808281",
+      "initial_unresolved": 3,
+      "saved_partial_unresolved": 2,
+      "resumed_preview_count": 2,
+      "duplicate_rows_created": 0,
+      "invalid_order_journal_unchanged": true,
+      "mixed_order_text_table_preserved": true,
+      "application_replay_identical": true,
+      "master_unchanged": true,
+      "personal_confirmation": false
+    },
+    "rss_peak_bytes": 29048832
+  },
+  {
+    "name": "final_preservation",
+    "status": "PASS",
+    "seconds": 0.013746417011134326,
+    "details": {
+      "source_files": 5,
+      "immutable_revisions": 10,
+      "parser_artifacts": 6
+    },
+    "rss_peak_bytes": 30146560
+  }
+]

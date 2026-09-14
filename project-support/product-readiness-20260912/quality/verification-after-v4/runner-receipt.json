@@ -1,0 +1,6 @@
+{
+  "exit_code": 1,
+  "elapsed_seconds": 0.030799000000115484,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/quality/verification-after-v4/measure_frozen_windows.py\", line 156, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/quality/verification-after-v4/measure_frozen_windows.py\", line 127, in main\n    from pdf_extraction.orchestration.material_parser import parse_material\nModuleNotFoundError: No module named 'pdf_extraction'\n"
+}

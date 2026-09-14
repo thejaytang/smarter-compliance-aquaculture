@@ -1,0 +1,10 @@
+{
+  "workbench/ui/index.html": "590edb601a097ae7499720a63e7d857ce4192e43c1d5ce3981dfc23298763d5c",
+  "workbench/ui/app.js": "bbe807a312bc00447101151f27dde1d97bc3770ecede162ce775bdd4ee68fa5d",
+  "workbench/ui/style.css": "972f97e2373e85b2046001681cbd8ea81df27a9b78a116e32e09d7592198203c",
+  "workbench/ui/materials.js": "9555a0e6f7b9a51f933fd35ff8375c4e4a7c34bc87c47e0d5a1471fae8f830f3",
+  "workbench/src/local_workbench/server.py": "cffda3a47fa105a6e86d537bae12aab762d5539fc961869613f66e9ca0b5ea0b",
+  "workbench/src/local_workbench/collaboration.py": "d74c8f0f8dc5a3e65b67039f3762ad842f9b8d44d9adf0f239fa1d2c5b9a9989",
+  "workbench/src/local_workbench/material_inspection_schedule.py": "ba42ac138a3ff19ef6530f7eab8371095eaaaba933f62286a4b188a8d872c3f5",
+  "system2/src/pdf_extraction/orchestration/material_collaboration.py": "2a4ebf62b7c3736101bcdcf9c8fc6865dee698c7fda826b496691c2799c30ef0"
+}

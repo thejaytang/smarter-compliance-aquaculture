@@ -1,0 +1,89 @@
+{
+  "scope": "Reader /9 code binding after browser confirmation; not a frozen whole-product candidate",
+  "files": [
+    {
+      "path": "workbench/ui/materials.js",
+      "sha256": "5dc742fb1e06047baea342cfbcced42fe815872e18250532ecf150ff7a1b7ff4"
+    },
+    {
+      "path": "workbench/ui/materials.css",
+      "sha256": "78bb4693da9bfd268223e126b1bc4690632e2c77cd7a6160e70c85e4a16b930e"
+    },
+    {
+      "path": "workbench/src/local_workbench/server.py",
+      "sha256": "97805b2d63ab2fec189b1c6743d074067f691d9c102233a9201dbf7e24dff886"
+    },
+    {
+      "path": "system2/src/pdf_extraction/evidence/material_reader.py",
+      "sha256": "5b13d485518b878d1e61eb0d5e7ceafabfa7c90af52f35b30fcdac3b274a04b0"
+    },
+    {
+      "path": "system2/src/pdf_extraction/evidence/material_html_display.py",
+      "sha256": "1640aebdc7ee97291fc454b3b80a133683da04d5c9d98481e897dc358ac612d8"
+    },
+    {
+      "path": "workbench/tests/reader-display.test.mjs",
+      "sha256": "87375181f8eab7c35cc5e4a1983b404faf709ecfedab5ccf9bdd1679d9a2c095"
+    },
+    {
+      "path": "system2/tests/test_material_html_display.py",
+      "sha256": "e2b3c125f9bc589a845d7f148a9cbe3e15e6c6a2d648814466fbf43e17f7971b"
+    }
+  ],
+  "images": [
+    {
+      "file": "cs010-1280-before.png",
+      "sha256": "4d9ad438470e68e6694ccefb48148d7c74ad5c3ca1a097aa9305f42cc217151e",
+      "format": "JPEG",
+      "raster_dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "cs010-1280-after.png",
+      "sha256": "c7c4a10547b7f9e57d78771a63bbf0c431b67b9a0c9c8a92cdee6eca09f8116d",
+      "format": "JPEG",
+      "raster_dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "cs010-1440-after.png",
+      "sha256": "afef32d9ce76132a6a6b89894d5e2e0a6326a63c90e9ee99046266eed5508b73",
+      "format": "JPEG",
+      "raster_dimensions": [
+        1440,
+        900
+      ]
+    },
+    {
+      "file": "cs010-1920-after.png",
+      "sha256": "94812e5d230a5fbc3042cf42a5ce4ae9c51823c6b04122ca60f10442d165f741",
+      "format": "JPEG",
+      "raster_dimensions": [
+        1912,
+        1000
+      ]
+    },
+    {
+      "file": "pa001-html-details.png",
+      "sha256": "9a8a6042c03ddb8276a55c821a95378e71ff046c29efcdc5e24fa01cc5161e19",
+      "format": "JPEG",
+      "raster_dimensions": [
+        1470,
+        837
+      ]
+    },
+    {
+      "file": "pa001-html-after.png",
+      "sha256": "5f71e73992119302e0870ed1bee35911daa07224c036d9824cea5e088fe7191d",
+      "format": "JPEG",
+      "raster_dimensions": [
+        1470,
+        837
+      ]
+    }
+  ]
+}

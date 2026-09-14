@@ -1,0 +1,9 @@
+{
+  "sample": "asc-farm",
+  "backend": "pdfium",
+  "stage": "import_ready",
+  "readiness_elapsed_seconds": 0.30873241601511836,
+  "ready_monotonic": 495561.053290583,
+  "ready_utc": "2026-09-13T11:34:28.661435+00:00",
+  "boundary": "No parser instantiated before readiness; includes adapter/source preparation and dependency imports."
+}

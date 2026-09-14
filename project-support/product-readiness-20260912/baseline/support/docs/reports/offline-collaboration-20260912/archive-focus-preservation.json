@@ -1,0 +1,9 @@
+{
+  "originals_unchanged": true,
+  "original_count": 73,
+  "canonical_unchanged": true,
+  "canonical_count": 75,
+  "table_changes": [],
+  "before": "runtime/archive-focus-preservation/before/fingerprints.json",
+  "after": "runtime/archive-focus-preservation/after/fingerprints.json"
+}

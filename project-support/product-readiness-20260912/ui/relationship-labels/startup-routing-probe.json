@@ -1,0 +1,18 @@
+{
+  "url": "http://127.0.0.1:55542/collaboration-relationships.js",
+  "observed_status": 404,
+  "content_type": "application/json; charset=utf-8",
+  "body": {
+    "error": "Page not found."
+  },
+  "import_chain": [
+    "app.js",
+    "materials.js",
+    "collaboration.js",
+    "collaboration-relationships.js"
+  ],
+  "fault": "New local module was missing from the explicit static route map. File-based Node imports did not exercise HTTP delivery.",
+  "fix": "One explicit static route entry in workbench/src/local_workbench/server.py.",
+  "validation": "http-module-before.txt records expected HTTP 404 failure; http-module-after.txt records passing recursive module delivery test.",
+  "browser_status": "Parent owns restart and browser confirmation; this task did neither."
+}

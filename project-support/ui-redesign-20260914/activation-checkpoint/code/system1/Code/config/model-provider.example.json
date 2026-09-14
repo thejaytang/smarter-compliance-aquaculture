@@ -1,0 +1,11 @@
+{
+  "enabled": false,
+  "endpoint": "",
+  "model": "",
+  "api_key_env": "",
+  "allowed_source_ids": [],
+  "allowed_fields": ["source_id", "source_title", "issuer", "official_url"],
+  "max_calls": 1,
+  "max_bytes": 10000,
+  "timeout": 20
+}

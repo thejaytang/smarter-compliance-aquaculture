@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "original_files": 73,
+  "canonical_files": 75,
+  "business_tables_unchanged": true,
+  "maintenance_only_changes": [
+    {
+      "store": "workbench",
+      "table": "sessions",
+      "before": {
+        "rows": 259,
+        "sha256": "aa749e3224e2871a9069986493c64ae8e874e7ff4914eb1e67462b45faa283ae"
+      },
+      "after": {
+        "rows": 261,
+        "sha256": "b68f839c9ddcc10871357057b2e59517eed00a952f5b870e6b4e241e90964bed"
+      }
+    }
+  ],
+  "legacy_job_store_unchanged": true,
+  "normal_material_counts": {
+    "material_candidates": 0,
+    "material_documents": 0
+  },
+  "full_backup": "workbench/runtime/workflow-correction-final-backup",
+  "backup_stores": 6,
+  "backup_resource_files": 8389,
+  "backup_code_files": 337,
+  "recovery_verification": "The backup command completed after its full verify() passed. Earlier incomplete packages retained."
+}

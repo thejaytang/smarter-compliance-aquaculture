@@ -1,0 +1,449 @@
+{
+  "source_sha256": "c2d87f054ce7e88fca96557cdc85f52fb579a472eb301d62e6f70618775811a3",
+  "config_hash": "0a86dae0ddc7110290fbf0ec1c2e8302563e084ecbb008783275adbaacd0ab97",
+  "adapter_config_hash": "9573703c19dda8605e0d158e4f2d6a295e813a221b52db678e0d68e2d87e7a8c",
+  "material_backend_policy": "pdfium",
+  "legacy_config_backend": "docling-parse",
+  "original_page_indices": [
+    0
+  ],
+  "backend": "pypdfium2",
+  "version": "5.13.0",
+  "pages": [
+    {
+      "page_index": 0,
+      "width_points": 612.0,
+      "height_points": 792.0,
+      "words": [
+        {
+          "id": "native_p0000_fw000000",
+          "text": "Section 1 - Digital Evidence",
+          "bbox_points": [
+            54.57600021362305,
+            38.35198974609375,
+            262.36798095703125,
+            53.343994140625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000001",
+          "text": "The limit is 5 mg.",
+          "bbox_points": [
+            54.22999954223633,
+            84.84002685546875,
+            128.6999969482422,
+            94.09002685546875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000002",
+          "text": "It shall remain below 10 mg.",
+          "bbox_points": [
+            54.93000030517578,
+            106.80999755859375,
+            177.6199951171875,
+            116.09002685546875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000003",
+          "text": "See Table 1.",
+          "bbox_points": [
+            54.45000076293945,
+            128.719970703125,
+            109.83000183105469,
+            136.1099853515625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000004",
+          "text": "Effective date: 2026-08-25.",
+          "bbox_points": [
+            320.7900085449219,
+            84.719970703125,
+            439.1999816894531,
+            92.1099853515625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000005",
+          "text": "The value must not exceed 7 mg.",
+          "bbox_points": [
+            320.2300109863281,
+            106.84002685546875,
+            466.97998046875,
+            116.09002685546875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000006",
+          "text": "Annex 2 applies.",
+          "bbox_points": [
+            320.0,
+            128.80999755859375,
+            393.05999755859375,
+            137.97998046875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000007",
+          "text": "Table 1: Limits",
+          "bbox_points": [
+            54.209999084472656,
+            194.80999755859375,
+            123.54000091552734,
+            202.1099853515625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000008",
+          "text": "Item",
+          "bbox_points": [
+            59.83700180053711,
+            230.5560302734375,
+            76.5050048828125,
+            237.0989990234375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000009",
+          "text": "Limit",
+          "bbox_points": [
+            195.65699768066406,
+            230.5560302734375,
+            213.93600463867188,
+            237.05401611328125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000010",
+          "text": "A",
+          "bbox_points": [
+            59.0,
+            252.5560302734375,
+            65.01200103759766,
+            259.0
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000011",
+          "text": "5 mg",
+          "bbox_points": [
+            195.3780059814453,
+            252.64599609375,
+            214.40399169921875,
+            260.8809814453125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000012",
+          "text": "B",
+          "bbox_points": [
+            59.65700149536133,
+            274.5560302734375,
+            65.00299835205078,
+            281.0
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000013",
+          "text": "7 mg",
+          "bbox_points": [
+            195.42300415039062,
+            274.63702392578125,
+            214.40399169921875,
+            282.8810119628906
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        }
+      ],
+      "bitmap_boxes_points": [],
+      "characters": [],
+      "text_lines": [
+        {
+          "id": "native_p0000_ft000000",
+          "text": "Section 1 - Digital Evidence",
+          "bbox_points": [
+            54.57600021362305,
+            38.35198974609375,
+            262.36798095703125,
+            53.343994140625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000001",
+          "text": "The limit is 5 mg.",
+          "bbox_points": [
+            54.22999954223633,
+            84.84002685546875,
+            128.6999969482422,
+            94.09002685546875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000002",
+          "text": "It shall remain below 10 mg.",
+          "bbox_points": [
+            54.93000030517578,
+            106.80999755859375,
+            177.6199951171875,
+            116.09002685546875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000003",
+          "text": "See Table 1.",
+          "bbox_points": [
+            54.45000076293945,
+            128.719970703125,
+            109.83000183105469,
+            136.1099853515625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000004",
+          "text": "Effective date: 2026-08-25.",
+          "bbox_points": [
+            320.7900085449219,
+            84.719970703125,
+            439.1999816894531,
+            92.1099853515625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000005",
+          "text": "The value must not exceed 7 mg.",
+          "bbox_points": [
+            320.2300109863281,
+            106.84002685546875,
+            466.97998046875,
+            116.09002685546875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000006",
+          "text": "Annex 2 applies.",
+          "bbox_points": [
+            320.0,
+            128.80999755859375,
+            393.05999755859375,
+            137.97998046875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000007",
+          "text": "Table 1: Limits",
+          "bbox_points": [
+            54.209999084472656,
+            194.80999755859375,
+            123.54000091552734,
+            202.1099853515625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000008",
+          "text": "Item",
+          "bbox_points": [
+            59.83700180053711,
+            230.5560302734375,
+            76.5050048828125,
+            237.0989990234375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000009",
+          "text": "Limit",
+          "bbox_points": [
+            195.65699768066406,
+            230.5560302734375,
+            213.93600463867188,
+            237.05401611328125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000010",
+          "text": "A",
+          "bbox_points": [
+            59.0,
+            252.5560302734375,
+            65.01200103759766,
+            259.0
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000011",
+          "text": "5 mg",
+          "bbox_points": [
+            195.3780059814453,
+            252.64599609375,
+            214.40399169921875,
+            260.8809814453125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000012",
+          "text": "B",
+          "bbox_points": [
+            59.65700149536133,
+            274.5560302734375,
+            65.00299835205078,
+            281.0
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000013",
+          "text": "7 mg",
+          "bbox_points": [
+            195.42300415039062,
+            274.63702392578125,
+            214.40399169921875,
+            282.8810119628906
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        }
+      ],
+      "shapes": [],
+      "bitmap_resources": [],
+      "backend": "pypdfium2",
+      "fallback_reason": null
+    }
+  ]
+}

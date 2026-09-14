@@ -1,0 +1,4074 @@
+{
+  "schema_version": "material-structural-parser/3",
+  "parser_version": "material-structural-parser/3",
+  "source_sha256": "3b0cdf01f72b518710d5af9c1d8ccaa653c381f45053c7b20a102e06c1de4b20",
+  "snapshot_id": "QS001-001",
+  "config_hash": "95139f25df3346636edb926ec41e9871139dc61beffaa3ede90092d92924078e",
+  "blocks": [
+    {
+      "id": "block-f99e8ef58d741a53daf88777",
+      "type": "text",
+      "text": "Aquaculture Stewardship Council",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            394.2699890136719,
+            35.43707275390625,
+            542.5669555664062,
+            42.61907958984375
+          ],
+          "native_id": "native_p0000_ft000000"
+        }
+      ]
+    },
+    {
+      "id": "block-4759623c2382f78bab8d39d3",
+      "type": "table",
+      "text": "",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            46.666666666666664,
+            61.333333333333336,
+            541.3333333333334,
+            101.33333333333333
+          ]
+        }
+      ],
+      "table": {
+        "rows": [
+          [
+            "1 .1",
+            "",
+            "Criterion 1.1 – Legal Compliance",
+            "",
+            "",
+            "Legal Compliance",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ],
+        "merges": [],
+        "notes": []
+      }
+    },
+    {
+      "id": "block-2082debba3e736f7f0b80836",
+      "type": "text",
+      "text": "Rationale",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            51.91632080078125,
+            132.571533203125,
+            109.0483169555664,
+            141.3372802734375
+          ],
+          "native_id": "native_p0000_ft000009"
+        }
+      ]
+    },
+    {
+      "id": "block-13e60ffc5a1687edddb39547",
+      "type": "text",
+      "text": "A legal business complies with applicable laws, licensing, and permit requirements.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            51.018959045410156,
+            157.62579345703125,
+            446.4313049316406,
+            166.5369873046875
+          ],
+          "native_id": "native_p0000_ft000010"
+        }
+      ]
+    },
+    {
+      "id": "block-40d8427d6b59ca6a4926b354",
+      "type": "text",
+      "text": "A wide variety of laws and regulations apply to aquaculture. Ensuring national laws are followed, and",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            51.018959045410156,
+            179.7784423828125,
+            530.8206787109375,
+            188.73699951171875
+          ],
+          "native_id": "native_p0000_ft000011"
+        }
+      ]
+    },
+    {
+      "id": "block-ff6261b54f14dd39bedbefe1",
+      "type": "text",
+      "text": "necessary permits and licences are acquired helps to promote a socially and environmentally",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            51.93851852416992,
+            196.02581787109375,
+            495.1854553222656,
+            204.93701171875
+          ],
+          "native_id": "native_p0000_ft000012"
+        }
+      ]
+    },
+    {
+      "id": "block-e2dc07963a4a860f7b405d77",
+      "type": "text",
+      "text": "responsible aquaculture industry. Compliance also benefits a business by enhancing customer trust,",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            51.93851852416992,
+            212.178466796875,
+            530.6503295898438,
+            221.13702392578125
+          ],
+          "native_id": "native_p0000_ft000013"
+        }
+      ]
+    },
+    {
+      "id": "block-75533f43d48016a33a5ee9ed",
+      "type": "text",
+      "text": "increasing revenue, strengthening reputation, and avoiding legal sanctions and fines4",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            51.78683853149414,
+            228.25994873046875,
+            458.5419921875,
+            237.8170166015625
+          ],
+          "native_id": "native_p0000_ft000014"
+        }
+      ]
+    },
+    {
+      "id": "block-8114f4a51cdb4b99079b952a",
+      "type": "text",
+      "text": ".",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            459.1224365234375,
+            234.9541015625,
+            460.1273193359375,
+            235.9779052734375
+          ],
+          "native_id": "native_p0000_ft000015"
+        }
+      ]
+    },
+    {
+      "id": "block-8513b8ec0c0f7492103ddb20",
+      "type": "text",
+      "text": "This criterion focuses on the legal compliance of ASC certified farms as the basis of a well-managed",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            51.03791809082031,
+            251.41845703125,
+            525.1578369140625,
+            260.37701416015625
+          ],
+          "native_id": "native_p0000_ft000016"
+        }
+      ]
+    },
+    {
+      "id": "block-9c493a53c31f222cc4e415c2",
+      "type": "text",
+      "text": "business.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            51.93851852416992,
+            267.8157958984375,
+            94.00128173828125,
+            274.88787841796875
+          ],
+          "native_id": "native_p0000_ft000017"
+        }
+      ]
+    },
+    {
+      "id": "block-dcc10676e2ea8216ea333cf3",
+      "type": "text",
+      "text": "Intent – The aquaculture industry complies with all applicable legal requirements.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            51.78683853149414,
+            312.2158203125,
+            440.68731689453125,
+            321.12701416015625
+          ],
+          "native_id": "native_p0000_ft000018"
+        }
+      ]
+    },
+    {
+      "id": "block-0031678dbbee5f7883675be2",
+      "type": "table",
+      "text": "",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            54.0,
+            334.0,
+            542.0,
+            368.6666666666667
+          ]
+        }
+      ],
+      "table": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            "",
+            "Indicators:",
+            "",
+            "",
+            ""
+          ]
+        ],
+        "merges": [],
+        "notes": []
+      }
+    },
+    {
+      "id": "block-8aff8d999ece30fbf8c92219",
+      "type": "text",
+      "text": "1.1.1",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            53.9782829284668,
+            386.70196533203125,
+            77.74620056152344,
+            396.62823486328125
+          ],
+          "native_id": "native_p0000_ft000020"
+        }
+      ]
+    },
+    {
+      "id": "block-587017bf1fd3ae3f5b5ef698",
+      "type": "text",
+      "text": "The UoC shall hold all applicable legal licences and permits.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            118.01600646972656,
+            385.0519714355469,
+            384.875,
+            393.5119934082031
+          ],
+          "native_id": "native_p0000_ft000021"
+        }
+      ]
+    },
+    {
+      "id": "block-7a506db12a79dff9aabd6e7d",
+      "type": "text",
+      "text": "1.1.2",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            53.9782829284668,
+            434.1934814453125,
+            80.526123046875,
+            444.2882385253906
+          ],
+          "native_id": "native_p0000_ft000022"
+        }
+      ]
+    },
+    {
+      "id": "block-cfbed504a73c9c10a2432c47",
+      "type": "text",
+      "text": "The UoC shall comply with all applicable legal requirements, including those relevant to the",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            118.01600646972656,
+            432.6919860839844,
+            532.5562133789062,
+            441.1520080566406
+          ],
+          "native_id": "native_p0000_ft000023"
+        }
+      ]
+    },
+    {
+      "id": "block-3554538a1869fede7ce67805",
+      "type": "text",
+      "text": "Criteria within the ASC Farm Standard.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            118.44800567626953,
+            448.07196044921875,
+            292.1300048828125,
+            454.79498291015625
+          ],
+          "native_id": "native_p0000_ft000024"
+        }
+      ]
+    },
+    {
+      "id": "block-76d113e7c4699caac06f287e",
+      "type": "text",
+      "text": "4 Widjaja, G. (2024). Managing Legal and Corporate Compliance to Induce and Enhance Business. Law and Humanities",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            51.20159912109375,
+            754.0079803466797,
+            527.165283203125,
+            762.1278991699219
+          ],
+          "native_id": "native_p0000_ft000025"
+        }
+      ]
+    },
+    {
+      "id": "block-35935ddb6957b1eb1970275a",
+      "type": "text",
+      "text": "Quarterly Reviews, 3(2). https://doi.org/10.31014/aior.1996.03.02.115",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            51.4180793762207,
+            763.4862976074219,
+            307.0943603515625,
+            771.847900390625
+          ],
+          "native_id": "native_p0000_ft000026"
+        }
+      ]
+    },
+    {
+      "id": "block-ef3a5151b38eb3c5f53cd438",
+      "type": "text",
+      "text": "Version",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            368.0658264160156,
+            793.5357437133789,
+            390.0464782714844,
+            797.9186210632324
+          ],
+          "native_id": "native_p0000_ft000005"
+        }
+      ]
+    },
+    {
+      "id": "block-c29bee8d2d2bf65aa542830a",
+      "type": "text",
+      "text": "Page 28 of 256",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            499.0892639160156,
+            793.7565422058105,
+            538.608154296875,
+            798.9729423522949
+          ],
+          "native_id": "native_p0000_ft000007"
+        }
+      ]
+    },
+    {
+      "id": "block-858851ac1264d3816bc8e73c",
+      "type": "text",
+      "text": "ASC Farm Standard",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            121.95104217529297,
+            793.7841415405273,
+            176.31201171875,
+            797.9075813293457
+          ],
+          "native_id": "native_p0000_ft000002"
+        }
+      ]
+    },
+    {
+      "id": "block-94e20e78dbe8ad78bee86bc5",
+      "type": "text",
+      "text": "ASC-STD-001",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            297.5410461425781,
+            793.9828605651855,
+            333.3827819824219,
+            797.9075813293457
+          ],
+          "native_id": "native_p0000_ft000004"
+        }
+      ]
+    },
+    {
+      "id": "block-f590920573bb7c924499b7ef",
+      "type": "text",
+      "text": "V1.0.1",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            410.9665832519531,
+            793.9828605651855,
+            424.82275390625,
+            797.9075813293457
+          ],
+          "native_id": "native_p0000_ft000006"
+        }
+      ]
+    },
+    {
+      "id": "block-efa3203260cdaf3cc049f6a0",
+      "type": "text",
+      "text": "Document Name",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            59.76216125488281,
+            794.015983581543,
+            108.61416625976562,
+            797.9186210632324
+          ],
+          "native_id": "native_p0000_ft000001"
+        }
+      ]
+    },
+    {
+      "id": "block-c33288739f3ab48d7999cae2",
+      "type": "text",
+      "text": "Document ID",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            248.54815673828125,
+            794.015983581543,
+            286.72998046875,
+            797.9186210632324
+          ],
+          "native_id": "native_p0000_ft000003"
+        }
+      ]
+    },
+    {
+      "id": "block-68e33105afa4ef93c79cebb6",
+      "type": "image",
+      "text": "",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            47.400001525878906,
+            68.75994873046875,
+            542.760009765625,
+            95.15997314453125
+          ]
+        }
+      ],
+      "image": {
+        "source_ref": {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            47.400001525878906,
+            68.75994873046875,
+            542.760009765625,
+            95.15997314453125
+          ]
+        },
+        "attachment": null,
+        "attribution": "Embedded image in the bound original PDF."
+      }
+    },
+    {
+      "id": "block-6a06fc3ee18a36b8ee76bd4d",
+      "type": "image",
+      "text": "",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            48.2400016784668,
+            64.55999755859375,
+            105.96000671386719,
+            98.15997314453125
+          ]
+        }
+      ],
+      "image": {
+        "source_ref": {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            48.2400016784668,
+            64.55999755859375,
+            105.96000671386719,
+            98.15997314453125
+          ]
+        },
+        "attachment": null,
+        "attribution": "Embedded image in the bound original PDF."
+      }
+    },
+    {
+      "id": "block-1d1acbb7614e3bda3490e242",
+      "type": "image",
+      "text": "",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            504.0199890136719,
+            67.4530029296875,
+            532.9199829101562,
+            96.3499755859375
+          ]
+        }
+      ],
+      "image": {
+        "source_ref": {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            504.0199890136719,
+            67.4530029296875,
+            532.9199829101562,
+            96.3499755859375
+          ]
+        },
+        "attachment": null,
+        "attribution": "Embedded image in the bound original PDF."
+      }
+    },
+    {
+      "id": "block-233636ae46b32cf8c96567ed",
+      "type": "text",
+      "text": "Aquaculture Stewardship Council",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            394.2699890136719,
+            35.43707275390625,
+            542.5669555664062,
+            42.61907958984375
+          ],
+          "native_id": "native_p0001_ft000000"
+        }
+      ]
+    },
+    {
+      "id": "block-e51332517c8a3a4a4190df4c",
+      "type": "table",
+      "text": "",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            51.333333333333336,
+            62.666666666666664,
+            552.0,
+            102.66666666666667
+          ]
+        }
+      ],
+      "table": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Criterion 1.2 – Management Systems",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "1 .2",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Management Systems",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ],
+        "merges": [
+          {
+            "row": 0,
+            "col": 15,
+            "rowspan": 3,
+            "colspan": 1
+          },
+          {
+            "row": 1,
+            "col": 16,
+            "rowspan": 2,
+            "colspan": 1
+          }
+        ],
+        "notes": []
+      }
+    },
+    {
+      "id": "block-c18b7d32d7d89f29d022e28e",
+      "type": "text",
+      "text": "Rationale",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            51.91632080078125,
+            136.4114990234375,
+            105.57071685791016,
+            145.17724609375
+          ],
+          "native_id": "native_p0001_ft000009"
+        }
+      ]
+    },
+    {
+      "id": "block-5608067437ca691e76bc350d",
+      "type": "text",
+      "text": "A management system supports an organisation to manage the interrelated parts of the business to",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            51.018959045410156,
+            161.2984619140625,
+            531.6265869140625,
+            170.25701904296875
+          ],
+          "native_id": "native_p0001_ft000010"
+        }
+      ]
+    },
+    {
+      "id": "block-c8a0147d8e3f9b533ffd54f4",
+      "type": "text",
+      "text": "achieve its objectives. Management systems include policies, processes and procedures, and vary in",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            51.521400451660156,
+            177.5457763671875,
+            526.4694213867188,
+            186.45697021484375
+          ],
+          "native_id": "native_p0001_ft000011"
+        }
+      ]
+    },
+    {
+      "id": "block-c2128e2fdb9c8f2061b66918",
+      "type": "text",
+      "text": "complexity depending on the organisation’s context. They can support compliance with laws and",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            51.43608093261719,
+            193.5941162109375,
+            516.5188598632812,
+            202.656982421875
+          ],
+          "native_id": "native_p0001_ft000012"
+        }
+      ]
+    },
+    {
+      "id": "block-3ea9d68578eef2ec85d37fa2",
+      "type": "text",
+      "text": "regulations, detection and resolution of issues, and monitoring of essential operational activities.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            51.93851852416992,
+            209.8984375,
+            507.52838134765625,
+            218.85699462890625
+          ],
+          "native_id": "native_p0001_ft000013"
+        }
+      ]
+    },
+    {
+      "id": "block-0933aa8219bc2640d205633d",
+      "type": "text",
+      "text": "This Criterion focuses on the development of a management system for the implementation and",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            51.03791809082031,
+            232.09844970703125,
+            514.9417114257812,
+            241.0570068359375
+          ],
+          "native_id": "native_p0001_ft000014"
+        }
+      ]
+    },
+    {
+      "id": "block-b2ff89b6d98b788b17f9f568",
+      "type": "text",
+      "text": "maintenance of ASC Requirements on ASC certified farms.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            51.93851852416992,
+            248.03924560546875,
+            332.65423583984375,
+            257.32965087890625
+          ],
+          "native_id": "native_p0001_ft000015"
+        }
+      ]
+    },
+    {
+      "id": "block-f1f3e6fe9d5f25e449743cec",
+      "type": "text",
+      "text": "Intent – The aquaculture industry continuously manages and improves processes to deliver consistent",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            51.78683853149414,
+            292.89581298828125,
+            540.7591552734375,
+            301.8070068359375
+          ],
+          "native_id": "native_p0001_ft000016"
+        }
+      ]
+    },
+    {
+      "id": "block-d19ac6b9d1b11b2e9c55e08c",
+      "type": "text",
+      "text": "performance against the ASC requirements.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            51.93851852416992,
+            309.0484619140625,
+            260.6373291015625,
+            318.00701904296875
+          ],
+          "native_id": "native_p0001_ft000017"
+        }
+      ]
+    },
+    {
+      "id": "block-4e4c05a6bc51dbe8f3d649dd",
+      "type": "table",
+      "text": "",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            53.333333333333336,
+            331.3333333333333,
+            540.6666666666666,
+            366.0
+          ]
+        }
+      ],
+      "table": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            "",
+            "Indicators:",
+            "",
+            "",
+            ""
+          ]
+        ],
+        "merges": [],
+        "notes": []
+      }
+    },
+    {
+      "id": "block-3c8384e1edb9fad7b9c71a05",
+      "type": "text",
+      "text": "1.2.1",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            53.9782829284668,
+            383.4134826660156,
+            80.52766418457031,
+            393.50823974609375
+          ],
+          "native_id": "native_p0001_ft000019"
+        }
+      ]
+    },
+    {
+      "id": "block-1a0f2a317f8ef6c9ebb46a68",
+      "type": "text",
+      "text": "The UoC shall develop, implement and maintain a management system to support the",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            117.7760009765625,
+            381.9319763183594,
+            511.81414794921875,
+            390.3919982910156
+          ],
+          "native_id": "native_p0001_ft000020"
+        }
+      ]
+    },
+    {
+      "id": "block-3c2a1e30cbc53b1101a2ee1e",
+      "type": "text",
+      "text": "implementation of the ASC Requirements that is appropriate to the size and complexity of",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            118.48699951171875,
+            397.2469787597656,
+            527.5101318359375,
+            405.7519836425781
+          ],
+          "native_id": "native_p0001_ft000021"
+        }
+      ]
+    },
+    {
+      "id": "block-1298790dc22a9044b142a906",
+      "type": "text",
+      "text": "the UoC.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            117.89299774169922,
+            412.6519775390625,
+            155.8730010986328,
+            419.375
+          ],
+          "native_id": "native_p0001_ft000022"
+        }
+      ]
+    },
+    {
+      "id": "block-8bb8ad61351254613cf714b0",
+      "type": "text",
+      "text": "1.2.2",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            53.9782829284668,
+            453.27349853515625,
+            83.42758178710938,
+            463.3682556152344
+          ],
+          "native_id": "native_p0001_ft000023"
+        }
+      ]
+    },
+    {
+      "id": "block-e78c62cd2de3647458096dcc",
+      "type": "text",
+      "text": "The UoC shall appoint at least one member of management responsible for the",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            117.7760009765625,
+            451.7469787597656,
+            477.87506103515625,
+            460.2519836425781
+          ],
+          "native_id": "native_p0001_ft000024"
+        }
+      ]
+    },
+    {
+      "id": "block-42c0b678a661f740340f15bc",
+      "type": "text",
+      "text": "implementation of the ASC Requirements.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            118.48699951171875,
+            467.10699462890625,
+            309.1610412597656,
+            475.5669860839844
+          ],
+          "native_id": "native_p0001_ft000025"
+        }
+      ]
+    },
+    {
+      "id": "block-aee19a6dcb8b06901403bc61",
+      "type": "text",
+      "text": "1.2.3",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            53.9782829284668,
+            507.8735046386719,
+            83.37803649902344,
+            518.0244445800781
+          ],
+          "native_id": "native_p0001_ft000026"
+        }
+      ]
+    },
+    {
+      "id": "block-2c3d9936ea2d9d46d1111b76",
+      "type": "text",
+      "text": "The UoC shall ensure that relevant employees have the necessary skills and training to",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            117.7760009765625,
+            506.3919677734375,
+            510.75103759765625,
+            514.8789672851562
+          ],
+          "native_id": "native_p0001_ft000027"
+        }
+      ]
+    },
+    {
+      "id": "block-b68a356d05a6c2f90de1ded6",
+      "type": "text",
+      "text": "implement the ASC Requirements.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            118.48699951171875,
+            521.7519836425781,
+            275.08697509765625,
+            530.1669921875
+          ],
+          "native_id": "native_p0001_ft000028"
+        }
+      ]
+    },
+    {
+      "id": "block-61cadc19e78ad4893ab734a0",
+      "type": "text",
+      "text": "1.2.4",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            53.9782829284668,
+            562.3534851074219,
+            84.65568542480469,
+            572.4482421875
+          ],
+          "native_id": "native_p0001_ft000029"
+        }
+      ]
+    },
+    {
+      "id": "block-3076c5883f7c901ec227a062",
+      "type": "text",
+      "text": "The UoC shall annually review the management system and revise it where necessary to",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            117.7760009765625,
+            560.8719787597656,
+            517.529052734375,
+            569.3320007324219
+          ],
+          "native_id": "native_p0001_ft000030"
+        }
+      ]
+    },
+    {
+      "id": "block-9ba8cd6660d19453aeda46d6",
+      "type": "text",
+      "text": "ensure its continued suitability, adequacy and effectiveness in implementing the ASC",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            118.15399932861328,
+            576.1869812011719,
+            505.07318115234375,
+            584.6919860839844
+          ],
+          "native_id": "native_p0001_ft000031"
+        }
+      ]
+    },
+    {
+      "id": "block-3fc31274401fcd23dd26440d",
+      "type": "text",
+      "text": "Requirements.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            118.76599884033203,
+            591.5919952392578,
+            183.70999145507812,
+            600.0069885253906
+          ],
+          "native_id": "native_p0001_ft000032"
+        }
+      ]
+    },
+    {
+      "id": "block-5925ffa3dca3e49e1efb74ba",
+      "type": "text",
+      "text": "Version",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            368.0658264160156,
+            793.5357437133789,
+            390.0464782714844,
+            797.9186210632324
+          ],
+          "native_id": "native_p0001_ft000005"
+        }
+      ]
+    },
+    {
+      "id": "block-ca8c143b54cded4553b04f77",
+      "type": "text",
+      "text": "Page 29 of 256",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            499.32928466796875,
+            793.7565422058105,
+            538.608154296875,
+            798.9729423522949
+          ],
+          "native_id": "native_p0001_ft000007"
+        }
+      ]
+    },
+    {
+      "id": "block-a5571e88f796488e2a0bd51d",
+      "type": "text",
+      "text": "ASC Farm Standard",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            121.95104217529297,
+            793.7841415405273,
+            176.31201171875,
+            797.9075813293457
+          ],
+          "native_id": "native_p0001_ft000002"
+        }
+      ]
+    },
+    {
+      "id": "block-5c73f16cbc7f0783fd2dcacf",
+      "type": "text",
+      "text": "ASC-STD-001",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            297.5410461425781,
+            793.9828605651855,
+            333.3827819824219,
+            797.9075813293457
+          ],
+          "native_id": "native_p0001_ft000004"
+        }
+      ]
+    },
+    {
+      "id": "block-ec0aef949619e33a1d949ab4",
+      "type": "text",
+      "text": "V1.0.1",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            410.9665832519531,
+            793.9828605651855,
+            424.82275390625,
+            797.9075813293457
+          ],
+          "native_id": "native_p0001_ft000006"
+        }
+      ]
+    },
+    {
+      "id": "block-a42ef4c8edcbeac6d1cc9cd3",
+      "type": "text",
+      "text": "Document Name",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            59.76216125488281,
+            794.015983581543,
+            108.61416625976562,
+            797.9186210632324
+          ],
+          "native_id": "native_p0001_ft000001"
+        }
+      ]
+    },
+    {
+      "id": "block-56ea568c76848912c1410d4a",
+      "type": "text",
+      "text": "Document ID",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            248.54815673828125,
+            794.015983581543,
+            286.72998046875,
+            797.9186210632324
+          ],
+          "native_id": "native_p0001_ft000003"
+        }
+      ]
+    },
+    {
+      "id": "block-2ec1e503156ed7f04d9aceb7",
+      "type": "image",
+      "text": "",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            51.959999084472656,
+            69.3599853515625,
+            547.3200073242188,
+            95.760009765625
+          ]
+        }
+      ],
+      "image": {
+        "source_ref": {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            51.959999084472656,
+            69.3599853515625,
+            547.3200073242188,
+            95.760009765625
+          ]
+        },
+        "attachment": null,
+        "attribution": "Embedded image in the bound original PDF."
+      }
+    },
+    {
+      "id": "block-67834f99b5688094335aad3c",
+      "type": "image",
+      "text": "",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            52.79999923706055,
+            65.1600341796875,
+            110.39999389648438,
+            98.760009765625
+          ]
+        }
+      ],
+      "image": {
+        "source_ref": {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            52.79999923706055,
+            65.1600341796875,
+            110.39999389648438,
+            98.760009765625
+          ]
+        },
+        "attachment": null,
+        "attribution": "Embedded image in the bound original PDF."
+      }
+    },
+    {
+      "id": "block-26b2fb4957c44cce86a3e6ec",
+      "type": "image",
+      "text": "",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            479.67999267578125,
+            67.60296630859375,
+            538.47998046875,
+            95.89996337890625
+          ]
+        }
+      ],
+      "image": {
+        "source_ref": {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            479.67999267578125,
+            67.60296630859375,
+            538.47998046875,
+            95.89996337890625
+          ]
+        },
+        "attachment": null,
+        "attribution": "Embedded image in the bound original PDF."
+      }
+    }
+  ],
+  "scope": [
+    {
+      "id": "page:1",
+      "kind": "page",
+      "label": "Page 1",
+      "location": {
+        "page": 1
+      }
+    },
+    {
+      "id": "page:2",
+      "kind": "page",
+      "label": "Page 2",
+      "location": {
+        "page": 2
+      }
+    },
+    {
+      "id": "page:3",
+      "kind": "page",
+      "label": "Page 3",
+      "location": {
+        "page": 3
+      }
+    },
+    {
+      "id": "page:4",
+      "kind": "page",
+      "label": "Page 4",
+      "location": {
+        "page": 4
+      }
+    },
+    {
+      "id": "page:5",
+      "kind": "page",
+      "label": "Page 5",
+      "location": {
+        "page": 5
+      }
+    },
+    {
+      "id": "page:6",
+      "kind": "page",
+      "label": "Page 6",
+      "location": {
+        "page": 6
+      }
+    },
+    {
+      "id": "page:7",
+      "kind": "page",
+      "label": "Page 7",
+      "location": {
+        "page": 7
+      }
+    },
+    {
+      "id": "page:8",
+      "kind": "page",
+      "label": "Page 8",
+      "location": {
+        "page": 8
+      }
+    },
+    {
+      "id": "page:9",
+      "kind": "page",
+      "label": "Page 9",
+      "location": {
+        "page": 9
+      }
+    },
+    {
+      "id": "page:10",
+      "kind": "page",
+      "label": "Page 10",
+      "location": {
+        "page": 10
+      }
+    },
+    {
+      "id": "page:11",
+      "kind": "page",
+      "label": "Page 11",
+      "location": {
+        "page": 11
+      }
+    },
+    {
+      "id": "page:12",
+      "kind": "page",
+      "label": "Page 12",
+      "location": {
+        "page": 12
+      }
+    },
+    {
+      "id": "page:13",
+      "kind": "page",
+      "label": "Page 13",
+      "location": {
+        "page": 13
+      }
+    },
+    {
+      "id": "page:14",
+      "kind": "page",
+      "label": "Page 14",
+      "location": {
+        "page": 14
+      }
+    },
+    {
+      "id": "page:15",
+      "kind": "page",
+      "label": "Page 15",
+      "location": {
+        "page": 15
+      }
+    },
+    {
+      "id": "page:16",
+      "kind": "page",
+      "label": "Page 16",
+      "location": {
+        "page": 16
+      }
+    },
+    {
+      "id": "page:17",
+      "kind": "page",
+      "label": "Page 17",
+      "location": {
+        "page": 17
+      }
+    },
+    {
+      "id": "page:18",
+      "kind": "page",
+      "label": "Page 18",
+      "location": {
+        "page": 18
+      }
+    },
+    {
+      "id": "page:19",
+      "kind": "page",
+      "label": "Page 19",
+      "location": {
+        "page": 19
+      }
+    },
+    {
+      "id": "page:20",
+      "kind": "page",
+      "label": "Page 20",
+      "location": {
+        "page": 20
+      }
+    },
+    {
+      "id": "page:21",
+      "kind": "page",
+      "label": "Page 21",
+      "location": {
+        "page": 21
+      }
+    },
+    {
+      "id": "page:22",
+      "kind": "page",
+      "label": "Page 22",
+      "location": {
+        "page": 22
+      }
+    },
+    {
+      "id": "page:23",
+      "kind": "page",
+      "label": "Page 23",
+      "location": {
+        "page": 23
+      }
+    },
+    {
+      "id": "page:24",
+      "kind": "page",
+      "label": "Page 24",
+      "location": {
+        "page": 24
+      }
+    },
+    {
+      "id": "page:25",
+      "kind": "page",
+      "label": "Page 25",
+      "location": {
+        "page": 25
+      }
+    },
+    {
+      "id": "page:26",
+      "kind": "page",
+      "label": "Page 26",
+      "location": {
+        "page": 26
+      }
+    },
+    {
+      "id": "page:27",
+      "kind": "page",
+      "label": "Page 27",
+      "location": {
+        "page": 27
+      }
+    },
+    {
+      "id": "page:28",
+      "kind": "page",
+      "label": "Page 28",
+      "location": {
+        "page": 28
+      }
+    },
+    {
+      "id": "page:29",
+      "kind": "page",
+      "label": "Page 29",
+      "location": {
+        "page": 29
+      }
+    },
+    {
+      "id": "page:30",
+      "kind": "page",
+      "label": "Page 30",
+      "location": {
+        "page": 30
+      }
+    },
+    {
+      "id": "page:31",
+      "kind": "page",
+      "label": "Page 31",
+      "location": {
+        "page": 31
+      }
+    },
+    {
+      "id": "page:32",
+      "kind": "page",
+      "label": "Page 32",
+      "location": {
+        "page": 32
+      }
+    },
+    {
+      "id": "page:33",
+      "kind": "page",
+      "label": "Page 33",
+      "location": {
+        "page": 33
+      }
+    },
+    {
+      "id": "page:34",
+      "kind": "page",
+      "label": "Page 34",
+      "location": {
+        "page": 34
+      }
+    },
+    {
+      "id": "page:35",
+      "kind": "page",
+      "label": "Page 35",
+      "location": {
+        "page": 35
+      }
+    },
+    {
+      "id": "page:36",
+      "kind": "page",
+      "label": "Page 36",
+      "location": {
+        "page": 36
+      }
+    },
+    {
+      "id": "page:37",
+      "kind": "page",
+      "label": "Page 37",
+      "location": {
+        "page": 37
+      }
+    },
+    {
+      "id": "page:38",
+      "kind": "page",
+      "label": "Page 38",
+      "location": {
+        "page": 38
+      }
+    },
+    {
+      "id": "page:39",
+      "kind": "page",
+      "label": "Page 39",
+      "location": {
+        "page": 39
+      }
+    },
+    {
+      "id": "page:40",
+      "kind": "page",
+      "label": "Page 40",
+      "location": {
+        "page": 40
+      }
+    },
+    {
+      "id": "page:41",
+      "kind": "page",
+      "label": "Page 41",
+      "location": {
+        "page": 41
+      }
+    },
+    {
+      "id": "page:42",
+      "kind": "page",
+      "label": "Page 42",
+      "location": {
+        "page": 42
+      }
+    },
+    {
+      "id": "page:43",
+      "kind": "page",
+      "label": "Page 43",
+      "location": {
+        "page": 43
+      }
+    },
+    {
+      "id": "page:44",
+      "kind": "page",
+      "label": "Page 44",
+      "location": {
+        "page": 44
+      }
+    },
+    {
+      "id": "page:45",
+      "kind": "page",
+      "label": "Page 45",
+      "location": {
+        "page": 45
+      }
+    },
+    {
+      "id": "page:46",
+      "kind": "page",
+      "label": "Page 46",
+      "location": {
+        "page": 46
+      }
+    },
+    {
+      "id": "page:47",
+      "kind": "page",
+      "label": "Page 47",
+      "location": {
+        "page": 47
+      }
+    },
+    {
+      "id": "page:48",
+      "kind": "page",
+      "label": "Page 48",
+      "location": {
+        "page": 48
+      }
+    },
+    {
+      "id": "page:49",
+      "kind": "page",
+      "label": "Page 49",
+      "location": {
+        "page": 49
+      }
+    },
+    {
+      "id": "page:50",
+      "kind": "page",
+      "label": "Page 50",
+      "location": {
+        "page": 50
+      }
+    },
+    {
+      "id": "page:51",
+      "kind": "page",
+      "label": "Page 51",
+      "location": {
+        "page": 51
+      }
+    },
+    {
+      "id": "page:52",
+      "kind": "page",
+      "label": "Page 52",
+      "location": {
+        "page": 52
+      }
+    },
+    {
+      "id": "page:53",
+      "kind": "page",
+      "label": "Page 53",
+      "location": {
+        "page": 53
+      }
+    },
+    {
+      "id": "page:54",
+      "kind": "page",
+      "label": "Page 54",
+      "location": {
+        "page": 54
+      }
+    },
+    {
+      "id": "page:55",
+      "kind": "page",
+      "label": "Page 55",
+      "location": {
+        "page": 55
+      }
+    },
+    {
+      "id": "page:56",
+      "kind": "page",
+      "label": "Page 56",
+      "location": {
+        "page": 56
+      }
+    },
+    {
+      "id": "page:57",
+      "kind": "page",
+      "label": "Page 57",
+      "location": {
+        "page": 57
+      }
+    },
+    {
+      "id": "page:58",
+      "kind": "page",
+      "label": "Page 58",
+      "location": {
+        "page": 58
+      }
+    },
+    {
+      "id": "page:59",
+      "kind": "page",
+      "label": "Page 59",
+      "location": {
+        "page": 59
+      }
+    },
+    {
+      "id": "page:60",
+      "kind": "page",
+      "label": "Page 60",
+      "location": {
+        "page": 60
+      }
+    },
+    {
+      "id": "page:61",
+      "kind": "page",
+      "label": "Page 61",
+      "location": {
+        "page": 61
+      }
+    },
+    {
+      "id": "page:62",
+      "kind": "page",
+      "label": "Page 62",
+      "location": {
+        "page": 62
+      }
+    },
+    {
+      "id": "page:63",
+      "kind": "page",
+      "label": "Page 63",
+      "location": {
+        "page": 63
+      }
+    },
+    {
+      "id": "page:64",
+      "kind": "page",
+      "label": "Page 64",
+      "location": {
+        "page": 64
+      }
+    },
+    {
+      "id": "page:65",
+      "kind": "page",
+      "label": "Page 65",
+      "location": {
+        "page": 65
+      }
+    },
+    {
+      "id": "page:66",
+      "kind": "page",
+      "label": "Page 66",
+      "location": {
+        "page": 66
+      }
+    },
+    {
+      "id": "page:67",
+      "kind": "page",
+      "label": "Page 67",
+      "location": {
+        "page": 67
+      }
+    },
+    {
+      "id": "page:68",
+      "kind": "page",
+      "label": "Page 68",
+      "location": {
+        "page": 68
+      }
+    },
+    {
+      "id": "page:69",
+      "kind": "page",
+      "label": "Page 69",
+      "location": {
+        "page": 69
+      }
+    },
+    {
+      "id": "page:70",
+      "kind": "page",
+      "label": "Page 70",
+      "location": {
+        "page": 70
+      }
+    },
+    {
+      "id": "page:71",
+      "kind": "page",
+      "label": "Page 71",
+      "location": {
+        "page": 71
+      }
+    },
+    {
+      "id": "page:72",
+      "kind": "page",
+      "label": "Page 72",
+      "location": {
+        "page": 72
+      }
+    },
+    {
+      "id": "page:73",
+      "kind": "page",
+      "label": "Page 73",
+      "location": {
+        "page": 73
+      }
+    },
+    {
+      "id": "page:74",
+      "kind": "page",
+      "label": "Page 74",
+      "location": {
+        "page": 74
+      }
+    },
+    {
+      "id": "page:75",
+      "kind": "page",
+      "label": "Page 75",
+      "location": {
+        "page": 75
+      }
+    },
+    {
+      "id": "page:76",
+      "kind": "page",
+      "label": "Page 76",
+      "location": {
+        "page": 76
+      }
+    },
+    {
+      "id": "page:77",
+      "kind": "page",
+      "label": "Page 77",
+      "location": {
+        "page": 77
+      }
+    },
+    {
+      "id": "page:78",
+      "kind": "page",
+      "label": "Page 78",
+      "location": {
+        "page": 78
+      }
+    },
+    {
+      "id": "page:79",
+      "kind": "page",
+      "label": "Page 79",
+      "location": {
+        "page": 79
+      }
+    },
+    {
+      "id": "page:80",
+      "kind": "page",
+      "label": "Page 80",
+      "location": {
+        "page": 80
+      }
+    },
+    {
+      "id": "page:81",
+      "kind": "page",
+      "label": "Page 81",
+      "location": {
+        "page": 81
+      }
+    },
+    {
+      "id": "page:82",
+      "kind": "page",
+      "label": "Page 82",
+      "location": {
+        "page": 82
+      }
+    },
+    {
+      "id": "page:83",
+      "kind": "page",
+      "label": "Page 83",
+      "location": {
+        "page": 83
+      }
+    },
+    {
+      "id": "page:84",
+      "kind": "page",
+      "label": "Page 84",
+      "location": {
+        "page": 84
+      }
+    },
+    {
+      "id": "page:85",
+      "kind": "page",
+      "label": "Page 85",
+      "location": {
+        "page": 85
+      }
+    },
+    {
+      "id": "page:86",
+      "kind": "page",
+      "label": "Page 86",
+      "location": {
+        "page": 86
+      }
+    },
+    {
+      "id": "page:87",
+      "kind": "page",
+      "label": "Page 87",
+      "location": {
+        "page": 87
+      }
+    },
+    {
+      "id": "page:88",
+      "kind": "page",
+      "label": "Page 88",
+      "location": {
+        "page": 88
+      }
+    },
+    {
+      "id": "page:89",
+      "kind": "page",
+      "label": "Page 89",
+      "location": {
+        "page": 89
+      }
+    },
+    {
+      "id": "page:90",
+      "kind": "page",
+      "label": "Page 90",
+      "location": {
+        "page": 90
+      }
+    },
+    {
+      "id": "page:91",
+      "kind": "page",
+      "label": "Page 91",
+      "location": {
+        "page": 91
+      }
+    },
+    {
+      "id": "page:92",
+      "kind": "page",
+      "label": "Page 92",
+      "location": {
+        "page": 92
+      }
+    },
+    {
+      "id": "page:93",
+      "kind": "page",
+      "label": "Page 93",
+      "location": {
+        "page": 93
+      }
+    },
+    {
+      "id": "page:94",
+      "kind": "page",
+      "label": "Page 94",
+      "location": {
+        "page": 94
+      }
+    },
+    {
+      "id": "page:95",
+      "kind": "page",
+      "label": "Page 95",
+      "location": {
+        "page": 95
+      }
+    },
+    {
+      "id": "page:96",
+      "kind": "page",
+      "label": "Page 96",
+      "location": {
+        "page": 96
+      }
+    },
+    {
+      "id": "page:97",
+      "kind": "page",
+      "label": "Page 97",
+      "location": {
+        "page": 97
+      }
+    },
+    {
+      "id": "page:98",
+      "kind": "page",
+      "label": "Page 98",
+      "location": {
+        "page": 98
+      }
+    },
+    {
+      "id": "page:99",
+      "kind": "page",
+      "label": "Page 99",
+      "location": {
+        "page": 99
+      }
+    },
+    {
+      "id": "page:100",
+      "kind": "page",
+      "label": "Page 100",
+      "location": {
+        "page": 100
+      }
+    },
+    {
+      "id": "page:101",
+      "kind": "page",
+      "label": "Page 101",
+      "location": {
+        "page": 101
+      }
+    },
+    {
+      "id": "page:102",
+      "kind": "page",
+      "label": "Page 102",
+      "location": {
+        "page": 102
+      }
+    },
+    {
+      "id": "page:103",
+      "kind": "page",
+      "label": "Page 103",
+      "location": {
+        "page": 103
+      }
+    },
+    {
+      "id": "page:104",
+      "kind": "page",
+      "label": "Page 104",
+      "location": {
+        "page": 104
+      }
+    },
+    {
+      "id": "page:105",
+      "kind": "page",
+      "label": "Page 105",
+      "location": {
+        "page": 105
+      }
+    },
+    {
+      "id": "page:106",
+      "kind": "page",
+      "label": "Page 106",
+      "location": {
+        "page": 106
+      }
+    },
+    {
+      "id": "page:107",
+      "kind": "page",
+      "label": "Page 107",
+      "location": {
+        "page": 107
+      }
+    },
+    {
+      "id": "page:108",
+      "kind": "page",
+      "label": "Page 108",
+      "location": {
+        "page": 108
+      }
+    },
+    {
+      "id": "page:109",
+      "kind": "page",
+      "label": "Page 109",
+      "location": {
+        "page": 109
+      }
+    },
+    {
+      "id": "page:110",
+      "kind": "page",
+      "label": "Page 110",
+      "location": {
+        "page": 110
+      }
+    },
+    {
+      "id": "page:111",
+      "kind": "page",
+      "label": "Page 111",
+      "location": {
+        "page": 111
+      }
+    },
+    {
+      "id": "page:112",
+      "kind": "page",
+      "label": "Page 112",
+      "location": {
+        "page": 112
+      }
+    },
+    {
+      "id": "page:113",
+      "kind": "page",
+      "label": "Page 113",
+      "location": {
+        "page": 113
+      }
+    },
+    {
+      "id": "page:114",
+      "kind": "page",
+      "label": "Page 114",
+      "location": {
+        "page": 114
+      }
+    },
+    {
+      "id": "page:115",
+      "kind": "page",
+      "label": "Page 115",
+      "location": {
+        "page": 115
+      }
+    },
+    {
+      "id": "page:116",
+      "kind": "page",
+      "label": "Page 116",
+      "location": {
+        "page": 116
+      }
+    },
+    {
+      "id": "page:117",
+      "kind": "page",
+      "label": "Page 117",
+      "location": {
+        "page": 117
+      }
+    },
+    {
+      "id": "page:118",
+      "kind": "page",
+      "label": "Page 118",
+      "location": {
+        "page": 118
+      }
+    },
+    {
+      "id": "page:119",
+      "kind": "page",
+      "label": "Page 119",
+      "location": {
+        "page": 119
+      }
+    },
+    {
+      "id": "page:120",
+      "kind": "page",
+      "label": "Page 120",
+      "location": {
+        "page": 120
+      }
+    },
+    {
+      "id": "page:121",
+      "kind": "page",
+      "label": "Page 121",
+      "location": {
+        "page": 121
+      }
+    },
+    {
+      "id": "page:122",
+      "kind": "page",
+      "label": "Page 122",
+      "location": {
+        "page": 122
+      }
+    },
+    {
+      "id": "page:123",
+      "kind": "page",
+      "label": "Page 123",
+      "location": {
+        "page": 123
+      }
+    },
+    {
+      "id": "page:124",
+      "kind": "page",
+      "label": "Page 124",
+      "location": {
+        "page": 124
+      }
+    },
+    {
+      "id": "page:125",
+      "kind": "page",
+      "label": "Page 125",
+      "location": {
+        "page": 125
+      }
+    },
+    {
+      "id": "page:126",
+      "kind": "page",
+      "label": "Page 126",
+      "location": {
+        "page": 126
+      }
+    },
+    {
+      "id": "page:127",
+      "kind": "page",
+      "label": "Page 127",
+      "location": {
+        "page": 127
+      }
+    },
+    {
+      "id": "page:128",
+      "kind": "page",
+      "label": "Page 128",
+      "location": {
+        "page": 128
+      }
+    },
+    {
+      "id": "page:129",
+      "kind": "page",
+      "label": "Page 129",
+      "location": {
+        "page": 129
+      }
+    },
+    {
+      "id": "page:130",
+      "kind": "page",
+      "label": "Page 130",
+      "location": {
+        "page": 130
+      }
+    },
+    {
+      "id": "page:131",
+      "kind": "page",
+      "label": "Page 131",
+      "location": {
+        "page": 131
+      }
+    },
+    {
+      "id": "page:132",
+      "kind": "page",
+      "label": "Page 132",
+      "location": {
+        "page": 132
+      }
+    },
+    {
+      "id": "page:133",
+      "kind": "page",
+      "label": "Page 133",
+      "location": {
+        "page": 133
+      }
+    },
+    {
+      "id": "page:134",
+      "kind": "page",
+      "label": "Page 134",
+      "location": {
+        "page": 134
+      }
+    },
+    {
+      "id": "page:135",
+      "kind": "page",
+      "label": "Page 135",
+      "location": {
+        "page": 135
+      }
+    },
+    {
+      "id": "page:136",
+      "kind": "page",
+      "label": "Page 136",
+      "location": {
+        "page": 136
+      }
+    },
+    {
+      "id": "page:137",
+      "kind": "page",
+      "label": "Page 137",
+      "location": {
+        "page": 137
+      }
+    },
+    {
+      "id": "page:138",
+      "kind": "page",
+      "label": "Page 138",
+      "location": {
+        "page": 138
+      }
+    },
+    {
+      "id": "page:139",
+      "kind": "page",
+      "label": "Page 139",
+      "location": {
+        "page": 139
+      }
+    },
+    {
+      "id": "page:140",
+      "kind": "page",
+      "label": "Page 140",
+      "location": {
+        "page": 140
+      }
+    },
+    {
+      "id": "page:141",
+      "kind": "page",
+      "label": "Page 141",
+      "location": {
+        "page": 141
+      }
+    },
+    {
+      "id": "page:142",
+      "kind": "page",
+      "label": "Page 142",
+      "location": {
+        "page": 142
+      }
+    },
+    {
+      "id": "page:143",
+      "kind": "page",
+      "label": "Page 143",
+      "location": {
+        "page": 143
+      }
+    },
+    {
+      "id": "page:144",
+      "kind": "page",
+      "label": "Page 144",
+      "location": {
+        "page": 144
+      }
+    },
+    {
+      "id": "page:145",
+      "kind": "page",
+      "label": "Page 145",
+      "location": {
+        "page": 145
+      }
+    },
+    {
+      "id": "page:146",
+      "kind": "page",
+      "label": "Page 146",
+      "location": {
+        "page": 146
+      }
+    },
+    {
+      "id": "page:147",
+      "kind": "page",
+      "label": "Page 147",
+      "location": {
+        "page": 147
+      }
+    },
+    {
+      "id": "page:148",
+      "kind": "page",
+      "label": "Page 148",
+      "location": {
+        "page": 148
+      }
+    },
+    {
+      "id": "page:149",
+      "kind": "page",
+      "label": "Page 149",
+      "location": {
+        "page": 149
+      }
+    },
+    {
+      "id": "page:150",
+      "kind": "page",
+      "label": "Page 150",
+      "location": {
+        "page": 150
+      }
+    },
+    {
+      "id": "page:151",
+      "kind": "page",
+      "label": "Page 151",
+      "location": {
+        "page": 151
+      }
+    },
+    {
+      "id": "page:152",
+      "kind": "page",
+      "label": "Page 152",
+      "location": {
+        "page": 152
+      }
+    },
+    {
+      "id": "page:153",
+      "kind": "page",
+      "label": "Page 153",
+      "location": {
+        "page": 153
+      }
+    },
+    {
+      "id": "page:154",
+      "kind": "page",
+      "label": "Page 154",
+      "location": {
+        "page": 154
+      }
+    },
+    {
+      "id": "page:155",
+      "kind": "page",
+      "label": "Page 155",
+      "location": {
+        "page": 155
+      }
+    },
+    {
+      "id": "page:156",
+      "kind": "page",
+      "label": "Page 156",
+      "location": {
+        "page": 156
+      }
+    },
+    {
+      "id": "page:157",
+      "kind": "page",
+      "label": "Page 157",
+      "location": {
+        "page": 157
+      }
+    },
+    {
+      "id": "page:158",
+      "kind": "page",
+      "label": "Page 158",
+      "location": {
+        "page": 158
+      }
+    },
+    {
+      "id": "page:159",
+      "kind": "page",
+      "label": "Page 159",
+      "location": {
+        "page": 159
+      }
+    },
+    {
+      "id": "page:160",
+      "kind": "page",
+      "label": "Page 160",
+      "location": {
+        "page": 160
+      }
+    },
+    {
+      "id": "page:161",
+      "kind": "page",
+      "label": "Page 161",
+      "location": {
+        "page": 161
+      }
+    },
+    {
+      "id": "page:162",
+      "kind": "page",
+      "label": "Page 162",
+      "location": {
+        "page": 162
+      }
+    },
+    {
+      "id": "page:163",
+      "kind": "page",
+      "label": "Page 163",
+      "location": {
+        "page": 163
+      }
+    },
+    {
+      "id": "page:164",
+      "kind": "page",
+      "label": "Page 164",
+      "location": {
+        "page": 164
+      }
+    },
+    {
+      "id": "page:165",
+      "kind": "page",
+      "label": "Page 165",
+      "location": {
+        "page": 165
+      }
+    },
+    {
+      "id": "page:166",
+      "kind": "page",
+      "label": "Page 166",
+      "location": {
+        "page": 166
+      }
+    },
+    {
+      "id": "page:167",
+      "kind": "page",
+      "label": "Page 167",
+      "location": {
+        "page": 167
+      }
+    },
+    {
+      "id": "page:168",
+      "kind": "page",
+      "label": "Page 168",
+      "location": {
+        "page": 168
+      }
+    },
+    {
+      "id": "page:169",
+      "kind": "page",
+      "label": "Page 169",
+      "location": {
+        "page": 169
+      }
+    },
+    {
+      "id": "page:170",
+      "kind": "page",
+      "label": "Page 170",
+      "location": {
+        "page": 170
+      }
+    },
+    {
+      "id": "page:171",
+      "kind": "page",
+      "label": "Page 171",
+      "location": {
+        "page": 171
+      }
+    },
+    {
+      "id": "page:172",
+      "kind": "page",
+      "label": "Page 172",
+      "location": {
+        "page": 172
+      }
+    },
+    {
+      "id": "page:173",
+      "kind": "page",
+      "label": "Page 173",
+      "location": {
+        "page": 173
+      }
+    },
+    {
+      "id": "page:174",
+      "kind": "page",
+      "label": "Page 174",
+      "location": {
+        "page": 174
+      }
+    },
+    {
+      "id": "page:175",
+      "kind": "page",
+      "label": "Page 175",
+      "location": {
+        "page": 175
+      }
+    },
+    {
+      "id": "page:176",
+      "kind": "page",
+      "label": "Page 176",
+      "location": {
+        "page": 176
+      }
+    },
+    {
+      "id": "page:177",
+      "kind": "page",
+      "label": "Page 177",
+      "location": {
+        "page": 177
+      }
+    },
+    {
+      "id": "page:178",
+      "kind": "page",
+      "label": "Page 178",
+      "location": {
+        "page": 178
+      }
+    },
+    {
+      "id": "page:179",
+      "kind": "page",
+      "label": "Page 179",
+      "location": {
+        "page": 179
+      }
+    },
+    {
+      "id": "page:180",
+      "kind": "page",
+      "label": "Page 180",
+      "location": {
+        "page": 180
+      }
+    },
+    {
+      "id": "page:181",
+      "kind": "page",
+      "label": "Page 181",
+      "location": {
+        "page": 181
+      }
+    },
+    {
+      "id": "page:182",
+      "kind": "page",
+      "label": "Page 182",
+      "location": {
+        "page": 182
+      }
+    },
+    {
+      "id": "page:183",
+      "kind": "page",
+      "label": "Page 183",
+      "location": {
+        "page": 183
+      }
+    },
+    {
+      "id": "page:184",
+      "kind": "page",
+      "label": "Page 184",
+      "location": {
+        "page": 184
+      }
+    },
+    {
+      "id": "page:185",
+      "kind": "page",
+      "label": "Page 185",
+      "location": {
+        "page": 185
+      }
+    },
+    {
+      "id": "page:186",
+      "kind": "page",
+      "label": "Page 186",
+      "location": {
+        "page": 186
+      }
+    },
+    {
+      "id": "page:187",
+      "kind": "page",
+      "label": "Page 187",
+      "location": {
+        "page": 187
+      }
+    },
+    {
+      "id": "page:188",
+      "kind": "page",
+      "label": "Page 188",
+      "location": {
+        "page": 188
+      }
+    },
+    {
+      "id": "page:189",
+      "kind": "page",
+      "label": "Page 189",
+      "location": {
+        "page": 189
+      }
+    },
+    {
+      "id": "page:190",
+      "kind": "page",
+      "label": "Page 190",
+      "location": {
+        "page": 190
+      }
+    },
+    {
+      "id": "page:191",
+      "kind": "page",
+      "label": "Page 191",
+      "location": {
+        "page": 191
+      }
+    },
+    {
+      "id": "page:192",
+      "kind": "page",
+      "label": "Page 192",
+      "location": {
+        "page": 192
+      }
+    },
+    {
+      "id": "page:193",
+      "kind": "page",
+      "label": "Page 193",
+      "location": {
+        "page": 193
+      }
+    },
+    {
+      "id": "page:194",
+      "kind": "page",
+      "label": "Page 194",
+      "location": {
+        "page": 194
+      }
+    },
+    {
+      "id": "page:195",
+      "kind": "page",
+      "label": "Page 195",
+      "location": {
+        "page": 195
+      }
+    },
+    {
+      "id": "page:196",
+      "kind": "page",
+      "label": "Page 196",
+      "location": {
+        "page": 196
+      }
+    },
+    {
+      "id": "page:197",
+      "kind": "page",
+      "label": "Page 197",
+      "location": {
+        "page": 197
+      }
+    },
+    {
+      "id": "page:198",
+      "kind": "page",
+      "label": "Page 198",
+      "location": {
+        "page": 198
+      }
+    },
+    {
+      "id": "page:199",
+      "kind": "page",
+      "label": "Page 199",
+      "location": {
+        "page": 199
+      }
+    },
+    {
+      "id": "page:200",
+      "kind": "page",
+      "label": "Page 200",
+      "location": {
+        "page": 200
+      }
+    },
+    {
+      "id": "page:201",
+      "kind": "page",
+      "label": "Page 201",
+      "location": {
+        "page": 201
+      }
+    },
+    {
+      "id": "page:202",
+      "kind": "page",
+      "label": "Page 202",
+      "location": {
+        "page": 202
+      }
+    },
+    {
+      "id": "page:203",
+      "kind": "page",
+      "label": "Page 203",
+      "location": {
+        "page": 203
+      }
+    },
+    {
+      "id": "page:204",
+      "kind": "page",
+      "label": "Page 204",
+      "location": {
+        "page": 204
+      }
+    },
+    {
+      "id": "page:205",
+      "kind": "page",
+      "label": "Page 205",
+      "location": {
+        "page": 205
+      }
+    },
+    {
+      "id": "page:206",
+      "kind": "page",
+      "label": "Page 206",
+      "location": {
+        "page": 206
+      }
+    },
+    {
+      "id": "page:207",
+      "kind": "page",
+      "label": "Page 207",
+      "location": {
+        "page": 207
+      }
+    },
+    {
+      "id": "page:208",
+      "kind": "page",
+      "label": "Page 208",
+      "location": {
+        "page": 208
+      }
+    },
+    {
+      "id": "page:209",
+      "kind": "page",
+      "label": "Page 209",
+      "location": {
+        "page": 209
+      }
+    },
+    {
+      "id": "page:210",
+      "kind": "page",
+      "label": "Page 210",
+      "location": {
+        "page": 210
+      }
+    },
+    {
+      "id": "page:211",
+      "kind": "page",
+      "label": "Page 211",
+      "location": {
+        "page": 211
+      }
+    },
+    {
+      "id": "page:212",
+      "kind": "page",
+      "label": "Page 212",
+      "location": {
+        "page": 212
+      }
+    },
+    {
+      "id": "page:213",
+      "kind": "page",
+      "label": "Page 213",
+      "location": {
+        "page": 213
+      }
+    },
+    {
+      "id": "page:214",
+      "kind": "page",
+      "label": "Page 214",
+      "location": {
+        "page": 214
+      }
+    },
+    {
+      "id": "page:215",
+      "kind": "page",
+      "label": "Page 215",
+      "location": {
+        "page": 215
+      }
+    },
+    {
+      "id": "page:216",
+      "kind": "page",
+      "label": "Page 216",
+      "location": {
+        "page": 216
+      }
+    },
+    {
+      "id": "page:217",
+      "kind": "page",
+      "label": "Page 217",
+      "location": {
+        "page": 217
+      }
+    },
+    {
+      "id": "page:218",
+      "kind": "page",
+      "label": "Page 218",
+      "location": {
+        "page": 218
+      }
+    },
+    {
+      "id": "page:219",
+      "kind": "page",
+      "label": "Page 219",
+      "location": {
+        "page": 219
+      }
+    },
+    {
+      "id": "page:220",
+      "kind": "page",
+      "label": "Page 220",
+      "location": {
+        "page": 220
+      }
+    },
+    {
+      "id": "page:221",
+      "kind": "page",
+      "label": "Page 221",
+      "location": {
+        "page": 221
+      }
+    },
+    {
+      "id": "page:222",
+      "kind": "page",
+      "label": "Page 222",
+      "location": {
+        "page": 222
+      }
+    },
+    {
+      "id": "page:223",
+      "kind": "page",
+      "label": "Page 223",
+      "location": {
+        "page": 223
+      }
+    },
+    {
+      "id": "page:224",
+      "kind": "page",
+      "label": "Page 224",
+      "location": {
+        "page": 224
+      }
+    },
+    {
+      "id": "page:225",
+      "kind": "page",
+      "label": "Page 225",
+      "location": {
+        "page": 225
+      }
+    },
+    {
+      "id": "page:226",
+      "kind": "page",
+      "label": "Page 226",
+      "location": {
+        "page": 226
+      }
+    },
+    {
+      "id": "page:227",
+      "kind": "page",
+      "label": "Page 227",
+      "location": {
+        "page": 227
+      }
+    },
+    {
+      "id": "page:228",
+      "kind": "page",
+      "label": "Page 228",
+      "location": {
+        "page": 228
+      }
+    },
+    {
+      "id": "page:229",
+      "kind": "page",
+      "label": "Page 229",
+      "location": {
+        "page": 229
+      }
+    },
+    {
+      "id": "page:230",
+      "kind": "page",
+      "label": "Page 230",
+      "location": {
+        "page": 230
+      }
+    },
+    {
+      "id": "page:231",
+      "kind": "page",
+      "label": "Page 231",
+      "location": {
+        "page": 231
+      }
+    },
+    {
+      "id": "page:232",
+      "kind": "page",
+      "label": "Page 232",
+      "location": {
+        "page": 232
+      }
+    },
+    {
+      "id": "page:233",
+      "kind": "page",
+      "label": "Page 233",
+      "location": {
+        "page": 233
+      }
+    },
+    {
+      "id": "page:234",
+      "kind": "page",
+      "label": "Page 234",
+      "location": {
+        "page": 234
+      }
+    },
+    {
+      "id": "page:235",
+      "kind": "page",
+      "label": "Page 235",
+      "location": {
+        "page": 235
+      }
+    },
+    {
+      "id": "page:236",
+      "kind": "page",
+      "label": "Page 236",
+      "location": {
+        "page": 236
+      }
+    },
+    {
+      "id": "page:237",
+      "kind": "page",
+      "label": "Page 237",
+      "location": {
+        "page": 237
+      }
+    },
+    {
+      "id": "page:238",
+      "kind": "page",
+      "label": "Page 238",
+      "location": {
+        "page": 238
+      }
+    },
+    {
+      "id": "page:239",
+      "kind": "page",
+      "label": "Page 239",
+      "location": {
+        "page": 239
+      }
+    },
+    {
+      "id": "page:240",
+      "kind": "page",
+      "label": "Page 240",
+      "location": {
+        "page": 240
+      }
+    },
+    {
+      "id": "page:241",
+      "kind": "page",
+      "label": "Page 241",
+      "location": {
+        "page": 241
+      }
+    },
+    {
+      "id": "page:242",
+      "kind": "page",
+      "label": "Page 242",
+      "location": {
+        "page": 242
+      }
+    },
+    {
+      "id": "page:243",
+      "kind": "page",
+      "label": "Page 243",
+      "location": {
+        "page": 243
+      }
+    },
+    {
+      "id": "page:244",
+      "kind": "page",
+      "label": "Page 244",
+      "location": {
+        "page": 244
+      }
+    },
+    {
+      "id": "page:245",
+      "kind": "page",
+      "label": "Page 245",
+      "location": {
+        "page": 245
+      }
+    },
+    {
+      "id": "page:246",
+      "kind": "page",
+      "label": "Page 246",
+      "location": {
+        "page": 246
+      }
+    },
+    {
+      "id": "page:247",
+      "kind": "page",
+      "label": "Page 247",
+      "location": {
+        "page": 247
+      }
+    },
+    {
+      "id": "page:248",
+      "kind": "page",
+      "label": "Page 248",
+      "location": {
+        "page": 248
+      }
+    },
+    {
+      "id": "page:249",
+      "kind": "page",
+      "label": "Page 249",
+      "location": {
+        "page": 249
+      }
+    },
+    {
+      "id": "page:250",
+      "kind": "page",
+      "label": "Page 250",
+      "location": {
+        "page": 250
+      }
+    },
+    {
+      "id": "page:251",
+      "kind": "page",
+      "label": "Page 251",
+      "location": {
+        "page": 251
+      }
+    },
+    {
+      "id": "page:252",
+      "kind": "page",
+      "label": "Page 252",
+      "location": {
+        "page": 252
+      }
+    },
+    {
+      "id": "page:253",
+      "kind": "page",
+      "label": "Page 253",
+      "location": {
+        "page": 253
+      }
+    },
+    {
+      "id": "page:254",
+      "kind": "page",
+      "label": "Page 254",
+      "location": {
+        "page": 254
+      }
+    },
+    {
+      "id": "page:255",
+      "kind": "page",
+      "label": "Page 255",
+      "location": {
+        "page": 255
+      }
+    },
+    {
+      "id": "page:256",
+      "kind": "page",
+      "label": "Page 256",
+      "location": {
+        "page": 256
+      }
+    }
+  ],
+  "covered_scope": [
+    "page:28",
+    "page:29"
+  ],
+  "processed_scope": [
+    "page:28",
+    "page:29"
+  ],
+  "usable_scope": [
+    "page:28",
+    "page:29"
+  ],
+  "unprocessed_scope": [
+    "page:1",
+    "page:2",
+    "page:3",
+    "page:4",
+    "page:5",
+    "page:6",
+    "page:7",
+    "page:8",
+    "page:9",
+    "page:10",
+    "page:11",
+    "page:12",
+    "page:13",
+    "page:14",
+    "page:15",
+    "page:16",
+    "page:17",
+    "page:18",
+    "page:19",
+    "page:20",
+    "page:21",
+    "page:22",
+    "page:23",
+    "page:24",
+    "page:25",
+    "page:26",
+    "page:27",
+    "page:30",
+    "page:31",
+    "page:32",
+    "page:33",
+    "page:34",
+    "page:35",
+    "page:36",
+    "page:37",
+    "page:38",
+    "page:39",
+    "page:40",
+    "page:41",
+    "page:42",
+    "page:43",
+    "page:44",
+    "page:45",
+    "page:46",
+    "page:47",
+    "page:48",
+    "page:49",
+    "page:50",
+    "page:51",
+    "page:52",
+    "page:53",
+    "page:54",
+    "page:55",
+    "page:56",
+    "page:57",
+    "page:58",
+    "page:59",
+    "page:60",
+    "page:61",
+    "page:62",
+    "page:63",
+    "page:64",
+    "page:65",
+    "page:66",
+    "page:67",
+    "page:68",
+    "page:69",
+    "page:70",
+    "page:71",
+    "page:72",
+    "page:73",
+    "page:74",
+    "page:75",
+    "page:76",
+    "page:77",
+    "page:78",
+    "page:79",
+    "page:80",
+    "page:81",
+    "page:82",
+    "page:83",
+    "page:84",
+    "page:85",
+    "page:86",
+    "page:87",
+    "page:88",
+    "page:89",
+    "page:90",
+    "page:91",
+    "page:92",
+    "page:93",
+    "page:94",
+    "page:95",
+    "page:96",
+    "page:97",
+    "page:98",
+    "page:99",
+    "page:100",
+    "page:101",
+    "page:102",
+    "page:103",
+    "page:104",
+    "page:105",
+    "page:106",
+    "page:107",
+    "page:108",
+    "page:109",
+    "page:110",
+    "page:111",
+    "page:112",
+    "page:113",
+    "page:114",
+    "page:115",
+    "page:116",
+    "page:117",
+    "page:118",
+    "page:119",
+    "page:120",
+    "page:121",
+    "page:122",
+    "page:123",
+    "page:124",
+    "page:125",
+    "page:126",
+    "page:127",
+    "page:128",
+    "page:129",
+    "page:130",
+    "page:131",
+    "page:132",
+    "page:133",
+    "page:134",
+    "page:135",
+    "page:136",
+    "page:137",
+    "page:138",
+    "page:139",
+    "page:140",
+    "page:141",
+    "page:142",
+    "page:143",
+    "page:144",
+    "page:145",
+    "page:146",
+    "page:147",
+    "page:148",
+    "page:149",
+    "page:150",
+    "page:151",
+    "page:152",
+    "page:153",
+    "page:154",
+    "page:155",
+    "page:156",
+    "page:157",
+    "page:158",
+    "page:159",
+    "page:160",
+    "page:161",
+    "page:162",
+    "page:163",
+    "page:164",
+    "page:165",
+    "page:166",
+    "page:167",
+    "page:168",
+    "page:169",
+    "page:170",
+    "page:171",
+    "page:172",
+    "page:173",
+    "page:174",
+    "page:175",
+    "page:176",
+    "page:177",
+    "page:178",
+    "page:179",
+    "page:180",
+    "page:181",
+    "page:182",
+    "page:183",
+    "page:184",
+    "page:185",
+    "page:186",
+    "page:187",
+    "page:188",
+    "page:189",
+    "page:190",
+    "page:191",
+    "page:192",
+    "page:193",
+    "page:194",
+    "page:195",
+    "page:196",
+    "page:197",
+    "page:198",
+    "page:199",
+    "page:200",
+    "page:201",
+    "page:202",
+    "page:203",
+    "page:204",
+    "page:205",
+    "page:206",
+    "page:207",
+    "page:208",
+    "page:209",
+    "page:210",
+    "page:211",
+    "page:212",
+    "page:213",
+    "page:214",
+    "page:215",
+    "page:216",
+    "page:217",
+    "page:218",
+    "page:219",
+    "page:220",
+    "page:221",
+    "page:222",
+    "page:223",
+    "page:224",
+    "page:225",
+    "page:226",
+    "page:227",
+    "page:228",
+    "page:229",
+    "page:230",
+    "page:231",
+    "page:232",
+    "page:233",
+    "page:234",
+    "page:235",
+    "page:236",
+    "page:237",
+    "page:238",
+    "page:239",
+    "page:240",
+    "page:241",
+    "page:242",
+    "page:243",
+    "page:244",
+    "page:245",
+    "page:246",
+    "page:247",
+    "page:248",
+    "page:249",
+    "page:250",
+    "page:251",
+    "page:252",
+    "page:253",
+    "page:254",
+    "page:255",
+    "page:256"
+  ],
+  "warnings": [
+    "Native text can differ from visible page marks. Compare it with the original page image. Scanned pages may require manual transcription; no OCR is run when viewing.",
+    "Separate numbering or list markers were placed before adjacent same-row text using native geometry. Text and source references are unchanged; verify the associations against the original.",
+    "PDF candidate uses the existing positioned PDFium parser in mapped three-page windows. Ruled-table grids use existing local geometry assembly. Reading order, headings and unruled tables may need manual correction; source page images and complete native evidence are retained. No Requirement classifier, semantic processor, OCR model or external service runs."
+  ],
+  "unresolved": [],
+  "canonical_artifacts": [
+    "pdf-window-0001.pdf",
+    "pdf-native-0001.json",
+    "pdf-page-0028.png",
+    "pdf-page-0029.png",
+    "pdf-order-repairs.json"
+  ],
+  "status": "partial",
+  "review_policy": "human_material_confirmation_required",
+  "requirement_status": "not_connected"
+}

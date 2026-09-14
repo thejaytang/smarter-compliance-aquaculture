@@ -1,0 +1,242 @@
+{
+  "status": "worktree_only_not_merged",
+  "baseline_source": "/Users/tang/Desktop/smarter-compliance-aquaculture",
+  "imported_files": 198,
+  "modified": [
+    {
+      "path": "AGENTS.md",
+      "baseline_sha256": "e5b80784c5a4f0124094c9a4a30e46bfed735cbe405a1b5063ec8b3af6190847",
+      "worktree_sha256": "03640fd7300b9df5f9aff4dd6d3559d07bd82b60a0f67f8d7af8fc1832c60ea8"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/INDEX.md",
+      "baseline_sha256": "5ad6d59f6a1048b0b4b6444abbe903b1cbe72f64eb1647edfa9bd4eded68dc92",
+      "worktree_sha256": "7343fb58c380e19d1ce3f916eed7495b425c270411eb69ddcf3460fff0252632"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/pyproject.toml",
+      "baseline_sha256": "9ee0d00dd096f1c0cce284095321ca3e739963e0e20f3ef47bd1400eb25acb5e",
+      "worktree_sha256": "af7ab07d32ae5806be2e91d37cde794eba7fc8768e78a1af3009f04477e86626"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/uv.lock",
+      "baseline_sha256": "dfdcb1c37b46cd73e28709158edb3973eff203952eec49277c2b3c0c91db9f48",
+      "worktree_sha256": "de4049919fe35a6cedf4fd4188c6e7d8692516e1c2fc0fb551b7901448f6d4cc"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/USER_GUIDE.md",
+      "baseline_sha256": "dfed47ea3e65aec6a55697fbed32bda96b147e6846b4234e1a78c193f51756a3",
+      "worktree_sha256": "ca8f16372897eff8c2fc2c2754dbfff98e05c0624143f6355ac4652f7540c76b"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/PROJECT_STATE.md",
+      "baseline_sha256": "777371e69b7d2015cfcde49fea394b8c6c3b98a2f3eddfa2a9f612f43a8a0cf6",
+      "worktree_sha256": "8185ff29fd87821bd554a41cb420bb320b70d662a182c3c7830f643d7a1ef204"
+    }
+  ],
+  "added": [
+    {
+      "path": "05_Working area of requirements side/system2/config/html-auto.json",
+      "worktree_sha256": "2b819d2143118f7337d1913c896538a2e62fa259733192b053851c79f88ab22d"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/config/html-template.json",
+      "worktree_sha256": "48ce50a95da464d8a186257e075a410064cfe68906d2b36cee68eb6ff1705950"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/config/pdf-intake-local.yaml",
+      "worktree_sha256": "bb19d5f67a2e39f87631a2c389e59779667f7ba6aa5387be970d238ce7bbd6ac"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/config/schemas/html-document-v2.schema.json",
+      "worktree_sha256": "87d15a48d527fc929a56f3e3d06a84f726cf5c28d327320b9b11a8ccbe2c2b32"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/config/schemas/html-structure.schema.json",
+      "worktree_sha256": "1991016718e6088282c882d15baebbbd55d93fa59a3044b1978a1a5fda16dff9"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/config/schemas/source-parse-result.schema.json",
+      "worktree_sha256": "0570aeb1d580e3d0ef84abd8620ff6b1487c9e8b99ff10d528d390bb7ab7cd97"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/config/schemas/source-snapshot.schema.json",
+      "worktree_sha256": "bde1f0b8464997eb0edc1cc24dc5807a28c888836122bc705a50624df9e89c0b"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/contracts/html-document-v2.md",
+      "worktree_sha256": "572aa93f311e411ab39c5511b92a10b5857bd150b42aafe9ecf5a1e2fe5daaca"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/contracts/source-intake.md",
+      "worktree_sha256": "33037de4ce1e62c840a2df7e0ead27328a1a01e4b38fda83e837a383439166e8"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/goals/05-html-parser-completion.md",
+      "worktree_sha256": "c854375dc04cef418afd558d5d3a87a5c66eaa7da4cb833f6d6f8fff435d6475"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/plans/02-source-intake-engineering.md",
+      "worktree_sha256": "9ac4f56819c11777bf823c246ff298c022b367c93ea364b5ee95ac9547acf2ff"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/reports/06-source-intake-engineering.md",
+      "worktree_sha256": "d23e6a975fabc565eca781c0b12ddca3d6762d484359ddb88927023153299db0"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/reports/07-nonpdf-module-regression.md",
+      "worktree_sha256": "9127fd9906022307365c2d2ae525eb5e0bea886be1f157969d206d2ccd0bf750"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/reports/08-html-template-matrix.md",
+      "worktree_sha256": "b808bfc39cbc468c3316d747d63edb9f81efd914260259c8603d38a7fd255ec9"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/reports/09-html-parser-completion.md",
+      "worktree_sha256": "bcf0e4701e2b2ce9550ec7f6900fda7940bd57938a8ad801bbe5d738b86968cf"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/reports/html-matrix-performance-20260907.json",
+      "worktree_sha256": "56cbb996293eb2315a3280db16dc6e5a804617ebea0b2ca05e1ec9788081343a"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/reports/html-source-comparison-20260907.json",
+      "worktree_sha256": "bed03603147f66f1c530613c715afa67656ac7b98317efd7469b3707054c0f4a"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/reports/html-template-matrix-20260907.json",
+      "worktree_sha256": "cd3f69dabaa082070233ffde34acb273f2d669c07855e0ee32d8a35c2052d978"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/reports/html-v2-completion-20260907.json",
+      "worktree_sha256": "a08f34a4d8529eb223bee97807bcb06caf34c896e07fd7ad4e80e8dca061b7e4"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/reports/html-v2-input-exceptions-20260907.json",
+      "worktree_sha256": "8437e541992e5818b414e6db7f98a49aab9bdd4a413c6b8a074f7ade8edf8c53"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/reports/nonpdf-source-comparison-20260907.json",
+      "worktree_sha256": "34529b1704d024bed877c7e77838acb6b463ff38851f16fa9e0e58284ad9dded"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/reports/pdf-adapter-window-20260907.json",
+      "worktree_sha256": "5f88812e12c3dab1ff9a62a67ab14304d966cdcb2626eeabd52d851e30e82c28"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/reports/worktree-import-20260907.json",
+      "worktree_sha256": "d7481e95998955732c0dcbc2468078671ae119a5ff653ecf773b2a0fd48f03f0"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/scripts/audit_html_matrix.py",
+      "worktree_sha256": "99e95a60a7a115e49c0902bb3e1366a333736561de89e7f99727d744536e9094"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/scripts/validate_html_goal.py",
+      "worktree_sha256": "0af1f347271fcae2f2dc6a3f40380b938a45aa09f857ac9a8cc9856c11beea41"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/scripts/verify_source_intake.py",
+      "worktree_sha256": "04335689026b37356d6ae387c2d3f5e674b3d1e729026cfa0c9eb04f2bd64987"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/contracts/html.py",
+      "worktree_sha256": "aeb3f71e46d34b22e6f1234fa2055778a746d4f5d595ff4d3e642a0735938a0b"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/contracts/source.py",
+      "worktree_sha256": "1ed9dbb5922e6a8776996050adca7ae23343fab52a8cc412f05737f785fd2721"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/formats/__init__.py",
+      "worktree_sha256": "421042f438e09bb0a252803a1136f1011e6640a4b234ede6f29e1ba1249df223"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/formats/excel.py",
+      "worktree_sha256": "5743fc2d9989e8f13108ef509aa59af5f0bfc70148c8f9531b4f89c50bfc46a6"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/formats/html.py",
+      "worktree_sha256": "7fcdd2c60c42707840adcbf83feae73f35403eaeea0d6df7dae3392e372f6459"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/formats/html_document.py",
+      "worktree_sha256": "58ab97707fd8cbf3c444c129e43910a4f6e9ad35601eaabc71d7ec896e6ede4e"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/formats/html_profiles.py",
+      "worktree_sha256": "46d5bf69c7cb2fac3e81c1befd32f4e829ab330593bf8d5f256ad33e247e648f"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/formats/html_rules.py",
+      "worktree_sha256": "6310f30f6b56534cfb7c10603d431ed3ab54a86310dc3838f6b63c62d2414968"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/formats/html_tables.py",
+      "worktree_sha256": "f87851a7d38290190f8e4b92af02f336852348a4aba986d72fe036e40c846704"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/formats/pdf.py",
+      "worktree_sha256": "ddb30c6768165e8afb833dfc774434da0f6d4341368d353b796f09d92580d5cb"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/formats/router.py",
+      "worktree_sha256": "97361039f7abe6a503eee2a3049601afbd65277814bdb53958631b52b76ebc48"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/intake/__init__.py",
+      "worktree_sha256": "ea41b6c42e2d3fa8ad78d26ca8978ced06929d4e5c81a0c4682aa4d042ac6c55"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/intake/registry.py",
+      "worktree_sha256": "6332780846fc0ca5843f83099e3dec70d7247bf37e81ddd1bd9f16a9c127eb7f"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/orchestration/source_batch.py",
+      "worktree_sha256": "b11ff9197cfef37e31b91b380062a6609219b1bb0adbc28e9a007a679775bb9f"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/verification/html.py",
+      "worktree_sha256": "42ccc5cb15d56bc6a210c9aa8f7ad6ac1dbd02229e192a106467f0bafcba9278"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/verification/html_tokens.py",
+      "worktree_sha256": "fcf8cae6f1d6179f19a10e48bc8df4dea71b9662ea559aff0b0c115947c77acb"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/contracts/test_html_v2.py",
+      "worktree_sha256": "d6af6517758ec92d392c8b50987ab28cd0e02c33dcd271e45f7dd06afd1a1f89"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/contracts/test_nonpdf_regressions.py",
+      "worktree_sha256": "570710fd565ec915e66c1205aecd33b2ec9f43d65e036689b31f05e8663e3679"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/contracts/test_source_intake.py",
+      "worktree_sha256": "848d1dc586dbd381fb8052c02e32ae2467f541b593f188e479bc0214e001920c"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/fixtures/html/source-manifest-20260907.json",
+      "worktree_sha256": "ee4b4df8a02be42e164858a97e4c9605a9265fb1b370dd73b6b410022d4a17c6"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/fixtures/html/source-windows-20260907.json",
+      "worktree_sha256": "0f351d5e806a7104ee22a99046887dd3c0a85c28ea544c20026a772df3351f6c"
+    }
+  ],
+  "source_drift_since_import": [
+    "README.md",
+    "AGENTS.md",
+    "PROJECT_STATE.md",
+    "05_Working area of requirements side/system2/PROJECT_STATE.md"
+  ],
+  "do_not_copy": [
+    ".venv",
+    "outputs",
+    "root README.md",
+    "root PROJECT_STATE.md",
+    "unchanged imported files"
+  ],
+  "instructions": "Apply only listed deltas after baseline hash checks; merge changed state and AGENTS scope text with newer saved project content. Never replace newer files. Rebuild own environment with uv sync --frozen --extra dev. Preserve runtime evidence separately; this manifest may be included as an additional new file.",
+  "latest_checkpoint": "HTML v2 complete on frozen static scope: 30 valid-body snapshots pass, 7 empty bodies correctly rejected, 10 source windows pass; 75 tests pass with 2 PDF tests deselected. Latest live System1 selection cache missing; no bypass; saved project not written."
+}

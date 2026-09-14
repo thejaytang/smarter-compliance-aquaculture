@@ -1,0 +1,25 @@
+{
+  "tests_run": 1092,
+  "failed": 2,
+  "errors": 0,
+  "skipped": 1,
+  "passed": 1089,
+  "status": "FAIL",
+  "parser_sha256": "ae3745c920366edfb70934e540f2fbe745835ff772a16aa540b751713123388e",
+  "source_test_config_manifest_sha256": "a047271bc4bee062593fd313b347c04a6918aa1ff37d9d1971afd3be5939af09",
+  "source_test_config_unchanged": true,
+  "gold_unchanged": true,
+  "elapsed_seconds": 344.41922783397604,
+  "failures": [
+    {
+      "test": "tests.integration.test_scheme2::test_links_notes_and_real_img2table_route",
+      "message": "TimeoutError: [Errno 60] Operation timed out",
+      "seconds": "169.041"
+    },
+    {
+      "test": "tests.integration.test_scheme3::test_rest_api_and_release_gate",
+      "message": "TimeoutError: [Errno 60] Operation timed out",
+      "seconds": "0.066"
+    }
+  ]
+}

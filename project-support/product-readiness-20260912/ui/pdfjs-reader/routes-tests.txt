@@ -1,0 +1,8 @@
+test_manifest_assets_are_exact_and_versioned (test_pdf_reader_routes.PDFReaderRouteTests.test_manifest_assets_are_exact_and_versioned) ... ok
+test_reader_and_worker_are_usable_with_scoped_local_policy (test_pdf_reader_routes.PDFReaderRouteTests.test_reader_and_worker_are_usable_with_scoped_local_policy) ... ok
+test_unknown_traversal_and_foreign_host_do_not_serve_files (test_pdf_reader_routes.PDFReaderRouteTests.test_unknown_traversal_and_foreign_host_do_not_serve_files) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.518s
+
+OK

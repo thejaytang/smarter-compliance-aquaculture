@@ -1,0 +1,25 @@
+{
+  "source_sha256": "1d2fdae4d0289238e3b6a3f9fb424a096e33deb10df9383e68bbf7f0c43b28b1",
+  "config_hash": "0a86dae0ddc7110290fbf0ec1c2e8302563e084ecbb008783275adbaacd0ab97",
+  "adapter_config_hash": "afa34224b58ec60db3ffd3c48b3476f943228abe48348f6b1b8ffd463a01808f",
+  "original_page_indices": [
+    0
+  ],
+  "backend": "pypdfium2",
+  "version": "5.13.0",
+  "pages": [
+    {
+      "page_index": 0,
+      "width_points": 612.0,
+      "height_points": 792.0,
+      "words": [],
+      "bitmap_boxes_points": [],
+      "characters": [],
+      "text_lines": [],
+      "shapes": [],
+      "bitmap_resources": [],
+      "backend": "pypdfium2",
+      "fallback_reason": null
+    }
+  ]
+}

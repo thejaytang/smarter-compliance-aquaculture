@@ -1,0 +1,312 @@
+- generic [active] [ref=f6e1]:
+  - link "Skip to content" [ref=f6e2] [cursor=pointer]:
+    - /url: "#main"
+  - complementary [ref=f6e3]:
+    - generic [ref=f6e8]:
+      - text: Smarter Compliance
+      - generic [ref=f6e9]: Requirement workbench
+    - navigation "Workspace navigation" [ref=f6e10]:
+      - button "Overview Sources and materials" [ref=f6e11] [cursor=pointer]:
+        - text: Overview
+        - generic [ref=f6e12]: Sources and materials
+      - generic [ref=f6e13]:
+        - button "System1 Source management" [expanded] [ref=f6e14] [cursor=pointer]:
+          - text: System1
+          - generic [aria-hidden] [ref=f6e15]: ⌄
+          - generic [ref=f6e16]: Source management
+        - generic [ref=f6e17]:
+          - button "Pending review" [ref=f6e18] [cursor=pointer]
+          - button "Review history" [ref=f6e19] [cursor=pointer]
+      - generic [ref=f6e20]:
+        - button "Materials Human content review" [expanded] [ref=f6e21] [cursor=pointer]:
+          - text: Materials
+          - generic [aria-hidden] [ref=f6e22]: ⌄
+          - generic [ref=f6e23]: Human content review
+        - generic [ref=f6e99]:
+          - button "Pending materials" [ref=f6e100] [cursor=pointer]
+          - button "Archive" [ref=f6e101] [cursor=pointer]
+      - button "Confidence settings" [ref=f6e24] [cursor=pointer]
+    - generic [ref=f6e25]:
+      - text: Local workspace
+      - button "Exit workbench" [ref=f6e27] [cursor=pointer]
+  - generic [ref=f6e28]:
+    - banner [ref=f6e29]:
+      - generic [ref=f6e30]:
+        - button "Collapse navigation" [expanded] [ref=f6e31] [cursor=pointer]: ☰
+        - heading "Pending materials" [level=1] [ref=f6e102]
+      - button "Runtime starting" [ref=f6e33] [cursor=pointer]
+      - generic [ref=f6e34]:
+        - generic [ref=f6e35]: Current reviewer
+        - generic [ref=f6e36]:
+          - combobox "Current reviewer" [ref=f6e37]:
+            - option "Select a reviewer"
+            - option "Ana Jokic"
+            - option "Daniel Restad"
+            - option "Weijie Tang" [selected]
+          - button "Switch reviewer" [ref=f6e38] [cursor=pointer]
+    - main [ref=f6e39]:
+      - generic [ref=f6e103]:
+        - generic [ref=f6e104]:
+          - generic [ref=f6e105]:
+            - heading "ENGINEERING FIXTURE · HTML water checks" [level=2] [ref=f6e177]
+            - generic [ref=f6e107]: TS001 · TS001-001 · saved revision 4 · Content review complete · Extraction not started
+          - generic [ref=f6e108]:
+            - button "Expand workspace" [ref=f6e109] [cursor=pointer]
+            - button "Materials" [expanded] [ref=f6e110] [cursor=pointer]
+            - button "Reset column widths" [ref=f6e111] [cursor=pointer]
+            - button "Save material" [disabled] [ref=f6e112]
+            - button "Confirm personal content review" [disabled] [ref=f6e178]
+        - status
+        - generic [ref=f6e114]:
+          - generic [ref=f6e179]:
+            - generic [ref=f6e180]:
+              - strong [ref=f6e181]: Coordinator workspace
+              - generic [ref=f6e182]: Spot-check · archived content unchanged
+            - generic [ref=f6e183]:
+              - button "Source review" [ref=f6e184] [cursor=pointer]
+              - button "Import package" [ref=f6e185] [cursor=pointer]
+              - button "Create work package" [ref=f6e186] [cursor=pointer]
+              - button "Export my submission" [ref=f6e187] [cursor=pointer]
+              - button "Review my changes" [ref=f6e188] [cursor=pointer]
+              - button "Submission inbox" [ref=f6e189] [cursor=pointer]
+              - button "View master" [ref=f6e190] [cursor=pointer]
+          - paragraph [ref=f6e191]: Exchange a package file with your colleague. Import preserves a candidate; only coordinator adoption changes the master. Windows recipients open the package in their local workbench.
+        - generic [ref=f6e127]:
+          - complementary "Materials" [ref=f6e128]:
+            - generic [ref=f6e129]:
+              - text: Find a material
+              - searchbox "Find a material" [ref=f6e130]
+            - generic [ref=f6e131]:
+              - heading "Pending materials · 1" [level=4] [ref=f6e192]
+              - button "ENGINEERING FIXTURE · HTML water checks Spot-check pending 2 open spot-check(s)" [ref=f6e193] [cursor=pointer]:
+                - strong [ref=f6e194]: ENGINEERING FIXTURE · HTML water checks
+                - generic [ref=f6e195]: Spot-check pending
+                - generic [ref=f6e196]: 2 open spot-check(s)
+              - button "Spot-check · Weijie Tang · pending" [ref=f6e197] [cursor=pointer]
+              - button "Spot-check · Weijie Tang · pending" [ref=f6e198] [cursor=pointer]
+            - group [ref=f6e139]:
+              - generic "Open a source snapshot" [ref=f6e140] [cursor=pointer]
+              - option "Select source" [selected]
+              - 'option "Public saved original: PA001"'
+              - 'option "Public saved original: CS010"'
+              - option "ENGINEERING FIXTURE · HTML water checks"
+              - option "ENGINEERING FIXTURE · Excel measurements"
+              - option "ENGINEERING FIXTURE · Native, scan and blank PDF"
+          - generic [ref=f6e142]:
+            - generic [ref=f6e143]:
+              - generic [ref=f6e144]:
+                - generic [ref=f6e145]:
+                  - generic [ref=f6e146]: "01"
+                  - heading "Original document" [level=3] [ref=f6e147]
+                  - text: Read-only saved snapshot
+                - button "Extract →" [disabled] [ref=f6e148]
+              - generic [ref=f6e149]:
+                - link "Open original ↗" [ref=f6e199] [cursor=pointer]:
+                  - /url: /api/material/original?id=100ee263961895f64dd57c71d3db8b5c
+                - generic [ref=f6e200]:
+                  - text: Location
+                  - combobox "Location" [ref=f6e201]:
+                    - option "Start of document" [selected]
+                    - 'option "Engineering fixture: water checks 1 Daily record Record the water temperature each morning. Measurem"'
+                    - 'option "Engineering fixture: water checks 1 Daily record Record the water temperature each morning. Measurem"'
+                    - 'option "Engineering fixture: water checks"'
+                    - option "1 Daily record"
+                    - option "Record the water temperature each morning."
+                    - option "Measurements Temperature 12 C"
+                    - option "Measurements"
+                    - option "Measurements"
+                    - option "Temperature 12 C"
+                    - option "Temperature"
+                    - option "12 C"
+                    - option "Keep a note beside each reading."
+                    - option "img"
+                    - option "Supplementary note Retain empty days in the record."
+                    - option "Supplementary note"
+                    - option "Retain empty days in the record."
+                - button "Go" [ref=f6e202] [cursor=pointer]
+                - button "Linked content" [ref=f6e203] [cursor=pointer]
+              - generic [ref=f6e150]:
+                - generic [ref=f6e204]:
+                  - paragraph [ref=f6e205]: Saved HTML · selectable text · external assets omitted.
+                  - group [ref=f6e206]:
+                    - generic "Snapshot display limitations" [ref=f6e207] [cursor=pointer]
+                - iframe [ref=f6e208]
+            - separator "Resize original pane" [ref=f6e152]
+            - generic [ref=f6e153]:
+              - generic [ref=f6e154]:
+                - generic [ref=f6e155]:
+                  - generic [ref=f6e156]: "02"
+                  - heading "Extracted original text" [level=3] [ref=f6e157]
+                  - text: Saved master · read-only
+                - button "Process →" [disabled] [ref=f6e158]
+              - generic [ref=f6e159]:
+                - generic [ref=f6e209]:
+                  - button "History" [ref=f6e210] [cursor=pointer]
+                  - button "Reload saved" [ref=f6e211] [cursor=pointer]
+                - generic [ref=f6e212]:
+                  - generic [ref=f6e213]:
+                    - text: Search all content
+                    - searchbox "Search all content" [ref=f6e214]
+                  - generic [ref=f6e215]:
+                    - text: Chapters
+                    - combobox "Chapters" [ref=f6e216]:
+                      - option "Choose heading" [selected]
+                      - option "ENGINEERING ARCHIVE REVISION"
+                      - option "1 1 Daily record"
+                - paragraph [ref=f6e217]: Read this saved version. Use inline choices in a merge; return to personal work for ordinary edits.
+              - generic [ref=f6e160]:
+                - generic [ref=f6e218]:
+                  - heading "Spot-check · pending" [level=4] [ref=f6e219]
+                  - paragraph [ref=f6e220]: Assigned to Weijie Tang · archived revision 4
+                  - paragraph [ref=f6e221]: ENGINEERING browser-created archive recheck
+                  - paragraph [ref=f6e222]: Checks apply to the selected original ranges. They do not rewrite the archive or confirm the whole material.
+                  - generic [ref=f6e223]:
+                    - checkbox "Complete saved HTML document View original" [ref=f6e224]
+                    - text: Complete saved HTML document
+                    - button "View original" [ref=f6e225] [cursor=pointer]
+                  - generic [ref=f6e226]:
+                    - text: Evidence and exact finding
+                    - textbox "Evidence and exact finding" [ref=f6e227]
+                  - generic [ref=f6e228]:
+                    - checkbox "I checked the displayed ranges against the original and explicitly confirm this result." [ref=f6e229]
+                    - text: I checked the displayed ranges against the original and explicitly confirm this result.
+                  - generic [ref=f6e230]:
+                    - button "Save check progress" [ref=f6e231] [cursor=pointer]
+                    - button "Pass selected checks" [ref=f6e232] [cursor=pointer]
+                    - button "Record a problem" [ref=f6e233] [cursor=pointer]
+                  - group [ref=f6e234]:
+                    - generic "Check history · 0" [ref=f6e235] [cursor=pointer]
+                - group [ref=f6e236]:
+                  - generic "1 affected ranges · 0 prior checks retained" [ref=f6e237] [cursor=pointer]
+                - article [ref=f6e238]:
+                  - generic [ref=f6e239]:
+                    - generic [ref=f6e240]: 1 · heading
+                    - button "Original" [ref=f6e242] [cursor=pointer]
+                  - heading "ENGINEERING ARCHIVE REVISION" [level=4] [ref=f6e243]
+                  - text: original-1f0a0406dfac5d5e
+                - generic [ref=f6e244]:
+                  - text: Machine candidate · Weijie Tang · Human Reviewed
+                  - group [ref=f6e245]:
+                    - generic "Source, version and people" [ref=f6e246] [cursor=pointer]
+                - generic [ref=f6e247]:
+                  - text: Human contribution · Weijie Tang · Human Reviewed
+                  - group [ref=f6e248]:
+                    - generic "Source, version and people" [ref=f6e249] [cursor=pointer]
+                - article [ref=f6e250]:
+                  - generic [ref=f6e251]:
+                    - generic [ref=f6e252]: 2 · heading
+                    - button "Original" [ref=f6e254] [cursor=pointer]
+                  - heading "1 1 Daily record" [level=4] [ref=f6e255]
+                  - text: original-cdf4b53e81d0a2a2
+                - generic [ref=f6e256]:
+                  - text: Machine candidate · Weijie Tang · Human Reviewed
+                  - group [ref=f6e257]:
+                    - generic "Source, version and people" [ref=f6e258] [cursor=pointer]
+                - article [ref=f6e259]:
+                  - generic [ref=f6e260]:
+                    - generic [ref=f6e261]: 3 · text
+                    - button "Original" [ref=f6e263] [cursor=pointer]
+                  - paragraph [ref=f6e264]: Record the water temperature each morning.
+                  - text: original-bfec75a68993d233
+                - generic [ref=f6e265]:
+                  - text: Machine candidate · Weijie Tang · Human Reviewed
+                  - group [ref=f6e266]:
+                    - generic "Source, version and people" [ref=f6e267] [cursor=pointer]
+                - article [ref=f6e268]:
+                  - generic [ref=f6e269]:
+                    - generic [ref=f6e270]: 4 · table
+                    - button "Original" [ref=f6e272] [cursor=pointer]
+                  - paragraph [ref=f6e273]
+                  - generic [ref=f6e274]:
+                    - generic [ref=f6e275]: Rows 1–2 / 2 · columns 1–2 / 2
+                    - button "↑ Rows" [disabled] [ref=f6e276]
+                    - button "↓ Rows" [disabled] [ref=f6e277]
+                    - button "← Columns" [disabled] [ref=f6e278]
+                    - button "Columns →" [disabled] [ref=f6e279]
+                    - generic [ref=f6e280]:
+                      - text: Row
+                      - spinbutton "Row" [ref=f6e281]: "1"
+                    - generic [ref=f6e282]:
+                      - text: Column
+                      - spinbutton "Column" [ref=f6e283]: "1"
+                    - button "Go" [ref=f6e284] [cursor=pointer]
+                  - table [ref=f6e286]:
+                    - rowgroup [ref=f6e287]:
+                      - row [ref=f6e288]:
+                        - columnheader [ref=f6e289]
+                        - columnheader "1" [ref=f6e290]
+                        - columnheader "2" [ref=f6e291]
+                    - rowgroup [ref=f6e292]:
+                      - row [ref=f6e293]:
+                        - rowheader "1" [ref=f6e294]
+                        - cell "Measurements" [ref=f6e295]
+                        - cell [ref=f6e296]
+                      - row [ref=f6e297]:
+                        - rowheader "2" [ref=f6e298]
+                        - cell "Temperature" [ref=f6e299]
+                        - cell "12 C" [ref=f6e300]
+                  - paragraph
+                  - text: 1 merged relationships · edit to inspect their coordinatesoriginal-8fa86dba172a7bff
+                - generic [ref=f6e301]:
+                  - text: Machine candidate · Weijie Tang · Human Reviewed
+                  - group [ref=f6e302]:
+                    - generic "Source, version and people" [ref=f6e303] [cursor=pointer]
+                - article [ref=f6e304]:
+                  - generic [ref=f6e305]:
+                    - generic [ref=f6e306]: 5 · text
+                    - button "Original" [ref=f6e308] [cursor=pointer]
+                  - paragraph [ref=f6e309]: Keep a note beside each reading.
+                  - text: original-f1d4b7e2b12a7653
+                - generic [ref=f6e310]:
+                  - text: Machine candidate · Weijie Tang · Human Reviewed
+                  - group [ref=f6e311]:
+                    - generic "Source, version and people" [ref=f6e312] [cursor=pointer]
+                - article [ref=f6e313]:
+                  - generic [ref=f6e314]:
+                    - generic [ref=f6e315]: 6 · image
+                    - button "Original" [ref=f6e317] [cursor=pointer]
+                  - paragraph [ref=f6e318]: Original image requires source follow-up
+                  - button "Preview original region" [ref=f6e319] [cursor=pointer]
+                  - text: original-9628b46fac38c8a4
+                - generic [ref=f6e320]:
+                  - text: Machine candidate · Weijie Tang · Human Reviewed
+                  - group [ref=f6e321]:
+                    - generic "Source, version and people" [ref=f6e322] [cursor=pointer]
+                - article [ref=f6e323]:
+                  - generic [ref=f6e324]:
+                    - generic [ref=f6e325]: 7 · text
+                    - button "Original" [ref=f6e327] [cursor=pointer]
+                  - paragraph [ref=f6e328]: Supplementary note
+                  - text: original-b0070c19ee139375
+                - generic [ref=f6e329]:
+                  - text: Machine candidate · Weijie Tang · Human Reviewed
+                  - group [ref=f6e330]:
+                    - generic "Source, version and people" [ref=f6e331] [cursor=pointer]
+                - article [ref=f6e332]:
+                  - generic [ref=f6e333]:
+                    - generic [ref=f6e334]: 8 · text
+                    - button "Original" [ref=f6e336] [cursor=pointer]
+                  - paragraph [ref=f6e337]: Retain empty days in the record.
+                  - text: original-4345e497dbcd0c34
+                - generic [ref=f6e338]:
+                  - text: Machine candidate · Weijie Tang · Human Reviewed
+                  - group [ref=f6e339]:
+                    - generic "Source, version and people" [ref=f6e340] [cursor=pointer]
+                - group [ref=f6e341]:
+                  - generic "Whole-material review · 1/1 ranges checked" [ref=f6e342] [cursor=pointer]
+            - separator "Resize requirements pane" [ref=f6e162]
+            - generic [ref=f6e163]:
+              - generic [ref=f6e165]:
+                - generic [ref=f6e166]: "03"
+                - heading "Structured requirements" [level=3] [ref=f6e167]
+                - text: Future form-based review
+              - generic [ref=f6e168]:
+                - generic [ref=f6e169]:
+                  - generic [aria-hidden] [ref=f6e170]: ▤
+                  - heading "Not connected" [level=4] [ref=f6e171]
+                  - paragraph [ref=f6e172]: Structure and processor pending.
+                  - paragraph [ref=f6e173]: The future Process action will use a confirmed content version and selected scope to produce a separate candidate for human review.
+                  - paragraph [ref=f6e174]: Content review can be completed here. Requirement structuring remains unavailable.
+                - group [ref=f6e175]:
+                  - generic "Future connection boundary" [ref=f6e176] [cursor=pointer]
+                - paragraph [ref=f6e344]: Content review complete · Requirement structuring not connected

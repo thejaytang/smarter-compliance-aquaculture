@@ -1,0 +1,16 @@
+{
+  "basis": "Manually selected and inspected source windows before holdout execution; source identity hashes are frozen in source-manifest-20260907.json.",
+  "windows": [
+    {"source_id":"PA002","kind":"table_cell","contains":"Grense mot Russland","purpose":"Annex geographic boundary list retained as table-cell evidence"},
+    {"source_id":"PA047","kind":"table_row","cells":["67-64-1","Aceton","125","295","E",""],"purpose":"Chemical identifier, label, numeric values and empty final cell remain in source order"},
+    {"source_id":"PA024","kind":"heading","text":"Veiledning til § 1","heading_level":4,"purpose":"Guidance heading does not collapse into regulation heading"},
+    {"source_id":"PA025","kind":"heading","text":"1.1 Sammendrag","heading_level":3,"purpose":"Nested guideline heading retained"},
+    {"source_id":"PA026","kind":"paragraph","contains":"For å etablere et anlegg for fiskeoppdrett","purpose":"Guidance body retained even without h1"},
+    {"source_id":"PA027","kind":"navigation","contains":"Hjem","purpose":"Breadcrumb text stays navigation, not a requirement"},
+    {"source_id":"PA043","kind":"heading","text":"1. Bakgrunn for biosikkerhetsplan","heading_level":2,"purpose":"Guide subsection retained outside navigation"},
+    {"source_id":"CS001","kind":"table_row","cells":["V1.0","1 May 2025","1 August 2025","1 May 2027","New document"],"purpose":"Version table cells and dates retain column alignment"},
+    {"source_id":"CS001","kind":"footnote","contains":"UN Fisheries Panel (COFI36)","purpose":"Collapsed embedded footnote body retained"},
+    {"source_id":"CS002","kind":"table_row","cells":["V1.0","1 May 2025","New document – to be used with ASC Farm Standard V1.0"],"purpose":"Interpretation version table remains distinct from farm standard table"}
+  ],
+  "negative_windows": [{"source_id":"PA039","expected_reason":"html_empty_body","observed_source":"<div id=\"documentBody\"></div>"}]
+}

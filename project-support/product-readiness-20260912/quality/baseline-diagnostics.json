@@ -1,0 +1,608 @@
+{
+  "results": [
+    {
+      "id": "asc-farm",
+      "mode": "pdfium-diagnostic",
+      "baseline_equivalent": false,
+      "status": "partial",
+      "types": {
+        "text": 56,
+        "table": 4,
+        "image": 6
+      },
+      "nonempty_text_or_table_cells": 64,
+      "numbered_blocks": 0,
+      "parent_linked_blocks": 0,
+      "warning_count": 2,
+      "unresolved_count": 0,
+      "segment_text_substring_diagnostic": {
+        "found": 13,
+        "denominator": 25,
+        "missing": [
+          {
+            "id": "farm-p028-criterion-1.1",
+            "role": "criterion_heading",
+            "source_text": "1.1 Legal Compliance"
+          },
+          {
+            "id": "farm-p028-rationale",
+            "role": "rationale",
+            "source_text": "Rationale\n\nA legal business complies with applicable laws, licensing, and permit requirements.\n\nA wide variety of laws and regulations apply to aquaculture. Ensuring national laws are followed, and necessary permits and licences are acquired helps to promote a socially and environmentally responsible aquaculture industry. Compliance also benefits a business by enhancing customer trust, increasing revenue, strengthening reputation, and avoiding legal sanctions and fines 4.\n\nThis criterion focuses on the legal compliance of ASC certified farms as the basis of a well-managed business."
+          },
+          {
+            "id": "farm-p028-intent",
+            "role": "other",
+            "source_text": "Intent - The aquaculture industry complies with all applicable legal requirements."
+          },
+          {
+            "id": "farm-p028-r1.1.2-text",
+            "role": "normative_text",
+            "source_text": "The UoC shall comply with all applicable legal requirements, including those relevant to the Criteria within the ASC Farm Standard."
+          },
+          {
+            "id": "farm-p028-footer",
+            "role": "footer",
+            "source_text": "Document Name ASC Farm Standard Document ID ASC-STD-001 Version V1.0.1 Page 28 of 256"
+          },
+          {
+            "id": "farm-p029-criterion-1.2",
+            "role": "criterion_heading",
+            "source_text": "1.2 Management Systems"
+          },
+          {
+            "id": "farm-p029-intent",
+            "role": "other",
+            "source_text": "Intent - The aquaculture industry continuously manages and improves processes to deliver consistent performance against the ASC requirements."
+          },
+          {
+            "id": "farm-p029-r1.2.1-text",
+            "role": "normative_text",
+            "source_text": "The UoC shall develop, implement and maintain a management system to support the implementation of the ASC Requirements that is appropriate to the size and complexity of the UoC."
+          },
+          {
+            "id": "farm-p029-r1.2.2-text",
+            "role": "normative_text",
+            "source_text": "The UoC shall appoint at least one member of management responsible for the implementation of the ASC Requirements."
+          },
+          {
+            "id": "farm-p029-r1.2.3-text",
+            "role": "normative_text",
+            "source_text": "The UoC shall ensure that relevant employees have the necessary skills and training to implement the ASC Requirements."
+          },
+          {
+            "id": "farm-p029-r1.2.4-text",
+            "role": "normative_text",
+            "source_text": "The UoC shall annually review the management system and revise it where necessary to ensure its continued suitability, adequacy and effectiveness in implementing the ASC Requirements."
+          },
+          {
+            "id": "farm-p029-footer",
+            "role": "footer",
+            "source_text": "Document Name ASC Farm Standard Document ID ASC-STD-001 Version V1.0.1 Page 29 of 256"
+          }
+        ],
+        "limitation": "Whitespace-normalized contiguous substring match only. Segments may be fragmented or reordered. Not source coverage recall; denominator completeness and relationships not validated."
+      }
+    },
+    {
+      "id": "asc-interpretation",
+      "mode": "pdfium-diagnostic",
+      "baseline_equivalent": false,
+      "status": "partial",
+      "types": {
+        "text": 149,
+        "table": 2
+      },
+      "nonempty_text_or_table_cells": 153,
+      "numbered_blocks": 0,
+      "parent_linked_blocks": 0,
+      "warning_count": 2,
+      "unresolved_count": 0,
+      "segment_text_substring_diagnostic": {
+        "found": 5,
+        "denominator": 12,
+        "missing": [
+          {
+            "id": "int-1.4.1-text",
+            "role": "normative_text",
+            "source_text": "The UoC shall identify, evaluate and mitigate risks of mixing and substituting ASC certified products with non-certified products at all sites."
+          },
+          {
+            "id": "int-1.4.2-text",
+            "role": "normative_text",
+            "source_text": "The UoC shall develop, implement and maintain a traceability system, covering all sites, to ensure that the following conditions are met: a. only larvae/juveniles that conform with the requirements in Criterion 1.5 are used to produce certified product; and b. all stocked animals are traceable back to the supplier; and c. all batches of ASC certified and non-certified product are identifiable and segregated at all sites and at all times; and d. all batches of ASC certified product are traceable at all times to: o the site(s) used ; and o the production unit(s) used; and e. corrective actions are taken if non-conforming product is identified, sold or dispatched; and f. accompanying documentation shall identify product sold or dispatched as ASC certified or non-certified."
+          },
+          {
+            "id": "int-p19-interpretation",
+            "role": "interpretation",
+            "source_text": "How do I interpret this requirement? The UoC is responsible for ensuring it mitigates risks of substitution and mixing of certified and non-certified products. The UoC may use the Risk Assessment Method outlined in Appendix 3 of the ASC Farm Standard, Section 3.2. Certified and non-certified products shall be identifiable and segregated at all sites and at all times within the UoC. Certified products shall be traceable at all sites and at all times within the UoC."
+          },
+          {
+            "id": "int-p20-context",
+            "role": "interpretation",
+            "source_text": "The UoC may decide to sell products from the UoC as non-certified. In this case, the products shall be identified as non-certified when sold or dispatched. Evidence of implementation should be maintained, e.g. Auditors should confirm. Useful Resources N/A."
+          },
+          {
+            "id": "int-1.4.3-text-p20",
+            "role": "normative_text",
+            "source_text": "The UoC shall demonstrate that feed products, subject to conformance with Indicator 2.12.1, are accompanied by the following information: a. the originating feed mill holds valid certification against the ASC Feed Standard with the appropriate scope of certification in relation to the ASC Production Model (i.e. Mass Balance Production Model or Segregation Production Model product); and b. feed is traceable as ASC-conforming throughout all steps between the feed mill and site; and"
+          },
+          {
+            "id": "int-1.4.3-text-p21",
+            "role": "requirement_continuation",
+            "source_text": "c. documentation accompanying the feed identifies the feed as ASC-conforming; and d. documentation accompanying the feed identifies the production model applied (i.e. Mass Balance Production Model or Segregation Production Model); and e. for ASC-conforming Segregation Production Model feed, the product is identifiable by a distinct feed name in formal documentation accompanying the product and is listed on the schedule to the feed mill certificate."
+          },
+          {
+            "id": "int-p21-context",
+            "role": "interpretation",
+            "source_text": "How do I interpret this requirement? Indicator 2.12.1 requires the UoC to only use ASC-conforming compound feed. Evidence of implementation should be maintained, e.g. Auditors should confirm. Useful Resources N/A."
+          }
+        ],
+        "limitation": "Whitespace-normalized contiguous substring match only. Segments may be fragmented or reordered. Not source coverage recall; denominator completeness and relationships not validated."
+      }
+    },
+    {
+      "id": "asc-audit",
+      "mode": "pdfium-diagnostic",
+      "baseline_equivalent": false,
+      "status": "partial",
+      "types": {
+        "table": 3,
+        "text": 11
+      },
+      "nonempty_text_or_table_cells": 193,
+      "numbered_blocks": 0,
+      "parent_linked_blocks": 0,
+      "warning_count": 2,
+      "unresolved_count": 0,
+      "segment_text_substring_diagnostic": {
+        "found": 48,
+        "denominator": 79,
+        "missing": [
+          {
+            "id": "seg-p001-r111-client",
+            "role": "client_action",
+            "source_text": "a. Maintain digital or hard copies of applicable land and water use laws.\nb. Maintain original (or legalised copies of) lease agreements, land titles, or concession permit on file as applicable.\nc. Keep records of inspections for compliance with national and local laws and regulations (if such inspections are legally required in the country of operation).\nd. Obtain permits and maps showing that the farm does not conflict with national preservation areas."
+          },
+          {
+            "id": "seg-p001-r111-auditor",
+            "role": "auditor_action",
+            "source_text": "A. Review compliance with applicable land and water use laws.\nB. Confirm client holds original (or legalised copies of) lease agreements or land titles.\nC. Review inspection records for compliance with national and local laws and regulations (as applicable).\nD. Verify facility does not conflict with national preservation areas and has required operational permits if sited in such an area (see 2.4.2)."
+          },
+          {
+            "id": "seg-p001-r112-client",
+            "role": "client_action",
+            "source_text": "a. Maintain records of tax payments to appropriate authorities (e.g., land use tax, water use tax, revenue tax). Note that CABs will not disclose confidential tax information unless client is required to or chooses to make it public.\nb. Maintain copies of tax laws for jurisdiction(s) where company operates.\nc. Register with national or local authorities as an “aquaculture activity”."
+          },
+          {
+            "id": "seg-p001-r112-auditor",
+            "role": "auditor_action",
+            "source_text": "A. Verify client has records of tax payments to appropriate authorities. Do not disclose client tax information which is confidential. An independently audited company annual report may be used to confirm tax status.\nB. Confirm client has a basic knowledge of tax requirements for farm.\nC. Verify client is registered with local or national authorities."
+          },
+          {
+            "id": "seg-p001-r113-client",
+            "role": "client_action",
+            "source_text": "a. Maintain copies of national labour codes and laws applicable to farm (scope is restricted to the farm sites within the unit certification.)\nb. Keep records of farm inspections for compliance with national labour laws and codes (only if such inspections are legally required in the country of operation)."
+          },
+          {
+            "id": "seg-p001-r113-auditor",
+            "role": "auditor_action",
+            "source_text": "A. Confirm client has specified documentation.\nB. Review inspection records for compliance with national labour laws and codes (as applicable)."
+          },
+          {
+            "id": "seg-p001-r114-metadata",
+            "role": "normative_text",
+            "source_text": "Indicator: Presence of documents demonstrating compliance with regulations and permits concerning water quality impacts\nRequirement: Yes\nApplicability: All"
+          },
+          {
+            "id": "seg-p001-r114-client",
+            "role": "client_action",
+            "source_text": "a. Obtain permits for water quality impacts where applicable.\nb. Compile list of and comply with all discharge laws or regulations.\nc. Maintain records of monitoring and compliance with discharge laws and regulations as required."
+          },
+          {
+            "id": "seg-p001-r114-auditor",
+            "role": "auditor_action",
+            "source_text": "A. Verify that client obtains permits as applicable.\nB. Review evidence of compliance with discharge laws or regulations.\nC. Verify that records show compliance with discharge laws and regulations."
+          },
+          {
+            "id": "seg-p001-r211-metadata",
+            "role": "normative_text",
+            "source_text": "Indicator: Redox potential or [2] sulphide levels in sediment outside of the Allowable Zone of Effect (AZE) [3], following the sampling methodology outlined in Appendix I-1\nRequirement: Redox potential > 0 mV or Sulphide ≤ 1,500 μMol/L\nApplicability: All farms except as noted in [1]"
+          },
+          {
+            "id": "seg-p001-r211-client",
+            "role": "client_action",
+            "source_text": "a. Prepare a map of the farm showing boundary of AZE and GPS locations of all sediment collections stations.\nb. If benthos throughout the full AZE is hard bottom, provide evidence to the CAB and request an exemption from 2.1.1c-f, 2.1.2 and 2.1.3.\nc. Inform the CAB whether the farm chose option #1 or option #2 to demonstrate compliance with the requirements of the Standard.\nd. Collect sediment samples in accordance with the methodology in Appendix I-1 (i.e., at the time of peak cage biomass and at all required stations).\ne. For option #1, measure and record redox potential (mV) in sediment samples using an appropriate, nationally or internationally recognized testing method.\nf. For option #2, measure and record sulphide concentration (μM) using an appropriate, nationally or internationally recognized testing method.\ng. Submit test results to ASC as per Appendix VI at least once for each production cycle. If site has hard bottom and cannot complete tests, report this to ASC."
+          },
+          {
+            "id": "seg-p001-r211-auditor",
+            "role": "auditor_action",
+            "source_text": "A. Review map to verify appropriate siting of sampling stations (Appendix I-1).\nB. Review evidence of benthic type and confirm whether to proceed to 2.1.1c.\nC. Record which option the client chose.\nD. Review documentary evidence (notes, GPS coordinates) showing sampling time, stations, and frequency. Cross-check against farm maps and harvest records.\nE. Review results to verify that redox potential of sediments complies with the requirement at each sampling station outside the AZE. Confirm that the testing method used by the farm is appropriate.\nF. Review results to verify that sulphide concentration in sediments complies with the Standard at each sampling station outside the AZE. Confirm that the testing method used by the farm is appropriate.\nG. Confirm that client has submitted test results to ASC (Appendix VI)."
+          },
+          {
+            "id": "seg-p002-r212-metadata",
+            "role": "normative_text",
+            "source_text": "Indicator: Faunal index score indicating good [4] to high ecological quality in sediment outside the AZE, following the sampling methodology outlined in Appendix I-1\nRequirement: AZTI Marine Biotic Index (AMBI [5]) score ≤ 3.3, or Shannon-Wiener Index score > 3, or Benthic Quality Index (BQI) score ≥ 15, or Infaunal Trophic Index (ITI) score ≥ 25\nApplicability: All farms except as noted in [1]"
+          },
+          {
+            "id": "seg-p002-r212-client",
+            "role": "client_action",
+            "source_text": "a. Prepare a map showing the AZE and sediment collections stations (see 2.1.1).\nb. Inform the CAB whether the farm chose option #1, #2, #3, or #4 to demonstrate compliance with the requirement.\nc. Collect sediment samples in accordance with Appendix I-1 (see 2.1.1).\nd. For option #1, measure, calculate and record AZTI Marine Biotic Index [5] score of sediment samples using the required method.\ne. For option #2, measure, calculate and record Shannon-Wiener Index score of sediment samples using the required method.\nf. For option #3, measure, calculate and record Benthic Quality Index (BQI) score of sediment samples using the required method.\ng. For option #4, measure, calculate and record Infaunal Trophic Index (ITI) score of sediment samples using the required method.\nh. Retain documentary evidence to show how scores were obtained. If samples were analyzed and index calculated by an independent laboratory, obtain copies of results.\ni. Submit faunal index scores to ASC (Appendix VI) at least once for each production cycle."
+          },
+          {
+            "id": "seg-p002-r212-auditor",
+            "role": "auditor_action",
+            "source_text": "A. Review map to verify appropriate siting of sampling stations (see 2.1.1).\nB. Record which option the client chose for scoring faunal index.\nC. Confirm sample collection followed Appendix I-1 (see 2.1.1).\nD. Review results (as applicable) to verify that AMBI score of sediments is ≤ 3.3 at each sampling station outside the AZE.\nE. Review results (as applicable) to verify that Shannon Wiener score of sediments is > 3 at each sampling station outside the AZE.\nF. Review results (as applicable) to verify that BQI score of sediments is ≥ 15 at each sampling station outside the AZE.\nG. Review results (as applicable) to verify that ITI score of sediments is ≥ 25 at each sampling station outside the AZE.\nH. Confirm that an approved method was used or that a qualified independent laboratory performed the sampling and calculation of faunal index.\nI. Confirm that client submitted faunal index scores to ASC (Appendix VI)."
+          },
+          {
+            "id": "seg-p002-r213-metadata",
+            "role": "normative_text",
+            "source_text": "Indicator: Number of macrofaunal taxa in the sediment within the AZE, following the sampling methodology outlined in Appendix I-1\nRequirement: ≥ 2 highly abundant [6] taxa that are not pollution indicator species\nApplicability: All farms except as noted in [1]"
+          },
+          {
+            "id": "seg-p002-r213-client",
+            "role": "client_action",
+            "source_text": "a. Document appropriate sediment sample collection as for 2.1.1a and 2.1.1c, or exemption as per 2.1.1b.\nb. For sediment samples taken within the AZE, determine abundance and taxonomic composition of macrofauna using an appropriate testing method.\nc. Identify all highly abundant taxa [6] and specify which ones (if any) are pollution indicator species.\nd. Retain documentary evidence to show how taxa were identified and how counts were obtained. If samples were analyzed by an independent lab, obtain copies of results.\ne. Submit counts of macrofaunal taxa to ASC (Appendix VI) at least once for each production cycle."
+          },
+          {
+            "id": "seg-p002-r213-auditor",
+            "role": "auditor_action",
+            "source_text": "A. Confirm appropriate sediment sample collection as for 2.1.1a and 2.1.1c or exemption as per 2.1.1b.\nB. Confirm that an appropriate method was used or that a suitably qualified independent laboratory performed the analysis.\nC. Confirm that all samples from within the AZE have ≥ 2 highly abundant [6] taxa (exclusive of pollution indicator species).\nD. Confirm that a suitable method was used or that a suitability qualified independent laboratory performed the scoring of faunal index.\nE. Confirm that client has submitted scores to ASC (Appendix VI)."
+          },
+          {
+            "id": "seg-p002-r214-metadata",
+            "role": "normative_text",
+            "source_text": "Indicator: Definition of a site-specific AZE based on a robust and credible [7] modelling system\nRequirement: Yes\nApplicability: All farms except as noted in [1]"
+          },
+          {
+            "id": "seg-p002-r214-client",
+            "role": "client_action",
+            "source_text": "a. Undertake an analysis to determine the site-specific AZE and depositional pattern.\nb. Maintain records to show how the analysis (in 2.1.4a) is robust and credible based on modeling using a multi-parameter approach [7].\nc. Maintain records to show that modeling results for the site-specific AZE have been verified with > 6 months of monitoring data."
+          },
+          {
+            "id": "seg-p002-r214-auditor",
+            "role": "auditor_action",
+            "source_text": "A. Review documentation to confirm that the farm has undertaken an analysis before the required date.\nB. Confirm that the farm used a robust and credible modeling system to define the site-specific AZE.\nC. Confirm that farms have validated the general applicability of the site-specific AZE using monitoring data (i.e., 'ground truthing')."
+          },
+          {
+            "id": "seg-p003-r221-client",
+            "role": "client_action",
+            "source_text": "a. Monitor and record on-farm percent saturation of DO at a minimum of twice daily using a calibrated oxygen meter or equivalent method. For first audits, farm records must cover ≥ 6 months.\nb. Provide a written justification for any missed samples or deviations in sampling time.\nc. Calculate weekly average percent saturation based on data.\nd. If any weekly average DO values are < 70%, or approaching that level, monitor and record DO at a reference site and compare to on-farm levels (see Instructions).\ne. Arrange for auditor to witness DO monitoring and calibration while on site.\nf. Submit results from monitoring of average weekly DO as per Appendix VI to ASC at least once per year."
+          },
+          {
+            "id": "seg-p003-r221-auditor",
+            "role": "auditor_action",
+            "source_text": "A. Do not schedule audit until client provides a minimum of 6 months of DO data.\nB. Review records for completeness and conformity with methodology in Appendix 1-4.\nC. Review calculation and confirm all weekly averages ≥ 70%.\nD. As needed, review DO data from reference site and document in the audit report (see instruction).\nE. Witness DO monitoring and verify calibration while on site. On-site values should fall within range of farm data for DO. If an out of range measurement is observed, raise a nonconformity.\nF. Confirm that client has submitted DO results to ASC (Appendix VI)."
+          },
+          {
+            "id": "seg-p003-r222-client",
+            "role": "client_action",
+            "source_text": "a. Calculate the percentage of on-farm samples taken for 2.2.1a that fall under 2 mg/L DO.\nb. Submit results from 2.2.2a as per Appendix VI to ASC at least once per year."
+          },
+          {
+            "id": "seg-p003-r222-auditor",
+            "role": "auditor_action",
+            "source_text": "A. Review the farm's calculation and confirm that ≤ 5% of weekly samples fall under 2 mg/L DO.\nB. Confirm that client has submitted results to ASC (Appendix VI)."
+          },
+          {
+            "id": "seg-p003-r223-metadata",
+            "role": "normative_text",
+            "source_text": "Indicator: For jurisdictions that have national or regional coastal water quality targets [12], demonstration through third-party analysis that the farm is in an area recently [13] classified as having “good” or “very good” water quality [14]\nRequirement: Yes [15]\nApplicability: All farms except as noted in [15]"
+          },
+          {
+            "id": "seg-p003-r223-client",
+            "role": "client_action",
+            "source_text": "a. Inform the CAB whether relevant targets and classification systems are applicable in the jurisdiction. If applicable, proceed to \"2.2.3.b\". If not applicable, take action as required under 2.2.4.\nb. Compile a summary of relevant national or regional water quality targets and classifications, identifying the third-party responsible for the analysis and classification.\nc. Identify the most recent classification of water quality for the area in which the farm operates."
+          },
+          {
+            "id": "seg-p003-r223-auditor",
+            "role": "auditor_action",
+            "source_text": "A. Record whether indicator is applicable.\nB. Confirm that there has been a recent third-party analysis (within two years prior to the audit) to classify areas according to national or regional water quality targets.\nC. Confirm that the analysis and classification shows the farm is located in an area where the water quality complies with the requirement."
+          },
+          {
+            "id": "seg-p003-r224-metadata",
+            "role": "normative_text",
+            "source_text": "Indicator: For jurisdictions without national or regional coastal water quality targets, evidence of monitoring of nitrogen and phosphorous [16] levels on farm and at a reference site, following methodology in Appendix I-5\nRequirement: Consistency with reference site\nApplicability: All farms except as noted in [16]"
+          },
+          {
+            "id": "seg-p003-r224-client",
+            "role": "client_action",
+            "source_text": "a. Develop, implement, and document a monitoring plan for N, NH4, NO3, total P, and ortho-P in compliance with Appendix I-5. For first audits, farm records must cover ≥ 6 months.\nb. Calibrate all equipment according to the manufacturer's recommendations.\nc. Submit data on N and P to ASC as per Appendix VI at least once per year."
+          },
+          {
+            "id": "seg-p003-r224-auditor",
+            "role": "auditor_action",
+            "source_text": "A. Review the farm's monitoring plan and verify that the farm has collected monitoring data for N and P following the methodology in Appendix I-5.\nB. Verify that client calibrates equipment as needed.\nC. Confirm that client has submitted N and P data to ASC (Appendix VI)."
+          }
+        ],
+        "limitation": "Whitespace-normalized contiguous substring match only. Segments may be fragmented or reordered. Not source coverage recall; denominator completeness and relationships not validated."
+      }
+    },
+    {
+      "id": "asc-salmon-cod",
+      "mode": "pdfium-diagnostic",
+      "baseline_equivalent": false,
+      "status": "partial",
+      "types": {
+        "text": 23,
+        "table": 2
+      },
+      "nonempty_text_or_table_cells": 37,
+      "numbered_blocks": 0,
+      "parent_linked_blocks": 0,
+      "warning_count": 2,
+      "unresolved_count": 0,
+      "segment_text_substring_diagnostic": {
+        "found": 20,
+        "denominator": 21,
+        "missing": [
+          {
+            "id": "p018-footer",
+            "role": "footer",
+            "source_text": "Document Name: ASC Salmon and Cod Standard Document ID: ASC-STD-010 Date issued: 13/10/2025 Document Owner: Director of Standards and Science Version: 1.5 Last reviewed: 13/10/2025 Classification: EXTERNAL (PUBLIC) Page 18 of 134"
+          }
+        ],
+        "limitation": "Whitespace-normalized contiguous substring match only. Segments may be fragmented or reordered. Not source coverage recall; denominator completeness and relationships not validated."
+      }
+    },
+    {
+      "id": "borderless-merged-figure",
+      "mode": "pdfium-diagnostic",
+      "baseline_equivalent": false,
+      "status": "candidate_available",
+      "types": {
+        "text": 15,
+        "table": 1
+      },
+      "nonempty_text_or_table_cells": 16,
+      "numbered_blocks": 0,
+      "parent_linked_blocks": 0,
+      "warning_count": 2,
+      "unresolved_count": 0,
+      "synthetic_expectations": {
+        "block_types": {
+          "heading": 1,
+          "paragraph": 1,
+          "table": 1,
+          "figure": 1
+        },
+        "heading_levels": [
+          1
+        ],
+        "cells": [
+          "Combined category",
+          "Item",
+          "Low",
+          "High",
+          "Alpha",
+          "2",
+          "8",
+          "Beta",
+          "3",
+          "9"
+        ],
+        "critical_spans": [
+          "2",
+          "2",
+          "8",
+          "3",
+          "9",
+          "3",
+          "1"
+        ],
+        "missing_critical_literals": [],
+        "limitation": "Literal presence ignores position, duplicates and context. Not critical-content fidelity acceptance."
+      }
+    },
+    {
+      "id": "born-digital-multicolumn",
+      "mode": "pdfium-diagnostic",
+      "baseline_equivalent": false,
+      "status": "candidate_available",
+      "types": {
+        "text": 8,
+        "table": 1
+      },
+      "nonempty_text_or_table_cells": 14,
+      "numbered_blocks": 0,
+      "parent_linked_blocks": 0,
+      "warning_count": 2,
+      "unresolved_count": 0,
+      "synthetic_expectations": {
+        "block_types": {
+          "heading": 1,
+          "paragraph": 6,
+          "table": 1
+        },
+        "heading_levels": [
+          1
+        ],
+        "cells": [
+          "Item",
+          "Limit",
+          "A",
+          "5 mg",
+          "B",
+          "7 mg"
+        ],
+        "critical_spans": [
+          "1",
+          "5",
+          "mg",
+          "2026-08-25",
+          "shall",
+          "10",
+          "mg",
+          "must",
+          "not",
+          "7",
+          "mg",
+          "1",
+          "2",
+          "5",
+          "mg",
+          "7",
+          "mg",
+          "1"
+        ],
+        "missing_critical_literals": [],
+        "limitation": "Literal presence ignores position, duplicates and context. Not critical-content fidelity acceptance."
+      }
+    },
+    {
+      "id": "cross-page-content",
+      "mode": "pdfium-diagnostic",
+      "baseline_equivalent": false,
+      "status": "candidate_available",
+      "types": {
+        "text": 5,
+        "table": 2
+      },
+      "nonempty_text_or_table_cells": 21,
+      "numbered_blocks": 0,
+      "parent_linked_blocks": 0,
+      "warning_count": 2,
+      "unresolved_count": 0,
+      "synthetic_expectations": {
+        "block_types": {
+          "heading": 1,
+          "paragraph": 1,
+          "table": 1
+        },
+        "heading_levels": [
+          1
+        ],
+        "cells": [
+          "Item",
+          "Min",
+          "Max",
+          "A",
+          "1",
+          "5",
+          "B",
+          "2",
+          "8",
+          "C",
+          "3",
+          "9"
+        ],
+        "critical_spans": [
+          "2",
+          "1",
+          "5",
+          "2",
+          "8",
+          "3",
+          "9",
+          "2"
+        ],
+        "missing_critical_literals": [],
+        "limitation": "Literal presence ignores position, duplicates and context. Not critical-content fidelity acceptance."
+      }
+    },
+    {
+      "id": "scanned-critical",
+      "mode": "pdfium-diagnostic",
+      "baseline_equivalent": false,
+      "status": "candidate_available",
+      "types": {
+        "image": 1
+      },
+      "nonempty_text_or_table_cells": 0,
+      "numbered_blocks": 0,
+      "parent_linked_blocks": 0,
+      "warning_count": 3,
+      "unresolved_count": 0,
+      "synthetic_expectations": {
+        "block_types": {
+          "heading": 1,
+          "paragraph": 3
+        },
+        "heading_levels": [
+          1
+        ],
+        "cells": [],
+        "critical_spans": [
+          "shall",
+          "0.01",
+          "mg",
+          "must",
+          "not",
+          "0.02",
+          "mg",
+          "2027-12-31"
+        ],
+        "missing_critical_literals": [
+          "shall",
+          "0.01",
+          "mg",
+          "must",
+          "not",
+          "0.02",
+          "mg",
+          "2027-12-31"
+        ],
+        "limitation": "Literal presence ignores position, duplicates and context. Not critical-content fidelity acceptance."
+      }
+    },
+    {
+      "id": "pa002-html",
+      "mode": "before-guarded",
+      "baseline_equivalent": true,
+      "status": "candidate_available",
+      "types": {
+        "image": 15,
+        "text": 197,
+        "heading": 44,
+        "table": 117
+      },
+      "nonempty_text_or_table_cells": 505,
+      "numbered_blocks": 1,
+      "parent_linked_blocks": 364,
+      "warning_count": 2,
+      "unresolved_count": 0
+    },
+    {
+      "id": "cs001-html",
+      "mode": "before-guarded",
+      "baseline_equivalent": true,
+      "status": "candidate_available",
+      "types": {
+        "image": 1949,
+        "text": 13647,
+        "heading": 461,
+        "table": 48
+      },
+      "nonempty_text_or_table_cells": 15080,
+      "numbered_blocks": 112,
+      "parent_linked_blocks": 16027,
+      "warning_count": 9,
+      "unresolved_count": 0
+    },
+    {
+      "id": "globalgap-xlsx",
+      "mode": "before-guarded",
+      "baseline_equivalent": true,
+      "status": "candidate_available",
+      "types": {
+        "heading": 6,
+        "table": 10
+      },
+      "nonempty_text_or_table_cells": 4400,
+      "numbered_blocks": 0,
+      "parent_linked_blocks": 10,
+      "warning_count": 2,
+      "unresolved_count": 0,
+      "independent_cell_correspondence": {
+        "denominator": 128,
+        "nonempty_denominator": 113,
+        "empty_denominator": 15,
+        "exact_unique": 128,
+        "mismatches": [],
+        "duplicate_cells": [],
+        "scope": "CL - IFA v6 Smart - AQ!A9:H24",
+        "trust": "source-only openpyxl inventory frozen before parser; no business or visual acceptance"
+      }
+    }
+  ],
+  "acceptance": "UNMEASURED: no independently validated complete source-unit/structure/Requirement denominators or untouched holdout"
+}

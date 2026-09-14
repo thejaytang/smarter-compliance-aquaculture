@@ -1,0 +1,15 @@
+{
+  "workbench_python": {
+    "passed": 164,
+    "failed": 0,
+    "exit_code": 0
+  },
+  "frontend": {
+    "passed": 184,
+    "failed": 0,
+    "exit_code": 0
+  },
+  "changed_since_freeze": [],
+  "scope": "Reader recovery only; no automatic-quality work or business state writes.",
+  "proxy_closed": true
+}

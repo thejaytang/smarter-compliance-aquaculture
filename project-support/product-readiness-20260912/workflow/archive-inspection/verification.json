@@ -1,0 +1,165 @@
+[
+  {
+    "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/personal/f362919a-07e7-44b9-bd17-a8c2799fbfc7/workflow.sqlite",
+    "material_tables": {
+      "material_documents": {
+        "before": 1,
+        "after": 1,
+        "identical": true
+      },
+      "material_revisions": {
+        "before": 5,
+        "after": 5,
+        "identical": true
+      },
+      "material_receipts": {
+        "before": 2,
+        "after": 2,
+        "identical": true
+      },
+      "material_candidates": {
+        "before": 0,
+        "after": 0,
+        "identical": true
+      },
+      "material_conflicts": {
+        "before": 0,
+        "after": 0,
+        "identical": true
+      },
+      "material_read_schema": {
+        "before": 1,
+        "after": 1,
+        "identical": true
+      },
+      "material_candidate_index": {
+        "before": 0,
+        "after": 0,
+        "identical": true
+      },
+      "material_read_index": {
+        "before": 1,
+        "after": 1,
+        "identical": true
+      },
+      "material_revision_index": {
+        "before": 5,
+        "after": 5,
+        "identical": true
+      },
+      "material_collaboration_evidence": {
+        "before": 0,
+        "after": 0,
+        "identical": true
+      }
+    }
+  },
+  {
+    "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/system2-workflow/workflow.sqlite",
+    "material_tables": {
+      "material_documents": {
+        "before": 1,
+        "after": 1,
+        "identical": true
+      },
+      "material_revisions": {
+        "before": 3,
+        "after": 3,
+        "identical": true
+      },
+      "material_receipts": {
+        "before": 0,
+        "after": 0,
+        "identical": true
+      },
+      "material_candidates": {
+        "before": 0,
+        "after": 0,
+        "identical": true
+      },
+      "material_conflicts": {
+        "before": 0,
+        "after": 0,
+        "identical": true
+      },
+      "material_read_schema": {
+        "before": 1,
+        "after": 1,
+        "identical": true
+      },
+      "material_candidate_index": {
+        "before": 0,
+        "after": 0,
+        "identical": true
+      },
+      "material_read_index": {
+        "before": 1,
+        "after": 1,
+        "identical": true
+      },
+      "material_revision_index": {
+        "before": 3,
+        "after": 3,
+        "identical": true
+      },
+      "material_collaboration_evidence": {
+        "before": 0,
+        "after": 0,
+        "identical": true
+      }
+    }
+  },
+  {
+    "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/workbench.sqlite",
+    "material_tables": {},
+    "changed_existing_objects": [
+      {
+        "kind": "material_inspection",
+        "key": "ee404554-d1d0-4c6b-bf5e-32ea8e5c7e3f"
+      }
+    ],
+    "inspection_tasks": [
+      {
+        "archive_content_revision": 1,
+        "archive_key": "f41a1b4a2f3b01389cb5734714d1f4a8a79702268640bf69ae8d931e72f29c6e",
+        "archive_revision": 2,
+        "assignee": "Weijie Tang",
+        "at": "2026-09-12T21:18:33.892809+00:00",
+        "checked_scope": [],
+        "created_by": "Weijie Tang",
+        "history": [
+          {
+            "action": "save",
+            "actor": "Weijie Tang",
+            "at": "2026-09-13T17:52:03.991938+00:00",
+            "checked_scope": [],
+            "note": "ENGINEERING ONLY: archive revision 2 reopened in the isolated reviewer workspace. Progress note saved without certifying the complete HTML range. Remaining: inspect the selected original range before an explicit pass or finding decision.",
+            "revision": 1,
+            "target_revision": 2
+          },
+          {
+            "action": "finding",
+            "actor": "Weijie Tang",
+            "at": "2026-09-13T17:53:20.996435+00:00",
+            "checked_scope": [],
+            "note": "ENGINEERING ONLY: archive revision 2, complete saved HTML, first image block (Lovdata-logo). The original reader explicitly reports \"Image unavailable in offline snapshot: Lovdata-logo\". Retain the missing-resource limitation for review; this is a reader-resource finding, not a claim about legal text accuracy. The complete HTML range has not been certified.",
+            "revision": 2,
+            "target_revision": 2
+          }
+        ],
+        "id": "ee404554-d1d0-4c6b-bf5e-32ea8e5c7e3f",
+        "material_id": "c77051372ee15f7b6ab15b44faa0658c",
+        "note": "ENGINEERING ONLY: archive revision 2, complete saved HTML, first image block (Lovdata-logo). The original reader explicitly reports \"Image unavailable in offline snapshot: Lovdata-logo\". Retain the missing-resource limitation for review; this is a reader-resource finding, not a claim about legal text accuracy. The complete HTML range has not been certified.",
+        "progress_target_revision": 2,
+        "reason": "ENGINEERING ONLY: verify archive persistence and follow-up recovery in the isolated fixture.",
+        "revision": 2,
+        "scope": [
+          "html:document"
+        ],
+        "source_hash": "8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967",
+        "status": "finding_open",
+        "title": "Public saved original: PA001"
+      }
+    ]
+  }
+]

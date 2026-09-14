@@ -1,0 +1,43 @@
+precision_review:
+  enabled: false
+  mode: conflicts_only
+  backend: enhanced_ocr
+  model_name: PaddleOCR-VL-1.6
+  auto_resolve_confidence: 0.96
+  crop_scale: 3.0
+
+# The ASC source contains reliable native text. This bounded production run
+# therefore avoids Paddle's unrelated transformers/modelscope import chain and
+# combines visual OCR with native geometry plus document-profile repair.
+ocr:
+  backend: tesseract
+  language: eng
+
+layout:
+  backend: heuristic
+  min_confidence: 0.35
+
+tables:
+  backend: opencv
+  recognition_pipeline_enabled: false
+  img2table_enabled: true
+  gmft_enabled: false
+
+figures:
+  preserve_original_crop: true
+  figure_ocr: true
+  visual_understanding: false
+
+# The production ASC manual has 511 pages. The default one-hour safety limit is
+# appropriate for ordinary inputs but too short for this explicit full run.
+security:
+  processing_timeout_seconds: 86400
+  # The 511-page ASC run crossed the ordinary 8 GiB peak-RSS gate at page 435.
+  # Keep this production-run override below the 16 GiB host's safety boundary.
+  max_memory_mb: 10240
+
+# Paddle on Apple Silicon is CPU-only in this environment. Two isolated page
+# workers provide stable OCR/Layout parallelism within the 16 GiB memory limit.
+runtime:
+  page_workers: 2
+  batch_size: 1

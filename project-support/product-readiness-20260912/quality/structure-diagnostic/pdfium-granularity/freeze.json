@@ -1,0 +1,22 @@
+{
+  "scope": "Only fixed Farm original page 28 (zero-based 27), derivative index 0 of the existing frozen two-page window; no reserved input.",
+  "page_index": 27,
+  "derivative_page_index": 0,
+  "files": {
+    "system2/data/inputs/ASC-STD-001-ASC-Farm-Standard-V1.0.1-Aug-2025.pdf": "3b0cdf01f72b518710d5af9c1d8ccaa653c381f45053c7b20a102e06c1de4b20",
+    "project-support/product-readiness-20260912/quality/structure-diagnostic/native-assembly-comparison/run-2/asc-farm-pdfium/pdf-window-0001.pdf": "21ffa94b10e379169fd618cbc354a19b188f3c7fe732193dd65f0bd9a80ffa08",
+    "project-support/product-readiness-20260912/quality/structure-diagnostic/native-assembly-comparison/run-2/asc-farm-pdfium/pdf-native-0001.json": "337a84fdd923cc75a94c557828077a71e0d664dae4d99539c51152bab3f9ab5b",
+    "project-support/product-readiness-20260912/quality/structure-diagnostic/pdfium-granularity/probe.py": "fe80142ba8dc1036219011d19b1fff0cded9f8f5f3cb254c919be44dc09a7291",
+    "system2/src/pdf_extraction/ingest/native_extractor.py": "600c4368acebd0f18b533c491118b64dfc74c9bf57a1a81b99a5d2accf1d63f5",
+    "system2/src/pdf_extraction/types.py": "4505aba348e328ff59a079e47c86bfeaf1971ad8cb9cd3118ab20dd6be3adc00",
+    "system2/config/pdf-intake-positioned.yaml": "046cc0b932a113c9cedd543770bf402abccfe1afc465943c74066fb54dc52776",
+    "system2/.venv/lib/python3.12/site-packages/pypdfium2/_helpers/textpage.py": "d2203ee45dd869063d1d260350b23e3393acc0728238f95dfc303fb8ccb9a2a8",
+    "system2/.venv/lib/python3.12/site-packages/pypdfium2_raw/bindings.py": "0056dc7b23a5659d3fee49f758e0249ed66b78e180907ba49218c5ceecb99fb8",
+    "system2/uv.lock": "de4049919fe35a6cedf4fd4188c6e7d8692516e1c2fc0fb551b7901448f6d4cc"
+  },
+  "rules": "Native character order retained; existing adapter line splitting reproduced exactly; tokens only partition each original line by Unicode whitespace without replacing text. Native typography is evidence, never a heading correctness verdict.",
+  "backend": "pypdfium2",
+  "pypdfium2_version": "5.13.0",
+  "external_models": false,
+  "ocr": false
+}

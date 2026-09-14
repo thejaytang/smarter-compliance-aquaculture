@@ -1,0 +1,36 @@
+{
+  "at": "2026-09-13T21:07:05.863Z",
+  "candidate": "local-delivery-rc1",
+  "url": "http://127.0.0.1:58814/",
+  "method": "Native Chrome View > Zoom In, then native application shortcuts; no viewport override",
+  "baseline": {
+    "width": 1470,
+    "height": 779,
+    "dpr": 2
+  },
+  "native200": "The following is a diff from the previous accessibility tree for Window: \"Smarter Compliance · Requirement Workbench\" with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.\n~\t\t68 container 缩放比例：200%\n~\t\t\t\t\t71 container 缩放比例：200%\n~\t\t\t\t\t42 按钮 缩放比例：200%",
+  "zoom200": {
+    "dpr": 4,
+    "height": 389,
+    "scale": 1,
+    "width": 735
+  },
+  "restored": {
+    "dpr": 2,
+    "height": 779,
+    "scale": 1,
+    "width": 1470
+  },
+  "checks": [
+    "Open isolated TS002",
+    "Expand workspace and switch original/content panes",
+    "Read original B3=12",
+    "Edit reviewer B3 back to exact existing 13 and save",
+    "Saved personal revision 4, no confirmation",
+    "Confirm dialog communicates unchecked scope and disables completion",
+    "Keyboard focus scrolls Close into view; cancel without confirming",
+    "Reload saved retains cell, notes and unconfirmed state",
+    "Exit expanded view"
+  ],
+  "product_changes": false
+}

@@ -1,0 +1,6 @@
+{
+  "reason": "New failure retained; no retry, resource repair or product edit.",
+  "sample": "asc-farm",
+  "backend": "docling",
+  "receipt": "asc-farm-docling-receipt.json"
+}

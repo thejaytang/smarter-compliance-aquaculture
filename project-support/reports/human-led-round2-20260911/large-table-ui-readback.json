@@ -1,0 +1,16 @@
+{
+  "source": "TS005",
+  "current_revision": 5,
+  "comparison_revision": 3,
+  "block_count": 204,
+  "changed_cells": [
+    {
+      "block": "block-ad8b0b19052ee170aac72a12",
+      "row_index": 99,
+      "column_index": 29,
+      "before": "R20000C30",
+      "after": "R20000C30 [ENGINEERING UI WINDOW EDIT] [UNSAVED IDB RECOVERY]"
+    }
+  ],
+  "other_blocks_unchanged": true
+}

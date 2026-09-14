@@ -1,0 +1,45 @@
+1 affected ranges · 0 prior checks retained
+Retained extraction limitations
+1 · text
+Original
+Edit
+
+ENGINEERING FIXTURE: native page
+
+Page 1
+Machine candidate · Machine Unreviewed
+Source, version and people
+2 · text
+Original
+Edit
+
+Inspect this selectable original sentence.
+
+Page 1
+Machine candidate · Machine Unreviewed
+Source, version and people
+3 · image
+Original
+Edit
+
+SCANNED ORIGINAL FIXTURE
+Manual transcription: water checked daily.
+[ENGINEERING LOCK-RETRY: input retained]
+
+Preview original region
+Page 2
+Machine candidate · Machine Unreviewed
+Source, version and people
+Human contribution · Weijie Tang · Human Unreviewed
+Source, version and people
+Human contribution · Weijie Tang · Human Unreviewed
+Source, version and people
+4 · image
+Original
+Edit
+
+Preview original region
+Page 3
+Machine candidate · Machine Unreviewed
+Source, version and people
+Whole-material review · 0/3 ranges checked

@@ -1,0 +1,40 @@
+{
+  "recorded_at": "2026-09-12T15:19:16.168016+00:00",
+  "url": "http://127.0.0.1:62742/",
+  "instance": "FWpqXGXVk0K4q89wCEAusMBDXdZj0Vu2",
+  "parent_source_changes": [],
+  "scope": "Actual Chrome read-only normal-service loading verification. No source/material opened, saved, extracted, adopted, confirmed or exported. Existing named session reused without actor mutation.",
+  "homepage_loaded": true,
+  "materials_entry_loaded": true,
+  "material_count_display": 0,
+  "collaboration_toolbar": [
+    "Source review",
+    "Import package",
+    "Create work package",
+    "Export my submission",
+    "Review my changes",
+    "Submission inbox"
+  ],
+  "toolbar_state": "Coordinator workspace / Personal work · master unchanged",
+  "disabled_controls": [
+    "Save material",
+    "Confirm content review",
+    "Extract",
+    "Process"
+  ],
+  "third_pane": "Not connected",
+  "javascript_console": {
+    "messages": 0,
+    "errors": 0,
+    "warnings": 0
+  },
+  "requests": {
+    "captured": 60,
+    "all_get": true,
+    "post_count": 0,
+    "failed_requests": [],
+    "artifact": "normal-browser-requests.txt"
+  },
+  "screenshots": "Not captured to avoid unnecessary normal source metadata in images.",
+  "result": "PASS"
+}

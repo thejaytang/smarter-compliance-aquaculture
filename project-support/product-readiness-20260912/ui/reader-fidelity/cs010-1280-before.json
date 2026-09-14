@@ -1,0 +1,69 @@
+{
+  "elements": [
+    {
+      "clientHeight": 430,
+      "height": 430.203125,
+      "naturalWidth": 0,
+      "scrollHeight": 430,
+      "selector": ".mw-original",
+      "width": 294,
+      "x": 397,
+      "y": 276.796875
+    },
+    {
+      "clientHeight": 171,
+      "height": 172,
+      "naturalWidth": 0,
+      "scrollHeight": 171,
+      "selector": "#mw-original-toolbar",
+      "width": 294,
+      "x": 397,
+      "y": 421.390625
+    },
+    {
+      "clientHeight": 114,
+      "height": 113.609375,
+      "naturalWidth": 0,
+      "scrollHeight": 420,
+      "selector": "#mw-reader",
+      "width": 294,
+      "x": 397,
+      "y": 593.390625
+    },
+    {
+      "clientHeight": 104,
+      "height": 105,
+      "naturalWidth": 0,
+      "scrollHeight": 104,
+      "selector": ".mw-reader-notice",
+      "width": 294,
+      "x": 397,
+      "y": 593.390625
+    },
+    {
+      "clientHeight": 220,
+      "height": 220,
+      "naturalWidth": 0,
+      "scrollHeight": 406,
+      "selector": ".mw-pdf-image-scroll",
+      "width": 294,
+      "x": 397,
+      "y": 698.390625
+    },
+    {
+      "clientHeight": 382,
+      "height": 381.8671875,
+      "naturalWidth": 893,
+      "scrollHeight": 382,
+      "selector": ".mw-pdf-page-image",
+      "width": 270,
+      "x": 409,
+      "y": 710.390625
+    }
+  ],
+  "viewport": {
+    "dpr": 2,
+    "height": 720,
+    "width": 1280
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "started_utc": "2026-09-13T11:29:52.120534+00:00",
+  "command": [
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/bin/python",
+    "-X",
+    "importtime",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/quality/structure-diagnostic/native-assembly-comparison/import-only/observe_import.py"
+  ],
+  "cwd": "/var/folders/dk/jbvn7jd14gzgqn3x0369j4m80000gn/T/smarter-docling-import-3hdv4z46",
+  "guard_seconds": 300,
+  "snapshot_seconds": 30,
+  "environment_overrides": {
+    "PYTHONPATH": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/src",
+    "TMPDIR": "/var/folders/dk/jbvn7jd14gzgqn3x0369j4m80000gn/T/smarter-docling-import-3hdv4z46",
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "HF_HOME": "/var/folders/dk/jbvn7jd14gzgqn3x0369j4m80000gn/T/smarter-docling-import-3hdv4z46/hf",
+    "XDG_CACHE_HOME": "/var/folders/dk/jbvn7jd14gzgqn3x0369j4m80000gn/T/smarter-docling-import-3hdv4z46/cache",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "files": {
+    "project-support/product-readiness-20260912/quality/structure-diagnostic/native-assembly-comparison/import-only/observe_import.py": "3ae0bffde34c94617ac763dacd2baee9367fae819d6f56579c4088029fbc227a",
+    "project-support/product-readiness-20260912/quality/structure-diagnostic/native-assembly-comparison/import-only/run.py": "ef6851caabd10151a75e5ad68ca3ba72c4cc38ed6577eeb0a6ce1497d4224cf2",
+    "system2/pyproject.toml": "af7ab07d32ae5806be2e91d37cde794eba7fc8768e78a1af3009f04477e86626",
+    "system2/uv.lock": "de4049919fe35a6cedf4fd4188c6e7d8692516e1c2fc0fb551b7901448f6d4cc",
+    "system2/src/pdf_extraction/orchestration/material_parser.py": "3696f3aab5aff829e7247418bd0b22cec1b5f3008c6419ac842f67ff7c38bce2",
+    "system2/src/pdf_extraction/ingest/native_extractor.py": "600c4368acebd0f18b533c491118b64dfc74c9bf57a1a81b99a5d2accf1d63f5",
+    "system2/.venv/pyvenv.cfg": "e47939d7c5e6c63d88dc2e4be0955558c384ca9830e52f564150bb7b1f1d7b8d",
+    "system2/.venv/lib/python3.12/site-packages/docling_parse/__init__.py": "4278323e73d8f4f5c4233e6e34f4f65e50c4e0b2f5f2a08baef07d211bd9aa58",
+    "system2/.venv/lib/python3.12/site-packages/docling_parse/pdf_parser.py": "d2f4733dd3b32010c88cddaaf8eaba2004ffb286d9dc609867a09a0e60538c85"
+  },
+  "boundary": "Import actual docling_parse.pdf_parser symbol only; no instantiation, PDF read, parse, API app, model, binary copy, environment repair or package installation."
+}

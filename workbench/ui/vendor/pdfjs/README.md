@@ -1,0 +1,7 @@
+# Bundled PDF.js
+
+Pinned upstream package: `pdfjs-dist` **6.3.289**, Mozilla PDF.js, Apache-2.0. This directory contains exact selected distribution files, not a fork. [manifest.json](manifest.json) records the npm tarball URL, SHA-512 integrity and per-file SHA-256. Upstream licenses for fonts, CMaps and image libraries are retained alongside those resources. Do not modify vendored code to customize the viewer; the project integration is in `../../pdf-reader.js`, HTML and CSS.
+
+The tarball was downloaded from the npm registry and verified against its version-specific registry integrity before extraction. The retained selection is `build/pdf.mjs`, `build/pdf.worker.mjs`, `web/pdf_viewer.mjs`, `web/pdf_viewer.css`, `web/images/`, `cmaps/`, `standard_fonts/`, `wasm/`, `iccs/` and LICENSE. There is no npm runtime installation, remote CDN or browser model service. The current integration disables PDF scripting, XFA, JavaScript evaluation and WASM; it enables read-only annotation display and local search. Library availability is not proof of complete PDF fidelity.
+
+Update only as an explicit dependency change: obtain a pinned official release, verify its registry integrity, replace the selected files and manifest together, retain notices, and run reader HTTP/resource checks plus actual PDF browser regressions. Include the entire vendor directory when distributing the workbench source.

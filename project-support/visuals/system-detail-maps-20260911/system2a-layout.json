@@ -1,0 +1,1787 @@
+{
+  "key": "system2a",
+  "title": "System2A | Recover, verify and repair the original",
+  "size": [
+    3919.9999999999995,
+    2940.0
+  ],
+  "nodes": [
+    {
+      "module": 1,
+      "row": 1,
+      "title": "01 \u00b7 Explicitly start a source",
+      "body": "Consume the current System1 INCLUDE decision and selected original.",
+      "x": 98.0,
+      "y": 489.99999999999994,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 1,
+      "row": 2,
+      "title": "02 \u00b7 Original and version valid?",
+      "body": "Check identity, content fingerprint and current eligibility.",
+      "x": 98.0,
+      "y": 672.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": true
+    },
+    {
+      "module": 1,
+      "row": 3,
+      "title": "03 \u00b7 Determine the real format",
+      "body": "PDF, supported HTML and XLSX use distinct structural routes.",
+      "x": 98.0,
+      "y": 854.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 1,
+      "row": 4,
+      "title": "04 \u00b7 Scan original structure",
+      "body": "PDF: page zones, columns, repeated headers/footers, native vs scanned text.",
+      "x": 98.0,
+      "y": 1036.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 1,
+      "row": 5,
+      "title": "05 \u00b7 Retain extraction evidence",
+      "body": "Native text + page images + OCR for scanned text; retain source regions.",
+      "x": 98.0,
+      "y": 1218.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 1,
+      "row": 6,
+      "title": "06 \u00b7 Complete supported body?",
+      "body": "An empty body or an unhandled source condition stays explicit.",
+      "x": 98.0,
+      "y": 1400.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": true
+    },
+    {
+      "module": 1,
+      "row": 7,
+      "title": "07 \u00b7 Process a bounded scope",
+      "body": "Record completed and unfinished scope; preserve checkpoints and old runs.",
+      "x": 98.0,
+      "y": 1582.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 2,
+      "row": 1,
+      "title": "01 \u00b7 Recover source blocks",
+      "body": "Detect headings, paragraphs, lists, tables, figures and auxiliary content.",
+      "x": 1071.0,
+      "y": 489.99999999999994,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 2,
+      "row": 2,
+      "title": "02 \u00b7 Resolve text evidence",
+      "body": "Compare native/OCR readings; retain alternatives and unresolved conflicts.",
+      "x": 1071.0,
+      "y": 672.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 2,
+      "row": 3,
+      "title": "03 \u00b7 Rebuild hierarchy + order",
+      "body": "Combine numbering, indentation and page geometry; preserve source boundaries.",
+      "x": 1071.0,
+      "y": 854.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 2,
+      "row": 4,
+      "title": "04 \u00b7 Join cross-page text",
+      "body": "Check adjacent pages, parent scope, alignment and sentence/list continuity.",
+      "x": 1071.0,
+      "y": 1036.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": true
+    },
+    {
+      "module": 2,
+      "row": 5,
+      "title": "05 \u00b7 Rebuild physical tables",
+      "body": "Recover cells, rows, columns, headers, merged spans and original fragments.",
+      "x": 1071.0,
+      "y": 1218.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 2,
+      "row": 6,
+      "title": "06 \u00b7 Assemble cross-page tables",
+      "body": "Compare columns/headers; deduplicate repeated headers and join valid row fragments.",
+      "x": 1071.0,
+      "y": 1400.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": true
+    },
+    {
+      "module": 2,
+      "row": 7,
+      "title": "07 \u00b7 Bind context and retain facts",
+      "body": "Link titles, notes, captions and source segments to the complete logical content.",
+      "x": 1071.0,
+      "y": 1582.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 3,
+      "row": 1,
+      "title": "01 \u00b7 Start from the original",
+      "body": "Survey the declared source regions, including regions with no output.",
+      "x": 2043.9999999999998,
+      "y": 489.99999999999994,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 3,
+      "row": 2,
+      "title": "02 \u00b7 Compare text + key tokens",
+      "body": "Locate omitted/changed text, numbers, units and controlling expressions.",
+      "x": 2043.9999999999998,
+      "y": 672.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 3,
+      "row": 3,
+      "title": "03 \u00b7 Check structure + order",
+      "body": "Compare headings, boundary types, reading order and source coverage.",
+      "x": 2043.9999999999998,
+      "y": 854.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 3,
+      "row": 4,
+      "title": "04 \u00b7 Check cells + relationships",
+      "body": "Check row/column/span ownership and title, note and continuation links.",
+      "x": 2043.9999999999998,
+      "y": 1036.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 3,
+      "row": 5,
+      "title": "05 \u00b7 Record located findings",
+      "body": "Bind differences to original/result regions, severity and evidence.",
+      "x": 2043.9999999999998,
+      "y": 1218.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 3,
+      "row": 6,
+      "title": "06 \u00b7 All four A dimensions valid?",
+      "body": "Text, coverage, structure and order each need supported confidence.",
+      "x": 2043.9999999999998,
+      "y": 1400.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": true
+    },
+    {
+      "module": 3,
+      "row": 7,
+      "title": "07 \u00b7 No open blocker or draft?",
+      "body": "Current source and dependencies must also pass; otherwise keep pending.",
+      "x": 2043.9999999999998,
+      "y": 1582.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": true
+    },
+    {
+      "module": 4,
+      "row": 1,
+      "title": "01 \u00b7 Open Content proofreading",
+      "body": "Original on the left; current content, finding and context on the right.",
+      "x": 3017.0,
+      "y": 489.99999999999994,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 4,
+      "row": 2,
+      "title": "02 \u00b7 Choose the exact repair",
+      "body": "Text, missing content, source boundary, table cell or typed relationship.",
+      "x": 3017.0,
+      "y": 672.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 4,
+      "row": 3,
+      "title": "03 \u00b7 Bind repair to source evidence",
+      "body": "Preserve the source location and explain what the correction resolves.",
+      "x": 3017.0,
+      "y": 854.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 4,
+      "row": 4,
+      "title": "04 \u00b7 Save a versioned correction",
+      "body": "Update the effective view; keep originals, prior facts and named history.",
+      "x": 3017.0,
+      "y": 1036.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 4,
+      "row": 5,
+      "title": "05 \u00b7 Recheck affected evidence",
+      "body": "Old checks become stale; rerun the relevant comparison and dependencies.",
+      "x": 3017.0,
+      "y": 1218.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 4,
+      "row": 6,
+      "title": "06 \u00b7 Content and coverage accepted?",
+      "body": "Explicit human acceptance or qualified machine route; other holds remain.",
+      "x": 3017.0,
+      "y": 1400.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": true
+    },
+    {
+      "module": 4,
+      "row": 7,
+      "title": "07 \u00b7 Expose accepted A scope to B",
+      "body": "Only current accepted content with valid context can unlock Requirement judgment.",
+      "x": 3017.0,
+      "y": 1582.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 1,
+      "row": 2,
+      "title": "Source follow-up",
+      "body": "Return identity, stale-original or access problems to System1.",
+      "x": 672.0,
+      "y": 669.1999999999999,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    },
+    {
+      "module": 1,
+      "row": 3,
+      "title": "Native structure",
+      "body": "HTML: sections/tables. XLSX: cells/merges. Keep original order.",
+      "x": 672.0,
+      "y": 851.1999999999999,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    },
+    {
+      "module": 1,
+      "row": 4,
+      "title": "Preserve roles",
+      "body": "Distinguish body from repeated furniture; keep both traceable.",
+      "x": 672.0,
+      "y": 1033.2,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    },
+    {
+      "module": 1,
+      "row": 5,
+      "title": "Controlled copy",
+      "body": "Only unsupported formats may use a verified parsing copy.",
+      "x": 672.0,
+      "y": 1215.1999999999998,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    },
+    {
+      "module": 1,
+      "row": 6,
+      "title": "Keep failure visible",
+      "body": "A supported-format failure cannot be accepted through conversion.",
+      "x": 672.0,
+      "y": 1397.1999999999998,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    },
+    {
+      "module": 2,
+      "row": 2,
+      "title": "Retain alternatives",
+      "body": "Unresolved high-risk text conflict enters Content proofreading.",
+      "x": 1645.0,
+      "y": 669.1999999999999,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    },
+    {
+      "module": 2,
+      "row": 3,
+      "title": "Keep separate",
+      "body": "New heading/list item blocks a guessed continuation.",
+      "x": 1645.0,
+      "y": 851.1999999999999,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    },
+    {
+      "module": 2,
+      "row": 4,
+      "title": "Review the join",
+      "body": "Keep both page regions; confirm text order and hyphen handling.",
+      "x": 1645.0,
+      "y": 1033.2,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    },
+    {
+      "module": 2,
+      "row": 5,
+      "title": "Retain fragments",
+      "body": "Keep page images, physical cells and repeated headers.",
+      "x": 1645.0,
+      "y": 1215.1999999999998,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    },
+    {
+      "module": 2,
+      "row": 6,
+      "title": "Review assembly",
+      "body": "Check column alignment, row continuity, notes and all fragments.",
+      "x": 1645.0,
+      "y": 1397.1999999999998,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    },
+    {
+      "module": 2,
+      "row": 7,
+      "title": "Preserve evidence",
+      "body": "Keep full images/captions. Scanned body still needs transcription.",
+      "x": 1645.0,
+      "y": 1579.1999999999998,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    },
+    {
+      "module": 3,
+      "row": 1,
+      "title": "Missing region",
+      "body": "A broad output box does not prove the region was recovered.",
+      "x": 2618.0,
+      "y": 487.2,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    },
+    {
+      "module": 3,
+      "row": 5,
+      "title": "Declare the gap",
+      "body": "A generic alarm is not a specifically located error.",
+      "x": 2618.0,
+      "y": 1215.1999999999998,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    },
+    {
+      "module": 3,
+      "row": 6,
+      "title": "No auto-pass",
+      "body": "Unknown calibration, weak evidence or conflict keeps A pending.",
+      "x": 2618.0,
+      "y": 1397.1999999999998,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    },
+    {
+      "module": 3,
+      "row": 7,
+      "title": "Keep the hold",
+      "body": "Unfinished context, human follow-up or draft blocks affected use.",
+      "x": 2618.0,
+      "y": 1579.1999999999998,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    },
+    {
+      "module": 4,
+      "row": 4,
+      "title": "Compare before retry",
+      "body": "Retain the draft; reload current original/content and dependencies.",
+      "x": 3590.9999999999995,
+      "y": 1033.2,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    },
+    {
+      "module": 4,
+      "row": 5,
+      "title": "Continue repair",
+      "body": "Save/recheck does not automatically clear unrelated findings.",
+      "x": 3590.9999999999995,
+      "y": 1215.1999999999998,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    },
+    {
+      "module": 4,
+      "row": 6,
+      "title": "Remain in A",
+      "body": "B stays blocked for this scope; accepted unrelated scope is retained.",
+      "x": 3590.9999999999995,
+      "y": 1397.1999999999998,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    }
+  ],
+  "wires": [
+    {
+      "points": [
+        [
+          520,
+          880
+        ],
+        [
+          520,
+          960
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          520,
+          1140
+        ],
+        [
+          520,
+          1220
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          520,
+          1400
+        ],
+        [
+          520,
+          1480
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          520,
+          1660
+        ],
+        [
+          520,
+          1740
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          520,
+          1920
+        ],
+        [
+          520,
+          2000
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          520,
+          2180
+        ],
+        [
+          520,
+          2260
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          1910,
+          880
+        ],
+        [
+          1910,
+          960
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          1910,
+          1140
+        ],
+        [
+          1910,
+          1220
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          1910,
+          1400
+        ],
+        [
+          1910,
+          1480
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          1910,
+          1660
+        ],
+        [
+          1910,
+          1740
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          1910,
+          1920
+        ],
+        [
+          1910,
+          2000
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          1910,
+          2180
+        ],
+        [
+          1910,
+          2260
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          3300,
+          880
+        ],
+        [
+          3300,
+          960
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          3300,
+          1140
+        ],
+        [
+          3300,
+          1220
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          3300,
+          1400
+        ],
+        [
+          3300,
+          1480
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          3300,
+          1660
+        ],
+        [
+          3300,
+          1740
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          3300,
+          1920
+        ],
+        [
+          3300,
+          2000
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          3300,
+          2180
+        ],
+        [
+          3300,
+          2260
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          4690,
+          880
+        ],
+        [
+          4690,
+          960
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          4690,
+          1140
+        ],
+        [
+          4690,
+          1220
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          4690,
+          1400
+        ],
+        [
+          4690,
+          1480
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          4690,
+          1660
+        ],
+        [
+          4690,
+          1740
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          4690,
+          1920
+        ],
+        [
+          4690,
+          2000
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          4690,
+          2180
+        ],
+        [
+          4690,
+          2260
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          900,
+          1040
+        ],
+        [
+          960,
+          1040
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          1290,
+          1056
+        ],
+        [
+          1350,
+          1056
+        ],
+        [
+          1350,
+          2635
+        ]
+      ],
+      "kind": "hold",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          900,
+          1300
+        ],
+        [
+          960,
+          1300
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          900,
+          1560
+        ],
+        [
+          960,
+          1560
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          900,
+          1820
+        ],
+        [
+          960,
+          1820
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          1290,
+          1836
+        ],
+        [
+          1350,
+          1836
+        ],
+        [
+          1350,
+          2635
+        ]
+      ],
+      "kind": "hold",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          900,
+          2080
+        ],
+        [
+          960,
+          2080
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          1290,
+          2096
+        ],
+        [
+          1350,
+          2096
+        ],
+        [
+          1350,
+          2635
+        ]
+      ],
+      "kind": "hold",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          2290,
+          1040
+        ],
+        [
+          2350,
+          1040
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          2680,
+          1056
+        ],
+        [
+          2740,
+          1056
+        ],
+        [
+          2740,
+          2635
+        ]
+      ],
+      "kind": "hold",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          2290,
+          1300
+        ],
+        [
+          2350,
+          1300
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          2290,
+          1560
+        ],
+        [
+          2350,
+          1560
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          2680,
+          1576
+        ],
+        [
+          2740,
+          1576
+        ],
+        [
+          2740,
+          2635
+        ]
+      ],
+      "kind": "hold",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          2290,
+          1820
+        ],
+        [
+          2350,
+          1820
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          2290,
+          2080
+        ],
+        [
+          2350,
+          2080
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          2680,
+          2096
+        ],
+        [
+          2740,
+          2096
+        ],
+        [
+          2740,
+          2635
+        ]
+      ],
+      "kind": "hold",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          2290,
+          2340
+        ],
+        [
+          2350,
+          2340
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          3680,
+          780
+        ],
+        [
+          3740,
+          780
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          3680,
+          1820
+        ],
+        [
+          3740,
+          1820
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          4070,
+          1836
+        ],
+        [
+          4130,
+          1836
+        ],
+        [
+          4130,
+          2635
+        ]
+      ],
+      "kind": "hold",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          3680,
+          2080
+        ],
+        [
+          3740,
+          2080
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          4070,
+          2096
+        ],
+        [
+          4130,
+          2096
+        ],
+        [
+          4130,
+          2635
+        ]
+      ],
+      "kind": "hold",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          3680,
+          2340
+        ],
+        [
+          3740,
+          2340
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          4070,
+          2356
+        ],
+        [
+          4130,
+          2356
+        ],
+        [
+          4130,
+          2635
+        ]
+      ],
+      "kind": "hold",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          5070,
+          1560
+        ],
+        [
+          5130,
+          1560
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          5460,
+          1576
+        ],
+        [
+          5520,
+          1576
+        ],
+        [
+          5520,
+          2635
+        ]
+      ],
+      "kind": "hold",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          5070,
+          1820
+        ],
+        [
+          5130,
+          1820
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          5460,
+          1836
+        ],
+        [
+          5520,
+          1836
+        ],
+        [
+          5520,
+          2635
+        ]
+      ],
+      "kind": "hold",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          5070,
+          2080
+        ],
+        [
+          5130,
+          2080
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          5460,
+          2096
+        ],
+        [
+          5520,
+          2096
+        ],
+        [
+          5520,
+          2635
+        ]
+      ],
+      "kind": "hold",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          520,
+          2440
+        ],
+        [
+          520,
+          2470
+        ],
+        [
+          1407,
+          2470
+        ],
+        [
+          1407,
+          780
+        ],
+        [
+          1530,
+          780
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          1910,
+          2440
+        ],
+        [
+          1910,
+          2470
+        ],
+        [
+          2797,
+          2470
+        ],
+        [
+          2797,
+          780
+        ],
+        [
+          2920,
+          780
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          3300,
+          2440
+        ],
+        [
+          3300,
+          2470
+        ],
+        [
+          4187,
+          2470
+        ],
+        [
+          4187,
+          780
+        ],
+        [
+          4310,
+          780
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          979,
+          2790
+        ],
+        [
+          1022,
+          2790
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          1874,
+          2790
+        ],
+        [
+          1917,
+          2790
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          2769,
+          2790
+        ],
+        [
+          2812,
+          2790
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          3664,
+          2790
+        ],
+        [
+          3707,
+          2790
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          4559,
+          2790
+        ],
+        [
+          4602,
+          2790
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          1350,
+          2635
+        ],
+        [
+          1350,
+          2690
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          840,
+          2635
+        ],
+        [
+          840,
+          2590
+        ]
+      ],
+      "kind": "return",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          2740,
+          2635
+        ],
+        [
+          2740,
+          2690
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          2230,
+          2635
+        ],
+        [
+          2230,
+          2590
+        ]
+      ],
+      "kind": "return",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          4130,
+          2635
+        ],
+        [
+          4130,
+          2690
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          3620,
+          2635
+        ],
+        [
+          3620,
+          2590
+        ]
+      ],
+      "kind": "return",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          5520,
+          2635
+        ],
+        [
+          5520,
+          2690
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          5010,
+          2635
+        ],
+        [
+          5010,
+          2590
+        ]
+      ],
+      "kind": "return",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          560,
+          2590
+        ],
+        [
+          560,
+          2612
+        ]
+      ],
+      "kind": "leader",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          1950,
+          2590
+        ],
+        [
+          1950,
+          2612
+        ]
+      ],
+      "kind": "leader",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          3340,
+          2590
+        ],
+        [
+          3340,
+          2612
+        ]
+      ],
+      "kind": "leader",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          4730,
+          2590
+        ],
+        [
+          4730,
+          2612
+        ]
+      ],
+      "kind": "leader",
+      "arrow": false
+    }
+  ],
+  "human": {
+    "items": [
+      [
+        "1 \u00b7 Locate the issue",
+        "Use bound original regions, full-table context and the stated reason."
+      ],
+      [
+        "2 \u00b7 Inspect the scope",
+        "Check surrounding text, headers, notes and dependencies."
+      ],
+      [
+        "3 \u00b7 Correct or supplement",
+        "Keep every addition and structural repair anchored to the original."
+      ],
+      [
+        "4 \u00b7 Save with a receipt",
+        "Named decisions are durable; a saved draft is incomplete."
+      ],
+      [
+        "5 \u00b7 Revalidate the change",
+        "Refresh affected checks and suspend dependent B results."
+      ],
+      [
+        "6 \u00b7 Reopen or complete A",
+        "Unresolved issues remain pending; history keeps the old version."
+      ]
+    ],
+    "rule": "Source problems return to System1. A repairs preserve source meaning; deciding which content is a Requirement belongs to B."
+  },
+  "measurements": [
+    {
+      "module": 1,
+      "title": "Format and coverage scope",
+      "scope": "31 readable materials out of 38 records. Fidelity diagnosis: one PDF, 8 exposed pages and 275 original regions.",
+      "rows": [
+        [
+          "Q02 Readable parsed \u00b7 31 / 31",
+          "\u226595% \u00b7 PASS"
+        ],
+        [
+          "Q03 Complete regions \u00b7 64 / 275",
+          "\u226599% \u00b7 FAIL"
+        ],
+        [
+          "Q36 Real scan / mixed quality",
+          "UNMEASURED \u00b7 OPEN"
+        ]
+      ],
+      "method": "Reconcile every input with a declared outcome. Compare all reference regions, including absent output. Count a complete region only when content, structure and controlling relations agree. Evaluate real scans/mixed pages as a separate representative cohort.",
+      "conclusion": "31/31 parsing completion is not source-fidelity acceptance. The scan repair fixture is synthetic and does not qualify real scan accuracy."
+    },
+    {
+      "module": 2,
+      "title": "Reconstruction and cross-page joins",
+      "scope": "Parser 04: 125 cells, 12 relations and 3 whole tables. Implemented joins still require independent qualification.",
+      "rows": [
+        [
+          "Q07/08 Text / grid \u00b7 123/125; 125/125",
+          "\u226598% each \u00b7 PASS"
+        ],
+        [
+          "Q10/12 Relations / tables \u00b7 0/12; 0/3",
+          "FAIL / diagnostic FAIL"
+        ],
+        [
+          "Exact cross-page join precision / recall",
+          "UNMEASURED \u00b7 OPEN"
+        ]
+      ],
+      "method": "Match exact cells, spans and expected relationships. For text/table joins, label exact fragment pairs: precision = correct/predicted joins; recall = correct/required joins. Check wrong joins, missed joins, repeated headers and row completeness. Proposed criterion: \u226598% each; retain fragment evidence.",
+      "conclusion": "Join code and physical fragments do not prove correct assembly. Q04 CER 0.13%; Q05 WER 0.90% report only; Q06 tokens 211/211; Q09 order 20/20; Q11 pages 0/8. Broad diagnostic scores cannot replace exact join labels."
+    },
+    {
+      "module": 3,
+      "title": "Verifier reliability",
+      "scope": "Verifier 6, natural original-first diagnosis. Injected errors and unmodified controls form a separate paired challenge.",
+      "rows": [
+        [
+          "Q19 Natural recall \u00b7 8 / 29",
+          "\u226590% \u00b7 FAIL"
+        ],
+        [
+          "Q20 Critical located \u00b7 7 / 11",
+          "all \u00b7 FAIL"
+        ],
+        [
+          "Q21 Finding precision \u00b7 8 / 33",
+          "\u226580% \u00b7 FAIL"
+        ]
+      ],
+      "method": "Natural recall = specifically located true findings / all adjudicated natural defects. Precision = actionable true findings / actionable prompts. Q22 injected defects: 12/12 detected; Q23 control false alarms: 0/12, meeting the \u22641-control criterion.",
+      "conclusion": "Never combine natural and injected populations. Independently callable checking does not establish independent accuracy; Q35 held-out qualification remains open."
+    },
+    {
+      "module": 4,
+      "title": "Repair, acceptance and monitoring",
+      "scope": "A release cohort: 8 pages. Shared candidate-08 operations: full 38-document copied workload.",
+      "rows": [
+        [
+          "Q24 Safe automatic A release \u00b7 0 / 8",
+          "\u226510% \u00b7 FAIL"
+        ],
+        [
+          "Q31 Save p95 \u00b7 0.658 s; n=10",
+          "\u22642 s \u00b7 PASS"
+        ],
+        [
+          "Weekly A design \u00b7 20 original units",
+          "Normal activation OFF"
+        ]
+      ],
+      "method": "Count only evidence-qualified automatic releases over the 8-page cohort. Time persistent saves and take nearest-rank p95. Weekly QA samples original-side units, including absent output; a repair requires a separate finding follow-up before closure.",
+      "conclusion": "A partial delivery is not whole-source completion. Original/content/policy changes reopen affected scope. Actual reviewer effort remains Q28 UNMEASURED."
+    }
+  ],
+  "modules": [
+    {
+      "label": "Intake & format routing",
+      "description": "Make scope and recoverable failures explicit",
+      "x": 70.0,
+      "y": 329.0,
+      "w": 861.0,
+      "h": 2478.0
+    },
+    {
+      "label": "Content reconstruction",
+      "description": "Retain full source units, tables and context",
+      "x": 1043.0,
+      "y": 329.0,
+      "w": 861.0,
+      "h": 2478.0
+    },
+    {
+      "label": "Original-side verification",
+      "description": "Inspect omissions as well as existing output",
+      "x": 2015.9999999999998,
+      "y": 329.0,
+      "w": 861.0,
+      "h": 2478.0
+    },
+    {
+      "label": "Proofreading & A delivery",
+      "description": "Correct the effective view; preserve original facts",
+      "x": 2989.0,
+      "y": 329.0,
+      "w": 861.0,
+      "h": 2478.0
+    }
+  ]
+}

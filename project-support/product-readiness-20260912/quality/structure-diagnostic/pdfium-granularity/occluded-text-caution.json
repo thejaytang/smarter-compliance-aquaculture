@@ -1,0 +1,25 @@
+{
+  "source": "Existing hidden-Criterion diagnostic; no new rendered-source acceptance in this probe",
+  "matching_native_lines": [
+    {
+      "text": "Criterion 1.1 \u2013 Legal Compliance",
+      "bbox_points": [
+        51.41183853149414,
+        69.92926025390625,
+        222.90798950195312,
+        80.362548828125
+      ],
+      "font_names": [
+        "BCDKEE+Montserrat-Bold",
+        "Montserrat-Bold"
+      ],
+      "font_sizes": [
+        10.5600004196167
+      ],
+      "render_modes": [
+        0
+      ]
+    }
+  ],
+  "interpretation": "Available native typography and ordinary rendering mode do not establish visible text or correct heading status."
+}

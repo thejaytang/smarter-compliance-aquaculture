@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en-GB">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%231c675b%27/%3E%3C/svg%3E"><title>Smarter Compliance · Requirement Workbench</title><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/system2-review.css"><link rel="stylesheet" href="/extraction.css"><link rel="stylesheet" href="/materials.css"><link rel="stylesheet" href="/collaboration.css"><link rel="stylesheet" href="/source-workspace.css"><script src="/app.js" type="module"></script></head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<aside class="rail">
+  <div class="brand"><svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="10" fill="currentColor"/><path d="m9 16 5 5 9-11M9 10h5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Smarter Compliance<span>Requirement workbench</span></div></div>
+  <nav aria-label="Workspace navigation">
+    <button data-view="overview" class="nav active">Overview <small>Sources and materials</small></button>
+    <div class="nav-system"><button type="button" class="system-toggle" data-system="system1" aria-expanded="true" aria-controls="nav-system1">Source Management System <span aria-hidden="true">⌄</span><small>Sources and original files</small></button><div class="nav-children" id="nav-system1"><button class="nav" data-view="system1">Pending review</button><button class="nav" data-view="sourceRecords">Source records</button><button class="nav" data-view="history">Review history</button></div></div>
+    <div class="nav-system"><button type="button" class="system-toggle" data-system="system2" aria-expanded="false" aria-controls="nav-system2">Requirement Extraction System <span aria-hidden="true">⌄</span><small>Human content review</small></button><div class="nav-children" id="nav-system2" hidden><button class="nav" data-view="system2">Pending materials</button><button class="nav" data-view="system2History">Archive</button></div></div>
+    <button data-view="settings" class="nav">Confidence settings</button>
+  </nav>
+  <div class="rail-bottom"><span class="local-dot"></span> Local workspace<button id="stop" class="text-button">Exit workbench</button></div>
+</aside>
+<div class="workspace"><header><div class="workspace-heading"><button id="toggle-navigation" aria-expanded="true" aria-label="Collapse navigation">☰</button><h1 id="heading">Requirement overview</h1></div><button id="runtime-status" class="mw-runtime-indicator" type="button">Runtime status</button><dialog id="runtime-dialog" class="mw-runtime-status"></dialog><form id="actor-form"><label for="actor">Current reviewer</label><div class="actor-controls"><select id="actor" required aria-label="Current reviewer"><option value="">Select a reviewer</option></select><button type="submit" id="actor-save">Use this name</button></div></form></header>
+<div id="notice" role="status" aria-live="polite"></div><button id="reload-task" hidden>Reload current task</button><div id="source-excel" class="muted" hidden><span role="status" aria-live="polite"></span> · <a href="/api/system1/workbook">Download source Excel</a></div><main id="main" tabindex="-1"><p>Loading requirement workspace…</p></main><section id="requests" aria-label="Recent submissions"></section></div>
+</body></html>

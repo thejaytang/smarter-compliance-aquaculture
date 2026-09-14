@@ -1,0 +1,622 @@
+TAP version 13
+# Subtest: generic difference renderer resolves escaped block paths and remains schema-independent
+ok 1 - generic difference renderer resolves escaped block paths and remains schema-independent
+  ---
+  duration_ms: 1.930375
+  type: 'test'
+  ...
+# Subtest: missing values and provenance do not invent human review or machine adoption
+ok 2 - missing values and provenance do not invent human review or machine adoption
+  ---
+  duration_ms: 0.318166
+  type: 'test'
+  ...
+# Subtest: nested value editor preserves numbers, booleans, nulls and untouched object shape
+ok 3 - nested value editor preserves numbers, booleans, nulls and untouched object shape
+  ---
+  duration_ms: 0.262
+  type: 'test'
+  ...
+# Subtest: master and merge views reject ordinary material mutations before any API call
+ok 4 - master and merge views reject ordinary material mutations before any API call
+  ---
+  duration_ms: 0.158875
+  type: 'test'
+  ...
+# Subtest: merge conflicts attach to their recorded block and source differences stay global
+ok 5 - merge conflicts attach to their recorded block and source differences stay global
+  ---
+  duration_ms: 0.875584
+  type: 'test'
+  ...
+# Subtest: resolving a difference creates only a merge decision and ignores duplicate in-flight clicks
+ok 6 - resolving a difference creates only a merge decision and ignores duplicate in-flight clicks
+  ---
+  duration_ms: 0.405333
+  type: 'test'
+  ...
+# Subtest: reviewer cannot resolve or adopt master previews
+ok 7 - reviewer cannot resolve or adopt master previews
+  ---
+  duration_ms: 0.246458
+  type: 'test'
+  ...
+# Subtest: source-only preview clears the former material instead of showing unrelated source body
+ok 8 - source-only preview clears the former material instead of showing unrelated source body
+  ---
+  duration_ms: 0.369375
+  type: 'test'
+  ...
+# Subtest: source form recovery keys bind actor and source and dirty forms block navigation
+ok 9 - source form recovery keys bind actor and source and dirty forms block navigation
+  ---
+  duration_ms: 0.528125
+  type: 'test'
+  ...
+# Subtest: new collaboration client refuses old mutation protocol and keeps binary transfer explicit
+ok 10 - new collaboration client refuses old mutation protocol and keeps binary transfer explicit
+  ---
+  duration_ms: 8.344375
+  type: 'test'
+  ...
+# Subtest: source journals bind live tab ownership and keep another tab record intact
+ok 11 - source journals bind live tab ownership and keep another tab record intact
+  ---
+  duration_ms: 0.237084
+  type: 'test'
+  ...
+# Subtest: coordinator preview request is guarded against duplicate actions and lost view responses
+ok 12 - coordinator preview request is guarded against duplicate actions and lost view responses
+  ---
+  duration_ms: 0.104875
+  type: 'test'
+  ...
+# Subtest: viewing an existing merge decision does not reload its unchanged original
+ok 13 - viewing an existing merge decision does not reload its unchanged original
+  ---
+  duration_ms: 0.074416
+  type: 'test'
+  ...
+# Subtest: nested presence flags distinguish deleted cells and machine comparison labels
+ok 14 - nested presence flags distinguish deleted cells and machine comparison labels
+  ---
+  duration_ms: 0.064583
+  type: 'test'
+  ...
+# Subtest: coordinator host does not grant coordinator actions to another named reviewer
+ok 15 - coordinator host does not grant coordinator actions to another named reviewer
+  ---
+  duration_ms: 0.489292
+  type: 'test'
+  ...
+# Subtest: reviewer machine resolution uses personal endpoint and preserves merged input binding
+ok 16 - reviewer machine resolution uses personal endpoint and preserves merged input binding
+  ---
+  duration_ms: 0.347542
+  type: 'test'
+  ...
+# Subtest: reader routes personal machine previews separately from coordinator master merges
+ok 17 - reader routes personal machine previews separately from coordinator master merges
+  ---
+  duration_ms: 0.140959
+  type: 'test'
+  ...
+# Subtest: restored inspection disables collaboration before any action or personal recovery write
+ok 18 - restored inspection disables collaboration before any action or personal recovery write
+  ---
+  duration_ms: 0.142083
+  type: 'test'
+  ...
+# Subtest: dialog mutations lock material navigation until server response and reject repeated requests
+ok 19 - dialog mutations lock material navigation until server response and reject repeated requests
+  ---
+  duration_ms: 0.197417
+  type: 'test'
+  ...
+# Subtest: HTML original-anchor navigation retains the selected master branch
+ok 20 - HTML original-anchor navigation retains the selected master branch
+  ---
+  duration_ms: 0.252208
+  type: 'test'
+  ...
+# Subtest: reopened adoption resumes the server request identity after browser restart
+ok 21 - reopened adoption resumes the server request identity after browser restart
+  ---
+  duration_ms: 0.101292
+  type: 'test'
+  ...
+# Subtest: unit provenance separately exposes author reviewer adopter and exact extraction evidence
+ok 22 - unit provenance separately exposes author reviewer adopter and exact extraction evidence
+  ---
+  duration_ms: 0.22075
+  type: 'test'
+  ...
+# Subtest: spot-check submission reads displayed fields even if edit events were not delivered
+ok 23 - spot-check submission reads displayed fields even if edit events were not delivered
+  ---
+  duration_ms: 1.32925
+  type: 'test'
+  ...
+# Subtest: inspection note changes remain editable while the archived body stays read-only
+ok 24 - inspection note changes remain editable while the archived body stays read-only
+  ---
+  duration_ms: 0.204209
+  type: 'test'
+  ...
+# Subtest: search covers all blocks, hidden table windows and notes
+ok 25 - search covers all blocks, hidden table windows and notes
+  ---
+  duration_ms: 1.500416
+  type: 'test'
+  ...
+# Subtest: table windows are bounded but do not mutate data and use absolute coordinates
+ok 26 - table windows are bounded but do not mutate data and use absolute coordinates
+  ---
+  duration_ms: 3.23375
+  type: 'test'
+  ...
+# Subtest: reading mode renders text without editing inputs and requires explicit edit
+ok 27 - reading mode renders text without editing inputs and requires explicit edit
+  ---
+  duration_ms: 0.551875
+  type: 'test'
+  ...
+# Subtest: drag region is reverse-safe, bounded and rejects empty drag
+ok 28 - drag region is reverse-safe, bounded and rejects empty drag
+  ---
+  duration_ms: 0.115916
+  type: 'test'
+  ...
+# Subtest: original associations match exact pages, intersecting cells and known HTML anchors only
+ok 29 - original associations match exact pages, intersecting cells and known HTML anchors only
+  ---
+  duration_ms: 0.412625
+  type: 'test'
+  ...
+# Subtest: saving changed body delegates scope retention to server and keeps no client approval
+ok 30 - saving changed body delegates scope retention to server and keeps no client approval
+  ---
+  duration_ms: 0.110375
+  type: 'test'
+  ...
+# Subtest: candidate summary count is truthful without loading body
+ok 31 - candidate summary count is truthful without loading body
+  ---
+  duration_ms: 0.168583
+  type: 'test'
+  ...
+# Subtest: runtime state errors escape content and distinguish saved error history
+ok 32 - runtime state errors escape content and distinguish saved error history
+  ---
+  duration_ms: 0.106
+  type: 'test'
+  ...
+# Subtest: review impact discloses retained check provenance and never claims final confirmation
+ok 33 - review impact discloses retained check provenance and never claims final confirmation
+  ---
+  duration_ms: 0.2475
+  type: 'test'
+  ...
+# Subtest: read-only history and comparisons paginate full blocks and table cells
+ok 34 - read-only history and comparisons paginate full blocks and table cells
+  ---
+  duration_ms: 3.477583
+  type: 'test'
+  ...
+# Subtest: compact candidates disclose additional warnings and full comparison keeps all warnings
+ok 35 - compact candidates disclose additional warnings and full comparison keeps all warnings
+  ---
+  duration_ms: 0.701917
+  type: 'test'
+  ...
+# Subtest: shared formula followers show known anchor without inventing an equals expression
+ok 36 - shared formula followers show known anchor without inventing an equals expression
+  ---
+  duration_ms: 0.260833
+  type: 'test'
+  ...
+# Subtest: copied sessionStorage gets a distinct live journal owner while reload reclaims its own
+ok 37 - copied sessionStorage gets a distinct live journal owner while reload reclaims its own
+  ---
+  duration_ms: 0.35375
+  type: 'test'
+  ...
+# Subtest: unsupported or rejected Web Locks never reuse a writable journal owner
+ok 38 - unsupported or rejected Web Locks never reuse a writable journal owner
+  ---
+  duration_ms: 0.1945
+  type: 'test'
+  ...
+# Subtest: leaving the initial unmounted workspace safely clears focus mode
+ok 39 - leaving the initial unmounted workspace safely clears focus mode
+  ---
+  duration_ms: 0.359125
+  type: 'test'
+  ...
+# Subtest: save sends one material snapshot and never confirms or extracts
+ok 40 - save sends one material snapshot and never confirms or extracts
+  ---
+  duration_ms: 1.823084
+  type: 'test'
+  ...
+# Subtest: in-flight save prevents navigation and makes editor inert
+ok 41 - in-flight save prevents navigation and makes editor inert
+  ---
+  duration_ms: 0.214333
+  type: 'test'
+  ...
+# Subtest: a conflicting save preserves local changes and original revision guard
+ok 42 - a conflicting save preserves local changes and original revision guard
+  ---
+  duration_ms: 1.21525
+  type: 'test'
+  ...
+# Subtest: retry after uncertain save reuses request identity
+ok 43 - retry after uncertain save reuses request identity
+  ---
+  duration_ms: 1.030958
+  type: 'test'
+  ...
+# Subtest: local draft includes merge intent and is scoped by reviewer and material
+ok 44 - local draft includes merge intent and is scoped by reviewer and material
+  ---
+  duration_ms: 0.181042
+  type: 'test'
+  ...
+# Subtest: changed content preserves provisional checks for server impact calculation
+ok 45 - changed content preserves provisional checks for server impact calculation
+  ---
+  duration_ms: 0.492375
+  type: 'test'
+  ...
+# Subtest: saved checklist survives readback only when association review is resolved
+ok 46 - saved checklist survives readback only when association review is resolved
+  ---
+  duration_ms: 0.129625
+  type: 'test'
+  ...
+# Subtest: stale candidate permits explicit keep or merge but disables direct adoption
+ok 47 - stale candidate permits explicit keep or merge but disables direct adoption
+  ---
+  duration_ms: 0.35375
+  type: 'test'
+  ...
+# Subtest: large material exposes explicit block pages instead of hidden content loss
+ok 48 - large material exposes explicit block pages instead of hidden content loss
+  ---
+  duration_ms: 0.315583
+  type: 'test'
+  ...
+# Subtest: an untouched recovered tab does not rewrite another tab local draft
+ok 49 - an untouched recovered tab does not rewrite another tab local draft
+  ---
+  duration_ms: 0.320542
+  type: 'test'
+  ...
+# Subtest: two editing tabs retain independent draft journals
+ok 50 - two editing tabs retain independent draft journals
+  ---
+  duration_ms: 0.119584
+  type: 'test'
+  ...
+# Subtest: overview counts material snapshots and current human reviews independently from blocks
+ok 51 - overview counts material snapshots and current human reviews independently from blocks
+  ---
+  duration_ms: 0.195792
+  type: 'test'
+  ...
+# Subtest: overview fetch failure stays unavailable and displays the escaped underlying error
+ok 52 - overview fetch failure stays unavailable and displays the escaped underlying error
+  ---
+  duration_ms: 0.138416
+  type: 'test'
+  ...
+# Subtest: overview loading does not present fabricated zero material counts
+ok 53 - overview loading does not present fabricated zero material counts
+  ---
+  duration_ms: 0.035542
+  type: 'test'
+  ...
+# Subtest: overview renders new entry and retains explicit legacy navigation
+ok 54 - overview renders new entry and retains explicit legacy navigation
+  ---
+  duration_ms: 10.158958
+  type: 'test'
+  ...
+# Subtest: switching material clears source-specific action notices
+ok 55 - switching material clears source-specific action notices
+  ---
+  duration_ms: 0.415667
+  type: 'test'
+  ...
+# Subtest: PDF reader presents a bound page image without requiring a native PDF plugin
+ok 56 - PDF reader presents a bound page image without requiring a native PDF plugin
+  ---
+  duration_ms: 0.126375
+  type: 'test'
+  ...
+# Subtest: scan-only PDF reader does not claim selectable original text or OCR completion
+ok 57 - scan-only PDF reader does not claim selectable original text or OCR completion
+  ---
+  duration_ms: 0.04475
+  type: 'test'
+  ...
+# Subtest: PDF previous and next navigation stay within complete original page bounds
+ok 58 - PDF previous and next navigation stay within complete original page bounds
+  ---
+  duration_ms: 0.111334
+  type: 'test'
+  ...
+# Subtest: PDF zoom changes only page image width and preserves fit-width option
+ok 59 - PDF zoom changes only page image width and preserves fit-width option
+  ---
+  duration_ms: 0.051833
+  type: 'test'
+  ...
+# Subtest: HTTP 409 thrown by the real API helper opens conflict recovery without discarding draft
+ok 60 - HTTP 409 thrown by the real API helper opens conflict recovery without discarding draft
+  ---
+  duration_ms: 0.223167
+  type: 'test'
+  ...
+# Subtest: legacy Error.current shape is also recoverable as a guarded conflict
+ok 61 - legacy Error.current shape is also recoverable as a guarded conflict
+  ---
+  duration_ms: 0.090417
+  type: 'test'
+  ...
+# Subtest: conflict merge preserves newer unique blocks, local edits and unresolved issues
+ok 62 - conflict merge preserves newer unique blocks, local edits and unresolved issues
+  ---
+  duration_ms: 0.16925
+  type: 'test'
+  ...
+# Subtest: ready extraction candidate has a processing label without pretending content is adopted
+ok 63 - ready extraction candidate has a processing label without pretending content is adopted
+  ---
+  duration_ms: 0.049792
+  type: 'test'
+  ...
+# Subtest: processing status distinguishes running, partial and failure without changing content review
+ok 64 - processing status distinguishes running, partial and failure without changing content review
+  ---
+  duration_ms: 0.043125
+  type: 'test'
+  ...
+# Subtest: old confirmations with source or candidate issues are not current reviewed materials
+ok 65 - old confirmations with source or candidate issues are not current reviewed materials
+  ---
+  duration_ms: 0.055416
+  type: 'test'
+  ...
+# Subtest: list and right pane qualify preserved confirmations consistently
+ok 66 - list and right pane qualify preserved confirmations consistently
+  ---
+  duration_ms: 0.128292
+  type: 'test'
+  ...
+# Subtest: old client upgrade response preserves local draft and gives recovery direction
+ok 67 - old client upgrade response preserves local draft and gives recovery direction
+  ---
+  duration_ms: 0.091125
+  type: 'test'
+  ...
+# Subtest: pending source open cannot extract or save the previously active material
+ok 68 - pending source open cannot extract or save the previously active material
+  ---
+  duration_ms: 0.40875
+  type: 'test'
+  ...
+# Subtest: pending saved material read locks old actions and errors restore previous context
+ok 69 - pending saved material read locks old actions and errors restore previous context
+  ---
+  duration_ms: 0.08775
+  type: 'test'
+  ...
+# Subtest: large draft waits for durable browser write and keeps per-tab identity without duplicate shared body
+ok 70 - large draft waits for durable browser write and keeps per-tab identity without duplicate shared body
+  ---
+  duration_ms: 6.566417
+  type: 'test'
+  ...
+# Subtest: browser large-draft storage failure is visible and does not prevent server save
+ok 71 - browser large-draft storage failure is visible and does not prevent server save
+  ---
+  duration_ms: 7.285209
+  type: 'test'
+  ...
+# Subtest: switching materials clears prior original before draft recovery completes
+ok 72 - switching materials clears prior original before draft recovery completes
+  ---
+  duration_ms: 0.187792
+  type: 'test'
+  ...
+# Subtest: reloading original removes stale controls and ignores old in-flight response
+ok 73 - reloading original removes stale controls and ignores old in-flight response
+  ---
+  duration_ms: 0.216791
+  type: 'test'
+  ...
+# Subtest: fallback document owner recovers prior own work before another tab shared journal
+ok 74 - fallback document owner recovers prior own work before another tab shared journal
+  ---
+  duration_ms: 0.151125
+  type: 'test'
+  ...
+# Subtest: fallback repeated reloads keep per-material last-written owners despite newer shared drafts
+ok 75 - fallback repeated reloads keep per-material last-written owners despite newer shared drafts
+  ---
+  duration_ms: 0.153791
+  type: 'test'
+  ...
+# Subtest: large journal records its recovery owner only after durable write succeeds
+ok 76 - large journal records its recovery owner only after durable write succeeds
+  ---
+  duration_ms: 5.955208
+  type: 'test'
+  ...
+# Subtest: prerequisites expose safe navigation and do not claim approval
+ok 77 - prerequisites expose safe navigation and do not claim approval
+  ---
+  duration_ms: 0.427333
+  type: 'test'
+  ...
+# Subtest: ordinary extraction remains loadable when a newer optional reference module is unavailable
+ok 78 - ordinary extraction remains loadable when a newer optional reference module is unavailable
+  ---
+  duration_ms: 48.728291
+  type: 'test'
+  ...
+# Subtest: detail binds an exact unit guard, independent of unrelated source revision
+ok 79 - detail binds an exact unit guard, independent of unrelated source revision
+  ---
+  duration_ms: 0.4205
+  type: 'test'
+  ...
+# Subtest: cached unit renders immediately and refreshes a changed dependency guard
+ok 80 - cached unit renders immediately and refreshes a changed dependency guard
+  ---
+  duration_ms: 0.379958
+  type: 'test'
+  ...
+# Subtest: navigation prevents an older detail request from creating a form
+ok 81 - navigation prevents an older detail request from creating a form
+  ---
+  duration_ms: 0.068542
+  type: 'test'
+  ...
+# Subtest: dragged original regions preserve reverse direction, precision and page bounds
+ok 82 - dragged original regions preserve reverse direction, precision and page bounds
+  ---
+  duration_ms: 1.836208
+  type: 'test'
+  ...
+# Subtest: reference saving does not claim assessment completion
+ok 83 - reference saving does not claim assessment completion
+  ---
+  duration_ms: 0.208042
+  type: 'test'
+  ...
+# Subtest: a stale local draft survives edits to the current server version
+ok 84 - a stale local draft survives edits to the current server version
+  ---
+  duration_ms: 0.316916
+  type: 'test'
+  ...
+# Subtest: three perfect five-week series occupy the same 100 percent line
+ok 85 - three perfect five-week series occupy the same 100 percent line
+  ---
+  duration_ms: 14.52775
+  type: 'test'
+  ...
+# Subtest: missing week breaks the line, without fabricating zero or completion
+ok 86 - missing week breaks the line, without fabricating zero or completion
+  ---
+  duration_ms: 0.724333
+  type: 'test'
+  ...
+# Subtest: inactive reserved stage is omitted, while actual legacy observations remain visible
+ok 87 - inactive reserved stage is omitted, while actual legacy observations remain visible
+  ---
+  duration_ms: 1.25125
+  type: 'test'
+  ...
+# Subtest: old scores are evidence, not confirmation of the new version
+ok 88 - old scores are evidence, not confirmation of the new version
+  ---
+  duration_ms: 0.725584
+  type: 'test'
+  ...
+# Subtest: same version retains explicit clicks, and one missing dimension is incomplete
+ok 89 - same version retains explicit clicks, and one missing dimension is incomplete
+  ---
+  duration_ms: 0.070042
+  type: 'test'
+  ...
+# Subtest: unacknowledged request retains identity across draft reload and source change
+ok 90 - unacknowledged request retains identity across draft reload and source change
+  ---
+  duration_ms: 0.117125
+  type: 'test'
+  ...
+# Subtest: applied browser receipt and workbook application appear once in history
+ok 91 - applied browser receipt and workbook application appear once in history
+  ---
+  duration_ms: 11.312667
+  type: 'test'
+  ...
+# Subtest: Excel verdict and original note are displayed without changing the application record
+ok 92 - Excel verdict and original note are displayed without changing the application record
+  ---
+  duration_ms: 0.217292
+  type: 'test'
+  ...
+# Subtest: previous Excel review remains source-specific and does not become a new score confirmation
+ok 93 - previous Excel review remains source-specific and does not become a new score confirmation
+  ---
+  duration_ms: 0.500083
+  type: 'test'
+  ...
+# Subtest: discrepancy evidence exposes occurrence counts and escapes compared text
+ok 94 - discrepancy evidence exposes occurrence counts and escapes compared text
+  ---
+  duration_ms: 0.49175
+  type: 'test'
+  ...
+# Subtest: located unverified scope offers original and each affected content item
+ok 95 - located unverified scope offers original and each affected content item
+  ---
+  duration_ms: 0.902333
+  type: 'test'
+  ...
+# Subtest: structure conflicts show claims and remain readable without a located region
+ok 96 - structure conflicts show claims and remain readable without a located region
+  ---
+  duration_ms: 0.131417
+  type: 'test'
+  ...
+# Subtest: a named reviewer is required, and accepting text cannot approve a table
+ok 97 - a named reviewer is required, and accepting text cannot approve a table
+  ---
+  duration_ms: 1.387417
+  type: 'test'
+  ...
+# Subtest: correction preserves original, reviewer, note and timestamp; draft reload is not acceptance
+ok 98 - correction preserves original, reviewer, note and timestamp; draft reload is not acceptance
+  ---
+  duration_ms: 0.168666
+  type: 'test'
+  ...
+# Subtest: merge preserves footnote marker, and each decision type needs explicit input
+ok 99 - merge preserves footnote marker, and each decision type needs explicit input
+  ---
+  duration_ms: 0.137584
+  type: 'test'
+  ...
+# Subtest: missing content and unreadable sources remain unresolved; reopening retains all history
+ok 100 - missing content and unreadable sources remain unresolved; reopening retains all history
+  ---
+  duration_ms: 0.272208
+  type: 'test'
+  ...
+# Subtest: five-case walkthrough leaves the missing table open and never manufactures live QA
+ok 101 - five-case walkthrough leaves the missing table open and never manufactures live QA
+  ---
+  duration_ms: 0.139375
+  type: 'test'
+  ...
+# Subtest: accept after reopening a correction keeps the corrected text
+ok 102 - accept after reopening a correction keeps the corrected text
+  ---
+  duration_ms: 0.975458
+  type: 'test'
+  ...
+1..102
+# tests 102
+# suites 0
+# pass 102
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 108.504458

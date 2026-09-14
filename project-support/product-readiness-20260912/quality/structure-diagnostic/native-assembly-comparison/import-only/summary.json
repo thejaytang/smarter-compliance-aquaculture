@@ -1,0 +1,136 @@
+{
+  "status": "IMPORT_COMPLETED_NO_PARSING",
+  "quality_status": "UNMEASURED",
+  "process_receipt": {
+    "status": "completed",
+    "exit_code": 0,
+    "elapsed_seconds": 42.85629570798483,
+    "ended_utc": "2026-09-13T11:30:34.979662+00:00",
+    "code_hashes_unchanged": true
+  },
+  "observed_stages": [
+    {
+      "stage": "import_start",
+      "monotonic": 495284.537385958
+    },
+    {
+      "stage": "top_level_imported",
+      "elapsed_seconds": 0.006372166972141713,
+      "file": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/lib/python3.12/site-packages/docling_parse/__init__.py"
+    },
+    {
+      "stage": "parser_symbol_imported_no_instantiation",
+      "elapsed_seconds": 42.71042633301113,
+      "module": "docling_parse.pdf_parser",
+      "loaded_paths": {
+        "docling_parse": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/lib/python3.12/site-packages/docling_parse/__init__.py",
+        "docling_parse.pdf_parser": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/lib/python3.12/site-packages/docling_parse/pdf_parser.py",
+        "docling_core": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/lib/python3.12/site-packages/docling_core/__init__.py",
+        "pandas": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/lib/python3.12/site-packages/pandas/__init__.py",
+        "numpy": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/lib/python3.12/site-packages/numpy/__init__.py",
+        "numpy.random._philox": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/lib/python3.12/site-packages/numpy/random/_philox.cpython-312-darwin.so",
+        "numpy.random._sfc64": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/lib/python3.12/site-packages/numpy/random/_sfc64.cpython-312-darwin.so",
+        "cv2": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/lib/python3.12/site-packages/cv2/__init__.py"
+      },
+      "parser_instantiated": false,
+      "pdf_opened": false
+    }
+  ],
+  "largest_self_imports": [
+    {
+      "module": "pandas.io.common",
+      "self_microseconds": 5897743,
+      "cumulative_microseconds": 5900013
+    },
+    {
+      "module": "pandas.core.dtypes.api",
+      "self_microseconds": 1918467,
+      "cumulative_microseconds": 1918467
+    },
+    {
+      "module": "pandas.core.indexes.range",
+      "self_microseconds": 1667470,
+      "cumulative_microseconds": 1667470
+    },
+    {
+      "module": "pandas.plotting._core",
+      "self_microseconds": 1477720,
+      "cumulative_microseconds": 1477720
+    },
+    {
+      "module": "pandas.core.arrays.sparse.array",
+      "self_microseconds": 1419899,
+      "cumulative_microseconds": 1429206
+    },
+    {
+      "module": "pandas._libs.reshape",
+      "self_microseconds": 1401836,
+      "cumulative_microseconds": 1401836
+    },
+    {
+      "module": "pandas.core.indexes.interval",
+      "self_microseconds": 1298559,
+      "cumulative_microseconds": 2303275
+    },
+    {
+      "module": "pandas.core.computation.eval",
+      "self_microseconds": 1282888,
+      "cumulative_microseconds": 1287890
+    },
+    {
+      "module": "pandas.io.pickle",
+      "self_microseconds": 1279881,
+      "cumulative_microseconds": 1280721
+    },
+    {
+      "module": "pandas._testing.compat",
+      "self_microseconds": 1278133,
+      "cumulative_microseconds": 1278133
+    },
+    {
+      "module": "pandas.io.parsers",
+      "self_microseconds": 1115710,
+      "cumulative_microseconds": 1127370
+    },
+    {
+      "module": "pandas.io.api",
+      "self_microseconds": 1112524,
+      "cumulative_microseconds": 6283614
+    }
+  ],
+  "selected_imports": [
+    {
+      "module": "cv2",
+      "self_microseconds": 142682,
+      "cumulative_microseconds": 144893
+    },
+    {
+      "module": "numpy.random._philox",
+      "self_microseconds": 2717,
+      "cumulative_microseconds": 2717
+    },
+    {
+      "module": "numpy.random._sfc64",
+      "self_microseconds": 3378,
+      "cumulative_microseconds": 3378
+    },
+    {
+      "module": "pandas",
+      "self_microseconds": 718,
+      "cumulative_microseconds": 39044074
+    },
+    {
+      "module": "docling_parse.pdf_parsers",
+      "self_microseconds": 17692,
+      "cumulative_microseconds": 17692
+    },
+    {
+      "module": "docling_parse.pdf_parser",
+      "self_microseconds": 3207,
+      "cumulative_microseconds": 42704017
+    }
+  ],
+  "stack_snapshot_count": 1,
+  "interpretation": "Eventual completion with import progress, not a persistent block at the earlier extension. Current result does not reconstruct the previous 60-second attempt or establish an OS cause.",
+  "next_experiment_boundary": "A new preserved run of the already frozen DEV-only native comparison is now justified; separate import-ready observation from parse operational guard, retain backend provenance and denominators. No automatic parser rerun in this subtask."
+}

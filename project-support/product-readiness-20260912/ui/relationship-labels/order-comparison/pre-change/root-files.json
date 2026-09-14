@@ -1,0 +1,6 @@
+{
+  "workbench/src/local_workbench/collaboration_merge.py": "fa60cc7b14111b1e7d7b0096101247fcbb1c1962f45bc940fbd21699f7cf28dd",
+  "workbench/src/local_workbench/collaboration.py": "cc50edeb371074ea8244b6fe428f310a947d59686bc03adbb3a1149f83aea100",
+  "workbench/src/local_workbench/collaboration_relationships.py": "7dde9527cdb4aace66a30f84974202b3242726ec599a62304b52784338636ca7",
+  "workbench/tests/test_collaboration_merge.py": "ff40d62065364be55c21af7f848ffec4880fea21b59ed509579bae07e0d9e1f3"
+}

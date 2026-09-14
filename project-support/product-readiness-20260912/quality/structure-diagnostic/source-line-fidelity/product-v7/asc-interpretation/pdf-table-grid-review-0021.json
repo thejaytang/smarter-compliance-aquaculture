@@ -1,0 +1,13 @@
+{
+  "method": "native-line-grid-consistency/1",
+  "source_sha256": "804ead3d1d1a53019869b5385dabfb86356b8276b990538c0d782e750167777e",
+  "page_reference": {
+    "scope_id": "page:21",
+    "page_index": 20,
+    "page": 21
+  },
+  "tolerance_points": 1.0,
+  "reject_ratio": 0.25,
+  "rejected": [],
+  "inspected": []
+}

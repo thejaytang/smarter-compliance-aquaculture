@@ -1,0 +1,16 @@
+{
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "python": "3.12.12",
+  "platform_smoke": "PASS",
+  "checks": {
+    "other_process_excluded": true,
+    "lock_released": true,
+    "current_process_alive": true,
+    "invalid_process_absent": true,
+    "unicode_space_path": true
+  },
+  "workbench_interpreter": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/.venv/bin/python",
+  "peak_rss_bytes": 20709376,
+  "windows_office_acceptance": "PENDING_ACTUAL_WINDOWS",
+  "scope": "Temporary files and native process/lock checks only; no service or business data opened."
+}

@@ -1,0 +1,121 @@
+- link "Skip to content":
+  - /url: "#main"
+- option "Select a reviewer"
+- option "Ana Jokic" [selected]
+- option "Daniel Restad"
+- option "Weijie Tang"
+- main:
+  - heading "ENGINEERING FIXTURE · Excel measurements" [level=2]
+  - generic: TS002 · TS002-001 · saved revision 4 · Content review in progress · Saved content · no current extraction
+  - button "Exit expanded view" [pressed]
+  - button "More tools"
+  - button "Save material"
+  - status: Material saved. Content review is not confirmed by saving.
+  - group "Working pane":
+    - button "1 · Original"
+    - button "2 · Content" [pressed]
+    - button "3 · Requirements"
+  - heading "Extracted original text" [level=3]
+  - text: Editable personal draft
+  - button "Process →" [disabled]
+  - generic "1 affected ranges · 2 prior checks retained"
+  - article:
+    - generic: 1 · heading
+    - button "Original"
+    - button "Edit"
+    - heading "Measurements" [level=4]
+    - text: Measurements · A1
+  - text: Machine candidate · Machine Unreviewed
+  - generic "Source, version and people"
+  - article:
+    - generic: 2 · table
+    - button "Original"
+    - button "Edit"
+    - paragraph
+    - generic: Rows 1–3 / 3 · columns 1–3 / 3
+    - button "↑ Rows" [disabled]
+    - button "↓ Rows" [disabled]
+    - button "← Columns" [disabled]
+    - button "Columns →" [disabled]
+    - text: Row
+    - spinbutton "Row": "1"
+    - text: Column
+    - spinbutton "Column": "1"
+    - button "Go"
+    - table:
+      - rowgroup:
+        - row "1 2 3":
+          - columnheader
+          - columnheader "1"
+          - columnheader "2"
+          - columnheader "3"
+      - rowgroup:
+        - row "1 ENGINEERING FIXTURE":
+          - rowheader "1"
+          - cell "ENGINEERING FIXTURE"
+          - cell
+          - cell
+        - row "2":
+          - rowheader "2"
+          - cell
+          - cell
+          - cell
+        - row "3 Temperature 13 =B3+1":
+          - rowheader "3"
+          - cell "Temperature"
+          - cell "13"
+          - cell "=B3+1"
+    - paragraph: "C3 saved value: [cache unavailable]. Formula has not been calculated. ENGINEERING ONLY: reviewer conflict input B3=13; original B3 remains 12."
+    - text: 1 merged relationships · edit to inspect their coordinatesMeasurements · A1:C3
+  - text: Machine candidate · Machine Unreviewed
+  - generic "Source, version and people"
+  - text: Human contribution · Ana Jokic · Human Unreviewed
+  - generic "Source, version and people"
+  - text: Human contribution · Ana Jokic · Human Unreviewed
+  - generic "Source, version and people"
+  - article:
+    - generic: 3 · table
+    - button "Original"
+    - button "Edit"
+    - paragraph
+    - generic: Rows 1–1 / 1 · columns 1–1 / 1
+    - button "↑ Rows" [disabled]
+    - button "↓ Rows" [disabled]
+    - button "← Columns" [disabled]
+    - button "Columns →" [disabled]
+    - text: Row
+    - spinbutton "Row": "1"
+    - text: Column
+    - spinbutton "Column": "1"
+    - button "Go"
+    - table:
+      - rowgroup:
+        - row "1":
+          - columnheader
+          - columnheader "1"
+      - rowgroup:
+        - 'row "1 Far cell: original retained"':
+          - rowheader "1"
+          - 'cell "Far cell: original retained"'
+    - paragraph
+    - text: 0 merged relationships · edit to inspect their coordinatesMeasurements · Z105:Z105
+  - text: Machine candidate · Machine Unreviewed
+  - generic "Source, version and people"
+  - article:
+    - generic: 4 · heading
+    - button "Original"
+    - button "Edit"
+    - heading "Empty sheet" [level=4]
+    - text: Empty sheet · A1
+  - text: Machine candidate · Weijie Tang · Human Reviewed
+  - generic "Source, version and people"
+  - article:
+    - generic: 5 · heading
+    - button "Original"
+    - button "Edit"
+    - heading "Hidden notes" [level=4]
+    - text: Hidden notes · A1
+  - text: Machine candidate · Weijie Tang · Human Reviewed
+  - generic "Source, version and people"
+  - generic "Whole-material review · 2/3 ranges checked"
+- document

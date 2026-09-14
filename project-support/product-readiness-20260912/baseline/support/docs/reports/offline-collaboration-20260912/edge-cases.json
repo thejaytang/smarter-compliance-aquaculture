@@ -1,0 +1,289 @@
+{
+  "status": "PASS",
+  "platform": "macOS",
+  "actual_windows": "NOT_EXERCISED",
+  "scope": "Isolated real System1/System2 adapters and offline work packages; no browser interaction",
+  "run_root": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/runtime/offline-collaboration-acceptance/edge-73667e51-271d-49da-89d9-586b7c87edab",
+  "checks": [
+    {
+      "case": "serial_ranges",
+      "status": "PASS",
+      "evidence": {
+        "material_id": "f55ce0a9c0fcf4ea2778b2057734658a",
+        "retained_scope": [
+          "page:2",
+          "page:3"
+        ],
+        "retained_reviewers": {
+          "page:2": {
+            "actor": "Ana Jokic",
+            "at": "2026-09-12T15:14:15.991742+00:00",
+            "content_revision": 1,
+            "inherited_from": {
+              "content_revision": 1,
+              "material_id": "f55ce0a9c0fcf4ea2778b2057734658a",
+              "revision": 2,
+              "source_hash": "2bda620d2f03679ba71c049907b692e70e9ad849663f04338a2129da2fad8005"
+            },
+            "source_hash": "2bda620d2f03679ba71c049907b692e70e9ad849663f04338a2129da2fad8005"
+          },
+          "page:3": {
+            "actor": "Ana Jokic",
+            "at": "2026-09-12T15:14:15.991742+00:00",
+            "content_revision": 1,
+            "inherited_from": {
+              "content_revision": 1,
+              "material_id": "f55ce0a9c0fcf4ea2778b2057734658a",
+              "revision": 2,
+              "source_hash": "2bda620d2f03679ba71c049907b692e70e9ad849663f04338a2129da2fad8005"
+            },
+            "source_hash": "2bda620d2f03679ba71c049907b692e70e9ad849663f04338a2129da2fad8005"
+          }
+        },
+        "ana_confirmed_revision": 2,
+        "history_count": 4
+      },
+      "seconds": 18.508
+    },
+    {
+      "case": "disjoint_blocks_cells",
+      "status": "PASS",
+      "evidence": {
+        "material_id": "792cd6a39eec69e46c3efc9dbe806977",
+        "row": [
+          "Ana cell",
+          "Daniel cell"
+        ],
+        "provenance": [
+          {
+            "actor": "Weijie Tang",
+            "adopted_revision": 1,
+            "adopter": "Weijie Tang",
+            "at": "2026-09-12T15:14:28.461684+00:00",
+            "candidate_id": null,
+            "content_revision": 1,
+            "origin": "human",
+            "path": "/blocks/table-1",
+            "selected_by": null,
+            "source_hash": "ef07adf7646f934b1af29011ee3537847be90aa0c82511f33a8a85e32f94d30b",
+            "source_refs": [
+              {
+                "scope_id": "sheet:Measurements"
+              }
+            ],
+            "status": "human_unreviewed",
+            "submission_id": "a33f98ba-005f-4316-a374-83b87b88fdbe"
+          },
+          {
+            "actor": "Weijie Tang",
+            "adopted_revision": 1,
+            "adopter": "Weijie Tang",
+            "at": "2026-09-12T15:14:28.461684+00:00",
+            "candidate_id": null,
+            "content_revision": 1,
+            "origin": "human",
+            "path": "/blocks/text-a",
+            "selected_by": null,
+            "source_hash": "ef07adf7646f934b1af29011ee3537847be90aa0c82511f33a8a85e32f94d30b",
+            "source_refs": [
+              {
+                "scope_id": "sheet:Measurements"
+              }
+            ],
+            "status": "human_unreviewed",
+            "submission_id": "a33f98ba-005f-4316-a374-83b87b88fdbe"
+          },
+          {
+            "actor": "Weijie Tang",
+            "adopted_revision": 1,
+            "adopter": "Weijie Tang",
+            "at": "2026-09-12T15:14:28.461684+00:00",
+            "candidate_id": null,
+            "content_revision": 1,
+            "origin": "human",
+            "path": "/blocks/text-b",
+            "selected_by": null,
+            "source_hash": "ef07adf7646f934b1af29011ee3537847be90aa0c82511f33a8a85e32f94d30b",
+            "source_refs": [
+              {
+                "scope_id": "sheet:Measurements"
+              }
+            ],
+            "status": "human_unreviewed",
+            "submission_id": "a33f98ba-005f-4316-a374-83b87b88fdbe"
+          },
+          {
+            "actor": "Ana Jokic",
+            "adopted_revision": 2,
+            "adopter": "Weijie Tang",
+            "at": "2026-09-12T15:14:33.947656+00:00",
+            "candidate_id": null,
+            "content_revision": 2,
+            "origin": "human",
+            "path": "/blocks/table-1/table/rows/0/0",
+            "selected_by": null,
+            "source_hash": "ef07adf7646f934b1af29011ee3537847be90aa0c82511f33a8a85e32f94d30b",
+            "source_refs": [
+              {
+                "scope_id": "sheet:Measurements"
+              }
+            ],
+            "status": "human_unreviewed",
+            "submission_id": "746e97f5-6005-49c6-af89-5591ae7d974a"
+          },
+          {
+            "actor": "Ana Jokic",
+            "adopted_revision": 2,
+            "adopter": "Weijie Tang",
+            "at": "2026-09-12T15:14:33.947656+00:00",
+            "candidate_id": null,
+            "content_revision": 2,
+            "origin": "human",
+            "path": "/blocks/text-a/text",
+            "selected_by": null,
+            "source_hash": "ef07adf7646f934b1af29011ee3537847be90aa0c82511f33a8a85e32f94d30b",
+            "source_refs": [
+              {
+                "scope_id": "sheet:Measurements"
+              }
+            ],
+            "status": "human_unreviewed",
+            "submission_id": "746e97f5-6005-49c6-af89-5591ae7d974a"
+          },
+          {
+            "actor": "Daniel Restad",
+            "at": "2026-09-12T15:14:35.577283+00:00",
+            "candidate_id": null,
+            "content_revision": 2,
+            "origin": "human",
+            "path": "/blocks/table-1/table/rows/0/1",
+            "selected_by": null,
+            "source_hash": "ef07adf7646f934b1af29011ee3537847be90aa0c82511f33a8a85e32f94d30b",
+            "source_refs": [
+              {
+                "scope_id": "sheet:Measurements"
+              }
+            ],
+            "status": "human_unreviewed",
+            "submission_id": "e0fa44fd-0f57-4602-9513-001f1939e886",
+            "adopter": "Weijie Tang",
+            "adopted_revision": 3
+          },
+          {
+            "actor": "Daniel Restad",
+            "at": "2026-09-12T15:14:35.577283+00:00",
+            "candidate_id": null,
+            "content_revision": 2,
+            "origin": "human",
+            "path": "/blocks/text-b/text",
+            "selected_by": null,
+            "source_hash": "ef07adf7646f934b1af29011ee3537847be90aa0c82511f33a8a85e32f94d30b",
+            "source_refs": [
+              {
+                "scope_id": "sheet:Measurements"
+              }
+            ],
+            "status": "human_unreviewed",
+            "submission_id": "e0fa44fd-0f57-4602-9513-001f1939e886",
+            "adopter": "Weijie Tang",
+            "adopted_revision": 3
+          }
+        ]
+      },
+      "seconds": 16.05
+    },
+    {
+      "case": "source_only_conflict_partial",
+      "status": "PASS",
+      "evidence": {
+        "conflict_paths": [
+          "/source_review/fields/issuer",
+          "/source_review/scores/scope_relevance"
+        ],
+        "receipt": {
+          "status": "adopted_partial",
+          "request_id": "fb2543e8-78bd-43fc-be6b-57492b186e3c",
+          "merge_id": "ce63e11c-b07e-4e62-aff4-2114c17a7cf1",
+          "source_status": "saved_partial",
+          "source_receipt": {
+            "status": "saved_partial",
+            "request_id": "41139d41-2323-5515-a0d8-cdad9560400d",
+            "operation_id": "COLLAB-41139d41-2323-5515-a0d8-cdad9560400d",
+            "source_id": "TS001",
+            "source_revision": "97dc93909d54cd8f1cb0",
+            "effective_selection": "INCLUDE",
+            "unresolved_reasons": [
+              "The five-score bundle is unfinished; scores and selection remain staged."
+            ],
+            "submission_id": "d256bfb1-ca56-463e-aa0a-a4f528196dec",
+            "contributor": "Daniel Restad",
+            "actor": "Weijie Tang"
+          },
+          "material_status": "not_present",
+          "material": null,
+          "submission_id": "d256bfb1-ca56-463e-aa0a-a4f528196dec",
+          "actor": "Weijie Tang",
+          "contributor": "Daniel Restad",
+          "at": "2026-09-12T15:14:43.986606+00:00"
+        },
+        "append_only_notes": "Isolated engineering validation. No production review decision. Human operation 2026-09-12 by Weijie Tang: ENGINEERING UI acceptance: source note saved personally, master unchanged. Human operation 2026-09-12 by Weijie Tang: Ana checked the official provenance. Human operation 2026-09-12 by Weijie Tang: Daniel partially checked authority and left the remaining ratings unfinished."
+      },
+      "seconds": 2.585
+    },
+    {
+      "case": "stale_preview",
+      "status": "PASS",
+      "evidence": {
+        "material_id": "f55ce0a9c0fcf4ea2778b2057734658a",
+        "receipt": {
+          "status": "conflict",
+          "error": "Main material changed. Prepare a new comparison; choices are retained."
+        }
+      },
+      "seconds": 11.138
+    },
+    {
+      "case": "unknown_and_reused",
+      "status": "PASS",
+      "evidence": {
+        "reused_id_error": "Submission identity was reused for different contents.",
+        "unknown_baseline_error": "Common baseline is unavailable; import is retained without guessing a merge.",
+        "imported_id": "d08b5dc8-c2aa-48ed-adf6-1df5180c89ae"
+      },
+      "seconds": 8.725
+    },
+    {
+      "case": "source_then_material_failure",
+      "status": "PASS",
+      "evidence": {
+        "material_id": "f55ce0a9c0fcf4ea2778b2057734658a",
+        "source_receipt": {
+          "actor": "Weijie Tang",
+          "contributor": "Ana Jokic",
+          "effective_selection": "INCLUDE",
+          "operation_id": "COLLAB-6e7dd99b-6b1e-5bfd-aa66-3ac1012c9344",
+          "request_id": "6e7dd99b-6b1e-5bfd-aa66-3ac1012c9344",
+          "source_id": "TS003",
+          "source_revision": "5d7610fb4d23c2187995",
+          "status": "applied",
+          "submission_id": "c9f5730d-3d36-4ec3-9c96-e49b6e4cb4d1",
+          "unresolved_reasons": []
+        },
+        "replayed_final_status": "adopted"
+      },
+      "seconds": 11.226
+    },
+    {
+      "case": "changed_original",
+      "status": "PASS",
+      "evidence": {
+        "material_id": "f55ce0a9c0fcf4ea2778b2057734658a",
+        "adoption_status": "conflict",
+        "old_source_stale": true,
+        "confirmation_rejection": "source_version_requires_reconciliation",
+        "original_preserved": true
+      },
+      "seconds": 11.103
+    }
+  ]
+}

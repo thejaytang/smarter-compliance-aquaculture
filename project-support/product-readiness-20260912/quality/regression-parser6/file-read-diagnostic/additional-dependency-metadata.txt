@@ -1,0 +1,1 @@
+-rw-r--r--@ 1 tang  staff  hidden,compressed,dataless 10776 Sep  1 15:06 /Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/lib/python3.12/site-packages/anyio/streams/memory.py

@@ -1,0 +1,59 @@
+{
+  "method": "same-page-source-preserving/1",
+  "source_sha256": "966ec5d7eb8af5ea97cd478b6560e3f2e836202a1a0f3f7138f9b016349a0138",
+  "groups": [
+    {
+      "operation": "same_page_paragraph_group",
+      "group_block_id": "block-d26a709fd9c3e1a20e6b4657",
+      "numbering": "",
+      "fragments": [
+        {
+          "id": "block-832f2ac18d0e1d3d232b9e43",
+          "type": "text",
+          "text": "Combined category",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:1",
+              "page_index": 0,
+              "page": 1,
+              "bbox": [
+                54.45000076293945,
+                150.447998046875,
+                131.94900512695312,
+                158.8809814453125
+              ],
+              "native_id": "native_p0000_ft000003"
+            }
+          ]
+        },
+        {
+          "id": "block-3474bdbf24dfdad7c46b1580",
+          "type": "text",
+          "text": "Item",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:1",
+              "page_index": 0,
+              "page": 1,
+              "bbox": [
+                54.83700180053711,
+                172.5560302734375,
+                71.5050048828125,
+                179.0989990234375
+              ],
+              "native_id": "native_p0000_ft000004"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

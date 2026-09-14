@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "scope": "Isolated copies only; no live store or normal code mutation",
+  "later_edit_refused": true,
+  "restored_or_unintroduced_files": 31,
+  "newer_code_retained": true,
+  "message": "Code rollback complete. Business stores, originals and historical assets were not restored or modified."
+}

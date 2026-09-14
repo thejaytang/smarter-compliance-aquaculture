@@ -1,0 +1,825 @@
+{
+  "candidate": "local-delivery-rc1",
+  "scope": "Stopped isolated coordinator and reviewer only; no normal business stores",
+  "restore_boundary": "Same original isolated paths and this workstation only. Preserve later work before replacement, never restore to running service. Code and environments are separate; links are recorded, not copied targets.",
+  "symlinks": [
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/system2",
+      "target": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/.venv",
+      "target": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/.venv"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/src",
+      "target": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/src"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/ui",
+      "target": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/ui"
+    }
+  ],
+  "files": [
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/Data/A_Public_Authority/CS010-001_material.pdf",
+      "backup": "isolated-checkpoint/fixture/Data/A_Public_Authority/CS010-001_material.pdf",
+      "sha256": "ce5c8950c69e3b5b60b85110f5abd2c6d8637c83291c6c00ac03f28b102dac54"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/Data/A_Public_Authority/PA001-001_material.html",
+      "backup": "isolated-checkpoint/fixture/Data/A_Public_Authority/PA001-001_material.html",
+      "sha256": "8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/Data/A_Public_Authority/TS001-001_material.html",
+      "backup": "isolated-checkpoint/fixture/Data/A_Public_Authority/TS001-001_material.html",
+      "sha256": "b9b88ca01572da304cf651b63825aa87cacaeb6681c81352a14a4df5adcffa9a"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/Data/A_Public_Authority/TS002-001_material.xlsx",
+      "backup": "isolated-checkpoint/fixture/Data/A_Public_Authority/TS002-001_material.xlsx",
+      "sha256": "78edf06e79c11edfb67d99ff0bca026ddd93b116ec4441c2ce9c59cd3fd89344"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/Data/A_Public_Authority/TS003-001_material.pdf",
+      "backup": "isolated-checkpoint/fixture/Data/A_Public_Authority/TS003-001_material.pdf",
+      "sha256": "58834f3110dfba069787cc1b478bc27b0f8023f4d85f515b661764548c08bb2b"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/config/config.json",
+      "backup": "isolated-checkpoint/fixture/config/config.json",
+      "sha256": "c19a86421567bd59b1e6cce9cf626f8b3b8ff2fe70e7bc779a2163fcada613d2"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/governance/governance-migration-input.xlsx",
+      "backup": "isolated-checkpoint/fixture/governance/governance-migration-input.xlsx",
+      "sha256": "8adfb864c0e8c9502fb773c4880feb9603bf395dd281215e276fbeb64670c806"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/governance/governance.sqlite",
+      "backup": "isolated-checkpoint/fixture/governance/governance.sqlite",
+      "sha256": "ce05dda5e844039eda22306e66b5e4400d8bad1f9ff54f47f2f0d22e51188aa2"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/manifest.json",
+      "backup": "isolated-checkpoint/fixture/manifest.json",
+      "sha256": "661a6eb342781ea2ef90ddcf3e5afdcc475d0c1ab16798fca6cbde049f188472"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/server.json",
+      "backup": "isolated-checkpoint/fixture/server.json",
+      "sha256": "ace6c9c76d3e6b8e2ee8edf78e6f753fc8466a8cbb6328175852541ed2c5fa2d"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/source-register.xlsx",
+      "backup": "isolated-checkpoint/fixture/source-register.xlsx",
+      "sha256": "6b4d010d7857d202ca66283ad85606dd1cb1a372f77cf2d6781daee6499797aa"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/packages/06a71dfd-c69f-4d74-aa33-4532acc5d64b.zip",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/packages/06a71dfd-c69f-4d74-aa33-4532acc5d64b.zip",
+      "sha256": "3347e31534611a16f9137305334f0077f7d922259b85a99b04cc2f0992419603"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/packages/191d65f6-8619-4a7b-a51f-3f734699be0e.zip",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/packages/191d65f6-8619-4a7b-a51f-3f734699be0e.zip",
+      "sha256": "26fa4d379d305342401ff92aa814be310caa5bd5cf9efffacf6d74a229067919"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/packages/359e5f15-a0e0-4522-bb1a-366059ac4492.zip",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/packages/359e5f15-a0e0-4522-bb1a-366059ac4492.zip",
+      "sha256": "afe7615f1eb81f649507a611aa944797b89edcaa6da7353a060a20adf21b1657"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/packages/88e9edb8-ddef-4306-984a-bfe6ba9c9619.zip",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/packages/88e9edb8-ddef-4306-984a-bfe6ba9c9619.zip",
+      "sha256": "ef6820a7f53f5019326208a9dabd0f941a67e1a3071318e3880a91d21d6f27e2"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/packages/93af4eee-c609-4baf-8551-158bc436c3b9.zip",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/packages/93af4eee-c609-4baf-8551-158bc436c3b9.zip",
+      "sha256": "31f8816c62312d650aca89e419a2c4750eb4ee011829ded325c26f806a934258"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/packages/a36be5ac-59bf-47f6-8043-45a2bf8aa461.zip",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/packages/a36be5ac-59bf-47f6-8043-45a2bf8aa461.zip",
+      "sha256": "7ed8224fb7448ff7e0e3fa9d7e382fff8078250c771b569beceeb681825a5a20"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/packages/cc15a65a-f243-4c52-b5d6-54fc334e8858.zip",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/packages/cc15a65a-f243-4c52-b5d6-54fc334e8858.zip",
+      "sha256": "9e8cce37379397f240eb937df3d93ee815e74ecd52108a7355033578f150c6f5"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/packages/cca4f2fa-4d44-43ce-99ec-ff02510d044a.zip",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/packages/cca4f2fa-4d44-43ce-99ec-ff02510d044a.zip",
+      "sha256": "059a1e88bbc6a012bd2c4e56bb9fd74dba14fd0067c8e38bc312181ca50b7022"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/packages/ce6cee7d-1b44-433c-93e5-c9b6f1b63f34.zip",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/packages/ce6cee7d-1b44-433c-93e5-c9b6f1b63f34.zip",
+      "sha256": "83021ff1a2708dd45c526a08b620357455f2d7aa3791ff777821982a4d24fd5f"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/packages/da7bccaf-129d-4dc0-913c-d6d7dbad7c3a.zip",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/packages/da7bccaf-129d-4dc0-913c-d6d7dbad7c3a.zip",
+      "sha256": "d41f3de03fb5f4b2ab83f8cc6b9defe5d3c92947d5a67611062837435458b1f4"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/packages/e333ca1c-3697-4a65-ba1d-fe465781a623.zip",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/packages/e333ca1c-3697-4a65-ba1d-fe465781a623.zip",
+      "sha256": "3413b932979fa24dd151c906f29de9bb657275627a0c9d396c555b15259623a0"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/packages/e41d573f-f62f-484a-8370-daf1d70e87a0.zip",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/packages/e41d573f-f62f-484a-8370-daf1d70e87a0.zip",
+      "sha256": "598994477af57a657ce5f196939916706b0cac6c6eceb9ea39136bfa2368bb1b"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/packages/ebca2c21-04be-4832-b219-a1ef0d9aa213.zip",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/packages/ebca2c21-04be-4832-b219-a1ef0d9aa213.zip",
+      "sha256": "9ffcdb5e4a27cbf0998ca7601195d374c75038c6314adf47a5942d652c166cc0"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/packages/f29bca2e-34ba-48ad-8190-c66603020bb4.zip",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/packages/f29bca2e-34ba-48ad-8190-c66603020bb4.zip",
+      "sha256": "478153a6bfe864c734afa00e9580bb93571fd5983d5923f687b5df4f425aee0f"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/packages/f2d29f46-cbcb-4662-8248-4713b159e275.zip",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/packages/f2d29f46-cbcb-4662-8248-4713b159e275.zip",
+      "sha256": "c69d11e6df7cb06ea5e9f2f44bdfa5219b8f24b9009b42df747f42693b7328f8"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/.material-worker.lock",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/.material-worker.lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/material-artifacts/608f102a55d299a37f44f6873a427407/0c096f2d-ea0f-48d2-b25d-bd9071533eec/fafa5fdb-4cbf-4a0d-8d77-a307a722d52c/candidate.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/material-artifacts/608f102a55d299a37f44f6873a427407/0c096f2d-ea0f-48d2-b25d-bd9071533eec/fafa5fdb-4cbf-4a0d-8d77-a307a722d52c/candidate.json",
+      "sha256": "8d90ef5d3fb5d9a26efd80afea0869af1c13c2264581230cf1f80ce837161b6e"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/material-artifacts/608f102a55d299a37f44f6873a427407/0c096f2d-ea0f-48d2-b25d-bd9071533eec/fafa5fdb-4cbf-4a0d-8d77-a307a722d52c/pdf-native-0001.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/material-artifacts/608f102a55d299a37f44f6873a427407/0c096f2d-ea0f-48d2-b25d-bd9071533eec/fafa5fdb-4cbf-4a0d-8d77-a307a722d52c/pdf-native-0001.json",
+      "sha256": "65ccd18de1378fb691de21a0ab0516bd8f58d7801c90f4e7cecec3a24d9f8a3f"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/material-artifacts/608f102a55d299a37f44f6873a427407/0c096f2d-ea0f-48d2-b25d-bd9071533eec/fafa5fdb-4cbf-4a0d-8d77-a307a722d52c/pdf-order-repairs.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/material-artifacts/608f102a55d299a37f44f6873a427407/0c096f2d-ea0f-48d2-b25d-bd9071533eec/fafa5fdb-4cbf-4a0d-8d77-a307a722d52c/pdf-order-repairs.json",
+      "sha256": "151187cc9346472fd0f397b4ddd87f7c21ec32f1e493a619a617c26f60547983"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/material-artifacts/608f102a55d299a37f44f6873a427407/0c096f2d-ea0f-48d2-b25d-bd9071533eec/fafa5fdb-4cbf-4a0d-8d77-a307a722d52c/pdf-page-0001.png",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/material-artifacts/608f102a55d299a37f44f6873a427407/0c096f2d-ea0f-48d2-b25d-bd9071533eec/fafa5fdb-4cbf-4a0d-8d77-a307a722d52c/pdf-page-0001.png",
+      "sha256": "5dba0f21497096a6b1d5f23cdad4849e448f8ff69641092a25ecd835b9142e3d"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/material-artifacts/608f102a55d299a37f44f6873a427407/0c096f2d-ea0f-48d2-b25d-bd9071533eec/fafa5fdb-4cbf-4a0d-8d77-a307a722d52c/pdf-page-0002.png",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/material-artifacts/608f102a55d299a37f44f6873a427407/0c096f2d-ea0f-48d2-b25d-bd9071533eec/fafa5fdb-4cbf-4a0d-8d77-a307a722d52c/pdf-page-0002.png",
+      "sha256": "dee8c4669ebcc8563808187fd5de0aae37e5ab2b9fa195adeb6f6e89342a4c44"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/material-artifacts/608f102a55d299a37f44f6873a427407/0c096f2d-ea0f-48d2-b25d-bd9071533eec/fafa5fdb-4cbf-4a0d-8d77-a307a722d52c/pdf-page-0003.png",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/material-artifacts/608f102a55d299a37f44f6873a427407/0c096f2d-ea0f-48d2-b25d-bd9071533eec/fafa5fdb-4cbf-4a0d-8d77-a307a722d52c/pdf-page-0003.png",
+      "sha256": "1aebf7009a220323c3277b7117be2cf887f204a65c316810fd3e5c892fed93e0"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/material-artifacts/608f102a55d299a37f44f6873a427407/0c096f2d-ea0f-48d2-b25d-bd9071533eec/fafa5fdb-4cbf-4a0d-8d77-a307a722d52c/pdf-paragraph-groups.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/material-artifacts/608f102a55d299a37f44f6873a427407/0c096f2d-ea0f-48d2-b25d-bd9071533eec/fafa5fdb-4cbf-4a0d-8d77-a307a722d52c/pdf-paragraph-groups.json",
+      "sha256": "f21df9189ad9d2b186e96479c5f16de52d22f244acc2d83f3e0e2cedc47e6310"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/material-artifacts/608f102a55d299a37f44f6873a427407/0c096f2d-ea0f-48d2-b25d-bd9071533eec/fafa5fdb-4cbf-4a0d-8d77-a307a722d52c/pdf-window-0001.pdf",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/material-artifacts/608f102a55d299a37f44f6873a427407/0c096f2d-ea0f-48d2-b25d-bd9071533eec/fafa5fdb-4cbf-4a0d-8d77-a307a722d52c/pdf-window-0001.pdf",
+      "sha256": "bf115bcd98cc1c80bb27c525613d6a93d86d9b065c1784107d755114f3ce7b43"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/material-artifacts/608f102a55d299a37f44f6873a427407/0c096f2d-ea0f-48d2-b25d-bd9071533eec/fafa5fdb-4cbf-4a0d-8d77-a307a722d52c/source.pdf",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/material-artifacts/608f102a55d299a37f44f6873a427407/0c096f2d-ea0f-48d2-b25d-bd9071533eec/fafa5fdb-4cbf-4a0d-8d77-a307a722d52c/source.pdf",
+      "sha256": "58834f3110dfba069787cc1b478bc27b0f8023f4d85f515b661764548c08bb2b"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/material-originals/.reader-cache/1b0ce605fedc978ea0192f416412cd10805d80f9f4531511936bb3e4b3d948ea.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/material-originals/.reader-cache/1b0ce605fedc978ea0192f416412cd10805d80f9f4531511936bb3e4b3d948ea.json",
+      "sha256": "31458704e60d02933301599e4563de94c1124ad9b71dadcaabf3e933bfe26953"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/material-originals/.reader-cache/4602f02b26c0d0bc902f204148930b4d143b3963b8032f0d44a9500eb3d3e969.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/material-originals/.reader-cache/4602f02b26c0d0bc902f204148930b4d143b3963b8032f0d44a9500eb3d3e969.json",
+      "sha256": "c67ae324bce3493ecc0c6b3ad12cd399e3dc5612a4cc828d763c9902a10ab03b"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/material-originals/.reader-cache/bd35548f725e3133364b6152dc417f995d68334a39e73512676f78b8b4ccaaa8.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/material-originals/.reader-cache/bd35548f725e3133364b6152dc417f995d68334a39e73512676f78b8b4ccaaa8.json",
+      "sha256": "363d4badff0aba62fa2dda3b8bbf523bc68a4aded48c7de38ccd1de8ae596002"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/material-originals/58834f3110dfba069787cc1b478bc27b0f8023f4d85f515b661764548c08bb2b.pdf",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/material-originals/58834f3110dfba069787cc1b478bc27b0f8023f4d85f515b661764548c08bb2b.pdf",
+      "sha256": "58834f3110dfba069787cc1b478bc27b0f8023f4d85f515b661764548c08bb2b"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/workflow.sqlite",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/workflow.sqlite",
+      "sha256": "4a92bb7e26ef292f38d705ac79588769aa334aeeb3e8bdc6a1a5dc575dc7dc2c"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/1ed836bd-ff8e-4d94-9707-bb0eeefbbda8/.material-worker.lock",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/1ed836bd-ff8e-4d94-9707-bb0eeefbbda8/.material-worker.lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/1ed836bd-ff8e-4d94-9707-bb0eeefbbda8/material-originals/.reader-cache/226863126277486aa990164883e24eaa05aafcadcfadb7387a79cb1d29904e8a.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/1ed836bd-ff8e-4d94-9707-bb0eeefbbda8/material-originals/.reader-cache/226863126277486aa990164883e24eaa05aafcadcfadb7387a79cb1d29904e8a.json",
+      "sha256": "b9304f311fe2cc7d161ed2cceeb834effa1ef00cbc4d239b5c3b4c61bb7efd8f"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/1ed836bd-ff8e-4d94-9707-bb0eeefbbda8/material-originals/.reader-cache/e63241b6c9d2241abf67c781859a581c75d372209bc2f45f4bf6306c5addbcca.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/1ed836bd-ff8e-4d94-9707-bb0eeefbbda8/material-originals/.reader-cache/e63241b6c9d2241abf67c781859a581c75d372209bc2f45f4bf6306c5addbcca.json",
+      "sha256": "dc6dea4ec08282950fc4b4261db07fb3ed132cfed85822273d6c0b9a257fa5c8"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/1ed836bd-ff8e-4d94-9707-bb0eeefbbda8/material-originals/78edf06e79c11edfb67d99ff0bca026ddd93b116ec4441c2ce9c59cd3fd89344.xlsx",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/1ed836bd-ff8e-4d94-9707-bb0eeefbbda8/material-originals/78edf06e79c11edfb67d99ff0bca026ddd93b116ec4441c2ce9c59cd3fd89344.xlsx",
+      "sha256": "78edf06e79c11edfb67d99ff0bca026ddd93b116ec4441c2ce9c59cd3fd89344"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/1ed836bd-ff8e-4d94-9707-bb0eeefbbda8/workflow.sqlite",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/1ed836bd-ff8e-4d94-9707-bb0eeefbbda8/workflow.sqlite",
+      "sha256": "81228445ccfa03d8b62bc7696db501fbb053072b24feab6c24cc0216d69bb08f"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/4744a7d3-dfdd-4499-8e17-d7c036492c3c/.material-worker.lock",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/4744a7d3-dfdd-4499-8e17-d7c036492c3c/.material-worker.lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/4744a7d3-dfdd-4499-8e17-d7c036492c3c/material-originals/.reader-cache/226863126277486aa990164883e24eaa05aafcadcfadb7387a79cb1d29904e8a.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/4744a7d3-dfdd-4499-8e17-d7c036492c3c/material-originals/.reader-cache/226863126277486aa990164883e24eaa05aafcadcfadb7387a79cb1d29904e8a.json",
+      "sha256": "b9304f311fe2cc7d161ed2cceeb834effa1ef00cbc4d239b5c3b4c61bb7efd8f"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/4744a7d3-dfdd-4499-8e17-d7c036492c3c/material-originals/.reader-cache/e63241b6c9d2241abf67c781859a581c75d372209bc2f45f4bf6306c5addbcca.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/4744a7d3-dfdd-4499-8e17-d7c036492c3c/material-originals/.reader-cache/e63241b6c9d2241abf67c781859a581c75d372209bc2f45f4bf6306c5addbcca.json",
+      "sha256": "dc6dea4ec08282950fc4b4261db07fb3ed132cfed85822273d6c0b9a257fa5c8"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/4744a7d3-dfdd-4499-8e17-d7c036492c3c/material-originals/78edf06e79c11edfb67d99ff0bca026ddd93b116ec4441c2ce9c59cd3fd89344.xlsx",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/4744a7d3-dfdd-4499-8e17-d7c036492c3c/material-originals/78edf06e79c11edfb67d99ff0bca026ddd93b116ec4441c2ce9c59cd3fd89344.xlsx",
+      "sha256": "78edf06e79c11edfb67d99ff0bca026ddd93b116ec4441c2ce9c59cd3fd89344"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/4744a7d3-dfdd-4499-8e17-d7c036492c3c/workflow.sqlite",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/4744a7d3-dfdd-4499-8e17-d7c036492c3c/workflow.sqlite",
+      "sha256": "55bff22984f82f346827f67ac7b72e95f3c2694563719f38fd5d235046912d16"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/7a720358-70aa-4ff4-b502-d0d24351b08d/.material-worker.lock",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/7a720358-70aa-4ff4-b502-d0d24351b08d/.material-worker.lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/7a720358-70aa-4ff4-b502-d0d24351b08d/material-originals/.reader-cache/e46a76a89483dca74f2d06b6491e93ccb5763062bbea743bd82ab6f8af3ce50c.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/7a720358-70aa-4ff4-b502-d0d24351b08d/material-originals/.reader-cache/e46a76a89483dca74f2d06b6491e93ccb5763062bbea743bd82ab6f8af3ce50c.json",
+      "sha256": "9b14721857f79271d79ce41ec5be840b40f619e0141119cac2d85e01b67d89ec"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/7a720358-70aa-4ff4-b502-d0d24351b08d/material-originals/.reader-cache/f839f9ea76d1fff41090273c98eba55b4655a4b6c9a24eac7c4a39845a86f82d.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/7a720358-70aa-4ff4-b502-d0d24351b08d/material-originals/.reader-cache/f839f9ea76d1fff41090273c98eba55b4655a4b6c9a24eac7c4a39845a86f82d.json",
+      "sha256": "ffe2e50d797f9f37f0f524cd4eaa708bd6447e3ee3d74b3f2658e848df2a84fa"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/7a720358-70aa-4ff4-b502-d0d24351b08d/material-originals/b9b88ca01572da304cf651b63825aa87cacaeb6681c81352a14a4df5adcffa9a.html",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/7a720358-70aa-4ff4-b502-d0d24351b08d/material-originals/b9b88ca01572da304cf651b63825aa87cacaeb6681c81352a14a4df5adcffa9a.html",
+      "sha256": "b9b88ca01572da304cf651b63825aa87cacaeb6681c81352a14a4df5adcffa9a"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/7a720358-70aa-4ff4-b502-d0d24351b08d/workflow.sqlite",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/7a720358-70aa-4ff4-b502-d0d24351b08d/workflow.sqlite",
+      "sha256": "82942da3d2339b0881c89cc127f7dfc6703c232d68a9d89de8dcdefedcc1c26d"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/.material-worker.lock",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/.material-worker.lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-artifacts/84194a9c4deb7df4b2fdc98a6245f374/27cf8b61-69d2-4e9d-84b4-c7717bac5441/ed0409dd-5196-4646-b39c-9a41d03fe372/candidate.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-artifacts/84194a9c4deb7df4b2fdc98a6245f374/27cf8b61-69d2-4e9d-84b4-c7717bac5441/ed0409dd-5196-4646-b39c-9a41d03fe372/candidate.json",
+      "sha256": "3858adf70412cc2e055f5d8eaeff48d5a7d70294868b378a4249dfa0ff333acd"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-artifacts/84194a9c4deb7df4b2fdc98a6245f374/27cf8b61-69d2-4e9d-84b4-c7717bac5441/ed0409dd-5196-4646-b39c-9a41d03fe372/excel-canonical.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-artifacts/84194a9c4deb7df4b2fdc98a6245f374/27cf8b61-69d2-4e9d-84b4-c7717bac5441/ed0409dd-5196-4646-b39c-9a41d03fe372/excel-canonical.json",
+      "sha256": "bc5f2ec0b41f301f7f8e6981b46107c5aed8064d53f8cbaa1011eea5a7d48448"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-artifacts/84194a9c4deb7df4b2fdc98a6245f374/27cf8b61-69d2-4e9d-84b4-c7717bac5441/ed0409dd-5196-4646-b39c-9a41d03fe372/source.xlsx",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-artifacts/84194a9c4deb7df4b2fdc98a6245f374/27cf8b61-69d2-4e9d-84b4-c7717bac5441/ed0409dd-5196-4646-b39c-9a41d03fe372/source.xlsx",
+      "sha256": "78edf06e79c11edfb67d99ff0bca026ddd93b116ec4441c2ce9c59cd3fd89344"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-artifacts/84194a9c4deb7df4b2fdc98a6245f374/43ce8126-19c2-4fb1-b6de-827c77f4fc0e/9ae07b71-4ee2-403b-a643-77d3c67a8de4/candidate.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-artifacts/84194a9c4deb7df4b2fdc98a6245f374/43ce8126-19c2-4fb1-b6de-827c77f4fc0e/9ae07b71-4ee2-403b-a643-77d3c67a8de4/candidate.json",
+      "sha256": "3858adf70412cc2e055f5d8eaeff48d5a7d70294868b378a4249dfa0ff333acd"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-artifacts/84194a9c4deb7df4b2fdc98a6245f374/43ce8126-19c2-4fb1-b6de-827c77f4fc0e/9ae07b71-4ee2-403b-a643-77d3c67a8de4/excel-canonical.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-artifacts/84194a9c4deb7df4b2fdc98a6245f374/43ce8126-19c2-4fb1-b6de-827c77f4fc0e/9ae07b71-4ee2-403b-a643-77d3c67a8de4/excel-canonical.json",
+      "sha256": "bc5f2ec0b41f301f7f8e6981b46107c5aed8064d53f8cbaa1011eea5a7d48448"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-artifacts/84194a9c4deb7df4b2fdc98a6245f374/43ce8126-19c2-4fb1-b6de-827c77f4fc0e/9ae07b71-4ee2-403b-a643-77d3c67a8de4/source.xlsx",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-artifacts/84194a9c4deb7df4b2fdc98a6245f374/43ce8126-19c2-4fb1-b6de-827c77f4fc0e/9ae07b71-4ee2-403b-a643-77d3c67a8de4/source.xlsx",
+      "sha256": "78edf06e79c11edfb67d99ff0bca026ddd93b116ec4441c2ce9c59cd3fd89344"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-artifacts/84194a9c4deb7df4b2fdc98a6245f374/aa9f879a-d307-4f8c-b6d7-bcf1e6285046/30ce70b7-0c1e-4454-8877-39a63588c2b5/candidate.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-artifacts/84194a9c4deb7df4b2fdc98a6245f374/aa9f879a-d307-4f8c-b6d7-bcf1e6285046/30ce70b7-0c1e-4454-8877-39a63588c2b5/candidate.json",
+      "sha256": "3858adf70412cc2e055f5d8eaeff48d5a7d70294868b378a4249dfa0ff333acd"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-artifacts/84194a9c4deb7df4b2fdc98a6245f374/aa9f879a-d307-4f8c-b6d7-bcf1e6285046/30ce70b7-0c1e-4454-8877-39a63588c2b5/excel-canonical.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-artifacts/84194a9c4deb7df4b2fdc98a6245f374/aa9f879a-d307-4f8c-b6d7-bcf1e6285046/30ce70b7-0c1e-4454-8877-39a63588c2b5/excel-canonical.json",
+      "sha256": "bc5f2ec0b41f301f7f8e6981b46107c5aed8064d53f8cbaa1011eea5a7d48448"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-artifacts/84194a9c4deb7df4b2fdc98a6245f374/aa9f879a-d307-4f8c-b6d7-bcf1e6285046/30ce70b7-0c1e-4454-8877-39a63588c2b5/source.xlsx",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-artifacts/84194a9c4deb7df4b2fdc98a6245f374/aa9f879a-d307-4f8c-b6d7-bcf1e6285046/30ce70b7-0c1e-4454-8877-39a63588c2b5/source.xlsx",
+      "sha256": "78edf06e79c11edfb67d99ff0bca026ddd93b116ec4441c2ce9c59cd3fd89344"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-artifacts/84194a9c4deb7df4b2fdc98a6245f374/cf7a2f10-8e71-4736-88bb-88857ba481d4/8464f9cd-bcfd-4278-a4de-e463aabfc7cd/candidate.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-artifacts/84194a9c4deb7df4b2fdc98a6245f374/cf7a2f10-8e71-4736-88bb-88857ba481d4/8464f9cd-bcfd-4278-a4de-e463aabfc7cd/candidate.json",
+      "sha256": "3858adf70412cc2e055f5d8eaeff48d5a7d70294868b378a4249dfa0ff333acd"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-artifacts/84194a9c4deb7df4b2fdc98a6245f374/cf7a2f10-8e71-4736-88bb-88857ba481d4/8464f9cd-bcfd-4278-a4de-e463aabfc7cd/excel-canonical.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-artifacts/84194a9c4deb7df4b2fdc98a6245f374/cf7a2f10-8e71-4736-88bb-88857ba481d4/8464f9cd-bcfd-4278-a4de-e463aabfc7cd/excel-canonical.json",
+      "sha256": "bc5f2ec0b41f301f7f8e6981b46107c5aed8064d53f8cbaa1011eea5a7d48448"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-artifacts/84194a9c4deb7df4b2fdc98a6245f374/cf7a2f10-8e71-4736-88bb-88857ba481d4/8464f9cd-bcfd-4278-a4de-e463aabfc7cd/source.xlsx",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-artifacts/84194a9c4deb7df4b2fdc98a6245f374/cf7a2f10-8e71-4736-88bb-88857ba481d4/8464f9cd-bcfd-4278-a4de-e463aabfc7cd/source.xlsx",
+      "sha256": "78edf06e79c11edfb67d99ff0bca026ddd93b116ec4441c2ce9c59cd3fd89344"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-originals/.reader-cache/2696ffb41cbd7ca148bc33d62801f9c44a94be549df060e182edd2f0a93ca369.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-originals/.reader-cache/2696ffb41cbd7ca148bc33d62801f9c44a94be549df060e182edd2f0a93ca369.json",
+      "sha256": "656edababbbd7e39eb99598805d5bd3b5ba7e6ddbce2060a7ed2a566a2c0943c"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-originals/.reader-cache/27bc293c88a723e6c6ad8db685dec71bac64ad39e486ae8376ce12f47586b84e.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-originals/.reader-cache/27bc293c88a723e6c6ad8db685dec71bac64ad39e486ae8376ce12f47586b84e.json",
+      "sha256": "d486f674c9723733bd4639e9ab43be5cd0c011cc2077d34631ae4156ba875fe2"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-originals/.reader-cache/6d5470a3ff1a782b7dde7b5dafb063d85f28b5c97f4d33ecf9e176340b253c50.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-originals/.reader-cache/6d5470a3ff1a782b7dde7b5dafb063d85f28b5c97f4d33ecf9e176340b253c50.json",
+      "sha256": "194957705654815a11e5e8c2b4c332706c1d17630a31bf993c069f478276d1f6"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-originals/.reader-cache/8c1d4c96eced599ed65e42e57c238ddd39181da9ab015d432d15680a82f69065.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-originals/.reader-cache/8c1d4c96eced599ed65e42e57c238ddd39181da9ab015d432d15680a82f69065.json",
+      "sha256": "14ef216b173d2d714b04a5d6458951bd5f506d54dd532e61bbb92c43b7ef14d4"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-originals/.reader-cache/c96e2d2b5ad2c3ad9f7fcb754d884295deaf8c5c0b85b53a5c52d14f9ce45303.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-originals/.reader-cache/c96e2d2b5ad2c3ad9f7fcb754d884295deaf8c5c0b85b53a5c52d14f9ce45303.json",
+      "sha256": "254872aac50be8462d9a379d77ebc946225ab5fd45480b7fd1808fa292d39d0b"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-originals/.reader-cache/e510cd7509540067667a0ed386a1b5605b22d8bad400d0092a685135d4b2e4f7.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-originals/.reader-cache/e510cd7509540067667a0ed386a1b5605b22d8bad400d0092a685135d4b2e4f7.json",
+      "sha256": "c8ec760c4fc12977e03014211c785340c6a41e2190431cb46bbbc885300c74a5"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-originals/.reader-cache/e63241b6c9d2241abf67c781859a581c75d372209bc2f45f4bf6306c5addbcca.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-originals/.reader-cache/e63241b6c9d2241abf67c781859a581c75d372209bc2f45f4bf6306c5addbcca.json",
+      "sha256": "dc6dea4ec08282950fc4b4261db07fb3ed132cfed85822273d6c0b9a257fa5c8"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-originals/78edf06e79c11edfb67d99ff0bca026ddd93b116ec4441c2ce9c59cd3fd89344.xlsx",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/material-originals/78edf06e79c11edfb67d99ff0bca026ddd93b116ec4441c2ce9c59cd3fd89344.xlsx",
+      "sha256": "78edf06e79c11edfb67d99ff0bca026ddd93b116ec4441c2ce9c59cd3fd89344"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/workflow.sqlite",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/workflow.sqlite",
+      "sha256": "71946df771fd5bcf4eb1e38275b93400c8a30ad25b7ae840898dbedc0953683b"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/95466b61-df18-4cb3-8e6d-8227034d9c72/.material-worker.lock",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/95466b61-df18-4cb3-8e6d-8227034d9c72/.material-worker.lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/95466b61-df18-4cb3-8e6d-8227034d9c72/material-artifacts/c77051372ee15f7b6ab15b44faa0658c/6d0ddf64-1953-4225-80df-de9b8c67c996/79504f03-1a45-4fbd-9a10-ea6f242fc5f4/candidate.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/95466b61-df18-4cb3-8e6d-8227034d9c72/material-artifacts/c77051372ee15f7b6ab15b44faa0658c/6d0ddf64-1953-4225-80df-de9b8c67c996/79504f03-1a45-4fbd-9a10-ea6f242fc5f4/candidate.json",
+      "sha256": "fee0562d2e1ae83d585382349163d3330309a2c0ad028492a14f5139382195e0"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/95466b61-df18-4cb3-8e6d-8227034d9c72/material-artifacts/c77051372ee15f7b6ab15b44faa0658c/6d0ddf64-1953-4225-80df-de9b8c67c996/79504f03-1a45-4fbd-9a10-ea6f242fc5f4/html-canonical.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/95466b61-df18-4cb3-8e6d-8227034d9c72/material-artifacts/c77051372ee15f7b6ab15b44faa0658c/6d0ddf64-1953-4225-80df-de9b8c67c996/79504f03-1a45-4fbd-9a10-ea6f242fc5f4/html-canonical.json",
+      "sha256": "5b56cce46d6edd4ae3fae217f2ec6f56b5b842c41f524cdd2297b7965e3e53ae"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/95466b61-df18-4cb3-8e6d-8227034d9c72/material-artifacts/c77051372ee15f7b6ab15b44faa0658c/6d0ddf64-1953-4225-80df-de9b8c67c996/79504f03-1a45-4fbd-9a10-ea6f242fc5f4/html-static-candidate.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/95466b61-df18-4cb3-8e6d-8227034d9c72/material-artifacts/c77051372ee15f7b6ab15b44faa0658c/6d0ddf64-1953-4225-80df-de9b8c67c996/79504f03-1a45-4fbd-9a10-ea6f242fc5f4/html-static-candidate.json",
+      "sha256": "218a8ed9337bbf2222e43cd8b5f21e02ff987681905dd548c4e284dc41696ae9"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/95466b61-df18-4cb3-8e6d-8227034d9c72/material-artifacts/c77051372ee15f7b6ab15b44faa0658c/6d0ddf64-1953-4225-80df-de9b8c67c996/79504f03-1a45-4fbd-9a10-ea6f242fc5f4/source.html",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/95466b61-df18-4cb3-8e6d-8227034d9c72/material-artifacts/c77051372ee15f7b6ab15b44faa0658c/6d0ddf64-1953-4225-80df-de9b8c67c996/79504f03-1a45-4fbd-9a10-ea6f242fc5f4/source.html",
+      "sha256": "8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/95466b61-df18-4cb3-8e6d-8227034d9c72/material-originals/.reader-cache/18d577ac37c4e69be1be1b364e0c99a9cdd5623a3d478e4d86e804b49d6827d2.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/95466b61-df18-4cb3-8e6d-8227034d9c72/material-originals/.reader-cache/18d577ac37c4e69be1be1b364e0c99a9cdd5623a3d478e4d86e804b49d6827d2.json",
+      "sha256": "665881f1ac80b493ad502bc743e4e20678e472b885d91f8badb7f1d8811acdb2"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/95466b61-df18-4cb3-8e6d-8227034d9c72/material-originals/.reader-cache/88a721588953ad8f89bb1817e3d6566f4ed877d0bb5432768d58e49c41b605c2.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/95466b61-df18-4cb3-8e6d-8227034d9c72/material-originals/.reader-cache/88a721588953ad8f89bb1817e3d6566f4ed877d0bb5432768d58e49c41b605c2.json",
+      "sha256": "970637585da0f3c49bf8614e9f4dd7489b809459137d8c3a0393c724b4310879"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/95466b61-df18-4cb3-8e6d-8227034d9c72/material-originals/.reader-cache/ece5df1e49d27bfd604cd62062488b1c2a178cfbfb4fceef58b1e586435bd092.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/95466b61-df18-4cb3-8e6d-8227034d9c72/material-originals/.reader-cache/ece5df1e49d27bfd604cd62062488b1c2a178cfbfb4fceef58b1e586435bd092.json",
+      "sha256": "a269fe68ff53c577cf194f085e5e0381d785bc9bf5d022ec778130174d402b63"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/95466b61-df18-4cb3-8e6d-8227034d9c72/material-originals/8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967.html",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/95466b61-df18-4cb3-8e6d-8227034d9c72/material-originals/8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967.html",
+      "sha256": "8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/95466b61-df18-4cb3-8e6d-8227034d9c72/workflow.sqlite",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/95466b61-df18-4cb3-8e6d-8227034d9c72/workflow.sqlite",
+      "sha256": "de345d5458d4987f933f8b395b31f110cbe6aa382deb819b7f40c74c67edbcf1"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/ac8be4be-6c3b-4927-99c9-5ff32a751aeb/.material-worker.lock",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/ac8be4be-6c3b-4927-99c9-5ff32a751aeb/.material-worker.lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/ac8be4be-6c3b-4927-99c9-5ff32a751aeb/material-originals/.reader-cache/2d21716b39215ceb333a935fb38be914866060205314c730761ad5234a4a3c4d.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/ac8be4be-6c3b-4927-99c9-5ff32a751aeb/material-originals/.reader-cache/2d21716b39215ceb333a935fb38be914866060205314c730761ad5234a4a3c4d.json",
+      "sha256": "a9106b98b9e29dd09d10fda2f34fa147a6575604b7a068c1d538a5cd50d71711"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/ac8be4be-6c3b-4927-99c9-5ff32a751aeb/material-originals/.reader-cache/80bdd420a41a70f31c744ac5191957666bf072faa2252132d0b54bee81bede94.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/ac8be4be-6c3b-4927-99c9-5ff32a751aeb/material-originals/.reader-cache/80bdd420a41a70f31c744ac5191957666bf072faa2252132d0b54bee81bede94.json",
+      "sha256": "7b0b2a408cd12325bec26cf23f143e56eca032c153e6bd43806018c55dff7fdc"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/ac8be4be-6c3b-4927-99c9-5ff32a751aeb/material-originals/.reader-cache/88a721588953ad8f89bb1817e3d6566f4ed877d0bb5432768d58e49c41b605c2.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/ac8be4be-6c3b-4927-99c9-5ff32a751aeb/material-originals/.reader-cache/88a721588953ad8f89bb1817e3d6566f4ed877d0bb5432768d58e49c41b605c2.json",
+      "sha256": "970637585da0f3c49bf8614e9f4dd7489b809459137d8c3a0393c724b4310879"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/ac8be4be-6c3b-4927-99c9-5ff32a751aeb/material-originals/8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967.html",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/ac8be4be-6c3b-4927-99c9-5ff32a751aeb/material-originals/8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967.html",
+      "sha256": "8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/ac8be4be-6c3b-4927-99c9-5ff32a751aeb/workflow.sqlite",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/collaboration/personal/ac8be4be-6c3b-4927-99c9-5ff32a751aeb/workflow.sqlite",
+      "sha256": "d3c58806418468c00c69a944bf754d7deeafc3c49d99de6e334d1af8a47853ad"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/listen-port.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/listen-port.json",
+      "sha256": "86ebaba46f463b4e0dac5a592958a3ed2684d1fa63b69aa74f3a919dbc03c954"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/runtime-events.jsonl",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/runtime-events.jsonl",
+      "sha256": "0787fd5524e9a1ca0f8c1d9bda261f01a9b0af46c4cf9ae08184a0256648e9ff"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/runtime-status.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/runtime-status.json",
+      "sha256": "0b59f645fc160098d53795bffd73e52b8f761fd5e931d6578173d1de3eab5dd2"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/system2-workflow/material-originals/.reader-cache/18d577ac37c4e69be1be1b364e0c99a9cdd5623a3d478e4d86e804b49d6827d2.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/system2-workflow/material-originals/.reader-cache/18d577ac37c4e69be1be1b364e0c99a9cdd5623a3d478e4d86e804b49d6827d2.json",
+      "sha256": "665881f1ac80b493ad502bc743e4e20678e472b885d91f8badb7f1d8811acdb2"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/system2-workflow/material-originals/.reader-cache/226863126277486aa990164883e24eaa05aafcadcfadb7387a79cb1d29904e8a.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/system2-workflow/material-originals/.reader-cache/226863126277486aa990164883e24eaa05aafcadcfadb7387a79cb1d29904e8a.json",
+      "sha256": "b9304f311fe2cc7d161ed2cceeb834effa1ef00cbc4d239b5c3b4c61bb7efd8f"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/system2-workflow/material-originals/.reader-cache/27bc293c88a723e6c6ad8db685dec71bac64ad39e486ae8376ce12f47586b84e.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/system2-workflow/material-originals/.reader-cache/27bc293c88a723e6c6ad8db685dec71bac64ad39e486ae8376ce12f47586b84e.json",
+      "sha256": "d486f674c9723733bd4639e9ab43be5cd0c011cc2077d34631ae4156ba875fe2"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/system2-workflow/material-originals/.reader-cache/2d21716b39215ceb333a935fb38be914866060205314c730761ad5234a4a3c4d.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/system2-workflow/material-originals/.reader-cache/2d21716b39215ceb333a935fb38be914866060205314c730761ad5234a4a3c4d.json",
+      "sha256": "a9106b98b9e29dd09d10fda2f34fa147a6575604b7a068c1d538a5cd50d71711"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/system2-workflow/material-originals/.reader-cache/6d5470a3ff1a782b7dde7b5dafb063d85f28b5c97f4d33ecf9e176340b253c50.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/system2-workflow/material-originals/.reader-cache/6d5470a3ff1a782b7dde7b5dafb063d85f28b5c97f4d33ecf9e176340b253c50.json",
+      "sha256": "194957705654815a11e5e8c2b4c332706c1d17630a31bf993c069f478276d1f6"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/system2-workflow/material-originals/.reader-cache/80bdd420a41a70f31c744ac5191957666bf072faa2252132d0b54bee81bede94.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/system2-workflow/material-originals/.reader-cache/80bdd420a41a70f31c744ac5191957666bf072faa2252132d0b54bee81bede94.json",
+      "sha256": "7b0b2a408cd12325bec26cf23f143e56eca032c153e6bd43806018c55dff7fdc"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/system2-workflow/material-originals/.reader-cache/88a721588953ad8f89bb1817e3d6566f4ed877d0bb5432768d58e49c41b605c2.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/system2-workflow/material-originals/.reader-cache/88a721588953ad8f89bb1817e3d6566f4ed877d0bb5432768d58e49c41b605c2.json",
+      "sha256": "970637585da0f3c49bf8614e9f4dd7489b809459137d8c3a0393c724b4310879"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/system2-workflow/material-originals/.reader-cache/bd35548f725e3133364b6152dc417f995d68334a39e73512676f78b8b4ccaaa8.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/system2-workflow/material-originals/.reader-cache/bd35548f725e3133364b6152dc417f995d68334a39e73512676f78b8b4ccaaa8.json",
+      "sha256": "363d4badff0aba62fa2dda3b8bbf523bc68a4aded48c7de38ccd1de8ae596002"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/system2-workflow/material-originals/.reader-cache/e46a76a89483dca74f2d06b6491e93ccb5763062bbea743bd82ab6f8af3ce50c.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/system2-workflow/material-originals/.reader-cache/e46a76a89483dca74f2d06b6491e93ccb5763062bbea743bd82ab6f8af3ce50c.json",
+      "sha256": "9b14721857f79271d79ce41ec5be840b40f619e0141119cac2d85e01b67d89ec"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/system2-workflow/material-originals/.reader-cache/e63241b6c9d2241abf67c781859a581c75d372209bc2f45f4bf6306c5addbcca.json",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/system2-workflow/material-originals/.reader-cache/e63241b6c9d2241abf67c781859a581c75d372209bc2f45f4bf6306c5addbcca.json",
+      "sha256": "dc6dea4ec08282950fc4b4261db07fb3ed132cfed85822273d6c0b9a257fa5c8"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/system2-workflow/material-originals/58834f3110dfba069787cc1b478bc27b0f8023f4d85f515b661764548c08bb2b.pdf",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/system2-workflow/material-originals/58834f3110dfba069787cc1b478bc27b0f8023f4d85f515b661764548c08bb2b.pdf",
+      "sha256": "58834f3110dfba069787cc1b478bc27b0f8023f4d85f515b661764548c08bb2b"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/system2-workflow/material-originals/78edf06e79c11edfb67d99ff0bca026ddd93b116ec4441c2ce9c59cd3fd89344.xlsx",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/system2-workflow/material-originals/78edf06e79c11edfb67d99ff0bca026ddd93b116ec4441c2ce9c59cd3fd89344.xlsx",
+      "sha256": "78edf06e79c11edfb67d99ff0bca026ddd93b116ec4441c2ce9c59cd3fd89344"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/system2-workflow/material-originals/8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967.html",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/system2-workflow/material-originals/8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967.html",
+      "sha256": "8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/system2-workflow/material-originals/b9b88ca01572da304cf651b63825aa87cacaeb6681c81352a14a4df5adcffa9a.html",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/system2-workflow/material-originals/b9b88ca01572da304cf651b63825aa87cacaeb6681c81352a14a4df5adcffa9a.html",
+      "sha256": "b9b88ca01572da304cf651b63825aa87cacaeb6681c81352a14a4df5adcffa9a"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/system2-workflow/workflow.sqlite",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/system2-workflow/workflow.sqlite",
+      "sha256": "8ac8b8612e7e781bf0b8f3774561fef774cee95f333c78dad08d8ac9c3192fd4"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/workbench.sqlite",
+      "backup": "isolated-checkpoint/fixture/workbench/runtime/workbench.sqlite",
+      "sha256": "ddda25c2fc3bd2e04804131d2f39ff7e8fd399df9079ef20a10daf9ec51fcdb5"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/originals/cca4f2fa-4d44-43ce-99ec-ff02510d044a/A_Public_Authority/PA001-001_material.html",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/originals/cca4f2fa-4d44-43ce-99ec-ff02510d044a/A_Public_Authority/PA001-001_material.html",
+      "sha256": "8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/originals/f29bca2e-34ba-48ad-8190-c66603020bb4/A_Public_Authority/TS002-001_material.xlsx",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/originals/f29bca2e-34ba-48ad-8190-c66603020bb4/A_Public_Authority/TS002-001_material.xlsx",
+      "sha256": "78edf06e79c11edfb67d99ff0bca026ddd93b116ec4441c2ce9c59cd3fd89344"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/packages/06891846-e0ab-43ce-9263-6873f4a4b1f0.zip",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/packages/06891846-e0ab-43ce-9263-6873f4a4b1f0.zip",
+      "sha256": "f92748eed847c4a67018af8e30389f280362cc70d4b1bb522e22e545a9e5645d"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/packages/06a71dfd-c69f-4d74-aa33-4532acc5d64b.zip",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/packages/06a71dfd-c69f-4d74-aa33-4532acc5d64b.zip",
+      "sha256": "3347e31534611a16f9137305334f0077f7d922259b85a99b04cc2f0992419603"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/packages/191d65f6-8619-4a7b-a51f-3f734699be0e.zip",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/packages/191d65f6-8619-4a7b-a51f-3f734699be0e.zip",
+      "sha256": "26fa4d379d305342401ff92aa814be310caa5bd5cf9efffacf6d74a229067919"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/packages/32ed12b4-07ac-549b-9f26-6006a4849cd1.zip",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/packages/32ed12b4-07ac-549b-9f26-6006a4849cd1.zip",
+      "sha256": "ea40adb83a7f938d0f9ccfbf43a5c71389bfc7eacfbaf3c39ba2fc4fe9ae5e91"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/packages/359e5f15-a0e0-4522-bb1a-366059ac4492.zip",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/packages/359e5f15-a0e0-4522-bb1a-366059ac4492.zip",
+      "sha256": "afe7615f1eb81f649507a611aa944797b89edcaa6da7353a060a20adf21b1657"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/packages/708d642a-5acf-4e20-b003-327828448915.zip",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/packages/708d642a-5acf-4e20-b003-327828448915.zip",
+      "sha256": "f9ace6e43b63cac19abacd5c520cba7844c9d11c3c785a92e61bfa51c3a33956"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/packages/88e9edb8-ddef-4306-984a-bfe6ba9c9619.zip",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/packages/88e9edb8-ddef-4306-984a-bfe6ba9c9619.zip",
+      "sha256": "ef6820a7f53f5019326208a9dabd0f941a67e1a3071318e3880a91d21d6f27e2"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/packages/8f258c0c-0c1f-525d-85ca-0e31cd34fbe2.zip",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/packages/8f258c0c-0c1f-525d-85ca-0e31cd34fbe2.zip",
+      "sha256": "ad46f3f532099cbf18c0ff2d20f0745e137cb3547fae3756a9d047f36a588e39"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/packages/93af4eee-c609-4baf-8551-158bc436c3b9.zip",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/packages/93af4eee-c609-4baf-8551-158bc436c3b9.zip",
+      "sha256": "31f8816c62312d650aca89e419a2c4750eb4ee011829ded325c26f806a934258"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/packages/a36be5ac-59bf-47f6-8043-45a2bf8aa461.zip",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/packages/a36be5ac-59bf-47f6-8043-45a2bf8aa461.zip",
+      "sha256": "7ed8224fb7448ff7e0e3fa9d7e382fff8078250c771b569beceeb681825a5a20"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/packages/cc15a65a-f243-4c52-b5d6-54fc334e8858.zip",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/packages/cc15a65a-f243-4c52-b5d6-54fc334e8858.zip",
+      "sha256": "9e8cce37379397f240eb937df3d93ee815e74ecd52108a7355033578f150c6f5"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/packages/cca4f2fa-4d44-43ce-99ec-ff02510d044a.zip",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/packages/cca4f2fa-4d44-43ce-99ec-ff02510d044a.zip",
+      "sha256": "059a1e88bbc6a012bd2c4e56bb9fd74dba14fd0067c8e38bc312181ca50b7022"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/packages/ce6cee7d-1b44-433c-93e5-c9b6f1b63f34.zip",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/packages/ce6cee7d-1b44-433c-93e5-c9b6f1b63f34.zip",
+      "sha256": "83021ff1a2708dd45c526a08b620357455f2d7aa3791ff777821982a4d24fd5f"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/packages/da7bccaf-129d-4dc0-913c-d6d7dbad7c3a.zip",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/packages/da7bccaf-129d-4dc0-913c-d6d7dbad7c3a.zip",
+      "sha256": "d41f3de03fb5f4b2ab83f8cc6b9defe5d3c92947d5a67611062837435458b1f4"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/packages/e333ca1c-3697-4a65-ba1d-fe465781a623.zip",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/packages/e333ca1c-3697-4a65-ba1d-fe465781a623.zip",
+      "sha256": "3413b932979fa24dd151c906f29de9bb657275627a0c9d396c555b15259623a0"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/packages/e41d573f-f62f-484a-8370-daf1d70e87a0.zip",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/packages/e41d573f-f62f-484a-8370-daf1d70e87a0.zip",
+      "sha256": "598994477af57a657ce5f196939916706b0cac6c6eceb9ea39136bfa2368bb1b"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/packages/f29bca2e-34ba-48ad-8190-c66603020bb4.zip",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/packages/f29bca2e-34ba-48ad-8190-c66603020bb4.zip",
+      "sha256": "478153a6bfe864c734afa00e9580bb93571fd5983d5923f687b5df4f425aee0f"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/personal/79c00fcc-32df-4949-884f-f7f90b0ae42e/.material-worker.lock",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/personal/79c00fcc-32df-4949-884f-f7f90b0ae42e/.material-worker.lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/personal/79c00fcc-32df-4949-884f-f7f90b0ae42e/material-originals/.reader-cache/226863126277486aa990164883e24eaa05aafcadcfadb7387a79cb1d29904e8a.json",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/personal/79c00fcc-32df-4949-884f-f7f90b0ae42e/material-originals/.reader-cache/226863126277486aa990164883e24eaa05aafcadcfadb7387a79cb1d29904e8a.json",
+      "sha256": "b9304f311fe2cc7d161ed2cceeb834effa1ef00cbc4d239b5c3b4c61bb7efd8f"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/personal/79c00fcc-32df-4949-884f-f7f90b0ae42e/material-originals/.reader-cache/e63241b6c9d2241abf67c781859a581c75d372209bc2f45f4bf6306c5addbcca.json",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/personal/79c00fcc-32df-4949-884f-f7f90b0ae42e/material-originals/.reader-cache/e63241b6c9d2241abf67c781859a581c75d372209bc2f45f4bf6306c5addbcca.json",
+      "sha256": "dc6dea4ec08282950fc4b4261db07fb3ed132cfed85822273d6c0b9a257fa5c8"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/personal/79c00fcc-32df-4949-884f-f7f90b0ae42e/material-originals/78edf06e79c11edfb67d99ff0bca026ddd93b116ec4441c2ce9c59cd3fd89344.xlsx",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/personal/79c00fcc-32df-4949-884f-f7f90b0ae42e/material-originals/78edf06e79c11edfb67d99ff0bca026ddd93b116ec4441c2ce9c59cd3fd89344.xlsx",
+      "sha256": "78edf06e79c11edfb67d99ff0bca026ddd93b116ec4441c2ce9c59cd3fd89344"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/personal/79c00fcc-32df-4949-884f-f7f90b0ae42e/offline-source.json",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/personal/79c00fcc-32df-4949-884f-f7f90b0ae42e/offline-source.json",
+      "sha256": "ad186a64ba2a4e0498ffa49ded31a4638fc4b2969fce903ace3a48974a748677"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/personal/79c00fcc-32df-4949-884f-f7f90b0ae42e/workflow.sqlite",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/personal/79c00fcc-32df-4949-884f-f7f90b0ae42e/workflow.sqlite",
+      "sha256": "1314923ed1b95b59fc71e240f597e6face456fc43204a63e3638e9d8cd844471"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/personal/f362919a-07e7-44b9-bd17-a8c2799fbfc7/.material-worker.lock",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/personal/f362919a-07e7-44b9-bd17-a8c2799fbfc7/.material-worker.lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/personal/f362919a-07e7-44b9-bd17-a8c2799fbfc7/material-originals/.reader-cache/2d21716b39215ceb333a935fb38be914866060205314c730761ad5234a4a3c4d.json",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/personal/f362919a-07e7-44b9-bd17-a8c2799fbfc7/material-originals/.reader-cache/2d21716b39215ceb333a935fb38be914866060205314c730761ad5234a4a3c4d.json",
+      "sha256": "a9106b98b9e29dd09d10fda2f34fa147a6575604b7a068c1d538a5cd50d71711"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/personal/f362919a-07e7-44b9-bd17-a8c2799fbfc7/material-originals/.reader-cache/80bdd420a41a70f31c744ac5191957666bf072faa2252132d0b54bee81bede94.json",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/personal/f362919a-07e7-44b9-bd17-a8c2799fbfc7/material-originals/.reader-cache/80bdd420a41a70f31c744ac5191957666bf072faa2252132d0b54bee81bede94.json",
+      "sha256": "7b0b2a408cd12325bec26cf23f143e56eca032c153e6bd43806018c55dff7fdc"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/personal/f362919a-07e7-44b9-bd17-a8c2799fbfc7/material-originals/.reader-cache/88a721588953ad8f89bb1817e3d6566f4ed877d0bb5432768d58e49c41b605c2.json",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/personal/f362919a-07e7-44b9-bd17-a8c2799fbfc7/material-originals/.reader-cache/88a721588953ad8f89bb1817e3d6566f4ed877d0bb5432768d58e49c41b605c2.json",
+      "sha256": "970637585da0f3c49bf8614e9f4dd7489b809459137d8c3a0393c724b4310879"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/personal/f362919a-07e7-44b9-bd17-a8c2799fbfc7/material-originals/8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967.html",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/personal/f362919a-07e7-44b9-bd17-a8c2799fbfc7/material-originals/8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967.html",
+      "sha256": "8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/personal/f362919a-07e7-44b9-bd17-a8c2799fbfc7/offline-source.json",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/personal/f362919a-07e7-44b9-bd17-a8c2799fbfc7/offline-source.json",
+      "sha256": "fa3ec72f67add63d14358650b23e63985b60a9c6b7782ed121a3b715852b7e35"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/personal/f362919a-07e7-44b9-bd17-a8c2799fbfc7/workflow.sqlite",
+      "backup": "isolated-checkpoint/reviewer/runtime/collaboration/personal/f362919a-07e7-44b9-bd17-a8c2799fbfc7/workflow.sqlite",
+      "sha256": "bcdd6d80c3c51f68c3c329c15bd19e95de2fbe2923425f084f3112cf9f728ab9"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/listen-port.json",
+      "backup": "isolated-checkpoint/reviewer/runtime/listen-port.json",
+      "sha256": "43cc7131e50db706831e84eaf197f7949103a1fd1a59b21e88d15405323701f5"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/runtime-events.jsonl",
+      "backup": "isolated-checkpoint/reviewer/runtime/runtime-events.jsonl",
+      "sha256": "608bdc0b27d83b2cc0607b3e420d8eb97a53134beead33adfc7d3faeb168bfa9"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/runtime-status.json",
+      "backup": "isolated-checkpoint/reviewer/runtime/runtime-status.json",
+      "sha256": "46517424bc83e4efabf7034c8e5d7097a77c86f10d27a885efe137bc558d084e"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/system2-workflow/material-originals/.reader-cache/226863126277486aa990164883e24eaa05aafcadcfadb7387a79cb1d29904e8a.json",
+      "backup": "isolated-checkpoint/reviewer/runtime/system2-workflow/material-originals/.reader-cache/226863126277486aa990164883e24eaa05aafcadcfadb7387a79cb1d29904e8a.json",
+      "sha256": "b9304f311fe2cc7d161ed2cceeb834effa1ef00cbc4d239b5c3b4c61bb7efd8f"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/system2-workflow/material-originals/.reader-cache/2d21716b39215ceb333a935fb38be914866060205314c730761ad5234a4a3c4d.json",
+      "backup": "isolated-checkpoint/reviewer/runtime/system2-workflow/material-originals/.reader-cache/2d21716b39215ceb333a935fb38be914866060205314c730761ad5234a4a3c4d.json",
+      "sha256": "a9106b98b9e29dd09d10fda2f34fa147a6575604b7a068c1d538a5cd50d71711"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/system2-workflow/material-originals/.reader-cache/6d5470a3ff1a782b7dde7b5dafb063d85f28b5c97f4d33ecf9e176340b253c50.json",
+      "backup": "isolated-checkpoint/reviewer/runtime/system2-workflow/material-originals/.reader-cache/6d5470a3ff1a782b7dde7b5dafb063d85f28b5c97f4d33ecf9e176340b253c50.json",
+      "sha256": "194957705654815a11e5e8c2b4c332706c1d17630a31bf993c069f478276d1f6"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/system2-workflow/material-originals/.reader-cache/80bdd420a41a70f31c744ac5191957666bf072faa2252132d0b54bee81bede94.json",
+      "backup": "isolated-checkpoint/reviewer/runtime/system2-workflow/material-originals/.reader-cache/80bdd420a41a70f31c744ac5191957666bf072faa2252132d0b54bee81bede94.json",
+      "sha256": "7b0b2a408cd12325bec26cf23f143e56eca032c153e6bd43806018c55dff7fdc"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/system2-workflow/material-originals/.reader-cache/88a721588953ad8f89bb1817e3d6566f4ed877d0bb5432768d58e49c41b605c2.json",
+      "backup": "isolated-checkpoint/reviewer/runtime/system2-workflow/material-originals/.reader-cache/88a721588953ad8f89bb1817e3d6566f4ed877d0bb5432768d58e49c41b605c2.json",
+      "sha256": "970637585da0f3c49bf8614e9f4dd7489b809459137d8c3a0393c724b4310879"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/system2-workflow/material-originals/.reader-cache/e63241b6c9d2241abf67c781859a581c75d372209bc2f45f4bf6306c5addbcca.json",
+      "backup": "isolated-checkpoint/reviewer/runtime/system2-workflow/material-originals/.reader-cache/e63241b6c9d2241abf67c781859a581c75d372209bc2f45f4bf6306c5addbcca.json",
+      "sha256": "dc6dea4ec08282950fc4b4261db07fb3ed132cfed85822273d6c0b9a257fa5c8"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/system2-workflow/material-originals/78edf06e79c11edfb67d99ff0bca026ddd93b116ec4441c2ce9c59cd3fd89344.xlsx",
+      "backup": "isolated-checkpoint/reviewer/runtime/system2-workflow/material-originals/78edf06e79c11edfb67d99ff0bca026ddd93b116ec4441c2ce9c59cd3fd89344.xlsx",
+      "sha256": "78edf06e79c11edfb67d99ff0bca026ddd93b116ec4441c2ce9c59cd3fd89344"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/system2-workflow/material-originals/8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967.html",
+      "backup": "isolated-checkpoint/reviewer/runtime/system2-workflow/material-originals/8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967.html",
+      "sha256": "8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/system2-workflow/offline-source.json",
+      "backup": "isolated-checkpoint/reviewer/runtime/system2-workflow/offline-source.json",
+      "sha256": "d112be54d933a792af543a04798d96da50e12ae182e49fbb82d8eca8d6ee0b09"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/system2-workflow/workflow.sqlite",
+      "backup": "isolated-checkpoint/reviewer/runtime/system2-workflow/workflow.sqlite",
+      "sha256": "8d694a4ad535a8ffd48775b6d4f7bdd9bec2d9eb29ff98e0faba78f191650c3e"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/workbench.sqlite",
+      "backup": "isolated-checkpoint/reviewer/runtime/workbench.sqlite",
+      "sha256": "d964a395b54627f66eb47497f1646e1758553d401803b235848a0f890314dd66"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/server.json",
+      "backup": "isolated-checkpoint/reviewer/server.json",
+      "sha256": "76d7c5321a0853477fdf1b4aed2018e48c3a09c1f9a6e542d4f40ae2dffef0ad"
+    }
+  ]
+}

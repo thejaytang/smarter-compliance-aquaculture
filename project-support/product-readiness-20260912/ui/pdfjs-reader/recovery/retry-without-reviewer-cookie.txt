@@ -1,0 +1,31 @@
+- banner "PDF reading controls":
+  - generic "Saved source file": Saved original PDF
+  - button "Previous page" [disabled]: ←
+  - text: Page
+  - spinbutton "Page" [disabled]: "1"
+  - generic: of …
+  - button "Next page" [disabled]: →
+  - text: Zoom
+  - combobox "Zoom" [disabled]:
+    - option "Fit width"
+    - option "Fit page"
+    - option "75%"
+    - option "100%"
+    - option "125%" [selected]
+    - option "150%"
+    - option "200%"
+  - button "Rotate" [disabled]
+  - search:
+    - searchbox "Find in original PDF" [disabled]
+    - button "Find" [disabled]
+    - button "Next match" [disabled]
+    - status
+- main:
+  - generic "Saved PDF pages; select text to copy"
+- contentinfo:
+  - status: The saved PDF could not be loaded. Retry or open the original file.
+  - button "Retry"
+  - link "Open original":
+    - /url: /api/material/original?id=600f271ad02e96450ae5d13ff146b0e6&view=personal
+  - link "Workbench":
+    - /url: /

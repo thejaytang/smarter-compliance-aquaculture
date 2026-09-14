@@ -1,0 +1,7 @@
+{
+  "status": "FAILED_COPY_STOPPED",
+  "reason": "Initial copy followed the fixture system2 symlink and began copying unrelated component data. Interrupted before creating a manifest.",
+  "originals_changed": false,
+  "discarded_only_current_attempt_generated_partial_copy": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/baseline/local-delivery-rc1/isolated-checkpoint",
+  "correction": "Preserve symlinks as links; copy only owned isolated data. Candidate code/environment remains separate."
+}

@@ -1,0 +1,717 @@
+{
+  "preserved_files": [
+    {
+      "original": "PRODUCT.md",
+      "retained": "project-support/design/PRODUCT.md",
+      "proof_path": "project-support/root-cleanup-20260913/pre-change/project-support/design/PRODUCT.md",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "DESIGN.md",
+      "retained": "project-support/design/DESIGN.md",
+      "proof_path": "project-support/root-cleanup-20260913/pre-change/project-support/design/DESIGN.md",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "Excel验收副本-仅供检查.xlsx",
+      "retained": "project-support/root-cleanup-20260913/retained/excel-acceptance-copy.xlsx",
+      "proof_path": "project-support/root-cleanup-20260913/retained/excel-acceptance-copy.xlsx",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/round2/copied-tab-0-recovered.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/copied-tab-0-recovered.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/copied-tab-0-recovered.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/round2/header426-draft-preserved.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/header426-draft-preserved.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/header426-draft-preserved.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/round2/excel-unsaved-idb-ready.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/excel-unsaved-idb-ready.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/excel-unsaved-idb-ready.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/round2/pdf-saved-crop.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/pdf-saved-crop.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/pdf-saved-crop.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/round2/html-reading.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/html-reading.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/html-reading.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/round2/runtime-dialog.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/runtime-dialog.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/runtime-dialog.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/round2/excel-last-cell-restored.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/excel-last-cell-restored.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/excel-last-cell-restored.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/round2/copied-tab-save-conflict.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/copied-tab-save-conflict.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/copied-tab-save-conflict.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/round2/public-html-original.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/public-html-original.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/public-html-original.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/round2/pdf-drag-region.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/pdf-drag-region.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/pdf-drag-region.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/round2/excel-unsaved-idb-recovered.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/excel-unsaved-idb-recovered.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/excel-unsaved-idb-recovered.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/round2/html-correction-location.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/html-correction-location.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/html-correction-location.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/round2/public-pdf-original.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/public-pdf-original.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/public-pdf-original.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/round2/excel-partial-review-retained.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/excel-partial-review-retained.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/excel-partial-review-retained.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/round2/two-tab-recovered-comparison.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/two-tab-recovered-comparison.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/two-tab-recovered-comparison.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/round2/isolated-excel-content-confirmed.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/isolated-excel-content-confirmed.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/isolated-excel-content-confirmed.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/round2/html-chapter-navigation.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/html-chapter-navigation.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/html-chapter-navigation.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/round2/restart-history-retained.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/restart-history-retained.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/restart-history-retained.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/round2/material-switch-reader-cleared.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/material-switch-reader-cleared.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/material-switch-reader-cleared.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/round2/pdf-page-300.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/pdf-page-300.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/pdf-page-300.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/round2/ten-thousand-block-search.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/ten-thousand-block-search.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/ten-thousand-block-search.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/round2/two-tab-conflict-preserved.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/two-tab-conflict-preserved.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/two-tab-conflict-preserved.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/round2/html-history-before-correction.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/html-history-before-correction.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/html-history-before-correction.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/round2/public-pdf-native-text.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/public-pdf-native-text.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/public-pdf-native-text.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/round2/copied-tab-1-recovered.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/copied-tab-1-recovered.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/copied-tab-1-recovered.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/round2/excel-offwindow-retained.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/excel-offwindow-retained.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/excel-offwindow-retained.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/round2/pdf-scan-reader.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/pdf-scan-reader.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/round2/pdf-scan-reader.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/offline-collaboration/navigation-narrow.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/navigation-narrow.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/navigation-narrow.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/offline-collaboration/candidate-preview-expanded.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/candidate-preview-expanded.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/candidate-preview-expanded.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/offline-collaboration/archive-continue-editing.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/archive-continue-editing.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/archive-continue-editing.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/offline-collaboration/table-conflict-desktop.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/table-conflict-desktop.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/table-conflict-desktop.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/offline-collaboration/excel-first-candidate-saved.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/excel-first-candidate-saved.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/excel-first-candidate-saved.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/offline-collaboration/display-names-desktop.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/display-names-desktop.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/display-names-desktop.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/offline-collaboration/final-master-narrow.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/final-master-narrow.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/final-master-narrow.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/offline-collaboration/browser-multi-submission.zip",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/browser-multi-submission.zip",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/browser-multi-submission.zip",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/offline-collaboration/navigation-desktop.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/navigation-desktop.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/navigation-desktop.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/offline-collaboration/source-original.html",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/source-original.html",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/source-original.html",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/offline-collaboration/table-conflict-narrow.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/table-conflict-narrow.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/table-conflict-narrow.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/offline-collaboration/daniel-table-submission.zip",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/daniel-table-submission.zip",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/daniel-table-submission.zip",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/offline-collaboration/material-correction-narrow.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/material-correction-narrow.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/material-correction-narrow.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/offline-collaboration/expanded-archive-check.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/expanded-archive-check.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/expanded-archive-check.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/offline-collaboration/ana-ui-submission.zip",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/ana-ui-submission.zip",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/ana-ui-submission.zip",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/offline-collaboration/table-reconstruction-saved.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/table-reconstruction-saved.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/table-reconstruction-saved.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/offline-collaboration/machine-desktop.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/machine-desktop.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/machine-desktop.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/offline-collaboration/display-names-narrow.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/display-names-narrow.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/display-names-narrow.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/offline-collaboration/coordinator-work.zip",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/coordinator-work.zip",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/coordinator-work.zip",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/offline-collaboration/machine-narrow.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/machine-narrow.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/machine-narrow.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/offline-collaboration/source-workspace-desktop.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/source-workspace-desktop.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/source-workspace-desktop.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/offline-collaboration/final-master-desktop.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/final-master-desktop.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/final-master-desktop.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/offline-collaboration/expanded-archive-narrow.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/expanded-archive-narrow.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/expanded-archive-narrow.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "output/playwright/offline-collaboration/source-workspace-narrow.png",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/source-workspace-narrow.png",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-evidence/playwright/offline-collaboration/source-workspace-narrow.png",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-12T15-03-33-500Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T15-03-33-500Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T15-03-33-500Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/console-2026-09-12T15-00-40-349Z.log",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/console-2026-09-12T15-00-40-349Z.log",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/console-2026-09-12T15-00-40-349Z.log",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-11T20-43-25-662Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T20-43-25-662Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T20-43-25-662Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/console-2026-09-12T14-54-03-683Z.log",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/console-2026-09-12T14-54-03-683Z.log",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/console-2026-09-12T14-54-03-683Z.log",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/personal-review-TS001.zip",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/personal-review-TS001.zip",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/personal-review-TS001.zip",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-12T17-08-16-558Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T17-08-16-558Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T17-08-16-558Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-12T14-54-03-980Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T14-54-03-980Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T14-54-03-980Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-11T19-51-24-625Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T19-51-24-625Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T19-51-24-625Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-11T20-25-15-543Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T20-25-15-543Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T20-25-15-543Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-11T20-18-02-620Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T20-18-02-620Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T20-18-02-620Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-12T15-07-50-274Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T15-07-50-274Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T15-07-50-274Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-11T19-47-26-365Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T19-47-26-365Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T19-47-26-365Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-11T20-19-42-876Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T20-19-42-876Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T20-19-42-876Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-11T19-48-22-809Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T19-48-22-809Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T19-48-22-809Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/console-2026-09-12T16-46-31-307Z.log",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/console-2026-09-12T16-46-31-307Z.log",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/console-2026-09-12T16-46-31-307Z.log",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-11T19-45-23-548Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T19-45-23-548Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T19-45-23-548Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-12T14-54-33-225Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T14-54-33-225Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T14-54-33-225Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/TS001-001-material.html",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/TS001-001-material.html",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/TS001-001-material.html",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/review-submission-529d5f9b.zip",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/review-submission-529d5f9b.zip",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/review-submission-529d5f9b.zip",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-11T19-47-41-781Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T19-47-41-781Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T19-47-41-781Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-11T20-09-40-663Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T20-09-40-663Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T20-09-40-663Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-12T14-57-31-676Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T14-57-31-676Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T14-57-31-676Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-12T15-06-43-215Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T15-06-43-215Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T15-06-43-215Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-12T17-19-19-650Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T17-19-19-650Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T17-19-19-650Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/console-2026-09-12T15-18-12-931Z.log",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/console-2026-09-12T15-18-12-931Z.log",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/console-2026-09-12T15-18-12-931Z.log",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-11T20-17-28-960Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T20-17-28-960Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T20-17-28-960Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-11T20-16-56-703Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T20-16-56-703Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T20-16-56-703Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-11T20-03-12-138Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T20-03-12-138Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T20-03-12-138Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-11T19-45-33-393Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T19-45-33-393Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T19-45-33-393Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-11T19-51-07-953Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T19-51-07-953Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T19-51-07-953Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/console-2026-09-12T15-46-00-602Z.log",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/console-2026-09-12T15-46-00-602Z.log",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/console-2026-09-12T15-46-00-602Z.log",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-11T19-54-48-001Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T19-54-48-001Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T19-54-48-001Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-12T17-17-45-635Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T17-17-45-635Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T17-17-45-635Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/console-2026-09-11T19-42-38-925Z.log",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/console-2026-09-11T19-42-38-925Z.log",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/console-2026-09-11T19-42-38-925Z.log",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/console-2026-09-12T18-16-20-395Z.log",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/console-2026-09-12T18-16-20-395Z.log",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/console-2026-09-12T18-16-20-395Z.log",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-12T18-16-20-520Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T18-16-20-520Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T18-16-20-520Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-11T20-02-35-522Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T20-02-35-522Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T20-02-35-522Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/console-2026-09-11T20-40-35-968Z.log",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/console-2026-09-11T20-40-35-968Z.log",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/console-2026-09-11T20-40-35-968Z.log",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-11T19-56-08-314Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T19-56-08-314Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T19-56-08-314Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/console-2026-09-12T14-57-31-628Z.log",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/console-2026-09-12T14-57-31-628Z.log",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/console-2026-09-12T14-57-31-628Z.log",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-12T15-18-13-187Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T15-18-13-187Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T15-18-13-187Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-11T19-48-37-588Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T19-48-37-588Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T19-48-37-588Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-11T19-43-36-935Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T19-43-36-935Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T19-43-36-935Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-11T20-57-41-125Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T20-57-41-125Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T20-57-41-125Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/console-2026-09-11T20-57-40-909Z.log",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/console-2026-09-11T20-57-40-909Z.log",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/console-2026-09-11T20-57-40-909Z.log",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-12T15-12-09-528Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T15-12-09-528Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T15-12-09-528Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-12T16-46-31-723Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T16-46-31-723Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T16-46-31-723Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-11T20-23-48-165Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T20-23-48-165Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T20-23-48-165Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/review-work-TS001.zip",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/review-work-TS001.zip",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/review-work-TS001.zip",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-12T17-04-58-480Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T17-04-58-480Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T17-04-58-480Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/console-2026-09-12T15-06-43-152Z.log",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/console-2026-09-12T15-06-43-152Z.log",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/console-2026-09-12T15-06-43-152Z.log",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-12T14-55-29-448Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T14-55-29-448Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T14-55-29-448Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-12T14-54-34-694Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T14-54-34-694Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T14-54-34-694Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-12T14-57-59-512Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T14-57-59-512Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T14-57-59-512Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-12T18-15-09-833Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T18-15-09-833Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T18-15-09-833Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-11T19-42-39-051Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T19-42-39-051Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T19-42-39-051Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-12T15-00-40-394Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T15-00-40-394Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T15-00-40-394Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-11T19-45-43-274Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T19-45-43-274Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-11T19-45-43-274Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": ".playwright-cli/page-2026-09-12T15-46-01-008Z.yml",
+      "retained": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T15-46-01-008Z.yml",
+      "proof_path": "project-support/root-cleanup-20260913/retained/browser-traces/page-2026-09-12T15-46-01-008Z.yml",
+      "original_bytes_preserved": true
+    },
+    {
+      "original": "runtime/jobs.sqlite3",
+      "retained": "project-support/root-cleanup-20260913/retained/unused-root-runtime/jobs.sqlite3",
+      "proof_path": "project-support/root-cleanup-20260913/retained/unused-root-runtime/jobs.sqlite3",
+      "original_bytes_preserved": true
+    }
+  ],
+  "missing_links": [],
+  "links_checked": 191,
+  "obsolete_root_paths_present": [],
+  "code_sha256": {
+    "system2/src/pdf_extraction/api/app.py": "e54f640d1d2435c560cc99f0eb059da0383f268a6a7b962497955ac159b7acb5",
+    "system2/tests/test_api_environment.py": "bfdd4829faad55eddbeb3c72f1bac1f6446a6803985c99b557dfe37dc8f960de",
+    "workbench/src/local_workbench/recovery.py": "0b54939f30f2e47a0e1c340b728c2fbf76702f4549a2e8b394399b66d5489339",
+    "workbench/ui/materials.js": "c7e664631a406042bcbdb4f4a78efe291a81a33b6dbd0189b47bfcf6a80ac44f"
+  },
+  "root_entries": [
+    ".gitignore",
+    "AGENTS.md",
+    "ENVIRONMENT.md",
+    "Open Reviewer Workbench.cmd",
+    "Open Workbench.cmd",
+    "Open Workbench.command",
+    "PROJECT_STATE.md",
+    "README.md",
+    "docs",
+    "project-support",
+    "system1",
+    "system2",
+    "system3",
+    "workbench"
+  ],
+  "targeted_tests": {
+    "api": 12,
+    "recovery": 13
+  }
+}

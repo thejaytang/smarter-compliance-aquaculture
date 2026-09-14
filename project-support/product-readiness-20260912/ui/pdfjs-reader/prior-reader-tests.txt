@@ -1,0 +1,82 @@
+TAP version 13
+# Subtest: physical render requests follow displayed width and DPR with bounded 64-pixel steps
+ok 1 - physical render requests follow displayed width and DPR with bounded 64-pixel steps
+  ---
+  duration_ms: 0.590334
+  type: 'test'
+  ...
+# Subtest: detail update preserves displayed page and latest user scroll while pending and sends only a reader request
+ok 2 - detail update preserves displayed page and latest user scroll while pending and sends only a reader request
+  ---
+  duration_ms: 1.008459
+  type: 'test'
+  ...
+# Subtest: late responses after material, page, view, reader ticket or source changes cannot replace the displayed image
+ok 3 - late responses after material, page, view, reader ticket or source changes cannot replace the displayed image
+  ---
+  duration_ms: 0.278333
+  type: 'test'
+  ...
+# Subtest: source mismatch, failed fetch and failed image decode retain the old image with actionable retry
+ok 4 - source mismatch, failed fetch and failed image decode retain the old image with actionable retry
+  ---
+  duration_ms: 0.377084
+  type: 'test'
+  ...
+# Subtest: an old backend that ignores render_width is detected once and cannot trigger an automatic refresh storm
+ok 5 - an old backend that ignores render_width is detected once and cannot trigger an automatic refresh storm
+  ---
+  duration_ms: 0.152833
+  type: 'test'
+  ...
+# Subtest: reported physical limit is retained honestly and repeated requests at that target stop
+ok 6 - reported physical limit is retained honestly and repeated requests at that target stop
+  ---
+  duration_ms: 0.092625
+  type: 'test'
+  ...
+# Subtest: resize bursts debounce and at most one resolution request runs for the current page
+ok 7 - resize bursts debounce and at most one resolution request runs for the current page
+  ---
+  duration_ms: 0.249
+  type: 'test'
+  ...
+# Subtest: observer and DPR listeners request refresh and disconnect with the reader session
+ok 8 - observer and DPR listeners request refresh and disconnect with the reader session
+  ---
+  duration_ms: 0.269917
+  type: 'test'
+  ...
+# Subtest: reading details remain available outside the PDF viewport and HTML names its reflowed rendering
+ok 9 - reading details remain available outside the PDF viewport and HTML names its reflowed rendering
+  ---
+  duration_ms: 0.567875
+  type: 'test'
+  ...
+# Subtest: document CSS gives remaining space to one evidence viewport and keeps compact original controls
+ok 10 - document CSS gives remaining space to one evidence viewport and keeps compact original controls
+  ---
+  duration_ms: 3.272792
+  type: 'test'
+  ...
+# Subtest: explicit Retry recovers an image-detail failure without clearing the current page
+ok 11 - explicit Retry recovers an image-detail failure without clearing the current page
+  ---
+  duration_ms: 0.273792
+  type: 'test'
+  ...
+# Subtest: known malformed PDF open failure gives recovery guidance and preserves the prior draft without masking unknown errors
+ok 12 - known malformed PDF open failure gives recovery guidance and preserves the prior draft without masking unknown errors
+  ---
+  duration_ms: 0.210583
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 43.421791

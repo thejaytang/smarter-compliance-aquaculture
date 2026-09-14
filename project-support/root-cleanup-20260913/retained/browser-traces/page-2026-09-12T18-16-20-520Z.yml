@@ -1,0 +1,42 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - complementary [ref=e3]:
+    - generic [ref=e8]:
+      - text: Smarter Compliance
+      - generic [ref=e9]: Requirement workbench
+    - navigation "Workspace navigation" [ref=e10]:
+      - button "Overview Sources and materials" [ref=e11] [cursor=pointer]:
+        - text: Overview
+        - generic [ref=e12]: Sources and materials
+      - generic [ref=e13]:
+        - button "Source Management System Sources and original files" [expanded] [ref=e14] [cursor=pointer]:
+          - text: Source Management System
+          - generic [aria-hidden] [ref=e15]: ⌄
+          - generic [ref=e16]: Sources and original files
+        - generic [ref=e17]:
+          - button "Pending review" [ref=e18] [cursor=pointer]
+          - button "Source records" [ref=e19] [cursor=pointer]
+          - button "Review history" [ref=e20] [cursor=pointer]
+      - button "Requirement Extraction System Human content review" [ref=e22] [cursor=pointer]:
+        - text: Requirement Extraction System
+        - generic [aria-hidden] [ref=e23]: ⌄
+        - generic [ref=e24]: Human content review
+      - button "Confidence settings" [ref=e25] [cursor=pointer]
+    - generic [ref=e26]:
+      - text: Local workspace
+      - button "Exit workbench" [ref=e28] [cursor=pointer]
+  - generic [ref=e29]:
+    - banner [ref=e30]:
+      - generic [ref=e31]:
+        - button "Collapse navigation" [expanded] [ref=e32] [cursor=pointer]: ☰
+        - heading "Requirement overview" [level=1] [ref=e33]
+      - button "Runtime starting" [ref=e34] [cursor=pointer]
+      - generic [ref=e35]:
+        - generic [ref=e36]: Current reviewer
+        - generic [ref=e37]:
+          - combobox "Current reviewer" [ref=e38]:
+            - option "Select a reviewer" [selected]
+          - button "Use this name" [ref=e39] [cursor=pointer]
+    - main [ref=e40]:
+      - paragraph [ref=e41]: Loading requirement workspace…

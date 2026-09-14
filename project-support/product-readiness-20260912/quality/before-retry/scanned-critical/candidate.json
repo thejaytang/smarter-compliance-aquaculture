@@ -1,0 +1,74 @@
+{
+  "schema_version": "material-structural-parser/1",
+  "parser_version": "material-structural-parser/1",
+  "source_sha256": "1d2fdae4d0289238e3b6a3f9fb424a096e33deb10df9383e68bbf7f0c43b28b1",
+  "snapshot_id": "QS008-001",
+  "config_hash": "afa34224b58ec60db3ffd3c48b3476f943228abe48348f6b1b8ffd463a01808f",
+  "blocks": [
+    {
+      "id": "block-5f846e6d72ad27065d4ffaea",
+      "type": "image",
+      "text": "",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:1",
+          "page_index": 0,
+          "page": 1,
+          "bbox": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ]
+        }
+      ],
+      "image": {
+        "source_ref": {
+          "scope_id": "page:1",
+          "page_index": 0,
+          "page": 1,
+          "bbox": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ]
+        },
+        "attachment": null,
+        "attribution": "Embedded image in the bound original PDF."
+      }
+    }
+  ],
+  "scope": [
+    {
+      "id": "page:1",
+      "kind": "page",
+      "label": "Page 1",
+      "location": {
+        "page": 1
+      }
+    }
+  ],
+  "covered_scope": [
+    "page:1"
+  ],
+  "warnings": [
+    "Native text can differ from visible page marks. Compare it with the original page image. Scanned pages may require manual transcription; no OCR is run when viewing.",
+    "Positioned PDF parser fallback to PDFium for pages 1: RuntimeError",
+    "Page 1 has no positioned native text. Inspect the complete original page and manually transcribe or supplement omitted text. No OCR/model was run.",
+    "PDF candidate uses the existing positioned native parser in mapped three-page windows. Ruled-table grids use existing local geometry assembly. Reading order, headings and unruled tables may need manual correction; source page images and complete native evidence are retained. No Requirement classifier, semantic processor, OCR model or external service runs."
+  ],
+  "unresolved": [],
+  "canonical_artifacts": [
+    "pdf-window-0001.pdf",
+    "pdf-native-0001.json",
+    "pdf-page-0001.png"
+  ],
+  "status": "candidate_available",
+  "review_policy": "human_material_confirmation_required",
+  "requirement_status": "not_connected"
+}

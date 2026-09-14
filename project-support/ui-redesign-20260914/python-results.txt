@@ -1,0 +1,7 @@
+............................................../Users/tang/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/zipfile/__init__.py:1624: UserWarning: Duplicate name: 'files/base.json'
+  return self._open_to_write(zinfo, force_zip64=force_zip64)
+........................................................................................................................................
+----------------------------------------------------------------------
+Ran 182 tests in 23.966s
+
+OK

@@ -343,3 +343,8 @@ Browser checks covered actual page images, boxes/text positions, previous/next a
 - Actual drag reselection produced coordinates and saved a location revision while content remained pending review. Marking illegible did not reduce pending counts and disabled Accept.
 - The same file loaded actual page images in both standalone preview and isolated iframe without JavaScript errors. Narrow windows stacked source and text; 360px had no page-level horizontal overflow. Zoomed source view supported horizontal panning. Temporary window sizing was restored.
 - Evidence was read-only from historical Canonical and direct rendering of two PDF pages. No Canonical, production workbook, historical output or original PDF was written, and no reparse ran.
+
+
+## Current visual treatment | 2026-09-09
+
+Use light glass only for the navigation shell and header. Reading and editing surfaces stay opaque white with dark text. The design adapts the installed UI/UX skill's glassmorphism guidance to a document-review workspace; decorative refraction and continuous motion are intentionally absent. Use the local system font and CSS effects without network dependencies. The current [shared design contract](../../project-support/design/DESIGN.md) owns visual decisions; runtime tokens and responsive/fallback behavior live in `ui/style.css`; System2 layout and empty states live in `ui/extraction.css` and `ui/extraction.js`. Preserve the existing distinction between previous and newly selected ratings, and between pending, accepted and unconnected states. Wide tables scroll within their surface. Current verification belongs to the [Workbench state](../PROJECT_STATE.md).

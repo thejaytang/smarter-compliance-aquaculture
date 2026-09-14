@@ -1,0 +1,3192 @@
+{
+  "version": "requirement-development-inventory/1",
+  "frozen_at": "2026-09-12T22:58:43.333763+00:00",
+  "samples": [
+    {
+      "annotation": "system2/gold/requirements/annotations/farm-standard-p028-p029.json",
+      "annotation_sha256": "97e70763c7ac03221e0f3ea47437817c6c4859308d2282939988ce2f306dd35e",
+      "source_sha256": "3b0cdf01f72b518710d5af9c1d8ccaa653c381f45053c7b20a102e06c1de4b20",
+      "page_numbers": [
+        28,
+        29
+      ],
+      "source_segment_count": 25,
+      "trust": "Historical source-backed engineering development annotations, not business Gold or independent validation."
+    },
+    {
+      "annotation": "system2/gold/requirements/annotations/salmon-cod-standard-p018-v2.json",
+      "annotation_sha256": "2387bedc12a12ca9374c63207e9f2b61580e176d48615746c72614c1b1bf7ecb",
+      "source_sha256": "a34e5f4fc78486136ddbf3d661d26aad85e4b8a1990b2e6eda3f3ac1df7f7b5c",
+      "page_numbers": [
+        18
+      ],
+      "source_segment_count": 21,
+      "trust": "Historical source-backed engineering development annotations, not business Gold or independent validation."
+    },
+    {
+      "annotation": "system2/gold/requirements/annotations/interpretation-manual-p019-p021.json",
+      "annotation_sha256": "ce4c1e9a6b2f9814a5b407414462d01c6d6cba57b0c55f10cc7ab76f0872f6fa",
+      "source_sha256": "804ead3d1d1a53019869b5385dabfb86356b8276b990538c0d782e750167777e",
+      "page_numbers": [
+        19,
+        20,
+        21
+      ],
+      "source_segment_count": 12,
+      "trust": "Historical source-backed engineering development annotations, not business Gold or independent validation."
+    }
+  ],
+  "examples": [
+    {
+      "id": "farm-standard-p028-p029:1.1.1",
+      "reference": "requirement",
+      "source_segment_ids": [
+        "farm-p028-r1.1.1-id",
+        "farm-p028-r1.1.1-text"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.1.1\nThe UoC shall hold all applicable legal licences and permits."
+        },
+        "references": [
+          {
+            "locator": "farm-p028-r1.1.1-id",
+            "page_index": 27,
+            "bbox": {
+              "x0": 53.88,
+              "y0": 382.93928,
+              "x1": 77.7462,
+              "y1": 400.05404
+            }
+          },
+          {
+            "locator": "farm-p028-r1.1.1-text",
+            "page_index": 27,
+            "bbox": {
+              "x0": 117.98,
+              "y0": 383.018,
+              "x1": 385.352,
+              "y1": 393.989
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.1.1\nThe UoC shall hold all applicable legal licences and permits."
+        },
+        "references": [
+          {
+            "locator": "farm-p028-r1.1.1-id",
+            "page_index": 27,
+            "bbox": {
+              "x0": 53.88,
+              "y0": 382.93928,
+              "x1": 77.7462,
+              "y1": 400.05404
+            }
+          },
+          {
+            "locator": "farm-p028-r1.1.1-text",
+            "page_index": 27,
+            "bbox": {
+              "x0": 117.98,
+              "y0": 383.018,
+              "x1": 385.352,
+              "y1": 393.989
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "farm-standard-p028-p029:1.1.2",
+      "reference": "requirement",
+      "source_segment_ids": [
+        "farm-p028-r1.1.2-id",
+        "farm-p028-r1.1.2-text"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.1.2\nThe UoC shall comply with all applicable legal requirements, including those relevant to the Criteria within the ASC Farm Standard."
+        },
+        "references": [
+          {
+            "locator": "farm-p028-r1.1.2-id",
+            "page_index": 27,
+            "bbox": {
+              "x0": 53.88,
+              "y0": 430.59928,
+              "x1": 80.52612,
+              "y1": 447.71404
+            }
+          },
+          {
+            "locator": "farm-p028-r1.1.2-text",
+            "page_index": 27,
+            "bbox": {
+              "x0": 117.98,
+              "y0": 430.658,
+              "x1": 530.234,
+              "y1": 457.009
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.1.2\nThe UoC shall comply with all applicable legal requirements, including those relevant to the Criteria within the ASC Farm Standard."
+        },
+        "references": [
+          {
+            "locator": "farm-p028-r1.1.2-id",
+            "page_index": 27,
+            "bbox": {
+              "x0": 53.88,
+              "y0": 430.59928,
+              "x1": 80.52612,
+              "y1": 447.71404
+            }
+          },
+          {
+            "locator": "farm-p028-r1.1.2-text",
+            "page_index": 27,
+            "bbox": {
+              "x0": 117.98,
+              "y0": 430.658,
+              "x1": 530.234,
+              "y1": 457.009
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "farm-standard-p028-p029:1.2.1",
+      "reference": "requirement",
+      "source_segment_ids": [
+        "farm-p029-r1.2.1-id",
+        "farm-p029-r1.2.1-text"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.2.1\nThe UoC shall develop, implement and maintain a management system to support the implementation of the ASC Requirements that is appropriate to the size and complexity of the UoC."
+        },
+        "references": [
+          {
+            "locator": "farm-p029-r1.2.1-id",
+            "page_index": 28,
+            "bbox": {
+              "x0": 53.88,
+              "y0": 379.81928,
+              "x1": 80.52766,
+              "y1": 396.93404
+            }
+          },
+          {
+            "locator": "farm-p029-r1.2.1-text",
+            "page_index": 28,
+            "bbox": {
+              "x0": 117.74,
+              "y0": 379.898,
+              "x1": 525.206,
+              "y1": 421.589
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.2.1\nThe UoC shall develop, implement and maintain a management system to support the implementation of the ASC Requirements that is appropriate to the size and complexity of the UoC."
+        },
+        "references": [
+          {
+            "locator": "farm-p029-r1.2.1-id",
+            "page_index": 28,
+            "bbox": {
+              "x0": 53.88,
+              "y0": 379.81928,
+              "x1": 80.52766,
+              "y1": 396.93404
+            }
+          },
+          {
+            "locator": "farm-p029-r1.2.1-text",
+            "page_index": 28,
+            "bbox": {
+              "x0": 117.74,
+              "y0": 379.898,
+              "x1": 525.206,
+              "y1": 421.589
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "farm-standard-p028-p029:1.2.2",
+      "reference": "requirement",
+      "source_segment_ids": [
+        "farm-p029-r1.2.2-id",
+        "farm-p029-r1.2.2-text"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.2.2\nThe UoC shall appoint at least one member of management responsible for the implementation of the ASC Requirements."
+        },
+        "references": [
+          {
+            "locator": "farm-p029-r1.2.2-id",
+            "page_index": 28,
+            "bbox": {
+              "x0": 53.88,
+              "y0": 449.67928,
+              "x1": 83.42758,
+              "y1": 466.79404
+            }
+          },
+          {
+            "locator": "farm-p029-r1.2.2-text",
+            "page_index": 28,
+            "bbox": {
+              "x0": 117.74,
+              "y0": 449.758,
+              "x1": 475.553,
+              "y1": 476.089
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.2.2\nThe UoC shall appoint at least one member of management responsible for the implementation of the ASC Requirements."
+        },
+        "references": [
+          {
+            "locator": "farm-p029-r1.2.2-id",
+            "page_index": 28,
+            "bbox": {
+              "x0": 53.88,
+              "y0": 449.67928,
+              "x1": 83.42758,
+              "y1": 466.79404
+            }
+          },
+          {
+            "locator": "farm-p029-r1.2.2-text",
+            "page_index": 28,
+            "bbox": {
+              "x0": 117.74,
+              "y0": 449.758,
+              "x1": 475.553,
+              "y1": 476.089
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "farm-standard-p028-p029:1.2.3",
+      "reference": "requirement",
+      "source_segment_ids": [
+        "farm-p029-r1.2.3-id",
+        "farm-p029-r1.2.3-text"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.2.3\nThe UoC shall ensure that relevant employees have the necessary skills and training to implement the ASC Requirements."
+        },
+        "references": [
+          {
+            "locator": "farm-p029-r1.2.3-id",
+            "page_index": 28,
+            "bbox": {
+              "x0": 53.88,
+              "y0": 504.27928,
+              "x1": 83.37804,
+              "y1": 521.39404
+            }
+          },
+          {
+            "locator": "farm-p029-r1.2.3-text",
+            "page_index": 28,
+            "bbox": {
+              "x0": 117.74,
+              "y0": 504.358,
+              "x1": 508.393,
+              "y1": 530.689
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.2.3\nThe UoC shall ensure that relevant employees have the necessary skills and training to implement the ASC Requirements."
+        },
+        "references": [
+          {
+            "locator": "farm-p029-r1.2.3-id",
+            "page_index": 28,
+            "bbox": {
+              "x0": 53.88,
+              "y0": 504.27928,
+              "x1": 83.37804,
+              "y1": 521.39404
+            }
+          },
+          {
+            "locator": "farm-p029-r1.2.3-text",
+            "page_index": 28,
+            "bbox": {
+              "x0": 117.74,
+              "y0": 504.358,
+              "x1": 508.393,
+              "y1": 530.689
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "farm-standard-p028-p029:1.2.4",
+      "reference": "requirement",
+      "source_segment_ids": [
+        "farm-p029-r1.2.4-id",
+        "farm-p029-r1.2.4-text"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.2.4\nThe UoC shall annually review the management system and revise it where necessary to ensure its continued suitability, adequacy and effectiveness in implementing the ASC Requirements."
+        },
+        "references": [
+          {
+            "locator": "farm-p029-r1.2.4-id",
+            "page_index": 28,
+            "bbox": {
+              "x0": 53.88,
+              "y0": 558.75928,
+              "x1": 84.65568,
+              "y1": 575.87404
+            }
+          },
+          {
+            "locator": "farm-p029-r1.2.4-text",
+            "page_index": 28,
+            "bbox": {
+              "x0": 117.74,
+              "y0": 558.838,
+              "x1": 515.171,
+              "y1": 600.529
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.2.4\nThe UoC shall annually review the management system and revise it where necessary to ensure its continued suitability, adequacy and effectiveness in implementing the ASC Requirements."
+        },
+        "references": [
+          {
+            "locator": "farm-p029-r1.2.4-id",
+            "page_index": 28,
+            "bbox": {
+              "x0": 53.88,
+              "y0": 558.75928,
+              "x1": 84.65568,
+              "y1": 575.87404
+            }
+          },
+          {
+            "locator": "farm-p029-r1.2.4-text",
+            "page_index": 28,
+            "bbox": {
+              "x0": 117.74,
+              "y0": 558.838,
+              "x1": 515.171,
+              "y1": 600.529
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "farm-standard-p028-p029:farm-p028-header",
+      "reference": "context",
+      "source_segment_ids": [
+        "farm-p028-header"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Aquaculture Stewardship Council"
+        },
+        "references": [
+          {
+            "locator": "farm-p028-header",
+            "page_index": 27,
+            "bbox": {
+              "x0": 394.27,
+              "y0": 33.84192,
+              "x1": 543.26248,
+              "y1": 43.05756
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Aquaculture Stewardship Council"
+        },
+        "references": [
+          {
+            "locator": "farm-p028-header",
+            "page_index": 27,
+            "bbox": {
+              "x0": 394.27,
+              "y0": 33.84192,
+              "x1": 543.26248,
+              "y1": 43.05756
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "farm-standard-p028-p029:farm-p028-criterion-1.1",
+      "reference": "context",
+      "source_segment_ids": [
+        "farm-p028-criterion-1.1"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.1 Legal Compliance"
+        },
+        "references": [
+          {
+            "locator": "farm-p028-criterion-1.1",
+            "page_index": 27,
+            "bbox": {
+              "x0": 66.144,
+              "y0": 70.50128,
+              "x1": 234.632,
+              "y1": 94.93004
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_heading",
+        "fields": {
+          "body": "1.1 Legal Compliance"
+        },
+        "references": [
+          {
+            "locator": "farm-p028-criterion-1.1",
+            "page_index": 27,
+            "bbox": {
+              "x0": 66.144,
+              "y0": 70.50128,
+              "x1": 234.632,
+              "y1": 94.93004
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "farm-standard-p028-p029:farm-p028-rationale",
+      "reference": "context",
+      "source_segment_ids": [
+        "farm-p028-rationale"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Rationale\n\nA legal business complies with applicable laws, licensing, and permit requirements.\n\nA wide variety of laws and regulations apply to aquaculture. Ensuring national laws are followed, and necessary permits and licences are acquired helps to promote a socially and environmentally responsible aquaculture industry. Compliance also benefits a business by enhancing customer trust, increasing revenue, strengthening reputation, and avoiding legal sanctions and fines 4.\n\nThis criterion focuses on the legal compliance of ASC certified farms as the basis of a well-managed business."
+        },
+        "references": [
+          {
+            "locator": "farm-p028-rationale",
+            "page_index": 27,
+            "bbox": {
+              "x0": 51.0,
+              "y0": 130.57328,
+              "x1": 528.28956,
+              "y1": 277.22948
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Rationale\n\nA legal business complies with applicable laws, licensing, and permit requirements.\n\nA wide variety of laws and regulations apply to aquaculture. Ensuring national laws are followed, and necessary permits and licences are acquired helps to promote a socially and environmentally responsible aquaculture industry. Compliance also benefits a business by enhancing customer trust, increasing revenue, strengthening reputation, and avoiding legal sanctions and fines 4.\n\nThis criterion focuses on the legal compliance of ASC certified farms as the basis of a well-managed business."
+        },
+        "references": [
+          {
+            "locator": "farm-p028-rationale",
+            "page_index": 27,
+            "bbox": {
+              "x0": 51.0,
+              "y0": 130.57328,
+              "x1": 528.28956,
+              "y1": 277.22948
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "farm-standard-p028-p029:farm-p028-intent",
+      "reference": "context",
+      "source_segment_ids": [
+        "farm-p028-intent"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Intent - The aquaculture industry complies with all applicable legal requirements."
+        },
+        "references": [
+          {
+            "locator": "farm-p028-intent",
+            "page_index": 27,
+            "bbox": {
+              "x0": 51.0,
+              "y0": 310.07336,
+              "x1": 441.18976,
+              "y1": 321.62948
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Intent - The aquaculture industry complies with all applicable legal requirements."
+        },
+        "references": [
+          {
+            "locator": "farm-p028-intent",
+            "page_index": 27,
+            "bbox": {
+              "x0": 51.0,
+              "y0": 310.07336,
+              "x1": 441.18976,
+              "y1": 321.62948
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "farm-standard-p028-p029:farm-p028-indicators-label",
+      "reference": "context",
+      "source_segment_ids": [
+        "farm-p028-indicators-label"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Indicators:"
+        },
+        "references": [
+          {
+            "locator": "farm-p028-indicators-label",
+            "page_index": 27,
+            "bbox": {
+              "x0": 53.88,
+              "y0": 342.12872,
+              "x1": 109.06952,
+              "y1": 354.26996
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Indicators:"
+        },
+        "references": [
+          {
+            "locator": "farm-p028-indicators-label",
+            "page_index": 27,
+            "bbox": {
+              "x0": 53.88,
+              "y0": 342.12872,
+              "x1": 109.06952,
+              "y1": 354.26996
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "farm-standard-p028-p029:farm-p028-rationale-footnote-4",
+      "reference": "context",
+      "source_segment_ids": [
+        "farm-p028-rationale-footnote-4"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "4 Widjaja, G. (2024). Managing Legal and Corporate Compliance to Induce and Enhance Business. Law and Humanities Quarterly Reviews, 3(2). https://doi.org/10.31014/aior.1996.03.02.115"
+        },
+        "references": [
+          {
+            "locator": "farm-p028-rationale-footnote-4",
+            "page_index": 27,
+            "bbox": {
+              "x0": 51.0,
+              "y0": 752.65728,
+              "x1": 525.13944,
+              "y1": 772.27404
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "4 Widjaja, G. (2024). Managing Legal and Corporate Compliance to Induce and Enhance Business. Law and Humanities Quarterly Reviews, 3(2). https://doi.org/10.31014/aior.1996.03.02.115"
+        },
+        "references": [
+          {
+            "locator": "farm-p028-rationale-footnote-4",
+            "page_index": 27,
+            "bbox": {
+              "x0": 51.0,
+              "y0": 752.65728,
+              "x1": 525.13944,
+              "y1": 772.27404
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "farm-standard-p028-p029:farm-p028-footer",
+      "reference": "context",
+      "source_segment_ids": [
+        "farm-p028-footer"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Document Name ASC Farm Standard Document ID ASC-STD-001 Version V1.0.1 Page 28 of 256"
+        },
+        "references": [
+          {
+            "locator": "farm-p028-footer",
+            "page_index": 27,
+            "bbox": {
+              "x0": 59.304,
+              "y0": 792.53664,
+              "x1": 538.77928,
+              "y1": 799.26552
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Document Name ASC Farm Standard Document ID ASC-STD-001 Version V1.0.1 Page 28 of 256"
+        },
+        "references": [
+          {
+            "locator": "farm-p028-footer",
+            "page_index": 27,
+            "bbox": {
+              "x0": 59.304,
+              "y0": 792.53664,
+              "x1": 538.77928,
+              "y1": 799.26552
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "farm-standard-p028-p029:farm-p029-header",
+      "reference": "context",
+      "source_segment_ids": [
+        "farm-p029-header"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Aquaculture Stewardship Council"
+        },
+        "references": [
+          {
+            "locator": "farm-p029-header",
+            "page_index": 28,
+            "bbox": {
+              "x0": 394.27,
+              "y0": 33.84192,
+              "x1": 543.26248,
+              "y1": 43.05756
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Aquaculture Stewardship Council"
+        },
+        "references": [
+          {
+            "locator": "farm-p029-header",
+            "page_index": 28,
+            "bbox": {
+              "x0": 394.27,
+              "y0": 33.84192,
+              "x1": 543.26248,
+              "y1": 43.05756
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "farm-standard-p028-p029:farm-p029-criterion-1.2",
+      "reference": "context",
+      "source_segment_ids": [
+        "farm-p029-criterion-1.2"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.2 Management Systems"
+        },
+        "references": [
+          {
+            "locator": "farm-p029-criterion-1.2",
+            "page_index": 28,
+            "bbox": {
+              "x0": 68.664,
+              "y0": 71.10128,
+              "x1": 267.284,
+              "y1": 95.53004
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_heading",
+        "fields": {
+          "body": "1.2 Management Systems"
+        },
+        "references": [
+          {
+            "locator": "farm-p029-criterion-1.2",
+            "page_index": 28,
+            "bbox": {
+              "x0": 68.664,
+              "y0": 71.10128,
+              "x1": 267.284,
+              "y1": 95.53004
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "farm-standard-p028-p029:farm-p029-rationale",
+      "reference": "context",
+      "source_segment_ids": [
+        "farm-p029-rationale"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Rationale\n\nA management system supports an organisation to manage the interrelated parts of the business to achieve its objectives. Management systems include policies, processes and procedures, and vary in complexity depending on the organisation’s context. They can support compliance with laws and regulations, detection and resolution of issues, and monitoring of essential operational activities.\n\nThis Criterion focuses on the development of a management system for the implementation and maintenance of ASC Requirements on ASC certified farms."
+        },
+        "references": [
+          {
+            "locator": "farm-p029-rationale",
+            "page_index": 28,
+            "bbox": {
+              "x0": 51.0,
+              "y0": 134.41328,
+              "x1": 529.09536,
+              "y1": 257.87948
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Rationale\n\nA management system supports an organisation to manage the interrelated parts of the business to achieve its objectives. Management systems include policies, processes and procedures, and vary in complexity depending on the organisation’s context. They can support compliance with laws and regulations, detection and resolution of issues, and monitoring of essential operational activities.\n\nThis Criterion focuses on the development of a management system for the implementation and maintenance of ASC Requirements on ASC certified farms."
+        },
+        "references": [
+          {
+            "locator": "farm-p029-rationale",
+            "page_index": 28,
+            "bbox": {
+              "x0": 51.0,
+              "y0": 134.41328,
+              "x1": 529.09536,
+              "y1": 257.87948
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "farm-standard-p028-p029:farm-p029-intent",
+      "reference": "context",
+      "source_segment_ids": [
+        "farm-p029-intent"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Intent - The aquaculture industry continuously manages and improves processes to deliver consistent performance against the ASC requirements."
+        },
+        "references": [
+          {
+            "locator": "farm-p029-intent",
+            "page_index": 28,
+            "bbox": {
+              "x0": 51.0,
+              "y0": 290.75336,
+              "x1": 538.3038,
+              "y1": 318.50948
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Intent - The aquaculture industry continuously manages and improves processes to deliver consistent performance against the ASC requirements."
+        },
+        "references": [
+          {
+            "locator": "farm-p029-intent",
+            "page_index": 28,
+            "bbox": {
+              "x0": 51.0,
+              "y0": 290.75336,
+              "x1": 538.3038,
+              "y1": 318.50948
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "farm-standard-p028-p029:farm-p029-indicators-label",
+      "reference": "context",
+      "source_segment_ids": [
+        "farm-p029-indicators-label"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Indicators:"
+        },
+        "references": [
+          {
+            "locator": "farm-p029-indicators-label",
+            "page_index": 28,
+            "bbox": {
+              "x0": 53.88,
+              "y0": 339.12872,
+              "x1": 109.06952,
+              "y1": 351.26996
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Indicators:"
+        },
+        "references": [
+          {
+            "locator": "farm-p029-indicators-label",
+            "page_index": 28,
+            "bbox": {
+              "x0": 53.88,
+              "y0": 339.12872,
+              "x1": 109.06952,
+              "y1": 351.26996
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "farm-standard-p028-p029:farm-p029-footer",
+      "reference": "context",
+      "source_segment_ids": [
+        "farm-p029-footer"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Document Name ASC Farm Standard Document ID ASC-STD-001 Version V1.0.1 Page 29 of 256"
+        },
+        "references": [
+          {
+            "locator": "farm-p029-footer",
+            "page_index": 28,
+            "bbox": {
+              "x0": 59.304,
+              "y0": 792.53664,
+              "x1": 538.77928,
+              "y1": 799.26552
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Document Name ASC Farm Standard Document ID ASC-STD-001 Version V1.0.1 Page 29 of 256"
+        },
+        "references": [
+          {
+            "locator": "farm-p029-footer",
+            "page_index": 28,
+            "bbox": {
+              "x0": 59.304,
+              "y0": 792.53664,
+              "x1": 538.77928,
+              "y1": 799.26552
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "salmon-cod-standard-p018-v2:1.1.1",
+      "reference": "requirement",
+      "source_segment_ids": [
+        "p018-r1-id",
+        "p018-r1-indicator",
+        "p018-r1-value"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.1.1\nPresence of documents demonstrating compliance with local and national regulations and requirements on land and water use\nYes"
+        },
+        "references": [
+          {
+            "locator": "p018-r1-id",
+            "page_index": 17,
+            "bbox": {
+              "x0": 62.544,
+              "y0": 314.80328,
+              "x1": 79.22544,
+              "y1": 328.26104
+            }
+          },
+          {
+            "locator": "p018-r1-indicator",
+            "page_index": 17,
+            "bbox": {
+              "x0": 87.86976,
+              "y0": 314.80328,
+              "x1": 330.75888,
+              "y1": 368.46104
+            }
+          },
+          {
+            "locator": "p018-r1-value",
+            "page_index": 17,
+            "bbox": {
+              "x0": 443.59,
+              "y0": 334.96328,
+              "x1": 462.64504,
+              "y1": 348.42104
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.1.1\nPresence of documents demonstrating compliance with local and national regulations and requirements on land and water use\nYes"
+        },
+        "references": [
+          {
+            "locator": "p018-r1-id",
+            "page_index": 17,
+            "bbox": {
+              "x0": 62.544,
+              "y0": 314.80328,
+              "x1": 79.22544,
+              "y1": 328.26104
+            }
+          },
+          {
+            "locator": "p018-r1-indicator",
+            "page_index": 17,
+            "bbox": {
+              "x0": 87.86976,
+              "y0": 314.80328,
+              "x1": 330.75888,
+              "y1": 368.46104
+            }
+          },
+          {
+            "locator": "p018-r1-value",
+            "page_index": 17,
+            "bbox": {
+              "x0": 443.59,
+              "y0": 334.96328,
+              "x1": 462.64504,
+              "y1": 348.42104
+            }
+          }
+        ]
+      },
+      "table_oracle": {
+        "table": {
+          "row_count": 5,
+          "column_count": 3,
+          "cells": [
+            {
+              "id": "p018-column-header-indicator",
+              "row": 0,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 2,
+              "is_header": true,
+              "page_index": 17,
+              "bbox": {
+                "x0": 169.22,
+                "y0": 270.194,
+                "x1": 241.148,
+                "y1": 284.822
+              },
+              "content": {
+                "resolved_text": "INDICATOR"
+              }
+            },
+            {
+              "id": "p018-column-header-requirement",
+              "row": 0,
+              "column": 2,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": true,
+              "page_index": 17,
+              "bbox": {
+                "x0": 406.15,
+                "y0": 270.194,
+                "x1": 500.038,
+                "y1": 284.822
+              },
+              "content": {
+                "resolved_text": "REQUIREMENT"
+              }
+            },
+            {
+              "id": "p018-r1-id",
+              "row": 1,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 62.544,
+                "y0": 314.80328,
+                "x1": 79.22544,
+                "y1": 328.26104
+              },
+              "content": {
+                "resolved_text": "1.1.1"
+              }
+            },
+            {
+              "id": "p018-r1-indicator",
+              "row": 1,
+              "column": 1,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 87.86976,
+                "y0": 314.80328,
+                "x1": 330.75888,
+                "y1": 368.46104
+              },
+              "content": {
+                "resolved_text": "Presence of documents demonstrating compliance with local and national regulations and requirements on land and water use"
+              }
+            },
+            {
+              "id": "p018-r1-value",
+              "row": 1,
+              "column": 2,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 443.59,
+                "y0": 334.96328,
+                "x1": 462.64504,
+                "y1": 348.42104
+              },
+              "content": {
+                "resolved_text": "Yes"
+              }
+            },
+            {
+              "id": "p018-r2-id",
+              "row": 2,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 62.544,
+                "y0": 398.44328,
+                "x1": 81.51072,
+                "y1": 411.90104
+              },
+              "content": {
+                "resolved_text": "1.1.2"
+              }
+            },
+            {
+              "id": "p018-r2-indicator",
+              "row": 2,
+              "column": 1,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 90.144,
+                "y0": 398.44328,
+                "x1": 307.26768,
+                "y1": 425.36104
+              },
+              "content": {
+                "resolved_text": "Presence of documents demonstrating compliance with all tax laws"
+              }
+            },
+            {
+              "id": "p018-r2-value",
+              "row": 2,
+              "column": 2,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 443.59,
+                "y0": 405.18328,
+                "x1": 462.64504,
+                "y1": 418.64104
+              },
+              "content": {
+                "resolved_text": "Yes"
+              }
+            },
+            {
+              "id": "p018-r3-id",
+              "row": 3,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 62.544,
+                "y0": 455.34328,
+                "x1": 81.46656,
+                "y1": 468.80104
+              },
+              "content": {
+                "resolved_text": "1.1.3"
+              }
+            },
+            {
+              "id": "p018-r3-indicator",
+              "row": 3,
+              "column": 1,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 93.00336,
+                "y0": 455.34328,
+                "x1": 324.56544,
+                "y1": 495.68104
+              },
+              "content": {
+                "resolved_text": "Presence of documents demonstrating compliance with all relevant national and local labour laws and regulations"
+              }
+            },
+            {
+              "id": "p018-r3-value",
+              "row": 3,
+              "column": 2,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 443.59,
+                "y0": 468.78328,
+                "x1": 462.64504,
+                "y1": 482.24104
+              },
+              "content": {
+                "resolved_text": "Yes"
+              }
+            },
+            {
+              "id": "p018-r4-id",
+              "row": 4,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 62.544,
+                "y0": 525.66328,
+                "x1": 82.53744,
+                "y1": 539.12104
+              },
+              "content": {
+                "resolved_text": "1.1.4"
+              }
+            },
+            {
+              "id": "p018-r4-indicator",
+              "row": 4,
+              "column": 1,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 94.10736,
+                "y0": 525.66328,
+                "x1": 324.68688,
+                "y1": 565.88104
+              },
+              "content": {
+                "resolved_text": "Presence of documents demonstrating compliance with regulations and permits concerning water quality impacts"
+              }
+            },
+            {
+              "id": "p018-r4-value",
+              "row": 4,
+              "column": 2,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 443.59,
+                "y0": 539.10328,
+                "x1": 462.64504,
+                "y1": 552.56104
+              },
+              "content": {
+                "resolved_text": "Yes"
+              }
+            }
+          ]
+        },
+        "selected_cell_ids": [
+          "p018-r1-id",
+          "p018-r1-indicator",
+          "p018-r1-value"
+        ],
+        "boundary": "Header/row/cell positions assembled from frozen source annotation, not product parser output. Gold classification label never enters the resolver/classifier."
+      }
+    },
+    {
+      "id": "salmon-cod-standard-p018-v2:1.1.2",
+      "reference": "requirement",
+      "source_segment_ids": [
+        "p018-r2-id",
+        "p018-r2-indicator",
+        "p018-r2-value"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.1.2\nPresence of documents demonstrating compliance with all tax laws\nYes"
+        },
+        "references": [
+          {
+            "locator": "p018-r2-id",
+            "page_index": 17,
+            "bbox": {
+              "x0": 62.544,
+              "y0": 398.44328,
+              "x1": 81.51072,
+              "y1": 411.90104
+            }
+          },
+          {
+            "locator": "p018-r2-indicator",
+            "page_index": 17,
+            "bbox": {
+              "x0": 90.144,
+              "y0": 398.44328,
+              "x1": 307.26768,
+              "y1": 425.36104
+            }
+          },
+          {
+            "locator": "p018-r2-value",
+            "page_index": 17,
+            "bbox": {
+              "x0": 443.59,
+              "y0": 405.18328,
+              "x1": 462.64504,
+              "y1": 418.64104
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.1.2\nPresence of documents demonstrating compliance with all tax laws\nYes"
+        },
+        "references": [
+          {
+            "locator": "p018-r2-id",
+            "page_index": 17,
+            "bbox": {
+              "x0": 62.544,
+              "y0": 398.44328,
+              "x1": 81.51072,
+              "y1": 411.90104
+            }
+          },
+          {
+            "locator": "p018-r2-indicator",
+            "page_index": 17,
+            "bbox": {
+              "x0": 90.144,
+              "y0": 398.44328,
+              "x1": 307.26768,
+              "y1": 425.36104
+            }
+          },
+          {
+            "locator": "p018-r2-value",
+            "page_index": 17,
+            "bbox": {
+              "x0": 443.59,
+              "y0": 405.18328,
+              "x1": 462.64504,
+              "y1": 418.64104
+            }
+          }
+        ]
+      },
+      "table_oracle": {
+        "table": {
+          "row_count": 5,
+          "column_count": 3,
+          "cells": [
+            {
+              "id": "p018-column-header-indicator",
+              "row": 0,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 2,
+              "is_header": true,
+              "page_index": 17,
+              "bbox": {
+                "x0": 169.22,
+                "y0": 270.194,
+                "x1": 241.148,
+                "y1": 284.822
+              },
+              "content": {
+                "resolved_text": "INDICATOR"
+              }
+            },
+            {
+              "id": "p018-column-header-requirement",
+              "row": 0,
+              "column": 2,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": true,
+              "page_index": 17,
+              "bbox": {
+                "x0": 406.15,
+                "y0": 270.194,
+                "x1": 500.038,
+                "y1": 284.822
+              },
+              "content": {
+                "resolved_text": "REQUIREMENT"
+              }
+            },
+            {
+              "id": "p018-r1-id",
+              "row": 1,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 62.544,
+                "y0": 314.80328,
+                "x1": 79.22544,
+                "y1": 328.26104
+              },
+              "content": {
+                "resolved_text": "1.1.1"
+              }
+            },
+            {
+              "id": "p018-r1-indicator",
+              "row": 1,
+              "column": 1,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 87.86976,
+                "y0": 314.80328,
+                "x1": 330.75888,
+                "y1": 368.46104
+              },
+              "content": {
+                "resolved_text": "Presence of documents demonstrating compliance with local and national regulations and requirements on land and water use"
+              }
+            },
+            {
+              "id": "p018-r1-value",
+              "row": 1,
+              "column": 2,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 443.59,
+                "y0": 334.96328,
+                "x1": 462.64504,
+                "y1": 348.42104
+              },
+              "content": {
+                "resolved_text": "Yes"
+              }
+            },
+            {
+              "id": "p018-r2-id",
+              "row": 2,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 62.544,
+                "y0": 398.44328,
+                "x1": 81.51072,
+                "y1": 411.90104
+              },
+              "content": {
+                "resolved_text": "1.1.2"
+              }
+            },
+            {
+              "id": "p018-r2-indicator",
+              "row": 2,
+              "column": 1,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 90.144,
+                "y0": 398.44328,
+                "x1": 307.26768,
+                "y1": 425.36104
+              },
+              "content": {
+                "resolved_text": "Presence of documents demonstrating compliance with all tax laws"
+              }
+            },
+            {
+              "id": "p018-r2-value",
+              "row": 2,
+              "column": 2,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 443.59,
+                "y0": 405.18328,
+                "x1": 462.64504,
+                "y1": 418.64104
+              },
+              "content": {
+                "resolved_text": "Yes"
+              }
+            },
+            {
+              "id": "p018-r3-id",
+              "row": 3,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 62.544,
+                "y0": 455.34328,
+                "x1": 81.46656,
+                "y1": 468.80104
+              },
+              "content": {
+                "resolved_text": "1.1.3"
+              }
+            },
+            {
+              "id": "p018-r3-indicator",
+              "row": 3,
+              "column": 1,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 93.00336,
+                "y0": 455.34328,
+                "x1": 324.56544,
+                "y1": 495.68104
+              },
+              "content": {
+                "resolved_text": "Presence of documents demonstrating compliance with all relevant national and local labour laws and regulations"
+              }
+            },
+            {
+              "id": "p018-r3-value",
+              "row": 3,
+              "column": 2,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 443.59,
+                "y0": 468.78328,
+                "x1": 462.64504,
+                "y1": 482.24104
+              },
+              "content": {
+                "resolved_text": "Yes"
+              }
+            },
+            {
+              "id": "p018-r4-id",
+              "row": 4,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 62.544,
+                "y0": 525.66328,
+                "x1": 82.53744,
+                "y1": 539.12104
+              },
+              "content": {
+                "resolved_text": "1.1.4"
+              }
+            },
+            {
+              "id": "p018-r4-indicator",
+              "row": 4,
+              "column": 1,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 94.10736,
+                "y0": 525.66328,
+                "x1": 324.68688,
+                "y1": 565.88104
+              },
+              "content": {
+                "resolved_text": "Presence of documents demonstrating compliance with regulations and permits concerning water quality impacts"
+              }
+            },
+            {
+              "id": "p018-r4-value",
+              "row": 4,
+              "column": 2,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 443.59,
+                "y0": 539.10328,
+                "x1": 462.64504,
+                "y1": 552.56104
+              },
+              "content": {
+                "resolved_text": "Yes"
+              }
+            }
+          ]
+        },
+        "selected_cell_ids": [
+          "p018-r2-id",
+          "p018-r2-indicator",
+          "p018-r2-value"
+        ],
+        "boundary": "Header/row/cell positions assembled from frozen source annotation, not product parser output. Gold classification label never enters the resolver/classifier."
+      }
+    },
+    {
+      "id": "salmon-cod-standard-p018-v2:1.1.3",
+      "reference": "requirement",
+      "source_segment_ids": [
+        "p018-r3-id",
+        "p018-r3-indicator",
+        "p018-r3-value"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.1.3\nPresence of documents demonstrating compliance with all relevant national and local labour laws and regulations\nYes"
+        },
+        "references": [
+          {
+            "locator": "p018-r3-id",
+            "page_index": 17,
+            "bbox": {
+              "x0": 62.544,
+              "y0": 455.34328,
+              "x1": 81.46656,
+              "y1": 468.80104
+            }
+          },
+          {
+            "locator": "p018-r3-indicator",
+            "page_index": 17,
+            "bbox": {
+              "x0": 93.00336,
+              "y0": 455.34328,
+              "x1": 324.56544,
+              "y1": 495.68104
+            }
+          },
+          {
+            "locator": "p018-r3-value",
+            "page_index": 17,
+            "bbox": {
+              "x0": 443.59,
+              "y0": 468.78328,
+              "x1": 462.64504,
+              "y1": 482.24104
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.1.3\nPresence of documents demonstrating compliance with all relevant national and local labour laws and regulations\nYes"
+        },
+        "references": [
+          {
+            "locator": "p018-r3-id",
+            "page_index": 17,
+            "bbox": {
+              "x0": 62.544,
+              "y0": 455.34328,
+              "x1": 81.46656,
+              "y1": 468.80104
+            }
+          },
+          {
+            "locator": "p018-r3-indicator",
+            "page_index": 17,
+            "bbox": {
+              "x0": 93.00336,
+              "y0": 455.34328,
+              "x1": 324.56544,
+              "y1": 495.68104
+            }
+          },
+          {
+            "locator": "p018-r3-value",
+            "page_index": 17,
+            "bbox": {
+              "x0": 443.59,
+              "y0": 468.78328,
+              "x1": 462.64504,
+              "y1": 482.24104
+            }
+          }
+        ]
+      },
+      "table_oracle": {
+        "table": {
+          "row_count": 5,
+          "column_count": 3,
+          "cells": [
+            {
+              "id": "p018-column-header-indicator",
+              "row": 0,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 2,
+              "is_header": true,
+              "page_index": 17,
+              "bbox": {
+                "x0": 169.22,
+                "y0": 270.194,
+                "x1": 241.148,
+                "y1": 284.822
+              },
+              "content": {
+                "resolved_text": "INDICATOR"
+              }
+            },
+            {
+              "id": "p018-column-header-requirement",
+              "row": 0,
+              "column": 2,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": true,
+              "page_index": 17,
+              "bbox": {
+                "x0": 406.15,
+                "y0": 270.194,
+                "x1": 500.038,
+                "y1": 284.822
+              },
+              "content": {
+                "resolved_text": "REQUIREMENT"
+              }
+            },
+            {
+              "id": "p018-r1-id",
+              "row": 1,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 62.544,
+                "y0": 314.80328,
+                "x1": 79.22544,
+                "y1": 328.26104
+              },
+              "content": {
+                "resolved_text": "1.1.1"
+              }
+            },
+            {
+              "id": "p018-r1-indicator",
+              "row": 1,
+              "column": 1,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 87.86976,
+                "y0": 314.80328,
+                "x1": 330.75888,
+                "y1": 368.46104
+              },
+              "content": {
+                "resolved_text": "Presence of documents demonstrating compliance with local and national regulations and requirements on land and water use"
+              }
+            },
+            {
+              "id": "p018-r1-value",
+              "row": 1,
+              "column": 2,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 443.59,
+                "y0": 334.96328,
+                "x1": 462.64504,
+                "y1": 348.42104
+              },
+              "content": {
+                "resolved_text": "Yes"
+              }
+            },
+            {
+              "id": "p018-r2-id",
+              "row": 2,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 62.544,
+                "y0": 398.44328,
+                "x1": 81.51072,
+                "y1": 411.90104
+              },
+              "content": {
+                "resolved_text": "1.1.2"
+              }
+            },
+            {
+              "id": "p018-r2-indicator",
+              "row": 2,
+              "column": 1,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 90.144,
+                "y0": 398.44328,
+                "x1": 307.26768,
+                "y1": 425.36104
+              },
+              "content": {
+                "resolved_text": "Presence of documents demonstrating compliance with all tax laws"
+              }
+            },
+            {
+              "id": "p018-r2-value",
+              "row": 2,
+              "column": 2,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 443.59,
+                "y0": 405.18328,
+                "x1": 462.64504,
+                "y1": 418.64104
+              },
+              "content": {
+                "resolved_text": "Yes"
+              }
+            },
+            {
+              "id": "p018-r3-id",
+              "row": 3,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 62.544,
+                "y0": 455.34328,
+                "x1": 81.46656,
+                "y1": 468.80104
+              },
+              "content": {
+                "resolved_text": "1.1.3"
+              }
+            },
+            {
+              "id": "p018-r3-indicator",
+              "row": 3,
+              "column": 1,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 93.00336,
+                "y0": 455.34328,
+                "x1": 324.56544,
+                "y1": 495.68104
+              },
+              "content": {
+                "resolved_text": "Presence of documents demonstrating compliance with all relevant national and local labour laws and regulations"
+              }
+            },
+            {
+              "id": "p018-r3-value",
+              "row": 3,
+              "column": 2,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 443.59,
+                "y0": 468.78328,
+                "x1": 462.64504,
+                "y1": 482.24104
+              },
+              "content": {
+                "resolved_text": "Yes"
+              }
+            },
+            {
+              "id": "p018-r4-id",
+              "row": 4,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 62.544,
+                "y0": 525.66328,
+                "x1": 82.53744,
+                "y1": 539.12104
+              },
+              "content": {
+                "resolved_text": "1.1.4"
+              }
+            },
+            {
+              "id": "p018-r4-indicator",
+              "row": 4,
+              "column": 1,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 94.10736,
+                "y0": 525.66328,
+                "x1": 324.68688,
+                "y1": 565.88104
+              },
+              "content": {
+                "resolved_text": "Presence of documents demonstrating compliance with regulations and permits concerning water quality impacts"
+              }
+            },
+            {
+              "id": "p018-r4-value",
+              "row": 4,
+              "column": 2,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 443.59,
+                "y0": 539.10328,
+                "x1": 462.64504,
+                "y1": 552.56104
+              },
+              "content": {
+                "resolved_text": "Yes"
+              }
+            }
+          ]
+        },
+        "selected_cell_ids": [
+          "p018-r3-id",
+          "p018-r3-indicator",
+          "p018-r3-value"
+        ],
+        "boundary": "Header/row/cell positions assembled from frozen source annotation, not product parser output. Gold classification label never enters the resolver/classifier."
+      }
+    },
+    {
+      "id": "salmon-cod-standard-p018-v2:1.1.4",
+      "reference": "requirement",
+      "source_segment_ids": [
+        "p018-r4-id",
+        "p018-r4-indicator",
+        "p018-r4-value"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.1.4\nPresence of documents demonstrating compliance with regulations and permits concerning water quality impacts\nYes"
+        },
+        "references": [
+          {
+            "locator": "p018-r4-id",
+            "page_index": 17,
+            "bbox": {
+              "x0": 62.544,
+              "y0": 525.66328,
+              "x1": 82.53744,
+              "y1": 539.12104
+            }
+          },
+          {
+            "locator": "p018-r4-indicator",
+            "page_index": 17,
+            "bbox": {
+              "x0": 94.10736,
+              "y0": 525.66328,
+              "x1": 324.68688,
+              "y1": 565.88104
+            }
+          },
+          {
+            "locator": "p018-r4-value",
+            "page_index": 17,
+            "bbox": {
+              "x0": 443.59,
+              "y0": 539.10328,
+              "x1": 462.64504,
+              "y1": 552.56104
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.1.4\nPresence of documents demonstrating compliance with regulations and permits concerning water quality impacts\nYes"
+        },
+        "references": [
+          {
+            "locator": "p018-r4-id",
+            "page_index": 17,
+            "bbox": {
+              "x0": 62.544,
+              "y0": 525.66328,
+              "x1": 82.53744,
+              "y1": 539.12104
+            }
+          },
+          {
+            "locator": "p018-r4-indicator",
+            "page_index": 17,
+            "bbox": {
+              "x0": 94.10736,
+              "y0": 525.66328,
+              "x1": 324.68688,
+              "y1": 565.88104
+            }
+          },
+          {
+            "locator": "p018-r4-value",
+            "page_index": 17,
+            "bbox": {
+              "x0": 443.59,
+              "y0": 539.10328,
+              "x1": 462.64504,
+              "y1": 552.56104
+            }
+          }
+        ]
+      },
+      "table_oracle": {
+        "table": {
+          "row_count": 5,
+          "column_count": 3,
+          "cells": [
+            {
+              "id": "p018-column-header-indicator",
+              "row": 0,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 2,
+              "is_header": true,
+              "page_index": 17,
+              "bbox": {
+                "x0": 169.22,
+                "y0": 270.194,
+                "x1": 241.148,
+                "y1": 284.822
+              },
+              "content": {
+                "resolved_text": "INDICATOR"
+              }
+            },
+            {
+              "id": "p018-column-header-requirement",
+              "row": 0,
+              "column": 2,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": true,
+              "page_index": 17,
+              "bbox": {
+                "x0": 406.15,
+                "y0": 270.194,
+                "x1": 500.038,
+                "y1": 284.822
+              },
+              "content": {
+                "resolved_text": "REQUIREMENT"
+              }
+            },
+            {
+              "id": "p018-r1-id",
+              "row": 1,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 62.544,
+                "y0": 314.80328,
+                "x1": 79.22544,
+                "y1": 328.26104
+              },
+              "content": {
+                "resolved_text": "1.1.1"
+              }
+            },
+            {
+              "id": "p018-r1-indicator",
+              "row": 1,
+              "column": 1,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 87.86976,
+                "y0": 314.80328,
+                "x1": 330.75888,
+                "y1": 368.46104
+              },
+              "content": {
+                "resolved_text": "Presence of documents demonstrating compliance with local and national regulations and requirements on land and water use"
+              }
+            },
+            {
+              "id": "p018-r1-value",
+              "row": 1,
+              "column": 2,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 443.59,
+                "y0": 334.96328,
+                "x1": 462.64504,
+                "y1": 348.42104
+              },
+              "content": {
+                "resolved_text": "Yes"
+              }
+            },
+            {
+              "id": "p018-r2-id",
+              "row": 2,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 62.544,
+                "y0": 398.44328,
+                "x1": 81.51072,
+                "y1": 411.90104
+              },
+              "content": {
+                "resolved_text": "1.1.2"
+              }
+            },
+            {
+              "id": "p018-r2-indicator",
+              "row": 2,
+              "column": 1,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 90.144,
+                "y0": 398.44328,
+                "x1": 307.26768,
+                "y1": 425.36104
+              },
+              "content": {
+                "resolved_text": "Presence of documents demonstrating compliance with all tax laws"
+              }
+            },
+            {
+              "id": "p018-r2-value",
+              "row": 2,
+              "column": 2,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 443.59,
+                "y0": 405.18328,
+                "x1": 462.64504,
+                "y1": 418.64104
+              },
+              "content": {
+                "resolved_text": "Yes"
+              }
+            },
+            {
+              "id": "p018-r3-id",
+              "row": 3,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 62.544,
+                "y0": 455.34328,
+                "x1": 81.46656,
+                "y1": 468.80104
+              },
+              "content": {
+                "resolved_text": "1.1.3"
+              }
+            },
+            {
+              "id": "p018-r3-indicator",
+              "row": 3,
+              "column": 1,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 93.00336,
+                "y0": 455.34328,
+                "x1": 324.56544,
+                "y1": 495.68104
+              },
+              "content": {
+                "resolved_text": "Presence of documents demonstrating compliance with all relevant national and local labour laws and regulations"
+              }
+            },
+            {
+              "id": "p018-r3-value",
+              "row": 3,
+              "column": 2,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 443.59,
+                "y0": 468.78328,
+                "x1": 462.64504,
+                "y1": 482.24104
+              },
+              "content": {
+                "resolved_text": "Yes"
+              }
+            },
+            {
+              "id": "p018-r4-id",
+              "row": 4,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 62.544,
+                "y0": 525.66328,
+                "x1": 82.53744,
+                "y1": 539.12104
+              },
+              "content": {
+                "resolved_text": "1.1.4"
+              }
+            },
+            {
+              "id": "p018-r4-indicator",
+              "row": 4,
+              "column": 1,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 94.10736,
+                "y0": 525.66328,
+                "x1": 324.68688,
+                "y1": 565.88104
+              },
+              "content": {
+                "resolved_text": "Presence of documents demonstrating compliance with regulations and permits concerning water quality impacts"
+              }
+            },
+            {
+              "id": "p018-r4-value",
+              "row": 4,
+              "column": 2,
+              "row_span": 1,
+              "column_span": 1,
+              "is_header": false,
+              "page_index": 17,
+              "bbox": {
+                "x0": 443.59,
+                "y0": 539.10328,
+                "x1": 462.64504,
+                "y1": 552.56104
+              },
+              "content": {
+                "resolved_text": "Yes"
+              }
+            }
+          ]
+        },
+        "selected_cell_ids": [
+          "p018-r4-id",
+          "p018-r4-indicator",
+          "p018-r4-value"
+        ],
+        "boundary": "Header/row/cell positions assembled from frozen source annotation, not product parser output. Gold classification label never enters the resolver/classifier."
+      }
+    },
+    {
+      "id": "salmon-cod-standard-p018-v2:p018-header",
+      "reference": "context",
+      "source_segment_ids": [
+        "p018-header"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Aquaculture Stewardship Council"
+        },
+        "references": [
+          {
+            "locator": "p018-header",
+            "page_index": 17,
+            "bbox": {
+              "x0": 396.91,
+              "y0": 35.88192,
+              "x1": 545.89492,
+              "y1": 45.09756
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Aquaculture Stewardship Council"
+        },
+        "references": [
+          {
+            "locator": "p018-header",
+            "page_index": 17,
+            "bbox": {
+              "x0": 396.91,
+              "y0": 35.88192,
+              "x1": 545.89492,
+              "y1": 45.09756
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "salmon-cod-standard-p018-v2:p018-principle-heading",
+      "reference": "context",
+      "source_segment_ids": [
+        "p018-principle-heading"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "PRINCIPLE 1: COMPLY WITH ALL APPLICABLE NATIONAL LAWS AND LOCAL REGULATIONS"
+        },
+        "references": [
+          {
+            "locator": "p018-principle-heading",
+            "page_index": 17,
+            "bbox": {
+              "x0": 56.64,
+              "y0": 62.036,
+              "x1": 483.398,
+              "y1": 105.938
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_heading",
+        "fields": {
+          "body": "PRINCIPLE 1: COMPLY WITH ALL APPLICABLE NATIONAL LAWS AND LOCAL REGULATIONS"
+        },
+        "references": [
+          {
+            "locator": "p018-principle-heading",
+            "page_index": 17,
+            "bbox": {
+              "x0": 56.64,
+              "y0": 62.036,
+              "x1": 483.398,
+              "y1": 105.938
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "salmon-cod-standard-p018-v2:p018-principle-introduction",
+      "reference": "context",
+      "source_segment_ids": [
+        "p018-principle-introduction"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Principle 1 is intended to ensure that all farms aiming to be certified against the ASC Salmon Standard standards meet their legal obligations as a baseline requirement. Adhering to the law will ensure that producers meet the basic environmental and social requirements and the minimal structures, such as legitimate land tenure rights, on which the effectiveness of the requirements will stand."
+        },
+        "references": [
+          {
+            "locator": "p018-principle-introduction",
+            "page_index": 17,
+            "bbox": {
+              "x0": 56.64,
+              "y0": 117.97328,
+              "x1": 552.9568,
+              "y1": 195.87104
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Principle 1 is intended to ensure that all farms aiming to be certified against the ASC Salmon Standard standards meet their legal obligations as a baseline requirement. Adhering to the law will ensure that producers meet the basic environmental and social requirements and the minimal structures, such as legitimate land tenure rights, on which the effectiveness of the requirements will stand."
+        },
+        "references": [
+          {
+            "locator": "p018-principle-introduction",
+            "page_index": 17,
+            "bbox": {
+              "x0": 56.64,
+              "y0": 117.97328,
+              "x1": 552.9568,
+              "y1": 195.87104
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "salmon-cod-standard-p018-v2:p018-criterion-label",
+      "reference": "context",
+      "source_segment_ids": [
+        "p018-criterion-label"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Criterion 1.1"
+        },
+        "references": [
+          {
+            "locator": "p018-criterion-label",
+            "page_index": 17,
+            "bbox": {
+              "x0": 92.184,
+              "y0": 210.524,
+              "x1": 161.868,
+              "y1": 225.152
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_heading",
+        "fields": {
+          "body": "Criterion 1.1"
+        },
+        "references": [
+          {
+            "locator": "p018-criterion-label",
+            "page_index": 17,
+            "bbox": {
+              "x0": 92.184,
+              "y0": 210.524,
+              "x1": 161.868,
+              "y1": 225.152
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "salmon-cod-standard-p018-v2:p018-criterion-title",
+      "reference": "context",
+      "source_segment_ids": [
+        "p018-criterion-title"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Compliance with all applicable local and national legal requirements and regulations"
+        },
+        "references": [
+          {
+            "locator": "p018-criterion-title",
+            "page_index": 17,
+            "bbox": {
+              "x0": 184.22,
+              "y0": 210.524,
+              "x1": 521.182,
+              "y1": 239.792
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_heading",
+        "fields": {
+          "body": "Compliance with all applicable local and national legal requirements and regulations"
+        },
+        "references": [
+          {
+            "locator": "p018-criterion-title",
+            "page_index": 17,
+            "bbox": {
+              "x0": 184.22,
+              "y0": 210.524,
+              "x1": 521.182,
+              "y1": 239.792
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "salmon-cod-standard-p018-v2:p018-column-header-indicator",
+      "reference": "context",
+      "source_segment_ids": [
+        "p018-column-header-indicator"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "INDICATOR"
+        },
+        "references": [
+          {
+            "locator": "p018-column-header-indicator",
+            "page_index": 17,
+            "bbox": {
+              "x0": 169.22,
+              "y0": 270.194,
+              "x1": 241.148,
+              "y1": 284.822
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "INDICATOR"
+        },
+        "references": [
+          {
+            "locator": "p018-column-header-indicator",
+            "page_index": 17,
+            "bbox": {
+              "x0": 169.22,
+              "y0": 270.194,
+              "x1": 241.148,
+              "y1": 284.822
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "salmon-cod-standard-p018-v2:p018-column-header-requirement",
+      "reference": "context",
+      "source_segment_ids": [
+        "p018-column-header-requirement"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "REQUIREMENT"
+        },
+        "references": [
+          {
+            "locator": "p018-column-header-requirement",
+            "page_index": 17,
+            "bbox": {
+              "x0": 406.15,
+              "y0": 270.194,
+              "x1": 500.038,
+              "y1": 284.822
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "REQUIREMENT"
+        },
+        "references": [
+          {
+            "locator": "p018-column-header-requirement",
+            "page_index": 17,
+            "bbox": {
+              "x0": 406.15,
+              "y0": 270.194,
+              "x1": 500.038,
+              "y1": 284.822
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "salmon-cod-standard-p018-v2:p018-rationale",
+      "reference": "context",
+      "source_segment_ids": [
+        "p018-rationale"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Rationale - Salmon aquaculture operations must, as a baseline, adhere to the national and local laws of the regions where production is taking place. Farm operations that, intentionally or unintentionally, break the law violate a fundamental benchmark of performance for certified farms. It is important that aquaculture operations demonstrate a pattern of legal and responsible behaviour, including the implementation of corrective actions for any legal violations."
+        },
+        "references": [
+          {
+            "locator": "p018-rationale",
+            "page_index": 17,
+            "bbox": {
+              "x0": 56.64,
+              "y0": 590.37328,
+              "x1": 545.29664,
+              "y1": 684.23104
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Rationale - Salmon aquaculture operations must, as a baseline, adhere to the national and local laws of the regions where production is taking place. Farm operations that, intentionally or unintentionally, break the law violate a fundamental benchmark of performance for certified farms. It is important that aquaculture operations demonstrate a pattern of legal and responsible behaviour, including the implementation of corrective actions for any legal violations."
+        },
+        "references": [
+          {
+            "locator": "p018-rationale",
+            "page_index": 17,
+            "bbox": {
+              "x0": 56.64,
+              "y0": 590.37328,
+              "x1": 545.29664,
+              "y1": 684.23104
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "salmon-cod-standard-p018-v2:p018-footer",
+      "reference": "context",
+      "source_segment_ids": [
+        "p018-footer"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Document Name: ASC Salmon and Cod Standard Document ID: ASC-STD-010 Date issued: 13/10/2025 Document Owner: Director of Standards and Science Version: 1.5 Last reviewed: 13/10/2025 Classification: EXTERNAL (PUBLIC) Page 18 of 134"
+        },
+        "references": [
+          {
+            "locator": "p018-footer",
+            "page_index": 17,
+            "bbox": {
+              "x0": 88.824,
+              "y0": 703.98336,
+              "x1": 513.1324,
+              "y1": 740.68248
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Document Name: ASC Salmon and Cod Standard Document ID: ASC-STD-010 Date issued: 13/10/2025 Document Owner: Director of Standards and Science Version: 1.5 Last reviewed: 13/10/2025 Classification: EXTERNAL (PUBLIC) Page 18 of 134"
+        },
+        "references": [
+          {
+            "locator": "p018-footer",
+            "page_index": 17,
+            "bbox": {
+              "x0": 88.824,
+              "y0": 703.98336,
+              "x1": 513.1324,
+              "y1": 740.68248
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "interpretation-manual-p019-p021:1.4.1",
+      "reference": "requirement",
+      "source_segment_ids": [
+        "int-1.4.1-id",
+        "int-1.4.1-text"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.4.1\nThe UoC shall identify, evaluate and mitigate risks of mixing and substituting ASC certified products with non-certified products at all sites."
+        },
+        "references": [
+          {
+            "locator": "int-1.4.1-id",
+            "page_index": 18,
+            "bbox": {
+              "x0": 53.904,
+              "y0": 157.669,
+              "x1": 81.93,
+              "y1": 174.785
+            }
+          },
+          {
+            "locator": "int-1.4.1-text",
+            "page_index": 18,
+            "bbox": {
+              "x0": 117.74,
+              "y0": 157.763,
+              "x1": 504.597,
+              "y1": 185.52
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.4.1\nThe UoC shall identify, evaluate and mitigate risks of mixing and substituting ASC certified products with non-certified products at all sites."
+        },
+        "references": [
+          {
+            "locator": "int-1.4.1-id",
+            "page_index": 18,
+            "bbox": {
+              "x0": 53.904,
+              "y0": 157.669,
+              "x1": 81.93,
+              "y1": 174.785
+            }
+          },
+          {
+            "locator": "int-1.4.1-text",
+            "page_index": 18,
+            "bbox": {
+              "x0": 117.74,
+              "y0": 157.763,
+              "x1": 504.597,
+              "y1": 185.52
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "interpretation-manual-p019-p021:1.4.2",
+      "reference": "requirement",
+      "source_segment_ids": [
+        "int-1.4.2-id",
+        "int-1.4.2-text"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.4.2\nThe UoC shall develop, implement and maintain a traceability system, covering all sites, to ensure that the following conditions are met: a. only larvae/juveniles that conform with the requirements in Criterion 1.5 are used to produce certified product; and b. all stocked animals are traceable back to the supplier; and c. all batches of ASC certified and non-certified product are identifiable and segregated at all sites and at all times; and d. all batches of ASC certified product are traceable at all times to: o the site(s) used ; and o the production unit(s) used; and e. corrective actions are taken if non-conforming product is identified, sold or dispatched; and f. accompanying documentation shall identify product sold or dispatched as ASC certified or non-certified."
+        },
+        "references": [
+          {
+            "locator": "int-1.4.2-id",
+            "page_index": 18,
+            "bbox": {
+              "x0": 53.904,
+              "y0": 213.949,
+              "x1": 84.694,
+              "y1": 231.065
+            }
+          },
+          {
+            "locator": "int-1.4.2-text",
+            "page_index": 18,
+            "bbox": {
+              "x0": 117.74,
+              "y0": 214.043,
+              "x1": 540.061,
+              "y1": 484.37
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.4.2\nThe UoC shall develop, implement and maintain a traceability system, covering all sites, to ensure that the following conditions are met: a. only larvae/juveniles that conform with the requirements in Criterion 1.5 are used to produce certified product; and b. all stocked animals are traceable back to the supplier; and c. all batches of ASC certified and non-certified product are identifiable and segregated at all sites and at all times; and d. all batches of ASC certified product are traceable at all times to: o the site(s) used ; and o the production unit(s) used; and e. corrective actions are taken if non-conforming product is identified, sold or dispatched; and f. accompanying documentation shall identify product sold or dispatched as ASC certified or non-certified."
+        },
+        "references": [
+          {
+            "locator": "int-1.4.2-id",
+            "page_index": 18,
+            "bbox": {
+              "x0": 53.904,
+              "y0": 213.949,
+              "x1": 84.694,
+              "y1": 231.065
+            }
+          },
+          {
+            "locator": "int-1.4.2-text",
+            "page_index": 18,
+            "bbox": {
+              "x0": 117.74,
+              "y0": 214.043,
+              "x1": 540.061,
+              "y1": 484.37
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "interpretation-manual-p019-p021:1.4.3",
+      "reference": "requirement",
+      "source_segment_ids": [
+        "int-1.4.3-id",
+        "int-1.4.3-applicability",
+        "int-1.4.3-text-p20",
+        "int-1.4.3-text-p21"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.4.3\nIndicator applicability: every UoC using compound feed\nThe UoC shall demonstrate that feed products, subject to conformance with Indicator 2.12.1, are accompanied by the following information: a. the originating feed mill holds valid certification against the ASC Feed Standard with the appropriate scope of certification in relation to the ASC Production Model (i.e. Mass Balance Production Model or Segregation Production Model product); and b. feed is traceable as ASC-conforming throughout all steps between the feed mill and site; and\nc. documentation accompanying the feed identifies the feed as ASC-conforming; and d. documentation accompanying the feed identifies the production model applied (i.e. Mass Balance Production Model or Segregation Production Model); and e. for ASC-conforming Segregation Production Model feed, the product is identifiable by a distinct feed name in formal documentation accompanying the product and is listed on the schedule to the feed mill certificate."
+        },
+        "references": [
+          {
+            "locator": "int-1.4.3-id",
+            "page_index": 19,
+            "bbox": {
+              "x0": 53.904,
+              "y0": 582.309,
+              "x1": 84.776,
+              "y1": 599.425
+            }
+          },
+          {
+            "locator": "int-1.4.3-applicability",
+            "page_index": 19,
+            "bbox": {
+              "x0": 117.74,
+              "y0": 582.403,
+              "x1": 384.261,
+              "y1": 593.96
+            }
+          },
+          {
+            "locator": "int-1.4.3-text-p20",
+            "page_index": 19,
+            "bbox": {
+              "x0": 117.74,
+              "y0": 604.603,
+              "x1": 537.958,
+              "y1": 725.36
+            }
+          },
+          {
+            "locator": "int-1.4.3-text-p21",
+            "page_index": 20,
+            "bbox": {
+              "x0": 117.74,
+              "y0": 73.763,
+              "x1": 536.109,
+              "y1": 178.44
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "1.4.3\nIndicator applicability: every UoC using compound feed\nThe UoC shall demonstrate that feed products, subject to conformance with Indicator 2.12.1, are accompanied by the following information: a. the originating feed mill holds valid certification against the ASC Feed Standard with the appropriate scope of certification in relation to the ASC Production Model (i.e. Mass Balance Production Model or Segregation Production Model product); and b. feed is traceable as ASC-conforming throughout all steps between the feed mill and site; and\nc. documentation accompanying the feed identifies the feed as ASC-conforming; and d. documentation accompanying the feed identifies the production model applied (i.e. Mass Balance Production Model or Segregation Production Model); and e. for ASC-conforming Segregation Production Model feed, the product is identifiable by a distinct feed name in formal documentation accompanying the product and is listed on the schedule to the feed mill certificate."
+        },
+        "references": [
+          {
+            "locator": "int-1.4.3-id",
+            "page_index": 19,
+            "bbox": {
+              "x0": 53.904,
+              "y0": 582.309,
+              "x1": 84.776,
+              "y1": 599.425
+            }
+          },
+          {
+            "locator": "int-1.4.3-applicability",
+            "page_index": 19,
+            "bbox": {
+              "x0": 117.74,
+              "y0": 582.403,
+              "x1": 384.261,
+              "y1": 593.96
+            }
+          },
+          {
+            "locator": "int-1.4.3-text-p20",
+            "page_index": 19,
+            "bbox": {
+              "x0": 117.74,
+              "y0": 604.603,
+              "x1": 537.958,
+              "y1": 725.36
+            }
+          },
+          {
+            "locator": "int-1.4.3-text-p21",
+            "page_index": 20,
+            "bbox": {
+              "x0": 117.74,
+              "y0": 73.763,
+              "x1": 536.109,
+              "y1": 178.44
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "interpretation-manual-p019-p021:int-p19-criterion",
+      "reference": "context",
+      "source_segment_ids": [
+        "int-p19-criterion"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "Criterion 1.4 – Traceability and Disclosure"
+        },
+        "references": [
+          {
+            "locator": "int-p19-criterion",
+            "page_index": 18,
+            "bbox": {
+              "x0": 51.0,
+              "y0": 68.084,
+              "x1": 314.144,
+              "y1": 82.712
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_heading",
+        "fields": {
+          "body": "Criterion 1.4 – Traceability and Disclosure"
+        },
+        "references": [
+          {
+            "locator": "int-p19-criterion",
+            "page_index": 18,
+            "bbox": {
+              "x0": 51.0,
+              "y0": 68.084,
+              "x1": 314.144,
+              "y1": 82.712
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "interpretation-manual-p019-p021:int-p19-interpretation",
+      "reference": "context",
+      "source_segment_ids": [
+        "int-p19-interpretation"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "How do I interpret this requirement? The UoC is responsible for ensuring it mitigates risks of substitution and mixing of certified and non-certified products. The UoC may use the Risk Assessment Method outlined in Appendix 3 of the ASC Farm Standard, Section 3.2. Certified and non-certified products shall be identifiable and segregated at all sites and at all times within the UoC. Certified products shall be traceable at all sites and at all times within the UoC."
+        },
+        "references": [
+          {
+            "locator": "int-p19-interpretation",
+            "page_index": 18,
+            "bbox": {
+              "x0": 53.904,
+              "y0": 509.548,
+              "x1": 540.0,
+              "y1": 733.0
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "How do I interpret this requirement? The UoC is responsible for ensuring it mitigates risks of substitution and mixing of certified and non-certified products. The UoC may use the Risk Assessment Method outlined in Appendix 3 of the ASC Farm Standard, Section 3.2. Certified and non-certified products shall be identifiable and segregated at all sites and at all times within the UoC. Certified products shall be traceable at all sites and at all times within the UoC."
+        },
+        "references": [
+          {
+            "locator": "int-p19-interpretation",
+            "page_index": 18,
+            "bbox": {
+              "x0": 53.904,
+              "y0": 509.548,
+              "x1": 540.0,
+              "y1": 733.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "interpretation-manual-p019-p021:int-p20-context",
+      "reference": "context",
+      "source_segment_ids": [
+        "int-p20-context"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "The UoC may decide to sell products from the UoC as non-certified. In this case, the products shall be identified as non-certified when sold or dispatched. Evidence of implementation should be maintained, e.g. Auditors should confirm. Useful Resources N/A."
+        },
+        "references": [
+          {
+            "locator": "int-p20-context",
+            "page_index": 19,
+            "bbox": {
+              "x0": 53.904,
+              "y0": 70.0,
+              "x1": 540.0,
+              "y1": 477.29
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "The UoC may decide to sell products from the UoC as non-certified. In this case, the products shall be identified as non-certified when sold or dispatched. Evidence of implementation should be maintained, e.g. Auditors should confirm. Useful Resources N/A."
+        },
+        "references": [
+          {
+            "locator": "int-p20-context",
+            "page_index": 19,
+            "bbox": {
+              "x0": 53.904,
+              "y0": 70.0,
+              "x1": 540.0,
+              "y1": 477.29
+            }
+          }
+        ],
+        "ancestors": [
+          {
+            "id": "int-p19-interpretation",
+            "type": "heading",
+            "title": "How do I interpret this requirement?",
+            "version": 1
+          }
+        ]
+      },
+      "ancestry_oracle": "Explicit source continuation in frozen annotation supplies heading ancestry. This is not an independently recovered parser hierarchy."
+    },
+    {
+      "id": "interpretation-manual-p019-p021:int-p21-context",
+      "reference": "context",
+      "source_segment_ids": [
+        "int-p21-context"
+      ],
+      "text_only": {
+        "kind": "source_text",
+        "fields": {
+          "body": "How do I interpret this requirement? Indicator 2.12.1 requires the UoC to only use ASC-conforming compound feed. Evidence of implementation should be maintained, e.g. Auditors should confirm. Useful Resources N/A."
+        },
+        "references": [
+          {
+            "locator": "int-p21-context",
+            "page_index": 20,
+            "bbox": {
+              "x0": 53.904,
+              "y0": 203.618,
+              "x1": 540.0,
+              "y1": 540.0
+            }
+          }
+        ]
+      },
+      "source_structured": {
+        "kind": "source_text",
+        "fields": {
+          "body": "How do I interpret this requirement? Indicator 2.12.1 requires the UoC to only use ASC-conforming compound feed. Evidence of implementation should be maintained, e.g. Auditors should confirm. Useful Resources N/A."
+        },
+        "references": [
+          {
+            "locator": "int-p21-context",
+            "page_index": 20,
+            "bbox": {
+              "x0": 53.904,
+              "y0": 203.618,
+              "x1": 540.0,
+              "y1": 540.0
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "policy": "Complete inventory of provided source segments: formal source groups are reference positives; every remaining source segment is context. Source labels are evaluation-only. Text-only and source-structure-assisted oracle tracks reported separately; never end-to-end quality. No reserved windows used.",
+  "uncertainty": "Historical annotation inventories are complete over supplied segments, not newly proven page-complete negatives or business Gold. Cross-page source assembly remains oracle-supplied."
+}

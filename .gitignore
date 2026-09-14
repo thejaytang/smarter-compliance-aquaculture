@@ -38,3 +38,14 @@ system2/outputs/
 .idea/
 .vscode/
 .playwright-cli/
+**/model-provider.local.json
+**/machine-assessment-rules.local.json
+**/scoring-rules.local.json
+
+# Bundled PDF.js runtime assets are required in portable checkouts.
+!**/vendor/pdfjs/build/
+!**/vendor/pdfjs/build/**
+
+# Local environment links and live coordination locks are not portable.
+**/.venv
+**/.system1-source-management.lock

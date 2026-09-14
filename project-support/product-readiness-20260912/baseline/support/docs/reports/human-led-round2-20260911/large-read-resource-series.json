@@ -1,0 +1,115 @@
+{
+  "scope": "50 sequential actual HTTP reads of saved 600000-cell Excel material; process lifetime peak, not current RSS",
+  "series": [
+    {
+      "batch": 0,
+      "reads": 10,
+      "seconds": [
+        0.6765938749886118,
+        0.6567794160218909,
+        0.6947518749511801,
+        0.6712866669986397,
+        0.689890000037849,
+        0.700676458014641,
+        0.6414609579951502,
+        0.6584926249925047,
+        0.6759336249670014,
+        0.7011556659708731
+      ],
+      "resources": {
+        "uptime_seconds": 868.662,
+        "active_threads": 9,
+        "peak_rss_bytes": 209879040,
+        "memory_measurement": "process lifetime high-water resident memory, not current memory"
+      }
+    },
+    {
+      "batch": 1,
+      "reads": 10,
+      "seconds": [
+        0.7504905419773422,
+        0.6784773329854943,
+        0.7163454589899629,
+        0.7009015829535201,
+        0.7049544159672223,
+        0.730046458018478,
+        0.7203274170169607,
+        0.6726525840349495,
+        0.7013592920266092,
+        0.6632866670261137
+      ],
+      "resources": {
+        "uptime_seconds": 875.702,
+        "active_threads": 9,
+        "peak_rss_bytes": 276463616,
+        "memory_measurement": "process lifetime high-water resident memory, not current memory"
+      }
+    },
+    {
+      "batch": 2,
+      "reads": 10,
+      "seconds": [
+        0.6661000829772092,
+        0.687674084038008,
+        0.7312288749963045,
+        0.6852050420129672,
+        0.6568904999876395,
+        0.679043999989517,
+        0.6497372500016354,
+        0.6541044999612495,
+        0.7410610420047306,
+        0.7307664160034619
+      ],
+      "resources": {
+        "uptime_seconds": 882.585,
+        "active_threads": 9,
+        "peak_rss_bytes": 350863360,
+        "memory_measurement": "process lifetime high-water resident memory, not current memory"
+      }
+    },
+    {
+      "batch": 3,
+      "reads": 10,
+      "seconds": [
+        0.7061752920271829,
+        0.7087550000287592,
+        0.7068752080085687,
+        0.689082209020853,
+        0.6746482499875128,
+        0.7314410420367494,
+        0.7260071249911562,
+        0.714538583997637,
+        0.688669791969005,
+        0.6455490420339629
+      ],
+      "resources": {
+        "uptime_seconds": 889.577,
+        "active_threads": 9,
+        "peak_rss_bytes": 425852928,
+        "memory_measurement": "process lifetime high-water resident memory, not current memory"
+      }
+    },
+    {
+      "batch": 4,
+      "reads": 10,
+      "seconds": [
+        0.662255915987771,
+        0.715079583984334,
+        0.712561333028134,
+        0.6958336249808781,
+        0.6647266669897363,
+        0.6918222500244156,
+        0.643941749993246,
+        0.6679401249857619,
+        0.7728421670035459,
+        0.6753701250418089
+      ],
+      "resources": {
+        "uptime_seconds": 896.48,
+        "active_threads": 9,
+        "peak_rss_bytes": 500793344,
+        "memory_measurement": "process lifetime high-water resident memory, not current memory"
+      }
+    }
+  ]
+}

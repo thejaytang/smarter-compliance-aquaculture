@@ -1,0 +1,8 @@
+{
+  "id": "cs001-html",
+  "exit_code": 0,
+  "stdout": "{\"id\": \"cs001-html\", \"status\": \"candidate_available\", \"block_count\": 16105, \"block_types\": {\"image\": 1949, \"text\": 13647, \"heading\": 461, \"table\": 48}, \"covered_scope\": [\"html:document\"], \"total_scope_count\": 1, \"warnings\": [\"duplicate_source_id:Layer_2\", \"duplicate_source_id:Layer_1-2\", \"duplicate_source_id:surface1\", \"interactive_footnote_target_not_resolved:QS010-001:75a624236c2cf1c431f1\", \"interactive_footnote_target_not_resolved:QS010-001:c6e7a634df3fa501e352\", \"interactive_footnote_target_not_resolved:QS010-001:2068d3ec80aa42be163c\", \"unresolved_or_ambiguous_links\", \"conditional_display_preserved_not_evaluated\", \"image_content_not_transcribed\"], \"unresolved\": [], \"requirement_status\": \"not_connected\", \"candidate_path\": \"after-nonpdf/cs001-html/candidate.json\", \"mode\": \"after-nonpdf\", \"baseline_equivalent\": true}\n",
+  "stderr": "",
+  "status": "returned",
+  "elapsed_seconds": 5.313
+}

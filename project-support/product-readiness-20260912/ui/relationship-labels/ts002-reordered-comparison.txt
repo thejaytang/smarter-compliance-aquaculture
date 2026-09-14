@@ -1,0 +1,421 @@
+Review machine differences
+
+1 unresolved differences. Input revision 6 · full candidate scope. Personal content remains unchanged until explicit application.
+
+Find a change
+Choose difference
+Content · Blocks
+Show changeApply reviewed result to my workReturn to my work
+Content · Blocks
+Conflict
+Current personal content
+Related content
+No related content
+Reference details
+Id
+block-c348e8d2db127d5a2cb336e3
+Level
+1
+Numbering
+Under heading
+Top level
+Reference details
+Source Refs
+0
+Cell Range
+A1
+Locator
+xl/worksheets/sheet1.xml#A1
+Scope Id
+sheet:Measurements
+Sheet
+Measurements
+Text
+Measurements
+Type
+heading
+Related content
+
+Measurements
+
+Reference details
+Id
+block-d5c348ecb14601cf0e387849
+Level
+1
+Numbering
+Under heading
+
+Measurements
+
+Reference details
+Source Refs
+0
+Cell Range
+Z105:Z105
+Locator
+xl/worksheets/sheet1.xml#Z105
+Scope Id
+sheet:Measurements
+Sheet
+Measurements
+Table
+Merges
+Notes
+Rows
+0
+0
+Far cell: original retained
+Text
+Type
+table
+Related content
+
+Measurements
+
+Reference details
+Id
+block-5ee6ab774c794fde62d0b977
+Level
+1
+Numbering
+TEST 1.1
+Under heading
+Top level
+Reference details
+Source Refs
+0
+Cell Range
+A1:C3
+Locator
+xl/worksheets/sheet1.xml#A1
+Scope Id
+sheet:Measurements
+Sheet
+Measurements
+Table
+Merges
+0
+Col
+0
+Colspan
+3
+Row
+0
+Rowspan
+1
+Notes
+0
+ENGINEERING ONLY: B3 changed 12 → 12.5, then two-tab conflict 13/14 resolved explicitly to 14. Original remains 12. Formula preserved, not recalculated. [SERVICE-FAILURE INPUT MUST SURVIVE]
+Rows
+0
+0
+ENGINEERING FIXTURE
+1
+2
+1
+0
+ENGINEERING INSERTED ROW
+1
+2
+2
+0
+1
+2
+3
+0
+Temperature
+1
+14
+2
+=B3+1
+Text
+Type
+table
+Related content
+No related content
+Reference details
+Id
+block-5f33242372c5df2886fd1f37
+Level
+1
+Numbering
+Under heading
+Top level
+Reference details
+Source Refs
+0
+Cell Range
+A1
+Locator
+xl/worksheets/sheet2.xml#A1
+Scope Id
+sheet:Empty sheet
+Sheet
+Empty sheet
+Text
+Empty sheet
+Type
+heading
+Related content
+No related content
+Reference details
+Id
+block-6018c02883932e3047450096
+Level
+1
+Numbering
+Under heading
+Top level
+Reference details
+Source Refs
+0
+Cell Range
+A1
+Locator
+xl/worksheets/sheet3.xml#A1
+Scope Id
+sheet:Hidden notes
+Sheet
+Hidden notes
+Text
+Hidden notes
+Type
+heading
+Machine candidate
+Related content
+No related content
+Reference details
+Id
+block-c348e8d2db127d5a2cb336e3
+Level
+1
+Numbering
+Under heading
+Top level
+Reference details
+Source Refs
+0
+Cell Range
+A1
+Locator
+xl/worksheets/sheet1.xml#A1
+Scope Id
+sheet:Measurements
+Sheet
+Measurements
+Text
+Measurements
+Type
+heading
+Related content
+
+Measurements
+
+Reference details
+Id
+block-5ee6ab774c794fde62d0b977
+Level
+1
+Numbering
+Under heading
+
+Measurements
+
+Reference details
+Source Refs
+0
+Cell Range
+A1:C3
+Locator
+xl/worksheets/sheet1.xml#A1
+Scope Id
+sheet:Measurements
+Sheet
+Measurements
+Table
+Merges
+0
+Col
+0
+Colspan
+3
+Row
+0
+Rowspan
+2
+Notes
+0
+C3 saved value: [cache unavailable]. Formula has not been calculated.
+Rows
+0
+0
+ENGINEERING FIXTURE
+1
+2
+1
+0
+1
+2
+2
+0
+Temperature
+1
+12
+2
+=B3+1
+Text
+Type
+table
+Related content
+
+Measurements
+
+Reference details
+Id
+block-d5c348ecb14601cf0e387849
+Level
+1
+Numbering
+Under heading
+
+Measurements
+
+Reference details
+Source Refs
+0
+Cell Range
+Z105:Z105
+Locator
+xl/worksheets/sheet1.xml#Z105
+Scope Id
+sheet:Measurements
+Sheet
+Measurements
+Table
+Merges
+Notes
+Rows
+0
+0
+Far cell: original retained
+Text
+Type
+table
+Related content
+No related content
+Reference details
+Id
+block-5f33242372c5df2886fd1f37
+Level
+1
+Numbering
+Under heading
+Top level
+Reference details
+Source Refs
+0
+Cell Range
+A1
+Locator
+xl/worksheets/sheet2.xml#A1
+Scope Id
+sheet:Empty sheet
+Sheet
+Empty sheet
+Text
+Empty sheet
+Type
+heading
+Related content
+No related content
+Reference details
+Id
+block-6018c02883932e3047450096
+Level
+1
+Numbering
+Under heading
+Top level
+Reference details
+Source Refs
+0
+Cell Range
+A1
+Locator
+xl/worksheets/sheet3.xml#A1
+Scope Id
+sheet:Hidden notes
+Sheet
+Hidden notes
+Text
+Hidden notes
+Type
+heading
+Shared starting version
+Keep current
+Adopt candidate
+Edit result
+1 affected ranges · 0 prior checks retained
+1 · heading
+Original
+Measurements
+Measurements · A1
+Machine candidate · Machine Unreviewed
+Source, version and people
+2 · table
+Original
+
+ 
+
+Rows 1–1 / 1 · columns 1–1 / 1
+↑ Rows
+↓ Rows
+← Columns
+Columns →
+Row
+Column
+Go
+	1
+1	Far cell: original retained
+
+0 merged relationships · edit to inspect their coordinatesMeasurements · Z105:Z105
+Machine candidate · Machine Unreviewed
+Source, version and people
+3 · table
+Original
+
+TEST 1.1 
+
+Rows 1–4 / 4 · columns 1–3 / 3
+↑ Rows
+↓ Rows
+← Columns
+Columns →
+Row
+Column
+Go
+	1	2	3
+1	ENGINEERING FIXTURE		
+2	ENGINEERING INSERTED ROW		
+3			
+4	Temperature	14	=B3+1
+
+ENGINEERING ONLY: B3 changed 12 → 12.5, then two-tab conflict 13/14 resolved explicitly to 14. Original remains 12. Formula preserved, not recalculated. [SERVICE-FAILURE INPUT MUST SURVIVE]
+
+1 merged relationships · edit to inspect their coordinatesMeasurements · A1:C3
+Human contribution · Weijie Tang · Human Unreviewed
+Source, version and people
+4 · heading
+Original
+Empty sheet
+Empty sheet · A1
+Machine candidate · Machine Unreviewed
+Source, version and people
+5 · heading
+Original
+Hidden notes
+Hidden notes · A1
+Machine candidate · Machine Unreviewed
+Source, version and people
+Whole-material review · 0/3 ranges checked

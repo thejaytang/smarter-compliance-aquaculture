@@ -1,0 +1,41 @@
+{
+  "hashes": {
+    "system2/src/pdf_extraction/evidence/material_reader.py": "733f98b0ad0c9dfcb355f2823660cca001cbe927551be51d09413b187e410270",
+    "workbench/src/local_workbench/server.py": "97805b2d63ab2fec189b1c6743d074067f691d9c102233a9201dbf7e24dff886",
+    "system2/tests/test_material_reader_resolution.py": "89e2bd25cfa5da0b68b0e30c54208b01d96baa9ed92b97f51dc96c55af88d537",
+    "workbench/tests/test_material_http.py": "e80c9e7808ee676576b94e0d485669f0542fe6a882e11221eae6841fb6efe969",
+    "system2/src/pdf_extraction/orchestration/material_parser.py": "ae3745c920366edfb70934e540f2fbe745835ff772a16aa540b751713123388e"
+  },
+  "temp_root": "/private/tmp/smarter-reader-resolution-bz0ie5rj",
+  "commands": [
+    [
+      "system2",
+      [
+        "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/bin/python",
+        "-m",
+        "pytest",
+        "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/tests/test_material_reader_resolution.py",
+        "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/tests/test_material_reader_navigation.py",
+        "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/tests/test_material_reader_parser.py",
+        "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/tests/test_material_read_performance.py",
+        "-q",
+        "--basetemp=/private/tmp/smarter-reader-resolution-bz0ie5rj/pytest",
+        "--junitxml=/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/quality/reader-resolution/system2-junit.xml"
+      ]
+    ],
+    [
+      "workbench",
+      [
+        "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/tests",
+        "-p",
+        "test_material_http.py",
+        "-v"
+      ]
+    ]
+  ]
+}

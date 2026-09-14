@@ -1,0 +1,17 @@
+[
+  {
+    "path": "workbench/ui/source-workspace.js",
+    "before": "dad9462656d0b69665db820f15ef77c0fbd4143c6d0e25c0a57a13948f610c07",
+    "after": "f2481ea2a2024d2c2d43a6ed2bf53f385623f7027d44c2e7071ab4817d8969ce"
+  },
+  {
+    "path": "workbench/ui/source-workspace.css",
+    "before": "974547caa7c0cc2d845fe201b4fdf77ed3b564002e2dfe0e2212c75df6c3fb68",
+    "after": "7482615615c920f137fe0d352d2617ca54ca5109cfbdb003aa3da723464931b4"
+  },
+  {
+    "path": "system2/src/pdf_extraction/intake/registry.py",
+    "before": "5bb23d012fec482290bc1a52ec7c5663fcb15d1e43db0ed3bd08df551016cf16",
+    "after": "12e00b6bce0d0624949def6bb62ab88b00a8b9dae97deccb44a133ab1c7cb75d"
+  }
+]

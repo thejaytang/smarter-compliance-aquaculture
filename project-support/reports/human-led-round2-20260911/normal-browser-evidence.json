@@ -1,0 +1,94 @@
+{
+  "status": "PASS_WITH_OBSERVED_IDEMPOTENT_NAVIGATION_AUTOSAVE",
+  "checked_at": "2026-09-11T21:00:00Z",
+  "url": "http://127.0.0.1:62742/",
+  "browser": "Actual Playwright-controlled Chrome, existing isolated browser profile, normal local service after launcher reload",
+  "scope": "Read-only inspection intent: normal Materials list, Runtime status and System1 navigation. No confidential source bodies or normal screenshots saved.",
+  "reviewer": "Weijie Tang, selected only for the local session",
+  "checks": [
+    {
+      "name": "Fresh normal Materials list",
+      "result": "PASS",
+      "observed": {
+        "page_title": "Smarter Compliance · Requirement Workbench",
+        "heading": "Material workbench",
+        "material_snapshots": 0,
+        "registered_source_options": 38,
+        "save_disabled": true,
+        "extract_disabled": true,
+        "process_disabled": true,
+        "third_pane": "Not connected; structure and processor pending"
+      }
+    },
+    {
+      "name": "Actual Runtime status dialog",
+      "result": "PASS",
+      "checked_at": "2026-09-11T20:58:19.971392+00:00",
+      "components": {
+        "Source service": "idle; last success 20:58:16 UTC",
+        "Material extraction": "running material_tick, 0 seconds; last success 20:58:17 UTC",
+        "Saved material storage": "idle; last success 20:58:16 UTC",
+        "Excel output": "idle; last success 20:57:28 UTC",
+        "Source Excel output": "idle; last success 20:58:19 UTC",
+        "Legacy processing": "idle; last success 20:58:19 UTC"
+      },
+      "active_errors_displayed": false,
+      "qualification": "Runtime dialog explicitly states that operational status does not certify content quality. A polling material_tick is not evidence of user-triggered extraction."
+    },
+    {
+      "name": "System1 navigation remains accessible",
+      "result": "PASS",
+      "observed": {
+        "heading": "System1 · Pending review",
+        "main_buttons_rendered": 51,
+        "source_document_frames": 0,
+        "forms_edited": false,
+        "decisions_submitted": false
+      }
+    },
+    {
+      "name": "Business-state preservation",
+      "result": "PASS_AFTER_BASELINE_COMPARISON",
+      "observed": "Browser request log contained no /api/material/* requests. No material opening, Extract, adoption, save or confirmation action occurred. The only deliberate POST was the permitted /api/actor selection. Leaving System1 automatically issued its existing POST /api/draft; inspection stopped when this was noticed. Root compared the owning draft table with the pre-load baseline: all 10 rows byte-identical, zero additions and zero removals. No body or prior human draft changed.",
+      "navigation_autosave": {
+        "task_id": "REV-ac2ac15a78aa26c7",
+        "source_revision": "99158f3e59ce137f03ac",
+        "revision": "6a680deaa42c0651a0745708b98c9d33efe8bd36687918706d215f16711f5ecb",
+        "http_status": 200,
+        "response": {
+          "saved": true
+        },
+        "request_shape": [
+          "task_id",
+          "draft"
+        ],
+        "draft_field_names": [
+          "stale",
+          "previousScores",
+          "scores",
+          "issueVerified",
+          "identityVerified",
+          "permissionVerified",
+          "revision",
+          "source_revision",
+          "note"
+        ],
+        "content_values_in_report": false,
+        "baseline_comparison_owner": "Root agent; live draft rows against pre-load baseline"
+      }
+    }
+  ],
+  "console_findings": [
+    {
+      "kind": "Non-blocking missing icon",
+      "url_path": "/favicon.ico",
+      "http_status": 404,
+      "observed": "Only browser console error during normal inspection; no application exception observed."
+    }
+  ],
+  "final_browser_state": "Normal Materials list, no material open, no unsaved material work; no further navigation after draft autosave investigation.",
+  "limitations": [
+    "This normal-service pass verifies loaded UI navigation and runtime visibility. It does not repeat engineering mutations against real reviewer data or certify content quality.",
+    "The session was not literally HTTP-write-free: reviewer session selection and an unchanged existing System1 draft autosave occurred."
+  ]
+}

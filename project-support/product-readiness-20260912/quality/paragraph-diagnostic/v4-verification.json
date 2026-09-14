@@ -1,0 +1,289 @@
+{
+  "parser_sha256": "20177ddf912c9157bad697889865e3a986f0547e83e10f56d50d44e92d40a9b7",
+  "results": [
+    {
+      "id": "asc-farm",
+      "original_sha256_unchanged": true,
+      "before_blocks": 66,
+      "after_blocks": 44,
+      "groups": 11,
+      "all_original_fragment_payload_order_exact": true,
+      "all_group_text_exact_newline_join": true,
+      "all_group_refs_exact": true,
+      "status_unchanged": true,
+      "scope_fields_unchanged": true,
+      "validator_pass": true,
+      "engineering_annotation_sha256": "97e70763c7ac03221e0f3ea47437817c6c4859308d2282939988ce2f306dd35e",
+      "checks": [
+        {
+          "kind": "formal",
+          "id": "1.1.1",
+          "before_single_unit": true,
+          "after_single_unit": true
+        },
+        {
+          "kind": "clause",
+          "id": "farm-r1.1.1-c1",
+          "before_single_unit": true,
+          "after_single_unit": true
+        },
+        {
+          "kind": "formal",
+          "id": "1.1.2",
+          "before_single_unit": false,
+          "after_single_unit": true
+        },
+        {
+          "kind": "clause",
+          "id": "farm-r1.1.2-c1",
+          "before_single_unit": false,
+          "after_single_unit": true
+        },
+        {
+          "kind": "formal",
+          "id": "1.2.1",
+          "before_single_unit": false,
+          "after_single_unit": true
+        },
+        {
+          "kind": "clause",
+          "id": "farm-r1.2.1-c1",
+          "before_single_unit": false,
+          "after_single_unit": true
+        },
+        {
+          "kind": "formal",
+          "id": "1.2.2",
+          "before_single_unit": false,
+          "after_single_unit": true
+        },
+        {
+          "kind": "clause",
+          "id": "farm-r1.2.2-c1",
+          "before_single_unit": false,
+          "after_single_unit": true
+        },
+        {
+          "kind": "formal",
+          "id": "1.2.3",
+          "before_single_unit": false,
+          "after_single_unit": true
+        },
+        {
+          "kind": "clause",
+          "id": "farm-r1.2.3-c1",
+          "before_single_unit": false,
+          "after_single_unit": true
+        },
+        {
+          "kind": "formal",
+          "id": "1.2.4",
+          "before_single_unit": false,
+          "after_single_unit": true
+        },
+        {
+          "kind": "clause",
+          "id": "farm-r1.2.4-c1",
+          "before_single_unit": true,
+          "after_single_unit": true
+        },
+        {
+          "kind": "clause",
+          "id": "farm-r1.2.4-c2",
+          "before_single_unit": false,
+          "after_single_unit": true
+        }
+      ]
+    },
+    {
+      "id": "asc-interpretation",
+      "original_sha256_unchanged": true,
+      "before_blocks": 151,
+      "after_blocks": 115,
+      "groups": 22,
+      "all_original_fragment_payload_order_exact": true,
+      "all_group_text_exact_newline_join": true,
+      "all_group_refs_exact": true,
+      "status_unchanged": true,
+      "scope_fields_unchanged": true,
+      "validator_pass": true,
+      "engineering_annotation_sha256": "ce4c1e9a6b2f9814a5b407414462d01c6d6cba57b0c55f10cc7ab76f0872f6fa",
+      "checks": [
+        {
+          "kind": "formal",
+          "id": "1.4.1",
+          "before_single_unit": false,
+          "after_single_unit": true
+        },
+        {
+          "kind": "formal",
+          "id": "1.4.2",
+          "before_single_unit": false,
+          "after_single_unit": false
+        },
+        {
+          "kind": "clause",
+          "id": "1.4.2-a",
+          "before_single_unit": false,
+          "after_single_unit": true
+        },
+        {
+          "kind": "clause",
+          "id": "1.4.2-b",
+          "before_single_unit": true,
+          "after_single_unit": true
+        },
+        {
+          "kind": "clause",
+          "id": "1.4.2-c",
+          "before_single_unit": false,
+          "after_single_unit": true
+        },
+        {
+          "kind": "clause",
+          "id": "1.4.2-d",
+          "before_single_unit": true,
+          "after_single_unit": true
+        },
+        {
+          "kind": "clause",
+          "id": "1.4.2-d-i",
+          "before_single_unit": true,
+          "after_single_unit": true
+        },
+        {
+          "kind": "clause",
+          "id": "1.4.2-d-ii",
+          "before_single_unit": true,
+          "after_single_unit": true
+        },
+        {
+          "kind": "clause",
+          "id": "1.4.2-e",
+          "before_single_unit": false,
+          "after_single_unit": true
+        },
+        {
+          "kind": "clause",
+          "id": "1.4.2-f",
+          "before_single_unit": false,
+          "after_single_unit": true
+        },
+        {
+          "kind": "formal",
+          "id": "1.4.3",
+          "before_single_unit": false,
+          "after_single_unit": false
+        },
+        {
+          "kind": "clause",
+          "id": "1.4.3-a",
+          "before_single_unit": false,
+          "after_single_unit": true
+        },
+        {
+          "kind": "clause",
+          "id": "1.4.3-b",
+          "before_single_unit": false,
+          "after_single_unit": true
+        },
+        {
+          "kind": "clause",
+          "id": "1.4.3-c",
+          "before_single_unit": true,
+          "after_single_unit": true
+        },
+        {
+          "kind": "clause",
+          "id": "1.4.3-d",
+          "before_single_unit": false,
+          "after_single_unit": true
+        },
+        {
+          "kind": "clause",
+          "id": "1.4.3-e",
+          "before_single_unit": false,
+          "after_single_unit": true
+        }
+      ]
+    },
+    {
+      "id": "asc-audit",
+      "original_sha256_unchanged": true,
+      "before_blocks": 14,
+      "after_blocks": 14,
+      "groups": 0,
+      "all_original_fragment_payload_order_exact": true,
+      "all_group_text_exact_newline_join": true,
+      "all_group_refs_exact": true,
+      "status_unchanged": true,
+      "scope_fields_unchanged": true,
+      "validator_pass": true
+    },
+    {
+      "id": "asc-salmon-cod",
+      "original_sha256_unchanged": true,
+      "before_blocks": 25,
+      "after_blocks": 16,
+      "groups": 4,
+      "all_original_fragment_payload_order_exact": true,
+      "all_group_text_exact_newline_join": true,
+      "all_group_refs_exact": true,
+      "status_unchanged": true,
+      "scope_fields_unchanged": true,
+      "validator_pass": true
+    },
+    {
+      "id": "borderless-merged-figure",
+      "original_sha256_unchanged": true,
+      "before_blocks": 16,
+      "after_blocks": 15,
+      "groups": 1,
+      "all_original_fragment_payload_order_exact": true,
+      "all_group_text_exact_newline_join": true,
+      "all_group_refs_exact": true,
+      "status_unchanged": true,
+      "scope_fields_unchanged": true,
+      "validator_pass": true
+    },
+    {
+      "id": "born-digital-multicolumn",
+      "original_sha256_unchanged": true,
+      "before_blocks": 9,
+      "after_blocks": 9,
+      "groups": 0,
+      "all_original_fragment_payload_order_exact": true,
+      "all_group_text_exact_newline_join": true,
+      "all_group_refs_exact": true,
+      "status_unchanged": true,
+      "scope_fields_unchanged": true,
+      "validator_pass": true
+    },
+    {
+      "id": "cross-page-content",
+      "original_sha256_unchanged": true,
+      "before_blocks": 7,
+      "after_blocks": 6,
+      "groups": 1,
+      "all_original_fragment_payload_order_exact": true,
+      "all_group_text_exact_newline_join": true,
+      "all_group_refs_exact": true,
+      "status_unchanged": true,
+      "scope_fields_unchanged": true,
+      "validator_pass": true
+    },
+    {
+      "id": "scanned-critical",
+      "original_sha256_unchanged": true,
+      "before_blocks": 1,
+      "after_blocks": 1,
+      "groups": 0,
+      "all_original_fragment_payload_order_exact": true,
+      "all_group_text_exact_newline_join": true,
+      "all_group_refs_exact": true,
+      "status_unchanged": true,
+      "scope_fields_unchanged": true,
+      "validator_pass": true
+    }
+  ]
+}

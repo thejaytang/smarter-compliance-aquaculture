@@ -1,0 +1,33 @@
+{
+  "command": [
+    "node",
+    "--test",
+    "--test-reporter=tap",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/tests/collaboration-order.test.mjs",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/tests/collaboration-relationships.test.mjs",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/tests/collaboration-ui.test.mjs",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/tests/material-editing.test.mjs",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/tests/material-inspection.test.mjs",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/tests/material-navigation-lock.test.mjs",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/tests/material-navigation.test.mjs",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/tests/materials-ui.test.mjs",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/tests/numbered-labels.test.mjs",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/tests/submission-drawer.test.mjs",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/tests/test_content_dependencies.mjs",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/tests/test_extension_availability.mjs",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/tests/test_lazy_extraction.mjs",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/tests/test_pdf_references.mjs",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/tests/test_qa_chart.mjs",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/tests/test_review_state.mjs",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/tests/test_source_check.mjs",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/tests/test_system2_review.mjs"
+  ],
+  "cwd": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/workflow/frontend-06/isolated-cwd",
+  "started_at": "2026-09-13T12:18:07.561300+00:00",
+  "environment_overrides": {
+    "TMPDIR": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/workflow/frontend-06/tmp",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "scope": "Full frontend Workbench regression; not quality or frozen workload acceptance",
+  "runtime_version": "v22.16.0"
+}

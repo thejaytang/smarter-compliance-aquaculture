@@ -1,0 +1,348 @@
+{
+  "stage": "before",
+  "source_sha256": "8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967",
+  "parser_version": "material-structural-parser/4",
+  "denominator_source": "all paragrafValue spans within original heading elements",
+  "correct": 0,
+  "total": 42,
+  "labels": [
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(1) > div:nth-of-type(1) > h3:nth-of-type(1)",
+      "original_label": "§ 1",
+      "original_heading": "§ 1.Formål",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(1) > div:nth-of-type(2) > h3:nth-of-type(1)",
+      "original_label": "§ 2",
+      "original_heading": "§ 2.Saklig virkeområde",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(1) > div:nth-of-type(3) > h3:nth-of-type(1)",
+      "original_label": "§ 3",
+      "original_heading": "§ 3.Geografisk virkeområde",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(2) > div:nth-of-type(1) > h3:nth-of-type(1)",
+      "original_label": "§ 4",
+      "original_heading": "§ 4.Krav om akvakulturtillatelse",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(2) > div:nth-of-type(2) > h3:nth-of-type(1)",
+      "original_label": "§ 5",
+      "original_heading": "§ 5.Akvakulturtillatelsens innhold",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(2) > div:nth-of-type(3) > h3:nth-of-type(1)",
+      "original_label": "§ 6",
+      "original_heading": "§ 6.Generelle vilkår for tildeling av akvakulturtillatelse",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(2) > div:nth-of-type(4) > h3:nth-of-type(1)",
+      "original_label": "§ 7",
+      "original_heading": "§ 7.Særlig om akvakulturtillatelse til laks, ørret og regnbueørret",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(2) > div:nth-of-type(5) > h3:nth-of-type(1)",
+      "original_label": "§ 8",
+      "original_heading": "§ 8.Samordning i saker om etablering av akvakultur",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(2) > div:nth-of-type(6) > h3:nth-of-type(1)",
+      "original_label": "§ 9",
+      "original_heading": "§ 9.Tilpasning av produksjon av hensyn til miljøet, og endring og tilbaketrekking av akvakulturtillatelse",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(3) > div:nth-of-type(1) > h3:nth-of-type(1)",
+      "original_label": "§ 10",
+      "original_heading": "§ 10.Miljønorm",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(3) > div:nth-of-type(2) > h3:nth-of-type(1)",
+      "original_label": "§ 11",
+      "original_heading": "§ 11.Miljøovervåking",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(3) > div:nth-of-type(3) > h3:nth-of-type(1)",
+      "original_label": "§ 12",
+      "original_heading": "§ 12.Krav til vare- og tjenesteprodusenter, innretninger, utstyr mv.",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(3) > div:nth-of-type(4) > h3:nth-of-type(1)",
+      "original_label": "§ 13",
+      "original_heading": "§ 13.Oppryddings- og gjenfangstplikt",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(3) > div:nth-of-type(5) > h3:nth-of-type(1)",
+      "original_label": "§ 13 a",
+      "original_heading": "§ 13 a.Fellesansvar for fjerning av rømte organismer",
+      "actual_numbering": "§ 13",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(3) > div:nth-of-type(6) > h3:nth-of-type(1)",
+      "original_label": "§ 14",
+      "original_heading": "§ 14.Beskyttelse av bestemte områder",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(4) > div:nth-of-type(1) > h3:nth-of-type(1)",
+      "original_label": "§ 15",
+      "original_heading": "§ 15.Forholdet til arealplaner og vernetiltak",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(4) > div:nth-of-type(2) > h3:nth-of-type(1)",
+      "original_label": "§ 16",
+      "original_heading": "§ 16.Interesseavveining ved arealbruk til akvakultur",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(4) > div:nth-of-type(3) > h3:nth-of-type(1)",
+      "original_label": "§ 17",
+      "original_heading": "§ 17.Utnytting og bruk av lokaliteter mv.",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(5) > div:nth-of-type(1) > h3:nth-of-type(1)",
+      "original_label": "§ 18",
+      "original_heading": "§ 18.Registrering av akvakulturtillatelse",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(5) > div:nth-of-type(2) > h3:nth-of-type(1)",
+      "original_label": "§ 19",
+      "original_heading": "§ 19.Overføring av akvakulturtillatelse",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(5) > div:nth-of-type(3) > h3:nth-of-type(1)",
+      "original_label": "§ 20",
+      "original_heading": "§ 20.Pantsettelse av akvakulturtillatelse",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(6) > div:nth-of-type(1) > h3:nth-of-type(1)",
+      "original_label": "§ 21",
+      "original_heading": "§ 21.Tilsyn",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(6) > div:nth-of-type(2) > h3:nth-of-type(1)",
+      "original_label": "§ 22",
+      "original_heading": "§ 22.Faglig kompetanse",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(6) > div:nth-of-type(3) > h3:nth-of-type(1)",
+      "original_label": "§ 22 a",
+      "original_heading": "§ 22 a.Lønnsvilkår på skip",
+      "actual_numbering": "§ 22",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(6) > div:nth-of-type(4) > h3:nth-of-type(1)",
+      "original_label": "§ 23",
+      "original_heading": "§ 23.Systematiske kontrolltiltak",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(6) > div:nth-of-type(5) > h3:nth-of-type(1)",
+      "original_label": "§ 24",
+      "original_heading": "§ 24.Opplysnings- og undersøkelsesplikt",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(6) > div:nth-of-type(6) > h3:nth-of-type(1)",
+      "original_label": "§ 25",
+      "original_heading": "§ 25.Bistandsplikt",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(6) > div:nth-of-type(7) > h3:nth-of-type(1)",
+      "original_label": "§ 25 a",
+      "original_heading": "§ 25 a.Utveksling av opplysninger mellom myndigheter",
+      "actual_numbering": "§ 25",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(6) > div:nth-of-type(8) > h3:nth-of-type(1)",
+      "original_label": "§ 26",
+      "original_heading": "§ 26.Gebyr og avgift",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(7) > div:nth-of-type(1) > h3:nth-of-type(1)",
+      "original_label": "§ 27",
+      "original_heading": "§ 27.Pålegg om tiltak",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(7) > div:nth-of-type(2) > h3:nth-of-type(1)",
+      "original_label": "§ 28",
+      "original_heading": "§ 28.Tvangsmulkt",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(7) > div:nth-of-type(3) > h3:nth-of-type(1)",
+      "original_label": "§ 29",
+      "original_heading": "§ 29.Iverksetting av tiltak for den ansvarliges regning",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(7) > div:nth-of-type(4) > h3:nth-of-type(1)",
+      "original_label": "§ 29 a",
+      "original_heading": "§ 29 a.Administrativ inndragning av utbytte",
+      "actual_numbering": "§ 29",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(7) > div:nth-of-type(5) > h3:nth-of-type(1)",
+      "original_label": "§ 30",
+      "original_heading": "§ 30.Overtredelsesgebyr",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(7) > div:nth-of-type(6) > h3:nth-of-type(1)",
+      "original_label": "§ 31",
+      "original_heading": "§ 31.Straff",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(7) > div:nth-of-type(7) > h3:nth-of-type(1)",
+      "original_label": "§ 31 a",
+      "original_heading": "§ 31 a.Samordning av tilsyn og reaksjoner i saker om akvakultur",
+      "actual_numbering": "§ 31",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(8) > div:nth-of-type(1) > h3:nth-of-type(1)",
+      "original_label": "§ 32",
+      "original_heading": "§ 32.Ikrafttredelse",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(8) > div:nth-of-type(2) > h3:nth-of-type(1)",
+      "original_label": "§ 33",
+      "original_heading": "§ 33.Overgangsbestemmelser",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(8) > div:nth-of-type(3) > h3:nth-of-type(1)",
+      "original_label": "§ 33 a",
+      "original_heading": "§ 33 a.Søksmålsfrist",
+      "actual_numbering": "§ 33",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(8) > div:nth-of-type(4) > h3:nth-of-type(1)",
+      "original_label": "§ 34",
+      "original_heading": "§ 34.(Opphevet)",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(8) > div:nth-of-type(5) > h3:nth-of-type(1)",
+      "original_label": "§ 35",
+      "original_heading": "§ 35.Oppheving av andre lover",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    },
+    {
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(8) > div:nth-of-type(6) > h3:nth-of-type(1)",
+      "original_label": "§ 36",
+      "original_heading": "§ 36.Endringer i andre lover",
+      "actual_numbering": "",
+      "correct": false,
+      "original_text_retained": true
+    }
+  ],
+  "all_original_heading_text_retained": true,
+  "scope": "exposed development diagnostic only; not general HTML coverage, independent quality, or Requirement recognition"
+}

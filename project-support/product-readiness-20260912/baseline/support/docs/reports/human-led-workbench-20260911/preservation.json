@@ -1,0 +1,36 @@
+{
+  "originals_identical": true,
+  "canonical_identical": true,
+  "original_count": 73,
+  "canonical_count": 75,
+  "table_changes": [
+    {
+      "store": "workbench",
+      "table": "sessions",
+      "before": {
+        "rows": 250,
+        "sha256": "242de2325fc07aa2d74a6b48c0c8e9d875d147ec621cf72ba22a937f0c0b76eb"
+      },
+      "after": {
+        "rows": 252,
+        "sha256": "8d704b555ceff29ba13768f78d4b02e8ce9c3b536bc60dc4cae788b8b8444dc6"
+      }
+    }
+  ],
+  "new_tables": {
+    "workbench": [],
+    "system2": [
+      "material_candidates",
+      "material_conflicts",
+      "material_documents",
+      "material_receipts",
+      "material_revisions"
+    ],
+    "governance": [],
+    "assessments": [],
+    "leader": []
+  },
+  "before": "workbench/runtime/human-led-preservation/before/fingerprints.json",
+  "after": "workbench/runtime/human-led-preservation/after/fingerprints.json",
+  "final_business_table_recheck_after_legacy_browser_read": "PASS: every existing non-session table still matches baseline"
+}

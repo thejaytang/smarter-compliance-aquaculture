@@ -1,0 +1,48 @@
+{
+  "at": "2026-09-13T11:29:03.481557+00:00",
+  "scope": "isolated coordinator fixture only; owned server stopped before snapshot",
+  "stores": [
+    {
+      "source_relative_to_fixture": "governance/governance.sqlite",
+      "backup": "stores/governance/governance.sqlite",
+      "sha256": "bb79b8ed2039af1f5b80c27117de817f9378fbddd072eaaaebb56f6f0b2dee90",
+      "integrity_check": "ok"
+    },
+    {
+      "source_relative_to_fixture": "workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/workflow.sqlite",
+      "backup": "stores/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/workflow.sqlite",
+      "sha256": "7d0c3ffd0d757d3e352ef54a4474d4e3b26ccb958dcc4b593d1091e64854d8e0",
+      "integrity_check": "ok"
+    },
+    {
+      "source_relative_to_fixture": "workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/workflow.sqlite",
+      "backup": "stores/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/workflow.sqlite",
+      "sha256": "749d4ee1056e4d6bf28243bb8f39013d31814690e7af429e747c954864a2146f",
+      "integrity_check": "ok"
+    },
+    {
+      "source_relative_to_fixture": "workbench/runtime/collaboration/personal/95466b61-df18-4cb3-8e6d-8227034d9c72/workflow.sqlite",
+      "backup": "stores/workbench/runtime/collaboration/personal/95466b61-df18-4cb3-8e6d-8227034d9c72/workflow.sqlite",
+      "sha256": "c45eadf6f06e302adf696a8b67bcb7494187c66dbd92ea3a1f0cb72607500ceb",
+      "integrity_check": "ok"
+    },
+    {
+      "source_relative_to_fixture": "workbench/runtime/collaboration/personal/ac8be4be-6c3b-4927-99c9-5ff32a751aeb/workflow.sqlite",
+      "backup": "stores/workbench/runtime/collaboration/personal/ac8be4be-6c3b-4927-99c9-5ff32a751aeb/workflow.sqlite",
+      "sha256": "98537b47258fdef6a32d3a45c36f8e5e2aaa906b7a85f005305f25457f5a259f",
+      "integrity_check": "ok"
+    },
+    {
+      "source_relative_to_fixture": "workbench/runtime/system2-workflow/workflow.sqlite",
+      "backup": "stores/workbench/runtime/system2-workflow/workflow.sqlite",
+      "sha256": "8098c85f1a7546899aee6dcfc2c49ce58af5a70a6a6ad06774a4821e6fa933c4",
+      "integrity_check": "ok"
+    },
+    {
+      "source_relative_to_fixture": "workbench/runtime/workbench.sqlite",
+      "backup": "stores/workbench/runtime/workbench.sqlite",
+      "sha256": "bb1d7a20d01420cc3e8d4280136c9535375b009673b10d313613bce0899c651b",
+      "integrity_check": "ok"
+    }
+  ]
+}

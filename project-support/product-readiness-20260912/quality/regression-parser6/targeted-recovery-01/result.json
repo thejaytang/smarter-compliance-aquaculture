@@ -1,0 +1,52 @@
+{
+  "command": [
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/bin/python",
+    "-m",
+    "pytest",
+    "-c",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/pyproject.toml",
+    "-o",
+    "addopts=",
+    "-vv",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/quality/regression-parser6/targeted-recovery-01/tmp/pytest",
+    "--junitxml=/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/quality/regression-parser6/targeted-recovery-01/junit.xml",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/tests/integration/test_scheme2.py::test_links_notes_and_real_img2table_route",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/tests/integration/test_scheme3.py::test_rest_api_and_release_gate"
+  ],
+  "cwd": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/quality/regression-parser6/targeted-recovery-01/cwd",
+  "environment_overrides": {
+    "PYTHONPATH": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/src",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "TMPDIR": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/quality/regression-parser6/targeted-recovery-01/tmp",
+    "XDG_CACHE_HOME": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/quality/regression-parser6/targeted-recovery-01/cache",
+    "MPLCONFIGDIR": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/quality/regression-parser6/targeted-recovery-01/cache/matplotlib",
+    "HF_HOME": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/quality/regression-parser6/targeted-recovery-01/cache/huggingface",
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "PADDLE_PDX_CACHE_HOME": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/quality/regression-parser6/targeted-recovery-01/cache/paddlex",
+    "PADDLE_PDX_DISABLE_MODEL_SOURCE_CHECK": "True"
+  },
+  "relevant_code_before": {
+    "src/pdf_extraction/api/app.py": "d0afbaa883d74bdc63fcc68fb0d8614808aa45e2a651d69ca1c96c3bfa4be907",
+    "src/pdf_extraction/parsers/table.py": "c953cc3c2615c419a8e674d37533e51767734255653f45b5d54d02f345529778",
+    "tests/integration/test_scheme2.py": "0b7dc389ebbe7b6df5a30ce11539c90e1312c4219c6008486364ca31786f420a",
+    "tests/integration/test_scheme3.py": "bfe907bb5429f17958dbdc3349bfae7a8f66022dcf33de2b291870da2a9f485f"
+  },
+  "scope": "Only two unchanged failed tests after exact installed-RECORD byte restoration of two dependency files. Full suite remains FAIL.",
+  "returncode": 1,
+  "elapsed_seconds": 11.943965333979577,
+  "relevant_code_after": {
+    "src/pdf_extraction/api/app.py": "d0afbaa883d74bdc63fcc68fb0d8614808aa45e2a651d69ca1c96c3bfa4be907",
+    "src/pdf_extraction/parsers/table.py": "c953cc3c2615c419a8e674d37533e51767734255653f45b5d54d02f345529778",
+    "tests/integration/test_scheme2.py": "0b7dc389ebbe7b6df5a30ce11539c90e1312c4219c6008486364ca31786f420a",
+    "tests/integration/test_scheme3.py": "bfe907bb5429f17958dbdc3349bfae7a8f66022dcf33de2b291870da2a9f485f"
+  },
+  "relevant_code_unchanged": true,
+  "tests": 2,
+  "failures": 2,
+  "errors": 0,
+  "skips": 0,
+  "status": "FAIL"
+}

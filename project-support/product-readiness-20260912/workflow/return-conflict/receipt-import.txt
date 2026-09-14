@@ -1,0 +1,10 @@
+Import a collaboration package
+
+Select a work package, submission or adoption receipt ZIP from your colleague. Importing cannot update the master.
+
+Collaboration ZIP package
+
+Adoption receipt recorded; your personal work is unchanged. No further adoption is needed.
+
+Inspect and import package
+Close

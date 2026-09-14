@@ -1,0 +1,56 @@
+- link "Skip to content":
+  - /url: "#main"
+- complementary:
+  - text: Smarter Compliance
+  - generic: Requirement workbench
+  - navigation "Workspace navigation":
+    - button "Overview"
+    - button "Source Management System" [expanded]: Source Management System ⌄
+    - button "Pending review"
+    - button "Source records"
+    - button "Review history"
+    - button "Requirement Extraction System" [expanded]: Requirement Extraction System ⌄
+    - button "Pending materials"
+    - button "Archive"
+    - button "Confidence settings"
+- banner:
+  - button "Collapse navigation" [expanded]:
+  - heading "Pending materials" [level=1]
+  - button "Runtime status"
+  - generic: Current reviewer
+  - combobox "Current reviewer":
+    - option "Select a reviewer"
+    - option "Ana Jokic"
+    - option "Daniel Restad"
+    - option "Weijie Tang" [selected]
+  - button "Switch reviewer"
+- main:
+  - heading "ENGINEERING FIXTURE · Empty HTML original" [level=2]
+  - generic: TS004 · TS004-001 · saved revision 8 · Unsaved local changes · local recovery saved · Extraction failed · saved content retained
+  - button "Expand workspace"
+  - button "Materials"
+  - button "Save material"
+  - button "Confirm personal content review" [disabled]
+  - status
+  - strong: Coordinator workspace
+  - generic: Personal draft · master unchanged
+  - button "Source review"
+  - button "Review my changes"
+  - button "View master"
+  - generic "Exchange work packages & submissions"
+  - group "Working pane":
+    - button "1 · Original" [pressed]
+    - button "2 · Content"
+    - button "3 · Requirements"
+  - heading "Original document" [level=3]
+  - button "Extract →" [disabled]
+  - text: Original location
+  - combobox "Original location":
+    - option "Complete original · start" [selected]
+  - button "Go"
+  - link "Open original ↗":
+    - /url: /api/material/original?id=64288fd5d09b988850ce7a31992b286b&view=personal
+  - button "Linked content"
+  - button "Reading details"
+  - iframe
+  - generic: Offline HTML · reflowed reading view

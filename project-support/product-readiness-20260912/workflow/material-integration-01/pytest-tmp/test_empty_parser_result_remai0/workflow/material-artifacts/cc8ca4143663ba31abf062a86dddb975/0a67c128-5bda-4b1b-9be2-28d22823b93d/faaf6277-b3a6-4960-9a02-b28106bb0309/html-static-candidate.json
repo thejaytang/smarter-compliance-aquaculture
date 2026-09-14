@@ -1,0 +1,7 @@
+{
+  "source_sha256": "f70b370debd085dd9e9fb6495c796cdccf41c44574cc185dbe124f3ea8237623",
+  "blocks": [],
+  "warnings": [
+    "The saved HTML has no supported template profile; the complete static DOM is retained as a generic structural candidate for manual review."
+  ]
+}

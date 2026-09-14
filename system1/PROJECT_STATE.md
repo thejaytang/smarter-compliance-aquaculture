@@ -1,4 +1,94 @@
+# System1 current state
+
+2026-09-14 peer synchronization adds a revision-guarded owning-store source snapshot apply route with named attribution, protected originals, immutable request replay and additive source/task history evidence. Existing local issue gates remain; imported task evidence is not automatically executed. Any approved reviewer on a full installation can apply explicitly reviewed source work. 59 targeted source/workflow checks passed on isolated stores. Normal source database hash was unchanged across code activation. [Integration evidence](../project-support/settings-sync-20260914/RESULTS.md).
+
+2026-09-14: Source intake retains server-bound basic inspection evidence and the full generated candidate field set in the governance database. Existing uninspected pending duplicates receive missing evidence/fields without overwriting human inputs. Unknown inspection ratings remain blank instead of inheriting legacy HIGH/MEDIUM defaults. Candidate registration, effective Include and Pending-Include remain human-governed. Full regression covered 147 tests: the dashboard preview test initially omitted two unregistered candidates from its expected count; its corrected operation-ID contract passed the targeted 2-test rerun. [Current inspection evidence](../project-support/source-inspection-20260914/RESULTS.md).
+
+Updated: 2026-09-14. The normal local workbench now exposes Add sources, Source review, Source register and action-based Review history. Manual intake preserves originals and pending candidate identity with replay/duplicate/new-version handling; discovery explicitly has no provider. The source register is read-only and naturally numbered. Source review uses shared original readers, explicit H/M/L drafts and separate scoped application. The normal service loads the new adapter through its owning environment; engineering writes were tested only in isolated stores. 145 System1 tests pass. [Current UI/flow evidence](../project-support/ui-redesign-20260914/source-browser-evidence.md) and [integration/loading](../PROJECT_STATE.md) own current observations. No new source sweep, model or schedule was enabled.
+
+## Retained 2026-09-12 baseline
+
+Updated: 2026-09-12. Source Management System has its own source/task workspace, including existing review, selection, retrieval/file, candidate, replacement, QA, reported-issue and re-review routes. Scoring does not silently close other tasks or issues. The administrator previews and explicitly confirms one scoped operation; contribution and application receipts are separate. Colleagues save source/task proposals for multi-item offline return. Missing or changed originals cannot remain effectively INCLUDE.
+
+The complete source regression passed 141 tests on isolated stores. Browser source review/preview/application was exercised on synthetic TS001, without completing business decisions. Read [workflow evidence](../project-support/reports/offline-collaboration-20260912/workflow-acceptance.md). Actual normal service loading is owned by [integration state](../PROJECT_STATE.md); actual Windows acceptance remains pending. No source sweep, new model or new schedule was enabled.
+
+## Historical checkpoints
+
+The following dated checkpoints retain their original scope, clocks and runtime observations. They do not define the current task authorization or live service status.
+
+User authorized a maximum 30-minute follow-up. Normal workbench http://127.0.0.1:62742/ is running candidate 08; actual S1 history, A/B and source follow-up navigation verified. Functional matrix is now 16/16 scoped PASS. Five-store business/history and managed-original preservation passed; normal S1 Excel revision 1 and S2 event 71 are synchronized. No real business decision, new model or new schedule was enabled. Overall stage remains INCOMPLETE due to recorded quantitative failures; Excel visual checks remain Pending by user instruction. Canonical evidence: `docs/reports/stage-v2-20260911/checkpoint-15.md` at workstream root. Earlier snapshots below are historical.
+
 # System1 Project State
+
+## Stage v2 checkpoint 4, 2026-09-11
+
+Source governance and its existing migration remain preserved. No source decisions, discovery expansion or schedule/provider changes were made. The stage handoff binds owning backups and generated Excel evidence; the normal workbench load remains pending approval. See [checkpoint 4](../project-support/reports/stage-v2-20260911/checkpoint-4.md) for evidence and next action.
+
+## Stage v2 checkpoint 3: runtime load pending; business state preserved
+
+2026-09-11: [Checkpoint 3](../project-support/reports/stage-v2-20260911/checkpoint-3.md) owns current five-store/source/history preservation, coherent real-note and synthetic-scan Excel readback, workload scope mapping and the unavailable normal service. A controlled normal start is awaiting explicit approval; no protected restart was performed. Quantitative quality and automation remain below target. Editable Canva authoring and candidate handoff continue under the unchanged eight-hour clock.
+
+## Current-stage integration delivery completed | 2026-09-10
+
+The [consolidated functional acceptance](../project-support/reports/requirement-workstream-functional-delivery-20260910.md) reuses the verified source database transition and source/version output checks. Normal governance remains revision 1 with matching Excel revision, all 87 sources, 126 operations and 73 managed originals retained. The checkpoint-40 comparison matched every normal governance, assessment and Leader table against the recovery copy. Source follow-up remains in the shared workbench; paid/access and incomplete-original matters are ordinary business Pending. No new source discovery, retrieval, repeated eligibility review or schedule was activated for this delivery.
+
+## Incomplete-original follow-up verified | 2026-09-10
+
+The shared workbench exposes source-level processing failures and submits evidence to the existing System1 Pending operation. Isolated PA011 saved two related reports into one current task, retained all prior source/version/operation/history rows, and synchronized revision 14. Normal governance state and all managed originals were unchanged. [Checkpoint 37](../system2/docs/reports/37-actionable-source-failures.md) owns evidence and limits. Complete-body retrieval remains business Pending; no retrieval, replacement or new eligibility review occurred.
+
+## Weekly monitoring integration preserves source governance | 2026-09-10
+
+The shared overview now retains source QA shortfalls and unresolved QA follow-ups instead of displaying a completed sample result. System1's existing five-record Monday generation, current batch and source/history state are unchanged. The normal integration backup/readback confirmed all governance, assessment and Leader tables and all 73 originals unchanged. A/B's separate 20/5 workflow is present but normal activation remains disabled. [The owning monitoring checkpoint](../system2/docs/reports/35-weekly-original-sampling.md) records cross-system evidence and unfinished acceptance.
+
+## Generated source Excel verified; source-version status loaded | 2026-09-10
+
+Decision: **CONTINUE**. Normal source Excel renderer 5 removes the 22 inherited Office schema errors and displays the longest current filename completely in native Excel. The database remains revision 1; originals, business values and history are unchanged. [The output checkpoint](Code/reports/2026-09-10-output-and-source-version.md) records the failed first PA012 height estimate, its verified correction, regression and exact output hash. New source information now participates in System2 Excel status and automatic coalescing. Independent source fidelity, B provisional subdivision and full acceptance remain unfinished.
+
+## Earlier checkpoint evidence
+
+## Normal database authority active; output acceptance remains bounded | 2026-09-10
+
+Decision: **CONTINUE**. Normal configuration now selects `Code/runtime/governance.sqlite`. The database owns sources, operations and append-only history; `Requirement_Source_Registry.xlsx` is a protected one-way snapshot. The immutable original workbook companion, originals and related persistent runtime state must travel with any recovery/handoff package. A Git clone alone does not restore live authority.
+
+The [normal transition checkpoint](Code/reports/2026-09-10-governance-database-transition.md) verifies 87 sources, 126 operations, 30 Pending, 96 historical operations, 73 unchanged managed files, 70 stored version links, unchanged selection/source/task guards and all downstream workflow tables. Normal revision and synchronized Excel are both 1; no engineering source decisions were submitted on normal data. Actual browser status/download and native Excel opening were checked. Paid/access matters remain pending.
+
+Fresh full-copy decision comparisons reduced median observed apply time from 2.2930 to 1.0644 seconds; an isolated HTTP receipt took 1.5772 seconds. These are bounded measurements on the documented device, not p95 or human-effort acceptance. System1 passed 107 regression checks and the database-aware Environment Doctor passed. Workbench shutdown now drains all writers. The recovery package also verifies restoration of the isolated post-decision revision 10, including its history.
+
+Next remove the generated Excel's 22 inherited Office schema findings and filename clipping without altering immutable import or business state. Independent source fidelity, human workload and broader performance remain open. Source discovery, new QA activation, external retrieval/API and protected actions retain their existing boundaries.
+
+## Historical isolated transition
+
+## Database implementation verified in isolation; normal switch pending | 2026-09-10
+
+Decision: **ADJUST**. The optional owning governance database, guarded write adapters, original/version preservation, one-way Excel export, System2 logical-version handoff and recovery are implemented. A complete isolated copy preserved 87 sources, 126 operations, 73 managed files and 70 stored version links. An actual isolated request was saved while native Excel held the output open; background synchronization recovered after close. Normal configuration still uses the legacy workbook authority and its source/history state is unchanged.
+
+[The owning checkpoint](Code/reports/2026-09-10-governance-database-rehearsal.md) records exact artifacts, tests, actual latency, native observations, inherited Office validation findings and browser-discovered failures with verified recovery. Actual browser verification found and corrected Keep pending incorrectly hiding unresolved sources. The queue now retains those tasks across replay and subsequent cycles; the completed history and download journey passed. Reduce repeated compatibility-view loading before switching normal authority. Retain all originals, completed reviews, pending access matters and source-discovery boundaries. Follow [the rolling plan](../project-support/plans/requirement-workstream-implementation.md).
+
+## Earlier checkpoints
+
+## Target alignment only | 2026-09-10
+
+The cross-system target agreement is recorded in [integration state](../PROJECT_STATE.md) and its linked canonical design. System1's planned persistence change has not been implemented; the current workbook, source selections, paid/access pending work and human history are unchanged. Read that design before any future migration; do not infer that this documentation event reopens completed source reviews.
+
+## Current review presentation and System2 handoff | 2026-09-09
+
+The browser retains Pending review and Review history. Task details show the required decision, routing reason and separate machine confidence; rating selection no longer auto-submits. The program-managed Machine confidence worksheet contains five dimension confidence values, calibration state, policy and assessment identity for the matching source revision/hash. Unknown remains blank, and historical H/M/L ratings are not converted into percentages.
+
+Named System2 original-source reports become idempotent version-bound System1 tasks. System2 mirrors unresolved original holds and suspends affected deliveries. Existing source business sheets and historical operation records were preserved; Instructions changed to explain explicit submission. The regression suite passes 83 tests. See [cross-system acceptance](../system2/docs/reports/20-review-workbench-v2.md).
+
+
+Updated: 2026-09-09
+
+## Current source assessment extension | 2026-09-09
+
+`Code/src/system1/source_assessment.py` owns a separate versioned machine-evidence store. The source bridge projects effective machine INCLUDE only for five HIGH, adequately calibrated dimension judgments plus original hard gates. Unknown dimensions remain unknown; old H/M/L does not become a confidence percentage. Named human selection/history and human draft/report holds take precedence. Raising thresholds reopens the same underlying selection task; evidence history is retained.
+
+The browser supplies the shared threshold policy and explicit assessment action. Optional gateway suggestions cannot overwrite validated ratings or human decisions. No provider or production calibration was configured. The source register, originals and existing human history were not migrated; validation uses isolated copies. Current regression and cross-system limitations are recorded in the [implementation report](../system2/docs/reports/15-two-stage-workflow.md).
+
+The five-dimension implementation extends admission for existing governed registered sources. Candidate discovery/registration retains its named-human boundary. Older dated entries below describe prior checkpoints.
+
+## Retained earlier checkpoints
+
 
 Updated: 2026-09-08
 

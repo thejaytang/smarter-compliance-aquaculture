@@ -1,0 +1,651 @@
+{
+  "schema": "stage-final-completion-audit/2",
+  "at": "2026-09-11T07:11:42.188799+00:00",
+  "goal_objective_sha256": "2db03ca4505a258cf6db23d381606a1de6e547a4d7e7e5d398636415f1e86e2b",
+  "overall_status": "INCOMPLETE",
+  "candidate": "requirement-stage-v2-candidate-08",
+  "sections": [
+    {
+      "section": 1,
+      "requirement": "Working system capability; preserve human business decisions; do not count all Pending as automation",
+      "status": "FAIL",
+      "basis": [
+        "functional scenarios 16/16 PASS",
+        "Q24/Q25/Q26 FAIL"
+      ],
+      "scope": "Normal runtime is available; evidence-qualified safe automation remains unmet."
+    },
+    {
+      "section": 2,
+      "requirement": "Keep original bounded clock, protected boundaries and restricted-candidate fallback",
+      "status": "PASS",
+      "basis": [
+        "execution-state.json",
+        "candidate-freeze-v8/manifest.json"
+      ],
+      "scope": "Original eight-hour window retained; additional maximum 30-minute checkpoint explicitly authorized by user."
+    },
+    {
+      "section": 3,
+      "requirement": "System1 governance; A full source fidelity; B checked-source judgment and traceable delivery",
+      "status": "FAIL",
+      "basis": [
+        "Q01/Q02 PASS",
+        "Q03/Q10/Q11/Q12/Q16 FAIL",
+        "Q18 UNMEASURED"
+      ],
+      "scope": "Governance preserved and local paths exist; required fidelity and current natural accepted-A delivery are incomplete."
+    },
+    {
+      "section": 4,
+      "requirement": "One normal review entry; truthful tasks, guarded persistence, history and one-way Excel",
+      "status": "PASS",
+      "basis": [
+        "checkpoint-15.md",
+        "checkpoint-12.md",
+        "checkpoint-13.md"
+      ],
+      "scope": "One normal entry and truthful state verified; guarded writes, history and one-way recovery retain isolated evidence. No new real business decisions submitted."
+    },
+    {
+      "section": 5,
+      "requirement": "All sixteen functional scenarios pass",
+      "status": "PASS",
+      "basis": [
+        "functional-matrix.json"
+      ],
+      "scope": "16 scoped PASS; current normal startup/navigation plus retained isolated scenario evidence."
+    },
+    {
+      "section": 6,
+      "requirement": "Frozen complete-source diagnosis, separate natural/seeded/synthetic cohorts and qualified labels",
+      "status": "PASS",
+      "basis": [
+        "sample-manifest.json",
+        "reference/source-reference-v1.json",
+        "b-diagnostic/candidate-method5-final.json",
+        "seeded-v1/candidate-method6.json"
+      ],
+      "scope": "Required available diagnostic counts retained: 38-document inventory, 8 real PDF pages, 275 regions, 60+1 B judgments, 10 parents/55 subitems, 12+12 challenge pairs. Real scan/photo and independent qualification gaps are disclosed."
+    },
+    {
+      "section": 7,
+      "requirement": "Meet adopted measurable quality, automation and performance targets",
+      "status": "FAIL",
+      "basis": [
+        "metrics.json",
+        "performance-current08/metrics.json"
+      ],
+      "scope": "11 measured FAIL remain. Fresh six current-program performance measurements PASS; no threshold or denominator changes."
+    },
+    {
+      "section": 8,
+      "requirement": "Separate machine parsing, safe passes, independent tasks, outcomes and reviewer effort",
+      "status": "UNMEASURED",
+      "basis": [
+        "workload/item-scope-map.json",
+        "Q28",
+        "quantitative-report.md"
+      ],
+      "scope": "Addressable items and shared original scopes mapped. Actual independent reviewer task assignments, confirmation/correction outcomes and timing remain unmeasured; no row-count or engineer-time substitution."
+    },
+    {
+      "section": 9,
+      "requirement": "One native editable Canva design, correct required content and all final pages visually checked",
+      "status": "PASS",
+      "basis": [
+        "presentation/canva-approved-commit-receipt.json",
+        "presentation/canva-approved-commit-readback.json",
+        "canva-commit-confirmation.md"
+      ],
+      "scope": "Same 25-page design committed after user approval. All 480 editable text elements match the approved version; six restored pages rechecked visually and nineteen unchanged-page checks retained."
+    },
+    {
+      "section": 10,
+      "requirement": "Reserve final three hours for freeze/retest/report/presentation/handoff",
+      "status": "PASS",
+      "basis": [
+        "execution-state.json",
+        "checkpoint-13.md"
+      ],
+      "scope": "Original final-three-hour reserve observed; later authorized normal-load checkpoint did not resume parser optimization."
+    },
+    {
+      "section": 11,
+      "requirement": "Adaptive diagnosis, stopped ineffective paths, persistence and no manufactured success",
+      "status": "PASS",
+      "basis": [
+        "checkpoint-7.md",
+        "checkpoint-10.md",
+        "checkpoint-11.md",
+        "annotation-url-discriminator-v1/result.json"
+      ],
+      "scope": "Stopped raster and column/caption routes retained; one distinct URL evidence probe remains non-integrated; current quality failures preserved."
+    },
+    {
+      "section": 12,
+      "requirement": "Deliver five requested artifacts and mark complete only with all applicable gates met",
+      "status": "FAIL",
+      "basis": [
+        "handoff.md",
+        "candidate-freeze-v8/manifest.json",
+        "functional-matrix.json",
+        "quantitative-report.md",
+        "presentation/canva-approved-commit-receipt.json"
+      ],
+      "scope": "All five artifacts available and sixteen functional scenarios pass; required quality and automation gates still prevent whole-goal completion."
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 1,
+      "artifact": "Restricted runnable candidate and startup/recovery instructions",
+      "available": true,
+      "evidence": "candidate-freeze-v8/manifest.json",
+      "qualification": "Current normal and isolated full instances loaded; code archive hashes verified; quality not accepted."
+    },
+    {
+      "id": 2,
+      "artifact": "Sixteen-scenario functional matrix",
+      "available": true,
+      "evidence": "functional-matrix.json",
+      "qualification": "All sixteen scoped functional scenarios pass; quantitative quality is separate."
+    },
+    {
+      "id": 3,
+      "artifact": "Quantitative report, raw metrics, samples and versions",
+      "available": true,
+      "evidence": "quantitative-report.md",
+      "qualification": "Development diagnosis; current performance supplement separate from frozen metric snapshot."
+    },
+    {
+      "id": 4,
+      "artifact": "Final saved editable Canva design",
+      "available": true,
+      "evidence": "presentation/canva-approved-commit-receipt.json",
+      "qualification": "Committed transaction 7495631203141299689; 25 pages; verified readback after six-page visual review."
+    },
+    {
+      "id": 5,
+      "artifact": "Demonstration, recovery and next-evidence handoff",
+      "available": true,
+      "evidence": "handoff.md",
+      "qualification": "Startup and recovery instructions now include verified normal availability; demonstration datasets remain distinct."
+    }
+  ],
+  "functional_scenarios": [
+    {
+      "id": 1,
+      "status": "PASS",
+      "evidence": [
+        "checkpoint-15.md"
+      ],
+      "remaining_gap": "Normal-entry gap closed; quantitative failures remain."
+    },
+    {
+      "id": 2,
+      "status": "PASS",
+      "evidence": [
+        "../../../system1/Code/reports/2026-09-10-governance-database-transition.md",
+        "../../../system2/docs/reports/37-actionable-source-failures.md"
+      ],
+      "remaining_gap": "Reuse actual normal source history and isolated PA011 supplement; no repeated migration or source decisions."
+    },
+    {
+      "id": 3,
+      "status": "PASS",
+      "evidence": [
+        "../../../system2/docs/reports/16-workflow-functional-audit.md",
+        "checkpoint-1.md"
+      ],
+      "remaining_gap": "Actual historical HTML/XLSX entry evidence retained; current eight-page PDF parser run is separate from quality acceptance."
+    },
+    {
+      "id": 4,
+      "status": "PASS",
+      "evidence": [
+        "../../../system2/docs/reports/37-actionable-source-failures.md",
+        "../../../system2/docs/reports/16-workflow-functional-audit.md"
+      ],
+      "remaining_gap": "Seven current empty-body sources retain actionable follow-ups. Missing/unreadable/unsupported contracts survive the current regression."
+    },
+    {
+      "id": 5,
+      "status": "PASS",
+      "evidence": [
+        "../../../system2/docs/reports/32-original-page-verifier.md",
+        "../../../system2/docs/reports/38-scan-manual-delivery.md"
+      ],
+      "remaining_gap": "Actual original-side omission and located supplement history reused; current scan recheck preserves supplemented text."
+    },
+    {
+      "id": 6,
+      "status": "PASS",
+      "evidence": [
+        "../../../system2/docs/reports/38-scan-manual-delivery.md",
+        "checkpoint-2.md"
+      ],
+      "remaining_gap": "Current METHOD 6 isolated synthetic scan completes A/B and one delivery; not real-scan accuracy evidence."
+    },
+    {
+      "id": 7,
+      "status": "PASS",
+      "evidence": [
+        "../../../system2/docs/reports/28-pdf-cell-boundaries.md",
+        "../../../system2/docs/reports/31-pdf-cross-page-table.md",
+        "../../../system2/docs/reports/40-complete-parent-and-history.md",
+        "checkpoint-2.md"
+      ],
+      "remaining_gap": "Existing actual table and complete-parent repairs plus current real footnote repair/recheck. Automatic relationship fidelity remains failed."
+    },
+    {
+      "id": 8,
+      "status": "PASS",
+      "evidence": [
+        "../../../system2/docs/reports/16-workflow-functional-audit.md",
+        "checkpoint-2.md"
+      ],
+      "remaining_gap": "Historical draft UI and current full-load stale HTTP 409, unchanged pending content and conflicting-replay rejection."
+    },
+    {
+      "id": 9,
+      "status": "PASS",
+      "evidence": [
+        "../../../system2/docs/reports/40-complete-parent-and-history.md",
+        "checkpoint-2.md"
+      ],
+      "remaining_gap": "Current synthetic scan METHOD 6 resolves page scope, accepts only inspected content, then classifies B; history now 30 records, one delivery."
+    },
+    {
+      "id": 10,
+      "status": "PASS",
+      "evidence": [
+        "../../../system2/docs/reports/16-workflow-functional-audit.md",
+        "../../../system2/docs/reports/40-complete-parent-and-history.md"
+      ],
+      "remaining_gap": "Actual previous B correction/advisory interface evidence reused; classifier-5 development diagnostic has 41 TP, zero FP/FN and 53/60 decisive; checkpoint 8 owns this exposed diagnostic."
+    },
+    {
+      "id": 11,
+      "status": "PASS",
+      "evidence": [
+        "../../../system2/docs/reports/34-provisional-b-subdivision.md",
+        "checkpoint-2.md"
+      ],
+      "remaining_gap": "Actual lifecycle and policy reversals retained; current 10-parent/55-span source diagnostic verifies mechanical source/count/context binding."
+    },
+    {
+      "id": 12,
+      "status": "PASS",
+      "evidence": [
+        "../../../system2/docs/reports/34-provisional-b-subdivision.md",
+        "checkpoint-2.md"
+      ],
+      "remaining_gap": "Current note repair stales its original check; recheck removes only that missing-link finding. Old history remains. Ten diagnostic parent-context changes stale splits."
+    },
+    {
+      "id": 13,
+      "status": "PASS",
+      "evidence": [
+        "../../../system2/docs/reports/16-workflow-functional-audit.md",
+        "checkpoint-2.md",
+        "checkpoint-13.md"
+      ],
+      "remaining_gap": "Fresh candidate-08 full-workload HTTP checks pass with exact replay, 409 stale rejection, 400 conflicting replay and event-81 lock/retry recovery. Original facts and all prior history retained. Normal loading and native Office visual acceptance remain separate."
+    },
+    {
+      "id": 14,
+      "status": "PASS",
+      "evidence": [
+        "checkpoint-2.md",
+        "../../../system2/docs/reports/33-background-export-performance.md",
+        "checkpoint-13.md"
+      ],
+      "remaining_gap": "Fresh candidate-08 full-workload HTTP checks pass with exact replay, 409 stale rejection, 400 conflicting replay and event-81 lock/retry recovery. Original facts and all prior history retained. Normal loading and native Office visual acceptance remain separate."
+    },
+    {
+      "id": 15,
+      "status": "PASS",
+      "evidence": [
+        "../../../system2/docs/reports/35-weekly-original-sampling.md"
+      ],
+      "remaining_gap": "Reused isolated original-side A and positive/negative B sampling, shortfalls, retained unresolved issues and history; no normal schedule activation."
+    },
+    {
+      "id": 16,
+      "status": "PASS",
+      "evidence": [
+        "../../../system2/docs/reports/16-workflow-functional-audit.md",
+        "checkpoint-2.md"
+      ],
+      "remaining_gap": "Current offline scan reaches one delivery. Retained provider timeout/disabled/invalid JSON/citation/budget checks pass current regression; no live model enhancement claim."
+    }
+  ],
+  "metrics": [
+    {
+      "id": "Q01",
+      "status": "PASS",
+      "applicability": "stage_measurement",
+      "evidence": "baseline/document-inventory.json",
+      "next": "Retain seven actionable body-acquisition follow-ups."
+    },
+    {
+      "id": "Q02",
+      "status": "PASS",
+      "applicability": "stage_measurement",
+      "evidence": "baseline/document-inventory.json",
+      "next": "Completion means parsed, not source-correct. All-inventory completion is separately 31/38; seven files contain no usable body."
+    },
+    {
+      "id": "Q03",
+      "status": "FAIL",
+      "applicability": "stage_measurement",
+      "evidence": "diagnostics/strict-source-coverage-spacing.json",
+      "next": "Repair missing relation graph, footer merges, heading structure and literal cell errors; remeasure the same source-first regions."
+    },
+    {
+      "id": "Q04",
+      "status": "PASS",
+      "applicability": "stage_measurement",
+      "evidence": "diagnostics/candidate-spacing-method6/aggregate.json",
+      "next": "Retain full literal denominator including spacing artifacts."
+    },
+    {
+      "id": "Q05",
+      "status": "PASS",
+      "applicability": "stage_measurement",
+      "evidence": "diagnostics/candidate-spacing-method6/aggregate.json",
+      "next": "Report alongside CER; no adopted WER cutoff."
+    },
+    {
+      "id": "Q06",
+      "status": "PASS",
+      "applicability": "stage_measurement",
+      "evidence": "diagnostics/candidate-spacing-method6/aggregate.json",
+      "next": "211 occurrences in one exposed source, not independent documents."
+    },
+    {
+      "id": "Q07",
+      "status": "PASS",
+      "applicability": "stage_measurement",
+      "evidence": "diagnostics/candidate-spacing-method6/aggregate.json",
+      "next": "Retain two remaining cross-line/hyphenation defects; do not normalize the frozen reference. Whole-table and relationship targets still fail."
+    },
+    {
+      "id": "Q08",
+      "status": "PASS",
+      "applicability": "stage_measurement",
+      "evidence": "diagnostics/candidate-spacing-method6/aggregate.json",
+      "next": "Footer-grid errors remain in Q03 and whole-page results; this denominator is the predefined 125 body cells."
+    },
+    {
+      "id": "Q09",
+      "status": "PASS",
+      "applicability": "stage_measurement",
+      "evidence": "diagnostics/candidate-spacing-method6/aggregate.json",
+      "next": "Broader column/order cases remain unmeasured."
+    },
+    {
+      "id": "Q10",
+      "status": "FAIL",
+      "applicability": "stage_measurement",
+      "evidence": "diagnostics/candidate-spacing-method6/aggregate.json",
+      "next": "Automatic relation reconstruction must be measured separately from a successful manual repair."
+    },
+    {
+      "id": "Q11",
+      "status": "FAIL",
+      "applicability": "stage_measurement",
+      "evidence": "diagnostics/candidate-spacing-method6/aggregate.json",
+      "next": "Combine content, grid, heading and relation results; average CER does not release a page."
+    },
+    {
+      "id": "Q12",
+      "status": "FAIL",
+      "applicability": "stage_measurement",
+      "evidence": "diagnostics/candidate-spacing-method6/aggregate.json",
+      "next": "Retain the full criterion, Appendix VI and form scope."
+    },
+    {
+      "id": "Q13",
+      "status": "PASS",
+      "applicability": "stage_measurement",
+      "evidence": "b-diagnostic/candidate-method5-final.json",
+      "next": "Frozen complete-original initial 60 unchanged; separate negative supplement correct. Combined decisive 54/61. Raw A bibliography has a damaged URL and remains undetermined; actual contact proposal is context. No A acceptance or safe release inferred."
+    },
+    {
+      "id": "Q14",
+      "status": "PASS",
+      "applicability": "stage_measurement",
+      "evidence": "b-diagnostic/candidate-method5-final.json",
+      "next": "Frozen complete-original initial 60 unchanged; separate negative supplement correct. Combined decisive 54/61. Raw A bibliography has a damaged URL and remains undetermined; actual contact proposal is context. No A acceptance or safe release inferred."
+    },
+    {
+      "id": "Q15",
+      "status": "PASS",
+      "applicability": "stage_measurement",
+      "evidence": "b-diagnostic/candidate-method5-final.json",
+      "next": "Frozen complete-original initial 60 unchanged; separate negative supplement correct. Combined decisive 54/61. Raw A bibliography has a damaged URL and remains undetermined; actual contact proposal is context. No A acceptance or safe release inferred."
+    },
+    {
+      "id": "Q16",
+      "status": "FAIL",
+      "applicability": "stage_measurement",
+      "evidence": "b-diagnostic/candidate-method5-final.json",
+      "next": "Frozen complete-original initial 60 unchanged; separate negative supplement correct. Combined decisive 54/61. Raw A bibliography has a damaged URL and remains undetermined; actual contact proposal is context. No A acceptance or safe release inferred."
+    },
+    {
+      "id": "Q17",
+      "status": "PASS",
+      "applicability": "stage_measurement",
+      "evidence": "subdivision-diagnostic/results-v2.json",
+      "next": "Ten real complete parents, manually selected source spans, reversible counting/context mechanics. Semantic automation and peer approval are not established."
+    },
+    {
+      "id": "Q18",
+      "status": "UNMEASURED",
+      "applicability": "accepted_A_natural_delivery_not_demonstrated",
+      "evidence": "canonical-binding-v1/results.json",
+      "next": "Actual Canonical now binds 55/55 exact source spans and 10/10 parent numbers. All ten real workflow B submissions correctly reject because A is unaccepted. Verify scoped accepted-A delivery without overriding unresolved source issues. Raw reference equality is 54/55; NFKC is 55/55, with original micro-sign text retained."
+    },
+    {
+      "id": "Q19",
+      "status": "FAIL",
+      "applicability": "stage_measurement",
+      "evidence": "diagnostics/candidate-spacing-method6/aggregate.json",
+      "next": "Detect cross-page, heading and grid defects specifically; generic Pending is not detection."
+    },
+    {
+      "id": "Q20",
+      "status": "FAIL",
+      "applicability": "stage_measurement",
+      "evidence": "diagnostics/candidate-spacing-method6/aggregate.json",
+      "next": "Four observed critical cross-page relationship errors remain unlocated."
+    },
+    {
+      "id": "Q21",
+      "status": "FAIL",
+      "applicability": "stage_measurement",
+      "evidence": "diagnostics/candidate-spacing-method6/aggregate.json",
+      "next": "Separate source tokenization artifacts from output errors; preserve 15 genuinely unverified visual scopes without calling them detected errors."
+    },
+    {
+      "id": "Q22",
+      "status": "PASS",
+      "applicability": "stage_measurement",
+      "evidence": "seeded-v1/candidate-method6.json",
+      "next": "Seeded successes remain separate from natural recall."
+    },
+    {
+      "id": "Q23",
+      "status": "PASS",
+      "applicability": "stage_measurement",
+      "evidence": "seeded-v1/candidate-method6.json",
+      "next": "No reference changes or control removal."
+    },
+    {
+      "id": "Q24",
+      "status": "FAIL",
+      "applicability": "stage_measurement",
+      "evidence": "diagnostics/candidate-spacing-method6/aggregate.json",
+      "next": "Evaluation cohort denominator: A pages, B source-complete judgments, end-to-end original source. Release-qualified subset is zero because evidence/calibration gates are unmet; automatic correctness is null."
+    },
+    {
+      "id": "Q25",
+      "status": "FAIL",
+      "applicability": "stage_measurement",
+      "evidence": "diagnostics/candidate-adjudicated-method6/aggregate.json",
+      "next": "Evaluation cohort denominator: A pages, B source-complete judgments, end-to-end original source. Release-qualified subset is zero because evidence/calibration gates are unmet; automatic correctness is null."
+    },
+    {
+      "id": "Q26",
+      "status": "FAIL",
+      "applicability": "stage_measurement",
+      "evidence": "diagnostics/candidate-spacing-method6/aggregate.json",
+      "next": "Evaluation cohort denominator: A pages, B source-complete judgments, end-to-end original source. Release-qualified subset is zero because evidence/calibration gates are unmet; automatic correctness is null."
+    },
+    {
+      "id": "Q27",
+      "status": "PASS",
+      "applicability": "stage_measurement",
+      "evidence": "workload/summary.json",
+      "next": "Diagnostic prompts only. Candidate still has 25 false/generic prompts; no measured human-time reduction."
+    },
+    {
+      "id": "Q28",
+      "status": "UNMEASURED",
+      "applicability": "required_workload_disclosure_measurement_absent",
+      "evidence": "workload/summary.json",
+      "next": "Use the item/scope map to organize actual reviewer sessions. Do not substitute 15120 database rows or Agent/tool time."
+    },
+    {
+      "id": "Q29",
+      "status": "PASS",
+      "applicability": "stage_measurement",
+      "evidence": "performance/measurements.json",
+      "next": "Nearest-rank local HTTP timing on a 38-document copy; engineering operations, not reviewer time."
+    },
+    {
+      "id": "Q30",
+      "status": "PASS",
+      "applicability": "stage_measurement",
+      "evidence": "performance/measurements.json",
+      "next": "Nearest-rank local HTTP timing on a 38-document copy; engineering operations, not reviewer time."
+    },
+    {
+      "id": "Q31",
+      "status": "PASS",
+      "applicability": "stage_measurement",
+      "evidence": "performance/measurements.json",
+      "next": "Nearest-rank local HTTP timing on a 38-document copy; engineering operations, not reviewer time."
+    },
+    {
+      "id": "Q32",
+      "status": "PASS",
+      "applicability": "stage_measurement",
+      "evidence": "performance/measurements.json",
+      "next": "Each measurement includes the background schedule/serialization interval."
+    },
+    {
+      "id": "Q33",
+      "status": "PASS",
+      "applicability": "stage_measurement",
+      "evidence": "performance/measurements.json",
+      "next": "Each measurement includes the background schedule/serialization interval."
+    },
+    {
+      "id": "Q34",
+      "status": "PASS",
+      "applicability": "stage_measurement",
+      "evidence": "performance/measurements.json",
+      "next": "Each measurement includes the background schedule/serialization interval."
+    },
+    {
+      "id": "Q35",
+      "status": "UNMEASURED",
+      "applicability": "future_independent_qualification",
+      "evidence": "sample-manifest.json",
+      "next": "Collect independent labels and disjoint calibration/held-out material; this stage never relabels exposed samples."
+    },
+    {
+      "id": "Q36",
+      "status": "UNMEASURED",
+      "applicability": "declared_real_material_gap",
+      "evidence": "sample-manifest.json",
+      "next": "Synthetic scan proves the local repair path only. No selected real scanned body or photograph cohort."
+    },
+    {
+      "id": "Q37",
+      "status": "UNMEASURED",
+      "applicability": "optional_external_enhancement",
+      "evidence": "performance/measurements.json",
+      "next": "External providers remain disabled. Do not send materials or activate a model without authorization."
+    },
+    {
+      "id": "Q38",
+      "status": "UNMEASURED",
+      "applicability": "required_native_office_visual",
+      "evidence": "native-office-current08/inspection-result.json",
+      "next": "PENDING_BY_USER: stop further native visual inspection; retain partial evidence until the user reopens it."
+    }
+  ],
+  "metric_status_counts": {
+    "PASS": 21,
+    "FAIL": 11,
+    "UNMEASURED": 6
+  },
+  "current_performance_status": "PASS",
+  "normal_business_preserved": true,
+  "normal_last_probe": {
+    "status": "AVAILABLE",
+    "url": "http://127.0.0.1:62742/",
+    "at": "2026-09-11T06:57:48.606573+00:00",
+    "evidence": "checkpoint-15.md"
+  },
+  "source_fact_count_checked": 15120,
+  "original_sample_files_checked": 91,
+  "canva_commit": "COMMITTED_AND_READ_BACK: 7495631203141299689",
+  "not_new_stage_inputs": [
+    "Independent held-out labels are future qualification, not an extra gate for authorized development reporting.",
+    "Live API comparison is optional while disabled.",
+    "Peer permanent subdivision agreement does not prevent testing the reversible stage policy."
+  ],
+  "necessary_next_inputs": [],
+  "engineering_failures_not_explained_away_by_missing_inputs": [
+    "Source structure/relationship completeness",
+    "Natural verifier recall and precision",
+    "B decisive judgment target",
+    "Safe automatic release target"
+  ],
+  "evidence_hashes": {
+    "docs/reports/stage-v2-20260911/metrics.json": "5c0643458200a80a760c01e1e97cc4df9a0a70673354462a638b36f70d5c3094",
+    "docs/reports/stage-v2-20260911/functional-matrix.json": "5f27df5269dc3bf5051f8ecfead893b0ca9e9acf655a9feb76a755fab23d2c81",
+    "docs/reports/stage-v2-20260911/stage-applicability.md": "8d81bb811ef456c7dc7c476e03cd42d6766f6db2e0b1d08f3beb73d1ba5efd45",
+    "system2/outputs/runs/requirement-acceptance-20260911/stage-v2/sample-manifest.json": "24915291ef13987b2d9dcb73168c2f8c4fa10a0105b5327dc78bd06d80edea0e",
+    "system2/outputs/runs/requirement-acceptance-20260911/stage-v2/reference/source-reference-v1.json": "08f27aaa25f6d64c85775e5ff755e59e2f5097a35ce2fef23f52b545ad1fc593",
+    "system2/outputs/runs/requirement-acceptance-20260911/stage-v2/candidate-freeze-v8/manifest.json": "53fe65431dec16ee681bb166bcd5b8db7c3251e0e8cbe0409385cd0417ca49f9",
+    "system2/outputs/runs/requirement-acceptance-20260911/stage-v2/performance-current08/metrics.json": "e0ae30bd20209873daadc9368541a62867bd08e87aac279a6f169120e0f3b609",
+    "system2/outputs/runs/requirement-acceptance-20260911/stage-v2/performance-current08/preservation-and-excel.json": "97ba1460ce30d654be24713d6dd56bac877e81a69ba42075c47053b45ec3da4b",
+    "system2/outputs/runs/requirement-acceptance-20260911/stage-v2/presentation/canva-current08-final-v2-receipt.json": "41582712e479b0436ea218be68ee60a0b249bc1ad94f477691b30e15145f8ca6",
+    "system2/outputs/runs/requirement-acceptance-20260911/stage-v2/workload/item-scope-map.json": "36d93a1e6f70dcfc200bf4e8a6e6b3826bfbb7d6d0e1c0aa003dedd14a59e7cb",
+    "system2/outputs/runs/requirement-acceptance-20260911/stage-v2/presentation/canva-approved-commit-receipt.json": "2c8b5f67741af8d799a6f3352cd59591517037c4a1fb91f71f8bd2f1fd6e2cf2",
+    "system2/outputs/runs/requirement-acceptance-20260911/stage-v2/presentation/canva-approved-commit-readback.json": "b6d7e71666937e8caac0e0fe6fd0175387840829cc4e3c654cf80a4793f5b82d",
+    "system2/outputs/runs/requirement-acceptance-20260911/stage-v2/native-office-current08/inspection-result.json": "7671d3235a4bc926b8ec1a562e438a59108e79ba4dcd5f575a1feaf1a7950cbb",
+    "docs/reports/stage-v2-20260911/checkpoint-15.md": "5e937f4e3778aa885a079af6fb25e488e2d8fffd4042f99954eaa07793b064b3",
+    "docs/reports/stage-v2-20260911/normal-location-followup.md": "4c8182f12830b2bee74d172592b8662bd07ece9b728aaef2d7ea066c7f022f02"
+  },
+  "historical_preservation_scope": "Checkpoint 15 fresh per-store before/after comparison: all business tables and managed originals unchanged; browser sessions and server identity are expected runtime changes.",
+  "user_deferred_items": [
+    {
+      "id": "Q38",
+      "status": "PENDING_BY_USER",
+      "at": "2026-09-11T06:36:41.946462+00:00",
+      "qualification": "Retain partial native evidence; not a PASS. Further visual inspection explicitly deferred."
+    }
+  ],
+  "normal_location_followup": {
+    "status": "ONE_CONFLICT_ONE_LOCATION_CONTROL_PASS",
+    "evidence": "normal-location-followup.md",
+    "scope": "Additional normal-view diagnosis; frozen metrics unchanged"
+  }
+}

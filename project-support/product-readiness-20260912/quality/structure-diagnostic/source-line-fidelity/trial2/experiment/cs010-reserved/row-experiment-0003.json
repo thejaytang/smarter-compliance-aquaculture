@@ -1,0 +1,1150 @@
+{
+  "page_index": 2,
+  "source_sha256": "ce5c8950c69e3b5b60b85110f5abd2c6d8637c83291c6c00ac03f28b102dac54",
+  "native_text": "Code ref.: GR – Rules for aquaculture; v6.0_Sep22; English version\r\nGLOBALG.A.P. general regulations – Rules for aquaculture scope\r\nPage 3 of 4\r\n220929_GG_GR_Rules_for_aquaculture_v6_0_Sep22_en\r\n1 INTRODUCTION\r\nThis document, part of the GLOBALG.A.P. general regulations (GR), applies to the Integrated \r\nFarm Assurance version 6 Smart (IFA v6 Smart) edition and the Integrated Farm Assurance \r\nversion 6 GFS (IFA v6 GFS) edition.\r\nThese rules for the aquaculture scope shall be used in combination with the GLOBALG.A.P. GR\r\nand apply to the production of all products listed under the aquaculture scope in the \r\nGLOBALG.A.P. product list. \r\nThe term “shall” is used throughout the GLOBALG.A.P. normative documents to indicate \r\nmandatory provisions.\r\n2 CERTIFICATION SCOPE\r\n2.1 GLOBALG.A.P. product list\r\nThe aquaculture scope includes the following product categories at all stages of their life cycle \r\nand those species listed in the GLOBALG.A.P. product list:\r\n• Finfish\r\n• Crustaceans\r\n• Molluscs\r\n• Seaweed\r\nAt all stages, seedlings (ova and/or juveniles) shall originate from producers with GLOBALG.A.P.\r\nregistration/certification. Brood stock shall be obtained through an aquaculture breeding program.\r\nIf wild-caught brood stock is used, it shall originate from a fishery that has proven that it is \r\necologically managed. Passive collection of seedlings from the planktonic phase is allowed for \r\nmolluscs’ spat.\r\nAquaculture certification cannot be achieved for wild aquatic species/catch that is not farmed.\r\nPostharvest handling of aquaculture products by the same legal entity as the farm shall also \r\ndemonstrate compliance with the postharvest/mass balance and traceability sections of the P&Cs\r\napplicable to aquaculture in order for the producer to achieve certification.\r\nThe scope of certification clearly defines the scientific name of the farmed species in the electronic \r\ncertificate issued in the GLOBALG.A.P. IT systems.\r\n3 REGISTRATION\r\nProducers shall register with the same certification body (CB) for the aquaculture certification and \r\nfor the GLOBALG.A.P. Risk Assessment on Social Practices (GRASP). Registration for GRASP \r\nshall follow the GRASP general rules.\r\n4 CB AUDIT\r\n4.1 CB farm audit timing\r\nThe registered aquaculture species shall be present on the farm at the time of the CB audit. \r\nPostharvest handling operations performed by the same legal entity as the farm shall also be \r\naudited.",
+  "groups": [
+    {
+      "operation": "source_exact_native_row",
+      "row_block_id": "block-3405134a06d4f12bf95cee17",
+      "normalized_native_interval": [
+        298,
+        385
+      ],
+      "source_text": "Farm Assurance version 6 Smart (IFA v6 Smart) edition and the Integrated Farm Assurance",
+      "fragments": [
+        {
+          "id": "block-57bc2723f5881dfa77db1584",
+          "type": "text",
+          "text": "Farm Assurance version 6 Smart (IFA v6 Smart)",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                71.81427001953125,
+                124.3233642578125,
+                317.06011962890625,
+                134.6678466796875
+              ],
+              "native_id": "native_p0000_ft000022"
+            }
+          ]
+        },
+        {
+          "id": "block-de1085438e618378701ef77b",
+          "type": "text",
+          "text": "edition and",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                322.5878601074219,
+                124.455810546875,
+                376.83837890625,
+                132.48193359375
+              ],
+              "native_id": "native_p0000_ft000023"
+            }
+          ]
+        },
+        {
+          "id": "block-ed364d517849360c5c239e36",
+          "type": "text",
+          "text": "the Integrated Farm Assurance",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                382.501953125,
+                124.455810546875,
+                541.5850219726562,
+                134.6678466796875
+              ],
+              "native_id": "native_p0000_ft000024"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "source_exact_native_row",
+      "row_block_id": "block-08a21a1f0aeb44ae76acc50a",
+      "normalized_native_interval": [
+        514,
+        599
+      ],
+      "source_text": "and apply to the production of all products listed under the aquaculture scope in the",
+      "fragments": [
+        {
+          "id": "block-f0c1d27a429fb478770c53f2",
+          "type": "text",
+          "text": "and apply",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                71.28429412841797,
+                168.3729248046875,
+                122.984619140625,
+                178.5849609375
+              ],
+              "native_id": "native_p0000_ft000027"
+            }
+          ]
+        },
+        {
+          "id": "block-473b49e22c64f680ee9b2b79",
+          "type": "text",
+          "text": "to",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                130.8450927734375,
+                168.549560546875,
+                139.50045776367188,
+                176.3990478515625
+              ],
+              "native_id": "native_p0000_ft000028"
+            }
+          ]
+        },
+        {
+          "id": "block-16e2a29e431efbf89afb21f0",
+          "type": "text",
+          "text": "the production of all products listed under the aquaculture scope in the",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                147.5265350341797,
+                168.240478515625,
+                541.591552734375,
+                178.4635009765625
+              ],
+              "native_id": "native_p0000_ft000029"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "source_exact_native_row",
+      "row_block_id": "block-51dd6d26124ec7ffe093c8c9",
+      "normalized_native_interval": [
+        627,
+        711
+      ],
+      "source_text": "The term “shall” is used throughout the GLOBALG.A.P. normative documents to indicate",
+      "fragments": [
+        {
+          "id": "block-8513760c62abfe1308721011",
+          "type": "text",
+          "text": "The term “shall” is used throughout the GLOBALG.A.P. normative documents",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                71.1517562866211,
+                199.5499267578125,
+                478.2296447753906,
+                209.90545654296875
+              ],
+              "native_id": "native_p0000_ft000031"
+            }
+          ]
+        },
+        {
+          "id": "block-f534052b1791ca80c9e9764e",
+          "type": "text",
+          "text": "to indicate",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                485.3394775390625,
+                199.69342041015625,
+                541.6004028320312,
+                207.71954345703125
+              ],
+              "native_id": "native_p0000_ft000032"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "source_exact_native_row",
+      "row_block_id": "block-2a54be675ae477a2da4df189",
+      "normalized_native_interval": [
+        712,
+        733
+      ],
+      "source_text": "mandatory provisions.",
+      "fragments": [
+        {
+          "id": "block-066a7a776b48d242547c408c",
+          "type": "text",
+          "text": "mandatory",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                71.62648010253906,
+                212.2900390625,
+                122.86422729492188,
+                222.5020751953125
+              ],
+              "native_id": "native_p0000_ft000033"
+            }
+          ]
+        },
+        {
+          "id": "block-cc4525699390ae4212944a45",
+          "type": "text",
+          "text": "provisions.",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                126.82648468017578,
+                212.2900390625,
+                177.64361572265625,
+                222.380615234375
+              ],
+              "native_id": "native_p0000_ft000034"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "source_exact_native_row",
+      "row_block_id": "block-70e99cb8b10c471344d7f255",
+      "normalized_native_interval": [
+        786,
+        883
+      ],
+      "source_text": "The aquaculture scope includes the following product categories at all stages of their life cycle",
+      "fragments": [
+        {
+          "id": "block-6e424d481296f3fbca4335cc",
+          "type": "text",
+          "text": "The aquaculture",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                71.1407470703125,
+                286.2138671875,
+                150.83187866210938,
+                296.304443359375
+              ],
+              "native_id": "native_p0000_ft000039"
+            }
+          ]
+        },
+        {
+          "id": "block-c9ba2df34893b8976e5d7249",
+          "type": "text",
+          "text": "scope",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                155.46426391601562,
+                288.267333984375,
+                184.07994079589844,
+                296.304443359375
+              ],
+              "native_id": "native_p0000_ft000040"
+            }
+          ]
+        },
+        {
+          "id": "block-a24efcc1f6bf8aecd8683256",
+          "type": "text",
+          "text": "includes the following product categories",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                189.09210205078125,
+                286.0814208984375,
+                389.1291809082031,
+                296.4259033203125
+              ],
+              "native_id": "native_p0000_ft000041"
+            }
+          ]
+        },
+        {
+          "id": "block-04dfac2a30e752662cbd8e8d",
+          "type": "text",
+          "text": "at all stages of their life cycle",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                393.8399353027344,
+                286.0814208984375,
+                541.5872192382812,
+                296.4259033203125
+              ],
+              "native_id": "native_p0000_ft000042"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "source_exact_native_row",
+      "row_block_id": "block-ee650de7e0b21aa4bd03bc43",
+      "normalized_native_interval": [
+        988,
+        1084
+      ],
+      "source_text": "At all stages, seedlings (ova and/or juveniles) shall originate from producers with GLOBALG.A.P.",
+      "fragments": [
+        {
+          "id": "block-1adbdd6610ecb8dd8bacdb09",
+          "type": "text",
+          "text": "At all stages, seedlings (ova and/or juveniles) shall originate from producers with",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                70.90889739990234,
+                394.9247741699219,
+                458.80810546875,
+                405.2692565917969
+              ],
+              "native_id": "native_p0000_ft000052"
+            }
+          ]
+        },
+        {
+          "id": "block-ebb04b28a7e44e8a20129476",
+          "type": "text",
+          "text": "GLOBALG.A.P.",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                462.9172058105469,
+                394.9137268066406,
+                537.6591186523438,
+                403.08331298828125
+              ],
+              "native_id": "native_p0000_ft000053"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "source_exact_native_row",
+      "row_block_id": "block-dbe90a0dc21580f2617006c0",
+      "normalized_native_interval": [
+        1085,
+        1183
+      ],
+      "source_text": "registration/certification. Brood stock shall be obtained through an aquaculture breeding program.",
+      "fragments": [
+        {
+          "id": "block-85b57d3659b8c53c898e8ea7",
+          "type": "text",
+          "text": "registration/certification. Brood",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                71.61544036865234,
+                407.6428527832031,
+                218.1935272216797,
+                417.9873352050781
+              ],
+              "native_id": "native_p0000_ft000054"
+            }
+          ]
+        },
+        {
+          "id": "block-15b0a868bd2c2a6f836ce2ad",
+          "type": "text",
+          "text": "stock shall be",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                221.9581756591797,
+                407.77532958984375,
+                286.804931640625,
+                415.8013916015625
+              ],
+              "native_id": "native_p0000_ft000055"
+            }
+          ]
+        },
+        {
+          "id": "block-41ae06e6ff849b51800e04c1",
+          "type": "text",
+          "text": "obtained through",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                290.13018798828125,
+                407.77532958984375,
+                371.1980285644531,
+                417.9873352050781
+              ],
+              "native_id": "native_p0000_ft000056"
+            }
+          ]
+        },
+        {
+          "id": "block-88ceb9ea822e362e1e451d7f",
+          "type": "text",
+          "text": "an",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                374.8842468261719,
+                409.8287658691406,
+                385.9794921875,
+                415.8013916015625
+              ],
+              "native_id": "native_p0000_ft000057"
+            }
+          ]
+        },
+        {
+          "id": "block-ea3436a732bae4e4f5439e03",
+          "type": "text",
+          "text": "aquaculture",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                389.6336975097656,
+                407.77532958984375,
+                446.26007080078125,
+                417.8658752441406
+              ],
+              "native_id": "native_p0000_ft000058"
+            }
+          ]
+        },
+        {
+          "id": "block-1552959e4b7334950b76691e",
+          "type": "text",
+          "text": "breeding",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                450.07769775390625,
+                407.77532958984375,
+                491.343017578125,
+                417.9873352050781
+              ],
+              "native_id": "native_p0000_ft000059"
+            }
+          ]
+        },
+        {
+          "id": "block-b974733f1028ce4d470c837b",
+          "type": "text",
+          "text": "program.",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                495.45208740234375,
+                409.8287658691406,
+                537.7573852539062,
+                417.9873352050781
+              ],
+              "native_id": "native_p0000_ft000060"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "source_exact_native_row",
+      "row_block_id": "block-f8171a5597ddaee4d3a6ce0f",
+      "normalized_native_interval": [
+        1184,
+        1280
+      ],
+      "source_text": "If wild-caught brood stock is used, it shall originate from a fishery that has proven that it is",
+      "fragments": [
+        {
+          "id": "block-b7b9f15c67d1191d6062879c",
+          "type": "text",
+          "text": "If wild-caught brood",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                71.91357421875,
+                420.239501953125,
+                170.05917358398438,
+                430.583984375
+              ],
+              "native_id": "native_p0000_ft000061"
+            }
+          ]
+        },
+        {
+          "id": "block-06d586dd4198367d515c64e9",
+          "type": "text",
+          "text": "stock is used, it shall originate",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                176.2415771484375,
+                420.3719787597656,
+                331.2276916503906,
+                430.583984375
+              ],
+              "native_id": "native_p0000_ft000062"
+            }
+          ]
+        },
+        {
+          "id": "block-0139ab96d4983deea3ecf1e7",
+          "type": "text",
+          "text": "from a",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                336.80731201171875,
+                420.239501953125,
+                369.3885498046875,
+                428.3980407714844
+              ],
+              "native_id": "native_p0000_ft000063"
+            }
+          ]
+        },
+        {
+          "id": "block-1631a879760fc34120df4883",
+          "type": "text",
+          "text": "fishery that has proven",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                374.85113525390625,
+                420.239501953125,
+                491.1188659667969,
+                430.583984375
+              ],
+              "native_id": "native_p0000_ft000064"
+            }
+          ]
+        },
+        {
+          "id": "block-cc4a8d2c07ce93eaef79a838",
+          "type": "text",
+          "text": "that it is",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                497.10809326171875,
+                420.3719787597656,
+                541.61474609375,
+                428.3980407714844
+              ],
+              "native_id": "native_p0000_ft000065"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "source_exact_native_row",
+      "row_block_id": "block-2487651c4a87f92bce56534b",
+      "normalized_native_interval": [
+        1281,
+        1375
+      ],
+      "source_text": "ecologically managed. Passive collection of seedlings from the planktonic phase is allowed for",
+      "fragments": [
+        {
+          "id": "block-9ef23008911475d4d3b06f38",
+          "type": "text",
+          "text": "ecologically managed. Passive collection of seedlings from the planktonic phase is allowed",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                71.3173599243164,
+                432.9576110839844,
+                521.0393676757812,
+                443.3020935058594
+              ],
+              "native_id": "native_p0000_ft000066"
+            }
+          ]
+        },
+        {
+          "id": "block-0dcc71d7edb4afa7e5bab0e0",
+          "type": "text",
+          "text": "for",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                525.9335327148438,
+                432.9576110839844,
+                541.6180419921875,
+                441.11614990234375
+              ],
+              "native_id": "native_p0000_ft000067"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "source_exact_native_row",
+      "row_block_id": "block-08eb61fe4f7c84000f2877b3",
+      "normalized_native_interval": [
+        1392,
+        1487
+      ],
+      "source_text": "Aquaculture certification cannot be achieved for wild aquatic species/catch that is not farmed.",
+      "fragments": [
+        {
+          "id": "block-ff0547f9532eb0cee4439993",
+          "type": "text",
+          "text": "Aquaculture certification cannot be achieved for wild aquatic species/catch that is",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                70.90888214111328,
+                464.278076171875,
+                464.91546630859375,
+                474.5010986328125
+              ],
+              "native_id": "native_p0000_ft000069"
+            }
+          ]
+        },
+        {
+          "id": "block-be2d79c3d4b36bcd678bc9e7",
+          "type": "text",
+          "text": "not farmed.",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                469.198974609375,
+                464.278076171875,
+                523.127197265625,
+                472.4366149902344
+              ],
+              "native_id": "native_p0000_ft000070"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "source_exact_native_row",
+      "row_block_id": "block-3edbdd876c36b8880634e176",
+      "normalized_native_interval": [
+        1488,
+        1580
+      ],
+      "source_text": "Postharvest handling of aquaculture products by the same legal entity as the farm shall also",
+      "fragments": [
+        {
+          "id": "block-5354a88b0bd152459a28d89e",
+          "type": "text",
+          "text": "Postharvest",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                71.77003479003906,
+                483.0129699707031,
+                128.97488403320312,
+                491.0390319824219
+              ],
+              "native_id": "native_p0000_ft000071"
+            }
+          ]
+        },
+        {
+          "id": "block-0ebddd37dd8014d43531f6ae",
+          "type": "text",
+          "text": "handling of aquaculture products by the same legal entity",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                134.41099548339844,
+                482.8804931640625,
+                424.08624267578125,
+                493.2249755859375
+              ],
+              "native_id": "native_p0000_ft000072"
+            }
+          ]
+        },
+        {
+          "id": "block-1d28b5d0d3d467e8a9c9cee0",
+          "type": "text",
+          "text": "as the farm",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                429.1569519042969,
+                482.8804931640625,
+                486.0769958496094,
+                491.0390319824219
+              ],
+              "native_id": "native_p0000_ft000073"
+            }
+          ]
+        },
+        {
+          "id": "block-efc95dcfb94e84584052146b",
+          "type": "text",
+          "text": "shall also",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                491.7427062988281,
+                483.0129699707031,
+                541.6290893554688,
+                491.0390319824219
+              ],
+              "native_id": "native_p0000_ft000074"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "source_exact_native_row",
+      "row_block_id": "block-12712e8e8bf5a5a8f2f5b34f",
+      "normalized_native_interval": [
+        1581,
+        1675
+      ],
+      "source_text": "demonstrate compliance with the postharvest/mass balance and traceability sections of the P&Cs",
+      "fragments": [
+        {
+          "id": "block-2bd7c39ab04f478acad093a6",
+          "type": "text",
+          "text": "demonstrate compliance with",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                71.2953109741211,
+                495.6095886230469,
+                211.54306030273438,
+                505.70013427734375
+              ],
+              "native_id": "native_p0000_ft000075"
+            }
+          ]
+        },
+        {
+          "id": "block-e149e07c770bd25568265d88",
+          "type": "text",
+          "text": "the postharvest/mass balance and traceability sections of the P&Cs",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                215.00299072265625,
+                495.47711181640625,
+                538.254150390625,
+                505.82159423828125
+              ],
+              "native_id": "native_p0000_ft000076"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "source_exact_native_row",
+      "row_block_id": "block-d22e10232b9a4fe0bbacea89",
+      "normalized_native_interval": [
+        1676,
+        1753
+      ],
+      "source_text": "applicable to aquaculture in order for the producer to achieve certification.",
+      "fragments": [
+        {
+          "id": "block-bdd64e70b8d52443d4745efc",
+          "type": "text",
+          "text": "applicable to aquaculture",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                71.31735229492188,
+                508.32769775390625,
+                192.84457397460938,
+                518.4182434082031
+              ],
+              "native_id": "native_p0000_ft000077"
+            }
+          ]
+        },
+        {
+          "id": "block-e9131006576b1d0d920604eb",
+          "type": "text",
+          "text": "in order for the producer to",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                197.05191040039062,
+                508.1952209472656,
+                326.2530517578125,
+                518.4182434082031
+              ],
+              "native_id": "native_p0000_ft000078"
+            }
+          ]
+        },
+        {
+          "id": "block-685a9f4b37d62a23045a188f",
+          "type": "text",
+          "text": "achieve certification.",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                330.0397644042969,
+                508.1952209472656,
+                428.33221435546875,
+                516.353759765625
+              ],
+              "native_id": "native_p0000_ft000079"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "source_exact_native_row",
+      "row_block_id": "block-ac9401529caaa32209b408a4",
+      "normalized_native_interval": [
+        1754,
+        1856
+      ],
+      "source_text": "The scope of certification clearly defines the scientific name of the farmed species in the electronic",
+      "fragments": [
+        {
+          "id": "block-f55166feef07d9a481eb5e30",
+          "type": "text",
+          "text": "The scope of certification clearly defines the scientific name of the farmed species",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                71.17383575439453,
+                526.797607421875,
+                460.12298583984375,
+                537.14208984375
+              ],
+              "native_id": "native_p0000_ft000080"
+            }
+          ]
+        },
+        {
+          "id": "block-5d5aa4e772beb6b7ce4d78ac",
+          "type": "text",
+          "text": "in the electronic",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:3",
+              "page_index": 2,
+              "page": 3,
+              "bbox": [
+                463.69000244140625,
+                526.9300842285156,
+                541.6026000976562,
+                534.9561462402344
+              ],
+              "native_id": "native_p0000_ft000081"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

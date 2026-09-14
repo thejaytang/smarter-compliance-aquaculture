@@ -1,0 +1,50 @@
+{
+  "stores": [
+    {
+      "source": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/governance/governance.sqlite",
+      "backup": "project-support/product-readiness-20260912/workflow/review-confirmation/pre-change/store-0.sqlite",
+      "sha256": "f63acff9e7475f5788e52577de6f18c014bfa3fb6cf4d9d5bc9e4c9e5a0352af",
+      "integrity": "ok"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/collaboration/personal/1a715554-77c6-4eae-a4bf-5f5bb14f0844/workflow.sqlite",
+      "backup": "project-support/product-readiness-20260912/workflow/review-confirmation/pre-change/store-1.sqlite",
+      "sha256": "1375775bf23ea48f6af590dc27d2aaad837fd114c1a4749f0d9581823eb6083c",
+      "integrity": "ok"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/collaboration/personal/8225f6fc-a6d1-49fe-814c-7067cd16fd80/workflow.sqlite",
+      "backup": "project-support/product-readiness-20260912/workflow/review-confirmation/pre-change/store-2.sqlite",
+      "sha256": "622e716139261ebe16412cf9c41719e8cb826ca0e5e8f51e56d5938afc63b951",
+      "integrity": "ok"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/collaboration/personal/c296762c-879e-452f-a827-0f32fb54b4cf/workflow.sqlite",
+      "backup": "project-support/product-readiness-20260912/workflow/review-confirmation/pre-change/store-3.sqlite",
+      "sha256": "812cc3afcc5d9954c0cb846d973b31b914ce9f745da77dc85b18f1c5bdda7cf6",
+      "integrity": "ok"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/collaboration/personal/f9daf58e-521e-4c80-9fbd-93db1dd3b9ec/workflow.sqlite",
+      "backup": "project-support/product-readiness-20260912/workflow/review-confirmation/pre-change/store-4.sqlite",
+      "sha256": "94b0b04dbfb439befb6e2bd5b9e71fb4c71292e4108bffcbaa9e19462f0584bb",
+      "integrity": "ok"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/system2-workflow/workflow.sqlite",
+      "backup": "project-support/product-readiness-20260912/workflow/review-confirmation/pre-change/store-5.sqlite",
+      "sha256": "527b02d4d5754108b47d0f3df44e9ff60e70743e2b4e775fbc1cf5cf96c9d30d",
+      "integrity": "ok"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/workbench.sqlite",
+      "backup": "project-support/product-readiness-20260912/workflow/review-confirmation/pre-change/store-6.sqlite",
+      "sha256": "ecad4460813164b649ad3006f1d68b82d1200c8f5d1d7da275125e2adbfe988f",
+      "integrity": "ok"
+    }
+  ],
+  "code": {
+    "workbench/ui/materials.js": "c7e664631a406042bcbdb4f4a78efe291a81a33b6dbd0189b47bfcf6a80ac44f"
+  },
+  "scope": "Per-store isolated SQLite backups; no claim of globally atomic cross-store snapshot."
+}

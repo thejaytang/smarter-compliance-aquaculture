@@ -1,0 +1,6 @@
+{
+  "workbench/src/local_workbench/collaboration.py": "5a7f005eedf1b7d993ea5cf2beea26382ef860bc8c70b675ac6fa143776a84c9",
+  "workbench/ui/collaboration.js": "13f1254da419e343fa509b4c7ee9a328432ec079e414f67d1625343a7e7b17aa",
+  "workbench/tests/collaboration-ui.test.mjs": "ce6b2d08ca3bf6cdafd6d381d36d1ba8506d0758fa7e488f36117bb34fdf9ab9",
+  "workbench/src/local_workbench/server.py": "6e6235af2c16c58bbd951fb62e0b5f57156bbe95f36fbe369e858cc276accbcb"
+}

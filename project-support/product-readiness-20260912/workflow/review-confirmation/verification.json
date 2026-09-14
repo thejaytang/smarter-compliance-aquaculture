@@ -1,0 +1,174 @@
+{
+  "stores": [
+    {
+      "store": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/governance/governance.sqlite",
+      "backup_hash": "PASS",
+      "history": {}
+    },
+    {
+      "store": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/collaboration/personal/1a715554-77c6-4eae-a4bf-5f5bb14f0844/workflow.sqlite",
+      "backup_hash": "PASS",
+      "history": {
+        "material_revisions": {
+          "before": 1,
+          "after": 1,
+          "preserved": 1
+        },
+        "material_receipts": {
+          "before": 0,
+          "after": 0,
+          "preserved": 0
+        },
+        "material_candidates": {
+          "before": 0,
+          "after": 0,
+          "preserved": 0
+        },
+        "material_conflicts": {
+          "before": 0,
+          "after": 0,
+          "preserved": 0
+        }
+      }
+    },
+    {
+      "store": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/collaboration/personal/8225f6fc-a6d1-49fe-814c-7067cd16fd80/workflow.sqlite",
+      "backup_hash": "PASS",
+      "history": {
+        "material_revisions": {
+          "before": 1,
+          "after": 1,
+          "preserved": 1
+        },
+        "material_receipts": {
+          "before": 0,
+          "after": 0,
+          "preserved": 0
+        },
+        "material_candidates": {
+          "before": 0,
+          "after": 0,
+          "preserved": 0
+        },
+        "material_conflicts": {
+          "before": 0,
+          "after": 0,
+          "preserved": 0
+        }
+      }
+    },
+    {
+      "store": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/collaboration/personal/c296762c-879e-452f-a827-0f32fb54b4cf/workflow.sqlite",
+      "backup_hash": "PASS",
+      "history": {
+        "material_revisions": {
+          "before": 1,
+          "after": 1,
+          "preserved": 1
+        },
+        "material_receipts": {
+          "before": 0,
+          "after": 0,
+          "preserved": 0
+        },
+        "material_candidates": {
+          "before": 0,
+          "after": 0,
+          "preserved": 0
+        },
+        "material_conflicts": {
+          "before": 0,
+          "after": 0,
+          "preserved": 0
+        }
+      }
+    },
+    {
+      "store": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/collaboration/personal/f9daf58e-521e-4c80-9fbd-93db1dd3b9ec/workflow.sqlite",
+      "backup_hash": "PASS",
+      "history": {
+        "material_revisions": {
+          "before": 5,
+          "after": 7,
+          "preserved": 5
+        },
+        "material_receipts": {
+          "before": 2,
+          "after": 4,
+          "preserved": 2
+        },
+        "material_candidates": {
+          "before": 1,
+          "after": 1,
+          "preserved": 1
+        },
+        "material_conflicts": {
+          "before": 0,
+          "after": 0,
+          "preserved": 0
+        }
+      },
+      "ts004": {
+        "revision": 6,
+        "content_revision": 2,
+        "checked_scope": [],
+        "confirmation": null,
+        "association_review_required": false
+      }
+    },
+    {
+      "store": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/system2-workflow/workflow.sqlite",
+      "backup_hash": "PASS",
+      "history": {
+        "material_revisions": {
+          "before": 4,
+          "after": 4,
+          "preserved": 4
+        },
+        "material_receipts": {
+          "before": 4,
+          "after": 4,
+          "preserved": 4
+        },
+        "material_candidates": {
+          "before": 0,
+          "after": 0,
+          "preserved": 0
+        },
+        "material_conflicts": {
+          "before": 0,
+          "after": 0,
+          "preserved": 0
+        }
+      },
+      "ts004": {
+        "revision": 0,
+        "content_revision": 0,
+        "checked_scope": [],
+        "confirmation": null,
+        "association_review_required": false
+      }
+    },
+    {
+      "store": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/workbench.sqlite",
+      "backup_hash": "PASS",
+      "history": {}
+    }
+  ],
+  "history_rows_preserved": 12,
+  "new_revisions": 2,
+  "code_sha256": {
+    "workbench/ui/materials.js": "a3512ab135b62407d6fcd1b99cedf7bc356f29b958985824d26616e942e49b09",
+    "workbench/tests/material-confirmation.test.mjs": "cc267566df411411165ad7a90341f28f0c246d95d20db4a6bf374015412c1beb",
+    "workbench/src/local_workbench/recovery.py": "248cb62e91ac0260af9f135f33910ee26e8065614c76d39890e113d5be9c5e45"
+  },
+  "tests": {
+    "python": 164,
+    "frontend": 188,
+    "frontend_groups": [
+      162,
+      26
+    ]
+  },
+  "loading": "Actual refreshed UI in isolated 60905 only; normal parent not restarted."
+}

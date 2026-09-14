@@ -1,0 +1,19 @@
+# Excel Canonical v1 Contract
+
+Current parser: `xlsx-ooxml/1.1.0`, supporting ordinary OOXML `.xlsx` workbooks. `excel-document/1` is this format's sole structured fact source; `source-parse-result/1` holds its reference/hash. Legacy `.xls` explicitly remains `not_implemented`; OLE recognition is not parsing. There is currently no eligible registered Excel original. Synthetic and project GLOBALG.A.P. reference workbooks passed structural diagnostics. References use `local_diagnostic` and `production_eligible=false`, without fabricated System1 selection state.
+
+Read OOXML directly without resaving workbooks, calculating formulas, running macros or accessing external links. Preserve numeric lexical strings, date system, number formats and styles rather than guessing displayed values. Preserve formulas and shared/array attributes; shared dependents retain source-empty formulas and si instead of expanded replacements. Do not substitute caches for formulas; mark missing caches per cell. Extract shared/inline-rich text while preserving source XML. An entirely empty workbook fails.
+
+Sheets retain names, order, IDs, visibility and actual parts. Cells retain coordinates, part#cell locators, attributes, raw values, text, formulas and cache state. Enumerate stored cells only, not huge empty rectangles. List merges separately; row attributes retain hidden rows, and non-cell XML retains hidden columns, filters, validation, printing and views. Table parts retain explicit headers/ranges; do not infer business headers visually from ordinary cells. Preserve styles, comments, relationships and other XML as Canonical source evidence. Binary parts retain hash/size and `binary_part_not_transcribed`, without claims of image-text transcription.
+
+Main parsing uses lxml; independent verification uses standard-library ElementTree without calling the parser. Compare sheet/cell inventories and order, contents, formulas/caches, visibility, merges, structural XML, part hashes and issue lists. XML comparison ignores namespace prefixes and attribute order, but not text. Mutation tests ensure deletion, reordering, rewriting and hidden issues fail.
+
+Publish Canonical and verification reports exclusively. Verification failure returns failed; success remains review_required with uncalibrated machine confidence. Success establishes local OOXML structural consistency, not business-header inference, formula correctness, Requirement semantics or human acceptance. Parser/configuration/source versions are inherited from the document.
+
+Limit inputs to 10,000 ZIP parts and 128 MiB total decompressed size. Duplicate parts, escaping paths, DOCTYPE, invalid/duplicate cell coordinates and non-worksheet sheets fail explicitly. Strict OOXML, chartsheets, legacy XLS and password-protected files are outside current successful coverage and retain failure/not-implemented states. Missing caches, images and external references remain unresolved facts; do not fill them by calculation or network access.
+
+## Structural relationship checks
+
+Read shared text through the actual local workbook-relationship Target, not a guessed filename. Missing/ambiguous references, escaping/external Targets and wrong part types fail. Preserve XML comments without counting them as shared-string indices. Schema version and historical artifacts remain unchanged; interpret evidence strength by the report for each parser_version.
+
+Group shared formulas by source si, verifying a unique master and ref coverage without executing formulas or replacing empty dependents. Missing/ambiguous masters, invalid ranges and out-of-range dependents create locator-specific issues. Check merge coordinates and rectangle overlap while retaining original ranges/cells; do not silently repair sources. The independent verifier reconstructs these relationships/issues from original worksheet XML without extractor decision functions.

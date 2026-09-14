@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/.venv/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/tests",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "cwd": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/workflow/workbench-python-03/isolated-cwd",
+  "environment_overrides": {
+    "PYTHONPATH": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/src",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "TMPDIR": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/workflow/workbench-python-03/tmp"
+  },
+  "python_version": "3.12.12 (main, Feb 12 2026, 00:42:34) [Clang 21.1.4 ]",
+  "test_module_count": 26,
+  "code_manifest_sha256": "4d48287b92f1d14fff6a0c99e806494239393ccbe6683919ac66faf4011c5e63",
+  "http_ui_manifest_sha256": "f34c49b2f3ee2829333e8ff89d9038d35acc8978055443d77cdb9415621be628",
+  "started_at": "2026-09-13T11:38:35.634691+00:00",
+  "normal_service_or_database_operations": false,
+  "scope": "Full current Workbench Python regression after machine-preview reuse; isolated HTTP module graph included; not frozen mixed workload"
+}

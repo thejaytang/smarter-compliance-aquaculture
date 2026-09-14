@@ -1,0 +1,65 @@
+{
+  "scope": "isolated saved conflict/adoption/receipt before loading download recovery",
+  "stores": [
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/governance/governance.sqlite",
+      "backup": "coordinator/governance/governance.sqlite",
+      "integrity": "ok",
+      "sha256": "bb79b8ed2039af1f5b80c27117de817f9378fbddd072eaaaebb56f6f0b2dee90"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/workflow.sqlite",
+      "backup": "coordinator/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/workflow.sqlite",
+      "integrity": "ok",
+      "sha256": "c80cd5cb8d4cd8459f9e9644d0c853527a0a3486acc9570a7fc872d6f2369b03"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/workflow.sqlite",
+      "backup": "coordinator/workbench/runtime/collaboration/personal/91b5c5df-4d61-4b1f-8d69-d09fc8a89000/workflow.sqlite",
+      "integrity": "ok",
+      "sha256": "d053e00152e57f931b168a052fd38131226452c90e508d85f31490be70903966"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/95466b61-df18-4cb3-8e6d-8227034d9c72/workflow.sqlite",
+      "backup": "coordinator/workbench/runtime/collaboration/personal/95466b61-df18-4cb3-8e6d-8227034d9c72/workflow.sqlite",
+      "integrity": "ok",
+      "sha256": "c45eadf6f06e302adf696a8b67bcb7494187c66dbd92ea3a1f0cb72607500ceb"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/ac8be4be-6c3b-4927-99c9-5ff32a751aeb/workflow.sqlite",
+      "backup": "coordinator/workbench/runtime/collaboration/personal/ac8be4be-6c3b-4927-99c9-5ff32a751aeb/workflow.sqlite",
+      "integrity": "ok",
+      "sha256": "98537b47258fdef6a32d3a45c36f8e5e2aaa906b7a85f005305f25457f5a259f"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/system2-workflow/workflow.sqlite",
+      "backup": "coordinator/workbench/runtime/system2-workflow/workflow.sqlite",
+      "integrity": "ok",
+      "sha256": "3efaf68ae92d79cdc6935dc15a76301fa39f98cf5b545f12273af0f83a09087b"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/workbench.sqlite",
+      "backup": "coordinator/workbench/runtime/workbench.sqlite",
+      "integrity": "ok",
+      "sha256": "b0ed1a6ed3d0c18bd8bf7143f7cd3823c1337868e84b1e297bb168f82f117a98"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/collaboration/personal/f362919a-07e7-44b9-bd17-a8c2799fbfc7/workflow.sqlite",
+      "backup": "reviewer/runtime/collaboration/personal/f362919a-07e7-44b9-bd17-a8c2799fbfc7/workflow.sqlite",
+      "integrity": "ok",
+      "sha256": "29865ea108875a1376910f53046620c32d3db4cdefd129cce522681765673541"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/system2-workflow/workflow.sqlite",
+      "backup": "reviewer/runtime/system2-workflow/workflow.sqlite",
+      "integrity": "ok",
+      "sha256": "98537b47258fdef6a32d3a45c36f8e5e2aaa906b7a85f005305f25457f5a259f"
+    },
+    {
+      "source": "workbench/runtime/product-readiness-20260912/reviewer/runtime/workbench.sqlite",
+      "backup": "reviewer/runtime/workbench.sqlite",
+      "integrity": "ok",
+      "sha256": "a0026a6f39b82a067f8529a5c651cfa354009100da8816111ffab10ab20b3209"
+    }
+  ]
+}

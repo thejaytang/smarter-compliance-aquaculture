@@ -1,0 +1,52 @@
+[
+  {
+    "file": "project-support/product-readiness-20260912/baseline/local-delivery-rc1/code/workbench/ui/vendor/pdfjs/build/pdf.mjs",
+    "size": 860384,
+    "sha256": "495588717f62303a839e91a5343deebf1b41f52e2f9f6361e73dee6ea6a4355e"
+  },
+  {
+    "file": "project-support/product-readiness-20260912/baseline/local-delivery-rc1/code/workbench/ui/vendor/pdfjs/build/pdf.worker.mjs",
+    "size": 2228489,
+    "sha256": "f2870db902eaff8397442c912b69459980ac91f6f4b5ed827167b12cf7057930"
+  },
+  {
+    "file": "project-support/settings-sync-20260914/sandbox/workbench/ui/vendor/pdfjs/build/pdf.mjs",
+    "size": 860384,
+    "sha256": "495588717f62303a839e91a5343deebf1b41f52e2f9f6361e73dee6ea6a4355e"
+  },
+  {
+    "file": "project-support/settings-sync-20260914/sandbox/workbench/ui/vendor/pdfjs/build/pdf.worker.mjs",
+    "size": 2228489,
+    "sha256": "f2870db902eaff8397442c912b69459980ac91f6f4b5ed827167b12cf7057930"
+  },
+  {
+    "file": "project-support/ui-redesign-20260914/activation-checkpoint/code/workbench/ui/vendor/pdfjs/build/pdf.mjs",
+    "size": 860384,
+    "sha256": "495588717f62303a839e91a5343deebf1b41f52e2f9f6361e73dee6ea6a4355e"
+  },
+  {
+    "file": "project-support/ui-redesign-20260914/activation-checkpoint/code/workbench/ui/vendor/pdfjs/build/pdf.worker.mjs",
+    "size": 2228489,
+    "sha256": "f2870db902eaff8397442c912b69459980ac91f6f4b5ed827167b12cf7057930"
+  },
+  {
+    "file": "project-support/ui-redesign-20260914/candidate/workbench/ui/vendor/pdfjs/build/pdf.mjs",
+    "size": 860384,
+    "sha256": "495588717f62303a839e91a5343deebf1b41f52e2f9f6361e73dee6ea6a4355e"
+  },
+  {
+    "file": "project-support/ui-redesign-20260914/candidate/workbench/ui/vendor/pdfjs/build/pdf.worker.mjs",
+    "size": 2228489,
+    "sha256": "f2870db902eaff8397442c912b69459980ac91f6f4b5ed827167b12cf7057930"
+  },
+  {
+    "file": "workbench/ui/vendor/pdfjs/build/pdf.mjs",
+    "size": 860384,
+    "sha256": "495588717f62303a839e91a5343deebf1b41f52e2f9f6361e73dee6ea6a4355e"
+  },
+  {
+    "file": "workbench/ui/vendor/pdfjs/build/pdf.worker.mjs",
+    "size": 2228489,
+    "sha256": "f2870db902eaff8397442c912b69459980ac91f6f4b5ed827167b12cf7057930"
+  }
+]

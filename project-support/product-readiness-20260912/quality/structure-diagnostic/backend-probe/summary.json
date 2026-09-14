@@ -1,0 +1,108 @@
+{
+  "decision": "ADJUST_NEXT_EXPERIMENT; no product switch, install or semantic/quality pass",
+  "scope": "Single A/B/A native-resource-access experiment on existing development Farm pp28-29 only; no reserved sample or new model execution",
+  "installed_before": "failed",
+  "copied_path": "success",
+  "installed_after_copy": "success",
+  "same_native_output_copy_vs_original": true,
+  "hypothesis_result": "Persistent missing FontName content or a deterministic spaces-in-path defect is not supported: the original installed path succeeds unchanged after resource reads/copying. A resource-read/materialization state change is consistent with evidence, including two zero-byte temporary CMap copies, but the OS/filesystem root cause remains unverified. No font data was rewritten; only Farm Latin-script pages were tested.",
+  "times_bold_sha256": "7104e6af62c53f029013fb0641a81e31c98589c8f27b5ea6289b25b092c74321",
+  "times_bold_record_matches": true,
+  "arial_sha256": "324559aadfbb4afa7ee296a30cf90f08b18c3ceee759f98b98189c8f658d38c6",
+  "arial_fontname": "FontName ArialMT",
+  "arial_record_matches": true,
+  "package_copy_byte_identical": false,
+  "native_stats": {
+    "existing_pdfium": [
+      {
+        "local_page_index": 0,
+        "original_page_index": 27,
+        "words": 30,
+        "text_lines": 30,
+        "characters": 0,
+        "font_named_words": 0,
+        "font_key_words": 0,
+        "shapes": 0,
+        "bitmap_resources": 0
+      },
+      {
+        "local_page_index": 1,
+        "original_page_index": 28,
+        "words": 36,
+        "text_lines": 36,
+        "characters": 0,
+        "font_named_words": 0,
+        "font_key_words": 0,
+        "shapes": 0,
+        "bitmap_resources": 0
+      }
+    ],
+    "docling_temporary_copy": [
+      {
+        "local_page_index": 0,
+        "original_page_index": 27,
+        "words": 173,
+        "text_lines": 45,
+        "characters": 1254,
+        "font_named_words": 173,
+        "font_key_words": 173,
+        "shapes": 0,
+        "bitmap_resources": 3
+      },
+      {
+        "local_page_index": 1,
+        "original_page_index": 28,
+        "words": 215,
+        "text_lines": 55,
+        "characters": 1510,
+        "font_named_words": 215,
+        "font_key_words": 215,
+        "shapes": 0,
+        "bitmap_resources": 3
+      }
+    ],
+    "docling_installed_after_copy": [
+      {
+        "local_page_index": 0,
+        "original_page_index": 27,
+        "words": 173,
+        "text_lines": 45,
+        "characters": 1254,
+        "font_named_words": 173,
+        "font_key_words": 173,
+        "shapes": 0,
+        "bitmap_resources": 3
+      },
+      {
+        "local_page_index": 1,
+        "original_page_index": 28,
+        "words": 215,
+        "text_lines": 55,
+        "characters": 1510,
+        "font_named_words": 215,
+        "font_key_words": 215,
+        "shapes": 0,
+        "bitmap_resources": 3
+      }
+    ]
+  },
+  "hidden_heading_warning": "Both Docling detected Criterion heading strings are covered native-layer text in already visually reviewed Farm pages. Native hierarchy profile confidence0.99 remains unsafe and is not a verified heading.",
+  "layout_boundary": "DoclingPdfParser only supplies native cells/geometry/font/bitmap resources; no full docling DocumentConverter or learned layout used. Existing positioned config has layout.backend=heuristic.",
+  "product_source_hashes_unchanged": true,
+  "window_unchanged": true,
+  "font_unchanged": true,
+  "package_copy_limit": {
+    "file_count": 445,
+    "identical_files": 443,
+    "mismatched_paths": [
+      "pdf_resources/cmap-resources/Adobe-CNS1-7/cid2code.txt",
+      "pdf_resources/cmap-resources/Adobe-GB1-5/cid2code.txt"
+    ],
+    "finding": "Two retained temporary CMap files are empty although the installed resources are nonempty. The source copy was not fully byte-identical; this copy is not an install/release candidate. No repair or further parser run performed.",
+    "all_afm_and_executable_files_match": true
+  },
+  "usable_local_interfaces": [
+    "NativeExtractor(\"docling-parse\").extract(window_path) returns true word/textline/character/font evidence through the existing adapter.",
+    "routing.text_layer.native_analysis_page can consume the richer native cells; native_spacing.coalesce uses retained native character positions for font-fragment boundaries. These downstream benefits were not measured here."
+  ]
+}

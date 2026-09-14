@@ -1,0 +1,97 @@
+{
+  "hypothesis": "Historical AFM failure is missing/corrupt font data versus a native resource-access condition; determine whether exact existing backend currently exposes richer native evidence. This is not learned layout or model accuracy.",
+  "source_window": "project-support/product-readiness-20260912/quality/after-v4-conservative-pdf/asc-farm/pdf-window-0001.pdf",
+  "window_sha256": "9e2da78a82f13ecc447328b3694c09d1a80de5415e3e3f879b38f5021998db02",
+  "original_page_indices": [
+    27,
+    28
+  ],
+  "versions": {
+    "docling": null,
+    "docling-parse": "7.15.0",
+    "docling-core": "2.92.0",
+    "paddleocr": null,
+    "paddlex": null,
+    "paddlepaddle": null,
+    "onnxruntime": null,
+    "gmft": "0.4.4",
+    "img2table": "1.4.0",
+    "transformers": "4.57.6",
+    "torch": "2.13.0",
+    "pytesseract": "0.3.13"
+  },
+  "font_sha256": "7104e6af62c53f029013fb0641a81e31c98589c8f27b5ea6289b25b092c74321",
+  "font_bytes": 64251,
+  "font_name_line": "FontName Times-Bold",
+  "font_matches_installed_RECORD": true,
+  "cached_weights_not_runtime_proof": [
+    {
+      "path": ".cache/paddlex/official_models/PP-OCRv4_server_rec_doc/inference.pdiparams",
+      "bytes": 94812503
+    },
+    {
+      "path": ".cache/paddlex/official_models/PP-LCNet_x1_0_doc_ori/inference.pdiparams",
+      "bytes": 6754166
+    },
+    {
+      "path": ".cache/paddlex/official_models/PP-FormulaNet_plus-L/inference.pdiparams",
+      "bytes": 727598255
+    },
+    {
+      "path": ".cache/paddlex/official_models/PP-OCRv6_medium_rec_onnx/inference.onnx",
+      "bytes": 76554979
+    },
+    {
+      "path": ".cache/paddlex/official_models/PP-FormulaNet_plus-M/inference.pdiparams",
+      "bytes": 617064962
+    },
+    {
+      "path": ".cache/paddlex/official_models/SLANet_plus_onnx/inference.onnx",
+      "bytes": 7782138
+    },
+    {
+      "path": ".cache/paddlex/official_models/SLANeXt_wireless/inference.pdiparams",
+      "bytes": 364771513
+    },
+    {
+      "path": ".cache/paddlex/official_models/PP-DocLayoutV3_onnx/inference.onnx",
+      "bytes": 130502049
+    },
+    {
+      "path": ".cache/paddlex/official_models/PP-LCNet_x1_0_table_cls_onnx/inference.onnx",
+      "bytes": 6777817
+    },
+    {
+      "path": ".cache/paddlex/official_models/RT-DETR-L_wired_table_cell_det/inference.pdiparams",
+      "bytes": 128841073
+    },
+    {
+      "path": ".cache/paddlex/official_models/PP-OCRv4_server_det/inference.pdiparams",
+      "bytes": 113295054
+    },
+    {
+      "path": ".cache/paddlex/official_models/PP-OCRv6_medium_det_onnx/inference.onnx",
+      "bytes": 62032837
+    },
+    {
+      "path": ".cache/paddlex/official_models/SLANeXt_wired/inference.pdiparams",
+      "bytes": 364771513
+    },
+    {
+      "path": ".cache/paddlex/official_models/PP-LCNet_x1_0_table_cls/inference.pdiparams",
+      "bytes": 6743918
+    },
+    {
+      "path": ".cache/paddlex/official_models/RT-DETR-L_wireless_table_cell_det/inference.pdiparams",
+      "bytes": 128841073
+    }
+  ],
+  "product_hashes": {
+    "system2/src/pdf_extraction/orchestration/material_parser.py": "3696f3aab5aff829e7247418bd0b22cec1b5f3008c6419ac842f67ff7c38bce2",
+    "system2/src/pdf_extraction/ingest/native_extractor.py": "600c4368acebd0f18b533c491118b64dfc74c9bf57a1a81b99a5d2accf1d63f5",
+    "system2/src/pdf_extraction/layout/detector.py": "eea0255d8d9a257e6351997c959bb9d79f21407ddc4018fab16dea3bc6fb90eb",
+    "system2/config/pdf-intake-positioned.yaml": "046cc0b932a113c9cedd543770bf402abccfe1afc465943c74066fb54dc52776",
+    "system2/pyproject.toml": "af7ab07d32ae5806be2e91d37cde794eba7fc8768e78a1af3009f04477e86626",
+    "system2/uv.lock": "de4049919fe35a6cedf4fd4188c6e7d8692516e1c2fc0fb551b7901448f6d4cc"
+  }
+}
