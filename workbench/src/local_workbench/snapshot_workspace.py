@@ -9,6 +9,7 @@ from hashlib import sha256
 import json
 from pathlib import Path
 import sqlite3
+from local_workbench.sqlite_support import connect as connect_sqlite
 import uuid
 from .collaboration import source_review, validate_source_review, fingerprint, encoded, now, named
 from .collaboration_exchange import segment
@@ -24,7 +25,7 @@ def material_value(m):
 def material_ids(adapter):
  path=adapter.runtime/'workflow.sqlite'
  if not path.exists():return []
- with sqlite3.connect(path.as_uri()+'?mode=ro',uri=True) as db:
+ with connect_sqlite(path.as_uri()+'?mode=ro',uri=True) as db:
   if not db.execute("SELECT 1 FROM sqlite_master WHERE name='material_documents'").fetchone():return []
   return [r[0] for r in db.execute('SELECT id FROM material_documents ORDER BY id')]
 

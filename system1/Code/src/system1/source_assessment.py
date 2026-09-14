@@ -10,6 +10,7 @@ import json
 import math
 from pathlib import Path
 import sqlite3
+from system1.sqlite_support import connect as connect_sqlite
 import time
 
 FIELDS = ('authority_quality','scope_relevance','version_currency','traceability','access_permission')
@@ -19,7 +20,7 @@ class Assessments:
     def __init__(self, database):
         self.database = Path(database)
         self.database.parent.mkdir(parents=True, exist_ok=True)
-        with sqlite3.connect(self.database) as db:
+        with connect_sqlite(self.database) as db:
             db.executescript('''CREATE TABLE IF NOT EXISTS assessments(source_id TEXT PRIMARY KEY,data TEXT);
                 CREATE TABLE IF NOT EXISTS assessment_events(sequence INTEGER PRIMARY KEY,data TEXT);
                 CREATE TABLE IF NOT EXISTS assessment_policy(id INTEGER PRIMARY KEY CHECK(id=1),revision INTEGER,threshold REAL);
@@ -29,7 +30,7 @@ class Assessments:
     def policy(self, revision, threshold):
         if type(threshold) not in (int,float) or not math.isfinite(threshold) or not 0 < threshold <= 1:
             raise ValueError('invalid_assessment_threshold')
-        with sqlite3.connect(self.database) as db:
+        with connect_sqlite(self.database) as db:
             db.execute('BEGIN IMMEDIATE')
             old = db.execute('SELECT revision,threshold FROM assessment_policy').fetchone()
             if revision < old[0] or (revision == old[0] and threshold != old[1]):
@@ -41,7 +42,7 @@ class Assessments:
 
     def hold(self, source_id, actor):
         if not actor:raise ValueError('named_draft_owner_required')
-        with sqlite3.connect(self.database) as db:
+        with connect_sqlite(self.database) as db:
             db.execute('INSERT OR IGNORE INTO assessment_holds VALUES(?,?,?)',(source_id,actor,time.time()))
         return {'status':'applied'}
 
@@ -78,13 +79,13 @@ class Assessments:
                 assessment['provider_error'] = type(exc).__name__
                 assessment['mode'] = 'NO_API_FALLBACK'
         assessment['id'] = sha256(json.dumps(assessment,sort_keys=True).encode()).hexdigest()
-        with sqlite3.connect(self.database) as db:
+        with connect_sqlite(self.database) as db:
             db.execute('INSERT OR REPLACE INTO assessments VALUES(?,?)', (source['source_id'],json.dumps(assessment)))
             db.execute('INSERT INTO assessment_events(data) VALUES(?)',(json.dumps(assessment),))
         return assessment
 
     def project(self, sources, tasks, history):
-        with sqlite3.connect(self.database) as db:
+        with connect_sqlite(self.database) as db:
             stored = {r[0]:json.loads(r[1]) for r in db.execute('SELECT source_id,data FROM assessments')}
             revision, threshold = db.execute('SELECT revision,threshold FROM assessment_policy').fetchone()
             held_ids={r[0] for r in db.execute('SELECT source_id FROM assessment_holds')}
@@ -172,7 +173,7 @@ def sync_confidence_sheet(workbook, database):
     from openpyxl.utils import get_column_letter
     database=Path(database)
     if not database.exists():return
-    with sqlite3.connect(database) as db:
+    with connect_sqlite(database) as db:
         assessments={r[0]:json.loads(r[1]) for r in db.execute('SELECT source_id,data FROM assessments')}
         policy=db.execute('SELECT revision,threshold FROM assessment_policy').fetchone()
     name='Machine confidence';ws=workbook[name] if name in workbook.sheetnames else workbook.create_sheet(name)

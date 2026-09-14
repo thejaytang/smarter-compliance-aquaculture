@@ -21,8 +21,18 @@ CREATE TABLE IF NOT EXISTS deliveries(document_id TEXT, unit_id TEXT, data TEXT,
 '''
 
 
+def ensure_read_indexes(db):
+    # Avoid re-reading every large JSON payload for each page/count request.
+    db.execute("""CREATE INDEX IF NOT EXISTS review_active_rows
+        ON review_units(document_id,ordinal,chapter,kind,content_ok,requirement_ok,pending,waiting)
+        WHERE COALESCE(json_extract(data,'$.superseded_by'),'') IN ('','[]')""")
+    db.execute("""CREATE INDEX IF NOT EXISTS review_summary
+        ON review_units(document_id,chapter,ordinal,pending,content_ok,requirement_ok,waiting,kind)""")
+
+
 def initialize(db):
     db.executescript(SCHEMA)
+    ensure_read_indexes(db)
     if not db.execute('SELECT 1 FROM documents LIMIT 1').fetchone():
         db.execute('INSERT OR IGNORE INTO storage_version VALUES(2)')
 
@@ -123,11 +133,12 @@ def save(db, doc):
 def migrate(store, transform=None):
     """Caller quiesces workers; SQLite backup preserves the exact pre-migration state."""
     import sqlite3
+    from pdf_extraction.sqlite_support import connect as connect_sqlite
     from datetime import datetime, timezone
     backup = store.root / ('workflow-before-v2-'+datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')+'.sqlite')
     with store.connect() as db:
         if enabled(db): return {'status':'already_current'}
-        with sqlite3.connect(backup) as target: db.backup(target)
+        with connect_sqlite(backup) as target: db.backup(target)
     with store.connect() as db:
         db.execute('PRAGMA journal_mode=WAL')
     with store.transaction() as db:

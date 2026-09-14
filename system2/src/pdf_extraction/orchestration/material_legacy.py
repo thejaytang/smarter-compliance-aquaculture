@@ -11,6 +11,7 @@ from fractions import Fraction
 import json
 from pathlib import Path
 import sqlite3
+from pdf_extraction.sqlite_support import connect as connect_sqlite
 
 from ..contracts.hashing import digest
 from ..review import row_store, effective
@@ -69,7 +70,7 @@ def _table(table):
 
 def legacy_candidate(workflow_root, material, document_id=None):
     path = Path(workflow_root).resolve() / 'workflow.sqlite'
-    with sqlite3.connect(path.as_uri() + '?mode=ro', uri=True) as db:
+    with connect_sqlite(path.as_uri() + '?mode=ro', uri=True) as db:
         db.row_factory = sqlite3.Row
         db.execute('PRAGMA query_only=ON')
         db.execute('BEGIN')

@@ -37,9 +37,9 @@ class SourceInspectionTests(unittest.TestCase):
  def test_native_open_accepts_registered_identity_only(self):
   from local_workbench.source_workflow import SourceWorkflow
   c=SimpleNamespace(source_original=lambda actor,sid:{'path':'/tmp/classified/original.pdf'})
-  with patch('subprocess.run') as launch:
+  with patch('sys.platform','darwin'), patch('subprocess.run') as launch:
    result=SourceWorkflow(c).open_original('Weijie Tang',{'source_id':'PA001'})
-   self.assertEqual(result['status'],'open_requested');self.assertEqual(launch.call_args.args[0][-1],'/tmp/classified/original.pdf')
+   self.assertEqual(result['status'],'open_requested');self.assertEqual(launch.call_args.args[0][-1],str(__import__('pathlib').Path('/tmp/classified/original.pdf')))
    with self.assertRaises(ValueError):SourceWorkflow(c).open_original('Weijie Tang',{'source_id':'PA001','path':'/tmp/other.pdf'})
 
  def test_native_open_failure_is_actionable_without_a_false_receipt_error(self):
@@ -47,5 +47,16 @@ class SourceInspectionTests(unittest.TestCase):
   import subprocess
   c=SimpleNamespace(source_original=lambda actor,sid:{'path':'/tmp/classified/original.pdf'})
   for error in (OSError('missing app'),subprocess.TimeoutExpired('open',15),subprocess.CalledProcessError(1,'open')):
-   with patch('subprocess.run',side_effect=error):
+   with patch('sys.platform','darwin'), patch('subprocess.run',side_effect=error):
     with self.assertRaisesRegex(ValueError,'default application'):SourceWorkflow(c).open_original('Weijie Tang',{'source_id':'PA001'})
+
+ def test_windows_native_open_uses_registered_path(self):
+  from local_workbench.source_workflow import SourceWorkflow
+  from pathlib import Path
+  c=SimpleNamespace(source_original=lambda actor,sid:{'path':'C:/test data/original.pdf'})
+  with patch('sys.platform','win32'), patch('os.startfile',create=True) as launch:
+   self.assertEqual(SourceWorkflow(c).open_original('Weijie Tang',{'source_id':'PA001'})['status'],'open_requested')
+   launch.assert_called_once_with(str(Path('C:/test data/original.pdf')))
+   launch.side_effect=OSError('missing association')
+   with self.assertRaisesRegex(ValueError,'default application'):
+    SourceWorkflow(c).open_original('Weijie Tang',{'source_id':'PA001'})

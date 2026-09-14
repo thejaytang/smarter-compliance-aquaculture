@@ -1,3 +1,4 @@
+from pdf_extraction.sqlite_support import connect as connect_sqlite
 from copy import deepcopy
 import sqlite3
 import uuid
@@ -139,7 +140,7 @@ def test_partial_failure_restart_and_cross_material_binding(setup):
 
 def test_source_revision_preserves_human_versions_and_legacy_store(setup):
     store, material = setup
-    with sqlite3.connect(store.database) as db:
+    with connect_sqlite(store.database) as db:
         db.execute('CREATE TABLE legacy_history(data TEXT)')
         db.execute("INSERT INTO legacy_history VALUES('original human decision')")
     material = store.save(req(material, blocks=[text()]))['material']
@@ -149,7 +150,7 @@ def test_source_revision_preserves_human_versions_and_legacy_store(setup):
     assert old['blocks'] == material['blocks']
     assert new['blocks'] == []
     assert new['related_versions'][0]['id'] == old['id']
-    with sqlite3.connect(store.database) as db:
+    with connect_sqlite(store.database) as db:
         assert db.execute('SELECT data FROM legacy_history').fetchone()[0] == 'original human decision'
 
 

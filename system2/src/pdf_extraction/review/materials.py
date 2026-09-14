@@ -11,6 +11,7 @@ from datetime import datetime, timezone
 import json
 from pathlib import Path
 import sqlite3
+from pdf_extraction.sqlite_support import connect as connect_sqlite
 import uuid
 
 from ..contracts.hashing import digest, encoded
@@ -110,7 +111,7 @@ class MaterialStore(MaterialReads):
             self.ensure_read_indexes(db)
 
     def connect(self):
-        db = sqlite3.connect(self.database, timeout=30)
+        db = connect_sqlite(self.database, timeout=30)
         db.row_factory = sqlite3.Row
         return db
 

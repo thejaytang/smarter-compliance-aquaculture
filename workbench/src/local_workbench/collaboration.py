@@ -10,6 +10,7 @@ from hashlib import sha256
 import json
 from pathlib import Path
 import sqlite3
+from local_workbench.sqlite_support import connect as connect_sqlite
 import threading
 import uuid
 
@@ -119,7 +120,7 @@ class Collaboration:
             self._write_reviewer_catalog()
 
     def db(self):
-        return sqlite3.connect(self.database, timeout=30)
+        return connect_sqlite(self.database, timeout=30)
 
     def get(self, kind, key, default=None):
         with self.db() as db:
@@ -352,7 +353,7 @@ class Collaboration:
             workspace = self.get('workspace', actor + ':' + material['id'])
             if workspace:
                 path = self.workspace_runtime(workspace) / 'workflow.sqlite'
-                with sqlite3.connect(path.as_uri() + '?mode=ro', uri=True) as db:
+                with connect_sqlite(path.as_uri() + '?mode=ro', uri=True) as db:
                     row = db.execute('SELECT data FROM material_read_index WHERE id=?', (material['id'],)).fetchone()
                 if row:
                     personal = json.loads(row[0])

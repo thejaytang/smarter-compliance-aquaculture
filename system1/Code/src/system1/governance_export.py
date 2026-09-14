@@ -98,7 +98,7 @@ def sync(config):
                     raise ValueError('Source assessment changed during export; the previous snapshot is retained.')
                 if excel_appears_open(target): raise ValueError('Excel opened during synchronization. Saved decisions and the previous snapshot are retained.')
                 data = temporary.read_bytes()
-                with temporary.open('rb') as handle: os.fsync(handle.fileno())
+                with temporary.open('r+b') as handle: os.fsync(handle.fileno())
                 os.replace(temporary,target)
                 meta = {'schema':SCHEMA,'render_version':RENDER_VERSION,'revision':version['revision'],'authority_version':version,
                         'sha256':sha256(data).hexdigest(),'generated_at':datetime.now(timezone.utc).isoformat()}

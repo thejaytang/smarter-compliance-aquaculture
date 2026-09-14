@@ -1,4 +1,5 @@
 """Isolated persisted archive/task boundaries; no business data or decisions."""
+from local_workbench.sqlite_support import connect as connect_sqlite
 from copy import deepcopy
 from pathlib import Path
 from types import SimpleNamespace
@@ -35,7 +36,7 @@ class MaterialQueueTests(unittest.TestCase):
         self.app=SimpleNamespace(runtime=self.root,system2=SimpleNamespace(runtime=self.runtime,call=call),adapter=SimpleNamespace(call=lambda *a,**k:{'tasks':[]}))
         self.c=Collaboration(self.app);self.q=MaterialQueue(self.c)
     def tearDown(self):self.tmp.cleanup()
-    def db(self):return sqlite3.connect(self.runtime/'workflow.sqlite')
+    def db(self):return connect_sqlite(self.runtime/'workflow.sqlite')
     def write(self,m):
         with self.db() as db:
             db.execute('DELETE FROM material_read_index WHERE id=?',(m['id'],));db.execute('DELETE FROM material_documents WHERE id=?',(m['id'],))
@@ -144,7 +145,7 @@ class MaterialQueueTests(unittest.TestCase):
     def test_personal_confirmation_never_becomes_new_master_confirmation_in_queue(self):
         workspace={'id':uid(),'actor':A,'material_id':self.material['id'],'source_id':'TS001','base_material':deepcopy(self.material)}
         runtime=self.c.workspace_runtime(workspace);runtime.mkdir(parents=True)
-        with sqlite3.connect(runtime/'workflow.sqlite') as db:
+        with connect_sqlite(runtime/'workflow.sqlite') as db:
             db.executescript('CREATE TABLE material_read_index(id TEXT,data TEXT);CREATE TABLE material_documents(id TEXT,data TEXT);CREATE TABLE material_candidate_index(material_id TEXT,data TEXT);')
             raw=json.dumps(self.material)
             db.execute('INSERT INTO material_read_index VALUES(?,?)',(self.material['id'],raw));db.execute('INSERT INTO material_documents VALUES(?,?)',(self.material['id'],raw))

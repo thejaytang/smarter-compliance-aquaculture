@@ -69,7 +69,11 @@ def test_unsafe_path_rejected(tmp_path,folder,filename):
 
 
 def test_symlink_escape_rejected(tmp_path):
-    root=tmp_path/'root'; root.mkdir(); (root/'A').symlink_to(tmp_path)
+    root=tmp_path/'root'; root.mkdir()
+    if __import__('os').name == 'nt':
+        __import__('subprocess').run(['cmd', '/c', 'mklink', '/J', str(root/'A'), str(tmp_path)], check=True, capture_output=True)
+    else:
+        (root/'A').symlink_to(tmp_path, target_is_directory=True)
     with pytest.raises(IntakeError,match='outside'): read_snapshot(source(),root)
 
 @pytest.mark.parametrize('path,declared,raw',[('x.pdf','pdf',HTML),('x.html','html',b'%PDF-1.7'),

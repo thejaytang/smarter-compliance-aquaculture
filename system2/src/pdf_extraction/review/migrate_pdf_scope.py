@@ -3,6 +3,7 @@ from datetime import datetime,timezone
 import json
 from pathlib import Path
 import sqlite3
+from pdf_extraction.sqlite_support import connect as connect_sqlite
 from .workflow import Workflow
 from .repairs import invalidate
 from ..domains.requirements.pdf_review_scope import localize
@@ -21,7 +22,7 @@ def migrate(root,apply=False):
     # Backup precedes mutation. The maintenance caller owns the stopped-write checkpoint.
     if apply:
         backup=store.root/('workflow-before-pdf-scope-'+datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')+'.sqlite')
-        with store.connect() as db,sqlite3.connect(backup) as target:db.backup(target)
+        with store.connect() as db,connect_sqlite(backup) as target:db.backup(target)
     with store.transaction() as db:
         for row in db.execute('SELECT id,data FROM documents').fetchall():
             meta=json.loads(row['data'])

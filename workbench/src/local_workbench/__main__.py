@@ -35,6 +35,8 @@ def main():
     parser.add_argument("--system-root",type=Path)
     parser.add_argument("--config",type=Path)
     args=parser.parse_args()
+    if args.system_root: args.system_root=args.system_root.resolve()
+    if args.config: args.config=args.config.resolve()
     root=args.root.resolve();(root/"runtime").mkdir(parents=True,exist_ok=True)
     if args.serve:
         with ExitStack() as stack:

@@ -3,6 +3,7 @@ from hashlib import sha256
 import json
 from pathlib import Path
 import sqlite3
+from local_workbench.sqlite_support import connect as connect_sqlite
 import time
 
 
@@ -13,7 +14,7 @@ def read_status(runtime, worker=None):
         marker = runtime / 'workbook.json'
         if marker.is_file():
             result.update({k: v for k, v in json.loads(marker.read_text()).items() if k != 'path'})
-        with sqlite3.connect((runtime / 'workflow.sqlite').as_uri()+'?mode=ro', uri=True, timeout=.2) as db:
+        with connect_sqlite((runtime / 'workflow.sqlite').as_uri()+'?mode=ro', uri=True, timeout=.2) as db:
             db.execute('BEGIN')
             cursor = db.execute('SELECT COALESCE(MAX(sequence),0) FROM events').fetchone()[0]
             policy = db.execute('SELECT COALESCE(MAX(revision),0) FROM policies').fetchone()[0]

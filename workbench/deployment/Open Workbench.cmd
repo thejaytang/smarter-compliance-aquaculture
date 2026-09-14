@@ -1,5 +1,7 @@
 @echo off
 setlocal
+call "%~dp0environment_windows.cmd"
+set "PYTHONUTF8=1"
 for %%I in ("%~dp0..\..") do set "PROJECT_DIR=%%~fI\"
 set "WORKBENCH_DIR=%PROJECT_DIR%workbench"
 if not exist "%WORKBENCH_DIR%\.venv\Scripts\python.exe" (

@@ -1,3 +1,4 @@
+from pdf_extraction.sqlite_support import connect as connect_sqlite
 from copy import deepcopy
 from pdf_extraction.domains.requirements.pdf_review_scope import localize,pages
 from pdf_extraction.domains.requirements.review_groups import group_units
@@ -68,7 +69,7 @@ def test_migration_preserves_history_and_rejects_old_guards(system):
     assert any(e['kind']=='suspend' for e in s.feed()['events'])
     with pytest.raises(ValueError,match='stale_unit'):s.decision(old)
     assert migrate(s.root,True)['documents']==[]
-    with sqlite3.connect(receipt['backup']) as db:
+    with connect_sqlite(receipt['backup']) as db:
         assert db.execute('select count(*) from review_history').fetchone()[0]==1
 
 

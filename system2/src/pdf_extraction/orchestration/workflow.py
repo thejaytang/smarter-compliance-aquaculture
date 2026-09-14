@@ -217,7 +217,7 @@ class Runner:
             target.parent.mkdir(parents=True,exist_ok=True)
             if target.exists() and target.read_bytes()!=raw:raise ValueError('conversion_artifact_collision')
             if not target.exists():target.write_bytes(raw)
-            doc['conversion']={'relative_path':str(target.relative_to(self.root)), 'content_hash':sha256(raw).hexdigest(),
+            doc['conversion']={'relative_path':target.relative_to(self.root).as_posix(), 'content_hash':sha256(raw).hexdigest(),
                 'file_format':'html' if extension=='htm' else extension,
                 'parsing_copy_of':{'original_sha256':doc['source']['content_hash'],'original_format':doc['source']['file_format'],
                     'conversion_id':request['request_id'],'operator':request['actor'],'method':request['method'],

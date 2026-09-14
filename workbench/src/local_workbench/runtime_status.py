@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import os
 import sqlite3
+from local_workbench.sqlite_support import connect as connect_sqlite
 import re
 import threading
 import time
@@ -130,7 +131,7 @@ class RuntimeStatus:
         token = self.start('storage', 'check_saved_stores')
         try:
             for path in paths:
-                with sqlite3.connect(path.resolve().as_uri() + '?mode=ro', uri=True, timeout=1) as db:
+                with connect_sqlite(path.resolve().as_uri() + '?mode=ro', uri=True, timeout=1) as db:
                     db.execute('SELECT count(*) FROM sqlite_master').fetchone()
         except Exception as exc: self.finish(token, exc)
         else: self.finish(token)

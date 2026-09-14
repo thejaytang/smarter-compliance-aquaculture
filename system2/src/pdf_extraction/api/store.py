@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
+from pdf_extraction.sqlite_support import connect as connect_sqlite
 import uuid
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -31,7 +32,7 @@ class JobStore:
         self._initialize()
 
     def _connect(self) -> sqlite3.Connection:
-        connection = sqlite3.connect(self.path, timeout=30)
+        connection = connect_sqlite(self.path, timeout=30)
         connection.row_factory = sqlite3.Row
         return connection
 

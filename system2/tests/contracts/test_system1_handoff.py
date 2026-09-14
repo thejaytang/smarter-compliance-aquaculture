@@ -36,7 +36,7 @@ def test_authority_supplies_selection_when_cache_is_empty_without_writes(tmp_pat
     assert len(manifest['items'])==1 and not manifest['rejected']
     assert registry.read_bytes()==before and handoff.registry_sha256==sha256(before).hexdigest()
     command,kwargs=calls[0]
-    assert command==[str(root/'Code/.venv/bin/python'),'-m','system1.workbench_bridge']
+    assert command==[str(root/('Code/.venv/Scripts/python.exe' if __import__('os').name == 'nt' else 'Code/.venv/bin/python')),'-m','system1.workbench_bridge']
     assert json.loads(kwargs['input'])=={'command':'read','config':str(root/'Code/config/config.json')}
     assert kwargs['env']['PYTHONPATH']==str(root/'Code/src')
     assert handoff.evidence['sources']['PA001']['source_revision']=='revision-1'

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import json
 import platform
-import resource
+from ..platform_memory import peak_rss_mb
 import time
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -158,8 +158,7 @@ class FinalizationStage:
         ) * 1000
         processing.step_timings_ms = context.timings
 
-        peak = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
-        peak_mb = peak / (1024 * 1024) if platform.system() == "Darwin" else peak / 1024
+        peak_mb = peak_rss_mb()
         performance_path = output / "performance-report.json"
         performance_path.write_text(
             json.dumps(

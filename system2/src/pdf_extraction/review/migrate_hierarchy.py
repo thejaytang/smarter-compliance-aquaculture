@@ -4,6 +4,7 @@ from hashlib import sha256
 import json
 from pathlib import Path
 import sqlite3
+from pdf_extraction.sqlite_support import connect as connect_sqlite
 from ..domains.requirements.review_hierarchy import project
 from .workflow import Workflow
 from .repairs import invalidate
@@ -31,7 +32,7 @@ def populate(doc,root):
 def migrate(root):
     store=Workflow(root)
     backup=store.root/('workflow-before-hierarchy-'+datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')+'.sqlite')
-    with store.connect() as db,sqlite3.connect(backup) as target:db.backup(target)
+    with store.connect() as db,connect_sqlite(backup) as target:db.backup(target)
     result=[]
     with store.transaction() as db:
         for row in db.execute('SELECT id,data FROM documents').fetchall():

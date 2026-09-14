@@ -52,7 +52,7 @@ packages = ["src/pdf_extraction"]
 [tool.pytest.ini_options]
 addopts = "-q"
 testpaths = ["tests"]
-pythonpath = ["src"]
+pythonpath = ["src", "../workbench/src"]
 
 [tool.coverage.run]
 source = ["pdf_extraction"]

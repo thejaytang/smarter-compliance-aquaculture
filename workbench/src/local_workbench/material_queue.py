@@ -7,6 +7,7 @@ collaboration journal. No scheduler and no inferred human decisions.
 from copy import deepcopy
 import json
 import sqlite3
+from local_workbench.sqlite_support import connect as connect_sqlite
 import uuid
 from pathlib import Path
 
@@ -22,7 +23,7 @@ def acceptance_key(material):
 
 def read_index(runtime):
     path = (Path(runtime) / 'workflow.sqlite').resolve()
-    return sqlite3.connect(path.as_uri() + '?mode=ro', uri=True, timeout=30)
+    return connect_sqlite(path.as_uri() + '?mode=ro', uri=True, timeout=30)
 
 
 class MaterialQueue:

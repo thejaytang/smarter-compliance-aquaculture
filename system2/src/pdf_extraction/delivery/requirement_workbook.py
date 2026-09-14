@@ -379,7 +379,7 @@ def sync_workbook(store, records, registry_hash, target: Path, assert_current=la
             save_workbook(book, temp)
             book.close()
             assert_current()
-            with temp.open('rb') as handle:
+            with temp.open('r+b') as handle:
                 os.fsync(handle.fileno())
             if (target.parent / ('~$' + target.name)).exists():
                 raise ValueError('Excel opened during synchronization. The previous snapshot and saved reviews are preserved.')

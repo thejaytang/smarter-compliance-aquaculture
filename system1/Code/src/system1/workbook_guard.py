@@ -139,7 +139,7 @@ def validate_windows_path(path: Path, max_length: int = 240) -> list[str]:
     for index, part in enumerate(path.parts):
         # A Windows drive prefix such as ``C:`` is legal even when this check
         # runs on macOS or Linux during cross-platform validation.
-        is_drive_prefix = index == 0 and re.fullmatch(r"[A-Za-z]:", part) is not None
+        is_drive_prefix = index == 0 and re.fullmatch(r"[A-Za-z]:[\\/]?", part) is not None
         stem = Path(part).stem.upper()
         if stem in reserved:
             issues.append(f"Windows reserved name: {part}")

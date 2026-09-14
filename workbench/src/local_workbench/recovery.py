@@ -9,6 +9,7 @@ import os
 from pathlib import Path
 import shutil
 import sqlite3
+from local_workbench.sqlite_support import connect as connect_sqlite
 import subprocess
 from .platform_support import process_alive, exclusive_lock, venv_python
 
@@ -81,7 +82,7 @@ def quiescent(root, info):
         # Hold every database writer reservation throughout inventory and copy.
         # Separate read connections below can take SQLite backup snapshots safely.
         for path in sorted(info['stores']):
-            conn = sqlite3.connect(path.resolve().as_uri()+'?mode=rw', uri=True, timeout=0)
+            conn = connect_sqlite(path.resolve().as_uri()+'?mode=rw', uri=True, timeout=0)
             stack.callback(conn.close)
             try: conn.execute('BEGIN IMMEDIATE')
             except sqlite3.OperationalError: raise ValueError('An owning database is busy; stop its writer before backing up.') from None
@@ -108,7 +109,7 @@ def inventory(root, info):
         files.update(p for p in directory.glob('*') if p.is_file() and not p.name.endswith(('-wal','-shm','.lock','.tmp')))
     references = set()
     for path in info['stores']:
-        with closing(sqlite3.connect(path.resolve().as_uri()+'?mode=ro', uri=True)) as db:
+        with closing(connect_sqlite(path.resolve().as_uri()+'?mode=ro', uri=True)) as db:
             tables = [r[0] for r in db.execute("SELECT name FROM sqlite_master WHERE type='table'")]
             for table in tables:
                 for row in db.execute('SELECT * FROM '+quote(table)):
@@ -209,7 +210,7 @@ def backup(root, destination):
             rel = source.relative_to(root).as_posix(); target = destination/'files'/rel
             target.parent.mkdir(parents=True, exist_ok=True)
             if source in info['stores']:
-                with closing(sqlite3.connect(source.as_uri()+'?mode=ro', uri=True)) as db, closing(sqlite3.connect(target)) as out:
+                with closing(connect_sqlite(source.as_uri()+'?mode=ro', uri=True)) as db, closing(connect_sqlite(target)) as out:
                     db.backup(out)
                     if out.execute('PRAGMA integrity_check').fetchone()[0] != 'ok': raise ValueError('Database backup integrity check failed.')
             else: shutil.copy2(source, target)
@@ -252,7 +253,7 @@ def verify(package):
         raise ValueError('Recovery file verification failed; restoration refused.')
     for rel in manifest['stores']:
         if rel not in manifest['files']: raise ValueError('Recovery store is not inventoried.')
-        with closing(sqlite3.connect((package/'files'/rel).as_uri()+'?mode=ro&immutable=1', uri=True)) as db:
+        with closing(connect_sqlite((package/'files'/rel).as_uri()+'?mode=ro&immutable=1', uri=True)) as db:
             if db.execute('PRAGMA integrity_check').fetchone()[0] != 'ok': raise ValueError('Recovery database integrity check failed.')
     if any(ref not in manifest['files'] for ref in manifest['references']): raise ValueError('Recovery reference is missing.')
     if manifest['format'] == 'workbench-recovery-v2':

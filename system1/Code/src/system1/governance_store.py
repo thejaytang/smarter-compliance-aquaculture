@@ -14,6 +14,7 @@ from copy import copy
 from functools import lru_cache
 from pathlib import Path
 import sqlite3
+from system1.sqlite_support import connect as connect_sqlite
 
 from openpyxl import load_workbook, Workbook
 from openpyxl.worksheet.table import Table
@@ -81,7 +82,7 @@ def authority_version(config):
     assessment = config['log_root']/'source-assessments.sqlite'
     records = None
     if assessment.is_file():
-        with sqlite3.connect(assessment.as_uri()+'?mode=ro',uri=True) as db:
+        with connect_sqlite(assessment.as_uri()+'?mode=ro',uri=True) as db:
             db.execute('BEGIN')
             records = {name: sorted(list(db.execute('SELECT * FROM '+name))) for name in
                        ('assessments','assessment_events','assessment_policy','assessment_holds')}
@@ -161,7 +162,7 @@ class GovernanceStore:
 
     @contextmanager
     def connect(self):
-        with sqlite3.connect(self.path.as_uri()+'?mode=rw', uri=True, timeout=10) as db:
+        with connect_sqlite(self.path.as_uri()+'?mode=rw', uri=True, timeout=10) as db:
             db.row_factory = sqlite3.Row
             db.execute('PRAGMA foreign_keys=ON')
             db.execute('PRAGMA synchronous=FULL')
@@ -195,7 +196,7 @@ class GovernanceStore:
 
     @classmethod
     def _import_candidate(cls, config, path, temporary, archive, rows, artifacts, source_hash):
-        with sqlite3.connect(temporary) as db:
+        with connect_sqlite(temporary) as db:
             db.execute('PRAGMA foreign_keys=ON')
             db.executescript('''
                 CREATE TABLE state(schema TEXT NOT NULL, revision INTEGER NOT NULL, import_sha256 TEXT NOT NULL, archive TEXT NOT NULL, imported_at TEXT NOT NULL);
@@ -226,7 +227,7 @@ class GovernanceStore:
             if db.execute('PRAGMA quick_check').fetchone()[0] != 'ok': raise ValueError('Migration database failed integrity check')
         if digest(config['workbook'].read_bytes()) != source_hash or original_inventory(config['source_root'].resolve()) != artifacts:
             raise ValueError('Source state changed during migration; candidate was not activated')
-        with temporary.open('rb') as handle: os.fsync(handle.fileno())
+        with temporary.open('r+b') as handle: os.fsync(handle.fileno())
         # Same-filesystem, exclusive publication: no observer can open a partial database.
         os.link(temporary, path)
         return cls(path)
@@ -370,12 +371,12 @@ class GovernanceStore:
         with NamedTemporaryFile(dir=destination.parent, prefix='.'+destination.name, delete=False) as handle:
             temporary = Path(handle.name)
         try:
-            with self.connect() as src, sqlite3.connect(temporary) as dest: src.backup(dest)
+            with self.connect() as src, connect_sqlite(temporary) as dest: src.backup(dest)
             state = GovernanceStore(temporary).snapshot()['state']
             raw = (self.path.parent/state['archive']).read_bytes()
             if digest(raw) != state['import_sha256']: raise ValueError('Backup template hash mismatch')
             publish_bytes(destination.parent/state['archive'], raw)
-            with temporary.open('rb') as handle: os.fsync(handle.fileno())
+            with temporary.open('r+b') as handle: os.fsync(handle.fileno())
             os.link(temporary, destination)
         finally: temporary.unlink(missing_ok=True)
         return destination

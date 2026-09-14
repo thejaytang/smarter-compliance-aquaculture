@@ -7,6 +7,7 @@ import json
 import os
 import platform
 import sqlite3
+from system1.sqlite_support import connect as connect_sqlite
 from hashlib import sha256
 import subprocess
 import sys
@@ -38,7 +39,7 @@ def _governance_check(path: Path) -> Check:
     """Read-only diagnostics must never create a missing business database."""
     from .governance_store import SCHEMA
     try:
-        with sqlite3.connect(path.as_uri()+'?mode=ro', uri=True) as db:
+        with connect_sqlite(path.as_uri()+'?mode=ro', uri=True) as db:
             db.execute('BEGIN')
             if db.execute('PRAGMA quick_check').fetchone()[0] != 'ok' or db.execute('PRAGMA foreign_key_check').fetchone():
                 raise ValueError('Database integrity check failed')

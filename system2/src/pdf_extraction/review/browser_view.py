@@ -42,7 +42,7 @@ def browser_state(store, view='browser', document_id=None, unit_id=None, offset=
             if not row or not meta: raise ValueError('unit_not_found')
             doc=json.loads(meta[0]); unit=json.loads(row[0])
             related={unit['id']:unit}
-            for r in db.execute("""WITH RECURSIVE ancestors(id) AS (SELECT ? UNION SELECT dependency_id FROM review_dependencies d JOIN ancestors a ON d.unit_id=a.id WHERE d.document_id=?) SELECT u.data FROM review_units u JOIN ancestors a ON u.id=a.id WHERE u.document_id=?""",(unit_id,document_id,document_id)):
+            for r in db.execute("""WITH RECURSIVE ancestors(id) AS (SELECT ? UNION SELECT dependency_id FROM ancestors a CROSS JOIN review_dependencies d ON d.unit_id=a.id WHERE d.document_id=?) SELECT u.data FROM ancestors a CROSS JOIN review_units u ON u.id=a.id WHERE u.document_id=?""",(unit_id,document_id,document_id)):
                 item=json.loads(r[0]);related[item['id']]=item
             view=effective.resolve(unit,related)
             from .coverage_preview import references as coverage_references
@@ -116,8 +116,8 @@ def browser_state(store, view='browser', document_id=None, unit_id=None, offset=
 
 def guard(db, doc, unit_id):
     rows = db.execute("""WITH RECURSIVE ancestors(id) AS (
-      SELECT ? UNION SELECT d.dependency_id FROM review_dependencies d JOIN ancestors a ON d.unit_id=a.id WHERE d.document_id=?
-    ) SELECT u.id,u.fingerprint FROM review_units u JOIN ancestors a ON u.id=a.id WHERE u.document_id=? ORDER BY u.id""",(unit_id,doc['id'],doc['id'])).fetchall()
+      SELECT ? UNION SELECT d.dependency_id FROM ancestors a CROSS JOIN review_dependencies d ON d.unit_id=a.id WHERE d.document_id=?
+    ) SELECT u.id,u.fingerprint FROM ancestors a CROSS JOIN review_units u ON u.id=a.id WHERE u.document_id=? ORDER BY u.id""",(unit_id,doc['id'],doc['id'])).fetchall()
     return digest([doc['source']['content_hash'],doc.get('generation',0),doc['canonical'],[list(r) for r in rows]])
 
 
@@ -130,8 +130,8 @@ def task_page(db, document_id, offset=0, query='', chapter='', task_type='', inc
     if task_type: terms.append('task_type=?'); args.append(task_type)
     if query: terms.append("search_text LIKE ? ESCAPE '\\'"); args.append('%'+query.replace('\\','\\\\').replace('%','\\%').replace('_','\\_')+'%')
     where=' AND '.join(terms)
-    total=db.execute('SELECT COUNT(*) FROM review_units WHERE '+where,args).fetchone()[0]
-    rows=db.execute("SELECT id,title,chapter,task_type,pending,waiting,fingerprint,COALESCE(json_extract(data,'$.evidence_only'),0) AS evidence_only,COALESCE(json_extract(data,'$.blockers[0]'),json_extract(data,'$.content_reasons[0]'),json_extract(data,'$.requirement_reasons[0]'),'confidence_missing') AS reason_code FROM review_units WHERE "+where+' ORDER BY ordinal LIMIT 50 OFFSET ?',args+[offset]).fetchall()
+    total=db.execute('SELECT COUNT(*) FROM review_units INDEXED BY review_active_rows WHERE '+where,args).fetchone()[0]
+    rows=db.execute("SELECT id,title,chapter,task_type,pending,waiting,fingerprint,COALESCE(json_extract(data,'$.evidence_only'),0) AS evidence_only,COALESCE(json_extract(data,'$.blockers[0]'),json_extract(data,'$.content_reasons[0]'),json_extract(data,'$.requirement_reasons[0]'),'confidence_missing') AS reason_code FROM review_units INDEXED BY review_active_rows WHERE "+where+' ORDER BY ordinal LIMIT 50 OFFSET ?',args+[offset]).fetchall()
     chapters=[r[0] for r in db.execute('SELECT chapter FROM review_units WHERE document_id=? GROUP BY chapter ORDER BY MIN(ordinal)',(document_id,))]
     return {'schema_version':'system2-tasks/2','items':[dict(r,reason=task_model.reason(r['reason_code'])) for r in rows],'total':total,'offset':offset,'limit':50,'chapters':chapters,'stage_counts':dict(db.execute('SELECT COALESCE(SUM(pending=1 AND content_ok=0),0) AS content,COALESCE(SUM(pending=1 AND content_ok=1),0) AS requirement,COALESCE(SUM(waiting),0) AS waiting FROM review_units WHERE document_id=?',(document_id,)).fetchone())}
 

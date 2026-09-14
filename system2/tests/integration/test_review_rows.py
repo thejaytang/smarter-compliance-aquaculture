@@ -1,3 +1,4 @@
+from pdf_extraction.sqlite_support import connect as connect_sqlite
 from copy import deepcopy
 import json
 import sqlite3
@@ -46,7 +47,7 @@ def test_migration_preserves_history_and_units(system):
     receipt=row_store.migrate(store)
     assert receipt['status']=='migrated'
     assert current(system)['units']==doc['units']
-    with sqlite3.connect(receipt['backup']) as db:
+    with connect_sqlite(receipt['backup']) as db:
         assert json.loads(db.execute('SELECT data FROM documents').fetchone()[0])['units']==doc['units']
 
 

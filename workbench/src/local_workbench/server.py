@@ -5,6 +5,7 @@ import mimetypes
 import os
 import re
 import secrets
+import socket
 import threading
 import time
 import uuid
@@ -936,6 +937,16 @@ class Handler(BaseHTTPRequestHandler):
             self.send(503,{"error":"The application receipt is unavailable. Keep the request and retry the same action."})
 
 
+class LocalHTTPServer(ThreadingHTTPServer):
+    # Windows SO_REUSEADDR permits two listeners to bind the same port.
+    allow_reuse_address = os.name != "nt"
+
+    def server_bind(self):
+        if os.name == "nt":
+            self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_EXCLUSIVEADDRUSE, 1)
+        super().server_bind()
+
+
 def bind_local_server(runtime):
     """Retain the browser origin across restarts; this is device-local runtime state."""
     preferred = 0
@@ -948,11 +959,11 @@ def bind_local_server(runtime):
         except (OSError, ValueError, KeyError, TypeError):
             pass
     try:
-        server = ThreadingHTTPServer(("127.0.0.1", preferred), Handler)
+        server = LocalHTTPServer(("127.0.0.1", preferred), Handler)
     except OSError:
         if not preferred:
             raise
-        server = ThreadingHTTPServer(("127.0.0.1", 0), Handler)
+        server = LocalHTTPServer(("127.0.0.1", 0), Handler)
     path = runtime / "listen-port.json"
     tmp = path.with_suffix(".tmp")
     tmp.write_text(json.dumps({"port": server.server_port}))

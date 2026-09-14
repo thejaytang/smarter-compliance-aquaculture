@@ -2,6 +2,7 @@ import hashlib
 import json
 import secrets
 import sqlite3
+from local_workbench.sqlite_support import connect as connect_sqlite
 import time
 import uuid
 from pathlib import Path
@@ -25,7 +26,7 @@ class Store:
             db.execute("UPDATE requests SET status='queued',message='Reconciling after restart' WHERE status='running'")
 
     def connect(self):
-        db = sqlite3.connect(self.path, timeout=10)
+        db = connect_sqlite(self.path, timeout=10)
         db.row_factory = sqlite3.Row
         return db
 

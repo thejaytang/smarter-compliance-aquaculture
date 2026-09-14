@@ -12,6 +12,7 @@ import hashlib
 import json
 import re
 import sqlite3
+from system1.sqlite_support import connect as connect_sqlite
 from collections import Counter
 from datetime import date, datetime
 from pathlib import Path
@@ -343,7 +344,7 @@ def metadata_audit_review_items(
 
 def initialise_state(path: Path) -> sqlite3.Connection:
     path.parent.mkdir(parents=True, exist_ok=True)
-    connection = sqlite3.connect(path)
+    connection = connect_sqlite(path)
     connection.executescript(
         """
         CREATE TABLE IF NOT EXISTS leader_runs (

@@ -1,3 +1,4 @@
+from local_workbench.sqlite_support import connect as connect_sqlite
 import hashlib
 import json
 from pathlib import Path
@@ -13,7 +14,7 @@ class ExportStatusTests(unittest.TestCase):
     def test_saved_newer_than_snapshot_and_failure_recovery(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
-            with sqlite3.connect(root/'workflow.sqlite') as db:
+            with connect_sqlite(root/'workflow.sqlite') as db:
                 db.executescript('CREATE TABLE events(sequence INTEGER); CREATE TABLE policies(revision INTEGER); INSERT INTO events VALUES(7); INSERT INTO policies VALUES(1);')
             book = root/'snapshot.xlsx'
             book.write_bytes(b'coherent snapshot')
@@ -24,7 +25,7 @@ class ExportStatusTests(unittest.TestCase):
             (root/'source-version.json').write_text(json.dumps(source))
             (root/'workbook.json').write_text(json.dumps(meta))
             self.assertEqual(read_status(root)['status'], 'current')
-            with sqlite3.connect(root/'workflow.sqlite') as db: db.execute('INSERT INTO events VALUES(8)')
+            with connect_sqlite(root/'workflow.sqlite') as db: db.execute('INSERT INTO events VALUES(8)')
             state = read_status(root, {'status': 'current'})
             self.assertEqual((state['status'],state['saved_event_cursor'],state['event_cursor']),('pending',8,7))
             self.assertEqual(read_status(root, {'status': 'refreshing'})['status'], 'refreshing')
@@ -42,7 +43,7 @@ class ExportStatusTests(unittest.TestCase):
     def test_source_change_without_review_events_is_pending_and_failed_check_is_unknown(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);book=root/'snapshot.xlsx';book.write_bytes(b'previous coherent source snapshot')
-            with sqlite3.connect(root/'workflow.sqlite') as db:
+            with connect_sqlite(root/'workflow.sqlite') as db:
                 db.executescript('CREATE TABLE events(sequence INTEGER);CREATE TABLE policies(revision INTEGER);INSERT INTO events VALUES(7);INSERT INTO policies VALUES(1);')
             meta=dict(event_cursor=7,policy_revision=1,path=str(book),sha256=hashlib.sha256(book.read_bytes()).hexdigest(),
                       registry_sha256='a'*64,registry_kind='sqlite_snapshot')

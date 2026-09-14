@@ -10,7 +10,7 @@ Keep one isolated environment per executable component. The workbench calls Syst
 | --- | --- | --- | --- |
 | System1 | `system1/Code/.venv/` | 3.11+ | [Pinned requirements](system1/Code/deployment/requirements.txt) and [setup script](system1/Code/deployment/setup_macos.command) |
 | System2 | `system2/.venv/` | >=3.11,<3.14 | [pyproject.toml](system2/pyproject.toml) declares dependencies/extras; [uv.lock](system2/uv.lock) locks their resolution |
-| Workbench | `workbench/.venv/` | 3.11+ | [pyproject.toml](workbench/pyproject.toml); standard-library runtime, no third-party runtime packages |
+| Workbench | `workbench/.venv/` | 3.11+ | [pyproject.toml](workbench/pyproject.toml); standard-library runtime on macOS/Linux; pinned `tzdata` on Windows |
 | System3 | None yet | Not selected | [Design-only state](system3/PROJECT_STATE.md); create an independent environment when implementation begins |
 
 Python 3.12 is the common setup target. Use the explicit component interpreter rather than an ambient `python` or another activated environment. Dependency declarations remain in their owning components; this guide does not replace them. System1 pins its direct dependencies but does not currently provide a complete transitive lockfile. Workbench source execution does not require a package build or a separate dependency lockfile.
@@ -40,7 +40,48 @@ After setup, the normal daily entry is:
 
 The launcher starts the local workbench and may process already-submitted requests and due weekly QA while it runs. It is not an environment-only diagnostic. System1 database decisions remain available while Excel is open; close Excel when its generated snapshot needs synchronization.
 
-System1 also provides [Windows setup](system1/Code/deployment/setup_windows.cmd). This does not establish Windows support for the complete workbench: the current launcher and adapters use macOS/POSIX paths, including `.venv/bin/python`. Validate and adapt those entries before deploying the whole workspace on Windows.
+### Windows coordinator and reviewer setup
+
+Use a short local checkout such as `%USERPROFILE%\Aquaculture`. Long OneDrive paths can exceed Windows filename limits when source snapshots add their own nested directories. Git's `core.longpaths` only helps Git; it does not enable long paths in every application. Keep original filenames and hashes intact. Recreate each `.venv` on Windows instead of copying the Mac environment.
+
+Prerequisites: Python 3.12 with the `py` launcher and `uv` on `PATH`. From the repository root in Command Prompt:
+
+```bat
+py -3.12 --version
+uv --version
+call system1\Code\deployment\setup_windows.cmd
+call workbench\deployment\setup_windows.cmd
+```
+
+System1 setup pauses for its Doctor result. The Workbench script installs its Windows timezone dependency and the locked base System2 environment. Neither setup starts the service or registers schedules. For an independent offline reviewer, skip System1 setup and use the reviewer instructions below. A coordinator using database-mode configuration must restore its verified governance database and immutable migration companion before normal launch; Git source files cannot recreate saved human decisions.
+
+For System2 development and the local parsing profile used in Windows verification, run from the repository root in Command Prompt:
+
+```bat
+call workbench\deployment\environment_windows.cmd
+cd /d system2
+set "UV_CACHE_DIR=%CD%\.cache\uv"
+uv sync --locked --python 3.12 --no-editable --extra dev --extra docling --extra table-fallbacks
+cd ..
+```
+
+Double-click [Open Workbench.cmd](workbench/deployment/Open%20Workbench.cmd) for the coordinator or [Open Reviewer Workbench.cmd](workbench/deployment/Open%20Reviewer%20Workbench.cmd) for an independent reviewer. The coordinator launcher may resume submitted jobs; use it only after the intended business state has been restored. Interpreters resolve to `.venv/Scripts/python.exe` on Windows and `.venv/bin/python` on macOS/Linux.
+
+The shared [Windows environment script](workbench/deployment/environment_windows.cmd) sets UTF-8 subprocess text and a component-owned Numba cache. It discovers Tesseract in standard user/machine installation locations, plus optional portable tools under `workbench/.cache/tools/`: `bin/uv.exe`, `node-*-win-x64/node.exe`, and `native/poppler-*/Library/bin/`. Tools already on `PATH` remain available; a sibling `.tools/` directory is also supported for existing installations. It changes only the current process environment, with no registry or system PATH modifications. Install the native tools and configured OCR languages separately when the selected parser requires them; the script does not download them.
+
+Windows smoke checks, from the repository root in Command Prompt:
+
+```bat
+call workbench\deployment\environment_windows.cmd
+set "PYTHONPATH=%CD%\system1\Code\src"
+system1\Code\.venv\Scripts\python.exe -m system1 doctor --config system1\Code\config\config.json --schedule system1\Code\config\schedule.json
+set "PYTHONPATH=%CD%\workbench\src"
+workbench\.venv\Scripts\python.exe -c "from zoneinfo import ZoneInfo; import local_workbench; print(ZoneInfo('Europe/Oslo'))"
+set "PYTHONPATH=%CD%\system2\src"
+system2\.venv\Scripts\python.exe -c "from pdf_extraction.platform_memory import peak_rss_mb; print(peak_rss_mb())"
+```
+
+[Windows compatibility evidence](project-support/windows-compatibility-20260914/RESULTS.md) records actual Windows regression and browser checks. This does not replace the separate multi-computer reviewer round-trip acceptance checklist.
 
 ### System2 development and local parsing
 

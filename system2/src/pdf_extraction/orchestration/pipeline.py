@@ -4,7 +4,7 @@ import json
 import os
 import platform
 import re
-import resource
+from ..platform_memory import peak_rss_mb
 import threading
 import time
 from collections import Counter
@@ -524,8 +524,7 @@ class ExtractionPipeline:
         ):
             if time.perf_counter() - overall_started > self.config.security.processing_timeout_seconds:
                 raise TimeoutError("processing exceeded configured timeout")
-            peak = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
-            peak_mb = peak / (1024 * 1024) if platform.system() == "Darwin" else peak / 1024
+            peak_mb = peak_rss_mb()
             if peak_mb > self.config.security.max_memory_mb:
                 raise MemoryError("processing exceeded configured memory limit")
             if page.page_index in parallel_analysis:

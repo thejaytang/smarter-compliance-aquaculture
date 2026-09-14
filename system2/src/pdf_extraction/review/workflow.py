@@ -12,6 +12,7 @@ from hashlib import sha256
 import json
 from pathlib import Path
 import sqlite3
+from pdf_extraction.sqlite_support import connect as connect_sqlite
 import uuid
 
 from ..contracts.hashing import encoded, digest
@@ -27,7 +28,9 @@ class Workflow:
         self.root.mkdir(parents=True, exist_ok=True)
         self.database = self.root / 'workflow.sqlite'
         with self.connect() as db:
-            if db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='review_units'").fetchone():return
+            if db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='review_units'").fetchone():
+                row_store.ensure_read_indexes(db)
+                return
             db.executescript('''
                 CREATE TABLE IF NOT EXISTS documents(id TEXT PRIMARY KEY, data TEXT NOT NULL);
                 CREATE TABLE IF NOT EXISTS receipts(id TEXT PRIMARY KEY, digest TEXT NOT NULL, data TEXT NOT NULL);
@@ -40,7 +43,7 @@ class Workflow:
             row_store.initialize(db)
 
     def connect(self):
-        db = sqlite3.connect(self.database, timeout=30)
+        db = connect_sqlite(self.database, timeout=30)
         db.row_factory = sqlite3.Row
         return db
 
