@@ -1,6 +1,8 @@
 # Smarter Compliance Aquaculture
 
-The large historical workbook `system2/System2_Requirement_Register 2.xlsx` is stored with Git LFS. After cloning, run `git lfs pull` to retrieve its full contents. Runtime databases, local environments and secrets remain local; this repository is not a complete live-workspace backup. See the [2026-09-14 file recovery and publication record](project-support/github-refresh-20260914/RESULTS.md).
+**Runtime data supplement:** download the [2026-09-14 workspace data assets](https://github.com/thejaytang/smarter-compliance-aquaculture/releases/tag/full-workspace-20260914). The first asset contains consistent backups of the current review/draft databases, including all three reviewers' saved source-review records. Numbered data parts and the live `PRIORITY-DATA-INDEX.json` follow on that page; remaining historical/environment data continues incrementally. Read `RESTORE.txt` before restoring to a new computer. The main-branch source ZIP alone does not contain runtime state.
+
+The large historical workbook `system2/System2_Requirement_Register 2.xlsx` is stored with Git LFS. After cloning, run `git lfs pull` to retrieve its full contents. See the [2026-09-14 file recovery and publication record](project-support/github-refresh-20260914/RESULTS.md).
 
 Current Settings and full workspace synchronization: use the [Workbench guide](workbench/USER_GUIDE.md#settings-and-collaboration-current). [Local verification, measured package size and activation](project-support/settings-sync-20260914/RESULTS.md) record this revision.
 
