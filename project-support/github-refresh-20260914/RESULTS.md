@@ -20,7 +20,9 @@ The 116,250,063-byte historical workbook `system2/System2_Requirement_Register 2
 
 ## External status
 
-Recovery and package verification are complete. Publication is pending the final commit/push and remote verification; this paragraph must be updated after actual external confirmation.
+The replacement was pushed on 2026-09-14 as commit `ae4f075386495943df13b528d68510cffb37bd19`. GitHub's complete recursive tree matched all 8,680 local staged file/symlink IDs and modes, without a wrapper directory. The large workbook was then downloaded from GitHub into an initially empty LFS storage directory: all 116,250,063 bytes and its SHA-256 matched. Authenticated live verification confirmed PUBLIC visibility, `main` as default branch and isArchived=false. `remote-verification.json` records this content-commit evidence; the subsequent metadata-only commit records these verified results.
+
+The recovered package credential-pattern scan checked 8,608 regular files and found no matching credential patterns. This is a scoped scan, not a comprehensive security audit. A blanket whitespace check also flagged retained source HTML, PDF representations and vendor-license whitespace; those original/source bytes were intentionally preserved. No application code or business state was changed by this publication.
 
 ## Sources
 
