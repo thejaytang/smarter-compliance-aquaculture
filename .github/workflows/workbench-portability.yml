@@ -75,4 +75,32 @@ jobs:
         run: uv sync --locked --python 3.12 --extra dev
       - name: Verify materials, provenance, Markdown and platform behavior
         working-directory: system2
-        run: uv run --locked --extra dev python -m pytest tests/test_materials.py tests/test_material_body.py tests/test_material_markdown.py tests/test_material_reader_navigation.py tests/test_api_environment.py -q
+        run: uv run --locked --extra dev python -m pytest tests/test_materials.py tests/test_material_body.py tests/test_material_markdown.py tests/test_material_reader_navigation.py tests/test_api_environment.py tests/test_platform_memory.py tests/test_sqlite_lifecycle.py tests/integration/test_platform_support.py -q
+
+  source-contract:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    env:
+      PYTHONUTF8: '1'
+    steps:
+      - name: Support retained long evidence paths on Windows
+        if: runner.os == 'Windows'
+        run: git config --global core.longpaths true
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify source workflow in its own environment
+        shell: bash
+        working-directory: system1/Code
+        run: |
+          python -m venv .venv
+          if [ "$RUNNER_OS" = "Windows" ]; then component_python=.venv/Scripts/python.exe; else component_python=.venv/bin/python; fi
+          "$component_python" -m pip install -r deployment/requirements.txt
+          PYTHONPATH=src "$component_python" -m unittest discover -s tests -v
