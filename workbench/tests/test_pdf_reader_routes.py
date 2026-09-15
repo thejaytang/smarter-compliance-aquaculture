@@ -45,6 +45,14 @@ class PDFReaderRouteTests(unittest.TestCase):
         _,headers,_=self.get('/')
         self.assertNotIn('unsafe-inline',headers['Content-Security-Policy'])
 
+    def test_javascript_mime_is_independent_of_windows_registry(self):
+        from unittest.mock import patch
+        with patch('local_workbench.server.mimetypes.guess_type', return_value=('text/plain', None)):
+            for route in ('/pdf-reader.js', '/interpretations.js', '/check-design.js', '/vendor/markdown/tools.mjs'):
+                status,headers,_=self.get(route)
+                self.assertEqual(status,200,route)
+                self.assertTrue(headers['Content-Type'].startswith('text/javascript'),route)
+
     def test_manifest_assets_are_exact_and_versioned(self):
         root=self.ui/'vendor/pdfjs';manifest=json.loads((root/'manifest.json').read_text())
         self.assertEqual(manifest['version'],'6.3.289')

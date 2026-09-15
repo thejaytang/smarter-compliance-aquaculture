@@ -134,7 +134,7 @@ class InterpretationTests(unittest.TestCase):
     h.rfile.read(int(h.headers['Content-Length']));entered.set();release.wait(3)
     try:
      raw=json.dumps({'choices':[{'message':{'content':json.dumps(response)}}]}).encode();h.send_response(200);h.end_headers();h.wfile.write(raw)
-    except (BrokenPipeError,ConnectionResetError):pass
+    except (BrokenPipeError,ConnectionResetError,ConnectionAbortedError):pass
    def log_message(*args):pass
   server=ThreadingHTTPServer(('127.0.0.1',0),Delayed);worker=threading.Thread(target=server.serve_forever,daemon=True);worker.start()
   try:

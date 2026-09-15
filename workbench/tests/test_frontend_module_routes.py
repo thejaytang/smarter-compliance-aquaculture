@@ -19,7 +19,7 @@ class FrontendModuleRouteTests(unittest.TestCase):
         thread = threading.Thread(target=server.serve_forever, daemon=True); thread.start()
         visited = set(); pending = ['/app.js']
         # Literal local static and dynamic imports are the project's current convention.
-        imports = re.compile(r'''(?:from\s*|import\s*\(\s*|import\s*)['"](\.[^'"]+\.js)['"]''')
+        imports = re.compile(r'''(?:from\s*|import\s*\(\s*|import\s*)['"](\.[^'"]+\.m?js)['"]''')
         try:
             while pending:
                 path = pending.pop()

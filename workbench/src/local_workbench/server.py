@@ -26,6 +26,14 @@ from .original_stream import stream_original
 from .collaboration import Collaboration, PackageSourceAdapter, COORDINATOR
 
 
+def ui_content_type(path):
+    # Registry MIME overrides differ across Windows installations. Module scripts
+    # must have a browser-supported MIME type with nosniff enabled.
+    return {'.js':'text/javascript','.mjs':'text/javascript','.html':'text/html',
+            '.css':'text/css','.wasm':'application/wasm'}.get(
+                Path(path).suffix.lower(), mimetypes.guess_type(path)[0] or 'application/octet-stream')
+
+
 class Application:
     def __init__(self, root, system_root=None, config=None, *, start_workers=True, reviewer=False, code_root=None):
         self.root = Path(root).resolve()
@@ -685,13 +693,13 @@ class Handler(BaseHTTPRequestHandler):
                 if relative not in manifest['files']:
                     return self.send(404, {'error': 'Reader resource not found.'})
                 asset = vendor / relative
-                mime = {'.mjs': 'text/javascript', '.css': 'text/css', '.wasm': 'application/wasm'}.get(asset.suffix, mimetypes.guess_type(asset)[0] or 'application/octet-stream')
+                mime = ui_content_type(asset)
                 return self.send(200, asset.read_bytes(), mime)
             if parsed.path in {'/pdf-reader.html', '/pdf-reader.js', '/pdf-reader.css'}:
                 asset = self.app.ui_root / parsed.path.lstrip('/')
                 # Scoped to this first-party reader; originals never execute scripts.
                 policy = "default-src 'none'; script-src 'self'; worker-src 'self'; connect-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data: blob:; img-src 'self' data: blob:; frame-ancestors 'self'; base-uri 'none'; form-action 'none'; object-src 'none'"
-                return self.send(200, asset.read_bytes(), mimetypes.guess_type(asset)[0], {'Content-Security-Policy': policy})
+                return self.send(200, asset.read_bytes(), ui_content_type(asset), {'Content-Security-Policy': policy})
             static={"/":"index.html","/app.js":"app.js","/style.css":"style.css", "/package-download.js":"package-download.js",
                     "/markdown-content.js":"markdown-content.js", "/markdown-content.css":"markdown-content.css", "/vendor/markdown/tools.mjs":"vendor/markdown/tools.mjs",
                     "/requirements.js":"requirements.js", "/requirements.css":"requirements.css", "/materials.js":"materials.js", "/materials.css":"materials.css",
@@ -708,7 +716,7 @@ class Handler(BaseHTTPRequestHandler):
             if parsed.path not in static:
                 return self.send(404,{"error":"Page not found."})
             path=self.app.ui_root/static[parsed.path]
-            return self.send(200,path.read_bytes(),mimetypes.guess_type(path)[0]+"; charset=utf-8")
+            return self.send(200,path.read_bytes(),ui_content_type(path)+"; charset=utf-8")
         except Exception as exc:
             self.send(400,{"error":str(exc)})
 
