@@ -437,6 +437,29 @@ class Handler(BaseHTTPRequestHandler):
                     return self.send(200, service.detail(actor, query.get('task_id', [''])[0], query.get('current', ['false'])[0]=='true'))
                 return self.send(200, service.listing(actor, query.get('bucket', ['pending'])[0],
                     offset=int(query.get('offset', ['0'])[0]), limit=int(query.get('limit', ['50'])[0]), query=query.get('query', [''])[0], task_type=query.get('task_type', [''])[0]))
+            if parsed.path == '/api/settings/ai':
+                from .ai_settings import AISettings
+                self.current_session()
+                return self.send(200, AISettings(self.app).public())
+            if parsed.path in {'/api/interpretations', '/api/interpretations/run', '/api/interpretations/trace', '/api/requirement-annotations'}:
+                from .interpretations import Interpretations, annotations
+                actor=self.current_session()['name'];query=parse_qs(parsed.query)
+                if parsed.path == '/api/requirement-annotations':
+                    return self.send(200, annotations(self.app.collaboration,actor,query.get('material_id',[''])[0]))
+                service=Interpretations(self.app.collaboration)
+                if parsed.path.endswith('/trace'):return self.send(200,service.trace(actor,query.get('unit_id',[''])[0],query.get('revision',[None])[0]))
+                if parsed.path.endswith('/run'):return self.send(200,service.run(actor,query.get('id',[''])[0]))
+                return self.send(200,service.read(actor,query.get('unit_id',[''])[0]))
+            if parsed.path in {'/api/requirements', '/api/requirements/session', '/api/requirements/search'}:
+                from .requirements import Requirements
+                service = Requirements(self.app.collaboration)
+                actor = self.current_session()['name']
+                query = parse_qs(parsed.query)
+                if parsed.path.endswith('/session'):
+                    return self.send(200, service.read(actor, query.get('id', [''])[0]))
+                if parsed.path.endswith('/search'):
+                    return self.send(200, service.search(actor, query.get('q', [''])[0]))
+                return self.send(200, service.listing(actor, query.get('material_id', [''])[0]))
             if parsed.path == '/api/materials':
                 query = parse_qs(parsed.query)
                 options = {key: int(query[key][0]) for key in ('offset', 'limit') if key in query}
@@ -670,8 +693,9 @@ class Handler(BaseHTTPRequestHandler):
                 policy = "default-src 'none'; script-src 'self'; worker-src 'self'; connect-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data: blob:; img-src 'self' data: blob:; frame-ancestors 'self'; base-uri 'none'; form-action 'none'; object-src 'none'"
                 return self.send(200, asset.read_bytes(), mimetypes.guess_type(asset)[0], {'Content-Security-Policy': policy})
             static={"/":"index.html","/app.js":"app.js","/style.css":"style.css", "/package-download.js":"package-download.js",
-                    "/materials.js":"materials.js", "/materials.css":"materials.css",
-                    "/global-settings.js":"global-settings.js", "/global-settings.css":"global-settings.css", "/collaboration.js":"collaboration.js", "/collaboration-relationships.js":"collaboration-relationships.js", "/collaboration.css":"collaboration.css",
+                    "/markdown-content.js":"markdown-content.js", "/markdown-content.css":"markdown-content.css", "/vendor/markdown/tools.mjs":"vendor/markdown/tools.mjs",
+                    "/requirements.js":"requirements.js", "/requirements.css":"requirements.css", "/materials.js":"materials.js", "/materials.css":"materials.css",
+                    "/interpretations.js":"interpretations.js", "/check-design.js":"check-design.js", "/four-pane.css":"four-pane.css", "/global-settings.js":"global-settings.js", "/global-settings.css":"global-settings.css", "/collaboration.js":"collaboration.js", "/collaboration-relationships.js":"collaboration-relationships.js", "/collaboration.css":"collaboration.css",
                     "/material-editing.js":"material-editing.js", "/source-workspace.js":"source-workspace.js", "/shell-navigation.js":"shell-navigation.js", "/source-workspace.css":"source-workspace.css", "/submission-drawer.js":"submission-drawer.js", "/material-inspection.js":"material-inspection.js", "/material-navigation.js":"material-navigation.js", "/runtime-status.js":"runtime-status.js",
                     "/evidence-viewer.js":"evidence-viewer.js", "/pdf-repairs.js":"pdf-repairs.js", "/pdf-table-editor.js":"pdf-table-editor.js", "/pdf-table-rows.js":"pdf-table-rows.js", "/pdf-pages.js":"pdf-pages.js","/review-state.js":"review-state.js", "/source-check.js":"source-check.js", "/export-status.js":"export-status.js",
                     "/dashboard.js":"dashboard.js", "/qa-chart.js":"qa-chart.js", "/pdf-references.js":"pdf-references.js", "/pdf-assessments.js":"pdf-assessments.js",
@@ -700,7 +724,7 @@ class Handler(BaseHTTPRequestHandler):
                 self.close_connection = True
                 return self.send(413,{"error":"The request is empty or exceeds the permitted package/file size."})
             session=self.current_session()
-            if getattr(self.app,'read_only_restored',False) and (self.path.startswith('/api/sync/') or self.path=='/api/automation'):
+            if getattr(self.app,'read_only_restored',False) and (self.path.startswith('/api/sync/') or self.path=='/api/automation' or self.path=='/api/requirements/step' or self.path=='/api/settings/ai' or self.path.startswith('/api/interpretations/')):
                 self.close_connection=True
                 return self.send(403,{'error':'Restored inspection keeps synchronization and automation read-only.'})
             if self.path == '/api/sync/import':
@@ -750,6 +774,22 @@ class Handler(BaseHTTPRequestHandler):
                 return self.send(200,{"id":actor["id"],"name":actor["name"]})
             if not session["id"]:
                 raise ValueError("Please select a reviewer first.")
+            if self.path == '/api/settings/ai':
+                from .ai_settings import AISettings
+                return self.send(200,AISettings(self.app).save(session['name'],body))
+            if self.path.startswith('/api/interpretations/'):
+                from .interpretations import Interpretations
+                service=Interpretations(self.app.collaboration)
+                action=self.path.rsplit('/',1)[-1]
+                if action=='context':result=service.context(session['name'],body['unit_id'],body.get('linked_material_ids',[]))
+                elif action=='save':result=service.save(session['name'],body)
+                elif action=='generate':result=service.generate(session['name'],body)
+                else:raise ValueError('Unknown interpretation action.')
+                return self.send(409 if result.get('status')=='conflict' else 200,result)
+            if self.path == '/api/requirements/step':
+                from .requirements import Requirements
+                result = Requirements(self.app.collaboration).apply(session['name'], body)
+                return self.send(409 if result.get('status') == 'conflict' else 200, result)
             if self.path.startswith('/api/sync/'):
                 from .full_snapshot import FullSnapshot
                 service = FullSnapshot(self.app.collaboration)
@@ -838,7 +878,7 @@ class Handler(BaseHTTPRequestHandler):
                     'candidate-draft': common | {'candidate_id','blocks','issues','checked_scope','association_reviewed'},
                     'save': common | {'blocks', 'issues', 'checked_scope', 'association_reviewed'},
                     'confirm': common | {'explicit_confirmation', 'checked_scope', 'association_reviewed', 'omissions_checked', 'dependencies_checked'},
-                    'extract': common,
+                    'extract': common | {'replace_candidate_id'},
                     'import-legacy': common,
                     'source-issue': common | {'note'},
                     'adopt': common | {'candidate_id', 'action', 'reviewed_against_source', 'blocks', 'issues', 'checked_scope', 'association_reviewed'},

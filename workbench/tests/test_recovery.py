@@ -35,6 +35,17 @@ class RecoveryTests(unittest.TestCase):
         canonical = self.root/'system2/runtime/workflow/artifacts/a/canonical.json'; canonical.parent.mkdir(parents=True); canonical.write_text('{}')
         with connect_sqlite(self.root/self.stores[2]) as db:
             db.execute('CREATE TABLE documents(data TEXT)'); db.execute('INSERT INTO documents VALUES (?)', (json.dumps({'canonical': [{'path': str(canonical), 'sha256': digest(canonical)}]}),))
+    def test_shared_ai_key_excluded_but_interpretations_are_in_database_snapshot(self):
+        (self.root/'workbench/runtime/ai-provider.json').write_text('{"api_key":"private-sentinel"}')
+        with connect_sqlite(self.root/'workbench/runtime/workbench.sqlite') as db:
+            db.execute('CREATE TABLE requirement_interpretations(body TEXT)')
+            db.execute('INSERT INTO requirement_interpretations VALUES (?)', ('retained interpretation',))
+        backup(self.root,self.package)
+        manifest=verify(self.package)
+        self.assertNotIn('workbench/runtime/ai-provider.json',manifest['files'])
+        with connect_sqlite(self.package/'files/workbench/runtime/workbench.sqlite') as db:
+            self.assertEqual(db.execute('SELECT body FROM requirement_interpretations').fetchone()[0],'retained interpretation')
+
     def test_copy_verify_restore_history_and_original_without_live_files(self):
         result = backup(self.root, self.package); self.assertEqual(result['stores'], 6)
         manifest = verify(self.package)

@@ -18,7 +18,7 @@ import math
 
 from .review_preview import sanitized_region
 
-VERSION = 'material-reader/9'
+VERSION = 'material-reader/12'
 PDF_RENDER_LIMITS = dict(max_dimension=4096, max_pixels=12_000_000,
                          max_requested_width=32768, width_step=64)
 MAX_BYTES = 128 * 1024 * 1024
@@ -184,6 +184,39 @@ def _html_navigation(soup, original_paths):
     return navigation, default
 
 
+def _document_information(soup, original_paths):
+    """Read explicit document identity separately from body/requirement blocks."""
+    def item(element, label):
+        return {'label': label, 'value': element.get_text(' ', strip=True),
+                'locator': original_paths[id(element)],
+                'anchor': html_anchor(original_paths[id(element)])}
+
+    region = soup.select_one('#documentMeta')
+    title = region.find('h1') if region else soup.select_one('main h1, article h1')
+    if title is None:
+        headings = [el for el in soup.find_all('h1') if not el.find_parent(['nav', 'aside', 'footer'])]
+        if len(headings) == 1: title = headings[0]
+    fields = []
+    if region:
+        for row in region.select('tr'):
+            label, value = row.find('th'), row.find('td')
+            if label and value and value.get_text(strip=True):
+                fields.append(item(value, label.get_text(' ', strip=True)))
+    title_item = item(title, 'Title') if title else None
+    if not title_item:
+        journal_titles = soup.select('p.oj-doc-ti')
+        if journal_titles:
+            title_item = item(journal_titles[0], 'Title')
+            title_item['value'] = '\n'.join(el.get_text(' ', strip=True) for el in journal_titles)
+            title_item['parts'] = [item(el, 'Title') for el in journal_titles]
+        elif soup.title and soup.title.get_text(strip=True):
+            title_item = item(soup.title, 'Title')
+            # Head metadata has an original locator but no visible body anchor.
+            title_item['anchor'] = None
+    return {'title': title_item, 'fields': fields,
+            'origin': 'saved-original'}
+
+
 def _html(raw):
     from bs4 import BeautifulSoup
     from ..formats.html import dom_path
@@ -191,6 +224,7 @@ def _html(raw):
     soup = BeautifulSoup(raw, 'lxml')
     anchors = []
     original_paths = {id(el): dom_path(el) for el in soup.find_all(True)}
+    document_information = _document_information(soup, original_paths)
     navigation_anchors, default_anchor = _html_navigation(soup, original_paths)
     for element in soup.find_all(True):
         locator = original_paths[id(element)]
@@ -210,7 +244,14 @@ def _html(raw):
     allowed = {'html', 'head', 'body', 'title', 'div', 'span', 'p', 'br', 'hr', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'main', 'article', 'section', 'header', 'footer', 'nav', 'aside', 'table', 'thead', 'tbody', 'tfoot', 'tr', 'th', 'td', 'caption', 'col', 'colgroup', 'ul', 'ol', 'li', 'dl', 'dt', 'dd', 'a', 'b', 'strong', 'i', 'em', 'u', 's', 'small', 'sup', 'sub', 'pre', 'code', 'blockquote', 'figure', 'figcaption', 'img', 'details', 'summary', 'mark'}
     for element in list(tree.iter()):
         if not isinstance(element.tag, str):
-            if element.getparent() is not None: element.getparent().remove(element)
+            # React/hydration comments often carry the following visible text
+            # in their tail. Removing that text would silently blank headings.
+            parent = element.getparent()
+            if parent is not None:
+                previous = element.getprevious()
+                if previous is not None: previous.tail = (previous.tail or '') + (element.tail or '')
+                else: parent.text = (parent.text or '') + (element.tail or '')
+                parent.remove(element)
             continue
         tag = element.tag.lower()
         if tag not in allowed:
@@ -247,6 +288,7 @@ def _html(raw):
     output = '<!doctype html><html><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="' + csp + '"><style>' + trusted_style + '</style></head>' + html.tostring(body, encoding='unicode') + '</html>'
     warnings.append('Isolated complete saved markup with selectable text. Source scripts, styles and external assets are disabled; all static disclosure content is opened. This reading view does not claim native website styling fidelity.')
     return {'html': output, 'anchors': anchors, 'navigation_anchors': navigation_anchors,
+            'document_information': document_information,
             'display_fidelity': display,
             'default_anchor': default_anchor, 'warnings': warnings,
             'label': 'Complete bound HTML snapshot · offline reading view'}

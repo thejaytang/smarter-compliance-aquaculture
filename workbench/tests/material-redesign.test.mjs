@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {Materials} from '../ui/materials.js';
 function workspace(){
- const w=new Materials();const classes=new Set(['detail-mode']);const nodes=new Map();
+ const w=new Materials();w.requirements={render(){}};const classes=new Set(['detail-mode']);const nodes=new Map();
  const shell={classList:{add:v=>classes.add(v),remove:v=>classes.delete(v)}};
  nodes.set('.material-workbench',shell);nodes.set('.mw-library',{scrollTop:120});nodes.set('[data-action="resume-material"]',{});
  w.root={querySelectorAll:()=>[]};w.q=s=>nodes.get(s)||null;w.state={actor:{id:'a'}};w.material={id:'m',revision:4,scope:[{id:'page:1'}],source:{source_id:'s'},collaboration:{view:'personal'}};w.id='m';w.draft={blocks:[{text:'unsaved original text'}],checked_scope:['page:1'],association_reviewed:true,issues:[]};w.dirty=true;w.message=()=>{};

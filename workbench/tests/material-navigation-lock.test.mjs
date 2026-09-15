@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {Materials} from '../ui/materials.js';
 
 function fixture(){
- const x=new Materials(),nodes=new Map(),source={disabled:false},opener={disabled:false};let nav=[],html='';
+ const x=new Materials();x.requirements={render(){}};const nodes=new Map(),source={disabled:false},opener={disabled:false};let nav=[],html='';
  const list={set innerHTML(value){html=value;nav=[...value.matchAll(/<button\b[^>]*data-action="(open|open-source|inspection-open)"[^>]*>/g)].map(([tag,action])=>({dataset:{action},disabled:/\bdisabled\b/.test(tag)}));},get innerHTML(){return html;}};
  x.q=selector=>selector==='#mw-material-list'?list:selector==='#mw-source'?source:selector==='[data-action="open-source"]'?opener:nodes.get(selector)||nodes.set(selector,{disabled:false}).get(selector);
  x.root={querySelectorAll(selector){const actions=[...selector.matchAll(/data-action="([^"]+)"/g)].map(m=>m[1]);return nav.filter(n=>actions.includes(n.dataset.action));}};

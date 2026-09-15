@@ -129,7 +129,7 @@ def inventory(root, info):
                         files.update(p for p in ref.parent.rglob('*') if p.is_file())
     files.update(references)
     # Never include live socket metadata or copied database journals as recovery state.
-    files = {below(p, root) for p in files if p.name not in {'server.json','listen-port.json'} and not p.name.endswith(('-wal','-shm','.lock','.tmp'))}
+    files = {below(p, root) for p in files if p.name not in {'server.json','listen-port.json','ai-provider.json','interpretation-provider.json'} and not p.name.startswith('.ai-provider-') and not p.name.endswith(('-wal','-shm','.lock','.tmp'))}
     for path in files:
         if not path.is_file(): raise ValueError('A required recovery resource is missing.')
     return sorted(files), sorted(references)

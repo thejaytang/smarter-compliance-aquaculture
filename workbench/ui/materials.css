@@ -118,3 +118,26 @@ body.mw-focus-active{overflow:hidden}body.mw-focus-active>.rail,body.mw-focus-ac
 .mw-review-checks{margin-top:24px;padding:16px!important;border:1px solid var(--line,#cad4df);border-radius:6px}.mw-review-checks>h4{margin:0 0 14px;font-size:14px}.mw-review-checks>.mw-check{font-size:13px!important;line-height:1.6;margin:14px 0}
 #mw-content-tools[hidden]{display:none}.mw-requirements>#mw-requirement-state:empty{display:none}.mw-requirements>#mw-requirement-state:not(:empty){padding:0 12px}
 .mw-input-block .mw-text-label{font-size:0!important}.mw-input-block .mw-text-label textarea{margin-top:0;font-size:14px;min-height:44px}.mw-input-block .mw-block-details{margin-top:8px}.mw-table-edit-tools>summary{font-size:12px;color:var(--muted,#47586b);cursor:pointer}
+
+/* HTML chapters navigate on selection; keep the chooser against the right edge. */
+.mw-original>header>#mw-original-toolbar:has(#mw-html-anchor){margin-left:auto;padding:0;flex:0 1 60%;max-width:calc(100% - 130px)}
+/* Document context stays separate from dismissible workspace notifications. */
+.mw-document-information{border:1px solid #d7e0e8;background:#f8fafc;border-radius:7px;padding:11px;margin-bottom:14px}
+.mw-document-information summary,.mw-candidate summary{cursor:pointer;font-size:12px;font-weight:600}
+.material-workbench :is(.mw-candidate,.mw-document-information){padding:12px}
+.mw-document-information h2{font-size:16px;line-height:1.5;margin:14px 0;overflow-wrap:anywhere}
+.mw-document-information dl{font-size:12px;margin:0;line-height:1.6}
+.mw-document-information dl>div{margin:8px 0}
+.mw-document-information dt{font-weight:600;display:inline}
+.mw-document-information dt::after{content:': '}
+.mw-document-information dd{display:inline;margin:0;overflow-wrap:anywhere}
+.mw-document-information p{font-size:12px}
+.mw-system-notice{display:flex;align-items:flex-start;gap:12px;padding:9px 14px;background:#fff6e4;border-bottom:1px solid #e5d3a7;font-size:12px}
+.mw-system-notice>.mw-review-impact{flex:1;margin:0;border:0;padding:0}
+.mw-system-notice button,.mw-message button{margin-left:auto;flex-shrink:0;min-width:28px;min-height:28px;padding:0 6px}
+.mw-message:not(:empty){display:flex;gap:12px;align-items:center}
+.list-mode #mw-system-notices{display:none}
+.mw-extraction-time{color:#5b6e80}
+
+.material-workbench .mw-close-material{font-size:22px;line-height:1;min-width:32px;padding:4px 8px;background:transparent;border-color:transparent;color:var(--muted)}
+.material-workbench .mw-close-material:hover{background:#e8edf3;color:var(--ink)}

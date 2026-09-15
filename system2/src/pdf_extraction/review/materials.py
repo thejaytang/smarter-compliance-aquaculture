@@ -39,6 +39,14 @@ def validate_blocks(blocks, scope):
             raise ValueError('block_text_must_be_string')
         if block['type'] == 'heading' and (type(block.get('level')) is not int or not 1 <= block['level'] <= 6):
             raise ValueError('heading_level_required')
+        if 'markdown_source' in block and not isinstance(block['markdown_source'], str):
+            raise ValueError('invalid_markdown_source')
+        markdown = block.get('markdown')
+        if markdown is not None:
+            if not isinstance(markdown, dict) or markdown.get('version') != 1 or not all(isinstance(markdown.get(k), str) for k in ('source', 'baseline')):
+                raise ValueError('invalid_markdown_cell')
+            if 'original' in markdown and (not isinstance(markdown['original'], dict) or markdown['original'].get('id') != block['id'] or 'markdown' in markdown['original']):
+                raise ValueError('invalid_markdown_original')
         parent = block.get('parent_id')
         if parent:
             if parent not in by_id or by_id[parent]['type'] != 'heading' or positions[parent] >= positions[block['id']]:
@@ -475,8 +483,17 @@ class MaterialStore(MaterialReads):
             existing = [c for c in self._view(db, material)['candidates'] if c['status'] == 'running']
             if existing:
                 return self._receipt(db, request, {'status': 'already_running', 'candidate': existing[-1], 'material': self._view(db, material)})
+            replace_id = request.get('replace_candidate_id')
+            if replace_id is not None:
+                row = db.execute('SELECT data FROM material_candidates WHERE id=? AND material_id=?', (replace_id, material['id'])).fetchone()
+                prior = json.loads(row[0]) if row else None
+                if (material['blocks'] or material.get('confirmation') or not prior or prior.get('origin')
+                        or prior['status'] not in ('ready', 'partial') or prior['source'] != material['source']
+                        or prior['input_revision'] != material['content_revision']):
+                    raise ValueError('Only an unsaved machine preview can be refreshed; preserve existing human work.')
             candidate = {'id': str(uuid.uuid4()), 'material_id': material['id'], 'input_revision': material['content_revision'],
                 'source': material['source'], 'scope': material['scope'], 'base_blocks': material['blocks'],
+                'replaces_candidate_id': replace_id,
                 'status': 'running', 'blocks': [], 'complete': False, 'error': None, 'warnings': [],
                 'started_at': now(), 'actor': request['actor'], 'request_id': request['request_id']}
             db.execute('INSERT INTO material_candidates VALUES(?,?,?)', (candidate['id'], material['id'], encoded(candidate)))
@@ -532,6 +549,17 @@ class MaterialStore(MaterialReads):
             candidate.update(blocks=blocks, complete=bool(complete and not error), error=error, warnings=list(warnings),
                 status='failed' if error else ('ready' if complete else 'partial'), finished_at=now(), result_hash=result_hash,
                 metadata=metadata or {})
+            # Only a successful refresh supersedes the untouched machine preview.
+            # Keep its complete payload and never stamp a human review decision.
+            if candidate.get('replaces_candidate_id') and candidate['status'] == 'ready':
+                prior_row = db.execute('SELECT data FROM material_candidates WHERE id=? AND material_id=?',
+                    (candidate['replaces_candidate_id'], material_id)).fetchone()
+                prior = json.loads(prior_row[0]) if prior_row else None
+                if (prior and prior['status'] in ('ready', 'partial') and not material['blocks']
+                        and material['content_revision'] == candidate['input_revision'] and not material['source_stale']):
+                    prior['status'] = 'superseded'
+                    prior['replacement'] = {'candidate_id': candidate_id, 'at': now(), 'reason': 'requested_machine_preview_refresh'}
+                    db.execute('UPDATE material_candidates SET data=? WHERE id=?', (encoded(prior), prior['id']))
             old = {b['id']: b for b in candidate['base_blocks']}
             new = {b['id']: b for b in blocks}
             candidate['differences'] = {'added': sorted(new.keys() - old.keys()), 'missing': sorted(old.keys() - new.keys()),

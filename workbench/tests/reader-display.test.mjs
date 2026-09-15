@@ -63,7 +63,7 @@ test('observer and DPR listeners request refresh and disconnect with the reader 
 
 test('reading details remain available outside the PDF viewport and HTML names its reflowed rendering',()=>{
  const f=fixture(),page=f.x.pdfMarkup({...f.x.reader,native_text:'<Original>'}),info=f.x.pdfInfoMarkup({...f.x.reader,native_text:'<Original>'});assert.match(page,/mw-pdf-image-scroll/);assert.doesNotMatch(page,/<details|<pre|mw-reader-notice/);assert.match(info,/&lt;Original&gt;/);assert.match(info,/separate from the page image|Optional browser PDF viewer/);
- f.x.reader={kind:'html'};f.x.renderReader({kind:'html',anchors:[],navigation_anchors:[]});assert.match(f.x.q('#mw-reader').innerHTML,/Offline HTML · reflowed reading view/);assert.match(f.x.q('#mw-reader').innerHTML,/sandbox=""/);assert.doesNotMatch(f.x.q('#mw-reader').innerHTML,/mw-reader-notice/);assert.match(f.x.q('#mw-original-toolbar').innerHTML,/Reading details|Open original/);
+ f.x.reader={kind:'html'};f.x.renderReader({kind:'html',anchors:[],navigation_anchors:[]});assert.match(f.x.q('#mw-reader').innerHTML,/Offline HTML · reflowed reading view/);assert.match(f.x.q('#mw-reader').innerHTML,/sandbox=""/);assert.doesNotMatch(f.x.q('#mw-reader').innerHTML,/mw-reader-notice/);assert.doesNotMatch(f.x.q('#mw-original-toolbar').innerHTML,/<button|<summary/);assert.equal(typeof f.x.q('#mw-html-anchor').onchange,'function');
 });
 
 test('document CSS gives remaining space to one evidence viewport and keeps compact original controls',async()=>{

@@ -220,7 +220,7 @@ class MaterialService:
                 return self.store.finish_candidate(material['id'], candidate['id'], parsed['blocks'],
                     complete=parsed.get('status') == 'candidate_available' and not parsed.get('unresolved'),
                     error=parsed.get('error'), warnings=parsed.get('warnings', []),
-                    metadata={'parser_status': parsed.get('status'), **{key: parsed.get(key) for key in ('parser_version', 'canonical_artifacts', 'covered_scope', 'processed_scope', 'usable_scope', 'unprocessed_scope', 'unresolved')}})
+                    metadata={'parser_status': parsed.get('status'), **{key: parsed.get(key) for key in ('parser_version', 'canonical_artifacts', 'covered_scope', 'processed_scope', 'usable_scope', 'unprocessed_scope', 'unresolved', 'body_filter')}})
             except Exception as exc:
                 return self.store.finish_candidate(material['id'], candidate['id'], [], complete=False, error=str(exc))
 

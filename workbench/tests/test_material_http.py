@@ -76,6 +76,14 @@ class MaterialHTTPTests(unittest.TestCase):
             self.assertEqual(status, 400, (field, result))
         self.assertEqual(self.calls, [])
 
+    def test_refresh_preview_accepts_only_candidate_identity(self):
+        body=self.body(replace_candidate_id='previous-machine-candidate')
+        status,_=self.post('extract',body)
+        self.assertEqual(status,200)
+        self.assertEqual(self.calls,[('material_extract',{'request':dict(body,actor='Isolated Reviewer')})])
+        status,_=self.post('extract',dict(body,blocks=[{'text':'Untrusted replacement'}]))
+        self.assertEqual(status,400)
+
     def test_named_reviewer_and_origin_csrf_required(self):
         for options in ({'origin':False}, {'csrf':False}):
             self.assertEqual(self.post('save',self.body(blocks=[]),**options)[0],403)
