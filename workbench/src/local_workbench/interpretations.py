@@ -219,7 +219,7 @@ class Interpretations:
                     raise ValueError('A cited quotation is not present in the supplied source context.')
                 text=citations[ref['id']];quote=ref['quote'];start=ref.get('start');end=ref.get('end')
                 if start is not None or end is not None:
-                    if type(start) is not int or type(end) is not int or start<0 or end<=start or text[start:end]!=quote:
+                    if type(start) is not int or type(end) is not int or start<0 or end<=start or end>len(text) or text[start:end]!=quote:
                         raise ValueError('The quotation position does not match its saved source block.')
                 else:
                     first=text.find(quote)

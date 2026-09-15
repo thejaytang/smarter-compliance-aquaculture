@@ -59,7 +59,9 @@ class InterpretationTests(unittest.TestCase):
   ref=self.s.validate_fields(fields,ctx)['scope']['references'][0];self.assertIsNone(ref['start'])
   fields['scope']['references'][0].update(start=9,end=14)
   self.assertEqual(self.s.validate_fields(fields,ctx)['scope']['references'][0]['start'],9)
-  fields['scope']['references'][0]['start']=0
+  fields['scope']['references'][0].update(start=9,end=999)
+  with self.assertRaises(ValueError):self.s.validate_fields(fields,ctx)
+  fields['scope']['references'][0].update(start=0,end=14)
   with self.assertRaises(ValueError):self.s.validate_fields(fields,ctx)
  def test_query_design_preserved_through_save_restore_and_relational_join(self):
   from local_workbench.check_design import empty_design
