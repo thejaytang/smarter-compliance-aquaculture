@@ -10,4 +10,6 @@ class ClosingConnection(sqlite3.Connection):
 
 def connect(*args, **kwargs):
     kwargs.setdefault("factory", ClosingConnection)
-    return sqlite3.connect(*args, **kwargs)
+    connection = sqlite3.connect(*args, **kwargs)
+    connection.execute('PRAGMA foreign_keys=ON')
+    return connection

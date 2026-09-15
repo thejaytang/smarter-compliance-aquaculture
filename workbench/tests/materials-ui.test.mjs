@@ -8,7 +8,7 @@ const storage = new Map();
 globalThis.localStorage = {getItem:key=>storage.get(key)||null,setItem:(key,value)=>storage.set(key,String(value)),removeItem:key=>storage.delete(key)};
 const material = () => ({id:'one',title:'Isolated material',source:{source_id:'fixture',snapshot_id:'snapshot-1'},revision:4,content_revision:2,blocks:[{id:'text-1',type:'text',text:'Human correction',source_refs:[{scope_id:'page:1',page:1}]}],scope:[{id:'page:1',label:'Page 1'}],issues:[],checked_scope:[],association_review_required:true,content_status:'draft',candidates:[]});
 function instance(){
-  const x=new Materials();x.state={actor:{id:'reviewer-1',name:'Isolated reviewer'}};x.material=material();x.id=x.material.id;x.localBase=4;x.draft=x.fromMaterial(x.material);x.dirty=true;x.token={};x.items=[x.material];x.nodes=new Map();x.q=s=>{if(!x.nodes.has(s))x.nodes.set(s,{innerHTML:'',textContent:'',scrollTop:0});return x.nodes.get(s);};x.root={querySelectorAll:()=>[]};x.renderMaterial=()=>{};x.renderContent=()=>{};x.message=(text,kind)=>x.lastMessage={text,kind};return x;
+  const x=new Materials();x.requirements={render(){}};x.state={actor:{id:'reviewer-1',name:'Isolated reviewer'}};x.material=material();x.id=x.material.id;x.localBase=4;x.draft=x.fromMaterial(x.material);x.dirty=true;x.token={};x.items=[x.material];x.nodes=new Map();x.q=s=>{if(!x.nodes.has(s))x.nodes.set(s,{innerHTML:'',textContent:'',scrollTop:0});return x.nodes.get(s);};x.root={querySelectorAll:()=>[]};x.renderMaterial=()=>{};x.renderContent=()=>{};x.message=(text,kind)=>x.lastMessage={text,kind};return x;
 }
 test('save sends one material snapshot and never confirms or extracts', async()=>{
   const x=instance(),calls=[];x.api=async(path,body)=>{calls.push({path,body});return {status:'applied',material:{...material(),revision:5}};};
@@ -231,7 +231,8 @@ test('readable original labels remain separate from exact source references in e
   const x=instance(),b={id:'text-1',type:'text',text:'Human correction',source_refs:[{anchor:'original-known',locator:'/body/p[1]'}]};
   x.draft.blocks=[b];x.reader={anchors:[{id:'original-known',label:'Section <2>'}]};
   const read=x.blockMarkup(b,0);
-  assert.match(read,/>Section &lt;2&gt;<\/small>/);
+  assert.doesNotMatch(read,/original-known|<textarea/);
+  x.notebook.active=b.id;assert.match(x.blockMarkup(b,0),/Original/);
   assert.doesNotMatch(read,/>original-known</);
   const edit=x.editBlockMarkup(b,0);
   assert.match(edit,/<summary>Exact source references<\/summary><pre>.*original-known/s);
@@ -292,7 +293,7 @@ test('failed extraction gives recovery advice and preserves raw error for proces
 });
 
 test('empty panes contain only the content extraction entry, with no review declaration or Requirements result',()=>{
- const x=instance();x.draft.blocks=[];assert.match(x.emptyContentMarkup(),/>Auto-extract</);assert.equal(x.reviewDeclarationMarkup(),'');x.renderRequirements();assert.equal(x.q('#mw-requirement-content').innerHTML,'');assert.equal(x.q('[data-action="reprocess"]').disabled,true);assert.equal(x.reviewReady(),false);
+ const x=instance();x.draft.blocks=[];assert.match(x.emptyContentMarkup(),/>Auto-extract</);assert.equal(x.reviewDeclarationMarkup(),'');x.renderRequirements();assert.equal(x.q('#mw-requirement-content').innerHTML,'');assert.equal(x.reviewReady(),false);
  x.material.candidates=[{id:'c',status:'running'}];assert.match(x.emptyContentMarkup(),/aria-busy="true"/);assert.match(x.emptyContentMarkup(),/mw-extract-spinner/);assert.doesNotMatch(x.emptyContentMarkup(),/>Auto-extract</);
 });
 test('Archive requires all declarations but Save allows an unchecked dirty personal draft',()=>{
@@ -318,17 +319,16 @@ test('a failed second save retains explicit declarations as a recoverable person
  const x=instance();x.bodyChanged=true;x.draft.checked_scope=['page:1'];x.draft.association_reviewed=true;let writes=0;x.api=async()=>{if(++writes===2)throw Error('Disconnected');return {status:'applied',material:{...material(),revision:5}};};
  assert.equal(await x.save(),false);assert.equal(x.dirty,true);assert.equal(x.localBase,5);assert.deepEqual(x.draft.checked_scope,['page:1']);assert.equal(x.draft.association_reviewed,true);
 });
-test('Requirements entry waits for content and re-extract cancellation preserves all draft work',()=>{
- const x=instance(),before=cloneForTest(x.draft);x.draft.blocks=[];x.requirementsExtract();assert.equal(x.requirementNotice,undefined);x.draft=before;
- x.renderRequirements();assert.match(x.q('#mw-requirement-content').innerHTML,/Auto-extract requirements/);assert.equal(x.q('[data-action="reprocess"]').disabled,false);
- const nodes=new Map(),d={querySelector:s=>{if(!nodes.has(s))nodes.set(s,{});return nodes.get(s);},close:()=>{d.closed=true;}};x.dialog=(html,wire)=>{x.dialogHTML=html;wire(d);};x.requirementsExtract(true);assert.match(x.dialogHTML,/not been manually edited/);assert.match(x.dialogHTML,/kept and used as context/);assert.match(x.dialogHTML,/may affect existing work/);nodes.get('#mw-reextract-cancel').onclick();assert.equal(x.requirementNotice,undefined);assert.deepEqual(x.draft,before);
- x.requirementsExtract(true);nodes.get('#mw-reextract-confirm').onclick();assert.equal(x.requirementNotice,x.id);assert.match(x.q('#mw-requirement-content').innerHTML,/Not connected/);assert.deepEqual(x.draft,before);
+test('manual passage entry keeps source wording and does not invoke extraction',()=>{
+ const x=instance();x.material.scope=[];const block={id:'p',type:'text',text:'The human shall act.',source_refs:[]};x.draft.blocks=[block];
+ x.notebook.active='p';assert.match(x.blockMarkup(block,0),/To requirements/);assert.match(x.blockMarkup(block,0),/data-md-action="requirement"/);
+ assert.equal(x.draft.blocks[0].text,'The human shall act.');
 });
 function cloneForTest(value){return structuredClone(value);}
-test('block forms preserve nested hierarchy and separate table and image controls',()=>{
- const x=instance();const h={id:'h',type:'heading',level:1,text:'Chapter',source_refs:[]},child={id:'p',type:'text',text:'Paragraph',parent_id:'h',source_refs:[]};x.draft.blocks=[h,child];assert.match(x.blockMarkup(child,1),/--mw-depth:1/);assert.match(x.blockMarkup(child,1),/data-field="text"/);
- const table={id:'t',type:'table',table:{rows:[['A','B']],merges:[],notes:[]},source_refs:[]};x.draft.blocks.push(table);assert.match(x.blockMarkup(table,2),/data-cell="0,1"/);
- const image={id:'i',type:'image',text:'Caption',source_refs:[]};x.draft.blocks.push(image);assert.match(x.blockMarkup(image,3),/Image caption \/ transcription/);assert.match(x.blockMarkup(image,3),/mw-input-image/);
+test('notebook retains hierarchy data while rendering text, tables and image captions without forms',()=>{
+ const x=instance();const h={id:'h',type:'heading',level:1,text:'Chapter',source_refs:[]},child={id:'p',type:'text',text:'Paragraph',parent_id:'h',source_refs:[]};x.draft.blocks=[h,child];assert.match(x.blockMarkup(child,1),/data-md-cell="p"/);assert.doesNotMatch(x.blockMarkup(child,1),/data-field="text"/);assert.equal(child.parent_id,'h');
+ const table={id:'t',type:'table',table:{rows:[['A','B']],merges:[],notes:[]},source_refs:[]};x.draft.blocks.push(table);assert.match(x.blockMarkup(table,2),/<table>/);assert.doesNotMatch(x.blockMarkup(table,2),/<textarea/);
+ const image={id:'i',type:'image',text:'Caption',source_refs:[]};x.draft.blocks.push(image);assert.match(x.blockMarkup(image,3),/Image: Caption/);assert.doesNotMatch(x.blockMarkup(image,3),/mw-input-image/);
 });
 test('editing an issue invalidates declarations even when its resolved flag stays true',()=>{
  const x=instance();x.draft.issues=[{id:'issue',message:'Old note',resolved:true}];x.draft.checked_scope=['page:1'];x.draft.association_reviewed=true;
@@ -339,4 +339,35 @@ test('a changed original identity cannot inherit declarations through a save res
 });
 test('Archive refuses undeclared content before invoking save or preview',async()=>{
  const x=instance();let writes=0;x.save=async()=>{writes++;return true;};await x.archiveContent();assert.equal(writes,0);assert.match(x.lastMessage.text,/declaration/);
+});
+
+test('untouched preview can re-extract while preserving the old candidate server-side',async()=>{
+  const x=instance();x.material.blocks=[];x.material.content_revision=0;x.initialCandidate='old';
+  const candidate={id:'old',status:'ready',input_revision:0,source:x.material.source,blocks:structuredClone(x.draft.blocks)};
+  x.api=async()=>candidate;let mutation;x.mutate=async(path,extra)=>{mutation={path,extra};return true;};let watched=false;x.watchCandidate=()=>watched=true;
+  await x.extractContent();assert.deepEqual(mutation,{path:'/api/material/extract',extra:{replace_candidate_id:'old'}});assert.equal(watched,true);assert.equal(x.initialCandidate,null);
+});
+test('preview refresh protects edits, review checks, changed material, and imported human content',async()=>{
+  for(const change of [x=>x.draft.blocks[0].text='Human edit',x=>x.draft.checked_scope=['page:1'],x=>x.draft.association_reviewed=true,x=>x.draft.issues.push({id:'new',message:'Finding'}),x=>x.material.blocks=[{text:'Saved work'}],(x,c)=>c.origin='legacy_effective_content']){
+    const x=instance();x.material.blocks=[];x.material.content_revision=0;x.initialCandidate='old';
+    const candidate={id:'old',status:'ready',input_revision:0,source:x.material.source,blocks:structuredClone(x.draft.blocks)};change(x,candidate);x.api=async()=>candidate;x.mutate=()=>assert.fail('Human work must not be replaced');
+    await x.extractContent();assert.match(x.lastMessage.text,/Save them/);assert.equal(x.initialCandidate,'old');assert.equal(x.dirty,true);
+  }
+});
+test('preview refresh abandons an old response after switching materials',async()=>{
+  const x=instance();x.material.blocks=[];x.initialCandidate='old';let finish;x.api=()=>new Promise(r=>finish=r);x.mutate=()=>assert.fail('Changed context');
+  const pending=x.extractContent();x.id='other';finish({});await pending;assert.equal(x.initialCandidate,'old');
+});
+test('empty material previews newest ready candidate instead of first old result',async()=>{
+  const x=instance();x.dirty=false;x.draft.blocks=[];x.material.blocks=[];x.material.candidates=[{id:'old',status:'ready'},{id:'new',status:'ready'}];let url;
+  x.api=async path=>{url=path;return {input_revision:x.material.content_revision,source:x.material.source,blocks:[{id:'body',type:'text',text:'Body'}]};};
+  await x.previewEmptyCandidate();assert.match(url,/candidate_id=new/);assert.equal(x.initialCandidate,'new');assert.equal(x.draft.blocks[0].text,'Body');
+});
+
+test('closing to the list retains the open material draft and blocks unresolved requirement writes',()=>{
+ const x=instance(),draft=x.draft;x.listVisible=false;
+ x.requirements.pending=true;x.showList();assert.equal(x.listVisible,false);
+ x.requirements.pending=false;x.requirements.retryRequest={};x.showList();assert.equal(x.listVisible,false);
+ x.requirements.retryRequest=null;x.showList();assert.equal(x.listVisible,true);assert.equal(x.draft,draft);assert.equal(x.dirty,true);assert.equal(x.id,'one');
+ x.showDetail();assert.equal(x.listVisible,false);assert.equal(x.draft,draft);
 });

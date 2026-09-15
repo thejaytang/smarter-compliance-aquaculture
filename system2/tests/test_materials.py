@@ -274,3 +274,52 @@ def test_first_candidate_is_editable_personal_draft_without_review(setup):
     versions=store.history(m['id'])
     assert any(v['blocks'] and v['blocks'][0]['text']=='Machine original' for v in versions)
     assert saved['content_status']!='content_review_complete'
+
+
+def machine_preview(store, material):
+    started=store.start_candidate(req(material))
+    return store.finish_candidate(material['id'],started['candidate']['id'],[text('Website navigation')])
+
+
+def test_refresh_preview_preserves_history_without_claiming_review(setup):
+    store,material=setup
+    first=machine_preview(store,material);old=first['candidate'];material=first['material']
+    request=req(material,replace_candidate_id=old['id'])
+    started=store.start_candidate(request)
+    assert store.start_candidate(request)==started
+    result=store.finish_candidate(material['id'],started['candidate']['id'],[text('Actual body')])
+    prior=store.candidate_detail(material['id'],old['id'])
+    assert prior['status']=='superseded' and prior['blocks']==old['blocks']
+    assert 'adoption' not in prior and 'resolution' not in prior
+    assert result['material']['blocks']==[] and result['material']['confirmation'] is None
+    new=result['candidate']
+    saved=store.save_candidate_draft(req(result['material'],candidate_id=new['id'],blocks=new['blocks']))['material']
+    assert saved['blocks']==[text('Actual body')] and saved['confirmation'] is None
+    assert saved['checked_scope']==[]
+
+
+def test_failed_refresh_keeps_previous_preview_available(setup):
+    store,material=setup;first=machine_preview(store,material)
+    started=store.start_candidate(req(first['material'],replace_candidate_id=first['candidate']['id']))
+    store.finish_candidate(material['id'],started['candidate']['id'],[],complete=False,error='Failure')
+    assert store.candidate_detail(material['id'],first['candidate']['id'])['status']=='ready'
+
+
+def test_refresh_cannot_replace_saved_human_work_or_other_material(setup):
+    store,material=setup;first=machine_preview(store,material)
+    other=store.open(source(source_id='another'),'Other',scope())
+    with pytest.raises(ValueError,match='unsaved machine preview'):
+        store.start_candidate(req(other,replace_candidate_id=first['candidate']['id']))
+    saved=store.save(req(first['material'],blocks=[text('Human work')]))['material']
+    with pytest.raises(ValueError,match='unsaved machine preview'):
+        store.start_candidate(req(saved,replace_candidate_id=first['candidate']['id']))
+    assert store.read(saved['id'])['blocks']==[text('Human work')]
+
+
+def test_refresh_completion_does_not_supersede_concurrently_saved_work(setup):
+    store,material=setup;first=machine_preview(store,material)
+    started=store.start_candidate(req(first['material'],replace_candidate_id=first['candidate']['id']))
+    store.save(req(started['material'],blocks=[text('Concurrent human work')]))
+    store.finish_candidate(material['id'],started['candidate']['id'],[text('New machine body')])
+    assert store.candidate_detail(material['id'],first['candidate']['id'])['status']=='ready'
+    assert store.read(material['id'])['blocks']==[text('Concurrent human work')]

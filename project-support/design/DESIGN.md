@@ -2,7 +2,7 @@
 
 This is the single visual agreement for the active workbench, reorganizing the existing light shell under the [2026-09-14 redesign goal](workbench-ui-redesign-goal-20260914.md) for the user's material-processing task. It applies UI UX Pro Max accessibility/layout guidance and Impeccable Operate guidance. Product truth is in [PRODUCT.md](PRODUCT.md); acceptance status is in [PROJECT_STATE.md](../../PROJECT_STATE.md).
 
-The skill's generic marketplace, marketing typography and remote-font suggestions do not fit this task. The user already specified the audience, task, aesthetic and permission for reversible decisions. Preserve that direction and the working three-pane structure.
+The skill's generic marketplace, marketing typography and remote-font suggestions do not fit this task. The user already specified the audience, task, aesthetic and permission for reversible decisions. Preserve that direction. The 2026-09-16 approved extension uses four resizable, independently scrolling panes, with collapse/restore rails and horizontal scrolling at narrow widths.
 
 ## Runtime tokens
 
@@ -28,15 +28,17 @@ Definitions live in [style.css](../../workbench/ui/style.css); component styles 
 
 ## Task hierarchy
 
+- The HTML original-pane header keeps its title on the left and chapter chooser on the right. Chapter selection navigates immediately; omit Go and the former reader Tools menu.
+
 - The persistent material title/version and Save action lead the work area. Candidate processing, personal draft state and master confirmation must remain separately worded.
 - Page-switching subpages expand under their parent in the left sidebar, with a persistent selected background, marker and accessible current-page state. Search, filter, sort and refresh controls remain in the content area. The collapsed rail retains child icons and tooltips within the active group.
 - A left sidebar (208px expanded, 56px collapsed) contains workspace/module navigation. The top Smarter Compliance mark toggles it without remounting the current task; collapse preference persists locally. Collaboration and the reviewer icon sit at the bottom, with the reviewer menu opening beside the rail. This 2026-09-14 user revision supersedes the earlier horizontal global row. One compact record task bar contains identity, save status and final decisions. Package exchange, version/history and maintenance are named on-demand actions; no extra permanent collaboration row.
 - Full-width source/material lists are replaced by their full-space detail when opened. Back/switch preserves query and location; no permanent global rail or library beside material panes.
 - The desktop task frame owns viewport height. Original and content scroll independently inside opaque surfaces; toolbar growth must not make Save disappear above a long page.
-- Material content starts empty with a centered Auto-extract action and a real loading state. Results use separate heading/text inputs organized by structural hierarchy, with independent table/image components and collapsed block tools. The initial Requirements body is empty; its extraction entry becomes available after content exists. Its actual processor remains unconnected and must say so when invoked. Re-extract requires a confirmation describing preservation of human-edited items and their use as context; this future processing rule must not be represented as an operating engine.
+- Material content starts with Auto-extract. New candidates contain body content and headings, with excluded navigation/TOC evidence retained separately. The 2026-09-15 user revision replaces dense block forms with one continuous Markdown document: all content is present, chapter/clause sections show structural nesting, paragraphs flow naturally, and the active paragraph reveals its editor and toolbar. Deletions use red background plus strikethrough; additions use green background. Save preserves marks. Manual requirement splitting is connected in the third pane; automatic requirement extraction remains unavailable. [Markdown contract](../../workbench/docs/markdown-content.md).
 - Put the human responsibility declarations at the end of the content. Require complete-original/omission and hierarchy/dependency checks before Archive, and invalidate them when content or issues change. Save remains a personal draft operation, independent of those checks. Preserve exact-revision confirmation, coordinator adoption and source/conflict protections.
-- All three material panes remain side by side at every viewport/zoom level. Use operator-adjustable widths, keyboard resizing and accessible horizontal overflow where needed; never pane tabs or an expanded mode that hides core actions.
-- The normal 100% desktop shell targets at most 120-140px combined global/task/pane-header height. Evidence text stays readable. Archive reuses the same three-pane frame in read-only mode and labels the confirmed content-only scope explicitly.
+- All four material panes remain side by side at every viewport/zoom level. Use operator-adjustable widths, keyboard resizing and accessible horizontal overflow where needed; never pane tabs or an expanded mode that hides core actions.
+- The normal 100% desktop shell targets at most 120-140px combined global/task/pane-header height. Evidence text stays readable. Archive reuses the same four-pane frame in read-only mode and labels the confirmed content-only scope explicitly.
 - HTML Location shows a semantic outline and initially navigates to recognizable document content. Complete original start and all exact source anchors remain accessible; no content is deleted to simplify navigation.
 - PDF and HTML original panes give their remaining height to one reading viewport. Compact page/location controls stay adjacent to the original; warnings, native-text assistance and alternative viewing belong in Reading details. Global header margins must not consume the reader's height.
 - Where supported by the loaded parent, PDF uses the locally bundled source-document reader with continuous pages and original-position text selection. Search, zoom and the full-reader link are reading actions only. The Page image fallback and full-reader link must retain the current source and page; unsupported or textless pages cannot masquerade as completed extraction.
@@ -52,3 +54,11 @@ Opaque white content, dark text and an explicit selected state take precedence o
 ## Verification boundary
 
 Matched actual-browser captures and behavior checks are recorded under [the execution entry](../product-readiness-20260912/execution.md). A token choice or screenshot alone does not establish accessible behavior, parsing quality or colleague acceptance. Complete one concentrated visual pass, a material correction batch and one confirmation; then prioritize behavior and quality evidence.
+
+## Requirement colours and interpretation
+
+The [four-pane contract](../../workbench/docs/requirement-interpretation.md) owns this extension. Shared field colours live in `four-pane.css`, not per-Requirement random assignments. Neutral Scope/Condition/Demand groups do not imply a grammatical mapping. Current text, Changes and Requirement annotations are mutually exclusive reading modes. API configuration belongs to global Settings, with explicit per-generation context disclosure.
+
+## 2026-09-16 workflow simplification
+
+Interpretation values lead the fourth pane. Evidence, basis, gaps, candidates, raw source structure and optional Site Model mappings use progressive disclosure. Completed Requirement summaries expose Interpret directly. A source trail identifies the saved interpretation, Requirement, splitting revision, source paragraph and quotation anchors. Pin Save within the pane and scope Ctrl/Cmd+S to its editor. Preserve open disclosures and reading position through local redraws. Advanced rule comparison trees remain optional and must not displace the six-field manual path.

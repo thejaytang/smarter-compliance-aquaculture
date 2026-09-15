@@ -49,3 +49,30 @@ system2/outputs/
 # Local environment links and live coordination locks are not portable.
 **/.venv
 **/.system1-source-management.lock
+
+# Local acceptance originals, databases and restart recovery for manual splitting.
+project-support/requirement-splitting-20260915/fixture/
+project-support/requirement-splitting-20260915/activation-backup/
+
+# Isolated Markdown notebook engineering artifacts
+/project-support/markdown-notebook-20260915/fixture/
+/project-support/markdown-notebook-20260915/activation-backup/
+/project-support/markdown-notebook-20260915/real-html-extraction*/
+
+/project-support/markdown-notebook-20260915/pa004-correction/*.sqlite*
+/project-support/markdown-notebook-20260915/pa004-correction/parser-artifacts/
+/project-support/markdown-notebook-20260915/pa004-correction/result.json
+/project-support/markdown-notebook-20260915/pa004-correction/activation-backup/
+
+# Four-pane local backup and isolated engineering data; never publish credentials.
+/project-support/four-pane-20260916/before/
+/project-support/four-pane-20260916/fixture/
+/project-support/four-pane-20260916/activation-backup/
+**/ai-provider.json
+
+# Optimization recovery is local; publish only selected reports and tests.
+/project-support/workbench-optimization-20260916/before/
+/project-support/workbench-optimization-20260916/activation-backup/
+/project-support/workbench-optimization-20260916/fixture/
+
+/project-support/workbench-optimization-20260916/final-activation/

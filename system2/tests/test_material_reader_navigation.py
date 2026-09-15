@@ -16,6 +16,30 @@ def read_snapshot(tmp_path, raw):
     return result
 
 
+def test_document_information_uses_source_identity_not_website_or_body(tmp_path):
+    raw = '''<html><head><meta charset="utf-8"><title>Website title</title></head><body>
+    <nav><h1>Website menu</h1></nav><div id="documentMeta"><h1>Regulation &amp; scope</h1>
+    <table><tr><th>Dato</th><td>FOR-2022-08-22-1484</td></tr>
+    <tr><th>Hjemmel</th><td><a href="https://example.invalid">Law § 10</a></td></tr></table></div>
+    <div id="documentBody"><h2>Chapter 1</h2><p>Requirement text</p></div></body></html>'''.encode()
+    result = read_snapshot(tmp_path, raw)
+    info = result['document_information']
+    assert info['title']['value'] == 'Regulation & scope'
+    assert [(f['label'], f['value']) for f in info['fields']] == [
+        ('Dato', 'FOR-2022-08-22-1484'), ('Hjemmel', 'Law § 10')]
+    rendered = html.document_fromstring(result['html'])
+    for item in [info['title'], *info['fields']]:
+        assert rendered.get_element_by_id(item['anchor']).text_content().strip() == item['value']
+
+
+def test_document_information_does_not_invent_missing_fields(tmp_path):
+    result = read_snapshot(tmp_path, b'<nav><h1>Menu</h1></nav><main><h1>Document title</h1><p>Body</p></main>')
+    assert result['document_information']['title']['value'] == 'Document title'
+    assert result['document_information']['fields'] == []
+    result = read_snapshot(tmp_path, b'<nav><h1>Menu</h1></nav><p>Body</p>')
+    assert result['document_information']['title'] is None
+
+
 def test_outline_uses_meaningful_content_and_preserves_all_legacy_anchors(tmp_path):
     raw = b'''<html><head><title>Website title</title><meta name="x" content="x">
     <link href="https://example.invalid/style"><script>UNSAFE()</script></head>
@@ -74,3 +98,18 @@ def test_ambiguous_profile_falls_back_without_hiding_either_document(tmp_path):
     assert [a['label'] for a in result['navigation_anchors']] == ['First record', 'Second record']
     assert 'Incomplete template' in result['html']
     assert 'First text' in result['html'] and 'Second text' in result['html']
+
+def test_hydration_comment_tails_are_preserved_in_original_title_and_body(tmp_path):
+    raw=b'<html><head><meta charset="utf-8"></head><body><main><h1><!--[0--><!-- -->Fish welfare<!-- --></h1><p><!-- -->First <b>bold</b><!-- --> last.</p></main></body></html>'
+    result=read_snapshot(tmp_path,raw)
+    rendered=html.document_fromstring(result['html'])
+    assert rendered.get_element_by_id(result['document_information']['title']['anchor']).text_content()=='Fish welfare'
+    assert 'First bold last.' in rendered.text_content()
+
+
+def test_journal_title_and_head_only_document_title(tmp_path):
+    journal=read_snapshot(tmp_path,b'<html><head><title>technical.xml</title></head><body><p class="oj-doc-ti">REGULATION</p><p class="oj-doc-ti">Animal Health Law</p></body></html>')
+    assert journal['document_information']['title']['value']=='REGULATION\nAnimal Health Law'
+    head=read_snapshot(tmp_path,b'<html><head><title>Aquaculture guidance</title></head><body><p>Guidance</p></body></html>')
+    assert head['document_information']['title']['value']=='Aquaculture guidance'
+    assert head['document_information']['title']['anchor'] is None

@@ -199,3 +199,11 @@ Actual office validation remains mandatory: [Windows offline review checklist](w
 ## Workflow correction compatibility
 
 The independent source workspace, structural material editing and version 2 collection exchange use the existing component environments and standard-library archive/locking code. No new model, scheduler or external-sync dependency is introduced. Version 1 single-item work/return packages remain readable. Windows verification must include multiple selected results and an inspection result, not only a single material export; see [the office checklist](workbench/docs/windows-offline-review-checklist.md). Actual Windows evidence remains pending until recorded.
+
+## Markdown frontend assets
+
+Workbench Markdown rendering and diff tools are pinned under `workbench/frontend/` with a project-local `node_modules` and npm lockfile. `npm ci --ignore-scripts` followed by `npm run build` rebuilds the shipped `workbench/ui/vendor/markdown/tools.mjs` and notices. Daily operation uses the committed local browser bundle and needs no Node service or CDN. [Notebook tool contract](workbench/docs/markdown-content.md).
+
+## GitHub portability checks
+
+The branch-scoped `workbench-portability.yml` exercises Windows and Ubuntu with synthetic test data. Workbench HTTP integration tests require the separately installed System2 environment because the reviewer bridge launches that component. Install both declared environments before running the complete Workbench suite. For Windows Git checkouts containing the retained historical evidence tree, enable `core.longpaths` before checkout (or use a short destination path); the CI runner applies this setting before checkout. This does not change application data locations or remove historical artifacts.

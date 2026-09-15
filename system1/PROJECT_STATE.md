@@ -1,5 +1,7 @@
 # System1 current state
 
+2026-09-14 Mac integration: the Windows compatibility source is applied locally. All 168 System1 regression tests passed in an isolated candidate; the applied-source SQLite commit/rollback/close/rename check passed again. Source integration does not establish normal worker activation. [Mac evidence](../project-support/macos-windows-sync-20260914/RESULTS.md).
+
 2026-09-14 Windows compatibility: Windows validation passed all 168 System1 tests. Deterministic SQLite handle release, drive-anchor validation and UTF-8 launch/setup settings are implemented. [Windows evidence](../project-support/windows-compatibility-20260914/RESULTS.md) records scope; shared setup remains in ENVIRONMENT.md. Runtime authority and reviewer history remain outside this source change.
 
 2026-09-14 peer synchronization adds a revision-guarded owning-store source snapshot apply route with named attribution, protected originals, immutable request replay and additive source/task history evidence. Existing local issue gates remain; imported task evidence is not automatically executed. Any approved reviewer on a full installation can apply explicitly reviewed source work. 59 targeted source/workflow checks passed on isolated stores. Normal source database hash was unchanged across code activation. [Integration evidence](../project-support/settings-sync-20260914/RESULTS.md).

@@ -22,6 +22,12 @@ For target/design or subsequent implementation work, first read the [human-led, 
 
 The [September 10 target](project-support/design/requirement-workstream-target.md) and [decision register](project-support/design/decision-boundaries.md) retain earlier context and nonconflicting protections. Runtime/compatibility rules below describe existing behavior until the new target transition is implemented and verified. In the new workflow, machine confidence cannot replace human material confirmation; viewing or saving cannot implicitly trigger downstream conversion. Original, Canonical and historical human work remain protected. Interface replacement does not authorize deleting old records or moving modules merely to match pane numbers. Consult current state and the user's instruction for implementation authorization; a target or future QA schedule alone is not authorization to activate it.
 
+The 2026-09-15 user revision authorizes the [continuous Markdown and body-only extraction](workbench/docs/markdown-content.md). The later same-day clarification requires a complete continuous Markdown document with structural block grouping and inline diffs, without numbered cells or block pagination. It supersedes dense content block-form and Notebook-cell layouts. Preserve block identity, original links, revision baselines and existing human work; body filtering applies to new candidates with retained exclusion evidence. The later document-context revision retains source-derived document identity in a separate collapsible section above the body; body-only filtering does not mean discarding useful document metadata. Document information appears after extraction; edits retain Markdown baselines in a source-bound `document_information` role, excluded from body chapter hierarchy and Requirement intake. Review-impact notifications belong at page level and may be dismissed without changing review state.
+
+The 2026-09-16 user-approved [four-pane interpretation contract](workbench/docs/requirement-interpretation.md) supersedes earlier three-pane-only and environment-only AI configuration proposals. Use one shared API in Settings, preserve actor-bound source spans and six-field drafts, derive checking logic without executing Site Model assessment, and keep candidate adoption, save, review and material archive separate. Workbench owns this implementation; do not add a System3 service. Recovery includes its SQLite tables; collaboration ZIPs do not yet include splitting/interpretations. Never export or log the shared API credential file.
+
+The user-authorized 2026-09-16 [optimization plan](project-support/workbench-optimization-20260916/PLAN.md) extends source traceability with version-bound relational projections and optional validated QueryBuilder handoff. Immutable histories own saved evidence; active Requirement links retain exact nested quantities. Never infer executable Site Model bindings from prose. Branch-scoped portability CI exercises synthetic inputs only; it does not enable business schedules or prove native Windows desktop acceptance.
+
 ## Documentation ownership
 
 - Write all maintained project documentation in English. Preserve exact identifiers, commands, file paths and authoritative source quotations. Historical archives and original source material retain their original language.
@@ -67,6 +73,16 @@ The [September 10 target](project-support/design/requirement-workstream-target.m
 Use adaptive, rolling-horizon planning. Diagnose observed failures with the smallest discriminating check before modifying. At a checkpoint choose `CONTINUE`, `ADJUST`, `BACKTRACK`, `PIVOT` or `STOP`.
 
 Update the owning system's `PROJECT_STATE.md` after events that change future judgments. Update this workstream root's `PROJECT_STATE.md` when ownership or integration changes. Keep states decision-oriented, not chronological command logs. Preserve backups, snapshots, logs and human-review history.
+
+## Cross-platform design and acceptance
+
+Windows and macOS are both required product platforms. Evaluate both when designing features, choosing dependencies, defining data formats and planning acceptance. This applies to new work and changes to existing behavior.
+
+- Keep business and review logic shared. Isolate operating-system differences in component-owned platform helpers and launchers; reuse existing helpers before adding another implementation.
+- Use platform-aware filesystem paths and portable serialized identifiers. Account for drive roots, separators, long paths, Unicode, encoding and newline conversion. Preserve original source bytes, hashes and historical evidence paths.
+- Define database, file and subprocess lifetimes explicitly. Account for Windows file locks, connection closure, rename/replace behavior and exclusive local ports while preserving transaction, rollback, backup and human-decision guarantees.
+- Check interpreter/tool discovery, native dependencies, timezone data, memory/process APIs and environment setup on both systems. Keep environments rebuildable per component; isolate platform-only imports and dependencies.
+- Include affected save/reopen, export/import, original-file viewing, launcher and browser interactions in platform acceptance. Run relevant automated checks on both systems and native end-to-end checks for affected operating-system behavior. Mark unavailable platform verification as UNVERIFIED; single-platform passes or mocked platform branches do not establish cross-platform completion.
 
 ## System1 operating rules
 
@@ -300,7 +316,7 @@ Create a separate System3 environment before implementing a running service. Do 
 
 Scope: `workbench/`, relative to this workstream root.
 
-- Workbench is the shared Requirement workspace for System1, System2 and System3. Navigation and Overview expose System1 source management and one Materials workbench only; do not expose a separate System3 route/card/queue. The deferred Structured requirements pane stays inside each material with Process disabled. Internal System3 design and historical interfaces remain retained. Keep System1 source statistics in its own detail area; do not add sources, extraction items and enrichment items into one total or present unavailable/demo data as live zero/completion.
+- Workbench is the shared Requirement workspace for System1, System2 and System3. Navigation and Overview expose System1 source management and one Materials workbench only; do not expose a separate System3 route/card/queue. The user-authorized 2026-09-15 manual requirement splitting pane stays inside each material; follow [its contract](workbench/docs/manual-requirement-splitting.md). Automatic processing remains disabled. Preserve exact k / inclusive min-max semantics, source-span fidelity, stable IDs, personal isolation and step history. Internal System3 design and historical interfaces remain retained. Keep System1 source statistics in its own detail area; do not add sources, extraction items and enrichment items into one total or present unavailable/demo data as live zero/completion.
 - Material navigation is Pending materials and Archive. Archive requires an actual accepted, fully confirmed main revision. Later spot-check tasks return to Pending without replacing archived content or historical confirmations. Save/export/adopt/confirm remain in-material actions.
 - Use this workstream root's `Open Workbench.command` as the sole normal macOS entry. It launches a single loopback-only service and opens the system default browser. Retired menu launchers are historical artifacts.
 - Use this component's own .venv; it uses pinned tzdata on Windows and otherwise standard-library runtime dependencies. Call System1 through its own Code/.venv/bin/python and system1.workbench_bridge JSON adapter. Never share mutable environments.
@@ -315,6 +331,6 @@ Scope: `workbench/`, relative to this workstream root.
 - Use the approved reviewer roster in workbench/src/local_workbench/identities.py; preserve original external-review evidence when normalising names.
 - Validate writes on isolated owning databases and derived workbooks; test request replay/staleness/locks/recovery and rendered UI. Current platform state belongs to workbench/PROJECT_STATE.md; update the workstream integration state and System1 state when entry ownership or adapter behavior changes.
 
-User-facing names: **Source Management System** and **Requirement Extraction System**. Keep internal `system1`/`system2` identifiers stable; Requirement Extraction System includes the human-led material workflow and does not claim the deferred processor is connected.
+User-facing names: **Source Management System** and **Requirement Extraction System**. Keep internal `system1`/`system2` identifiers stable; Requirement Extraction System includes the human-led material workflow and distinguishes connected manual splitting from the disconnected automatic processor.
 
 - Source Management System uses its own source/task workspace and retains all existing task types. Source examples never limit its scope. Missing originals cannot enter INCLUDE. Source confirmations close only explicitly checked, version-bound tasks and issues; generic old issue flags remain evidence only. Version 2 collections preserve per-item import/adoption receipts and version 1 compatibility; inspection exchange does not establish Windows acceptance.

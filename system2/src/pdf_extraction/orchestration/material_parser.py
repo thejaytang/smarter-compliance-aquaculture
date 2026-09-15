@@ -18,8 +18,8 @@ import re
 from ..evidence.material_reader import _manifest, html_anchor
 from ..intake.registry import read_snapshot
 
-VERSION = 'material-structural-parser/7'
-POLICY = {'adapter': VERSION, 'semantic_processing': False, 'external_models': False, 'ocr': False, 'pdf_window_pages': 3, 'pdf_backend': 'pdfium', 'pdf_marker_order': 'same-row-before-body/1', 'pdf_source_rows': 'source-exact-same-row/1', 'pdf_paragraph_grouping': 'same-page-source-preserving/1', 'table_grid_guard': 'native-line-grid-consistency/1', 'table_grid_tolerance_points': 1.0, 'table_grid_reject_ratio': 0.25, 'human_adoption_required': True}
+VERSION = 'material-structural-parser/9'
+POLICY = {'adapter': VERSION, 'semantic_processing': False, 'external_models': False, 'ocr': False, 'pdf_window_pages': 3, 'pdf_backend': 'pdfium', 'pdf_marker_order': 'same-row-before-body/1', 'pdf_source_rows': 'source-exact-same-row/1', 'pdf_paragraph_grouping': 'same-page-source-preserving/1', 'table_grid_guard': 'native-line-grid-consistency/1', 'table_grid_tolerance_points': 1.0, 'table_grid_reject_ratio': 0.25, 'human_adoption_required': True, 'body_selection': 'body-content/1', 'html_list_tables': 'explicit-numbered-layout/1'}
 CONFIG_HASH = sha256(json.dumps(POLICY, sort_keys=True).encode()).hexdigest()
 NUMBERING_MARKER = re.compile(r'(?:\d+(?:\.\d+)+[.)]?|\d+[.)]|[a-z][.)]|[•●▪◦])')
 
@@ -58,6 +58,25 @@ def _static_text(element):
                     parts.extend([value, '\n'])
                 else:
                     parts.append(value)
+    return ''.join(parts)
+
+
+def _inline_markdown(element):
+    """Preserve the basic inline formatting that plain Markdown can represent."""
+    from bs4 import Tag, NavigableString, Comment
+    parts=[]
+    for child in element.children:
+        if isinstance(child,Comment):continue
+        if isinstance(child,NavigableString):parts.append(re.sub(r'([\\`*_[\]<>])',r'\\\1',str(child)))
+        elif isinstance(child,Tag):
+            if child.name in {'script','style','head','noscript'}:continue
+            value=_inline_markdown(child)
+            if child.name=='br':parts.append('\n')
+            elif child.name in {'b','strong'}:parts.append('**'+value+'**')
+            elif child.name in {'i','em'}:parts.append('*'+value+'*')
+            elif child.name in {'s','del'}:parts.append('~~'+value+'~~')
+            elif child.name=='code':parts.append('`'+value+'`' if '`' not in value else value)
+            else:parts.append(value)
     return ''.join(parts)
 
 
@@ -245,6 +264,23 @@ def _html_blocks(raw, source, output):
             append(el, 'image', el.get('alt', ''), image={'source_ref': ref(el), 'attachment': None, 'attribution': 'Image element in the saved original; external image assets are not fetched.'})
             return
         if el.name == 'table':
+            # Lovdata uses one-row tables as lettered/numbered list layout.
+            # Require explicit source semantics, not merely a two-column shape.
+            rows = el.find_all('tr')
+            cells = rows[0].find_all(['td', 'th'], recursive=False) if len(rows) == 1 else []
+            marker = _static_text(cells[0]).strip() if len(cells) == 2 else ''
+            if ('listeItem' in el.get('class', []) and len(cells) == 2
+                    and 'listeitemNummer' in cells[0].get('class', [])
+                    and re.fullmatch(r'(?:[a-zæøå]|\d+)[.)]', marker, re.I)
+                    and not el.find(['table', 'img'])
+                    and all(c.get('colspan', '1') == '1' and c.get('rowspan', '1') == '1' for c in cells)):
+                b = append(el, 'text', marker + ' ' + _static_text(cells[1]).strip())
+                b['numbering'] = marker
+                try: b['list_depth'] = max(0, int(el.get('data-level', '1')) - 1)
+                except ValueError: b['list_depth'] = 0
+                b['markdown_source'] = marker + ' ' + _inline_markdown(cells[1]).strip()
+                b['source_layout'] = 'numbered_list_table'
+                return
             table = build_table(el, ids)
             if table.column_count is None:
                 warnings.append('Ambiguous HTML table spans retained as row text; repair table geometry manually at ' + paths[id(el)])
@@ -265,10 +301,25 @@ def _html_blocks(raw, source, output):
             return
         # Preserve all static body text, including outside known profile roots.
         semantic = {'p', 'li', 'dt', 'dd', 'pre', 'blockquote', 'figcaption', 'caption', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'}
-        nested = el.find(['table', 'img'] + list(semantic))
+        nested = el.find(['table', 'img', 'button', 'select'] + list(semantic)) or el.find(attrs={'role':'button'})
         if el.name in semantic and nested is None:
             text = _static_text(el).strip()
-            if text: append(el, 'heading' if re.fullmatch('h[1-6]', el.name) else 'text', text)
+            if text:
+                b=append(el, 'heading' if re.fullmatch('h[1-6]', el.name) else 'text', text)
+                markdown=_inline_markdown(el).strip()
+                if b['type']=='heading':markdown='#'*b['level']+' '+markdown
+                elif el.name=='li':
+                    parent=el.find_parent(['ul','ol'])
+                    if parent is not None:
+                        siblings=parent.find_all('li',recursive=False)
+                        try:ordinal=int(el.get('value',int(parent.get('start',1))+next(i for i,x in enumerate(siblings) if x is el)))
+                        except (ValueError,StopIteration):ordinal=1
+                        marker=str(ordinal)+'. ' if parent.name=='ol' else '- '
+                        b['list_depth']=max(0,len(el.find_parents(['ul','ol']))-1)
+                        markdown=marker+markdown
+                elif el.name=='blockquote':markdown='\n'.join('> '+line for line in markdown.splitlines())
+                elif el.name=='pre':markdown='```\n'+text+'\n```'
+                b['markdown_source']=markdown
             return
         buffer = []
         def flush():
@@ -280,7 +331,7 @@ def _html_blocks(raw, source, output):
             if isinstance(child, NavigableString): buffer.append(str(child))
             elif isinstance(child, Tag):
                 if child.name == 'br': buffer.append('\n')
-                elif child.name in {'span', 'a', 'b', 'strong', 'i', 'em', 'u', 's', 'small', 'sup', 'sub', 'code'} and not child.find(['table', 'img'] + list(semantic)):
+                elif child.name in {'span', 'a', 'b', 'strong', 'i', 'em', 'u', 's', 'small', 'sup', 'sub', 'code'} and child.get('role')!='button' and not child.find(['table', 'img', 'button', 'select'] + list(semantic)):
                     buffer.append(_static_text(child))
                 else:
                     flush(); walk(child)
@@ -503,7 +554,7 @@ def _pdf_blocks(raw, source, output, page_indices):
                         # overlaps remain visible for human association review.
                         if any(b[0]<=x0 and b[1]<=y0 and b[2]>=x1 and b[3]>=y1 for b,_ in tables):
                             continue
-                        block = _block(source, f'page:{index}:line:{n}', 'text', text, source_refs=[{**reference, 'bbox':list(line.bbox_points), 'native_id':line.id}])
+                        block = _block(source, f'page:{index}:line:{n}', 'text', text, source_refs=[{**reference, 'bbox':list(line.bbox_points), 'page_size':[page.width_points,page.height_points], 'native_id':line.id}])
                         page_blocks.append(block)
                     image_boxes = []
                     for obj in original_page.get_objects():
@@ -590,6 +641,12 @@ def parse_material(source, source_root, output, *, page_indices=None):
     if kind == 'html': blocks,warnings,artifacts = _html_blocks(raw,source,output)
     elif kind == 'excel': blocks,warnings,artifacts = _excel_blocks(raw,source,output)
     else: blocks,warnings,artifacts,covered,usable,unresolved = _pdf_blocks(raw,source,output,page_indices)
+    from .material_body import select_body
+    blocks, body_filter = select_body(blocks, kind, raw)
+    _write(output / 'body-selection.json', body_filter)
+    artifacts.append('body-selection.json')
+    if kind == 'pdf':
+        usable = [scope for scope in usable if any(any(ref.get('scope_id') == scope for ref in b.get('source_refs', [])) and _has_content([b]) for b in blocks)]
     if kind != 'pdf':
         covered = [s['id'] for s in manifest['scope']]
         usable, unresolved = (covered, []) if _has_content(blocks) else ([], [{'scope_id':s, 'code':'extracted_content_empty', 'message':'No usable text or table content was extracted. Inspect the original.'} for s in covered])
@@ -599,7 +656,7 @@ def parse_material(source, source_root, output, *, page_indices=None):
                  'snapshot_id':source.snapshot_id,'config_hash':CONFIG_HASH,'blocks':blocks,'scope':manifest['scope'], 'covered_scope':covered,
                  'processed_scope':covered, 'usable_scope':usable, 'unprocessed_scope':unprocessed,
                  'warnings':list(dict.fromkeys(manifest['warnings']+warnings)), 'unresolved':unresolved,
-                 'canonical_artifacts':artifacts,'status':status,
+                 'canonical_artifacts':artifacts,'status':status,'body_filter':body_filter,
                  'review_policy':'human_material_confirmation_required', 'requirement_status':'not_connected'}
     _write(output / 'candidate.json',candidate)
     return candidate

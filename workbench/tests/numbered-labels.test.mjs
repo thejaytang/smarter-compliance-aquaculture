@@ -1,3 +1,4 @@
+import {MarkdownNotebook} from '../ui/markdown-content.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {numberedText,orderMarkup,orderEditorMarkup,relationshipValueMarkup,relationshipEditor,differenceLabel} from '../ui/collaboration.js';
@@ -22,9 +23,9 @@ test('order, related heading and block difference labels use one display rule wi
 
 test('actual chapter, reading and parent/dependency option renderers preserve source and editable raw fields',()=>{
  const heading={id:'h',type:'heading',numbering:'§ 13',text:'§ 13 a.<Fellesansvar>',level:1,source_refs:[]},child={id:'c',type:'text',numbering:'TEST1.1',text:'§ 13 a.User note',parent_id:'h',dependencies:['h'],source_refs:[]};
- const x=Object.create(Materials.prototype),nodes=new Map();Object.assign(x,{root:{},collaboration:{readonly:false},material:{scope:[]},draft:{blocks:[heading,child]},updateBar(){},renderList(){},renderContent(){},q(s){if(!nodes.has(s))nodes.set(s,{});return nodes.get(s);}});const before=structuredClone(x.draft);
+ const x=Object.create(Materials.prototype),nodes=new Map();Object.assign(x,{root:{},collaboration:{readonly:false},material:{scope:[]},draft:{blocks:[heading,child]},updateBar(){},renderList(){},renderContent(){},q(s){if(!nodes.has(s))nodes.set(s,{});return nodes.get(s);}});x.notebook=new MarkdownNotebook(x);const before=structuredClone(x.draft);
  x.renderMaterial();assert.match(nodes.get('#mw-content-tools').innerHTML,/<option value="0">§ 13 a\.&lt;Fellesansvar&gt;<\/option>/);
- x.collaboration.readonly=true;assert.match(x.blockMarkup(heading,0),/<h4>§ 13 a\.&lt;Fellesansvar&gt;<\/h4>/);assert.match(x.blockMarkup(child,1),/TEST1\.1 § 13 a.User note/);
+ x.collaboration.readonly=true;assert.match(x.blockMarkup(heading,0),/<h1>§ 13 a\.&lt;Fellesansvar&gt;<\/h1>/);assert.match(x.blockMarkup(child,1),/TEST1\.1 § 13 a.User note/);
  const edit=x.editBlockMarkup(child,1);assert.match(edit,/<option value="h"[^>]*>§ 13 a\.&lt;Fellesansvar&gt;<\/option>/);assert.match(edit,/data-field="numbering" value="TEST1\.1"/);assert.match(edit,/>§ 13 a.User note<\/textarea>/);
  const raw=x.editBlockMarkup(heading,0);assert.match(raw,/data-field="numbering" value="§ 13"/);assert.match(raw,/>§ 13 a\.&lt;Fellesansvar&gt;<\/textarea>/);assert.deepEqual(x.draft,before);
 });

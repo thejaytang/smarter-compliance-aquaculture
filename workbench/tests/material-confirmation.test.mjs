@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {Materials} from '../ui/materials.js';
 function fixture(){
- const w=new Materials(),elements=new Map();let focused=0,scrolled=0;
+ const w=new Materials();w.requirements={render(){}};const elements=new Map();let focused=0,scrolled=0;
  const checklist={open:false,scrollIntoView(){scrolled++;},querySelector(){return {focus(){focused++;}};}};
  const f={w,elements,requests:[],checklist,get focused(){return focused;},get scrolled(){return scrolled;}};
  w.material={content_revision:7,scope:[{id:'page:1',label:'Page 1'},{id:'page:2',label:'Page 2 · scan'}],candidates:[]};

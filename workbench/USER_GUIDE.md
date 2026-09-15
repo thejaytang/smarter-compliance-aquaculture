@@ -1,5 +1,13 @@
 # Local Workbench User Guide
 
+## Continuous Markdown content
+
+The middle pane presents the entire body as continuous Markdown. Headings and nested structural guides show chapter/paragraph relationships; there are no numbered cells or block pages. Double-click a paragraph to edit it. Deletions use red backgrounds and strikethrough; additions use green backgrounds directly in the document and survive Save/reopen. [Workflow and tools](docs/markdown-content.md). Re-extract can refresh an untouched machine preview, while preserving its prior result. Existing human edits remain protected.
+
+## Manual requirement splitting
+
+In personal material work, save the content and choose **To requirements** beside a text passage. Work through **Outer relationships → Unit fields → Result** in the right pane. Every applied step is saved separately. [Full instructions and storage boundaries](docs/manual-requirement-splitting.md). Automatic requirement extraction remains disconnected; the new personal splitting records are not yet included in collaboration ZIPs.
+
 ## Settings and collaboration (current)
 
 Open **Settings**, or your name at the bottom left. Keep using **Current reviewer** to switch identity. All saved work remains attributed to its author.
@@ -36,9 +44,9 @@ Use the left sidebar to choose **Sources** or **Materials**. Sources contains **
 - Add sources accepts a source URL or an original PDF, HTML or Excel file and editable metadata. Adding creates a pending candidate. Source discovery has separate registered-source update checks and API-based source expansion. The expansion entry displays Not connected until a search API service is configured.
 - Source review groups outstanding work by source. Open a title to compare the original and review fields. H/M/L changes remain personal edits until Save or explicit Confirm review. Save preserves progress without changing the effective source. Confirm review previews the proposed effective selection before application. Missing originals and unresolved conditions remain governed by their existing checks.
 - Source register is the complete numbered table, including PENDING. Details are read only. Request review creates a pending task. Review history presents recorded review actions, including applied reviews whose source still needs work; it is not another source register.
-- Material review uses a full-width list and the same three-pane detail for extraction, content review and inspection. The original, extracted content and Requirements panes always remain side by side. Drag a separator or focus it and use arrow keys; narrower views retain readable panes with horizontal scrolling. Each pane scrolls independently.
-- Save (also Cmd/Ctrl+S in material review) is separate from completion. Archive saves the current draft first and requests an explicit saved-content confirmation. Any approved reviewer can finalize it; no separate administrator merge-save is required. Content-only archives display **Content finalized · Requirements unfinished**. Requirements remains **Not connected**.
-- Archive opens the same complete three-pane reader as read-only finalized content. A review task can refer to an exact archived revision without removing that archive. Completing an unchanged inspection closes its task; modified material requires a new explicit archive. Earlier revisions and review evidence remain retained.
+- Material review uses a full-width list and the same four-pane detail for extraction, content review and inspection. The original, extracted content, Requirements and Interpretation panes remain side by side; each has a collapse/restore control. Drag a separator or focus it and use arrow keys; narrower views retain readable panes with horizontal scrolling. Each pane scrolls independently.
+- Save (also Cmd/Ctrl+S in material review) is separate from completion. Archive saves the current draft first and requests an explicit saved-content confirmation. Any approved reviewer can finalize it; no separate administrator merge-save is required. Content-only archives display **Content finalized · Requirements unfinished**. Automatic Requirement extraction remains **Not connected**; manual splitting and interpretation are available.
+- Archive opens the same complete four-pane reader as read-only finalized content. A review task can refer to an exact archived revision without removing that archive. Completing an unchanged inspection closes its task; modified material requires a new explicit archive. Earlier revisions and review evidence remain retained.
 
 
 
@@ -295,7 +303,7 @@ A reviewer's confirmation applies to their saved version. The combined main vers
 
 ## Unified navigation
 
-Use **Source Management System** for source management and **Requirement Extraction System** for the three-pane human workbench. There is no standalone System3 queue or incoming-feed entry. Structured requirements is the reserved third pane inside Materials; Process remains disabled. Historical backend records and design interfaces are retained.
+Use **Source Management System** for source management and **Requirement Extraction System** for the four-pane human workbench. There is no standalone System3 queue or incoming-feed entry. Manual splitting occupies the third pane and interpretation/check design the fourth. Automatic processing remains disabled. Historical backend records and design interfaces are retained.
 
 ## Material archive, spot-checks and working space
 
@@ -303,4 +311,14 @@ Use **Source Management System** for source management and **Requirement Extract
 
 From Archive, **Create spot-check** selects a named reviewer, reason and original ranges. Its task returns to Pending; the accepted archive remains visible and unchanged. **Save check progress** permits partial work. **Pass selected checks** needs the selected range checks, evidence note and explicit human confirmation. **Record a problem** retains an open finding. After main content repair, review the current main and explicitly resolve the finding; whole-material confirmation is still separate. If another accepted version supersedes a pending check, **Restart check on latest archive** preserves the old record and starts fresh coverage. Select tasks in a work package and return saved results through My submissions. The coordinator compares and adopts each task under Task results, then can return selected adoption receipts. Importing a result does not pass the check. A changed incoming assignment is retained as a warning without changing the existing personal check or its original baseline; finish or return the old check and request a new task for a changed archive.
 
-The normal material detail fills the available workspace. Drag the two vertical separators, or focus one and press Left/Right (Shift for larger steps). Layout preferences retain widths for the operator. All three panes stay beside each other at narrow widths and browser zoom, with horizontal scrolling when needed. Layout changes never invoke Extract or Process.
+The normal material detail fills the available workspace. Drag the three vertical separators, or focus one and press Left/Right (Shift for larger steps). Layout preferences retain widths for the operator. All four panes stay beside each other at narrow widths and browser zoom, with horizontal scrolling when needed. Layout changes never invoke Extract or Process.
+
+## Requirement interpretation and shared API
+
+Use [the current four-pane guide](docs/requirement-interpretation.md) for source colours, reading modes, six editable interpretation fields, checking logic, shared Settings → AI service, candidate adoption, save/review and recovery boundaries. Collaboration ZIPs do not yet include splitting or interpretation work.
+
+## Tracing and mapping a check design
+
+Use **Interpret requirement** on a finished card. Enter the six formal fields; open **Evidence & gaps** or **AI assistance** only when needed. **Save interpretation** (Ctrl/Cmd+S while editing pane four) saves the design without marking it reviewed. **Source trail** shows the saved Requirement, splitting step, source version and extracted passage, even if later versions change.
+
+**Site Model mapping · optional** holds explicit field comparisons and nested all/any groups. Agree the downstream `table.column` fields before using them. Each comparison records which interpretation field supports it. The QueryBuilder preview is a handoff format, not an executed query or compliance result. Leave unknown groups unmapped. See [the maintained contract](docs/requirement-interpretation.md).
