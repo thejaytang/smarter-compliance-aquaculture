@@ -203,3 +203,7 @@ The independent source workspace, structural material editing and version 2 coll
 ## Markdown frontend assets
 
 Workbench Markdown rendering and diff tools are pinned under `workbench/frontend/` with a project-local `node_modules` and npm lockfile. `npm ci --ignore-scripts` followed by `npm run build` rebuilds the shipped `workbench/ui/vendor/markdown/tools.mjs` and notices. Daily operation uses the committed local browser bundle and needs no Node service or CDN. [Notebook tool contract](workbench/docs/markdown-content.md).
+
+## GitHub portability checks
+
+The branch-scoped `workbench-portability.yml` exercises Windows and Ubuntu with synthetic test data. Workbench HTTP integration tests require the separately installed System2 environment because the reviewer bridge launches that component. Install both declared environments before running the complete Workbench suite. For Windows Git checkouts containing the retained historical evidence tree, enable `core.longpaths` before checkout (or use a short destination path); the CI runner applies this setting before checkout. This does not change application data locations or remove historical artifacts.

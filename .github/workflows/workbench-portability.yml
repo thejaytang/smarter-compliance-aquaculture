@@ -22,6 +22,9 @@ jobs:
       PYTHONUTF8: '1'
       PYTHONPATH: workbench/src
     steps:
+      - name: Support retained long evidence paths on Windows
+        if: runner.os == 'Windows'
+        run: git config --global core.longpaths true
       - uses: actions/checkout@v4
         with:
           lfs: false
@@ -33,6 +36,12 @@ jobs:
           node-version: '22'
       - name: Install platform timezone data
         run: python -m pip install tzdata==2026.3
+      - name: Recreate System2 environment for the reviewer HTTP bridge
+        shell: bash
+        run: |
+          python -m pip install uv
+          cd system2
+          uv sync --locked --python 3.12 --extra dev
       - name: Backend and HTTP tests
         run: python -m unittest discover -s workbench/tests -v
       - name: Frontend state and rendering tests
@@ -50,6 +59,9 @@ jobs:
     env:
       PYTHONUTF8: '1'
     steps:
+      - name: Support retained long evidence paths on Windows
+        if: runner.os == 'Windows'
+        run: git config --global core.longpaths true
       - uses: actions/checkout@v4
         with:
           lfs: false
