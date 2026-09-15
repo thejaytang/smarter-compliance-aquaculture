@@ -20,5 +20,9 @@ Code and consistent Workbench database baseline: `before/` (local only). Tests, 
 - Added version-bound relational origins, six fields, citations and rule nodes with foreign keys. Their parent is immutable interpretation/splitting history, not mutable active units. Old records are projected only from their saved splitting step; missing citation anchors are labelled legacy-unlocated.
 - Bounded AND/OR trees, typed operators, unique rule IDs and explicit table.column mappings now form a separate optional check-design contract. Each comparison links to its interpretation field. No database query or satisfaction result is executed.
 - Fourth-pane metadata/candidates are now on demand, saved source trail is one action, completed Requirement cards have a direct Interpret action, and keyboard Save stays scoped to the pane.
-- Local regression: 245 Workbench backend, 277 frontend before the final focused validation addition, 168 System1 and 1163 System2 passes (2 environment skips). See RESULTS.md for scope.
-- Added branch-scoped Windows/Linux CI for reproducible backend/frontend and material-contract checks. This is test infrastructure; no business schedule or real model provider is enabled. Native Windows desktop interaction remains separately unverified.
+- Local regression: 246 Workbench backend, 278 frontend, 168 System1 and 1163 System2 passes (2 environment skips). See RESULTS.md for scope.
+- Added branch-scoped Windows/Linux CI for reproducible backend/frontend, source and material-contract checks. This is test infrastructure; no business schedule or real model provider is enabled. Native Windows desktop interaction remains separately unverified.
+
+## Completion checkpoint
+
+Implementation, isolated verification, normal activation and safe branch synchronization are complete. All six Windows/Ubuntu jobs passed on code commit `3f502d5`; [RESULTS.md](RESULTS.md) owns counts, direct observations, PR #2 and unverified boundaries. Normal business tables are unchanged. The main branch is not merged.

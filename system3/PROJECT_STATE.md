@@ -1,5 +1,10 @@
 # System3 current state
 
+2026-09-16: Manual interpretation and check-design support is implemented inside the existing Workbench, under [the four-pane contract](../workbench/docs/requirement-interpretation.md). System3 remains the semantic/Site Model design owner, without a standalone service or executed compliance engine. Six editable interpretation fields feed a deterministic readable chain; AI suggestions are optional and share global Settings. [Workbench verification](../project-support/four-pane-20260916/RESULTS.md) owns implementation evidence. Earlier third-pane deferrals below retain their historical scope.
+
+2026-09-16 optimization: optional typed AND/OR rule mappings now retain field-level provenance in Workbench and project the documented QueryBuilder shape. Site Model field definitions, joins, event context and evidence evaluation remain downstream responsibilities; no filter is executed. [Data and interface contract](../workbench/docs/requirement-interpretation.md).
+
+## Earlier checkpoints
 Updated: 2026-09-13. The user clarified one passage may yield multiple Requirements with a `verb`, an `object` (action target, explicitly confirmed), and multiple conditions. The direction and inspected existing models are recorded in [DESIGN.md](DESIGN.md#user-clarification-passage-to-requirement-decomposition). This narrows the design gap but does not provide a frozen semantic schema, connected processor, measured decomposition quality or consumer acceptance. The subsequent recursive parent/child count-range and ontology question is recorded as a discussion proposal in the same design file: typed groups, atomic statements, scoped conditions and distinct recurrence/deadline concepts. Next: validate these distinctions on source-backed examples before freezing a schema.
 
 Updated: 2026-09-11. **Reserved third pane and dormant extension contract implemented; semantic processor not connected.** The shared workspace visibly separates content-review completion from Requirement structuring. Process is disabled with a reason; direct processing requests return unavailable without changing content.

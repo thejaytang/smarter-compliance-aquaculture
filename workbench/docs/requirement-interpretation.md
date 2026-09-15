@@ -18,7 +18,7 @@ Unsaved interpretation drafts are retained by reviewer, material, requirement an
 
 Open the reviewer/Settings menu and choose **AI service**. Supply the complete OpenAI-compatible Chat Completions URL, model and API key, then save. There is no default service or model. A blank key keeps the saved key; Remove saved key explicitly clears it. The setting is shared by this installation, not duplicated in each pane. Optional `WORKBENCH_AI_API_KEY` is a server environment fallback. The Settings form supersedes the earlier environment-only configuration proposal.
 
-The key is saved only in `workbench/runtime/ai-provider.json`, created with private file permissions on POSIX; it is never returned by the settings API, placed in browser storage, logged, or included in collaboration/recovery packages. Protect the runtime directory using the operating system's normal account permissions. Windows-native permissions and execution remain unverified for this change.
+The key is saved only in `workbench/runtime/ai-provider.json`, created with private file permissions on POSIX; it is never returned by the settings API, placed in browser storage, logged, or included in collaboration/recovery packages. Protect the runtime directory using the operating system's normal account permissions. Windows backend/frontend tests run in CI; native desktop interaction and deployment-specific directory permissions remain unverified.
 
 Saving configuration does not test the connection or call a model. Before configuration, generation shows **Not connected**. Configured means settings are present, not proven provider availability. This adapter powers interpretation suggestions; it does not enable the unavailable automatic Requirement extractor or Site Model engine. Legacy provider example files are retained as inactive compatibility/design artifacts, not additional Settings forms.
 
@@ -70,3 +70,30 @@ A sanitized `querybuilder` projection in the interpretation response uses the do
 ## Reduced daily controls
 
 Completed cards provide **Interpret requirement** without reopening splitting fields. The six values are visible; **Evidence & gaps**, AI candidates, source structure, history and mapping expand only when needed. Entering a manual nonempty value with no recorded gap marks it as a proposed interpretation, never as source proof. Quoted-source status still requires valid references. **Source trail** shows the fixed saved lineage. Save remains distinct from review and is pinned at the bottom of the pane; Ctrl/Cmd+S inside this pane saves its interpretation. Material-level Save retains its own scope.
+
+### Ownership across databases
+
+Workbench foreign keys cover interpretation history, fields, citations, rule nodes and saved splitting steps in its own SQLite database. System1 source authority and System2 material history remain in their owning databases. Their links are stable identifiers plus saved revisions, source fingerprints and passage coordinates, validated through the owning adapters before a write; SQLite does not enforce a cross-database foreign key. The immutable origin snapshot keeps the historical reading available without resolving it against current text.
+
+```mermaid
+flowchart LR
+  S[System1 source ID and version] --> M[System2 material revision and block]
+  M --> R[Workbench saved splitting step and Requirement ID]
+  R --> I[Interpretation revision]
+  I --> F[Six fields and exact citations]
+  F --> N[Optional rule nodes]
+  F --> L[Derived checking chain]
+```
+
+A Scope value can be joined to its saved passage without matching prose:
+
+```sql
+SELECT f.value, o.unit_id, o.session_revision, o.source_id,
+       o.material_id, o.material_revision, o.block_id, o.start, o.end
+FROM interpretation_fields AS f
+JOIN interpretation_origins AS o
+  ON o.actor=f.actor AND o.unit_id=f.unit_id AND o.revision=f.revision
+WHERE f.actor=? AND f.unit_id=? AND f.revision=? AND f.field_key='scope';
+```
+
+The source snapshot is evidence of which version was interpreted. It does not establish that the legislation is still current or the extracted passage is semantically complete. Missing original assets, ambiguous citations and unresolved Site Model mappings remain visible limits.
