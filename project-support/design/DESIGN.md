@@ -78,3 +78,7 @@ Interpretation values lead the fourth pane. Selecting Rx synchronizes its Scope,
 ## Working continuity
 
 Source status distinguishes specified, explicitly absent and unresolved information; an absence explanation appears only when needed. Unsaved content remains in page memory and participates in leave warnings. Only explicit Save creates revision history; layout preferences may persist separately. Recovery and source-impact lists are on-demand actions. Optional mapping selects readable labels from a configured, empty-by-default catalog; raw SQL and query execution remain outside this UI.
+
+## Source Group relationships
+
+The third-pane selection toolbar places Relationship beside Group. It is enabled only for a source-bound inner Group. Display the exact connector in a compact neutral-colour row between its source-ordered children, with a separate top-right removal action. Preserve the connector highlight in collapsed original text. Do not count the connector, duplicate AND/OR as metadata, expose implicit one-child wrapper boxes, or turn this field into a compliance operator.

@@ -1,5 +1,7 @@
 # Workbench current state
 
+2026-09-17 Group relationship: third-pane source Groups can now retain exact connector wording such as including, with two source-bound sides and no extra quantity child. AND/OR remain in quantity controls. Implicit one-child wrappers are hidden, and fourth-pane Group labels now match the third pane. Structure v2 / delivery v3 retain history and lineage. PE001 R2 is updated; original fragments, source wording and All 3 parent links are preserved. [Evidence and limits](../project-support/workbench-group-relationship-20260917/RESULTS.md).
+
 2026-09-16 UI alignment: unified pane gutters/headers, corrected controls and link alignment, reduced anonymous root borders, and fixed narrow-pane text/action layout. 347 frontend tests pass; 390/1280/1440/1920px and actual Chrome 200% checks completed. Saved example sessions are unchanged; the user's open unsaved draft was preserved. [Evidence and limits](../project-support/workbench-ui-alignment-20260916/RESULTS.md).
 
 2026-09-16 example verb correction: R2 now marks brought into / removed from with their shared participants and location; R4 splits examinations performed / treatments carried out. R3 remains nominal. Four passage/Requirement IDs and original text preserved; source spans, quantities, live links and current interpretations verified. User Chrome shows the verbs in green. [Evidence](../project-support/workbench-example-verbs-20260916/RESULTS.md).

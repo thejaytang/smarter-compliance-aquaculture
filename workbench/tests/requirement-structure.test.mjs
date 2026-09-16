@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {StructureEditor,treeNodes,treeText,treeSource} from '../ui/requirement-structure.js';
+import {StructureEditor,treeNodes,treeText,treeSource,relationshipSides} from '../ui/requirement-structure.js';
 import {sourceSections} from '../ui/interpretations.js';
 import {sourcePreview} from '../ui/requirement-source.js';
 const fragment=(id,role,text,span)=>({id,kind:'fragment',role,text,span});
@@ -40,7 +40,7 @@ test('historical NOT survives read-only fourth-pane projection',()=>{
  const sections=sourceSections({requirement:{id:'u',text},structure:tree,sessions:[{units:{u:{id:'u',text}},structures:{u:tree}}]});
  assert.match(sections.condition.value,/NOT \(1 of 1: after a storm\)/);
  assert.match(sections.demand.value,/2 of 2: \{ Subject:.*甲.*Object:.*A.*\| \{ Subject:.*乙.*Object:.*B/);
- assert.match(sections.scope.value,/G4: Subject/);assert.match(sections.scope.value,/G7: Subject/);
+ const labels=editorFixture(tree).editor.labels(tree);for(const id of ['a','b'])assert.ok(sections.scope.value.includes(labels[id]+': Subject'));
  tree.children[1].quantity=null;assert.equal(sourceSections({requirement:{},structure:tree}).demand.state,'unresolved');
 });
 test('source colours use exact offsets, escape content and never rewrite original',()=>{
@@ -177,4 +177,45 @@ test('a link-card cross removes only its reference node and stays an unsaved str
  const {editor,e}=editorFixture(tree);e.doc.phase='complete';e.host={querySelectorAll:()=>[]};const calls=[];e.step=async(a,b)=>{calls.push({a,b});return true;};
  await editor.action({dataset:{straction:'remove'},closest:()=>({dataset:{owner:'u',structureNode:'link'}})});
  assert.deepEqual(calls,[{a:'phase',b:{phase:'fields'}},{a:'structure',b:{unit_id:'u',node_id:'link',operation:'remove'}}]);assert.equal(ref.target_id,'v');
+});
+
+function relationshipFixture(){
+ const wording='A including B and C';
+ const before=clause('before',[group('subject','Subject',[fragment('a','Subject','A',[0,1])])],[0,1]);
+ const after=group('objects','Object',[fragment('b','Object','B',[12,13]),fragment('c','Object','C',[18,19])],2);
+ const owner=clause('owner',[after,group('binding','requirements',[before],1)],[0,19]);
+ owner.relationship={text:'including',span:[2,11]};
+ const tree=clause('root',[group('outer','requirements',[owner],1)],[0,19]);
+ const fixture=editorFixture(tree);fixture.e.doc.units.u.text=wording;fixture.e.doc.text=wording;fixture.e.doc.spans={u:[0,19]};fixture.e.rootIds=()=>['u'];
+ return {...fixture,wording,owner,after};
+}
+test('relationship is between its source-ordered operands, outside quantity children',()=>{
+ const {editor,e,owner,after}=relationshipFixture();const before=JSON.stringify(e.doc);
+ const sides=relationshipSides(owner);assert.equal(sides.before[0].id,'binding');assert.equal(sides.after[0].id,'objects');
+ const html=editor.unitMarkup(e.doc.units.u,false,false);
+ assert.equal((html.match(/data-structure-qc/g)||[]).length,1);
+ assert.equal(after.children.length,2);assert.equal(after.quantity,2);
+ assert.ok(html.indexOf('data-structure-node="before"')<html.indexOf('class="rq-relationship-row"'));
+ assert.ok(html.indexOf('class="rq-relationship-row"')<html.indexOf('data-structure-node="objects"'));
+ assert.doesNotMatch(html,/data-structure-node="outer"|data-structure-node="binding"/);
+ assert.match(html,/aria-label="Remove relationship"/);assert.equal(JSON.stringify(e.doc),before);
+});
+test('relationship has exact source colour, including in collapsed text and fourth-pane source structure',()=>{
+ const {tree,e,wording,owner,editor}=relationshipFixture();
+ const preview=sourcePreview(e.doc);assert.match(preview,/semantic-7[^>]*>including</);assert.match(preview,/relationship · G/);
+ assert.match(treeSource(tree,wording),/semantic-7[^>]*>including</);
+ const sections=sourceSections({requirement:e.doc.units.u,structure:tree});assert.match(sections.demand.value,/relationship: including/);assert.match(sections.demand.value,/2 of 2: B \| C/);
+ assert.ok(sections.scope.value.startsWith(editor.labels(tree).before+': '));assert.match(sections.demand.value,/Source Groups:/);
+ const historical=group('saved','conditions',[fragment('a','conditions','A',[0,1]),fragment('b','conditions','B',[12,13])],2,true);
+ historical.span=[0,13];historical.relationship={text:'including',span:[2,11]};assert.match(treeText(historical),/^NOT \{.*quantity: 2 of 2/);
+ owner.children=owner.children.filter(n=>n.id!=='objects');
+ assert.equal(sourceSections({requirement:e.doc.units.u,structure:tree}).demand.state,'unresolved');
+});
+test('relationship annotation and removal remain explicit unsaved source operations',async()=>{
+ const {editor,e,owner}=relationshipFixture();e.host={querySelectorAll:()=>[]};const calls=[];e.step=async(a,b)=>{calls.push({a,b});return true;};
+ editor.selection={unit_id:'u',node_id:owner.id,start:2,end:11};
+ await editor.action({dataset:{straction:'relationship'},closest:()=>null});
+ assert.equal(calls[0].b.operation,'relationship');assert.equal(calls[0].b.start,2);assert.equal(calls[0].b.end,11);assert.equal(calls[0].b.text,undefined);
+ await editor.action({dataset:{straction:'remove-relationship'},closest:()=>({dataset:{owner:'u',structureNode:owner.id}})});
+ assert.deepEqual(calls[1],{a:'structure',b:{unit_id:'u',node_id:owner.id,operation:'remove-relationship'}});
 });

@@ -305,7 +305,7 @@ class Requirements:
                 raise ValueError('Choose a requirement unit.')
             if u['id'] in doc.get('structures', {}):
                 tree=doc['structures'][u['id']]
-                if not tree['children'] or structure.pending(tree):raise ValueError('Complete the empty groups and choose each unresolved QC before finishing.')
+                if not tree['children'] or structure.pending(tree):raise ValueError('Complete empty groups, mark both sides of each relationship, and choose unresolved quantities before finishing.')
             elif not any(u[k] for k in FIELDS + RELATIONS) and doc['roles'][u['id']] == 'requirement':
                 raise ValueError('Assign the stated fields or relationships before finishing this requirement.')
             if u['id'] not in doc['done']:

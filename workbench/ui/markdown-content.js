@@ -96,7 +96,7 @@ export function renderChanges(before,after){
 }
 // Keep offsets in Unicode code points, identical to saved requirement spans.
 export const semanticFields=['Subject','Modal Verb','Main Verb','Object','conditions','exceptions','subrequirement'];
-export const semanticClass=f=>'semantic-'+semanticFields.indexOf(f);
+export const semanticClass=f=>f==='relationship'?'semantic-7':'semantic-'+semanticFields.indexOf(f);
 export function annotationLegend(){return `<details class="annotation-legend"><summary>Field colours · incomplete text may remain unmarked</summary>${semanticFields.map(f=>`<span class="semantic ${semanticClass(f)}">${f}</span>`).join('')}</details>`;}
 export function renderAnnotations(source,expected,spans){
   if(!spans.length)return renderMarkdown(source);

@@ -6,6 +6,7 @@
  --semantic-4-bg:#ece4fc;--semantic-4-border:#7c5aaa;--semantic-4-text:#523778;
  --semantic-5-bg:#ffe2e2;--semantic-5-border:#b54a4a;--semantic-5-text:#7f2929;
  --semantic-6-bg:#dcf1f1;--semantic-6-border:#39858a;--semantic-6-text:#23575a;
+ --semantic-7-bg:#e8edf2;--semantic-7-border:#627487;--semantic-7-text:#263746;
 }
 .semantic-0,.rq-field-0{--semantic-bg:var(--semantic-0-bg);--semantic-border:var(--semantic-0-border);--semantic-text:var(--semantic-0-text)}
 .semantic-1,.rq-field-1{--semantic-bg:var(--semantic-1-bg);--semantic-border:var(--semantic-1-border);--semantic-text:var(--semantic-1-text)}
@@ -14,6 +15,7 @@
 .semantic-4{--semantic-bg:var(--semantic-4-bg);--semantic-border:var(--semantic-4-border);--semantic-text:var(--semantic-4-text)}
 .semantic-5{--semantic-bg:var(--semantic-5-bg);--semantic-border:var(--semantic-5-border);--semantic-text:var(--semantic-5-text)}
 .semantic-6{--semantic-bg:var(--semantic-6-bg);--semantic-border:var(--semantic-6-border);--semantic-text:var(--semantic-6-text)}
+.semantic-7{--semantic-bg:var(--semantic-7-bg);--semantic-border:var(--semantic-7-border);--semantic-text:var(--semantic-7-text)}
 .semantic,.rq-fields .rq-field{background:var(--semantic-bg);border:1px solid var(--semantic-border);color:var(--semantic-text)}
 .rq-fields .rq-field{border-left:3px solid var(--semantic-border)}
 .annotation-mark{border-radius:3px;padding:1px 0;cursor:pointer;box-decoration-break:clone;-webkit-box-decoration-break:clone}

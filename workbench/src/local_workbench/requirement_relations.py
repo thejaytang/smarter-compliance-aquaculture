@@ -31,6 +31,11 @@ def initialize(db):
         FOREIGN KEY(session_id,parent_id) REFERENCES requirement_structure_nodes(session_id,node_id) DEFERRABLE INITIALLY DEFERRED);
       CREATE INDEX IF NOT EXISTS requirement_structure_owner ON requirement_structure_nodes(owner_id);
       CREATE INDEX IF NOT EXISTS requirement_structure_target ON requirement_structure_nodes(target_id);
+      CREATE TABLE IF NOT EXISTS requirement_group_relationships(
+        session_id TEXT NOT NULL, node_id TEXT NOT NULL, text TEXT NOT NULL,
+        start INTEGER NOT NULL, end INTEGER NOT NULL, before_nodes TEXT NOT NULL, after_nodes TEXT NOT NULL,
+        PRIMARY KEY(session_id,node_id),
+        FOREIGN KEY(session_id,node_id) REFERENCES requirement_structure_nodes(session_id,node_id));
     ''')
     for row in db.execute('''SELECT s.body FROM requirement_sessions s
         LEFT JOIN requirement_relationship_versions v ON s.id=v.session_id
@@ -39,6 +44,7 @@ def initialize(db):
 
 
 def project(db,doc):
+    db.execute('DELETE FROM requirement_group_relationships WHERE session_id=?',(doc['id'],))
     db.execute('DELETE FROM requirement_structure_nodes WHERE session_id=?',(doc['id'],))
     db.execute('DELETE FROM requirement_relationships WHERE session_id=?',(doc['id'],))
     if doc.get('deleted'):
@@ -58,6 +64,10 @@ def project(db,doc):
                 span=node.get('span',[None,None])
                 db.execute('INSERT INTO requirement_structure_nodes VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)',
                     (doc['id'],uid,node['id'],parent['id'] if parent else None,parent['children'].index(node) if parent else 0,node['kind'],node.get('role'),json.dumps(node.get('quantity')),int(node.get('negated',False)),*span,node.get('target_id'),node.get('origin_role')))
+                if node.get('relationship'):
+                    rel=node['relationship'];sides=structure.relationship_sides(node)
+                    db.execute('INSERT INTO requirement_group_relationships VALUES(?,?,?,?,?,?,?)',
+                        (doc['id'],node['id'],rel['text'],*rel['span'],json.dumps(sides['before']),json.dumps(sides['after'])))
             continue
         for relation in ('conditions','exceptions','subrequirement'):
             if u.get(relation):walk(uid,relation,u[relation])

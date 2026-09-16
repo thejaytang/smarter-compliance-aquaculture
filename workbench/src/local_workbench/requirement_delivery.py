@@ -18,6 +18,7 @@ from .check_design import validate_design
 from .interpretation_continuity import review_ready
 
 SCHEMA='requirement-delivery/2'
+RELATIONSHIP_SCHEMA='requirement-delivery/3'
 LEGACY_SCHEMA='requirement-delivery/1'
 
 
@@ -52,7 +53,8 @@ class Delivery:
                 # Candidate output and its frozen context travel as evidence, never as an active request.
                 candidates=[json.loads(r[0]) for r in db.execute('SELECT body FROM interpretation_runs WHERE actor=? ORDER BY id',(actor,))]
                 has_groups=any(step['document'].get('structures') for item in sessions for step in item['steps'])
-                value=dict(schema=SCHEMA if has_groups else LEGACY_SCHEMA,actor=actor,sessions=sessions,interpretations=interpretations,candidates=candidates)
+                has_relationships=any(step['document'].get('structure_schema')==tree_structure.RELATIONSHIP_SCHEMA for item in sessions for step in item['steps'])
+                value=dict(schema=RELATIONSHIP_SCHEMA if has_relationships else SCHEMA if has_groups else LEGACY_SCHEMA,actor=actor,sessions=sessions,interpretations=interpretations,candidates=candidates)
                 items.append(dict(key=key_for(actor),value=value,branch=actor,actor=actor,guard=fingerprint(value)))
         return items
 
@@ -62,7 +64,7 @@ class Delivery:
         return value
 
     def _validate(self,v):
-        if not isinstance(v,dict) or set(v)!={'schema','actor','sessions','interpretations','candidates'} or v['schema'] not in (SCHEMA,LEGACY_SCHEMA):raise ValueError('Unsupported Requirement delivery.')
+        if not isinstance(v,dict) or set(v)!={'schema','actor','sessions','interpretations','candidates'} or v['schema'] not in (SCHEMA,LEGACY_SCHEMA,RELATIONSHIP_SCHEMA):raise ValueError('Unsupported Requirement delivery.')
         named(v['actor'])
         for k in ('sessions','interpretations','candidates'):
             if not isinstance(v[k],list) or len(v[k])>10000:raise ValueError('Requirement delivery exceeds the supported size.')
@@ -87,7 +89,8 @@ class Delivery:
                         if set(part)!={'block_id','start','end','text','source_refs'} or part['block_id'] in ids or part['start']!=offset or part['end']!=offset+len(part['text']) or not isinstance(part['source_refs'],list):raise ValueError('Invalid source segment range.')
                         ids.add(part['block_id']);offset=part['end']+2
                     if '\n\n'.join(part['text'] for part in parts)!=x['text'] or parts!=d.get('source_segments'):raise ValueError('Source segment binding differs.')
-                if x.get('structures') and v['schema']!=SCHEMA:raise ValueError('Unified groups require Requirement delivery version 2.')
+                if x.get('structures') and v['schema']==LEGACY_SCHEMA:raise ValueError('Unified groups require Requirement delivery version 2 or later.')
+                if x.get('structure_schema')==tree_structure.RELATIONSHIP_SCHEMA and v['schema']!=RELATIONSHIP_SCHEMA:raise ValueError('Group relationships require Requirement delivery version 3.')
                 tree_structure.validate(x)
                 leaves(x['roots'])
                 for uid,u in x['units'].items():

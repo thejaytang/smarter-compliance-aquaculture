@@ -9,6 +9,7 @@ export function sourcePreview(doc){
   const offset=doc.spans?.[id]?.[0]??0;
   if(doc.structures?.[id]){
    for(const n of treeNodes(doc.structures[id])){
+    if(n.relationship)spans.push({field:'relationship',start:offset+n.relationship.span[0],end:offset+n.relationship.span[1],id:n.id,owner:id,sourceOwner:id});
     const field=n.kind==='clause'&&n!==doc.structures[id]?'Group':n.origin_role||n.role;if(!field||field==='requirements')continue;
     if(n.span)spans.push({field,start:offset+n.span[0],end:offset+n.span[1],id:n.id,owner:id,sourceOwner:id,targetUnit:n.kind==='reference'?n.target_id:null});
     else if(n.kind==='reference'&&doc.spans?.[n.target_id]){const [start,end]=doc.spans[n.target_id];spans.push({field,start,end,id:n.target_id,owner:id,sourceOwner:id,targetUnit:n.target_id});}

@@ -7,6 +7,7 @@ from copy import deepcopy
 import uuid
 
 SCHEMA = 'requirement-structure/1'
+RELATIONSHIP_SCHEMA = 'requirement-structure/2'
 FIELDS = ('Subject', 'Modal Verb', 'Main Verb', 'Object', 'conditions', 'exceptions', 'subrequirement')
 ROLES = FIELDS + ('requirements',)
 
@@ -15,6 +16,27 @@ def walk(node, parent=None):
     yield node, parent
     for child in node.get('children', []):
         yield from walk(child, node)
+
+
+def source_bounds(node):
+    if node.get('span'):
+        return node['span']
+    spans = [source_bounds(c) for c in node.get('children', [])]
+    spans = [s for s in spans if s]
+    return [min(s[0] for s in spans), max(s[1] for s in spans)] if spans else None
+
+
+def relationship_sides(node):
+    """Source-ordered operands; the connector is metadata, never a child."""
+    relation = node.get('relationship')
+    sides = {'before': [], 'after': [], 'crossing': []}
+    if relation:
+        a, b = relation['span']
+        for child in node.get('children', []):
+            span = source_bounds(child)
+            side = 'before' if span and span[1] <= a else 'after' if span and span[0] >= b else 'crossing'
+            sides[side].append(child['id'])
+    return sides
 
 
 def references(tree):
@@ -76,7 +98,7 @@ def validate(doc):
     structures = doc.get('structures', {})
     if not isinstance(structures, dict) or not set(structures) <= set(doc['units']):
         raise ValueError('Unknown Requirement structure owner.')
-    if structures and doc.get('structure_schema') != SCHEMA:
+    if structures and doc.get('structure_schema') not in (SCHEMA, RELATIONSHIP_SCHEMA):
         raise ValueError('Unsupported Requirement structure version.')
     all_ids=set()
     for uid, tree in structures.items():
@@ -93,6 +115,8 @@ def validate(doc):
             kind = n.get('kind'); role = n.get('role')
             allowed = {'id', 'kind', 'span', 'children'} if kind == 'clause' else {'id', 'kind', 'role', 'span'}
             allowed |= {'group': {'children', 'quantity', 'negated', 'origin_role'}, 'fragment': {'text', 'unanchored'}, 'reference': {'target_id'}}.get(kind, set())
+            if kind in ('clause', 'group') and parent is not None:
+                allowed.add('relationship')
             if kind not in ('clause', 'group', 'fragment', 'reference') or set(n) - allowed:
                 raise ValueError('Invalid structure node.')
             if kind=='clause' and 'span' not in n:raise ValueError('A clause needs its source span.')
@@ -140,11 +164,31 @@ def validate(doc):
                         raise ValueError('QC must be an integer or inclusive range within this group size.')
                 for child in children:
                     check(child, n, bounds, depth + 1)
+            if 'relationship' in n:
+                rel = n['relationship']
+                if doc.get('structure_schema') != RELATIONSHIP_SCHEMA:
+                    raise ValueError('Group relationships require structure version 2.')
+                if not n.get('span') or n.get('role') in ('exceptions', 'subrequirement'):
+                    raise ValueError('Relationship belongs to an explicit source Group.')
+                if not isinstance(rel, dict) or set(rel) != {'text', 'span'}:
+                    raise ValueError('A relationship needs its exact source wording and range.')
+                span = rel['span']
+                if not isinstance(span, list) or len(span) != 2 or any(type(v) is not int for v in span) or not bounds[0] < span[0] < span[1] < bounds[1]:
+                    raise ValueError('Select a relationship between the two parts inside this Group.')
+                if not isinstance(rel['text'], str) or rel['text'] != text[span[0]:span[1]] or not rel['text'].strip():
+                    raise ValueError('Relationship wording must match its exact source range.')
+                if rel['text'].strip().casefold() in ('and', 'or', 'og', 'eller'):
+                    raise ValueError('Use the Group quantity for AND / OR; keep the connector in the original text.')
+                if not text[bounds[0]:span[0]].strip() or not text[span[1]:bounds[1]].strip():
+                    raise ValueError('The relationship needs source content on both sides.')
+                if relationship_sides(n)['crossing']:
+                    raise ValueError('A child crosses the relationship. Group the content before and after it separately.')
         check(tree)
 
 
 def pending(tree):
-    return any((n['kind']=='clause' and not n['children']) or (n['kind']=='group' and (not n['children'] or n['quantity'] is None)) for n, _ in walk(tree))
+    return any((n['kind']=='clause' and not n['children']) or (n['kind']=='group' and (not n['children'] or n['quantity'] is None)) or
+               (n.get('relationship') and (not relationship_sides(n)['before'] or not relationship_sides(n)['after'])) for n, _ in walk(tree))
 
 
 def edit(doc, r, _clear_linked=True):
@@ -181,7 +225,7 @@ def edit(doc, r, _clear_linked=True):
             offset=doc['spans'][uid][0];return [x-offset for x in doc['spans'][n['target_id']]]
         spans=[source_span(c) for c in n.get('children',[])];spans=[x for x in spans if x]
         return [min(x[0] for x in spans),max(x[1] for x in spans)] if spans else None
-    def all_items(n):return (not n.get('children') or n.get('quantity') in (len(n['children']),[len(n['children'])]*2)) and not n.get('negated')
+    def all_items(n):return (not n.get('children') or n.get('quantity') in (len(n['children']),[len(n['children'])]*2)) and not n.get('negated') and not n.get('relationship')
     if op=='clear-range':
         start,end=r.get('start'),r.get('end')
         if type(start) is not int or type(end) is not int or not 0<=start<end<=len(doc['units'][uid]['text']):raise ValueError('Select original wording first.')
@@ -210,6 +254,8 @@ def edit(doc, r, _clear_linked=True):
         candidates=[(n,p) for n,p in walk(tree) if p is not None and n['kind'] in ('group','clause') and n.get('span')==[start,end]]
         if not candidates:raise ValueError('Select the complete original range of the Group to degroup it.')
         node,container=candidates[-1]
+        if node.get('relationship') or container.get('relationship'):
+            raise ValueError('Remove the relationship before degrouping; its source connection must not be lost.')
         if node['kind']=='clause':
             outer=next((p for n,p in walk(tree) if n is container),None)
             if not outer or outer['kind']!='clause' or not all_items(container):raise ValueError('Resolve the surrounding alternative quantity before degrouping this clause.')
@@ -255,7 +301,6 @@ def edit(doc, r, _clear_linked=True):
                 return chosen
             if target['kind']=='clause':
                 for holder in list(target['children']):
-                    if holder['role']=='requirements':continue
                     chosen=selected_children(holder)
                     if not chosen:continue
                     if len(chosen)==len(holder['children']):target['children'].remove(holder);child['children'].append(holder)
@@ -266,6 +311,17 @@ def edit(doc, r, _clear_linked=True):
                 chosen=selected_children(target);child['children']=chosen;child['quantity']=len(chosen) if chosen else None
                 target['children']=[c for c in target['children'] if c not in chosen]
         dest = field_group(role); dest['children'].append(child); refresh(dest)
+    elif op in ('relationship', 'remove-relationship'):
+        if parent is None or target['kind'] not in ('clause', 'group') or not target.get('span') or target.get('role') in ('exceptions', 'subrequirement'):
+            raise ValueError('Create a source Group around both parts before assigning a relationship.')
+        if op == 'remove-relationship':
+            target.pop('relationship', None)
+        else:
+            start, end = r.get('start'), r.get('end')
+            if type(start) is not int or type(end) is not int:
+                raise ValueError('Select the relationship wording inside the Group.')
+            target['relationship'] = dict(text=doc['units'][uid]['text'][start:end], span=[start,end])
+            doc['structure_schema'] = RELATIONSHIP_SCHEMA
     elif op == 'link':
         role = r.get('field','subrequirement') if target['kind'] == 'clause' else target.get('role')
         if role not in ('subrequirement', 'requirements', 'exceptions'):
@@ -302,6 +358,8 @@ def edit(doc, r, _clear_linked=True):
         if parent is None:
             raise ValueError('Remove the Requirement entry to remove its root.')
         if op == 'ungroup':
+            if target.get('relationship') or parent.get('relationship'):
+                raise ValueError('Remove the relationship before degrouping; its source connection must not be lost.')
             if target['kind'] != 'group' or parent['kind'] != 'group' or not all_items(target):
                 raise ValueError('Only an All group without NOT can be expanded. Other groups would lose their meaning.')
             if parent['quantity'] != len(parent['children']) or parent['negated']:
@@ -315,7 +373,8 @@ def edit(doc, r, _clear_linked=True):
     else:
         raise ValueError('Unknown structure operation.')
     before = set(references(legacy(doc, uid)))
-    doc.setdefault('structures', {})[uid] = tree; doc['structure_schema'] = SCHEMA
+    doc.setdefault('structures', {})[uid] = tree
+    doc['structure_schema'] = doc.get('structure_schema', SCHEMA)
     # Removing an existing local reference never destroys that saved unit.
     from .requirements import append, leaves
     for removed in before - set(references(tree)):

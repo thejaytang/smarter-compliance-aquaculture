@@ -68,6 +68,8 @@ def annotations(c, actor, material_id):
                 for node,_ in structure.walk(d['structures'][uid]):
                     if node.get('span') and node.get('role') in structure.FIELDS:
                         a,b=node['span'];out.append(dict(base,field=node.get('origin_role') or node['role'],start=offset+a,end=offset+b,node_id=node['id']))
+                    if node.get('relationship'):
+                        a,b=node['relationship']['span'];out.append(dict(base,field='relationship',start=offset+a,end=offset+b,node_id=node['id'],relationship=True))
                 continue
             for field, span in d.get('field_spans', {}).get(uid, {}).items():
                 out.append(dict(base, field=field, start=offset+span[0], end=offset+span[1]))
@@ -184,7 +186,7 @@ class Interpretations:
         grouped=any(x.get('structures') for x in sessions.values())
         payload=dict(requirement=deepcopy(d['units'][uid]),session_id=d['id'],session_revision=d['revision'],
             material_id=d['material_id'],materials=materials,citations=citations,
-            sessions=[dict(id=x['id'],revision=x['revision'],units=x['units'],roots=x['roots'],**({'structures':structure.views(x),'structure_schema':structure.SCHEMA} if grouped else {})) for x in sessions.values()],
+            sessions=[dict(id=x['id'],revision=x['revision'],units=x['units'],roots=x['roots'],**({'structures':structure.views(x),'structure_schema':x.get('structure_schema',structure.SCHEMA)} if grouped else {})) for x in sessions.values()],
             exceptions=exceptions,limitations=limitations)
         if grouped:payload['structure']=structure.legacy(d,uid)
         payload['origin']=lineage.source_anchor({'unit_id':uid},d)

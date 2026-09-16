@@ -148,7 +148,7 @@
 .rq-entry-toggle { display:flex; gap:5px; align-items:center; flex:none; background:transparent; border:0; }
 .rq-session-header .rq-session-title { flex:1; min-width:0; cursor:text; }
 .rq-session-header .rq-source-preview:focus { outline:2px solid var(--accent); outline-offset:3px; }
-.rq-selection-tools { position:fixed; z-index:1200; max-width:calc(100vw - 16px); background:#fff; border:1px solid #8192a8; border-radius:8px; box-shadow:0 4px 18px #18253626; padding:6px; gap:8px; align-items:center; }
+.rq-selection-tools { position:fixed; z-index:1200; width:max-content; max-width:calc(100vw - 16px); background:#fff; border:1px solid #8192a8; border-radius:8px; box-shadow:0 4px 18px #18253626; padding:6px; gap:8px; align-items:center; }
 .rq-tool-section { display:flex; flex-wrap:wrap; gap:4px; align-items:center; }
 .rq-tool-divider { align-self:stretch; width:1px; background:#a9b4c3; }
 /* Keep the complete source readable even when the Requirement pane is narrow. */
@@ -223,3 +223,7 @@
 .rq-session-header { gap:12px; }
 .rq-source-groups { display:flex; flex-wrap:wrap; gap:4px; margin-top:8px; }
 .rq-source-groups .annotation-relation { margin:0; padding:2px 4px; }
+.rq-relationship { position:relative; display:flex; flex-wrap:wrap; align-items:baseline; gap:8px; width:100%; min-width:0; padding:8px 40px 8px 12px; border-radius:6px; }
+.rq-relationship > strong { font-size:12px; }
+.rq-relationship > span { min-width:0; overflow-wrap:anywhere; white-space:pre-wrap; }
+.rq-tree-children > .rq-relationship-row { margin:12px 0; }
