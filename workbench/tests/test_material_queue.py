@@ -157,6 +157,20 @@ class MaterialQueueTests(unittest.TestCase):
         self.assertEqual(self.q.listing(A,'pending')['total'],0)
         self.assertEqual(self.q.listing(A,'archive')['materials'][0]['candidates'][0]['status'],'kept')
 
+    def test_replaced_original_has_one_current_queue_entry_and_retained_history(self):
+        old=deepcopy(self.material);new=deepcopy(old)
+        new.update(id='b'*32,revision=0,content_status='not_extracted',confirmation=None,blocks=[])
+        old.update(source_stale=True,newer_material_id=new['id'])
+        self.write(old);self.write(new)
+        rows=self.q.listing(A,'pending')['materials']
+        self.assertEqual([r['id'] for r in rows],[new['id']])
+        # Source observation may mark the old version stale before opening its successor.
+        old.pop('newer_material_id');self.write(old)
+        self.assertEqual([r['id'] for r in self.q.listing(A,'pending')['materials']],[new['id']])
+        self.assertEqual(self.app.system2.call('material_read',material_id=old['id'])['id'],old['id'])
+        with self.db() as db:db.execute('DELETE FROM material_read_index WHERE id=?',(new['id'],))
+        self.assertEqual(self.q.listing(A,'pending')['materials'][0]['id'],old['id'])
+
     def test_unchanged_empty_personal_copy_is_not_labelled_saved_work(self):
         material=deepcopy(self.material)
         material.update(revision=0,content_revision=0,content_status='not_extracted',confirmation=None,blocks=[],last_action={'kind':'opened'})

@@ -13,7 +13,7 @@ test('source selection offsets preserve Unicode outside the BMP',()=>{
  assert.equal(codepointOffset('Fish 🐟 shall',7),6);assert.equal(codepointOffset('Fish 🐟 shall',12),11);
 });
 test('manual intake has honest empty and dirty states without automatic processing',()=>{
- const {editor,m,host,auto}=fixture();editor.render();assert.match(host.innerHTML,/To requirements/);assert.doesNotMatch(host.innerHTML,/data-rq-block|data-rq-session|rq-steps/);assert.match(host.innerHTML,/Not connected/);assert.equal(auto.disabled,true);
+ const {editor,m,host,auto}=fixture();editor.render();assert.match(host.innerHTML,/To requirements/);assert.doesNotMatch(host.innerHTML,/data-rq-block|data-rq-session|rq-steps/);assert.match(host.innerHTML,/Not connected/);assert.equal(auto.disabled,undefined);
  m.dirty=true;editor.render();assert.match(host.innerHTML,/Save the source content before splitting/);assert.equal(editor.locked,true);
 });
 test('whole passage start sends a block ID and saved version, never rewritten text',async()=>{
@@ -205,17 +205,23 @@ test('one R per source entry and local children never become reference choices',
  assert.equal(editor.entryLabel(d),'R1');assert.equal(editor.label('v'),'G2');assert.deepEqual(editor.completeRequirements('u'),[]);assert.deepEqual(editor.visibleUnitIds(),['u']);
 });
 
-test('only the entry arrow toggles disclosure; source wording has no disclosure action',()=>{
+test('entry header row toggles disclosure; coloured source is outside that row',()=>{
  const {editor,host}=fixture();editor.doc=documentFixture();editor.sessions=[editor.doc];editor.selected='u';editor.notice='';editor.loading=false;editor.m.interpretations=null;
  editor.render(true);assert.match(host.innerHTML,/<button[^>]+data-rq="open-session"[^>]+aria-expanded="true"/);
  assert.match(host.innerHTML,/<div class="rq-session-title" data-entry-source>/);assert.doesNotMatch(host.innerHTML,/<summary data-rq="open-session"/);
+ const bar=host.innerHTML.split('<div class="rq-entry-bar"')[1].split('<div class="rq-session-title"')[0];
+ assert.match(bar,/data-rq="open-session"/);assert.match(bar,/rq-entry-actions/);assert.doesNotMatch(bar,/rq-source-preview/);
+ const dispatched=[];editor.action=async(a)=>dispatched.push(a);
+ const click=(action,disabled=false)=>host.onclick({target:{closest:s=>s==='[data-rq]'?{dataset:{rq:action},disabled}:null},stopPropagation(){},preventDefault(){}});
+ click('open-session');click('locate-session');click('delete');click('auto-extract',true);
+ assert.deepEqual(dispatched,['open-session','locate-session','delete']);
  editor.sessionCollapsed=true;editor.render(true);assert.doesNotMatch(host.innerHTML,/data-entry-source|rq-session-body/);
 });
 
-test('entry header has Locate then Remove, no Complete badge or duplicate removal action',()=>{
+test('entry header has Locate, unavailable Auto-extract, then Remove, no Complete badge or duplicate removal action',()=>{
  const {editor,host}=fixture();editor.doc=documentFixture();editor.sessions=[editor.doc];editor.doc.phase='complete';editor.render(true);
  const header=host.innerHTML.split('<span class="rq-entry-actions">')[1].split('</span>')[0];
- assert.ok(header.indexOf('>Locate</button>')<header.indexOf('>Remove</button>'));assert.doesNotMatch(header,/>Complete</);assert.equal((host.innerHTML.match(/data-rq="delete"/g)||[]).length,1);
+ assert.ok(header.indexOf('>Locate</button>')<header.indexOf('>Auto-extract</button>'));assert.ok(header.indexOf('>Auto-extract</button>')<header.indexOf('>Remove</button>'));assert.match(header,/data-rq="auto-extract"[^>]*disabled/);assert.doesNotMatch(header,/>Complete</);assert.equal((host.innerHTML.match(/data-rq="delete"/g)||[]).length,1);
 });
 test('Remove confirms the clicked entry, cancellation writes nothing and unsaved work blocks removal',async()=>{
  const {editor,m}=fixture();editor.doc=documentFixture();editor.sessions=[editor.doc,{...documentFixture(),id:'other',revision:8}];let sent,closed=0,markup,bind;

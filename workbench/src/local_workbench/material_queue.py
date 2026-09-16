@@ -78,7 +78,12 @@ class MaterialQueue:
         except (OSError, ValueError, RuntimeError):
             issue_sources = set()
         rows = []
+        current_ids = {m['id'] for m in current}
+        live_sources = {m['source']['source_id'] for m in current if not m.get('source_stale')}
         for master in current:
+            if bucket == 'pending' and (master.get('newer_material_id') in current_ids or
+                    (master.get('source_stale') and master['source']['source_id'] in live_sources)):
+                continue  # Superseded originals remain accessible through related versions.
             identity = master['id']; archived = archives.get(identity)
             relevant = [t for t in tasks if t['material_id'] == identity]
             open_tasks = [t for t in relevant if t['status'] in ('pending', 'finding_open')]

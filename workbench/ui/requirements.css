@@ -152,11 +152,10 @@
 .rq-tool-section { display:flex; flex-wrap:wrap; gap:4px; align-items:center; }
 .rq-tool-divider { align-self:stretch; width:1px; background:#a9b4c3; }
 /* Keep the complete source readable even when the Requirement pane is narrow. */
-.rq-session-header { display:grid; grid-template-columns:auto minmax(0,1fr) auto; }
-.rq-session-header > .rq-entry-toggle { grid-column:1; grid-row:1; }
-.rq-session-header > .rq-badge { grid-column:2; grid-row:1; justify-self:end; }
-.rq-session-header > .rq-locate-text { grid-column:3; grid-row:1; }
-.rq-session-header > .rq-session-title { grid-column:1 / -1; grid-row:2; width:100%; }
+.rq-session-header { display:flex; flex-direction:column; align-items:stretch; }
+.rq-entry-bar { display:flex; align-items:center; gap:8px; min-height:32px; cursor:pointer; }
+.rq-entry-bar > .rq-entry-toggle { flex:1; align-self:stretch; text-align:left; cursor:pointer; }
+.rq-session-header > .rq-session-title { width:100%; }
 
 .rq-source-preview .semantic--1,.rq-source-groups .semantic--1 { --semantic-bg:#eef2f6; --semantic-border:#6d7b8f; --semantic-text:#23354c; border:1px solid #6d7b8f; }
 
@@ -168,7 +167,7 @@
 .rq-entry-root > .rq-unit-body > .rq-tree-node > .rq-tree-body > .rq-tree-children > li::before { display:none; }
 .rq-qc-row input:disabled { opacity:.5; cursor:not-allowed; }
 
-.rq-session-header > .rq-entry-actions { grid-column:2 / -1; grid-row:1; justify-self:end; display:flex; align-items:center; gap:6px; }
+.rq-entry-actions { display:flex; align-items:center; gap:6px; cursor:default; }
 .rq-entry-actions button { padding:5px 9px; min-height:30px; }
 
 .rq-reference-picker { margin:10px 0; padding:10px; border-radius:6px; }
@@ -177,6 +176,5 @@
 .rq-tree-link select { display:block; width:100%; margin-top:5px; }
 .rq-linked-list { display:flex; flex-wrap:wrap; gap:6px; margin:6px 0; }
 .rq-linked-requirement { display:inline-flex; align-items:center; gap:4px; }
-.rq-legacy-note { display:block; margin-top:6px; opacity:.8; }
 .rq-legacy-relation { padding:8px 0; }
 .rq-legacy-relation p { white-space:pre-wrap; }

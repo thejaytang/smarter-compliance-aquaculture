@@ -1,110 +1,49 @@
 {
-  "title": "example",
-  "notice": "Workshop demonstration only. Case 1 is the meeting example with its original spelling; case 2 is fictional; case 3 is the user-provided English translation used in the explanatory figures, not an authenticated or current official English legal text. This material contains check designs, not compliance findings.",
-  "cases": [
+  "id": "ADF-10",
+  "text": "For aquaculture establishments that are not subject to specific record-keeping provisions in Chapters 4, 5 and 6, the operational journal shall at a minimum contain updated information on:",
+  "Subject": "the operational journal",
+  "Modal Verb": "shall",
+  "Main Verb": "contain",
+  "Object": "updated information",
+  "conditions": [
+    "For aquaculture establishments that are not subject to specific record-keeping provisions in Chapters 4, 5 and 6"
+  ],
+  "exceptions": [],
+  "subrequirements": [
     {
-      "id": "anchor",
-      "title": "1. Anchoring line: scope, conditions, alternative demands and exception",
-      "paragraphs": ["\"Everything that is installed as part of an anchor line\" and \"deliverd by company 1, and installed by company b, but not installed in the North of norway\",\" incase of a earthquake of maginute 4\", \"it should be checked for integrity or replaced\", \"except when the component was secured by rope of diameter 1 m\""],
-      "fields": {"Subject": "Everything that is installed as part of an anchor line", "Modal Verb": "should", "Main Verb": "be checked", "Object": "for integrity"},
-      "children": [
-        {"key":"supplier", "relation":"conditions", "text":"deliverd by company 1"},
-        {"key":"installer", "relation":"conditions", "text":"installed by company b"},
-        {"key":"location", "relation":"conditions", "text":"not installed in the North of norway"},
-        {"key":"earthquake", "relation":"conditions", "text":"incase of a earthquake of maginute 4"},
-        {"key":"rope", "relation":"exceptions", "text":"except when the component was secured by rope of diameter 1 m", "fields":{"Subject":"the component", "Main Verb":"was secured", "Object":"by rope of diameter 1 m"}},
-        {"key":"check", "relation":"subrequirement", "text":"be checked for integrity", "fields":{"Main Verb":"be checked", "Object":"for integrity"}},
-        {"key":"replace", "relation":"subrequirement", "text":"replaced", "fields":{"Main Verb":"replaced"}}
-      ],
-      "quantities":{"subrequirement":[1,2]},
-      "interpretation": {
-        "scope":"Everything that is installed as part of an anchor line",
-        "scope_information":"Proposed data: component identity, installation status and part-of relationship to an anchor line. Agree whether indirect membership is included.",
-        "condition":"Delivered by company 1 AND installed by company b AND not installed in the North of Norway AND the stated earthquake condition; except when the component was secured by rope of diameter 1 m.",
-        "condition_information":"Proposed data: supplier, installer, installation location, relevant earthquake event and magnitude, and the component's rope securing arrangement and diameter. Link each event to the affected component. Clarify geographic boundary, event timing, and what 'maginute 4' means; do not silently turn it into ≥4.",
-        "demand":"it should be checked for integrity or replaced",
-        "verification":"Proposed method: for each applicable component, inspect source-linked evidence of an integrity check or a replacement. Record which alternative the evidence supports. No deadline, inspection procedure or documentary sufficiency criterion is stated. Insufficient evidence remains unresolved, not automatically failed or satisfied."
-      },
-      "gaps":["Direct versus indirect part-of membership is not defined.","Event relevance, assessment time and magnitude comparison need agreement.","The text does not define check procedure, completion deadline or evidence sufficiency.","The inclusive OR range is a demonstration interpretation; exclusivity is not stated."]
+      "text": "aquaculture animals and aquaculture animal products brought into and removed from the aquaculture establishment",
+      "conditions": [],
+      "exceptions": [],
+      "subrequirements": [
+        [
+          [2,2],
+          "place of origin",
+          "place of destination"
+        ]
+      ]
     },
     {
-      "id":"fish",
-      "title":"2. Fictional fish-removal example: nesting and quantity constraints",
-      "paragraphs":[
-        "The human shall remove the fish if either the tank is red or all of the following are true: the water is hot, the fish is sick, and the pump is off.",
-        "Small fish are exempt from the removal requirement when the water is cold.",
-        "This exemption does not apply when the fish is sick.",
-        "When removing the fish, the human shall do at least two and no more than three of the following: use a net; wear gloves; close the door; call for help."
+      "text": "mortality per production unit",
+      "conditions": [
+        "relevant to the production method"
       ],
-      "fields":{"Subject":"The human", "Modal Verb":"shall", "Main Verb":"remove", "Object":"the fish"},
-      "children":[
-        {"key":"red", "relation":"conditions", "text":"the tank is red"},
-        {"key":"hot", "relation":"conditions", "text":"the water is hot"},
-        {"key":"sick", "relation":"conditions", "text":"the fish is sick", "occurrence":0},
-        {"key":"off", "relation":"conditions", "text":"the pump is off"},
-        {"key":"small", "relation":"exceptions", "text":"Small fish are exempt from the removal requirement when the water is cold.\n\nThis exemption does not apply when the fish is sick.", "fields":{"Subject":"Small fish", "Main Verb":"are exempt from", "Object":"the removal requirement"}, "children":[
-          {"key":"cold", "relation":"conditions", "text":"when the water is cold"},
-          {"key":"revoke", "relation":"exceptions", "text":"This exemption does not apply when the fish is sick.", "fields":{"Subject":"This exemption", "Main Verb":"does not apply"}, "children":[{"key":"sick-again", "relation":"conditions", "text":"when the fish is sick"}]}
-        ]},
-        {"key":"actions", "relation":"subrequirement", "text":"When removing the fish, the human shall do at least two and no more than three of the following: use a net; wear gloves; close the door; call for help.", "fields":{"Subject":"the human", "Modal Verb":"shall", "Main Verb":"do", "Object":"at least two and no more than three of the following"}, "children":[
-          {"key":"removing", "relation":"conditions", "text":"When removing the fish"},
-          {"key":"net", "relation":"subrequirement", "text":"use a net", "fields":{"Main Verb":"use", "Object":"a net"}},
-          {"key":"gloves", "relation":"subrequirement", "text":"wear gloves", "fields":{"Main Verb":"wear", "Object":"gloves"}},
-          {"key":"door", "relation":"subrequirement", "text":"close the door", "fields":{"Main Verb":"close", "Object":"the door"}},
-          {"key":"help", "relation":"subrequirement", "text":"call for help", "fields":{"Main Verb":"call", "Object":"for help"}}
-        ], "quantities":{"subrequirement":[2,3]}}
-      ],
-      "group":{"field":"conditions","indices":[2,3,4]},
-      "quantities":{"conditions":[1,2]},
-      "interpretation":{
-        "scope":"The fish referred to by this fictional removal requirement; the human is the stated responsible actor.",
-        "scope_information":"Proposed data: identify the relevant fish and tank and the responsible human. Do not replace the affected fish with the grammatical subject as Set A.",
-        "condition":"The tank is red OR (the water is hot AND the fish is sick AND the pump is off). Small fish are exempt when the water is cold, but that exemption does not apply when the fish is sick.",
-        "condition_information":"Proposed data: tank colour, water state, fish health and size classification, and pump status in the same assessment context. Preserve the exception to the exception. Definitions of hot, cold, small and sick are not supplied.",
-        "demand":"remove the fish; when removing the fish, do at least two and no more than three of: use a net, wear gloves, close the door, call for help.",
-        "verification":"Proposed method: establish applicability with the nested exception first; then seek evidence of removal and count the supported listed actions. The action count must be between 2 and 3 inclusive. No observed actions or actual compliance verdict are supplied."
-      },
-      "gaps":["The example does not define hot, cold, small or sick.","Evidence sufficiency and the assessment time need agreement."]
+      "exceptions": [],
+      "subrequirements": []
     },
     {
-      "id":"lice",
-      "title":"3. Sea-lice clause: user-provided translation from the explanatory figures",
-      "paragraphs":[
-        "Seawater temperature at a depth of three metres shall be measured at least once every week.",
-        "The number of sea lice shall be counted at least every 7 days at temperatures equal to or above 4°C, and at least every 14 days at temperatures below 4°C. Broodstock are exempt from the counting requirement at temperatures below 4°C. Sea lice counting shall be carried out in accordance with the requirements of Annex 1."
-      ],
-      "fields":{"Subject":"Seawater temperature", "Modal Verb":"shall", "Main Verb":"be measured"},
-      "children":[
-        {"key":"depth", "relation":"conditions", "text":"at a depth of three metres"},
-        {"key":"weekly", "relation":"conditions", "text":"at least once every week"}
-      ],
-      "second":{
-        "fields":{"Subject":"The number of sea lice", "Modal Verb":"shall", "Main Verb":"be counted"},
-        "children":[
-          {"key":"warm", "relation":"conditions", "text":"at least every 7 days at temperatures equal to or above 4°C", "children":[{"key":"seven", "relation":"conditions", "text":"at least every 7 days"},{"key":"four-plus", "relation":"conditions", "text":"at temperatures equal to or above 4°C"}]},
-          {"key":"cool", "relation":"conditions", "text":"at least every 14 days at temperatures below 4°C", "children":[{"key":"fourteen", "relation":"conditions", "text":"at least every 14 days"},{"key":"below", "relation":"conditions", "text":"at temperatures below 4°C"}]},
-          {"key":"broodstock", "relation":"exceptions", "text":"Broodstock are exempt from the counting requirement at temperatures below 4°C.", "fields":{"Subject":"Broodstock", "Main Verb":"are exempt from", "Object":"the counting requirement"}, "children":[{"key":"brood-cold", "relation":"conditions", "text":"at temperatures below 4°C"}]},
-          {"key":"annex", "relation":"subrequirement", "text":"Sea lice counting shall be carried out in accordance with the requirements of Annex 1.", "fields":{"Subject":"Sea lice counting", "Modal Verb":"shall", "Main Verb":"be carried out"}, "children":[{"key":"annex-ref", "relation":"conditions", "text":"in accordance with the requirements of Annex 1"}]}
-        ],
-        "quantities":{"conditions":1}
-      },
-      "interpretation":{
-        "scope":"The seawater-temperature measurement referred to in the first sentence.",
-        "scope_information":"Proposed data: identify the relevant measurement location, recorded depth and temperature series. The excerpt does not independently define the wider geographic or operational scope.",
-        "condition":"The stated measurement depth is three metres. This qualifies the measurement; it is not a trigger invented from outside the text.",
-        "condition_information":"Proposed data: measurement depth, timestamp and the relevant weekly assessment interval. The excerpt supplies no further applicability trigger.",
-        "demand":"Seawater temperature at a depth of three metres shall be measured at least once every week.",
-        "verification":"Proposed method: for each relevant week, seek a source-linked measurement record at the required depth. Missing records are an evidence gap. No actual site or measurement records are included."
-      },
-      "second_interpretation":{
-        "scope":"The sea-lice counting activity and fish population covered by the translated excerpt, with Broodstock treated under its stated exception.",
-        "scope_information":"Proposed data: identify the relevant population, whether it is Broodstock, and the counting activity. Broader document applicability is outside this excerpt.",
-        "condition":"At temperatures equal to or above 4°C use the 7-day branch; below 4°C use the 14-day branch. Broodstock are exempt from the counting requirement below 4°C. Preserve the ownership of this exception.",
-        "condition_information":"Proposed data: the relevant temperature record, population type and assessment interval. Agree how a temperature change during an interval is handled; no transition rule is supplied.",
-        "demand":"Count sea lice at least every 7 days at temperatures equal to or above 4°C, and at least every 14 days below 4°C. Carry out counting in accordance with Annex 1.",
-        "verification":"Proposed method: use temperature and population information to determine applicability, then compare timestamped counts with the applicable interval. Annex 1 is referenced but not provided here, so its procedure cannot yet be verified. Do not invent Annex 1 content or automatically extend an exception to a different requirement."
-      },
-      "gaps":["This is the user's illustrative translation, not a verified current legal text.","Annex 1 is not supplied.","Temperature-transition handling and evidence sufficiency require clarification."]
+      "text": "results of completed health inspections",
+      "conditions": [],
+      "exceptions": [],
+      "subrequirements": [
+        [
+          [5,5],
+          "number of completed health inspections",
+          "sampling",
+          "examinations performed",
+          "diagnoses",
+          "treatments carried out"
+        ]
+      ]
     }
   ]
 }
