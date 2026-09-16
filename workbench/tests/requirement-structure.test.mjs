@@ -130,3 +130,21 @@ test('Exception and Subrequirement expose separate other-Requirement link select
  const ref={kind:'reference',id:'ref',role:'exceptions',target_id:'v'};
  assert.match(editor.nodeMarkup(ref,e.doc.units.u,tree,{},false),/data-rq="select-unit" data-id="v"/);assert.match(editor.nodeMarkup(ref,e.doc.units.u,tree,{},false),/>Unlink</);
 });
+
+test('relation picker has one heading and moves inline decomposition and its quantity to history',()=>{
+ const oldRef={kind:'reference',id:'old-ref',role:'subrequirement',target_id:'old'};
+ const external={kind:'reference',id:'external-ref',role:'subrequirement',target_id:'v'};
+ const relation=group('sub','subrequirement',[oldRef,external],[1,2]);
+ const tree=clause('root',[relation],[0,text.length]);
+ const {editor,e}=editorFixture(tree);e.doc.units.old={id:'old',text:'Old inline wording'};
+ const before=JSON.stringify(e.doc),html=editor.nodeMarkup(relation,e.doc.units.u,tree,editor.labels(tree),false);
+ assert.equal((html.match(/<strong>Subrequirement<\/strong>/g)||[]).length,1);
+ assert.equal((html.match(/<section class="rq-reference-picker/g)||[]).length,1);
+ assert.equal((html.match(/data-structure-reference/g)||[]).length,1);
+ assert.doesNotMatch(html,/Old inline wording|Saved decomposition|Earlier inline item ·|data-structure-qc/);
+ assert.match(html,/data-id="v"/);assert.match(html,/>Unlink</);
+ const history=editor.historyMarkup();assert.match(history,/Old inline wording/);assert.match(history,/\[1, 2\] of 2/);
+ assert.doesNotMatch(history,/data-straction|data-structure-reference/);assert.equal(JSON.stringify(e.doc),before);
+ relation.children=[external,{...external,id:'ref2',target_id:'w'}];
+ assert.match(editor.nodeMarkup(relation,e.doc.units.u,tree,editor.labels(tree),false),/data-structure-qc/);
+});

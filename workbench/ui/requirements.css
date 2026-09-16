@@ -175,4 +175,8 @@
 .rq-tree-link { display:flex; align-items:end; gap:8px; }
 .rq-tree-link label { flex:1; min-width:0; font-size:12px; }
 .rq-tree-link select { display:block; width:100%; margin-top:5px; }
-.rq-linked-requirement > details { flex-basis:100%; }
+.rq-linked-list { display:flex; flex-wrap:wrap; gap:6px; margin:6px 0; }
+.rq-linked-requirement { display:inline-flex; align-items:center; gap:4px; }
+.rq-legacy-note { display:block; margin-top:6px; opacity:.8; }
+.rq-legacy-relation { padding:8px 0; }
+.rq-legacy-relation p { white-space:pre-wrap; }
