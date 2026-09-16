@@ -78,3 +78,14 @@
 .ip-source-wording { margin:0 0 10px; white-space:pre-wrap; overflow-wrap:anywhere; font-size:13px; line-height:1.6; }
 .ip-ai-actions { display:flex; flex-wrap:wrap; align-items:center; gap:6px; }
 .ip-ai-actions span { font-size:11px; color:var(--muted,#53656a); }
+
+/* Keep disclosure arrows and content inside the fourth-pane card gutters. */
+.material-workbench .mw-interpretation .ip-requirement { padding:14px 16px; }
+.material-workbench .mw-interpretation .ip-requirement > summary { display:grid; grid-template-columns:12px auto minmax(0,1fr); align-items:start; gap:8px; padding:2px 0; list-style:none; }
+.ip-requirement > summary::-webkit-details-marker { display:none; }
+.ip-requirement > summary::before { content:"▸"; color:var(--muted); }
+.ip-requirement[open] > summary::before { content:"▾"; }
+.ip-entry-preview { overflow-wrap:anywhere; min-width:0; }
+.material-workbench .mw-interpretation .ip-requirement > details { padding:10px 12px; margin:12px 0; }
+.material-workbench .mw-interpretation .ip-requirement > details > summary { padding:3px 0; list-style-position:inside; }
+.ip-source-wording { padding:10px 12px; border-left:2px solid var(--line); background:var(--surface); }

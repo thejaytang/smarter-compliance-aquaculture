@@ -67,7 +67,7 @@ test('one entry root has no second R heading and plain fields have no QC or NOT'
  assert.match(html,/rq-entry-root/);assert.doesNotMatch(html,/>R1<|data-straction="not"|data-structure-qc|>QC /);
  const nested=group('nested','Object',[fragment('of','Object','A',[9,10])]);nested.span=[9,10];
  const explicit=editor.nodeMarkup(nested,e.doc.units.u,tree,editor.labels(tree),false);
- assert.match(explicit,/Group · Object/);assert.match(explicit,/>QC 1/);assert.doesNotMatch(explicit,/data-straction="not"/);
+ assert.match(explicit,/Group · Object/);assert.match(explicit,/>1<\/button>/);assert.doesNotMatch(explicit,/data-straction="not"/);
 });
 test('condition NOT and a separate exception clause retain separate scope',()=>{
  const tree=sample();tree.children[0].negated=true;
@@ -100,4 +100,23 @@ test('plain and nested Conditions have no NOT authoring; source negation stays l
 test('retired NOT action cannot modify a draft or reopen a completed entry',async()=>{
  const {editor,e}=editorFixture();e.step=()=>assert.fail('No draft operation expected');
  await assert.rejects(editor.action({dataset:{straction:'not'}}),/Explicit NOT editing is unavailable/);
+});
+
+test('range is an explicit exclusive option; selecting it enables bounds without a saved operation',async()=>{
+ const {editor,e,tree}=editorFixture();const node=tree.children[1];e.host={querySelector:()=>null,querySelectorAll:()=>[]};e.step=()=>assert.fail('Mode choice must not save');
+ let html=editor.qcMarkup(node,false);
+ assert.match(html,/data-straction="range-mode" aria-pressed="false"/);assert.match(html,/data-rq-min[^>]*disabled/);assert.doesNotMatch(html,/>QC</);
+ await editor.action({dataset:{straction:'range-mode'},closest:()=>({dataset:{owner:'u',structureNode:node.id}})});
+ html=editor.qcMarkup(node,false);assert.match(html,/data-straction="range-mode" aria-pressed="true"/);assert.doesNotMatch(html,/data-rq-(min|max)[^>]*disabled/);assert.match(html,/data-preset="all"[^>]*aria-pressed="false"/);
+ let sent;e.step=async(a,b)=>{sent=b;};
+ await editor.action({dataset:{straction:'preset',preset:'any'},closest:()=>({dataset:{owner:'u',structureNode:node.id}})});
+ node.quantity=sent.quantity;html=editor.qcMarkup(node,false);assert.deepEqual(node.quantity,[1,2]);assert.match(html,/data-preset="any"[^>]*aria-pressed="true"/);assert.match(html,/data-rq-max[^>]*disabled/);
+ node.quantity=[0,2];editor.rangeModes.clear();assert.match(editor.qcMarkup(node,false),/data-straction="range-mode" aria-pressed="true"/);
+ assert.match(editor.qcMarkup(node,true),/data-rq-min[^>]*disabled/);
+});
+test('reference boundaries and repeated same-field marks keep verb and object source colours',()=>{
+ const words='be checked for integrity or replaced';
+ const doc={text:words,units:{child:{text:'be checked for integrity'},replacement:{text:'replaced'},parent:{text:words,subrequirement:[1,'child','replacement']}},spans:{parent:[0,36],child:[0,24],replacement:[28,36]},field_spans:{parent:{'Main Verb':[0,10],Object:[11,24]},child:{'Main Verb':[0,10],Object:[11,24]},replacement:{'Main Verb':[0,8]}}};
+ const before=JSON.stringify(doc),html=sourcePreview(doc);assert.doesNotMatch(html,/semantic-overlap/);assert.match(html,/semantic-2[^>]*>be checked/);assert.match(html,/semantic-3[^>]*>for integrity/);assert.match(html,/semantic-2[^>]*>replaced/);assert.equal(JSON.stringify(doc),before);
+ doc.field_spans.parent.Subject=[0,10];assert.match(sourcePreview(doc),/semantic-overlap/);
 });

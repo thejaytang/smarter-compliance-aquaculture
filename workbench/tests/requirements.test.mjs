@@ -97,7 +97,7 @@ test('all three relation counts remain visible with nested ownership and no disc
  const {editor}=fixture();editor.doc=documentFixture();
  for(const field of ['conditions','exceptions','subrequirement']){
   const html=editor.groupMarkup([[1,2],'u',[1,'v']],field,'owner',[2],false);
-  assert.match(html,/data-rq-preview[^>]*>\[1, 2\]/);assert.match(html,/>QC<\/strong>/);assert.match(html,/data-owner="owner" data-path="2"/);assert.match(html,/data-path="2.2"/);
+  assert.match(html,/data-rq-preview[^>]*>\[1, 2\]/);assert.doesNotMatch(html,/>QC<\/strong>/);assert.match(html,/data-owner="owner" data-path="2"/);assert.match(html,/data-path="2.2"/);
   assert.doesNotMatch(html,/<details/);assert.match(html,/data-rq="quantity-preset"/);
  }
 });
@@ -159,7 +159,7 @@ test('compact QC preserves scalar and range representations with bounded shortcu
  assert.deepEqual(quantityRange('0','2',2),[0,2]);assert.deepEqual(quantityRange('1','1',2),[1,1]);
  for(const pair of [['','2'],['-1','2'],['1.5','2'],['1','3'],['2','1'],['1e0','2']])assert.throws(()=>quantityRange(...pair,2));
  const {editor}=fixture();editor.doc=documentFixture();const html=editor.groupMarkup([1,'u'],'conditions','u');
- assert.match(html,/data-preset="not-all"[^>]*disabled/);assert.match(html,/MIN-MAX:/);assert.doesNotMatch(html,/Apply range|quantity-custom/);
+ assert.match(html,/data-preset="not-all"[^>]*disabled/);assert.match(html,/data-rq="quantity-range"[^>]*aria-pressed="false"/);assert.match(html,/data-rq-min[^>]*disabled/);assert.doesNotMatch(html,/>QC</);assert.doesNotMatch(html,/Apply range|quantity-custom/);
 });
 function quantityFixture(){
  const {editor,m}=fixture();editor.doc=documentFixture();editor.render=()=>{};
@@ -210,4 +210,18 @@ test('only the entry arrow toggles disclosure; source wording has no disclosure 
  editor.render(true);assert.match(host.innerHTML,/<button[^>]+data-rq="open-session"[^>]+aria-expanded="true"/);
  assert.match(host.innerHTML,/<div class="rq-session-title" data-entry-source>/);assert.doesNotMatch(host.innerHTML,/<summary data-rq="open-session"/);
  editor.sessionCollapsed=true;editor.render(true);assert.doesNotMatch(host.innerHTML,/data-entry-source|rq-session-body/);
+});
+
+test('entry header has Locate then Remove, no Complete badge or duplicate removal action',()=>{
+ const {editor,host}=fixture();editor.doc=documentFixture();editor.sessions=[editor.doc];editor.doc.phase='complete';editor.render(true);
+ const header=host.innerHTML.split('<span class="rq-entry-actions">')[1].split('</span>')[0];
+ assert.ok(header.indexOf('>Locate</button>')<header.indexOf('>Remove</button>'));assert.doesNotMatch(header,/>Complete</);assert.equal((host.innerHTML.match(/data-rq="delete"/g)||[]).length,1);
+});
+test('Remove confirms the clicked entry, cancellation writes nothing and unsaved work blocks removal',async()=>{
+ const {editor,m}=fixture();editor.doc=documentFixture();editor.sessions=[editor.doc,{...documentFixture(),id:'other',revision:8}];let sent,closed=0,markup,bind;
+ editor.step=async(action,body)=>{sent={action,body};};m.dialog=(html,callback)=>{markup=html;bind=callback;};
+ await editor.action('delete',{dataset:{id:'other'}});assert.equal(sent,undefined);assert.match(markup,/Cancel/);
+ const buttons={};bind({querySelector:s=>buttons[s]??=( {} ),close:()=>closed++});buttons['[data-cancel-remove]'].onclick();assert.equal(sent,undefined);assert.equal(closed,1);
+ await buttons['[data-remove-entry]'].onclick();assert.deepEqual(sent,{action:'delete',body:{session_id:'other',expected_revision:8}});
+ let warned=false;editor.dirty=true;m.unsavedDialog=()=>warned=true;m.dialog=()=>assert.fail('Must warn before confirmation');await editor.action('delete',{dataset:{id:'other'}});assert.equal(warned,true);
 });

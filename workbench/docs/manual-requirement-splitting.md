@@ -4,7 +4,7 @@
 
 One source entry displays one Rx in both the third and fourth panes. Local historical child units retain their IDs and saved interpretations but appear as Groups within that entry, not additional Requirements. Only another complete entry is offered by the Requirement reference picker. Historical multi-clause entries retain access to their saved clause interpretations under the single entry heading.
 
-Only the arrow beside Rx expands or collapses the entry. Clicking coloured original wording never toggles it. One entry is open at a time. Expanded original text is selectable but read-only; selection opens a floating toolbar beside the pointer (or keyboard selection) with two sections: **Group / Degroup** and **Subject / Modal Verb / Main Verb / Object / conditions / ❌**. Collapsed source text has no annotation toolbar. Escape or clicking elsewhere dismisses the toolbar. The complete source uses a full-width row in narrow panes.
+The entry header shows Locate then Remove; Remove asks for explicit confirmation and keeps recoverable history. No completion badge is shown there. Only the arrow beside Rx expands or collapses the entry. Clicking coloured original wording never toggles it. One entry is open at a time. Expanded original text is selectable but read-only; selection opens a floating toolbar beside the pointer (or keyboard selection) with two sections: **Group / Degroup** and **Subject / Modal Verb / Main Verb / Object / conditions / ❌**. Collapsed source text has no annotation toolbar. Escape or clicking elsewhere dismisses the toolbar. The complete source uses a full-width row in narrow panes.
 
 Group retains existing whole source marks inside its selected range. A boundary through an existing mark must be adjusted or cleared first. ❌ clears field marks only in the selected range, including matching local child-unit marks, preserving original text and explicit Groups. Degroup preserves fields and refuses to discard existing alternative quantities or NOT implicitly. Plain single fields have no QC; explicit combinations retain exact/range QC. Explicit NOT controls and operations are unavailable, including Conditions. Select the complete negative wording (for example, “not installed in the North of Norway”) as an ordinary Condition; no extra operator is inferred. Historical stored NOT remains visibly read-only and retains its recorded projection; no migration rewrites saved history.
 
@@ -16,6 +16,8 @@ These rules supersede conflicting descriptions below, including the earlier conv
 
 Select wording in the original text inside an open Requirement, then choose **Subject**, **Modal Verb**, **Main Verb**, **Object**, **conditions** or **Group** from the contextual toolbar. The original is selectable but read-only. Coloured source marks remain above each entry when its editor is collapsed. **subrequirement** opens the existing-Requirement picker; references retain real IDs and display Rx labels.
 
+Explicit Groups indent their children one level and show connecting guides; siblings remain aligned. Source colours preserve inner grammatical fields for parent/child references and duplicate same-field marks; unrelated conflicting field annotations still show overlap.
+
 A **Group** created in a clause holds a complete subject/action/object association. Put shared conditions on its enclosing clause. For example, an outer clause can contain one shared condition and two child clauses for “Alice checks A” and “Bob checks B”. The combination of those child clauses has QC; the mixed grammatical fields within a clause do not.
 
 Every field supports multiple source fragments and nested same-role groups. **Decompose** replaces a fragment with an empty group over the same exact source span; select its wording again to fill the children. A condition subgroup offers only Conditions and Group, and a Subject subgroup offers only Subject and Group. Select sibling checkboxes and choose **Group selected** to wrap them without losing their IDs. **Ungroup** is permitted only between unnegated All groups; other flattening would change meaning.
@@ -24,7 +26,7 @@ QC counts direct children, with nested groups counting as one child:
 
 - **All**: exact N; **Any**: [1,N]; **Only**: exact 1.
 - **Not All**: [1,N-1], deliberately excluding zero. It is not the Boolean NOT operation.
-- **MIN-MAX**: inclusive integer bounds within 0…N. One-item QC can be expanded from its compact summary.
+- **MIN–MAX** is a selectable option alongside the shortcuts. Bounds are disabled until it is selected, and accept inclusive integer values within 0…N. Choosing a shortcut disables the bounds again. Selecting the mode alone does not save anything. The separate QC heading is omitted; the current count/range stays visible.
 - Explicit Boolean NOT authoring is disabled in this version. Negation stays in the selected source wording. Existing historical NOT annotations remain read-only.
 
 Adding/removing/wrapping members leaves multi-item QC unresolved until the operator chooses its meaning. Empty groups and unresolved QC prevent Finish. Legacy exceptions appear as independent exception clause/reference groups without automatic negation; opening a record does not rewrite its history.
