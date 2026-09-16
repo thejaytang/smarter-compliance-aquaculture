@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {RequirementsEditor,codepointOffset,quantityLabel,groupIds,quantityPreset,quantityMode} from '../ui/requirements.js';
+import {RequirementsEditor,codepointOffset,quantityLabel,groupIds,quantityPreset,quantityMode,quantityPreview,quantityRange} from '../ui/requirements.js';
 function fixture(){
  const host={innerHTML:'',classList:{add(){}},setAttribute(){},removeAttribute(){}};
  const auto={},m={id:'m',state:{actor:{id:'a'}},material:{revision:3,collaboration:{view:'personal'}},draft:{blocks:[{id:'b',type:'text',text:'Original whole passage'}]},collaboration:{readonly:false},q:s=>s==='#mw-requirement-content'?host:auto};
@@ -97,7 +97,7 @@ test('all three relation counts remain visible with nested ownership and no disc
  const {editor}=fixture();editor.doc=documentFixture();
  for(const field of ['conditions','exceptions','subrequirement']){
   const html=editor.groupMarkup([[1,2],'u',[1,'v']],field,'owner',[2],false);
-  assert.match(html,/1 to 2 of 2/);assert.match(html,/data-owner="owner" data-path="2"/);assert.match(html,/data-path="2.2"/);
+  assert.match(html,/data-rq-preview[^>]*>\[1, 2\]/);assert.match(html,/>QC<\/strong>/);assert.match(html,/data-owner="owner" data-path="2"/);assert.match(html,/data-path="2.2"/);
   assert.doesNotMatch(html,/<details/);assert.match(html,/data-rq="quantity-preset"/);
  }
 });
@@ -145,9 +145,57 @@ test('editing a nested child keeps its already-finished ancestor open',async()=>
  assert.equal(editor.closedUnits.has('u'),false);
 });
 test('custom range applies inclusive bounds to the selected group only',async()=>{
- const {editor}=fixture();editor.doc=documentFixture();let sent;
+ const {editor}=fixture();editor.doc=documentFixture();editor.doc.units.u.exceptions=[2,'v','u'];let sent;
  const controls={querySelector:s=>({value:s==='[data-rq-min]'?'0':'2'})};
  const group={dataset:{owner:'u',field:'exceptions',path:''},querySelector:()=>controls};
  editor.step=async(a,b)=>sent={a,b};await editor.action('quantity',{dataset:{},closest:s=>s==='[data-rq-group]'?group:null});
  assert.deepEqual(sent,{a:'quantity',b:{unit_id:'u',field:'exceptions',path:[],quantity:[0,2]}});
+});
+
+test('compact QC preserves scalar and range representations with bounded shortcuts',()=>{
+ assert.deepEqual(quantityPreset('not-all',4),[1,3]);assert.throws(()=>quantityPreset('not-all',1));
+ assert.equal(quantityMode([1,1],2),'not-all');assert.equal(quantityMode(1,2),'one');
+ assert.equal(quantityPreview(2),'2');assert.equal(quantityPreview([0,2]),'[0, 2]');
+ assert.deepEqual(quantityRange('0','2',2),[0,2]);assert.deepEqual(quantityRange('1','1',2),[1,1]);
+ for(const pair of [['','2'],['-1','2'],['1.5','2'],['1','3'],['2','1'],['1e0','2']])assert.throws(()=>quantityRange(...pair,2));
+ const {editor}=fixture();editor.doc=documentFixture();const html=editor.groupMarkup([1,'u'],'conditions','u');
+ assert.match(html,/data-preset="not-all"[^>]*disabled/);assert.match(html,/MIN-MAX:/);assert.doesNotMatch(html,/Apply range|quantity-custom/);
+});
+function quantityFixture(){
+ const {editor,m}=fixture();editor.doc=documentFixture();editor.render=()=>{};
+ const group={dataset:{owner:'u',field:'conditions',path:''}};
+ const inputs=['2','2'].map(value=>({value,dataset:{},setAttribute(){},removeAttribute(){}}));
+ const output={},error={hidden:true};
+ const row={dataset:{count:'2',current:'2'},closest:()=>group,parentElement:{querySelector:()=>error},querySelectorAll:s=>s==='input'?inputs:[],querySelector:()=>output,contains:node=>inputs.includes(node)};
+ editor.bindQuantity(row);return {editor,m,row,inputs,output,error};
+}
+test('range input previews immediately, rejects non-digits, clamps, and warns before leaving',async()=>{
+ const {editor,row,inputs,output,error}=quantityFixture();let sent=0;editor.action=async()=>{sent++;return true;};
+ inputs[0].value='0';inputs[0].oninput();assert.equal(output.textContent,'[0, 2]');assert.equal(editor.dirty,true);
+ inputs[1].value='99';inputs[1].oninput();assert.equal(inputs[1].value,'2');
+ inputs[1].value='-1';inputs[1].oninput();assert.equal(inputs[1].value,'2');
+ let prevented=false;inputs[0].onbeforeinput({data:'e',preventDefault(){prevented=true;}});assert.ok(prevented);
+ row.onfocusout({relatedTarget:inputs[1]});assert.equal(sent,0);
+ inputs[1].value='';inputs[1].oninput();assert.equal(await row.commitQuantity(),false);assert.equal(sent,0);assert.equal(error.hidden,false);
+ inputs[1].value='1';inputs[1].oninput();assert.equal(await row.commitQuantity(),true);assert.equal(sent,1);assert.equal(editor.quantityDrafts.size,0);
+ await row.commitQuantity();assert.equal(sent,1);
+});
+test('Escape restores quantity without clearing pre-existing unsaved work; failed preview retains input',async()=>{
+ const {editor,row,inputs,output}=quantityFixture();editor.dirty=true;
+ inputs[0].value='0';inputs[0].oninput();editor.action=async()=>false;
+ assert.equal(await row.commitQuantity(),false);assert.equal(editor.quantityDrafts.size,1);
+ inputs[0].onkeydown({key:'Escape',preventDefault(){}});assert.equal(output.textContent,'2');assert.equal(editor.quantityDrafts.size,0);assert.equal(editor.dirty,true);
+});
+
+test('uncommitted bounds survive a render and block saving when invalid',async()=>{
+ const {editor,row,inputs,output}=quantityFixture();inputs[0].value='';inputs[0].oninput();
+ inputs[0].value='2';editor.bindQuantity(row);assert.equal(inputs[0].value,'');assert.equal(output.textContent,'[…, 2]');
+ let saves=0;editor.host.querySelectorAll=()=>[row];editor.step=async()=>saves++;
+ await editor.saveDraft();assert.equal(saves,0);assert.equal(editor.dirty,true);
+});
+test('manual Save flushes the current range before submitting its step list',async()=>{
+ const {editor,row,inputs}=quantityFixture();inputs[0].value='0';inputs[0].oninput();
+ const calls=[];editor.action=async()=>{calls.push('quantity');editor._dirty=true;return true;};
+ editor.host.querySelectorAll=()=>[row];editor.step=async action=>calls.push(action);
+ await editor.saveDraft();assert.deepEqual(calls,['quantity','save-draft']);
 });

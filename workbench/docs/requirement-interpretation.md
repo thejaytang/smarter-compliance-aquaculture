@@ -135,3 +135,9 @@ The importer validates the graph, source spans, field anchors, quotation support
 Received artifacts are retained by digest. Conflicting local revision numbers are rebound to appended local history while the untouched incoming artifact remains in `requirement_delivery_archives`; original revision identity is recorded in `delivery_origin`. Request receipts make interrupted imports replayable. Existing histories and omitted sessions remain. An imported interpretation whose local dependencies differ remains stale and requires context review. No import executes a query, generation request or compliance check.
 
 Version-1 full snapshots are readable; older Workbench versions must be updated to consume version 2. Legacy quotation locations retain their original limitations. A full snapshot preserves recorded work, not a guarantee that an old missing attachment was present in the first place.
+
+## Compact quantity controls
+
+Each relationship group displays QC, a live scalar or inclusive range, All / Any / Only / Not All, and MIN-MAX. With N direct items these presets mean N, [1,N], 1 and [1,N-1]. Not All is the user-defined nonempty proper subset range, disabled below two items. Numeric bounds are limited to 0..N and MIN cannot exceed MAX. A nested group counts once. Formula tooltips retain non-colour meaning.
+
+Range changes remain page-memory drafts until explicit Save splitting. Enter or leaving a row updates the unsaved preview; invalid pairs prevent submission. Escape restores that row. Pending input survives rendering and triggers the existing leave warning. No automatic database/history save is introduced.

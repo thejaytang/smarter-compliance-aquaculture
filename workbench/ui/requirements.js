@@ -7,19 +7,31 @@ export const relations = ['conditions','exceptions','subrequirement'];
 export const codepointOffset = (text, utf16Offset) => Array.from(text.slice(0, utf16Offset)).length;
 export function quantityLabel(q) { return Array.isArray(q) ? `${q[0]} to ${q[1]}` : `Exactly ${q}`; }
 export function quantityPreset(preset,count) {
+  if(!Number.isInteger(count)||count<0)throw Error('Invalid item count.');
   if(preset==='all')return count;
-  if(preset==='any')return [1,count];
-  if(preset==='one')return 1;
-  throw Error('Choose All, Any (OR), or Exactly one.');
+  if(preset==='any'&&count>=1)return [1,count];
+  if(preset==='one'&&count>=1)return 1;
+  if(preset==='not-all'&&count>=2)return [1,count-1];
+  throw Error('This shortcut needs more items in the group.');
 }
 export function quantityMode(quantity,count) {
-  const [min,max]=Array.isArray(quantity)?quantity:[quantity,quantity];
-  return min===count&&max===count?'all':min===1&&max===count?'any':min===1&&max===1?'one':'custom';
+  if(!Array.isArray(quantity))return quantity===count?'all':quantity===1?'one':'custom';
+  return quantity[0]===1&&quantity[1]===count?'any':quantity[0]===1&&quantity[1]===count-1?'not-all':'custom';
+}
+export const quantityPreview=q=>Array.isArray(q)?`[${q[0]}, ${q[1]}]`:String(q);
+export function quantityRange(low,high,count){
+  if(!/^\d+$/.test(String(low))||!/^\d+$/.test(String(high)))throw Error('Enter whole numbers in both fields.');
+  const min=Number(low),max=Number(high);
+  if(!Number.isSafeInteger(min)||!Number.isSafeInteger(max)||min<0||max>count||min>max)throw Error(`Use 0–${count}, with MIN ≤ MAX.`);
+  return [min,max];
 }
 export function groupIds(group) { return group ? group.slice(1).flatMap(x => Array.isArray(x) ? groupIds(x) : [x]) : []; }
 const button = (action,label,attrs='') => `<button type="button" data-rq="${action}" ${attrs}>${label}</button>`;
 export class RequirementsEditor {
-  constructor(materials) { this.m=materials; this.sessions=[]; this.results=[]; this.closedUnits=new Set(); this.customGroups=new Set(); this.sessionCollapsed=false; }
+  constructor(materials) { this.m=materials; this.sessions=[]; this.results=[]; this.closedUnits=new Set(); this.quantityDrafts=new Map(); this.sessionCollapsed=false; }
+  get dirty() { return !!this._dirty || this.quantityDrafts.size>0; }
+  set dirty(value) { this._dirty=value;if(!value)this.quantityDrafts.clear(); }
+  quantityKey(group) { return [this.doc.id,group.dataset.owner||null,group.dataset.field,group.dataset.path||''].join(':'); }
   get host() { return this.m.q('#mw-requirement-content'); }
   get locked() { return this.loading || this.pending || this.m.busy || this.m.opening || this.m.dirty || this.doc?.stale || !!this.retryRequest || this.m.collaboration.readonly; }
   key() { return `${this.m.state?.actor?.id || ''}:${this.m.id}:${this.m.material?.revision}:${this.m.material?.collaboration?.view || ''}`; }
@@ -27,7 +39,7 @@ export class RequirementsEditor {
     const host=this.host;if(!host||!this.m.material)return;
     const key=this.key();
     if(key!==this.context) {
-      this.context=key;this.closedUnits.clear();this.customGroups.clear();this.sessionCollapsed=false;this.doc=null;this.sessions=[];this.selected=null;this.results=[];this.notice='Loading saved splitting work…';this.lastRender=null;this.loading=true;this.dirty=false;this.edits=[];
+      this.context=key;this.closedUnits.clear();this.quantityDrafts.clear();this.sessionCollapsed=false;this.doc=null;this.sessions=[];this.selected=null;this.results=[];this.notice='Loading saved splitting work…';this.lastRender=null;this.loading=true;this.dirty=false;this.edits=[];
       this.loadList(key);
     }
     const auto=this.m.q('[data-action="reprocess"]');if(auto){auto.disabled=true;auto.title='Automatic requirement extraction is not connected.';}
@@ -41,7 +53,8 @@ export class RequirementsEditor {
         <summary data-rq="open-session" data-id="${esc(s.id)}"><span class="rq-session-number">${esc(this.entryLabel(s))}</span><span class="rq-session-title">${sourcePreview({...s,...(s.id===this.doc?.id?this.doc:{}),labels:this.displayLabels()})}</span><span class="rq-badge">${s.phase==='complete'?'Complete':'In progress'}</span>${button('locate-session','Locate text',`class="rq-locate-text" data-id="${esc(s.id)}"`)}</summary>
         ${s.id===this.doc?.id?this.documentMarkup():''}</details>`).join('')}</div>
       ${this.deleted?.length?`<details><summary>Removed entries · ${this.deleted.length}</summary>${this.deleted.map(s=>`<p>${esc(s.text.slice(0,100))} ${button('undelete','Restore entry',`data-id="${s.id}"`)}</p>`).join('')}</details>`:''}${!this.sessions.length?'<div class="rq-empty"><h4>Build a requirement from its original text</h4><p>Select a source block in the content pane and choose <strong>To requirements</strong>. Split and assign its wording here; each requirement stays in the list.</p><p>Automatic extraction: Not connected.</p></div>':''}`;
-    host.onclick=e=>{const b=e.target.closest('[data-rq]');if(b&&!b.disabled){e.stopPropagation();if(['open-session','select-unit','locate-session','decompose'].includes(b.dataset.rq))e.preventDefault();this.action(b.dataset.rq,b).catch(error=>this.showError(error));}};
+    host.onclick=e=>{const b=e.target.closest('[data-rq]');if(b&&!b.disabled){e.stopPropagation();if(['open-session','select-unit','locate-session','decompose'].includes(b.dataset.rq))e.preventDefault();(async()=>{for(const row of host.querySelectorAll?.('[data-rq-qc]')||[]){if(b.dataset.rq==='quantity-preset'&&row.contains(b))continue;if(row.commitQuantity&&!(await row.commitQuantity()))return;}await this.action(b.dataset.rq,b);})().catch(error=>this.showError(error));}};
+    host.querySelectorAll?.('[data-rq-qc]').forEach(row=>this.bindQuantity(row));
     // Native disclosure is presentation only; retain it across each saved-step render.
     host.querySelectorAll?.('[data-unit]').forEach(card=>card.ontoggle=()=>{if(!card.isConnected)return;if(card.open)this.closedUnits.delete(card.dataset.unit);else this.closedUnits.add(card.dataset.unit);});
     if(this.pending)host.setAttribute('aria-busy','true');else host.removeAttribute('aria-busy');
@@ -108,13 +121,15 @@ export class RequirementsEditor {
       try{sessionStorage.setItem('requirement-session:'+context,this.doc.id);}catch{}
       if(!this.dirty)this.m.interpretations?.sourceChanged();
       this.notice=`${this.dirty?'Unsaved changes · save before leaving':'Saved step '+this.doc.revision} · ${this.doc.phase==='complete'?'Splitting complete. This does not confirm material review.':this.dirty?'Changes remain only in this page.':'You can leave and resume this passage.'}`;
+      return true;
     } catch(e) {
       // Keep the exact request for retry when transport failed after a possible save.
       if(!e.definitive)this.retryRequest=request;
       this.notice=e.status===409?'Another tab saved a newer step. Your attempted step was not applied. Reopen this saved passage to continue.':`${e.message}${this.retryRequest?' Retry this same step before leaving.':''}`;
+      return false;
     } finally {this.pending=false;this.render(true);this.m.updateNavigationLock?.();}
   }
-  async saveDraft(){if(!this.dirty||this.pending)return;return this.step('save-draft',{session_id:this.baseSession,expected_revision:this.baseRevision,steps:this.edits});}
+  async saveDraft(){if(!this.dirty||this.pending)return;for(const row of this.host.querySelectorAll?.('[data-rq-qc]')||[])if(row.commitQuantity&&!(await row.commitQuantity()))return;return this.step('save-draft',{session_id:this.baseSession,expected_revision:this.baseRevision,steps:this.edits});}
   discard(){this.edits=[];this.dirty=false;this.retryRequest=null;this.doc=null;this.baseSession=null;void this.loadList();}
   async navigateAnnotation(refs){
     const jump=async s=>{await this.open(s.session_id);this.selected=s.unit_id;this.closedUnits.delete(s.unit_id);this.render(true);this.m.revealPane?.('requirements');const card=this.host.querySelector(`[data-unit="${s.unit_id}"]`);const field=card?.querySelector(`[data-field="${s.field}"]`)||card;field?.scrollIntoView({block:'nearest'});field?.focus();};
@@ -173,14 +188,38 @@ export class RequirementsEditor {
   }
   groupMarkup(group,field,owner,path=[],readonly=false) {
     if(!group)return '<p class="rq-blank">Not stated</p>';
-    const disabled=this.locked||readonly?'disabled':'',q=group[0],range=Array.isArray(q),identity=path.join('.'),count=group.length-1,mode=quantityMode(q,count),key=[this.doc.id,owner,field,identity].join(':');
-    const custom=mode==='custom'||this.customGroups.has(key);
-    return `<div class="rq-group" tabindex="-1" data-rq-group data-field="${field}" data-owner="${owner||''}" data-path="${identity}"><div class="rq-group-options"><p class="rq-count-summary">${quantityLabel(q)} of ${count}</p>
-      <div class="rq-quantity-presets" role="group" aria-label="Quantity for ${field}">${[['all',`All (${count})`,'Every direct item must hold'],['any','Any (OR)','At least one; more than one is allowed'],['one','Exactly one','One and only one direct item'],['custom','Range','Set minimum and maximum']].map(([preset,label,title])=>button(preset==='custom'?'quantity-custom':'quantity-preset',label,`data-preset="${preset}" title="${title}" aria-pressed="${mode===preset}" ${disabled}`)).join('')}</div>
-      ${custom&&!readonly?`<div class="rq-quantity"><label>Minimum<input data-rq-min type="number" min="0" max="${count}" value="${range?q[0]:q}" ${disabled}></label><label>Maximum<input data-rq-max type="number" min="0" max="${count}" value="${range?q[1]:q}" ${disabled}></label>${button('quantity','Apply range',disabled)}</div>`:''}
+    const disabled=this.locked||readonly?'disabled':'',q=group[0],range=Array.isArray(q),identity=path.join('.'),count=group.length-1,mode=quantityMode(q,count);
+    return `<div class="rq-group" tabindex="-1" data-rq-group data-field="${field}" data-owner="${owner||''}" data-path="${identity}"><div class="rq-group-options"><strong class="rq-qc-title" title="Quantitative constraints">QC</strong>
+      <div class="rq-qc-row rq-quantity" data-rq-qc data-count="${count}" data-current="${esc(JSON.stringify(q))}" role="group" aria-label="Quantity for ${field}"><output data-rq-preview class="rq-qc-preview" aria-live="polite" title="K = exact count; [min, max] = inclusive range">${quantityPreview(q)}</output><div class="rq-quantity-presets">${[['all','All',`K = ${count}`],['any','Any',`[1, ${count}] · at least one`],['one','Only','K = 1 · exactly one'],['not-all','Not All',count>=2?`[1, ${count-1}] · at least one, fewer than all`:'Needs at least 2 items']].map(([preset,label,title])=>button('quantity-preset',label,`data-preset="${preset}" title="${title}" aria-pressed="${mode===preset}" ${disabled||(preset==='not-all'?count<2:preset!=='all'&&count<1)?'disabled':''}`)).join('')}</div><span class="rq-qc-range-label">MIN-MAX:</span><input data-rq-min type="text" inputmode="numeric" pattern="[0-9]*" aria-label="Minimum" title="0–${count}" value="${range?q[0]:q}" ${disabled}><span aria-hidden="true">-</span><input data-rq-max type="text" inputmode="numeric" pattern="[0-9]*" aria-label="Maximum" title="0–${count}" value="${range?q[1]:q}" ${disabled}></div><small data-rq-qc-error class="rq-qc-error" role="status" hidden></small>
       ${!readonly?`<div class="rq-group-actions">${button('group','Group selected',disabled)}${button('ungroup','Expand selected group',disabled)}${field!=='roots'?button('unlink','Detach selected',disabled):''}</div>`:''}</div>
       <ol class="rq-children">${group.slice(1).map((child,i)=>`<li>${!readonly?`<input type="checkbox" data-rq-pick="${i+1}" aria-label="Select item ${i+1} in ${field} ${identity||'outer group'}" ${disabled}>`:''}${Array.isArray(child)?this.groupMarkup(child,field,owner,[...path,i+1],readonly):this.doc.roles[child]==='condition'&&field==='conditions'?`<div class="rq-condition-slot" data-condition-instance="${esc([owner,field,identity,child].join(':'))}">${this.unitMarkup(this.doc.units[child],this.locked?'disabled':'',readonly,true)}</div>`:`<div class="rq-reference">${button('select-unit',this.label(child),`data-id="${child}" title="${esc(child)}" ${this.doc.units[child]||this.sessions.some(s=>s.units?.[child])?'':'disabled'}`)}<span>${esc(this.unitText(child))}</span>${this.doc.units[child]?button('decompose','Decompose',`data-id="${child}" aria-label="Decompose ${esc(this.label(child))}" ${this.locked?'disabled':''}`):''}${!this.doc.units[child]?button('reference-source','View linked original',`data-id="${child}"`):''}</div>`}</li>`).join('')}</ol>
       </div>`;
+  }
+  bindQuantity(row){
+    const inputs=[...row.querySelectorAll('input')],count=Number(row.dataset.count),output=row.querySelector('[data-rq-preview]'),error=row.parentElement.querySelector('[data-rq-qc-error]');
+    const key=this.quantityKey(row.closest('[data-rq-group]'));
+    let changed=this.quantityDrafts.has(key);
+    if(changed)inputs.forEach((input,i)=>input.value=this.quantityDrafts.get(key)[i]);
+    const preview=()=>{
+      output.textContent=`[${inputs[0].value||'…'}, ${inputs[1].value||'…'}]`;
+      try{quantityRange(inputs[0].value,inputs[1].value,count);error.hidden=true;inputs.forEach(i=>i.removeAttribute('aria-invalid'));return true;}
+      catch(e){error.textContent=e.message;error.hidden=false;inputs.forEach(i=>i.setAttribute('aria-invalid','true'));return false;}
+    };
+    const commit=async()=>{if(!changed)return true;if(this.locked||!preview())return false;const ok=await this.action('quantity',inputs[0]);if(ok===false||this.retryRequest)return false;changed=false;this.quantityDrafts.delete(key);this.render(true);return true;};
+    row.commitQuantity=commit;
+    for(const input of inputs){
+      input.dataset.previous=input.value;
+      input.onbeforeinput=e=>{if(e.data&&!/^\d+$/.test(e.data))e.preventDefault();};
+      input.oninput=()=>{
+        if(!/^\d*$/.test(input.value)){input.value=input.dataset.previous;return;}
+        if(input.value!=='')input.value=String(Math.min(count,Number(input.value)));
+        input.dataset.previous=input.value;changed=true;this.quantityDrafts.set(key,inputs.map(i=>i.value));this.m.updateNavigationLock?.();preview();
+        row.querySelectorAll('[data-preset]').forEach(b=>b.setAttribute('aria-pressed','false'));
+      };
+      input.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();void commit().catch(e=>this.showError(e));}if(e.key==='Escape'){e.preventDefault();const q=JSON.parse(row.dataset.current),values=Array.isArray(q)?q:[q,q];inputs.forEach((i,n)=>{i.value=String(values[n]);i.dataset.previous=i.value;});output.textContent=quantityPreview(q);error.hidden=true;inputs.forEach(i=>i.removeAttribute('aria-invalid'));changed=false;this.quantityDrafts.delete(key);this.m.updateNavigationLock?.();}};
+    }
+    if(changed)preview();
+    row.onfocusout=e=>{if(row.contains(e.relatedTarget)||e.relatedTarget?.closest('[data-rq]'))return;void commit().catch(e=>this.showError(e));};
   }
   linkMarkup(u,disabled) {
     const local=Object.values(this.doc.units).filter(x=>x.id!==u.id),choices=[...local,...this.results.filter(x=>!this.doc.units[x.id])];
@@ -262,17 +301,17 @@ export class RequirementsEditor {
       body.field=node.dataset.field;
       return this.step(action,body);
     }
-    if(['quantity','quantity-preset','quantity-custom','group','ungroup','unlink'].includes(action)){
+    if(['quantity','quantity-preset','group','ungroup','unlink'].includes(action)){
       const group=node.closest('[data-rq-group]');body.unit_id=group.dataset.owner;body.field=group.dataset.field;body.path=group.dataset.path?group.dataset.path.split('.').map(Number):[];
-      const key=[this.doc.id,body.unit_id||null,body.field,group.dataset.path||''].join(':');
-      if(action==='quantity-custom'){this.customGroups.add(key);this.render(true);return;}
       if(action==='quantity-preset'){
         let combination=body.field==='roots'?this.doc.roots:this.doc.units[body.unit_id][body.field];for(const index of body.path)combination=combination[index];
-        body.quantity=quantityPreset(node.dataset.preset,combination.length-1);this.customGroups.delete(key);return this.step('quantity',body);
+        body.quantity=quantityPreset(node.dataset.preset,combination.length-1);this.quantityDrafts.delete(this.quantityKey(group));return this.step('quantity',body);
       }
       if(action==='quantity'){
-        const controls=group.querySelector('.rq-quantity'),low=Number(controls.querySelector('[data-rq-min]').value),high=Number(controls.querySelector('[data-rq-max]').value);
-        body.quantity=[low,high];
+        const controls=group.querySelector('.rq-quantity');
+        let combination=body.field==='roots'?this.doc.roots:this.doc.units[body.unit_id][body.field];for(const index of body.path)combination=combination[index];
+        body.quantity=quantityRange(controls.querySelector('[data-rq-min]').value,controls.querySelector('[data-rq-max]').value,combination.length-1);
+        if(JSON.stringify(body.quantity)===JSON.stringify(combination[0]))return;
       }else body.indices=[...group.querySelectorAll(':scope > .rq-children > li > [data-rq-pick]:checked')].map(x=>Number(x.dataset.rqPick));
       return this.step(action,body);
     }
