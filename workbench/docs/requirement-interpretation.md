@@ -1,5 +1,15 @@
 # Requirement annotations and check design
 
+## Unified group handoff (current)
+
+The [source-bound group editor](manual-requirement-splitting.md#unified-source-bound-groups-current) supersedes the earlier terminal grammatical fields and separate exception operation. Source-derived Scope, Conditions and Demands retain clause labels, subject/object associations, shared outer conditions, exact/range quantities and group NOT. An empty group or unset QC is an unresolved input, never unconditional applicability. This remains a human-authored check design, not an executed compliance result.
+
+`requirement-structure/1` is an additive splitting extension. Immutable saved steps own it; `requirement_structure_nodes` indexes owner, parent, position, kind, role, quantity, negation, source offsets, reference target and exception provenance. Response-only `structure_views` lets legacy records use the same editor without saving a migration. Canonical trees replace legacy field/relationship projections only for the affected unit.
+
+Interpretation context and its fingerprint include effective trees across linked sessions. Saved checking logic binds the effective source tree. Full-workspace packages containing any group history use the nested `requirement-delivery/2` contract; unchanged legacy-only bundles use `/1`. Import supports both, validates source spans/counts/ownership/cycles and rejects a tree disguised as `/1`. Older clients must reject `/2` rather than silently flatten its meaning. The surrounding workspace ZIP remains version 2.
+
+All edits still require explicit Save. Opening a record, selecting text, changing disclosure or previewing an edit adds no database history. The three editable Logic boxes and explicit AI candidate acceptance remain unchanged.
+
 ## Simplified relationship and interpretation workflow, 2026-09-16
 
 This revision supersedes the earlier separate relationship buttons and six-field status menus. Subject, Modal Verb, Main Verb, Object, conditions, exceptions and subrequirement use the same coloured field-block layout. A Condition editor contains only recursive conditions, not grammatical fields or other relationship types. Exact/range counts are displayed directly in every relationship group, including nested groups; scalar k still means exactly k.

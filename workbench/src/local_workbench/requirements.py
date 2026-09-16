@@ -4,6 +4,7 @@ import hashlib
 import json
 import uuid
 from .collaboration import named, now
+from . import requirement_structure as structure
 
 FIELDS = ('Subject', 'Modal Verb', 'Main Verb', 'Object')
 RELATIONS = ('conditions', 'exceptions', 'subrequirement')
@@ -112,7 +113,7 @@ class Requirements:
 
     @staticmethod
     def summary(doc):
-        return {k: doc[k] for k in ('id','revision','phase','text','chapter','block_id','units','spans','field_spans','roles','done','labels','source_segments','deleted') if k in doc}
+        return dict({k: doc[k] for k in ('id','revision','phase','text','chapter','block_id','units','spans','field_spans','roles','done','labels','source_segments','deleted','structures','structure_schema','roots') if k in doc}, structure_views=structure.views(doc))
 
     def load(self, db, actor, identity):
         row = db.execute('SELECT body FROM requirement_sessions WHERE id=? AND actor=?', (identity, actor)).fetchone()
@@ -134,7 +135,7 @@ class Requirements:
             doc['steps'] = [{'revision': r[0], 'action': r[1], 'at': r[2]} for r in db.execute(
                 'SELECT revision,action,at FROM requirement_steps WHERE session_id=? ORDER BY revision DESC LIMIT 50', (identity,))]
         doc['stale'] = bool(self.stale(doc, self.material(actor, doc['material_id'])))
-        return doc
+        return structure.response(doc)
 
     def search(self, actor, query):
         actor = named(actor)
@@ -164,12 +165,12 @@ class Requirements:
                     return dict(status='conflict',error='A newer splitting version was saved. Your unsaved edits remain in this page.',document=doc)
             material_cache={}
             for i,step in enumerate(steps):
-                if not isinstance(step,dict) or step.get('action') not in ('start','split','assign','extract','clear','link','quantity','group','ungroup','unlink','done','reopen','phase','restore'):raise ValueError('Invalid splitting edit.')
+                if not isinstance(step,dict) or step.get('action') not in ('start','split','assign','extract','clear','link','quantity','group','ungroup','unlink','done','reopen','phase','restore','structure'):raise ValueError('Invalid splitting edit.')
                 if (step['action']=='start') != (i==0 and doc is None):raise ValueError('A new entry starts with its original source.')
                 req=dict(step)
                 if doc:req.update(session_id=doc['id'],expected_revision=doc['revision'])
                 doc=self.apply(actor,req,_draft=doc,_preview=True,_material_cache=material_cache)['document']
-            if request['action']=='preview':return dict(status='preview',document=doc)
+            if request['action']=='preview':return dict(status='preview',document=structure.response(doc))
             return self.apply(actor,{**request,'action':'commit'},_draft=doc)
 
     def apply(self, actor, request, _draft=None, _preview=False, _material_cache=None):
@@ -180,7 +181,7 @@ class Requirements:
             return _material_cache[identity]
         allowed = {'request_id', 'action', 'session_id', 'expected_revision', 'material_id', 'material_revision',
                    'block_id', 'unit_id', 'at', 'start', 'end', 'field', 'target_id', 'path', 'indices',
-                   'quantity', 'phase', 'history_revision', 'block_ids', 'steps'}
+                   'quantity', 'phase', 'history_revision', 'block_ids', 'steps', 'node_id', 'operation', 'negated', 'selected'}
         if not isinstance(request, dict) or set(request) - allowed:
             raise ValueError('Only splitting controls are accepted. Source text and reviewer identity are server-owned.')
         rid = str(uuid.UUID(request['request_id']))
@@ -229,6 +230,7 @@ class Requirements:
                            field_spans={}, reference_evidence={}, source_segments=segments)
             else:
                 doc = deepcopy(_draft) if _draft is not None else self.load(db, actor, request.get('session_id', ''))
+                doc.pop('structure_views', None)
                 if action!='commit' and doc['revision'] != request.get('expected_revision'):
                     return {'status': 'conflict', 'error': 'A newer splitting step is saved. Reload before editing.', 'document': doc}
                 if action not in ('delete','undelete') and self.stale(doc, current_material(doc['material_id'])):
@@ -236,7 +238,7 @@ class Requirements:
                 if action!='commit':self.edit(db, actor, doc, request)
             if _preview:
                 ensure_labels(doc);self.validate(db,actor,doc)
-                return dict(status='preview',document=doc)
+                return dict(status='preview',document=structure.response(doc))
             # Source adapters may write their own workspace metadata. Resolve them
             # before taking the SQLite write lock, then recheck the revision atomically.
             db.execute('BEGIN IMMEDIATE')
@@ -263,7 +265,7 @@ class Requirements:
                            encode(dict(source=doc['source'], source_refs=doc['source_refs'], block_id=doc['block_id'], span=doc['spans'][u['id']], material_revision=doc['material_revision'],source_segments=doc.get('source_segments',[])))))
             from .requirement_relations import project
             project(db,doc)
-            result = {'status': 'saved', 'document': doc}
+            result = {'status': 'saved', 'document': structure.response(doc)}
             db.execute('INSERT INTO requirement_requests VALUES(?,?,?,?)', (actor, rid, digest, encode(result)))
             return result
 
@@ -301,11 +303,29 @@ class Requirements:
         if action == 'done':
             if not u:
                 raise ValueError('Choose a requirement unit.')
-            if not any(u[k] for k in FIELDS + RELATIONS) and doc['roles'][u['id']] == 'requirement':
+            if u['id'] in doc.get('structures', {}):
+                tree=doc['structures'][u['id']]
+                if not tree['children'] or structure.pending(tree):raise ValueError('Complete the empty groups and choose each unresolved QC before finishing.')
+            elif not any(u[k] for k in FIELDS + RELATIONS) and doc['roles'][u['id']] == 'requirement':
                 raise ValueError('Assign the stated fields or relationships before finishing this requirement.')
             if u['id'] not in doc['done']:
                 doc['done'].append(u['id'])
             return
+        if action == 'structure':
+            if not u:raise ValueError('Choose a Requirement.')
+            if r.get('operation')=='link':
+                target=r.get('target_id')
+                if target==u['id']:raise ValueError('A Requirement cannot reference itself.')
+                if target not in doc['units']:
+                    row=db.execute('SELECT source,text,session_id FROM requirement_units WHERE id=? AND actor=?',(target,actor)).fetchone()
+                    if row is None:raise ValueError('Choose an existing Requirement belonging to this reviewer.')
+                    linked=self.load(db,actor,row[2])
+                    if self.stale(linked,self.material(actor,linked['material_id'])):raise ValueError('The linked source changed. Refresh that Requirement first.')
+                    doc['reference_evidence'][target]=dict(source=json.loads(row[0]),text=row[1],session_id=row[2],revision=linked['revision'])
+            structure.edit(doc,r)
+            return
+        if u and u['id'] in doc.get('structures', {}) and action in ('assign','extract','clear','split','link','quantity','group','ungroup','unlink'):
+            raise ValueError('Use the unified group editor for this Requirement.')
         if action in ('assign', 'extract'):
             if not u:
                 raise ValueError('Choose a requirement unit.')
@@ -447,13 +467,14 @@ class Requirements:
     def validate(self, db, actor, doc):
         if not doc['units'] or len(doc['units']) > 1000:
             raise ValueError('A passage must contain 1 to 1000 units.')
+        structure.validate(doc)
         all_docs = [json.loads(r[0]) for r in db.execute('SELECT body FROM requirement_sessions WHERE actor=? AND id<>?', (actor, doc['id']))]
         all_docs.append(doc)
         graph = {}
         for item in all_docs:
             if item.get('deleted'):continue
             for identity, u in item['units'].items():
-                graph[identity] = sum((leaves(u[f]) for f in RELATIONS), [])
+                graph[identity] = structure.references(item['structures'][identity]) if identity in item.get('structures',{}) else sum((leaves(u[f]) for f in RELATIONS), [])
         for identity, u in doc['units'].items():
             start, end = doc['spans'][identity]
             if doc['text'][start:end] != u['text']:

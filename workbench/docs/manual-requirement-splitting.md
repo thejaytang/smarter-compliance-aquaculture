@@ -1,5 +1,26 @@
 # Manual requirement splitting
 
+## Unified source-bound groups (current)
+
+Select wording in the original text inside an open Requirement, then choose **Subject**, **Modal Verb**, **Main Verb**, **Object**, **conditions** or **Group** from the contextual toolbar. The original is selectable but read-only. Coloured source marks remain above each entry when its editor is collapsed. **subrequirement** opens the existing-Requirement picker; references retain real IDs and display Rx labels.
+
+A **Group** created in a clause holds a complete subject/action/object association. Put shared conditions on its enclosing clause. For example, an outer clause can contain one shared condition and two child clauses for “Alice checks A” and “Bob checks B”. The combination of those child clauses has QC; the mixed grammatical fields within a clause do not.
+
+Every field supports multiple source fragments and nested same-role groups. **Decompose** replaces a fragment with an empty group over the same exact source span; select its wording again to fill the children. A condition subgroup offers only Conditions and Group, and a Subject subgroup offers only Subject and Group. Select sibling checkboxes and choose **Group selected** to wrap them without losing their IDs. **Ungroup** is permitted only between unnegated All groups; other flattening would change meaning.
+
+QC counts direct children, with nested groups counting as one child:
+
+- **All**: exact N; **Any**: [1,N]; **Only**: exact 1.
+- **Not All**: [1,N-1], deliberately excluding zero. It is not the Boolean NOT operation.
+- **MIN-MAX**: inclusive integer bounds within 0…N. One-item QC can be expanded from its compact summary.
+- **NOT** negates the entire selected group's quantified expression. NOT(All(A,B)) and All(NOT(A),NOT(B)) therefore remain different trees.
+
+Adding/removing/wrapping members leaves multi-item QC unresolved until the operator chooses its meaning. Empty groups and unresolved QC prevent Finish. Legacy exceptions appear as negated condition groups with their exception provenance retained; opening a record does not rewrite its history.
+
+Unsaved edits remain in page memory. Only explicit Save creates a saved revision. The `requirement-structure/1` tree is stored alongside the unchanged legacy units, and its nodes are projected to relational source/owner/parent/reference links. Interpretations, source colouring and delivery consume the tree once it exists. JSON inspection exposes it. Older saved records remain readable and restorable.
+
+The following sections describe the earlier editor and remain historical context where they conflict with the current workflow above.
+
 ## Inline conditions and quantity shortcuts
 
 Condition children are edited within their owning Conditions field. **Decompose** opens the child directly below its source header and before the next sibling; recursive children use the same layout. Attached conditions are not duplicated as separate top-level cards. Detached condition units remain accessible. Editing a child keeps its previously finished ancestors open.

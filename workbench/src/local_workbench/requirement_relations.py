@@ -1,5 +1,6 @@
 """Relational projection of active Requirement links, retaining nested counts."""
 import json
+from . import requirement_structure as structure
 
 
 def initialize(db):
@@ -18,6 +19,19 @@ def initialize(db):
         session_id TEXT PRIMARY KEY, revision INTEGER NOT NULL,
         FOREIGN KEY(session_id) REFERENCES requirement_sessions(id));
     ''')
+    db.executescript('''
+      CREATE TABLE IF NOT EXISTS requirement_structure_nodes(
+        session_id TEXT NOT NULL, owner_id TEXT NOT NULL, node_id TEXT NOT NULL, parent_id TEXT,
+        position INTEGER NOT NULL, kind TEXT NOT NULL, role TEXT, quantity TEXT, negated INTEGER NOT NULL,
+        start INTEGER, end INTEGER, target_id TEXT, origin_role TEXT,
+        PRIMARY KEY(session_id,node_id),
+        FOREIGN KEY(session_id) REFERENCES requirement_sessions(id),
+        FOREIGN KEY(owner_id) REFERENCES requirement_units(id) DEFERRABLE INITIALLY DEFERRED,
+        FOREIGN KEY(target_id) REFERENCES requirement_units(id) DEFERRABLE INITIALLY DEFERRED,
+        FOREIGN KEY(session_id,parent_id) REFERENCES requirement_structure_nodes(session_id,node_id) DEFERRABLE INITIALLY DEFERRED);
+      CREATE INDEX IF NOT EXISTS requirement_structure_owner ON requirement_structure_nodes(owner_id);
+      CREATE INDEX IF NOT EXISTS requirement_structure_target ON requirement_structure_nodes(target_id);
+    ''')
     for row in db.execute('''SELECT s.body FROM requirement_sessions s
         LEFT JOIN requirement_relationship_versions v ON s.id=v.session_id
         WHERE v.revision IS NULL OR v.revision<>s.revision''').fetchall():
@@ -25,6 +39,7 @@ def initialize(db):
 
 
 def project(db,doc):
+    db.execute('DELETE FROM requirement_structure_nodes WHERE session_id=?',(doc['id'],))
     db.execute('DELETE FROM requirement_relationships WHERE session_id=?',(doc['id'],))
     if doc.get('deleted'):
         db.execute('INSERT INTO requirement_relationship_versions VALUES(?,?) ON CONFLICT(session_id) DO UPDATE SET revision=excluded.revision',(doc['id'],doc['revision']))
@@ -37,6 +52,13 @@ def project(db,doc):
             else:db.execute('INSERT INTO requirement_relationships VALUES(?,?,?,?,?,?)',
                 (doc['id'],owner,child,relation,json.dumps(branch),json.dumps(counts)))
     for uid,u in doc['units'].items():
+        if uid in doc.get('structures',{}):
+            tree=doc['structures'][uid]
+            for node,parent in structure.walk(tree):
+                span=node.get('span',[None,None])
+                db.execute('INSERT INTO requirement_structure_nodes VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)',
+                    (doc['id'],uid,node['id'],parent['id'] if parent else None,parent['children'].index(node) if parent else 0,node['kind'],node.get('role'),json.dumps(node.get('quantity')),int(node.get('negated',False)),*span,node.get('target_id'),node.get('origin_role')))
+            continue
         for relation in ('conditions','exceptions','subrequirement'):
             if u.get(relation):walk(uid,relation,u[relation])
     db.execute('INSERT INTO requirement_relationship_versions VALUES(?,?) ON CONFLICT(session_id) DO UPDATE SET revision=excluded.revision',(doc['id'],doc['revision']))

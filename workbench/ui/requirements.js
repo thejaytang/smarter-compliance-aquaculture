@@ -5,30 +5,13 @@ const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt
 export const fields = ['Subject','Modal Verb','Main Verb','Object'];
 export const relations = ['conditions','exceptions','subrequirement'];
 export const codepointOffset = (text, utf16Offset) => Array.from(text.slice(0, utf16Offset)).length;
-export function quantityLabel(q) { return Array.isArray(q) ? `${q[0]} to ${q[1]}` : `Exactly ${q}`; }
-export function quantityPreset(preset,count) {
-  if(!Number.isInteger(count)||count<0)throw Error('Invalid item count.');
-  if(preset==='all')return count;
-  if(preset==='any'&&count>=1)return [1,count];
-  if(preset==='one'&&count>=1)return 1;
-  if(preset==='not-all'&&count>=2)return [1,count-1];
-  throw Error('This shortcut needs more items in the group.');
-}
-export function quantityMode(quantity,count) {
-  if(!Array.isArray(quantity))return quantity===count?'all':quantity===1?'one':'custom';
-  return quantity[0]===1&&quantity[1]===count?'any':quantity[0]===1&&quantity[1]===count-1?'not-all':'custom';
-}
-export const quantityPreview=q=>Array.isArray(q)?`[${q[0]}, ${q[1]}]`:String(q);
-export function quantityRange(low,high,count){
-  if(!/^\d+$/.test(String(low))||!/^\d+$/.test(String(high)))throw Error('Enter whole numbers in both fields.');
-  const min=Number(low),max=Number(high);
-  if(!Number.isSafeInteger(min)||!Number.isSafeInteger(max)||min<0||max>count||min>max)throw Error(`Use 0–${count}, with MIN ≤ MAX.`);
-  return [min,max];
-}
+export {quantityLabel,quantityPreset,quantityMode,quantityPreview,quantityRange} from './quantity.js';
+import {quantityLabel,quantityPreset,quantityMode,quantityPreview,quantityRange} from './quantity.js';
+import {StructureEditor} from './requirement-structure.js';
 export function groupIds(group) { return group ? group.slice(1).flatMap(x => Array.isArray(x) ? groupIds(x) : [x]) : []; }
 const button = (action,label,attrs='') => `<button type="button" data-rq="${action}" ${attrs}>${label}</button>`;
 export class RequirementsEditor {
-  constructor(materials) { this.m=materials; this.sessions=[]; this.results=[]; this.closedUnits=new Set(); this.quantityDrafts=new Map(); this.sessionCollapsed=false; }
+  constructor(materials) { this.m=materials; this.sessions=[]; this.results=[]; this.closedUnits=new Set(); this.quantityDrafts=new Map();this.groupEditor=new StructureEditor(this); this.sessionCollapsed=false; }
   get dirty() { return !!this._dirty || this.quantityDrafts.size>0; }
   set dirty(value) { this._dirty=value;if(!value)this.quantityDrafts.clear(); }
   quantityKey(group) { return [this.doc.id,group.dataset.owner||null,group.dataset.field,group.dataset.path||''].join(':'); }
@@ -53,8 +36,9 @@ export class RequirementsEditor {
         <summary data-rq="open-session" data-id="${esc(s.id)}"><span class="rq-session-number">${esc(this.entryLabel(s))}</span><span class="rq-session-title">${sourcePreview({...s,...(s.id===this.doc?.id?this.doc:{}),labels:this.displayLabels()})}</span><span class="rq-badge">${s.phase==='complete'?'Complete':'In progress'}</span>${button('locate-session','Locate text',`class="rq-locate-text" data-id="${esc(s.id)}"`)}</summary>
         ${s.id===this.doc?.id?this.documentMarkup():''}</details>`).join('')}</div>
       ${this.deleted?.length?`<details><summary>Removed entries · ${this.deleted.length}</summary>${this.deleted.map(s=>`<p>${esc(s.text.slice(0,100))} ${button('undelete','Restore entry',`data-id="${s.id}"`)}</p>`).join('')}</details>`:''}${!this.sessions.length?'<div class="rq-empty"><h4>Build a requirement from its original text</h4><p>Select a source block in the content pane and choose <strong>To requirements</strong>. Split and assign its wording here; each requirement stays in the list.</p><p>Automatic extraction: Not connected.</p></div>':''}`;
-    host.onclick=e=>{const b=e.target.closest('[data-rq]');if(b&&!b.disabled){e.stopPropagation();if(['open-session','select-unit','locate-session','decompose'].includes(b.dataset.rq))e.preventDefault();(async()=>{for(const row of host.querySelectorAll?.('[data-rq-qc]')||[]){if(b.dataset.rq==='quantity-preset'&&row.contains(b))continue;if(row.commitQuantity&&!(await row.commitQuantity()))return;}await this.action(b.dataset.rq,b);})().catch(error=>this.showError(error));}};
-    host.querySelectorAll?.('[data-rq-qc]').forEach(row=>this.bindQuantity(row));
+    host.onclick=e=>{const structureAction=e.target.closest('[data-straction]');if(structureAction){e.stopPropagation();e.preventDefault();void this.groupEditor.action(structureAction).catch(error=>this.showError(error));return;}const b=e.target.closest('[data-rq]');if(b&&!b.disabled){e.stopPropagation();if(['open-session','select-unit','locate-session','decompose'].includes(b.dataset.rq))e.preventDefault();(async()=>{for(const row of host.querySelectorAll?.('[data-rq-qc]')||[]){if(b.dataset.rq==='quantity-preset'&&row.contains(b))continue;if(row.commitQuantity&&!(await row.commitQuantity()))return;}await this.action(b.dataset.rq,b);})().catch(error=>this.showError(error));}};
+    host.querySelectorAll?.('[data-rq-qc]:not([data-structure-qc])').forEach(row=>this.bindQuantity(row));
+    this.groupEditor.bind(host);
     // Native disclosure is presentation only; retain it across each saved-step render.
     host.querySelectorAll?.('[data-unit]').forEach(card=>card.ontoggle=()=>{if(!card.isConnected)return;if(card.open)this.closedUnits.delete(card.dataset.unit);else this.closedUnits.add(card.dataset.unit);});
     if(this.pending)host.setAttribute('aria-busy','true');else host.removeAttribute('aria-busy');
@@ -170,12 +154,13 @@ export class RequirementsEditor {
       <div class="rq-units">${this.unitIds().filter(id=>!this.inlineConditionIds().has(id)).map(id=>this.unitMarkup(d.units[id],disabled,complete)).join('')}</div>
       ${this.unitIds().length>1?`<details class="rq-outer"><summary>Relationships between requirements</summary>${this.groupMarkup(d.roots,'roots',null,[],complete)}</details>`:''}
       <div class="rq-footer">${!complete?button('phase','Save &amp; collapse',`data-phase="complete" ${disabled||d.done.length!==Object.keys(d.units).length?'disabled':''}`):''}${button('reload','Reload saved work',this.pending||this.retryRequest?'disabled':'')}</div>
-      <details class="rq-history"><summary>History &amp; structured result</summary><p>Restoring creates a new saved revision. Original history remains available. Saved splitting and interpretations are included in full workspace ZIPs. Removed entries remain recoverable with their history.</p>${button('history','Load step history',this.pending?'disabled':'')}<div class="rq-history-list">${(d.steps||[]).map(s=>`<div>Step ${s.revision} · ${esc(s.action)} ${button('restore','Restore',`data-revision="${s.revision}" ${disabled}`)}</div>`).join('')}</div><pre>${esc(JSON.stringify({requirements:d.roots,units:Object.values(d.units)},null,2))}</pre></details></div>`;
+      <details class="rq-history"><summary>History &amp; structured result</summary><p>Restoring creates a new saved revision. Original history remains available. Saved splitting and interpretations are included in full workspace ZIPs. Removed entries remain recoverable with their history.</p>${button('history','Load step history',this.pending?'disabled':'')}<div class="rq-history-list">${(d.steps||[]).map(s=>`<div>Step ${s.revision} · ${esc(s.action)} ${button('restore','Restore',`data-revision="${s.revision}" ${disabled}`)}</div>`).join('')}</div><pre>${esc(JSON.stringify({requirements:d.roots,units:Object.values(d.units),...(d.structure_views?{schema:'requirement-structure/1',structures:d.structure_views}:{})},null,2))}</pre></details></div>`;
   }
   inlineConditionIds() {
     return new Set(Object.values(this.doc.units).flatMap(u=>groupIds(u.conditions)).filter(id=>this.doc.roles[id]==='condition'));
   }
   unitMarkup(u,disabled,complete,inline=false) {
+    if(this.doc.structure_views?.[u.id]||this.doc.structures?.[u.id])return this.groupEditor.unitMarkup(u,complete,inline);
     const done=this.doc.done.includes(u.id),conditionOnly=this.doc.roles[u.id]==='condition';
     return `<details class="rq-unit${inline?' rq-inline-condition':''}" data-unit="${esc(u.id)}" aria-current="${u.id===this.selected?'true':'false'}" ${!this.closedUnits.has(u.id)?'open':''}>
       <summary data-rq="select-unit" data-id="${esc(u.id)}" data-toggle="true"><strong>${esc(this.label(u.id))}</strong><span class="rq-unit-preview">${esc(u.text.slice(0,100))}</span><span class="rq-badge">${done?'Finished':'Editing'}</span>${inline?button('decompose','Decompose',`data-id="${u.id}" aria-label="Decompose ${esc(this.label(u.id))}" ${disabled}`):''}</summary>

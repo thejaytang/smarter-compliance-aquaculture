@@ -13,6 +13,7 @@ from pathlib import Path
 from urllib.request import Request, urlopen
 from urllib.parse import urlparse
 from .requirements import Requirements, FIELDS, RELATIONS, leaves, encode
+from . import requirement_structure as structure
 from .collaboration import named, now
 from . import interpretation_lineage as lineage
 from .check_design import validate_design, querybuilder_projection
@@ -63,6 +64,11 @@ def annotations(c, actor, material_id):
             u = d['units'][uid]; offset = d['spans'][uid][0]
             base = dict(session_id=d['id'], revision=d['revision'], block_id=d['block_id'],
                         unit_id=uid, label=d['labels'][uid], source_text=d['text'])
+            if uid in d.get('structures',{}):
+                for node,_ in structure.walk(d['structures'][uid]):
+                    if node.get('span') and node.get('role') in structure.FIELDS:
+                        a,b=node['span'];out.append(dict(base,field=node.get('origin_role') or node['role'],start=offset+a,end=offset+b,node_id=node['id']))
+                continue
             for field, span in d.get('field_spans', {}).get(uid, {}).items():
                 out.append(dict(base, field=field, start=offset+span[0], end=offset+span[1]))
             for field in RELATIONS:
@@ -168,12 +174,14 @@ class Interpretations:
         exceptions=[]
         for x in sessions.values():
             for owner,u in x['units'].items():
-                if owner==uid and u.get('exceptions'):
+                if owner==uid and owner not in x.get('structures',{}) and u.get('exceptions'):
                     exceptions.append(dict(owner_id=owner,combination=u['exceptions'],text=[x['units'].get(i,x.get('reference_evidence',{}).get(i,{})).get('text','') for i in leaves(u['exceptions'])]))
+        grouped=any(x.get('structures') for x in sessions.values())
         payload=dict(requirement=deepcopy(d['units'][uid]),session_id=d['id'],session_revision=d['revision'],
             material_id=d['material_id'],materials=materials,citations=citations,
-            sessions=[dict(id=x['id'],revision=x['revision'],units=x['units'],roots=x['roots']) for x in sessions.values()],
+            sessions=[dict(id=x['id'],revision=x['revision'],units=x['units'],roots=x['roots'],**({'structures':structure.views(x),'structure_schema':structure.SCHEMA} if grouped else {})) for x in sessions.values()],
             exceptions=exceptions,limitations=limitations)
+        if grouped:payload['structure']=structure.legacy(d,uid)
         payload['origin']=lineage.source_anchor({'unit_id':uid},d)
         payload['origin']['material_revision']=material['revision']
         # Origin is a deterministic projection of the already-bound sources.
@@ -298,7 +306,7 @@ class Interpretations:
                 linked_material_ids=linked,context_fingerprint=ctx['fingerprint'],context_manifest=[dict(id=m['id'],revision=m['revision'],source=m['source']) for m in ctx['materials']],
                 reviewed=action=='review',updated_at=now(),check_design=design,context_snapshot=context_snapshot(ctx),
                 catalog_snapshot=catalog,mapping_issues=issues,
-                logic=checking_logic(fields,ctx['exceptions'],dict(requirement=ctx['requirement'],sessions=ctx['sessions'])))
+                logic=checking_logic(fields,ctx['exceptions'],dict(requirement=ctx['requirement'],sessions=ctx['sessions'],**({'structure':ctx['structure']} if ctx.get('structure') else {}))))
             db.execute('BEGIN IMMEDIATE')
             prior=db.execute('SELECT digest,response FROM interpretation_requests WHERE actor=? AND id=?',(actor,rid)).fetchone()
             if prior:

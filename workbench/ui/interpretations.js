@@ -1,3 +1,4 @@
+import {treeNodes,treeText} from './requirement-structure.js';
 import {emptyDesign,designMarkup,bindDesign} from './check-design.js';
 import {semanticFields,semanticClass} from './markdown-content.js';
 // Interpretation is a source-bound design, not an executed compliance check.
@@ -21,6 +22,15 @@ export function logicMarkup(logic){return `<h4>Checking Logic</h4><p class="ip-c
 // Mechanical projection of recorded wording and group counts; no inferred predicates.
 export function sourceSections(context){
  const u=context?.requirement||{},units=Object.assign({},...(context?.sessions||[]).map(s=>s.units),u.id?{[u.id]:u}:{});
+ if(context.structure){
+  const tree=context.structure,trees=Object.assign({},...(context.sessions||[]).map(s=>s.structures||{})),clauses=treeNodes(tree).filter(n=>n.kind==='clause');
+  const grouped=tree.children.find(n=>n.role==='requirements');let g=0;const labels=Object.fromEntries(treeNodes(tree).filter(n=>['clause','group'].includes(n.kind)).map(n=>[n.id,'G'+(++g)]));
+  const pick=(clause,fields)=>clause.children.filter(n=>fields.includes(n.role)).map(n=>`${n.role}: ${treeText(n,units,trees)}`).join('\n');
+  const at=(fields)=>clauses.map(c=>{const text=pick(c,fields);return text?`${clauses.length>1?labels[c.id]+': ':''}${text}`:'';}).filter(Boolean).join('\n');
+  const values={scope:at(['Subject']),condition:at(['conditions']),demand:[at(['Modal Verb','Main Verb','Object','subrequirement']),grouped?'Requirement branches (QC applies to complete branches): '+treeText(grouped,units,trees):''].filter(Boolean).join('\n')};
+  const pending=treeNodes(tree).some(n=>(n.kind==='clause'&&!n.children.length)||(n.kind==='group'&&(n.quantity===null||!n.children.length)));
+  return Object.fromEntries(Object.entries(values).map(([key,value])=>[key,{value,basis:value?'interpretation':'unresolved',state:value&&!pending?'specified':'unresolved',references:[],gaps:[...(!value?['No '+key+' wording has been assigned in the Requirement.']:[]),...(pending?['Complete empty groups and unresolved QC in the third pane.']:[])]}]));
+ }
  const group=(g,seen=new Set())=>!g?'':`${Array.isArray(g[0])?`${g[0][0]}–${g[0][1]}`:`Exactly ${g[0]}`} of ${g.length-1}: [${g.slice(1).map(x=>{
   if(Array.isArray(x))return group(x,seen);
   const child=units[x];if(!child)return `Unresolved reference ${x}`;

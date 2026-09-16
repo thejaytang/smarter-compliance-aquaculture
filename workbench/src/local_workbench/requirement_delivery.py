@@ -10,13 +10,15 @@ import json
 import uuid
 from .collaboration import named, fingerprint, encoded, now
 from .requirements import Requirements, FIELDS, RELATIONS, leaves
+from . import requirement_structure as tree_structure
 from .interpretations import Interpretations, KEYS, checking_logic
 from . import interpretation_lineage as lineage
 from .requirement_relations import project as project_relations
 from .check_design import validate_design
 from .interpretation_continuity import review_ready
 
-SCHEMA='requirement-delivery/1'
+SCHEMA='requirement-delivery/2'
+LEGACY_SCHEMA='requirement-delivery/1'
 
 
 def key_for(actor):return 'requirements:'+fingerprint(named(actor))
@@ -49,7 +51,8 @@ class Delivery:
                     interpretations.append(dict(unit_id=uid,head_revision=revision,history=history))
                 # Candidate output and its frozen context travel as evidence, never as an active request.
                 candidates=[json.loads(r[0]) for r in db.execute('SELECT body FROM interpretation_runs WHERE actor=? ORDER BY id',(actor,))]
-                value=dict(schema=SCHEMA,actor=actor,sessions=sessions,interpretations=interpretations,candidates=candidates)
+                has_groups=any(step['document'].get('structures') for item in sessions for step in item['steps'])
+                value=dict(schema=SCHEMA if has_groups else LEGACY_SCHEMA,actor=actor,sessions=sessions,interpretations=interpretations,candidates=candidates)
                 items.append(dict(key=key_for(actor),value=value,branch=actor,actor=actor,guard=fingerprint(value)))
         return items
 
@@ -59,7 +62,7 @@ class Delivery:
         return value
 
     def _validate(self,v):
-        if not isinstance(v,dict) or set(v)!={'schema','actor','sessions','interpretations','candidates'} or v['schema']!=SCHEMA:raise ValueError('Unsupported Requirement delivery.')
+        if not isinstance(v,dict) or set(v)!={'schema','actor','sessions','interpretations','candidates'} or v['schema'] not in (SCHEMA,LEGACY_SCHEMA):raise ValueError('Unsupported Requirement delivery.')
         named(v['actor'])
         for k in ('sessions','interpretations','candidates'):
             if not isinstance(v[k],list) or len(v[k])>10000:raise ValueError('Requirement delivery exceeds the supported size.')
@@ -84,6 +87,8 @@ class Delivery:
                         if set(part)!={'block_id','start','end','text','source_refs'} or part['block_id'] in ids or part['start']!=offset or part['end']!=offset+len(part['text']) or not isinstance(part['source_refs'],list):raise ValueError('Invalid source segment range.')
                         ids.add(part['block_id']);offset=part['end']+2
                     if '\n\n'.join(part['text'] for part in parts)!=x['text'] or parts!=d.get('source_segments'):raise ValueError('Source segment binding differs.')
+                if x.get('structures') and v['schema']!=SCHEMA:raise ValueError('Unified groups require Requirement delivery version 2.')
+                tree_structure.validate(x)
                 leaves(x['roots'])
                 for uid,u in x['units'].items():
                     uuid.UUID(uid)
@@ -101,7 +106,7 @@ class Delivery:
             if steps.get((sid,d['revision']))!=d:raise ValueError('Current splitting does not match its immutable history.')
             if uids&set(d['units']):raise ValueError('Requirement identity occurs in more than one session.')
             uids.update(d['units'])
-        graph={uid:sum((leaves(u[r]) for r in RELATIONS),[]) for d in current.values() if not d.get('deleted') for uid,u in d['units'].items()}
+        graph={uid:(tree_structure.references(d['structures'][uid]) if uid in d.get('structures',{}) else sum((leaves(u[r]) for r in RELATIONS),[])) for d in current.values() if not d.get('deleted') for uid,u in d['units'].items()}
         visiting=set();seen=set()
         def walk(uid):
             if uid not in graph:raise ValueError('A Requirement relationship is missing its target.')
@@ -143,6 +148,7 @@ class Delivery:
                 logic=d.get('logic',{})
                 structure=logic.get('source_structure',{})
                 if structure.get('requirement') is not None and structure['requirement']!=split['units'][d['unit_id']]:raise ValueError('Checking logic points to different Requirement structure.')
+                if (structure.get('structure') is not None and structure['structure']!=tree_structure.legacy(split,d['unit_id'])) or (d['unit_id'] in split.get('structures',{}) and structure.get('structure') is None):raise ValueError('Checking logic differs from the saved group structure.')
                 if logic!=checking_logic(d['fields'],logic.get('exceptions',[]),structure):raise ValueError('Imported checking logic must be the deterministic, non-executable design.')
                 if type(d.get('reviewed')) is not bool or d['reviewed'] and not all(review_ready(f) for f in d['fields'].values()):raise ValueError('Invalid interpretation review state.')
             if item['head_revision'] not in heads:raise ValueError('Missing interpretation head.')
