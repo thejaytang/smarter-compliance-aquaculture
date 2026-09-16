@@ -41,3 +41,5 @@ Validation on macOS:
 - Mechanical UI scan reported only existing blockquote styling and the existing PDF image placeholder (its source is supplied at runtime); no new issue was reported for the direct editor.
 
 The current UI uses standard browser editing/selection APIs and platform-neutral source transformations. Native Windows desktop/IME/assistive-technology acceptance has not been run here. Real model calls remain outside this verification. The separate Changes view retains advanced Markdown/bulk tools for compatibility; tables themselves are not whole-Requirement intake passages.
+
+Published on 2026-09-16 as code commit `6297096aee278f8f997be0a1f9fb53dea7621ebe` on `codex/workbench-optimization-20260916`, with [PR #2](https://github.com/thejaytang/smarter-compliance-aquaculture/pull/2) updated. Push confirmed; main was not merged. [Windows/Ubuntu CI run 35089832939](https://github.com/thejaytang/smarter-compliance-aquaculture/actions/runs/35089832939) was in progress at this handoff, not counted as a passing result.
