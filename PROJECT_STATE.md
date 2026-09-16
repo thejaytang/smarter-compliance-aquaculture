@@ -1,5 +1,7 @@
 # Requirement Workstream: current state
 
+2026-09-16 English example: current PE001-003 presents all four columns in English using the supplied ADF-10 vocabulary. Four saved Requirements/interpretations, all source spans, All 3 links and [2,2]/[5,5] groups verified. Prior Norwegian source and saved work remain in history. User Chrome opened the English example. [Evidence](project-support/workbench-example-english-20260916/RESULTS.md).
+
 2026-09-16 Requirements help: routine saved/completion notices and per-entry history details move out of the working area. A title-side ? opens guidance and collapsed history; actionable unsaved/error warnings remain. 344 frontend tests and normal-browser help open/close checks pass. [Evidence](project-support/workbench-example-adf10-20260916/RESULTS.md#requirements-help-follow-up).
 
 2026-09-16 card removal: lower field/Group cards now have a top-right ×. Group removal deletes all descendants; Degroup preserves them, and original text remains unchanged. Changes enter history only after manual save. 343 frontend and 17 group backend tests pass; normal-browser field/group deletion and draft discard were verified. [Evidence](project-support/workbench-example-adf10-20260916/RESULTS.md#card-removal-follow-up).

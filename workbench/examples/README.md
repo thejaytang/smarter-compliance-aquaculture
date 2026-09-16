@@ -1,6 +1,6 @@
 # Current Workbench example: ADF-10
 
-The requesting user supplied a Norwegian HTML excerpt and matching Markdown, with an English requirement decomposition (`ADF-10`). `example.html` and `example.md` retain the supplied source words and chapter links; only the presentation headings and HTML code fence are removed. `example.json` is the supplied JSON unchanged. `example-workbench.json` records the normalization and fourth-pane check design.
+The current example is entirely English, based on the English ADF-10 JSON supplied by the user. `example.html` and `example.md` present the corresponding English demonstration excerpt; `example.json` remains the supplied JSON unchanged. `example-workbench.json` records the four-column normalization and check design. This is a demonstration translation, not an official English legal publication. The previous Norwegian original and its saved work remain in source/material history.
 
 Open **Material review → example (PE001)** on the authoring installation. It is pinned first for the requesting reviewer. The former demonstration remains available as an older source/material version.
 
@@ -11,7 +11,7 @@ Open **Material review → example (PE001)** on the authoring installation. It i
 - **R3:** mortality per production unit, qualified by relevance to the production method.
 - **R4:** results of completed health inspections. The five listed information categories retain `[5,5]`.
 
-Each child entry includes the original lead-in plus its own bullet through multi-block source references. This makes inherited scope and modality explicit without introducing new source words. Group counts apply to listed required categories; they do not cap records or forbid additional journal information.
+Each child entry includes the English lead-in plus its own bullet through multi-block source references. This makes inherited scope and modality explicit without introducing new source words. Group counts apply to listed required categories; they do not cap records or forbid additional journal information.
 
 ## Fourth pane
 

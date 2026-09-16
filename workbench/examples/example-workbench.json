@@ -1,7 +1,7 @@
 {
   "schema": "workbench-example/1",
   "source_id": "ADF-10",
-  "source_language": "Norwegian",
+  "source_language": "English",
   "provided_schema": "example.json",
   "requirements": [
     {
@@ -10,13 +10,13 @@
         0
       ],
       "fields": {
-        "Subject": "driftsjournalen",
-        "Modal Verb": "skal",
-        "Main Verb": "inneholde",
-        "Object": "oppdaterte opplysninger"
+        "Subject": "the operational journal",
+        "Modal Verb": "shall",
+        "Main Verb": "contain",
+        "Object": "updated information"
       },
       "conditions": [
-        "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6"
+        "For aquaculture establishments that are not subject to specific record-keeping provisions in Chapters 4, 5 and 6"
       ]
     },
     {
@@ -26,17 +26,17 @@
         1
       ],
       "fields": {
-        "Subject": "driftsjournalen",
-        "Modal Verb": "skal",
-        "Main Verb": "inneholde",
-        "Object": "akvakulturdyr og akvakulturdyrprodukter tatt inn til og ut fra akvakulturanlegget"
+        "Subject": "the operational journal",
+        "Modal Verb": "shall",
+        "Main Verb": "contain",
+        "Object": "aquaculture animals and aquaculture animal products brought into and removed from the aquaculture establishment"
       },
       "conditions": [
-        "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6"
+        "For aquaculture establishments that are not subject to specific record-keeping provisions in Chapters 4, 5 and 6"
       ],
       "details": [
-        "opprinnelsessted",
-        "mottakssted"
+        "place of origin",
+        "place of destination"
       ]
     },
     {
@@ -46,14 +46,14 @@
         2
       ],
       "fields": {
-        "Subject": "driftsjournalen",
-        "Modal Verb": "skal",
-        "Main Verb": "inneholde",
-        "Object": "dødelighet per produksjonsenhet"
+        "Subject": "the operational journal",
+        "Modal Verb": "shall",
+        "Main Verb": "contain",
+        "Object": "mortality per production unit"
       },
       "conditions": [
-        "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6",
-        "som er relevant for produksjonsformen"
+        "For aquaculture establishments that are not subject to specific record-keeping provisions in Chapters 4, 5 and 6",
+        "relevant to the production method"
       ]
     },
     {
@@ -63,20 +63,20 @@
         3
       ],
       "fields": {
-        "Subject": "driftsjournalen",
-        "Modal Verb": "skal",
-        "Main Verb": "inneholde",
-        "Object": "resultater av gjennomførte helsekontroller"
+        "Subject": "the operational journal",
+        "Modal Verb": "shall",
+        "Main Verb": "contain",
+        "Object": "results of completed health inspections"
       },
       "conditions": [
-        "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6"
+        "For aquaculture establishments that are not subject to specific record-keeping provisions in Chapters 4, 5 and 6"
       ],
       "details": [
-        "antall gjennomførte helsekontroller",
-        "prøveuttak",
-        "foretatte undersøkelser",
-        "diagnoser",
-        "gjennomførte behandlinger"
+        "number of completed health inspections",
+        "sampling",
+        "examinations performed",
+        "diagnoses",
+        "treatments carried out"
       ]
     }
   ],
@@ -84,11 +84,11 @@
     "R1": {
       "scope_information": "Identify the operational journal and its owning aquaculture establishment. A = journals associated with aquaculture establishments. Bind establishment_id, journal_id and the assessment date; these are proposed data concepts, not an agreed Site Model schema.",
       "condition_information": "Within A, determine which establishments are covered by specific record-keeping provisions in Chapters 4, 5 or 6. Proposed logical form: NOT (covered_by_chapter_4 OR covered_by_chapter_5 OR covered_by_chapter_6). B contains journals whose establishments are outside those specific provisions. The excerpt links to these chapters but does not supply their contents. Unknown applicability must remain unresolved, not default to false.",
-      "verification": "For each journal in B, require ALL three linked content requirements: R2 AND R3 AND R4. Check that the required information is present and updated in the same assessment context. The phrase minst means at least the listed content; it does not prohibit additional journal information. C contains journals supported by sufficient evidence for all three requirements. Only with adequate coverage and evidence may B ⊆ C support a positive result. Missing evidence is unresolved; a verified missing mandatory item is a failure. This example defines the method and does not produce a verdict."
+      "verification": "For each journal in B, require ALL three linked content requirements: R2 AND R3 AND R4. Check that the required information is present and updated in the same assessment context. The phrase at a minimum means at least the listed content; it does not prohibit additional journal information. C contains journals supported by sufficient evidence for all three requirements. Only with adequate coverage and evidence may B ⊆ C support a positive result. Missing evidence is unresolved; a verified missing mandatory item is a failure. This example defines the method and does not produce a verdict."
     },
     "R2": {
       "scope_information": "Identify the operational journal and its owning aquaculture establishment. A = journals associated with aquaculture establishments. Bind establishment_id, journal_id and the assessment date; these are proposed data concepts, not an agreed Site Model schema. R2 inherits the lead-in paragraph from R1 and concerns records of animals and animal products entering and leaving the same establishment.",
-      "condition_information": "Within A, determine which establishments are covered by specific record-keeping provisions in Chapters 4, 5 or 6. Proposed logical form: NOT (covered_by_chapter_4 OR covered_by_chapter_5 OR covered_by_chapter_6). B contains journals whose establishments are outside those specific provisions. The excerpt links to these chapters but does not supply their contents. Unknown applicability must remain unresolved, not default to false. Preserve both inbound and outbound coverage from tatt inn til og ut fra; do not inspect just one direction.",
+      "condition_information": "Within A, determine which establishments are covered by specific record-keeping provisions in Chapters 4, 5 or 6. Proposed logical form: NOT (covered_by_chapter_4 OR covered_by_chapter_5 OR covered_by_chapter_6). B contains journals whose establishments are outside those specific provisions. The excerpt links to these chapters but does not supply their contents. Unknown applicability must remain unresolved, not default to false. Preserve both inbound and outbound coverage from brought into and removed from; do not inspect just one direction.",
       "verification": "For each applicable journal, compare its movement records with the relevant known inbound/outbound movements. The required location group is ALL 2: place of origin AND place of destination. Confirm the journal records cover the relevant animals and animal products and that their information is updated. [2,2] counts the two listed information categories; it does not limit the number of movements or records. Evidence sources and record joins are proposed checks requiring an agreed Site Model mapping. Do not infer completeness from a single populated row."
     },
     "R3": {
@@ -108,7 +108,7 @@
     "No Site Model records, accepted field mappings or real compliance assessment are included."
   ],
   "normalization": [
-    "HTML/Markdown format-label wrappers removed; source words and chapter links retained.",
+    "English demonstration translation based on the user-supplied English JSON; original Norwegian excerpt retained in source history.",
     "Each child entry includes the original lead-in plus its own list item, making inherited scope and modality traceable without invented text.",
     "Three child Requirements are linked from R1 with All 3. Nested lists of 2 and 5 information categories become source-bound Object groups with exact [2,2] and [5,5]; the provided JSON remains unchanged.",
     "Exact group counts concern the listed mandatory categories; they do not prohibit additional journal content."
