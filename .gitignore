@@ -76,3 +76,9 @@ project-support/requirement-splitting-20260915/activation-backup/
 /project-support/workbench-optimization-20260916/fixture/
 
 /project-support/workbench-optimization-20260916/final-activation/
+
+# Continuity acceptance stays local; only selected reports are published.
+/project-support/workbench-continuity-20260916/fixture/
+/project-support/workbench-continuity-20260916/failed-fixture-start/
+/project-support/workbench-continuity-20260916/final-activation/
+/project-support/workbench-continuity-20260916/*.log

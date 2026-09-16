@@ -37,3 +37,17 @@ class InterpretationHTTPTests(unittest.TestCase):
  def test_restored_readonly_rejects_writes(self):
   self.app.read_only_restored=True
   self.assertEqual(self.call('/api/interpretations/save',self.fixture.request())[0],403)
+
+ def test_working_copy_and_catalog_http_csrf_and_readonly(self):
+  import uuid
+  f=self.fixture
+  body=dict(request_id=str(uuid.uuid4()),unit_id=f.uid,expected_revision=0,body=dict(fields=f.fields(),revision=0,material_id=f.material['id']))
+  self.assertEqual(self.call('/api/interpretations/draft',body,csrf=False)[0],403)
+  self.assertEqual(self.call('/api/interpretations/draft',body)[0],200)
+  self.assertEqual(len(self.call('/api/interpretations/drafts')[1]['drafts']),1)
+  self.actor['name']='Ana Jokic';self.assertEqual(self.call('/api/interpretations/drafts')[1]['drafts'],[])
+  self.actor['name']='Weijie Tang'
+  self.assertEqual(self.call('/api/settings/site-catalog',{'revision':0,'fields':[]})[0],200)
+  self.app.read_only_restored=True
+  self.assertEqual(self.call('/api/settings/site-catalog',{'revision':1,'fields':[]})[0],403)
+  self.assertEqual(self.call('/api/interpretations/draft',body)[0],403)

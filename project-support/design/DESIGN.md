@@ -62,3 +62,7 @@ The [four-pane contract](../../workbench/docs/requirement-interpretation.md) own
 ## 2026-09-16 workflow simplification
 
 Interpretation values lead the fourth pane. Evidence, basis, gaps, candidates, raw source structure and optional Site Model mappings use progressive disclosure. Completed Requirement summaries expose Interpret directly. A source trail identifies the saved interpretation, Requirement, splitting revision, source paragraph and quotation anchors. Pin Save within the pane and scope Ctrl/Cmd+S to its editor. Preserve open disclosures and reading position through local redraws. Advanced rule comparison trees remain optional and must not displace the six-field manual path.
+
+## Working continuity
+
+Source status distinguishes specified, explicitly absent and unresolved information; an absence explanation appears only when needed. Keep auto-saved working copies separate from explicit formal Save. Recovery and source-impact lists are on-demand actions. Optional mapping selects readable labels from a configured, empty-by-default catalog; raw SQL and query execution remain outside this UI.

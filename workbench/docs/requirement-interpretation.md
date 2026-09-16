@@ -12,7 +12,10 @@ The material workspace has four independently scrolling panes: Original document
 6. **Checking Logic** updates from these six fields. It identifies A, filters applicable B within A, and describes checking B against Demand/evidence. C, when displayed, means objects with sufficient evidence of meeting Demand in the same assessment context. `B ⊆ C` is a design criterion, not a computed result. Unknowns, original exception ownership and source combinations remain visible. No operators are guessed from prose; fixed `k` and inclusive `[min,max]` semantics remain unchanged.
 7. **Save interpretation** preserves a separate version. **Mark interpretation reviewed** is a later explicit action, blocked while fields or gaps remain unresolved. Neither action confirms or archives material content.
 
-Unsaved interpretation drafts are retained by reviewer, material, requirement and browser tab. Switching Requirement keeps each draft. Leaving the material is blocked until all drafts or uncertain writes are resolved. The browser journal supports reload recovery; the server remains the durable authority after Save. On conflict, refresh/review context or explicitly reload the newer saved interpretation. History restores append a new revision and validate citations against current context.
+Working copies are automatically saved in a separate reviewer-bound SQLite record and a browser recovery journal. Leaving a material does not require formal submission. **Interpretation drafts** in the material list, or **Resume interpretation drafts** in an empty fourth pane, lists resumable work; **View working copy** also exposes retained text for a retired Requirement. Concurrent working copies require an explicit comparison. A formal save atomically retires only the matching working-copy revision. Formal save, candidate adoption and review remain separate. Uncertain requests keep their idempotence identity.
+
+Each field has `state`: `specified`, `not_stated`, or `unresolved`. Older fields derive this state from their value and basis. `not_stated` requires an empty value and an `absence_reason`; it can complete an extraction review without claiming the requirement is executable. The checking chain still displays an information gap, and a missing Condition never becomes an unconditional filter. Source absence is a human assessment of the reviewed context, not proof that no applicable law exists.
+
 
 ## One shared API in Settings
 
@@ -35,7 +38,7 @@ All six candidates or a single field may be generated. Candidates include quotat
 - `POST /api/interpretations/context`, `/save`, `/generate`. Save includes request UUID, expected revision and context fingerprint. The server regenerates logic, appends history, enforces reviewer ownership and rechecks splitting revision. Review/restore use the same guarded save route.
 - `GET/POST /api/settings/ai`: sanitized shared configuration read / version-checked save. Secrets are write-only to the browser.
 
-The ordinary consistent database recovery path includes splitting, interpretations, candidates and their histories. **Collaboration ZIPs still exclude splitting and interpretation data.** The UI explicitly labels this boundary. API credentials are excluded from both export paths.
+The ordinary consistent database recovery path includes splitting, interpretations, candidates and their histories. Version-2 full collaboration ZIPs now include saved splitting and interpretation work, as described below. Older work/result package formats are unchanged. Working copies are local and excluded from collaboration export; formal Save is required to deliver them. API credentials are excluded from both export paths.
 
 ## Global field palette
 
@@ -97,3 +100,20 @@ WHERE f.actor=? AND f.unit_id=? AND f.revision=? AND f.field_key='scope';
 ```
 
 The source snapshot is evidence of which version was interpreted. It does not establish that the legislation is still current or the extracted passage is semantically complete. Missing original assets, ambiguous citations and unresolved Site Model mappings remain visible limits.
+
+## Continuity, catalogs and change review
+
+- `GET /api/interpretations/drafts[?unit_id=…]` and `POST /api/interpretations/draft`: isolated working copies with their own revision and idempotence receipt. These are not formal interpretation revisions. Discard uses a revisioned tombstone, preventing an old autosave from resurrecting discarded text.
+- `GET/POST /api/settings/site-catalog`: one local `site-field-catalog/1` with no invented defaults. **Settings → Site Model fields** edits human labels, explicit `table.column` mappings, types, descriptions and allowed comparisons. Rule controls select these fields and derive their types. Configured catalogs are validated during formal saves; a catalog version is pinned with the interpretation. Imported catalog evidence does not replace local configuration.
+- Saved interpretations retain frozen `context_snapshot` evidence. **Review changed sources** lists affected interpretations in the current material. The selected interpretation shows before/current passages, affected fields, rule IDs and links to the fields. Changes to uncited context remain a contextual review task; the system does not infer semantic irrelevance. Legacy versions without complete snapshots require a full contextual review.
+- `GET /api/interpretations/impacts?material_id=…` returns this material-level list for the current reviewer. Each interpretation read also includes `impact` and `mapping_issues`.
+
+## Full workspace delivery, version 2
+
+`full-workspace-snapshot/2` retains the previous source/material/history contract and adds one `requirement-delivery/1` bundle per named reviewer. It carries source-exact splitting sessions and steps, relationships and quantities, interpretation histories, formal six-field values/states, citations and immutable origins, optional typed rules, pinned catalog evidence, review attribution and saved candidate runs. It does not include working copies, shared API credentials, active provider configuration or schedules. Original source files continue through the existing verified original-file inventory.
+
+The importer validates the graph, source spans, field anchors, quotation support, exception/count structure, interpretation parent revisions and non-executable derived logic before preview. Concurrent Requirement bundles are atomic choices, preventing unsafe structural auto-merges. Import keeps the original reviewer identity; select that reviewer to resume their work. It never transfers their review declaration to the importing reviewer. Source/material imports precede Requirement data.
+
+Received artifacts are retained by digest. Conflicting local revision numbers are rebound to appended local history while the untouched incoming artifact remains in `requirement_delivery_archives`; original revision identity is recorded in `delivery_origin`. Request receipts make interrupted imports replayable. Existing histories and omitted sessions remain. An imported interpretation whose local dependencies differ remains stale and requires context review. No import executes a query, generation request or compliance check.
+
+Version-1 full snapshots are readable; older Workbench versions must be updated to consume version 2. Legacy quotation locations retain their original limitations. A full snapshot preserves recorded work, not a guarantee that an old missing attachment was present in the first place.

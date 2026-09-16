@@ -75,7 +75,7 @@ def compare(nodes, left, right, decisions=None):
     pair=fingerprint([left,right]); chosen=(decisions or {}).get(pair,{})
     if ours['value']==theirs['value']:
         result={'merged':ours['value'],'differences':[],'unresolved':[]}
-    elif len(bases)==1:
+    elif len(bases)==1 and not ours['key'].startswith('requirements:'):
         result=merge_documents(nodes[bases[0]]['value'],ours['value'],theirs['value'],chosen,version=2)
     else:
         # Unrelated or ambiguous merge bases: never invent a baseline.

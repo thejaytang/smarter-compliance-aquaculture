@@ -68,6 +68,8 @@ class SnapshotWorkspace:
     base=material_value(branch['base_material']);value=material_value(e['material']);seen.add(identity)
     yield {'key':'material:'+identity,'base':base,'value':value,'branch':branch['actor'],'actor':branch['actor'],
      'files':files,'evidence':self.export_evidence(e),'guard':{'revision':e['material']['revision']}}
+  from .requirement_delivery import Delivery
+  yield from Delivery(c).capture()
   # Task/inspection histories travel as immutable evidence. Personal proposals
   # remain separate records and are never executed during synchronization.
   for kind in ('source_task_draft','material_inspection','adoption_receipt','collection_adoption','received_adoption'):
@@ -87,6 +89,10 @@ class SnapshotWorkspace:
    if binding['id']!=key[9:]:raise ValueError('Material identity differs.')
    # Owning System2 validation is deliberately used through its own interpreter.
    self.c.app.system2.call('material_sync-validate',request={'value':value})
+  elif key.startswith('requirements:'):
+   from .requirement_delivery import Delivery,key_for
+   Delivery(self.c).validate(value)
+   if key!=key_for(value['actor']):raise ValueError('Requirement reviewer identity differs.')
   elif not key.startswith('history:'):raise ValueError('Unsupported record in snapshot.')
  def validate(self,m,files):
   for n in m['nodes'].values():self.validate_value(n['key'],n['value'])
@@ -151,6 +157,9 @@ class SnapshotWorkspace:
     'revision':revision,'history':[*draft['history'],{'actor':actor,'at':now(),'revision':revision,'source_review':deepcopy(value),'sync_request_id':rid}]}
    receipt={'status':'saved','source_id':sid,'revision':revision}
    c.put_many([('source_draft',actor+':'+sid,record),('sync_domain_receipt',rid,receipt)])
+  elif key.startswith('requirements:'):
+   from .requirement_delivery import Delivery
+   receipt=Delivery(c).apply(value,rid,context.get('local_guards',{}).get(key+':'+value['actor']))
   elif key.startswith('material:'):
    identity=key[9:]
    if not e:raise ValueError('Cannot synchronize material without retained history.')
@@ -191,5 +200,9 @@ class SnapshotWorkspace:
    receipt={'status':'retained'}
   c.put('sync_domain_receipt',rid,receipt);return receipt
  def mark_observed(self,key,head,actor):
+  if key.startswith('requirements:'):
+   from .identities import REVIEWERS
+   from .requirement_delivery import key_for
+   actor=next(a for a in REVIEWERS if key_for(a)==key)
   branch='shared' if key.startswith('source:') else actor
   self.c.put('sync_observed',key+':'+branch,{'head':head})

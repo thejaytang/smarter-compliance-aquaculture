@@ -11,7 +11,7 @@ from .collaboration_exchange import pack, unpack
 from .snapshot_graph import node, tips, preview, validate_graph
 
 PROJECT='aquaculture-requirements'
-SCHEMA='full-workspace-snapshot/1'
+SCHEMA='full-workspace-snapshot/2'
 
 class FullSnapshot:
  def __init__(self, collaboration, workspace=None):
@@ -86,7 +86,7 @@ class FullSnapshot:
   return (self.c.root/'packages'/(identity+'.zip')).read_bytes(),info['filename']
  def load(self,raw):
   package=unpack(raw);m=package['metadata']
-  if package['kind']!='collection' or m.get('schema')!=SCHEMA or m.get('project')!=PROJECT:
+  if package['kind']!='collection' or m.get('schema') not in (SCHEMA,'full-workspace-snapshot/1') or m.get('project')!=PROJECT:
    raise ValueError('Choose a full workbench snapshot. Earlier work/result packages remain in legacy history.')
   if set(m)!={'id','schema','project','actor','at','nodes','heads','evidence','history'}:raise ValueError('Unsupported snapshot fields.')
   named(m['actor']);validate_graph(m['nodes'],m['heads'])
@@ -132,6 +132,7 @@ class FullSnapshot:
    for item in result['items']:
     value=result['nodes'][item['head']]['value'];kind,suffix=item['key'].split(':',1)
     item['title']=(value.get('binding',{}).get('source',{}).get('source_id','')+' · '+value.get('binding',{}).get('title','Material')) if kind=='material' else (suffix+' · '+value.get('source_title','Source')) if kind=='source' else suffix+' · '+('Source review' if kind=='review' else 'Review history')
+    if kind=='requirements':item['title']='Requirement work · '+value['actor']
     for d in item['conflicts']:d['title']=item['title']
    plan={'id':identity,'actor':actor,'sender':m['actor'],'status':'preview','decisions':decisions,
     'local_fingerprint':fingerprint([local['heads'],local['guards']]),'local_guards':local['guards'],'nodes':result['nodes'],'heads':result['heads'],

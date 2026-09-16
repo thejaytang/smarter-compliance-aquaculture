@@ -1,5 +1,7 @@
 # Smarter Compliance Aquaculture
 
+**Working continuity:** resumable interpretation working copies, explicit source-absence states, configurable Site Model fields, focused source-change review and saved Requirement data in full workspace ZIPs. [Workflow and delivery contract](workbench/docs/requirement-interpretation.md).
+
 **Traceable checks and simpler editing:** saved fields link to their Requirement, splitting revision and source passage through **Source trail**. Optional typed rule groups expose QueryBuilder handoff without executing a compliance check. [Current verification and Windows CI](project-support/workbench-optimization-20260916/RESULTS.md).
 
 **Four-pane check design:** complete splitting to see source field colours, then interpret Scope, Condition and Demand in the fourth pane. One shared API is configured in Settings → AI service. [Workflow, API setup and storage boundaries](workbench/docs/requirement-interpretation.md).

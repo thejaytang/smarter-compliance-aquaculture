@@ -16,6 +16,8 @@ from .requirements import Requirements, FIELDS, RELATIONS, leaves, encode
 from .collaboration import named, now
 from . import interpretation_lineage as lineage
 from .check_design import validate_design, querybuilder_projection
+from .interpretation_continuity import field_state, review_ready, context_snapshot, impact
+from .site_catalog import Catalog, mapping_issues
 
 KEYS = ('scope', 'scope_information', 'condition', 'condition_information', 'demand', 'verification')
 LABELS = ('Scope', 'Information needed to identify scoped objects', 'Condition',
@@ -33,7 +35,9 @@ def fingerprint(value):
 
 def checking_logic(fields, exceptions=None, source_structure=None):
     values = {k: fields.get(k, {}).get('value', '').strip() for k in KEYS}
-    missing = [LABELS[i] for i, k in enumerate(KEYS) if not values[k] or fields.get(k,{}).get('basis')=='unresolved']
+    missing = [LABELS[i] for i, k in enumerate(KEYS) if field_state(fields.get(k,{}))!='specified' or not values[k] or fields.get(k,{}).get('basis')=='unresolved']
+    for k in KEYS:
+        if field_state(fields.get(k,{}))=='not_stated': values[k]='Not explicitly stated in the reviewed source. '+fields[k].get('absence_reason','')
     gaps = [g for k in KEYS for g in fields.get(k, {}).get('gaps', [])]
     return dict(version=1, executable=False, steps=[
         dict(title='Identify Set A', description=values['scope'], information=values['scope_information']),
@@ -191,7 +195,10 @@ class Interpretations:
               WHERE i.actor=? AND i.unit_id=? ORDER BY r.rowid DESC LIMIT 10''',(actor,uid))]
             lineage.backfill(db,actor,uid)
             doc['lineage']=lineage.read(db,actor,uid,doc['revision'])
+        doc['impact']=impact(self,actor,doc) if doc['revision'] else dict(status='not-saved',items=[])
+        doc['catalog']=Catalog(self.c).read()
         doc['check_design']=validate_design(doc.get('check_design'))
+        doc['mapping_issues']=mapping_issues(doc['check_design'],doc['catalog'])
         doc['querybuilder']=querybuilder_projection(doc['check_design'])
         try:
             ctx=self.context(actor,uid,doc['linked_material_ids']);doc['stale']=bool(doc.get('context_fingerprint') and doc['context_fingerprint']!=ctx['fingerprint'])
@@ -202,6 +209,21 @@ class Interpretations:
         doc['runs']=[self.run(actor,r['id']) for r in runs if r.get('unit_id')==uid][:10]
         doc['logic']=doc.get('logic') or checking_logic(doc['fields'],doc.get('context',{}).get('exceptions',[]))
         return doc
+
+    def impacts(self, actor, material_id):
+        actor=named(actor)
+        # Reading the owning material also enforces access to this workspace.
+        self.r.material(actor,material_id)
+        with self.c.db() as db:
+            docs=[json.loads(r[0]) for r in db.execute("SELECT body FROM requirement_interpretations WHERE actor=? AND json_extract(body,'$.material_id')=?",(actor,material_id))]
+        items=[];material_cache={}
+        for doc in docs:
+            if doc['material_id']!=material_id:continue
+            result=impact(self,actor,doc,material_cache)
+            if result['status']=='current':continue
+            items.append(dict(unit_id=doc['unit_id'],revision=doc['revision'],
+                title=doc.get('logic',{}).get('source_structure',{}).get('requirement',{}).get('text',doc['unit_id']),**result))
+        return dict(material_id=material_id,requirements=items)
 
     def validate_fields(self, fields, ctx):
         if not isinstance(fields,dict) or set(fields)!=set(KEYS):raise ValueError('Provide all six interpretation fields.')
@@ -226,10 +248,16 @@ class Interpretations:
                     if text.find(quote,first+1)<0:start,end=first,first+len(quote)
                 anchored.append(dict(id=ref['id'],quote=quote,start=start,end=end))
             if basis=='source' and value.strip() and not refs:raise ValueError('Source-supported content needs a valid source quotation.')
+            state=field_state(f);reason=f.get('absence_reason','')
+            if state not in ('specified','not_stated','unresolved') or not isinstance(reason,str) or len(reason)>4000:raise ValueError('Invalid field state or absence explanation.')
+            if state=='not_stated' and (value.strip() or not reason.strip()):raise ValueError('Not explicitly stated needs a reason and an empty value; do not invent source wording.')
             result[k]=dict(value=value,basis=basis,references=anchored,gaps=gaps)
+            if 'state' in f or state=='not_stated':result[k].update(state=state,absence_reason=reason)
         return result
 
     def save(self, actor, req):
+        from .interpretation_continuity import Drafts
+        Drafts(self.c)
         actor=named(actor);rid=str(uuid.UUID(req['request_id']));digest=fingerprint(req);uid=req['unit_id']
         with self.c.lock,self.c.db() as db:
             prior=db.execute('SELECT digest,response FROM interpretation_requests WHERE actor=? AND id=?',(actor,rid)).fetchone()
@@ -251,12 +279,17 @@ class Interpretations:
             elif action not in ('save','review'):raise ValueError('Unknown interpretation action.')
             fields=self.validate_fields(fields,ctx)
             design=validate_design(historical.get('check_design') if action=='restore' else req.get('check_design',old.get('check_design')))
-            if action=='review' and any(not fields[k]['value'].strip() or fields[k]['gaps'] or fields[k]['basis']=='unresolved' for k in KEYS):
+            catalog=Catalog(self.c).read()
+            if req.get('catalog_revision') is not None and req['catalog_revision']!=catalog['revision']:return dict(status='conflict',error='The Site Model catalog changed. Reload and check the mappings.')
+            issues=mapping_issues(design,catalog)
+            if catalog['fields'] and issues:raise ValueError('Correct the mappings against the current Site Model catalog before saving.')
+            if action=='review' and any(not review_ready(fields[k]) for k in KEYS):
                 raise ValueError('Resolve the six fields and their gaps before marking this interpretation reviewed.')
             doc=dict(schema=SCHEMA,unit_id=uid,actor=actor,material_id=ctx['material_id'],session_id=ctx['session_id'],
                 session_revision=ctx['session_revision'],revision=old['revision']+1,fields=fields,
                 linked_material_ids=linked,context_fingerprint=ctx['fingerprint'],context_manifest=[dict(id=m['id'],revision=m['revision'],source=m['source']) for m in ctx['materials']],
-                reviewed=action=='review',updated_at=now(),check_design=design,
+                reviewed=action=='review',updated_at=now(),check_design=design,context_snapshot=context_snapshot(ctx),
+                catalog_snapshot=catalog,mapping_issues=issues,
                 logic=checking_logic(fields,ctx['exceptions'],dict(requirement=ctx['requirement'],sessions=ctx['sessions'])))
             db.execute('BEGIN IMMEDIATE')
             prior=db.execute('SELECT digest,response FROM interpretation_requests WHERE actor=? AND id=?',(actor,rid)).fetchone()
@@ -268,10 +301,18 @@ class Interpretations:
                 if not actual or actual[0]!=bound['revision']:return dict(status='conflict',error='Splitting changed while saving. Refresh the source context.')
             current=db.execute('SELECT revision FROM requirement_interpretations WHERE actor=? AND unit_id=?',(actor,uid)).fetchone()
             if (current[0] if current else 0)!=req.get('expected_revision'):return dict(status='conflict',error='A newer interpretation is saved. Reload before saving.')
+            draft_revision=None
+            if 'draft_revision' in req:
+                from .interpretation_continuity import Drafts
+                current_draft=db.execute('SELECT revision FROM interpretation_drafts WHERE actor=? AND unit_id=?',(actor,uid)).fetchone()
+                draft_revision=current_draft[0] if current_draft else 0
+                if draft_revision!=req['draft_revision']:return dict(status='conflict',error='A working copy changed in another window. Reopen to compare before formal save.')
+                db.execute('INSERT OR REPLACE INTO interpretation_drafts VALUES(?,?,?,?,?)',(actor,uid,draft_revision+1,'null',now()))
             db.execute('INSERT OR REPLACE INTO requirement_interpretations VALUES(?,?,?,?)',(actor,uid,doc['revision'],encode(doc)))
             db.execute('INSERT INTO interpretation_history VALUES(?,?,?,?,?,?)',(actor,uid,doc['revision'],encode(doc),action,now()))
             lineage.project(db,doc,ctx['origin'],ctx['citations'])
             response=dict(status='saved',revision=doc['revision'])
+            if draft_revision is not None:response['draft_revision']=draft_revision+1
             db.execute('INSERT INTO interpretation_requests VALUES(?,?,?,?)',(actor,rid,digest,encode(response)))
             return response
 

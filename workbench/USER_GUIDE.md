@@ -315,10 +315,12 @@ The normal material detail fills the available workspace. Drag the three vertica
 
 ## Requirement interpretation and shared API
 
-Use [the current four-pane guide](docs/requirement-interpretation.md) for source colours, reading modes, six editable interpretation fields, checking logic, shared Settings → AI service, candidate adoption, save/review and recovery boundaries. Collaboration ZIPs do not yet include splitting or interpretation work.
+Use [the current four-pane guide](docs/requirement-interpretation.md) for source colours, reading modes, six editable interpretation fields, checking logic, shared Settings → AI service, candidate adoption, save/review and recovery boundaries. Version-2 full workspace ZIPs include saved splitting, interpretations, rules, candidates and histories. Working copies remain local until Save interpretation.
 
 ## Tracing and mapping a check design
 
 Use **Interpret requirement** on a finished card. Enter the six formal fields; open **Evidence & gaps** or **AI assistance** only when needed. **Save interpretation** (Ctrl/Cmd+S while editing pane four) saves the design without marking it reviewed. **Source trail** shows the saved Requirement, splitting step, source version and extracted passage, even if later versions change.
 
-**Site Model mapping · optional** holds explicit field comparisons and nested all/any groups. Agree the downstream `table.column` fields before using them. Each comparison records which interpretation field supports it. The QueryBuilder preview is a handoff format, not an executed query or compliance result. Leave unknown groups unmapped. See [the maintained contract](docs/requirement-interpretation.md).
+**Site Model mapping · optional** holds explicit field comparisons and nested all/any groups. Configure agreed fields once in Settings → Site Model fields, then select their labels in the rule editor. No downstream fields are invented by default. Each comparison records which interpretation field supports it. The QueryBuilder preview is a handoff format, not an executed query or compliance result. Leave unknown groups unmapped. See [the maintained contract](docs/requirement-interpretation.md).
+
+Working copies save automatically without submitting a formal interpretation. Use **Interpretation drafts** to resume, and **Review changed sources** to find affected fields after source changes. Choose **Not explicitly stated** with a reason when the reviewed source omits a field; this never means an unconditional rule.
