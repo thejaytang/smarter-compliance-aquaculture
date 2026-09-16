@@ -2,7 +2,7 @@
 
 ## Continuous Markdown content
 
-The middle pane presents the entire body as continuous Markdown. Headings and nested structural guides show chapter/paragraph relationships; there are no numbered cells or block pages. Double-click a paragraph to edit it. Deletions use red backgrounds and strikethrough; additions use green backgrounds directly in the document and survive Save/reopen. [Workflow and tools](docs/markdown-content.md). Re-extract can refresh an untouched machine preview, while preserving its prior result. Existing human edits remain protected.
+The middle pane opens as one directly editable document. Select across paragraphs to edit or delete text. Hover a passage for To requirement and upper/lower + insertion controls (Context, H1, H2, Table). Table cells are editable, with edge controls to add or remove rows and columns; merging is not offered. Save explicitly before Requirement intake. Changes retains red/green differences after Save/reopen. [Workflow and tools](docs/markdown-content.md). Re-extract can refresh an untouched machine preview, while preserving its prior result. Existing human edits remain protected.
 
 ## Manual requirement splitting
 

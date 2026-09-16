@@ -32,6 +32,8 @@ The later 2026-09-16 user interaction revision supersedes automatic draft persis
 
 The later 2026-09-16 simplification uses coloured relationship fields, condition-only recursive editors, visible exact/range counts and material-wide Rx display labels backed by unchanged UUIDs. The fourth pane derives source wording from decomposition and has three editable Logic fields with explicit AI candidate acceptance. Selection is bidirectional; no selection shows collapsed Rx entries. Preserve manual edits during generation and saves. [Current interaction contract](workbench/docs/requirement-interpretation.md#simplified-relationship-and-interpretation-workflow-2026-09-16).
 
+The later 2026-09-16 direct-writing revision makes Current text one continuously editable body. Keep stable source-bound block IDs, empty deletion tombstones, original baselines, plain-text paste and manual saves. Passage-edge insertion and table row/column controls replace per-block editing in the default view; no merged-cell editing is offered. [Document editing contract](workbench/docs/markdown-content.md#direct-document-editing).
+
 ## Documentation ownership
 
 - Write all maintained project documentation in English. Preserve exact identifiers, commands, file paths and authoritative source quotations. Historical archives and original source material retain their original language.

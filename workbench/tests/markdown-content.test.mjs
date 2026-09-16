@@ -59,7 +59,7 @@ test('change guards and undo keep editor text and draft synchronized',()=>{
 
 test('complete Markdown renders every block with nested sections and in-place diffs',()=>{
  const blocks=[heading(),{...heading(),id:'sub',text:'Scope',level:2},...Array.from({length:90},(_,i)=>({...paragraph(),id:'p'+i,text:'Paragraph '+i,parent_id:'sub'})),{...heading(),id:'next',text:'Next chapter',level:1}, {...paragraph(),id:'end',text:'Final paragraph',parent_id:'next'}];
- const m={collaboration:{readonly:false},draft:{blocks:updateMarkdownBlock(blocks,'p89','Edited paragraph 89')}};const nb=new MarkdownNotebook(m),html=nb.documentMarkup();
+ const m={collaboration:{readonly:false},draft:{blocks:updateMarkdownBlock(blocks,'p89','Edited paragraph 89')}};const nb=new MarkdownNotebook(m);nb.mode="changes";nb.showChanges=true;const html=nb.documentMarkup();
  assert.equal((html.match(/data-md-cell=/g)||[]).length,blocks.length);assert.match(html,/Final paragraph/);
  assert.match(html,/<section[^>]+data-section="h"[\s\S]*<section[^>]+data-section="sub"/);
  assert.match(html,/<\/section><\/section><section[^>]+data-section="next"/);

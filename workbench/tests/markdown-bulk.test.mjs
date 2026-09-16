@@ -22,7 +22,7 @@ test('section shortcut selects only preceding body passages; bulk delete stays u
  assert.equal(h.m.draft.blocks[1].text,'');assert.equal(h.m.draft.blocks[2].text,'');
  assert.deepEqual(h.m.draft.blocks.slice(3),original.slice(3));assert.deepEqual(h.m.draft.blocks[0],original[0]);
  for(const i of [1,2]){assert.deepEqual(h.m.draft.blocks[i].source_refs,original[i].source_refs);assert.deepEqual(h.m.draft.blocks[i].markdown.original,original[i]);}
- h.n.showChanges=false;assert.doesNotMatch(h.n.documentMarkup(),/data-md-cell="intro"/);h.n.showChanges=true;assert.match(h.n.documentMarkup(),/Introduction 鱼 æ/);
+ h.n.showChanges=false;assert.doesNotMatch(h.n.documentMarkup(),/data-md-cell="intro"/);h.n.showChanges=true;h.n.mode="changes";assert.match(h.n.documentMarkup(),/Introduction 鱼 æ/);
  await h.n.action('undo-bulk',{});assert.deepEqual(h.m.draft.blocks,original);
 });
 test('shift selection includes table and headings, in either direction, and excludes document metadata',()=>{

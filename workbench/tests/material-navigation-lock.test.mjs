@@ -31,3 +31,12 @@ test('busy navigation lock preserves pre-existing disabled permissions through r
  f.x.busy=false;f.x.updateBar();assert.equal(restricted.disabled,true);assert.equal(f.source.disabled,true);assert.equal(f.opener.disabled,false);assert.ok(f.nav().slice(1).every(n=>!n.disabled));
  f.x.updateBar();assert.equal(restricted.disabled,true);
 });
+
+test('continuous body unlocks after loading or saving and stays locked in read-only views',()=>{
+ const {x}=fixture(),body=x.q('[data-writing-document]');
+ x.opening=true;x.updateBar();assert.equal(body.contentEditable,'false');
+ x.opening=false;x.updateBar();assert.equal(body.contentEditable,'true');
+ x.busy=true;x.updateBar();assert.equal(body.contentEditable,'false');
+ x.busy=false;x.updateBar();assert.equal(body.contentEditable,'true');
+ x.material.collaboration={view:'master'};x.updateBar();assert.equal(body.contentEditable,'false');
+});

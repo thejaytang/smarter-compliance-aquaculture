@@ -42,3 +42,31 @@
 .material-workbench .md-cell-preview{padding-left:calc(var(--md-indent,0)*16px)}
 
 .md-bulk-tools{position:sticky;top:0;z-index:2;background:#eef3f3;padding:8px;border:1px solid #a8bbbc;display:flex;gap:6px;flex-wrap:wrap;align-items:center}.md-block-select{display:flex;gap:8px;padding:6px;background:#e4eeee}.md-cell:has([data-md-select]:checked){outline:2px solid #4f8389}[data-bulk-text]{width:100%;font:inherit;min-height:100px;box-sizing:border-box}.md-bulk-editors{display:grid;gap:16px}.md-bulk-editors label{display:grid;gap:6px}.md-bulk-tools:empty{display:none}
+
+/* One writing surface; controls are siblings, never part of selected/copied text. */
+.md-writing-surface{position:relative;margin:12px 0 28px}
+.material-workbench .md-writing-document{margin:0;padding:0 8px 0 12px;min-height:100px;outline:none;caret-color:var(--accent,#245b9e);white-space:normal}
+.md-writing-document::selection,.md-writing-document ::selection{background:#cbdfee;color:#142b3f}
+.md-writing-document:focus-visible{box-shadow:inset 2px 0 var(--line,#cad4df)}
+.md-writing-block{position:relative;min-height:28px;padding:12px 84px 12px 4px;overflow-wrap:anywhere}
+.md-writing-block>:first-child{margin-top:0}.md-writing-block>:last-child{margin-bottom:0}
+.md-writing-block p,.md-writing-block li,.md-writing-block h1,.md-writing-block h2,.md-writing-block h3,.md-writing-block h4,.md-writing-block h5,.md-writing-block h6{white-space:pre-wrap}
+.md-writing-block:hover{background:var(--surface-subtle,#f3f6fa)}
+.md-writing-controls{position:absolute;left:0;right:0;pointer-events:none;z-index:3}
+.md-writing-controls[hidden]{display:none}
+.material-workbench .md-writing-controls button{pointer-events:auto;font:inherit;font-size:12px;min-height:28px;padding:3px 6px;color:var(--ink,#202c3a);border:1px solid var(--line,#cad4df);background:var(--surface,#fff);border-radius:4px}
+.md-writing-controls button:focus-visible{outline:2px solid var(--accent,#245b9e);outline-offset:2px}
+.material-workbench .md-to-requirement{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:76px;line-height:1.3;text-align:center}
+.material-workbench .md-insert-edge{position:absolute;left:calc(50% - 14px);width:28px;height:28px;opacity:.65;font-size:18px;line-height:20px;border-radius:50%}
+.md-insert-edge:hover,.md-insert-edge:focus-visible{opacity:1}
+.md-insert-above{top:-14px}.md-insert-below{bottom:-14px}
+.md-insert-menu{position:absolute;left:12px;right:8px;display:flex;flex-wrap:wrap;gap:4px;padding:6px;background:var(--surface,#fff);border:1px solid var(--line,#cad4df);pointer-events:auto;z-index:4}
+.md-menu-above{bottom:calc(100% + 4px)}.md-menu-below{top:calc(100% + 4px)}
+.md-writing-block:has(table){padding-top:32px;padding-right:88px;padding-bottom:24px}
+.md-writing-block table{display:table;table-layout:fixed;width:100%;white-space:normal;overflow-wrap:anywhere}
+.md-writing-block td,.md-writing-block th{min-width:32px;height:28px;padding:6px;white-space:pre-wrap}
+.md-table-edge{position:absolute;display:flex;gap:1px;pointer-events:auto;white-space:nowrap}
+.md-table-row{transform:translateY(-50%)}
+.material-workbench .md-table-edge button{width:25px;min-width:25px;padding:2px;font-size:16px}
+.md-writing-controls:has(.md-table-row) .md-to-requirement{display:none}
+@media (hover:none){.md-writing-document{touch-action:manipulation}}

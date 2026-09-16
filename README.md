@@ -6,7 +6,7 @@
 
 **Four-pane check design:** complete splitting to see source field colours, then interpret Scope, Condition and Demand in the fourth pane. One shared API is configured in Settings → AI service. [Workflow, API setup and storage boundaries](workbench/docs/requirement-interpretation.md).
 
-**Continuous Markdown content:** the complete body is shown together, with structural section grouping and persistent red-background deletions and green-background additions. [Editing, tools and body-selection rules](workbench/docs/markdown-content.md).
+**Direct document editing:** edit the second-pane body continuously, select across paragraphs, and use passage-edge insertion and table row/column controls. The separate Changes view retains red/green differences. [Editing, tools and body-selection rules](workbench/docs/markdown-content.md).
 
 **Manual requirement splitting:** choose **To requirements** beside a saved material passage, then split outer relationships before assigning each unit’s original wording to fields. [Workflow and local-storage boundary](workbench/docs/manual-requirement-splitting.md). This connects the manual pane; automatic requirement extraction remains unavailable.
 

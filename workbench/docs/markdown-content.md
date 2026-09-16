@@ -14,30 +14,25 @@ Choose Edit document information to adjust its Markdown, then Save. On first edi
 
 Review-impact notifications appear across the top of the material page, outside the document pane, with a dismiss button. Dismissal only changes presentation and survives rerenders for the same content revision/impact in the current page session. Changed review impact can appear again; required checks and confirmation rules remain intact. Ordinary page status messages also have a dismiss button.
 
-## Edit and review
+## Direct document editing
 
-- Click a block to reveal its actions. Double-click it, or focus it and press Enter, to edit its Markdown.
-- Use Heading, Bold, Italic, List, Numbered list, Quote, Table or Link. Only the active block shows the formatting toolbar.
-- Shift+Enter renders the block. Escape also renders without discarding input. Undo/Redo are available in the current block; saved material history remains available across sessions.
-- Deleted content has a red background and strikethrough. Added content has a green background. Replacing text shows both fragments. Whole-block deletion remains visible in the revision view.
-- Read offers Changes and Current text. Requirement field colours belong to the third-pane source preview. The comparison baseline is the block's state before its first Markdown edit; Save does not reset it. Earlier edits made before this feature remain in material history.
-- More contains Insert above/below, Delete content, Restore original and Source details. + Block appends a block. New blocks inherit a nearby source location as context and remain human additions; this does not prove the added wording appeared in the source.
-- Save persists the personal material with its Markdown, baseline and source links. Saving is separate from review confirmation and Archive. Unsaved edits remain in page memory only. They are not automatically written to browser storage, the database or history. Leaving, reloading or closing prompts about losing them; save explicitly to persist work. Version-conflict protection remains active.
-- After saving, To requirements sends the whole effective block text. Markdown syntax and deleted revision text do not enter the requirement unit. Editing its source text later makes an existing splitting session stale under the existing guards.
+**Current text** is the default. The body is one continuously editable document, without opening an editor per passage. Select text across paragraphs to replace or delete it. Enter starts a new passage; Shift+Enter inserts a line break. Ctrl/Cmd+Z and Ctrl/Cmd+Shift+Z undo and redo page-local edits. Ctrl/Cmd+A selects the body, excluding document information, controls and review declarations.
 
-Basic headings, paragraphs, explicit line breaks, lists, emphasis and simple tables render in source order. Markdown does not reproduce the original PDF's exact typography or merged table geometry. The full original remains in the left pane; the pre-edit block and table geometry are retained with its baseline. Editing a complex table displays that limitation. Images remain source-bound descriptions rather than remote fetches. Raw HTML and executable links are not enabled in Markdown.
+Hover a passage to reveal **To requirement** on its right and a translucent **+** at its upper and lower edges. Each + opens an inline toolbar with **Context** (ordinary text), **H1**, **H2** and **Table**. Keyboard users can focus the document, position the caret in a passage and use Tab to reach its controls. These controls sit outside the editable DOM and are never included in copied text.
 
-Find keeps the complete document visible. Press Enter in Find to move to the next matching block; chapter navigation scrolls within the same full document.
+Tables have directly editable cells. Hover or position the caret in a cell to reveal row controls on the right edge and column controls above the table. They insert before/after or delete the selected row/column. At least one row and one column remain. There is no merge-cell operation. Editing an imported complex table produces simple rows and columns; its pre-edit layout remains in the original and Markdown history. Table caption and notes remain part of the saved Markdown. Whole tables are not currently Requirement intake passages; To requirement applies to nonempty text and headings.
 
-## Select and edit multiple passages
+Save the material explicitly before using **To requirement**. The action brings the effective passage into the third pane in source order, independent of the order in which the user clicks passages. Existing identical sessions reopen. UUIDs remain stable; Rx labels are presentation labels. Changes to saved source wording or references make dependent splitting stale under the existing checks.
 
-Choose **Select passages**, then select any passages with the checkboxes. Shift-click the last passage to select a continuous range. Dragging a text selection across paragraphs selects the entire touched passages, explicitly labelled as whole passages.
+**Changes** remains available for red/green comparison against the pre-edit baseline, including removed passages. It retains the advanced Markdown and bulk tools. Returning to Current text resumes direct editing. Requirement colours remain in the third pane. Switching views does not save or review anything.
 
-For cover text before a section, click that section heading, open **More → Select all content before this section**, then **Delete selected**. The section itself and the separate Document information are excluded. The confirmation shows the selected range. Delete clears only those effective texts; stable block IDs, original source links and Markdown baselines remain intact. Current text hides the deleted passages; Changes shows their redlines.
+Source blocks retain their IDs, references and original baselines. A removed passage becomes an empty retained block, rather than making its ID point to the next passage. Joining paragraphs retains their combined source context. Insertions inherit a neighbouring source location as context and are marked as human additions, not authenticated source quotations. Unchanged Markdown is reused byte for byte instead of being reserialized on opening. Unsupported structural browser mutations fail closed and restore the last valid page draft. Pasted content is plain text; it cannot introduce executable HTML, remote images or hidden formatting.
 
-**Edit selected** opens all selected passages in one dialog, with a separate Markdown field per passage. Applying them together preserves each passage's source ownership, including lists and tables. It does not combine unrelated passages into a new Requirement. **Undo last bulk change** restores the complete pre-edit blocks while no subsequent edit has changed them.
+Save persists the personal material through the existing version/conflict-protected service. Saving, review and Archive remain separate. Unsaved content and the bounded undo stack exist only in page memory. No automatic database, localStorage or IndexedDB draft/history writes occur. Leaving, reloading or closing retains the strong unsaved-work warning. Editing is temporarily locked while a save/read is in progress and restored afterwards.
 
-All bulk changes remain unsaved until **Save**. Opening selection tools, applying a batch, switching reading mode and undoing a batch do not create history entries. The close-material button uses the same unsaved-work warning as workspace navigation.
+The original whole-passage bulk editing helpers remain available in Changes for compatibility. Their edits also preserve IDs and source references and require an explicit Save.
+
+Find and chapter navigation retain the complete document and move to the matching source block. The heading hierarchy remains in the structured model even though the editable DOM is flat to support cross-paragraph selection.
 
 ## Body-only extraction
 
@@ -56,7 +51,7 @@ Material review means checking that the body content, including its headings, ta
 
 Markdown is stored inside the existing material blocks (`markdown_source` for initial formatted extraction and `markdown` for source/baseline/original revision data). It therefore follows the owning material's saved history and existing material snapshot path. Full workspace ZIP version 2 also includes saved Requirement splitting and interpretation records; unsaved page edits are not included.
 
-The browser uses locally bundled [markdown-it](https://github.com/markdown-it/markdown-it) and [jsdiff](https://github.com/kpdecker/jsdiff). Native textareas provide Markdown source editing. No hosted editor, external model or browser-time package fetch is used. Versions and dependency resolution are pinned in `workbench/frontend/package.json` and `package-lock.json`; vendored assets and licenses are shipped with the UI. Node/npm is only required to rebuild those assets:
+The browser uses locally bundled [markdown-it](https://github.com/markdown-it/markdown-it) and [jsdiff](https://github.com/kpdecker/jsdiff). A native contenteditable surface provides direct body editing; textareas remain for advanced Markdown and document metadata. No hosted editor, external model or browser-time package fetch is used. Versions and dependency resolution are pinned in `workbench/frontend/package.json` and `package-lock.json`; vendored assets and licenses are shipped with the UI. Node/npm is only required to rebuild those assets:
 
 ```sh
 cd workbench/frontend
