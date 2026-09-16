@@ -1,5 +1,7 @@
 # Requirement Workstream: current state
 
+2026-09-16 example boundary correction: four passages now form four separate Requirements. R2–R4 no longer copy R1’s lead-in; R1 links all three via Subrequirement All 3. Original text is unchanged and prior combined entries remain recoverable. Four current interpretations/source spans verified. Context now ignores unlinked historical references; 32 interpretation backend tests pass. [Evidence](project-support/workbench-example-separate-20260916/RESULTS.md).
+
 2026-09-16 English example: current PE001-003 presents all four columns in English using the supplied ADF-10 vocabulary. Four saved Requirements/interpretations, all source spans, All 3 links and [2,2]/[5,5] groups verified. Prior Norwegian source and saved work remain in history. User Chrome opened the English example. [Evidence](project-support/workbench-example-english-20260916/RESULTS.md).
 
 2026-09-16 Requirements help: routine saved/completion notices and per-entry history details move out of the working area. A title-side ? opens the field-colour legend, guidance and collapsed history; actionable unsaved/error warnings remain. 344 frontend tests and normal-browser help open/close checks pass. [Evidence](project-support/workbench-example-adf10-20260916/RESULTS.md#requirements-help-follow-up).

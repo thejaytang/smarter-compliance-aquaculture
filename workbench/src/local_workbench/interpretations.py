@@ -131,14 +131,19 @@ class Interpretations:
             d = self.r.load(db, actor, row[0])
         material = self.r.material(actor,d['material_id'])
         if self.r.stale(d,material): raise ValueError('Source content changed. Open a current splitting session before interpreting it.')
-        sessions={d['id']:d}; queue=list(d.get('reference_evidence',{}).values())
+        def active_references(doc):
+            # Cached evidence survives unlinking for history. Only live tree links
+            # may constrain the current interpretation context.
+            targets={n['target_id'] for tree in structure.views(doc).values() for n,_ in structure.walk(tree) if n['kind']=='reference'}
+            return [doc['reference_evidence'][target] for target in sorted(targets) if target not in doc['units']]
+        sessions={d['id']:d}; queue=active_references(d)
         while queue:
             ref=queue.pop(); sid=ref['session_id']
             if sid in sessions: continue
             x=self.r.read(actor,sid)
             if x.get('stale') or ref.get('revision')!=x['revision']:raise ValueError('A referenced requirement changed. Review its saved link before interpreting this requirement.')
             sessions[sid]=x
-            queue.extend(x.get('reference_evidence',{}).values())
+            queue.extend(active_references(x))
         mids={d['material_id'], *linked, *(x['material_id'] for x in sessions.values())}
         materials=[]; citations=[];limitations=['Saved text is not proof of complete or reviewed legislation. Missing annexes and unresolved references must remain gaps.']
         for mid in sorted(mids):

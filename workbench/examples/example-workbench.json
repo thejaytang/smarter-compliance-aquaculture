@@ -22,62 +22,48 @@
     {
       "key": "R2",
       "ids": [
-        0,
         1
       ],
       "fields": {
-        "Subject": "the operational journal",
-        "Modal Verb": "shall",
-        "Main Verb": "contain",
         "Object": "aquaculture animals and aquaculture animal products brought into and removed from the aquaculture establishment"
       },
-      "conditions": [
-        "For aquaculture establishments that are not subject to specific record-keeping provisions in Chapters 4, 5 and 6"
-      ],
+      "conditions": [],
       "details": [
         "place of origin",
         "place of destination"
-      ]
+      ],
+      "context_requirement": "R1"
     },
     {
       "key": "R3",
       "ids": [
-        0,
         2
       ],
       "fields": {
-        "Subject": "the operational journal",
-        "Modal Verb": "shall",
-        "Main Verb": "contain",
         "Object": "mortality per production unit"
       },
       "conditions": [
-        "For aquaculture establishments that are not subject to specific record-keeping provisions in Chapters 4, 5 and 6",
         "relevant to the production method"
-      ]
+      ],
+      "context_requirement": "R1"
     },
     {
       "key": "R4",
       "ids": [
-        0,
         3
       ],
       "fields": {
-        "Subject": "the operational journal",
-        "Modal Verb": "shall",
-        "Main Verb": "contain",
         "Object": "results of completed health inspections"
       },
-      "conditions": [
-        "For aquaculture establishments that are not subject to specific record-keeping provisions in Chapters 4, 5 and 6"
-      ],
+      "conditions": [],
       "details": [
         "number of completed health inspections",
         "sampling",
         "examinations performed",
         "diagnoses",
         "treatments carried out"
-      ]
+      ],
+      "context_requirement": "R1"
     }
   ],
   "interpretations": {
@@ -87,18 +73,18 @@
       "verification": "For each journal in B, require ALL three linked content requirements: R2 AND R3 AND R4. Check that the required information is present and updated in the same assessment context. The phrase at a minimum means at least the listed content; it does not prohibit additional journal information. C contains journals supported by sufficient evidence for all three requirements. Only with adequate coverage and evidence may B ⊆ C support a positive result. Missing evidence is unresolved; a verified missing mandatory item is a failure. This example defines the method and does not produce a verdict."
     },
     "R2": {
-      "scope_information": "Identify the operational journal and its owning aquaculture establishment. A = journals associated with aquaculture establishments. Bind establishment_id, journal_id and the assessment date; these are proposed data concepts, not an agreed Site Model schema. R2 inherits the lead-in paragraph from R1 and concerns records of animals and animal products entering and leaving the same establishment.",
-      "condition_information": "Within A, determine which establishments are covered by specific record-keeping provisions in Chapters 4, 5 or 6. Proposed logical form: NOT (covered_by_chapter_4 OR covered_by_chapter_5 OR covered_by_chapter_6). B contains journals whose establishments are outside those specific provisions. The excerpt links to these chapters but does not supply their contents. Unknown applicability must remain unresolved, not default to false. Preserve both inbound and outbound coverage from brought into and removed from; do not inspect just one direction.",
+      "scope_information": "Shared scope is inherited through the R1 → R2 Subrequirement link. This entry contains only its own list-item wording; no Subject or modal verb is copied into its decomposition. Identify the operational journal and its owning aquaculture establishment. A = journals associated with aquaculture establishments. Bind establishment_id, journal_id and the assessment date; these are proposed data concepts, not an agreed Site Model schema. R2 inherits the lead-in paragraph from R1 and concerns records of animals and animal products entering and leaving the same establishment.",
+      "condition_information": "Use R1’s shared applicability condition through that link. Within A, determine which establishments are covered by specific record-keeping provisions in Chapters 4, 5 or 6. Proposed logical form: NOT (covered_by_chapter_4 OR covered_by_chapter_5 OR covered_by_chapter_6). B contains journals whose establishments are outside those specific provisions. The excerpt links to these chapters but does not supply their contents. Unknown applicability must remain unresolved, not default to false. Preserve both inbound and outbound coverage from brought into and removed from; do not inspect just one direction.",
       "verification": "For each applicable journal, compare its movement records with the relevant known inbound/outbound movements. The required location group is ALL 2: place of origin AND place of destination. Confirm the journal records cover the relevant animals and animal products and that their information is updated. [2,2] counts the two listed information categories; it does not limit the number of movements or records. Evidence sources and record joins are proposed checks requiring an agreed Site Model mapping. Do not infer completeness from a single populated row."
     },
     "R3": {
-      "scope_information": "Identify the operational journal and its owning aquaculture establishment. A = journals associated with aquaculture establishments. Bind establishment_id, journal_id and the assessment date; these are proposed data concepts, not an agreed Site Model schema. R3 inherits the lead-in from R1. Identify the establishment’s production units and production method so mortality information can be checked at the stated unit level.",
-      "condition_information": "Within A, determine which establishments are covered by specific record-keeping provisions in Chapters 4, 5 or 6. Proposed logical form: NOT (covered_by_chapter_4 OR covered_by_chapter_5 OR covered_by_chapter_6). B contains journals whose establishments are outside those specific provisions. The excerpt links to these chapters but does not supply their contents. Unknown applicability must remain unresolved, not default to false. Additionally retain relevant to the production method as a qualification on the mortality-per-production-unit information. Decide the relevant units/representation using the production method. This qualification does not exempt the entire establishment from R1, R2 or R4. The excerpt does not define relevance; keep that decision unresolved when unsupported.",
+      "scope_information": "Shared scope is inherited through the R1 → R3 Subrequirement link. This entry contains only its own list-item wording; no Subject or modal verb is copied into its decomposition. Identify the operational journal and its owning aquaculture establishment. A = journals associated with aquaculture establishments. Bind establishment_id, journal_id and the assessment date; these are proposed data concepts, not an agreed Site Model schema. R3 inherits the lead-in from R1. Identify the establishment’s production units and production method so mortality information can be checked at the stated unit level.",
+      "condition_information": "Use R1’s shared applicability condition through that link. Within A, determine which establishments are covered by specific record-keeping provisions in Chapters 4, 5 or 6. Proposed logical form: NOT (covered_by_chapter_4 OR covered_by_chapter_5 OR covered_by_chapter_6). B contains journals whose establishments are outside those specific provisions. The excerpt links to these chapters but does not supply their contents. Unknown applicability must remain unresolved, not default to false. Additionally retain relevant to the production method as a qualification on the mortality-per-production-unit information. Decide the relevant units/representation using the production method. This qualification does not exempt the entire establishment from R1, R2 or R4. The excerpt does not define relevance; keep that decision unresolved when unsupported.",
       "verification": "For every relevant production unit, verify that the journal contains updated mortality information attributable to that unit. The excerpt provides no mortality threshold, mandatory reporting interval or unit of measurement. Do not invent a mortality limit or treat a missing value as zero. The check concerns record coverage and currency, not whether mortality is acceptably low."
     },
     "R4": {
-      "scope_information": "Identify the operational journal and its owning aquaculture establishment. A = journals associated with aquaculture establishments. Bind establishment_id, journal_id and the assessment date; these are proposed data concepts, not an agreed Site Model schema. R4 inherits the lead-in from R1 and concerns completed health inspections and their recorded results for the same establishment.",
-      "condition_information": "Within A, determine which establishments are covered by specific record-keeping provisions in Chapters 4, 5 or 6. Proposed logical form: NOT (covered_by_chapter_4 OR covered_by_chapter_5 OR covered_by_chapter_6). B contains journals whose establishments are outside those specific provisions. The excerpt links to these chapters but does not supply their contents. Unknown applicability must remain unresolved, not default to false. Restrict inspection-result checking to completed inspections. The excerpt does not specify a minimum inspection frequency or require all listed activities to have occurred in every inspection.",
+      "scope_information": "Shared scope is inherited through the R1 → R4 Subrequirement link. This entry contains only its own list-item wording; no Subject or modal verb is copied into its decomposition. Identify the operational journal and its owning aquaculture establishment. A = journals associated with aquaculture establishments. Bind establishment_id, journal_id and the assessment date; these are proposed data concepts, not an agreed Site Model schema. R4 inherits the lead-in from R1 and concerns completed health inspections and their recorded results for the same establishment.",
+      "condition_information": "Use R1’s shared applicability condition through that link. Within A, determine which establishments are covered by specific record-keeping provisions in Chapters 4, 5 or 6. Proposed logical form: NOT (covered_by_chapter_4 OR covered_by_chapter_5 OR covered_by_chapter_6). B contains journals whose establishments are outside those specific provisions. The excerpt links to these chapters but does not supply their contents. Unknown applicability must remain unresolved, not default to false. Restrict inspection-result checking to completed inspections. The excerpt does not specify a minimum inspection frequency or require all listed activities to have occurred in every inspection.",
       "verification": "Check the recorded results against the known completed health inspections. The required result group is ALL 5: number of completed inspections AND sampling AND examinations performed AND diagnoses AND treatments carried out. [5,5] counts information categories, not five inspections or five mandatory interventions. Where no sampling, diagnosis or treatment occurred, determine from evidence how that absence is recorded; do not invent an event and do not treat a blank field as proof that none occurred. Verify completeness and currency; inspection frequency and required update deadlines are not stated here."
     }
   },
@@ -109,7 +95,7 @@
   ],
   "normalization": [
     "English demonstration translation based on the user-supplied English JSON; original Norwegian excerpt retained in source history.",
-    "Each child entry includes the original lead-in plus its own list item, making inherited scope and modality traceable without invented text.",
+    "Each of the four source passages is a separate Requirement. R2, R3 and R4 contain only their own list items; shared context comes from R1 via explicit Subrequirement links.",
     "Three child Requirements are linked from R1 with All 3. Nested lists of 2 and 5 information categories become source-bound Object groups with exact [2,2] and [5,5]; the provided JSON remains unchanged.",
     "Exact group counts concern the listed mandatory categories; they do not prohibit additional journal content."
   ]

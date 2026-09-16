@@ -30,6 +30,18 @@ class InterpretationTests(unittest.TestCase):
   self.doc=self.r.apply(ACTOR,dict(request_id=str(uuid.uuid4()),action=action,session_id=self.doc['id'],expected_revision=self.doc['revision'],unit_id=self.uid,**args))['document']
  def fields(self):return {k:dict(value='',basis='unresolved',references=[],gaps=[]) for k in KEYS}
  def request(self,**kwargs):return dict(request_id=str(uuid.uuid4()),unit_id=self.uid,expected_revision=0,context_fingerprint=self.s.context(ACTOR,self.uid)['fingerprint'],fields=self.fields(),**kwargs)
+ def test_removed_link_does_not_keep_a_retired_requirement_in_context(self):
+  other=self.r.apply(ACTOR,dict(request_id=str(uuid.uuid4()),action='start',material_id=self.material['id'],material_revision=1,block_id='b'))['document']
+  target=next(iter(other['units']))
+  self.step('structure',node_id=self.uid+'/structure',operation='link',field='subrequirement',target_id=target)
+  self.assertEqual(len(self.s.context(ACTOR,self.uid)['sessions']),2)
+  other=self.r.apply(ACTOR,dict(request_id=str(uuid.uuid4()),action='phase',phase='fields',session_id=other['id'],expected_revision=other['revision']))['document']
+  with self.assertRaisesRegex(ValueError,'referenced requirement changed'):self.s.context(ACTOR,self.uid)
+  group=next(n for n in self.doc['structure_views'][self.uid]['children'] if n.get('role')=='subrequirement')
+  self.step('structure',node_id=group['id'],operation='remove')
+  self.assertIn(target,self.doc['reference_evidence'])
+  self.r.apply(ACTOR,dict(request_id=str(uuid.uuid4()),action='delete',session_id=other['id'],expected_revision=other['revision']))
+  self.assertEqual(len(self.s.context(ACTOR,self.uid)['sessions']),1)
  def test_save_replay_conflict_review_restore_actor(self):
   req=self.request();req['fields']['scope']=dict(value=TEXT[:48],basis='source',references=[{'id':'a'*32+':b','quote':TEXT[:48]}],gaps=[])
   a=self.s.save(ACTOR,req);self.assertEqual(a,self.s.save(ACTOR,req));self.assertEqual(self.s.read(ACTOR,self.uid)['revision'],1)
