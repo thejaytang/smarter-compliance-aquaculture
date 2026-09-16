@@ -18,8 +18,8 @@
 .rq-qc-title { display:block; font-size:12px; margin-bottom:4px; }
 .rq-qc-row { display:flex; align-items:center; flex-wrap:nowrap; gap:5px; max-width:100%; min-width:0; overflow-x:auto; padding:3px 2px 6px; font-size:11px; }
 .rq-qc-row>* { flex:none; }
-.rq-qc-preview { min-width:50px; margin-right:12px; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; }
-.rq-qc-row input { width:35px; min-width:35px; height:28px; padding:3px; margin:0; box-sizing:border-box; font:inherit; text-align:center; }
+.rq-qc-preview { min-width:36px; margin-right:8px; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; }
+.material-workbench .rq-qc-row input { width:40px; min-width:40px; height:28px; min-height:28px; padding:3px; margin:0; box-sizing:border-box; font:inherit; text-align:center; }
 .rq-qc-range-label { margin-left:8px; white-space:nowrap; }
 .rq-qc-error { display:block; color:#8c2333; font-size:11px; }
 .rq-qc-error[hidden] { display:none; }
@@ -105,24 +105,24 @@
 .rq-inline-condition .rq-relation-field > dt { margin-bottom:6px; }
 .rq-inline-condition textarea { min-height:75px; }
 .rq-quantity-presets { display:flex; flex-wrap:nowrap; gap:3px; margin:0; }
-.rq-qc-row .rq-quantity-presets button { min-height:28px; padding:3px 5px; font-size:11px; white-space:nowrap; }
+.material-workbench .rq-qc-row .rq-quantity-presets button { min-height:28px; padding:3px 5px; font-size:11px; white-space:nowrap; }
 .rq-quantity-presets [aria-pressed="true"] { outline:2px solid var(--semantic-border,#526b87); outline-offset:-2px; font-weight:700; }
 .rq-relation-field { display:block; }
 .rq-relation-field > dt { margin-bottom:8px; }
 /* Recursive source-bound groups share the existing semantic field palette. */
 .rq-structure-editor { padding:8px; }
 .rq-tree-node { min-width:0; margin:8px 0; border:1px solid var(--line); border-radius:8px; }
-.rq-tree-node > summary { display:flex; gap:7px; align-items:baseline; padding:7px; cursor:pointer; }
+.rq-tree-node > summary { display:flex; flex-wrap:wrap; gap:8px; align-items:center; padding:7px; cursor:pointer; }
 .rq-tree-node > summary strong,.rq-tree-id { font-size:11px; flex:none; }
-.rq-tree-summary { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:12px; }
+.rq-tree-summary { flex-basis:100%; min-width:0; overflow-wrap:anywhere; font-size:12px; line-height:1.5; }
 .rq-tree-count { font-variant-numeric:tabular-nums; white-space:nowrap; }
 .rq-tree-body { padding:8px; min-width:0; }
 .rq-tree-children { list-style:none; padding:0; margin:8px 0; }
 .rq-tree-children > li { display:flex; gap:5px; align-items:flex-start; min-width:0; }
 .rq-tree-children > li > [data-structure-node] { flex:1; min-width:0; }
 .rq-tree-children > li > input { width:16px; margin:12px 0 0; flex:none; }
-.rq-tree-leaf { display:flex; flex-wrap:wrap; align-items:center; gap:6px; padding:7px; margin:4px 0; border:1px solid var(--line); border-radius:6px; }
-.rq-tree-leaf > span:nth-child(2) { flex:1; min-width:90px; white-space:pre-wrap; }
+.rq-tree-leaf { display:flex; flex-wrap:wrap; align-items:flex-start; gap:6px; padding:7px; margin:4px 0; border:1px solid var(--line); border-radius:6px; }
+.rq-tree-leaf > span:nth-child(2) { flex:1; min-width:0; white-space:pre-wrap; overflow-wrap:anywhere; }
 .rq-tree-leaf button,.rq-tree-actions button,.rq-selection-tools button,.rq-remove-group { padding:4px 7px; min-height:28px; font-size:11px; }
 .rq-tree-actions { display:flex; flex-wrap:wrap; gap:5px; margin:5px 0; }
 .rq-tree-actions [aria-pressed=true] { border:2px solid var(--accent); }
@@ -168,12 +168,13 @@
 .rq-qc-row input:disabled { opacity:.5; cursor:not-allowed; }
 
 .rq-entry-actions { display:flex; align-items:center; gap:6px; cursor:default; }
-.rq-entry-actions button { padding:5px 9px; min-height:30px; }
+.material-workbench .rq-entry-actions button { padding:4px 8px; min-height:32px; font-size:12px; white-space:nowrap; }
 
 .rq-reference-picker { margin:10px 0; padding:10px; border-radius:6px; }
 .rq-tree-link { display:flex; align-items:end; gap:8px; }
-.rq-tree-link label { flex:1; min-width:0; font-size:12px; }
-.rq-tree-link select { display:block; width:100%; margin-top:5px; }
+.material-workbench .rq-tree-link > label { flex:1; min-width:0; margin:0; font-size:12px; }
+.material-workbench .rq-tree-link select { display:block; width:100%; height:32px; min-height:32px; margin:0; padding:4px 8px; }
+.material-workbench .rq-tree-link > button { height:32px; min-height:32px; padding:4px 8px; flex:none; }
 .rq-linked-list { display:flex; flex-direction:column; gap:8px; margin:8px 0; padding:0; list-style:none; }
 .rq-linked-requirement { position:relative; display:flex; align-items:flex-start; flex:1; min-width:0; border:1px solid var(--semantic-border,#acc5cf); border-radius:5px; background:#ffffff90; padding:6px 36px 6px 6px; }
 .material-workbench .rq-linked-target { display:flex; align-items:flex-start; gap:10px; min-width:0; width:100%; padding:4px; border:0; background:transparent; text-align:left; }
@@ -189,7 +190,7 @@
 /* Remove belongs to the owning card; Group removal includes its subtree. */
 .rq-plain-field,.rq-tree-leaf,.rq-reference-picker,.rq-tree-node > summary { position:relative; }
 .rq-plain-field:has(> .rq-node-remove),.rq-tree-leaf:has(> .rq-node-remove),.rq-reference-picker:has(> .rq-node-remove),.rq-tree-node > summary:has(> .rq-node-remove) { padding-right:38px; }
-.rq-node-remove { position:absolute; right:5px; top:5px; width:26px; height:26px; min-height:26px; padding:0; font-size:18px; line-height:1; background:transparent; border:0; color:#8b2735; cursor:pointer; }
+.material-workbench .rq-node-remove { position:absolute; display:grid; place-items:center; right:4px; top:4px; width:28px; height:28px; min-height:28px; flex:none; padding:0; font-size:18px; line-height:1; background:transparent; border:0; color:#8b2735; cursor:pointer; }
 .rq-node-remove:hover,.rq-node-remove:focus-visible { background:#fee5e8; outline:1px solid #ba4253; }
 
 .material-workbench .mw-requirements > header .rq-help-button { margin-left:auto; border-radius:50%; width:24px; height:24px; min-height:24px; padding:0; color:var(--muted); background:transparent; }
@@ -198,3 +199,27 @@
 .material-workbench .rq-linked-list > li > input[type=checkbox] { width:14px; height:14px; min-height:14px; flex:0 0 14px; margin:12px 0 0; padding:0; }
 .rq-relation-group:has(> .rq-node-remove) { padding-right:10px; }
 .rq-relation-group > strong { display:block; padding-right:28px; }
+
+/* One entry gutter; only explicit semantic Groups add a hierarchy inset. */
+.material-workbench #mw-requirement-content { padding:12px; }
+.material-workbench .rq-entry-root { margin:0; border:0; border-radius:0; }
+.rq-entry-root > .rq-unit-body { padding:0; }
+.rq-entry-root > .rq-unit-body > .rq-tree-node { margin:0; border:0; border-radius:0; }
+.rq-entry-root > .rq-unit-body > .rq-tree-node > .rq-tree-body { padding:0; }
+.rq-entry-root > .rq-unit-body > .rq-tree-node > .rq-tree-body > .rq-tree-children { margin:0; }
+.rq-plain-field { width:100%; padding:12px; margin:4px 0; }
+.rq-plain-field > .rq-tree-leaf { margin:4px 0 0; }
+.rq-tree-children { gap:8px; }
+.material-workbench .rq-tree-children > li > input[type=checkbox] { width:16px; height:16px; min-height:16px; min-width:16px; flex:0 0 16px; margin:12px 0 0; padding:0; accent-color:var(--accent); }
+.material-workbench .rq-plain-field .rq-tree-leaf button:not(.rq-node-remove),
+.material-workbench .rq-tree-actions button { min-height:28px; padding:4px 8px; font-size:12px; }
+.rq-session-body { padding:0 12px 12px; }
+.rq-source-context { min-height:28px; margin:8px 0; }
+.material-workbench .rq-entry-toggle { padding:4px; min-width:32px; min-height:32px; }
+.rq-entry-bar { gap:4px; }
+.rq-entry-actions { gap:4px; flex:none; }
+.rq-tree-leaf > .rq-node-remove { align-self:start; }
+.rq-qc-row { scrollbar-width:thin; scrollbar-color:var(--semantic-border,var(--line)) transparent; }
+.rq-session-header { gap:12px; }
+.rq-source-groups { display:flex; flex-wrap:wrap; gap:4px; margin-top:8px; }
+.rq-source-groups .annotation-relation { margin:0; padding:2px 4px; }

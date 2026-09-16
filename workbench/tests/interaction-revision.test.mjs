@@ -1,10 +1,16 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {resizePair} from '../ui/pane-layout.js';
+import {resizePair,minimumWorkspaceWidth} from '../ui/pane-layout.js';
 import {versionComparison,versionTextDiff} from '../ui/version-comparison.js';
 import {sourcePreview} from '../ui/requirement-source.js';
 test('dragging either side near zero snaps, normal movement preserves pair width and other panes',()=>{
  const widths=[300,400,350,500];assert.deepEqual(resizePair(widths,0,1,80),{widths:[380,320,350,500],collapse:null});assert.equal(resizePair(widths,0,1,-230).collapse,0);assert.equal(resizePair(widths,2,3,430).collapse,3);assert.deepEqual(widths,[300,400,350,500]);
+});
+test('workspace overflow accounts for each pane minimum, collapsed rails and visible separators',()=>{
+ assert.equal(minimumWorkspaceWidth(),1261);
+ assert.equal(minimumWorkspaceWidth(['original','content']),735);
+ assert.equal(minimumWorkspaceWidth(['original','content','requirements']),452);
+ assert.equal(minimumWorkspaceWidth(['original','content','requirements','interpretation']),176);
 });
 test('comparison hides unchanged passages and escapes source HTML while distinguishing additions and deletions',()=>{
  const shared={id:'same',text:'Unchanged',type:'text'},old={id:'x',text:'The fish is hot.',type:'text'},next={...old,text:'The fish is cold.'};const html=versionComparison({blocks:[shared,old]},{blocks:[shared,next]});assert.match(html,/1 changed passages/);assert.doesNotMatch(html,/Unchanged/);assert.match(html,/<del[^>]*>hot/);assert.match(html,/<ins[^>]*>cold/);assert.doesNotMatch(versionTextDiff('','<script>x</script>'),/<script>/);

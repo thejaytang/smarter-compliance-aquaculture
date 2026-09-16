@@ -1,5 +1,7 @@
 # Requirement Workstream: current state
 
+2026-09-16 UI alignment: unified pane gutters/headers, corrected controls and link alignment, reduced anonymous root borders, and fixed narrow-pane text/action layout. 347 frontend tests pass; 390/1280/1440/1920px and actual Chrome 200% checks completed. Saved example sessions are unchanged; the user's open unsaved draft was preserved. [Evidence and limits](project-support/workbench-ui-alignment-20260916/RESULTS.md).
+
 2026-09-16 example verb correction: R2 now marks brought into / removed from with their shared participants and location; R4 splits examinations performed / treatments carried out. R3 remains nominal. Four passage/Requirement IDs and original text preserved; source spans, quantities, live links and current interpretations verified. User Chrome shows the verbs in green. [Evidence](project-support/workbench-example-verbs-20260916/RESULTS.md).
 
 2026-09-16 example boundary correction: four passages now form four separate Requirements. R2–R4 no longer copy R1’s lead-in; R1 links all three via Subrequirement All 3. Original text is unchanged and prior combined entries remain recoverable. Four current interpretations/source spans verified. Context now ignores unlinked historical references; 32 interpretation backend tests pass. [Evidence](project-support/workbench-example-separate-20260916/RESULTS.md).

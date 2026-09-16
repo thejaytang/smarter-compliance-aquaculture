@@ -1,4 +1,4 @@
-import {paneNames,resizePair} from './pane-layout.js';
+import {paneNames,paneMinimums,minimumWorkspaceWidth,resizePair} from './pane-layout.js';
 import {versionComparison} from './version-comparison.js';
 import {MarkdownNotebook,renderMarkdown,markdownText} from './markdown-content.js';
 import {RequirementsEditor} from './requirements.js';
@@ -723,7 +723,8 @@ export class Materials {
     const visible=panes.map((p,i)=>this.collapsedPanes.includes(p.dataset.pane)?-1:i).filter(i=>i>=0);
     const total=visible.reduce((v,i)=>v+this.paneWeights[i],0)||1;
     panes.forEach((p,i)=>{const collapsed=this.collapsedPanes.includes(p.dataset.pane);p.classList.toggle('mw-collapsed',collapsed);p.style.flex=collapsed?'0 0 44px':`${this.paneWeights[i]/total} 1 0px`;const b=p.querySelector('[data-action="collapse-pane"]');b.textContent=collapsed?'↔':'‹';b.setAttribute('aria-expanded',String(!collapsed));p.title=collapsed?'Double-click to restore this column':'';p.tabIndex=collapsed?0:-1;});
-    this.q('.mw-panes').style.minWidth=(visible.length*290+(4-visible.length)*44+24)+'px';
+    panes.forEach((pane,i)=>pane.style.setProperty('--mw-pane-min',paneMinimums[i]+'px'));
+    this.q('.mw-panes').style.minWidth=minimumWorkspaceWidth(this.collapsedPanes)+'px';
     this.root.querySelectorAll('[data-resize]').forEach((handle,i)=>{handle.hidden=!visible.includes(i)||!visible.some(v=>v>i);handle.setAttribute('aria-valuemin','0');handle.setAttribute('aria-valuemax','100');handle.setAttribute('aria-valuenow',String(Math.round(100*this.paneWeights[i]/total)));handle.title='Drag to resize; drag near the edge to collapse. Arrow keys resize; Home / End collapse either side.';});
     if(save)try{localStorage.setItem('material-pane-widths-v3:'+this.state.actor?.id,JSON.stringify({weights:this.paneWeights,collapsed:this.collapsedPanes}));}catch{}
   }
