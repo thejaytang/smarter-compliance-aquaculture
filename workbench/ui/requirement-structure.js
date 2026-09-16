@@ -94,6 +94,7 @@ export class StructureEditor{
   host.querySelectorAll?.('[data-structure-source]').forEach(source=>{
    source.onbeforeinput=event=>event.preventDefault();source.onpaste=event=>event.preventDefault();source.oncut=event=>event.preventDefault();source.ondrop=event=>event.preventDefault();
    const capture=event=>{
+    if(this.e.locked){this.selection=null;host.querySelectorAll('[data-selection-tools]').forEach(n=>n.hidden=true);return;}
     const selection=window.getSelection();if(!selection?.rangeCount||selection.isCollapsed){host.querySelectorAll('[data-selection-tools]').forEach(n=>n.hidden=true);return;}
     const range=selection.getRangeAt(0);if(!source.contains(range.startContainer)||!source.contains(range.endContainer))return;
     const prefix=range.cloneRange();prefix.selectNodeContents(source);prefix.setEnd(range.startContainer,range.startOffset);

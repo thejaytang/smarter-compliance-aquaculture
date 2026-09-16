@@ -23,3 +23,9 @@ Normal-browser checks exercised a click in the top-row gap outside the arrow, co
 - Controlled activations snapshot all 11 owning stores, with unchanged existing business rows across restart, clean foreign-key checks and matching served UI assets. Business mutations for the replacement used the existing owner APIs and retain earlier history.
 - The model is Not connected; no live API, query or legal-currentness verification was performed. Windows-native desktop interaction remains unverified.
 - Portable example assets and source code can be published. Runtime receipts, personal databases, local backup copies and input staging files remain local.
+
+## Selection-toolbar follow-up
+
+The user's Chrome tab was still on the former example. Its stale interpretation response legitimately omitted current `context`; `sourceSections` dereferenced `context.structure` and crashed while rendering. This also interrupted opening the replacement material, so stale/read-only state alone did not explain the failure. Missing context now projects unresolved source fields while retaining saved Logic and showing the source error. Read-only selection handlers stop before resolving source spans.
+
+All 341 frontend tests pass, including rendering a stale record without context and changing material while retaining it. In the user's actual Chrome tab, after confirming its prior content was Saved, the updated assets were loaded and the current example opened. A native mouse drag across `driftsjournalen` in expanded R1 displayed the full floating toolbar beside the pointer; the accessibility tree and screenshot both showed Group, Degroup, five field buttons and clear. No field action was applied and no saved annotation changed. No backend migration/restart was needed.

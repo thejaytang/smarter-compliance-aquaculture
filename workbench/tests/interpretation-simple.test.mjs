@@ -41,3 +41,12 @@ test('retry of an uncertain save preserves edits made after its original snapsho
  m.api=async(path,body)=>body?{}:{...d,revision:2,fields:{...d.fields,verification:field('old saved value')}};
  await e.save('retry',{});assert.equal(e.draft.fields.verification.value,'typed after uncertain save');assert.equal(e.draft.dirty,true);assert.equal(e.draft.revision,2);
 });
+
+ test('missing current context on an older source retains saved text without breaking material navigation',()=>{
+ const {e,m,d}=fixture();delete d.context;d.stale=true;d.context_error='Source content changed; saved session is read-only.';
+ const projected=sourceSections(undefined);assert.ok(Object.values(projected).every(x=>x.state==='unresolved'&&x.value===''));
+ const host={innerHTML:'',querySelectorAll:()=>[]};m.q=()=>host;m.requirements.orderedSessions=()=>[{id:'s',text:'Original',units:{u:{id:'u',text:'Original'}}}];
+ InterpretationEditor.prototype.render.call(e);assert.match(host.innerHTML,/Source content changed/);assert.match(host.innerHTML,/manual verification/);assert.doesNotMatch(host.innerHTML,/reading .structure/);
+ // Opening another material must be able to render even while the old draft is retained.
+ m.id='new-material';assert.doesNotThrow(()=>InterpretationEditor.prototype.render.call(e));assert.doesNotMatch(host.innerHTML,/manual verification/);
+ });
