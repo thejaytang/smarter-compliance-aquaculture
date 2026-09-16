@@ -22,3 +22,7 @@
 Nine SQLite stores were consistently backed up for controlled activation. Final normal-service readback confirmed matching served assets, preserved business rows and clean foreign keys. Shared AI remains Not connected; automation remains disabled. Runtime copies, backups, local logs and unrelated workbook changes are excluded from this code increment. No live model call or Site Model assessment was performed.
 
 Current behavior supersedes the previous automatic Exception-to-NOT conversion. There were zero saved canonical-tree sessions in the normal store before activation, so this change required no destructive data migration. Legacy Exception relationships are projected independently on read. The earlier saved records remain unchanged.
+
+## Publication
+
+On 2026-09-16, implementation commit `50dc48039e78729129d7ed90ff01f7aa05407727` was pushed to `codex/workbench-optimization-20260916` and verified as [PR #2](https://github.com/thejaytang/smarter-compliance-aquaculture/pull/2)'s head. [CI run 35098706313](https://github.com/thejaytang/smarter-compliance-aquaculture/actions/runs/35098706313) started for this exact commit and was still running at handoff. Local pass counts above do not assert completed remote or native Windows acceptance.
