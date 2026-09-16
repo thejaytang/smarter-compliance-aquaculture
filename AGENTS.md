@@ -28,6 +28,8 @@ The 2026-09-16 user-approved [four-pane interpretation contract](workbench/docs/
 
 The user-authorized 2026-09-16 [optimization plan](project-support/workbench-optimization-20260916/PLAN.md) extends source traceability with version-bound relational projections and optional validated QueryBuilder handoff. Immutable histories own saved evidence; active Requirement links retain exact nested quantities. Never infer executable Site Model bindings from prose. Branch-scoped portability CI exercises synthetic inputs only; it does not enable business schedules or prove native Windows desktop acceptance.
 
+The later 2026-09-16 user interaction revision supersedes automatic draft persistence: unsaved material content, Requirement splitting and interpretations stay in page memory, with strong leave warnings and explicit saves. Splitting previews must not append history. Preserve old saved records; do not silently restore them over new edits. Semantic source colours now belong above each third-pane Requirement entry, retained when collapsed; second-pane reading modes are Current text and Changes. Multi-passage edits preserve per-block identity and source references. [Bulk editing contract](workbench/docs/markdown-content.md#select-and-edit-multiple-passages).
+
 ## Documentation ownership
 
 - Write all maintained project documentation in English. Preserve exact identifiers, commands, file paths and authoritative source quotations. Historical archives and original source material retain their original language.

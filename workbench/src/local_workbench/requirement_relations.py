@@ -26,6 +26,9 @@ def initialize(db):
 
 def project(db,doc):
     db.execute('DELETE FROM requirement_relationships WHERE session_id=?',(doc['id'],))
+    if doc.get('deleted'):
+        db.execute('INSERT INTO requirement_relationship_versions VALUES(?,?) ON CONFLICT(session_id) DO UPDATE SET revision=excluded.revision',(doc['id'],doc['revision']))
+        return
     def walk(owner,relation,group,path=(),quantities=()):
         counts=quantities+(group[0],)
         for index,child in enumerate(group[1:],1):

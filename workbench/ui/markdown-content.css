@@ -40,3 +40,5 @@
 .material-workbench .md-document-tools>input[type=search]{flex:1 1 90px;min-width:42px}
 .material-workbench .mw-content>.mw-content-tools{padding:6px 10px}
 .material-workbench .md-cell-preview{padding-left:calc(var(--md-indent,0)*16px)}
+
+.md-bulk-tools{position:sticky;top:0;z-index:2;background:#eef3f3;padding:8px;border:1px solid #a8bbbc;display:flex;gap:6px;flex-wrap:wrap;align-items:center}.md-block-select{display:flex;gap:8px;padding:6px;background:#e4eeee}.md-cell:has([data-md-select]:checked){outline:2px solid #4f8389}[data-bulk-text]{width:100%;font:inherit;min-height:100px;box-sizing:border-box}.md-bulk-editors{display:grid;gap:16px}.md-bulk-editors label{display:grid;gap:6px}.md-bulk-tools:empty{display:none}

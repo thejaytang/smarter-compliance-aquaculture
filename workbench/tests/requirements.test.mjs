@@ -18,14 +18,14 @@ test('manual intake has honest empty and dirty states without automatic processi
 });
 test('whole passage start sends a block ID and saved version, never rewritten text',async()=>{
  const {editor,m}=fixture();let request;m.api=async(path,body)=>{request={path,body};return {document:{id:'s',revision:1,units:{u:{id:'u',text:'Whole'}},done:[]}};};editor.render=()=>{};
- await editor.start('b');assert.equal(request.body.action,'start');assert.equal(request.body.block_id,'b');assert.equal(request.body.material_revision,3);assert.equal('text' in request.body,false);
+ await editor.start('b');assert.equal(request.body.action,'preview');assert.equal(request.body.steps[0].action,'start');assert.equal(request.body.steps[0].block_id,'b');assert.equal(request.body.steps[0].material_revision,3);assert.equal('text' in request.body,false);
 });
 test('uncertain write retains the exact idempotent request and retry identity',async()=>{
- const {editor,m}=fixture();let first;m.api=async(path,body)=>{first??=body;throw Error('Connection lost');};editor.render=()=>{};await editor.start('b');assert.equal(editor.retryRequest,first);
- m.api=async(path,body)=>{assert.equal(body,first);return {document:{id:'s',revision:1,units:{u:{id:'u',text:'Whole'}},done:[]}};};await editor.step('',{},editor.retryRequest);assert.equal(editor.retryRequest,null);assert.equal(editor.doc.revision,1);
+ const {editor,m}=fixture();let first;m.api=async(path,body)=>{first??=body;throw Error('Connection lost');};editor.render=()=>{};await editor.start('b');assert.equal(editor.retryRequest,first.steps[0]);
+ m.api=async(path,body)=>{assert.deepEqual(body.steps,first.steps);return {document:{id:'s',revision:1,units:{u:{id:'u',text:'Whole'}},done:[]}};};await editor.step('',{},editor.retryRequest);assert.equal(editor.retryRequest,null);assert.equal(editor.doc.revision,1);
 });
 test('source-stale session allows a new whole-passage start but protects old steps',async()=>{
- const {editor,m}=fixture();editor.doc={id:'old',revision:1,stale:true};editor.render=()=>{};let action;m.api=async(p,b)=>{action=b.action;return {document:{id:'new',revision:1,units:{u:{id:'u',text:'Whole'}},done:[]}};};await editor.start('b');assert.equal(action,'start');
+ const {editor,m}=fixture();editor.doc={id:'old',revision:1,stale:true};editor.render=()=>{};let action;m.api=async(p,b)=>{action=b.action;return {document:{id:'new',revision:1,units:{u:{id:'u',text:'Whole'}},done:[]}};};await editor.start('b');assert.equal(action,'preview');
 });
 test('loading another saved passage locks all mutation steps until it is bound',async()=>{
  const {editor,m}=fixture();editor.loading=true;let calls=0;m.api=async()=>calls++;await editor.step('phase',{phase:'fields'});assert.equal(calls,0);assert.equal(editor.locked,true);

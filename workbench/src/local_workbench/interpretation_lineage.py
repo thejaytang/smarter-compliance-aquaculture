@@ -20,6 +20,12 @@ def initialize(db):
         FOREIGN KEY(actor,unit_id,revision) REFERENCES interpretation_history(actor,unit_id,revision),
         FOREIGN KEY(session_id,session_revision) REFERENCES requirement_steps(session_id,revision),
         CHECK(start>=0 AND end>=start));
+      CREATE TABLE IF NOT EXISTS interpretation_origin_parts(
+        actor TEXT NOT NULL, unit_id TEXT NOT NULL, revision INTEGER NOT NULL,
+        ordinal INTEGER NOT NULL, block_id TEXT NOT NULL, start INTEGER NOT NULL,
+        end INTEGER NOT NULL, text TEXT NOT NULL, source_refs TEXT NOT NULL,
+        PRIMARY KEY(actor,unit_id,revision,ordinal),
+        FOREIGN KEY(actor,unit_id,revision) REFERENCES interpretation_origins(actor,unit_id,revision));
       CREATE TABLE IF NOT EXISTS interpretation_fields(
         actor TEXT NOT NULL, unit_id TEXT NOT NULL, revision INTEGER NOT NULL,
         field_key TEXT NOT NULL, value TEXT NOT NULL, basis TEXT NOT NULL,
@@ -60,7 +66,7 @@ def source_anchor(doc, split, quality='captured'):
     return dict(session_id=split['id'],session_revision=split['revision'],material_id=split['material_id'],
         material_revision=split['material_revision'],block_id=split['block_id'],source=split['source'],
         chapter=split.get('chapter',''),span=[start,end],text=split['text'],
-        source_refs=split.get('source_refs',[]),quality=quality)
+        source_refs=split.get('source_refs',[]),quality=quality,**({'source_segments':split['source_segments']} if split.get('source_segments') else {}))
 
 
 def project(db, doc, anchor, citations=()):
@@ -70,6 +76,8 @@ def project(db, doc, anchor, citations=()):
         anchor['session_id'],anchor['session_revision'],anchor['material_id'],anchor['material_revision'],
         anchor['block_id'],anchor['source'].get('source_id',''),encode(anchor['source']),anchor['chapter'],
         *anchor['span'],anchor['text'],encode(anchor['source_refs']),anchor['quality']))
+    for i,part in enumerate(anchor.get('source_segments',[])):
+        db.execute('INSERT INTO interpretation_origin_parts VALUES(?,?,?,?,?,?,?,?,?)',key+(i,part['block_id'],part['start'],part['end'],part['text'],encode(part['source_refs'])))
     by_id={x['id']:x for x in citations}; materials={x['id']:x for x in doc.get('context_manifest',[])}
     for field,f in doc['fields'].items():
         db.execute('INSERT INTO interpretation_fields VALUES(?,?,?,?,?,?)',key+(field,f['value'],f['basis']))
@@ -109,6 +117,8 @@ def read(db, actor, uid, revision):
     if not row:return {'status':'not-saved' if revision==0 else 'unavailable','fields':[]}
     names=[d[1] for d in db.execute('PRAGMA table_info(interpretation_origins)')]
     result=dict(zip(names,row));result['source']=json.loads(result.pop('source_json'));result['source_refs']=json.loads(result['source_refs'])
+    parts=[dict(block_id=r[0],start=r[1],end=r[2],text=r[3],source_refs=json.loads(r[4])) for r in db.execute('SELECT block_id,start,end,text,source_refs FROM interpretation_origin_parts WHERE actor=? AND unit_id=? AND revision=? ORDER BY ordinal',key)]
+    if parts:result['source_segments']=parts
     result['fields']=[]
     for field,value,basis in db.execute('SELECT field_key,value,basis FROM interpretation_fields WHERE actor=? AND unit_id=? AND revision=?',key):
         refs=[]

@@ -1,6 +1,6 @@
 # Smarter Compliance Aquaculture
 
-**Working continuity:** resumable interpretation working copies, explicit source-absence states, configurable Site Model fields, focused source-change review and saved Requirement data in full workspace ZIPs. [Workflow and delivery contract](workbench/docs/requirement-interpretation.md).
+**Manual saving and continuity:** unsaved content, splitting and interpretation edits remain in page memory, with an explicit leave warning. Saved work retains source-absence states, configurable Site Model fields, focused source-change review and full workspace ZIP support. [Workflow and delivery contract](workbench/docs/requirement-interpretation.md).
 
 **Traceable checks and simpler editing:** saved fields link to their Requirement, splitting revision and source passage through **Source trail**. Optional typed rule groups expose QueryBuilder handoff without executing a compliance check. [Current verification and Windows CI](project-support/workbench-optimization-20260916/RESULTS.md).
 

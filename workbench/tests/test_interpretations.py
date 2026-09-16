@@ -75,7 +75,7 @@ class InterpretationTests(unittest.TestCase):
  def test_legacy_lineage_uses_saved_step_and_marks_missing_citation_locations(self):
   req=self.request();self.s.save(ACTOR,req)
   with self.c.db() as db:
-   db.execute('DELETE FROM interpretation_fields');db.execute('DELETE FROM interpretation_origins')
+   db.execute('DELETE FROM interpretation_fields');db.execute('DELETE FROM interpretation_origin_parts');db.execute('DELETE FROM interpretation_origins')
   self.s.read(ACTOR,self.uid);self.assertEqual(self.s.trace(ACTOR,self.uid)['quality'],'legacy-saved-step')
  def test_foreign_keys_reject_orphan_field(self):
   import sqlite3

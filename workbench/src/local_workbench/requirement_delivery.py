@@ -44,7 +44,7 @@ class Delivery:
                     for raw,action,at in db.execute('SELECT body,action,at FROM interpretation_history WHERE actor=? AND unit_id=? ORDER BY revision',(actor,uid)):
                         d=json.loads(raw);t=lineage.read(db,actor,uid,d['revision'])
                         if t['status']!='saved':raise ValueError('A saved interpretation has no source-bound history. Repair its provenance before export.')
-                        anchor=dict(session_id=t['session_id'],session_revision=t['session_revision'],material_id=t['material_id'],material_revision=t['material_revision'],block_id=t['block_id'],source=t['source'],chapter=t['chapter'],span=[t['start'],t['end']],text=t['original_text'],source_refs=t['source_refs'],quality=t['quality'])
+                        anchor=dict(session_id=t['session_id'],session_revision=t['session_revision'],material_id=t['material_id'],material_revision=t['material_revision'],block_id=t['block_id'],source=t['source'],chapter=t['chapter'],span=[t['start'],t['end']],text=t['original_text'],source_refs=t['source_refs'],quality=t['quality'],**({'source_segments':t['source_segments']} if t.get('source_segments') else {}))
                         history.append(dict(document=d,action=action,at=at,anchor=anchor,citations=d.get('context_snapshot',{}).get('citations',[])))
                     interpretations.append(dict(unit_id=uid,head_revision=revision,history=history))
                 # Candidate output and its frozen context travel as evidence, never as an active request.
@@ -76,6 +76,14 @@ class Delivery:
                 if x['id']!=sid or type(rev) is not int or rev<1 or (sid,rev) in steps:raise ValueError('Invalid splitting version.')
                 if not isinstance(x['text'],str) or len(x['text'])>100000 or not isinstance(x['units'],dict) or not 1<=len(x['units'])<=1000:raise ValueError('Invalid source passage.')
                 if x['material_id']!=d['material_id'] or x['block_id']!=d['block_id'] or x['text']!=d['text'] or x['source']!=d['source']:raise ValueError('A splitting session cannot change its source binding.')
+                if x.get('source_segments'):
+                    parts=x['source_segments'];offset=0
+                    if not isinstance(parts,list) or len(parts)>100:raise ValueError('Invalid source segments.')
+                    ids=set()
+                    for part in parts:
+                        if set(part)!={'block_id','start','end','text','source_refs'} or part['block_id'] in ids or part['start']!=offset or part['end']!=offset+len(part['text']) or not isinstance(part['source_refs'],list):raise ValueError('Invalid source segment range.')
+                        ids.add(part['block_id']);offset=part['end']+2
+                    if '\n\n'.join(part['text'] for part in parts)!=x['text'] or parts!=d.get('source_segments'):raise ValueError('Source segment binding differs.')
                 leaves(x['roots'])
                 for uid,u in x['units'].items():
                     uuid.UUID(uid)
@@ -93,7 +101,7 @@ class Delivery:
             if steps.get((sid,d['revision']))!=d:raise ValueError('Current splitting does not match its immutable history.')
             if uids&set(d['units']):raise ValueError('Requirement identity occurs in more than one session.')
             uids.update(d['units'])
-        graph={uid:sum((leaves(u[r]) for r in RELATIONS),[]) for d in current.values() for uid,u in d['units'].items()}
+        graph={uid:sum((leaves(u[r]) for r in RELATIONS),[]) for d in current.values() if not d.get('deleted') for uid,u in d['units'].items()}
         visiting=set();seen=set()
         def walk(uid):
             if uid not in graph:raise ValueError('A Requirement relationship is missing its target.')
@@ -185,8 +193,8 @@ class Delivery:
                 d=rebound(raw,revision_map[sid,raw['revision']])
                 db.execute('INSERT INTO requirement_sessions VALUES(?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET revision=excluded.revision,body=excluded.body',(sid,actor,d['material_id'],d['revision'],encoded(d)))
                 db.execute('DELETE FROM requirement_units WHERE session_id=?',(sid,))
-                for uid,u in d['units'].items():
-                    db.execute('INSERT INTO requirement_units VALUES(?,?,?,?,?,?,?)',(uid,sid,actor,d['material_id'],u['text'],d['chapter'],encoded(dict(source=d['source'],source_refs=d['source_refs'],block_id=d['block_id'],span=d['spans'][uid],material_revision=d['material_revision']))))
+                for uid,u in ([] if d.get('deleted') else d['units'].items()):
+                    db.execute('INSERT INTO requirement_units VALUES(?,?,?,?,?,?,?)',(uid,sid,actor,d['material_id'],u['text'],d['chapter'],encoded(dict(source=d['source'],source_refs=d['source_refs'],block_id=d['block_id'],span=d['spans'][uid],material_revision=d['material_revision'],source_segments=d.get('source_segments',[])))))
             for sid in heads:
                 d=self.r.load(db,actor,sid);self.r.validate(db,actor,d);project_relations(db,d)
             for item in value['interpretations']:

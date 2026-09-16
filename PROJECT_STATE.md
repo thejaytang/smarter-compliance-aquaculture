@@ -1,5 +1,8 @@
 # Requirement Workstream: current state
 
+2026-09-16 latest interaction checkpoint: second-pane bulk selection/editing/deletion is implemented and served on 62742, with explicit manual saves and leave warnings. [Workbench state](workbench/PROJECT_STATE.md) and [evidence with remaining scope](project-support/workbench-bulk-edit-20260916/RESULTS.md) distinguish the delivered interaction from earlier requests still in progress.
+
+
 2026-09-16: The normal Workbench at 62742 now connects saved Requirement interpretations to source versions, material passages, splitting steps and optional validated QueryBuilder rule mappings. Its simplified fourth pane retains six editable fields and a derived checking chain. Existing business records were preserved through an eight-database activation checkpoint. [Workbench state](workbench/PROJECT_STATE.md), [current verification](project-support/workbench-optimization-20260916/RESULTS.md) and [data contract](workbench/docs/requirement-interpretation.md) own the details. The implementation is pushed to `codex/workbench-optimization-20260916`; all six Windows/Ubuntu jobs passed on code commit `3f502d5`. [PR #2](https://github.com/thejaytang/smarter-compliance-aquaculture/pull/2) contains the synchronized changes; main remains unmerged. No standalone System3 service, real model call or Site Model assessment is introduced.
 
 ## Earlier checkpoints

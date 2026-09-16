@@ -711,8 +711,8 @@ class Handler(BaseHTTPRequestHandler):
                 return self.send(200, asset.read_bytes(), ui_content_type(asset), {'Content-Security-Policy': policy})
             static={"/":"index.html","/app.js":"app.js","/style.css":"style.css", "/package-download.js":"package-download.js",
                     "/markdown-content.js":"markdown-content.js", "/markdown-content.css":"markdown-content.css", "/vendor/markdown/tools.mjs":"vendor/markdown/tools.mjs",
-                    "/requirements.js":"requirements.js", "/requirements.css":"requirements.css", "/materials.js":"materials.js", "/materials.css":"materials.css",
-                    "/interpretations.js":"interpretations.js", "/check-design.js":"check-design.js", "/site-catalog.js":"site-catalog.js", "/four-pane.css":"four-pane.css", "/global-settings.js":"global-settings.js", "/global-settings.css":"global-settings.css", "/collaboration.js":"collaboration.js", "/collaboration-relationships.js":"collaboration-relationships.js", "/collaboration.css":"collaboration.css",
+                    "/requirements.js":"requirements.js", "/requirement-source.js":"requirement-source.js", "/requirements.css":"requirements.css", "/materials.js":"materials.js", "/materials.css":"materials.css",
+                    "/interpretations.js":"interpretations.js", "/check-design.js":"check-design.js", "/site-catalog.js":"site-catalog.js", "/version-comparison.js":"version-comparison.js", "/pane-layout.js":"pane-layout.js", "/four-pane.css":"four-pane.css", "/global-settings.js":"global-settings.js", "/global-settings.css":"global-settings.css", "/collaboration.js":"collaboration.js", "/collaboration-relationships.js":"collaboration-relationships.js", "/collaboration.css":"collaboration.css",
                     "/material-editing.js":"material-editing.js", "/source-workspace.js":"source-workspace.js", "/shell-navigation.js":"shell-navigation.js", "/source-workspace.css":"source-workspace.css", "/submission-drawer.js":"submission-drawer.js", "/material-inspection.js":"material-inspection.js", "/material-navigation.js":"material-navigation.js", "/runtime-status.js":"runtime-status.js",
                     "/evidence-viewer.js":"evidence-viewer.js", "/pdf-repairs.js":"pdf-repairs.js", "/pdf-table-editor.js":"pdf-table-editor.js", "/pdf-table-rows.js":"pdf-table-rows.js", "/pdf-pages.js":"pdf-pages.js","/review-state.js":"review-state.js", "/source-check.js":"source-check.js", "/export-status.js":"export-status.js",
                     "/dashboard.js":"dashboard.js", "/qa-chart.js":"qa-chart.js", "/pdf-references.js":"pdf-references.js", "/pdf-assessments.js":"pdf-assessments.js",
@@ -899,7 +899,7 @@ class Handler(BaseHTTPRequestHandler):
                 fields = {
                     'open': {'request_id', 'source_id'},
                     'candidate-draft': common | {'candidate_id','blocks','issues','checked_scope','association_reviewed'},
-                    'save': common | {'blocks', 'issues', 'checked_scope', 'association_reviewed'},
+                    'save': common | {'blocks', 'issues', 'checked_scope', 'association_reviewed', 'version_choice'},
                     'confirm': common | {'explicit_confirmation', 'checked_scope', 'association_reviewed', 'omissions_checked', 'dependencies_checked'},
                     'extract': common | {'replace_candidate_id'},
                     'import-legacy': common,

@@ -24,8 +24,8 @@ def ensure_labels(doc):
     return doc
 
 
-def unit(text):
-    return dict(id=str(uuid.uuid4()), text=text, **{k: None for k in FIELDS + RELATIONS})
+def unit(text, identity=None):
+    return dict(id=identity or str(uuid.uuid4()), text=text, **{k: None for k in FIELDS + RELATIONS})
 
 
 def leaves(group):
@@ -107,11 +107,12 @@ class Requirements:
         actor = named(actor)
         with self.c.db() as db:
             rows = db.execute('SELECT body FROM requirement_sessions WHERE actor=? AND material_id=? ORDER BY rowid', (actor, material_id)).fetchall()
-        return {'sessions': [self.summary(json.loads(r[0])) for r in rows]}
+        docs=[json.loads(r[0]) for r in rows]
+        return {'sessions': [self.summary(d) for d in docs if not d.get('deleted')], 'deleted': [self.summary(d) for d in docs if d.get('deleted')]}
 
     @staticmethod
     def summary(doc):
-        return {k: doc[k] for k in ('id', 'revision', 'phase', 'text', 'chapter', 'block_id')}
+        return {k: doc[k] for k in ('id','revision','phase','text','chapter','block_id','units','spans','field_spans','roles','done','labels','source_segments','deleted') if k in doc}
 
     def load(self, db, actor, identity):
         row = db.execute('SELECT body FROM requirement_sessions WHERE id=? AND actor=?', (identity, actor)).fetchone()
@@ -121,9 +122,10 @@ class Requirements:
 
     @staticmethod
     def stale(doc, material):
-        block = next((b for b in material.get('blocks', []) if b['id'] == doc['block_id']), None)
-        return (not block or block.get('text') != doc['text'] or block.get('source_refs', []) != doc['source_refs'] or material.get('source') != doc['source']
-                or bool(material.get('source_stale')))
+        segments=doc.get('source_segments') or [dict(block_id=doc['block_id'],text=doc['text'],source_refs=doc['source_refs'])]
+        blocks={b['id']:b for b in material.get('blocks',[])}
+        return (any(not blocks.get(part['block_id']) or blocks[part['block_id']].get('text')!=part['text'] or blocks[part['block_id']].get('source_refs',[])!=part['source_refs'] for part in segments)
+                or material.get('source')!=doc['source'] or bool(material.get('source_stale')))
 
     def read(self, actor, identity):
         actor = named(actor)
@@ -145,16 +147,42 @@ class Requirements:
                 ORDER BY rowid DESC LIMIT 50""", (actor, pattern, pattern, query)).fetchall()
         return {'units': [dict(zip(('id', 'session_id', 'material_id', 'text', 'chapter', 'source'), r)) for r in rows]}
 
-    def apply(self, actor, request):
+    def batch(self, actor, request):
+        steps=request.get('steps')
+        if not isinstance(steps,list) or not 1<=len(steps)<=2000:raise ValueError('Choose a nonempty bounded set of splitting edits.')
+        with self.c.lock:
+            if request['action']=='save-draft':
+                digest=hashlib.sha256(encode({**request,'action':'commit'}).encode()).hexdigest()
+                with self.c.db() as db:prior=db.execute('SELECT digest,response FROM requirement_requests WHERE actor=? AND id=?',(actor,request['request_id'])).fetchone()
+                if prior:
+                    if prior[0]!=digest:raise ValueError('This request ID was already used for another save.')
+                    return json.loads(prior[1])
+            doc=None
+            if request.get('session_id'):
+                with self.c.db() as db:doc=self.load(db,actor,request['session_id'])
+                if doc['revision']!=request.get('expected_revision'):
+                    return dict(status='conflict',error='A newer splitting version was saved. Your unsaved edits remain in this page.',document=doc)
+            for i,step in enumerate(steps):
+                if not isinstance(step,dict) or step.get('action') not in ('start','split','assign','extract','clear','link','quantity','group','ungroup','unlink','done','reopen','phase','restore'):raise ValueError('Invalid splitting edit.')
+                if (step['action']=='start') != (i==0 and doc is None):raise ValueError('A new entry starts with its original source.')
+                req=dict(step)
+                if doc:req.update(session_id=doc['id'],expected_revision=doc['revision'])
+                doc=self.apply(actor,req,_draft=doc,_preview=True)['document']
+            if request['action']=='preview':return dict(status='preview',document=doc)
+            return self.apply(actor,{**request,'action':'commit'},_draft=doc)
+
+    def apply(self, actor, request, _draft=None, _preview=False):
         actor = named(actor)
         allowed = {'request_id', 'action', 'session_id', 'expected_revision', 'material_id', 'material_revision',
                    'block_id', 'unit_id', 'at', 'start', 'end', 'field', 'target_id', 'path', 'indices',
-                   'quantity', 'phase', 'history_revision'}
+                   'quantity', 'phase', 'history_revision', 'block_ids', 'steps'}
         if not isinstance(request, dict) or set(request) - allowed:
             raise ValueError('Only splitting controls are accepted. Source text and reviewer identity are server-owned.')
         rid = str(uuid.UUID(request['request_id']))
         digest = hashlib.sha256(encode(request).encode()).hexdigest()
         action = request.get('action')
+        if action in ('preview','save-draft'):return self.batch(actor,request)
+        if action=='commit' and _draft is None:raise ValueError('Commit requires validated splitting edits.')
         with self.c.lock, self.c.db() as db:
             prior = db.execute('SELECT digest,response FROM requirement_requests WHERE actor=? AND id=?', (actor, rid)).fetchone()
             if prior:
@@ -165,12 +193,18 @@ class Requirements:
                 material = self.material(actor, request['material_id'])
                 if material['revision'] != request.get('material_revision') or material.get('source_stale'):
                     raise ValueError('The saved source content changed. Reopen it before starting a new passage.')
-                block = next((b for b in material['blocks'] if b['id'] == request['block_id']), None)
-                if not block or block.get('role') == 'document_information' or block.get('type') not in ('text', 'heading') or not block.get('text', '').strip():
-                    raise ValueError('Select a saved text passage first.')
-                if len(block['text']) > 100000:
-                    raise ValueError('This passage is too large. Split the source content into paragraphs first.')
-                root = unit(block['text'])
+                ids=request.get('block_ids') or [request.get('block_id')]
+                if not isinstance(ids,list) or not ids or len(ids)>100 or len(set(ids))!=len(ids):raise ValueError('Choose distinct source passages.')
+                selected=[b for b in material['blocks'] if b['id'] in ids]
+                if len(selected)!=len(ids) or any(b.get('role')=='document_information' or b.get('type') not in ('text','heading') or not b.get('text','').strip() for b in selected):raise ValueError('Select a saved text passage or a valid set of passages first.')
+                segments=[];offset=0
+                for part in selected:
+                    segments.append(dict(block_id=part['id'],start=offset,end=offset+len(part['text']),text=part['text'],source_refs=deepcopy(part.get('source_refs',[]))))
+                    offset+=len(part['text'])+2
+                text='\n\n'.join(b['text'] for b in selected)
+                if len(text)>100000:raise ValueError('These passages are too large. Choose fewer paragraphs.')
+                block=dict(selected[0],text=text,source_refs=[ref for part in selected for ref in part.get('source_refs',[])])
+                root = unit(text,str(uuid.uuid5(uuid.UUID(rid),'root')))
                 # Headings are extracted content, not a separately managed chapter registry.
                 headings = []
                 for b in material['blocks']:
@@ -181,20 +215,23 @@ class Requirements:
                         headings.append((level, str(b.get('numbering', '')) + ' ' + b.get('text', '')))
                     if b['id'] == block['id']:
                         break
-                doc = dict(id=str(uuid.uuid4()), material_id=material['id'], revision=0, phase='relationships',
+                doc = dict(id=str(uuid.uuid5(uuid.UUID(rid),'session')), material_id=material['id'], revision=0, phase='relationships',
                            block_id=block['id'], text=block['text'], source=deepcopy(material['source']),
                            source_refs=deepcopy(block.get('source_refs', [])), material_revision=material['revision'],
                            chapter=' / '.join(h[1].strip() for h in headings), title=material.get('title', ''),
                            roots=[1, root['id']], units={root['id']: root},
                            spans={root['id']: [0, len(block['text'])]}, done=[], roles={root['id']: 'requirement'},
-                           field_spans={}, reference_evidence={})
+                           field_spans={}, reference_evidence={}, source_segments=segments)
             else:
-                doc = self.load(db, actor, request.get('session_id', ''))
-                if doc['revision'] != request.get('expected_revision'):
+                doc = deepcopy(_draft) if _draft is not None else self.load(db, actor, request.get('session_id', ''))
+                if action!='commit' and doc['revision'] != request.get('expected_revision'):
                     return {'status': 'conflict', 'error': 'A newer splitting step is saved. Reload before editing.', 'document': doc}
-                if self.stale(doc, self.material(actor, doc['material_id'])):
+                if action not in ('delete','undelete') and self.stale(doc, self.material(actor, doc['material_id'])):
                     raise ValueError('The source passage changed. This history is retained. Start a new session from the current saved passage.')
-                self.edit(db, actor, doc, request)
+                if action!='commit':self.edit(db, actor, doc, request)
+            if _preview:
+                ensure_labels(doc);self.validate(db,actor,doc)
+                return dict(status='preview',document=doc)
             # Source adapters may write their own workspace metadata. Resolve them
             # before taking the SQLite write lock, then recheck the revision atomically.
             db.execute('BEGIN IMMEDIATE')
@@ -203,7 +240,7 @@ class Requirements:
                 if replay[0] != digest:
                     raise ValueError('This request ID was already used for another step.')
                 return json.loads(replay[1])
-            if action != 'start':
+            if action != 'start' and not (action=='commit' and doc['revision']==0):
                 current = self.load(db, actor, doc['id'])
                 if current['revision'] != request.get('expected_revision'):
                     return {'status': 'conflict', 'error': 'A newer splitting step is saved. Reload before editing.', 'document': current}
@@ -216,9 +253,9 @@ class Requirements:
                        (doc['id'], actor, doc['material_id'], doc['revision'], body))
             db.execute('INSERT INTO requirement_steps VALUES(?,?,?,?,?)', (doc['id'], doc['revision'], body, action, doc['saved_at']))
             db.execute('DELETE FROM requirement_units WHERE session_id=?', (doc['id'],))
-            for u in doc['units'].values():
+            for u in ([] if doc.get('deleted') else doc['units'].values()):
                 db.execute('INSERT INTO requirement_units VALUES(?,?,?,?,?,?,?)', (u['id'], doc['id'], actor, doc['material_id'], u['text'], doc['chapter'],
-                           encode(dict(source=doc['source'], source_refs=doc['source_refs'], block_id=doc['block_id'], span=doc['spans'][u['id']], material_revision=doc['material_revision']))))
+                           encode(dict(source=doc['source'], source_refs=doc['source_refs'], block_id=doc['block_id'], span=doc['spans'][u['id']], material_revision=doc['material_revision'],source_segments=doc.get('source_segments',[])))))
             from .requirement_relations import project
             project(db,doc)
             result = {'status': 'saved', 'document': doc}
@@ -227,6 +264,10 @@ class Requirements:
 
     def edit(self, db, actor, doc, r):
         action = r['action']
+        if action in ('delete','undelete'):
+            doc['deleted']=action=='delete'
+            return
+        if doc.get('deleted'):raise ValueError('Restore this removed entry before editing it.')
         if action == 'restore':
             row = db.execute('SELECT body FROM requirement_steps WHERE session_id=? AND revision=?', (doc['id'], r.get('history_revision'))).fetchone()
             if row is None:
@@ -275,7 +316,7 @@ class Requirements:
             else:
                 if field not in RELATIONS:
                     raise ValueError('Choose a relationship field.')
-                child = unit(u['text'][start:end])
+                child = unit(u['text'][start:end],str(uuid.uuid5(uuid.UUID(r['request_id']),'child')))
                 offset = doc['spans'][u['id']][0]
                 doc['units'][child['id']] = child
                 doc['spans'][child['id']] = [offset + start, offset + end]
@@ -296,7 +337,7 @@ class Requirements:
                 raise ValueError('Place the cursor between two nonempty parts of the passage.')
             if any(u[k] for k in FIELDS + RELATIONS):
                 raise ValueError('This unit already contains work. Restore a prior step before changing its boundary.')
-            children = [unit(u['text'][:at]), unit(u['text'][at:])]
+            children = [unit(u['text'][:at],str(uuid.uuid5(uuid.UUID(r['request_id']),'left'))), unit(u['text'][at:],str(uuid.uuid5(uuid.UUID(r['request_id']),'right')))]
             begin = doc['spans'][u['id']][0]
             for child, span in zip(children, ([begin, begin+at], [begin+at, begin+len(u['text'])])):
                 doc['units'][child['id']] = child
@@ -405,6 +446,7 @@ class Requirements:
         all_docs.append(doc)
         graph = {}
         for item in all_docs:
+            if item.get('deleted'):continue
             for identity, u in item['units'].items():
                 graph[identity] = sum((leaves(u[f]) for f in RELATIONS), [])
         for identity, u in doc['units'].items():
@@ -428,6 +470,7 @@ class Requirements:
             visiting.remove(identity); visited.add(identity)
         for identity in graph:
             visit(identity)
+        if doc.get('deleted'):return
         reachable = set()
         def reach(identity):
             if identity in reachable:

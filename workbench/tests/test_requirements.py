@@ -133,4 +133,54 @@ class RequirementTests(unittest.TestCase):
             status,doc=request('GET','/api/requirements/session?id='+self.doc['id']);self.assertEqual(status,200);self.assertEqual(doc['phase'],'fields')
         finally:server.shutdown();server.server_close();t.join()
 
-if __name__=='__main__':unittest.main()
+
+    def test_multiblock_source_segments_and_independent_staleness(self):
+        second=dict(id='second',type='text',text='鱼 shall be checked.\nCheck æ ø å.',source_refs=[{'page':3}])
+        self.material['blocks'].append(second)
+        d=self.service.apply(ACTOR,dict(request_id=str(uuid.uuid4()),action='start',material_id=self.material['id'],material_revision=3,block_ids=['second','b']))['document']
+        self.assertEqual(d['text'],TEXT+'\n\n'+second['text'])
+        self.assertEqual([p['block_id'] for p in d['source_segments']],['b','second'])
+        self.assertFalse(self.service.stale(d,self.material))
+        self.material['blocks'][-1]['text']+=' changed'
+        self.assertTrue(self.service.stale(d,self.material))
+
+    def test_removed_entry_retains_history_and_can_be_restored(self):
+        identity=self.doc['id'];uid=self.root();self.step('delete')
+        self.assertEqual(self.service.listing(ACTOR,self.material['id'])['sessions'],[])
+        self.assertEqual(self.service.listing(ACTOR,self.material['id'])['deleted'][0]['id'],identity)
+        self.assertEqual(self.service.search(ACTOR,uid)['units'],[])
+        self.step('undelete')
+        self.assertEqual(self.service.search(ACTOR,uid)['units'][0]['id'],uid)
+        self.assertEqual([s['action'] for s in self.service.read(ACTOR,identity)['steps']],['undelete','delete','start'])
+
+    def test_parallel_conditions_each_support_recursive_fields_and_children(self):
+        root=self.root()
+        for phrase in ('the water is hot','the pump is off'):
+            self.step('extract',unit_id=root,field='conditions',**self.span(phrase))
+        children=self.doc['units'][root]['conditions'][1:]
+        for child in children:
+            self.step('assign',unit_id=child,field='Subject',start=0,end=3)
+            self.step('extract',unit_id=child,field='conditions',start=4,end=len(self.doc['units'][child]['text']))
+        self.assertNotEqual(self.doc['units'][children[0]]['conditions'],self.doc['units'][children[1]]['conditions'])
+        self.assertEqual(self.doc['units'][root]['conditions'],[2,*children])
+
+    def test_unsaved_batch_never_creates_history_and_explicit_save_replays_once(self):
+        uid=self.root();revision=self.doc['revision']
+        op=dict(request_id=str(uuid.uuid4()),action='assign',unit_id=uid,field='Subject',start=0,end=9)
+        base=dict(request_id=str(uuid.uuid4()),session_id=self.doc['id'],expected_revision=revision,steps=[op])
+        preview=self.service.apply(ACTOR,dict(base,action='preview'))['document']
+        self.assertEqual(preview['units'][uid]['Subject'],'The human')
+        self.assertIsNone(self.service.read(ACTOR,self.doc['id'])['units'][uid]['Subject'])
+        self.assertEqual(len(self.service.read(ACTOR,self.doc['id'])['steps']),1)
+        save=dict(base,action='save-draft');result=self.service.apply(ACTOR,save)
+        self.assertEqual(result,self.service.apply(ACTOR,save))
+        self.assertEqual(len(self.service.read(ACTOR,self.doc['id'])['steps']),2)
+
+    def test_new_unsaved_entry_and_recursive_preview_use_stable_ids_without_db_rows(self):
+        start=dict(request_id=str(uuid.uuid4()),action='start',material_id=self.material['id'],material_revision=3,block_id='b')
+        request=dict(request_id=str(uuid.uuid4()),action='preview',steps=[start])
+        first=self.service.apply(ACTOR,request)['document'];second=self.service.apply(ACTOR,request)['document']
+        self.assertEqual(first,second)
+        self.assertEqual(len(self.service.listing(ACTOR,self.material['id'])['sessions']),1)
+        root=next(iter(first['units']));request['steps'].append(dict(request_id=str(uuid.uuid4()),action='extract',unit_id=root,field='conditions',start=34,end=50))
+        self.assertEqual(self.service.apply(ACTOR,request),self.service.apply(ACTOR,request))

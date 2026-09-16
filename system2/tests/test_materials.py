@@ -323,3 +323,31 @@ def test_refresh_completion_does_not_supersede_concurrently_saved_work(setup):
     store.finish_candidate(material['id'],started['candidate']['id'],[text('New machine body')])
     assert store.candidate_detail(material['id'],first['candidate']['id'])['status']=='ready'
     assert store.read(material['id'])['blocks']==[text('Concurrent human work')]
+
+
+def test_version_preference_keeps_both_bodies_and_is_guarded_replayable(setup):
+    store, material = setup
+    saved = store.save(req(material, blocks=[text('Saved choice')]))['material']
+    request = req(saved, blocks=[text('Local alternative')], version_choice='saved')
+    chosen = store.save(request)
+    assert store.save(request) == chosen
+    result = MaterialStore(store.root).read(material['id'])
+    assert result['blocks'][0]['text'] == 'Saved choice'
+    assert result['version_preference']['choice'] == 'saved'
+    assert result['confirmation'] is None
+    evidence = store.conflict_detail(material['id'], result['version_preference']['evidence_id'])
+    assert evidence['request']['blocks'][0]['text'] == 'Local alternative'
+    assert store.save(req(saved, blocks=[text('Stale')], version_choice='local'))['status'] == 'conflict'
+    latest = store.save(req(result, blocks=[text('New preferred')], version_choice='local'))['material']
+    assert latest['version_preference']['choice'] == 'local'
+    assert latest['blocks'][0]['text'] == 'New preferred'
+    assert any(h.get('version_preference', {}).get('choice') == 'saved' for h in store.history(material['id']))
+
+
+def test_version_preference_does_not_erase_saved_findings(setup):
+    store, material = setup
+    saved = store.save(req(material, blocks=[text()], issues=[{'id':'problem','message':'Missing page','resolved':False}]))['material']
+    result = store.save(req(saved, blocks=[text('Preferred')], issues=[], version_choice='local'))['material']
+    assert result['issues'][0]['resolved'] is False
+    with pytest.raises(ValueError, match='version_choice'):
+        store.save(req(result, blocks=[], version_choice='invented'))

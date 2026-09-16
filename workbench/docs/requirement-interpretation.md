@@ -1,5 +1,10 @@
 # Requirement annotations and check design
 
+## Latest interaction revision, 2026-09-16
+
+This section supersedes earlier autosave and second-pane annotation descriptions below. Unsaved splitting and interpretation changes stay in page memory only. Splitting steps are validated as previews; **Save splitting** or **Save & collapse** commits their final version. **Save interpretation** commits fourth-pane fields. Leaving warns about unsaved work. Earlier saved histories and legacy recovery records are retained, but new edits are not automatically journalled in the browser or database. Semantic colours render over the exact source at the top of each third-pane entry, including when collapsed. Conditions can be decomposed recursively, and one entry may reference multiple source blocks. Second-pane Current text and Changes remain separate from this coloured preview.
+
+
 ## Workflow
 
 The material workspace has four independently scrolling panes: Original document, Extracted content, Requirements, and Interpretation & check design. Collapse a pane from its header; the same rail restores it. Drag separators or use arrow keys (Shift for larger steps). Narrow screens retain horizontal scrolling.

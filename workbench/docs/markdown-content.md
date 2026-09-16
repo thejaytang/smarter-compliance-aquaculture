@@ -20,14 +20,24 @@ Review-impact notifications appear across the top of the material page, outside 
 - Use Heading, Bold, Italic, List, Numbered list, Quote, Table or Link. Only the active block shows the formatting toolbar.
 - Shift+Enter renders the block. Escape also renders without discarding input. Undo/Redo are available in the current block; saved material history remains available across sessions.
 - Deleted content has a red background and strikethrough. Added content has a green background. Replacing text shows both fragments. Whole-block deletion remains visible in the revision view.
-- Show changes switches between the revision view and the effective current text. The comparison baseline is the block's state before its first Markdown edit; Save does not reset it. Earlier edits made before this feature remain in material history.
+- Read offers Changes and Current text. Requirement field colours belong to the third-pane source preview. The comparison baseline is the block's state before its first Markdown edit; Save does not reset it. Earlier edits made before this feature remain in material history.
 - More contains Insert above/below, Delete content, Restore original and Source details. + Block appends a block. New blocks inherit a nearby source location as context and remain human additions; this does not prove the added wording appeared in the source.
-- Save persists the personal material with its Markdown, baseline and source links. Saving is separate from review confirmation and Archive. Unsaved edits use the existing browser recovery journal and version-conflict protection.
+- Save persists the personal material with its Markdown, baseline and source links. Saving is separate from review confirmation and Archive. Unsaved edits remain in page memory only. They are not automatically written to browser storage, the database or history. Leaving, reloading or closing prompts about losing them; save explicitly to persist work. Version-conflict protection remains active.
 - After saving, To requirements sends the whole effective block text. Markdown syntax and deleted revision text do not enter the requirement unit. Editing its source text later makes an existing splitting session stale under the existing guards.
 
 Basic headings, paragraphs, explicit line breaks, lists, emphasis and simple tables render in source order. Markdown does not reproduce the original PDF's exact typography or merged table geometry. The full original remains in the left pane; the pre-edit block and table geometry are retained with its baseline. Editing a complex table displays that limitation. Images remain source-bound descriptions rather than remote fetches. Raw HTML and executable links are not enabled in Markdown.
 
 Find keeps the complete document visible. Press Enter in Find to move to the next matching block; chapter navigation scrolls within the same full document.
+
+## Select and edit multiple passages
+
+Choose **Select passages**, then select any passages with the checkboxes. Shift-click the last passage to select a continuous range. Dragging a text selection across paragraphs selects the entire touched passages, explicitly labelled as whole passages.
+
+For cover text before a section, click that section heading, open **More → Select all content before this section**, then **Delete selected**. The section itself and the separate Document information are excluded. The confirmation shows the selected range. Delete clears only those effective texts; stable block IDs, original source links and Markdown baselines remain intact. Current text hides the deleted passages; Changes shows their redlines.
+
+**Edit selected** opens all selected passages in one dialog, with a separate Markdown field per passage. Applying them together preserves each passage's source ownership, including lists and tables. It does not combine unrelated passages into a new Requirement. **Undo last bulk change** restores the complete pre-edit blocks while no subsequent edit has changed them.
+
+All bulk changes remain unsaved until **Save**. Opening selection tools, applying a batch, switching reading mode and undoing a batch do not create history entries. The close-material button uses the same unsaved-work warning as workspace navigation.
 
 ## Body-only extraction
 
@@ -44,7 +54,7 @@ Material review means checking that the body content, including its headings, ta
 
 ## Storage and local tools
 
-Markdown is stored inside the existing material blocks (`markdown_source` for initial formatted extraction and `markdown` for source/baseline/original revision data). It therefore follows the owning material's saved history and existing material snapshot path. This does not change the separately documented exclusion of manual Requirement splitting tables from collaboration ZIPs.
+Markdown is stored inside the existing material blocks (`markdown_source` for initial formatted extraction and `markdown` for source/baseline/original revision data). It therefore follows the owning material's saved history and existing material snapshot path. Full workspace ZIP version 2 also includes saved Requirement splitting and interpretation records; unsaved page edits are not included.
 
 The browser uses locally bundled [markdown-it](https://github.com/markdown-it/markdown-it) and [jsdiff](https://github.com/kpdecker/jsdiff). Native textareas provide Markdown source editing. No hosted editor, external model or browser-time package fetch is used. Versions and dependency resolution are pinned in `workbench/frontend/package.json` and `package-lock.json`; vendored assets and licenses are shipped with the UI. Node/npm is only required to rebuild those assets:
 

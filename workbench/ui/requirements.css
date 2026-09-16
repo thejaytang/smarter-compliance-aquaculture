@@ -75,3 +75,5 @@
 .rq-group-options > summary{color:#4c5f75;font-weight:400}
 .rq-reference{flex:1;min-width:0}
 .rq-reference > span{flex-basis:100px;min-width:0}
+
+.rq-session-title{white-space:normal!important;overflow:visible!important}.rq-source-preview{display:block;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.8}.rq-source-groups{display:block;margin-top:8px}.rq-source-preview .semantic{border-radius:3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}.rq-session>summary{align-items:flex-start}.rq-session-title{min-width:0;flex:1}

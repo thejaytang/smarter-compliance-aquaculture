@@ -53,7 +53,7 @@ def impact(service, actor, doc, material_cache=None):
         if old.get('block_id') is None: continue  # metadata checked separately below
         if new and (new['text'], new['source'], new['source_refs']) == (old['text'], sources[old['material_id']], old.get('source_refs', [])): continue
         fields = [k for k, f in doc['fields'].items() if any(r['id'] == old['id'] for r in f['references'])]
-        origin = saved['origin']; own = old['material_id'] == origin['material_id'] and old['block_id'] == origin['block_id']
+        origin = saved['origin']; own = old['material_id'] == origin['material_id'] and old['block_id'] in [p['block_id'] for p in origin.get('source_segments',[])] + [origin['block_id']]
         if own: fields = list(doc['fields'])
         items.append(dict(citation_id=old['id'],material_id=old['material_id'],block_id=old['block_id'],
             before=old['text'],after=new['text'] if new else None,

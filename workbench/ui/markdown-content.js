@@ -46,8 +46,16 @@ function markdownTable(source){
   return rows.length&&rows.every(r=>r.length===rows[0].length)?rows:null;
 }
 export function updateMarkdownBlock(blocks,id,source){
-  const next=clone(blocks),b=next.find(x=>x.id===id);if(!b)throw Error('Markdown cell no longer exists.');
-  const before=blockMarkdown(b);if(source===before)return next;
+  return updateMarkdownBlocks(blocks,new Map([[id,source]]));
+}
+export function updateMarkdownBlocks(blocks,changes){
+  const next=clone(blocks);
+  const ids=new Set(next.map(b=>b.id));
+  if([...changes.keys()].some(id=>!ids.has(id)))throw Error('A selected passage no longer exists.');
+  for(const b of next){
+  if(!changes.has(b.id))continue;const source=changes.get(b.id);
+  if(typeof source!=='string')throw Error('Markdown content must be text.');
+  const before=blockMarkdown(b);if(source===before)continue;
   const base=b.markdown?.baseline??before;
   if(!b.markdown)b.markdown={version:1,source:before,baseline:base,original:clone(b)};
   b.markdown.source=source;b.text=markdownText(source);b.numbering='';
@@ -58,6 +66,7 @@ export function updateMarkdownBlock(blocks,id,source){
   else {b.type='text';delete b.level;}
   if(b.type!=='table')delete b.table;if(b.type!=='image')delete b.image;
   if(b.role==='document_information'){b.type='text';b.parent_id=null;b.dependencies=[];delete b.level;delete b.table;}
+  }
   // Rebuild only invalid parent links; original associations remain in history.
   const preceding=[];
   for(const x of next){
@@ -146,15 +155,15 @@ export function formatSelection(source,start,end,kind){
 }
 const btn=(action,label,extra='')=>`<button type="button" data-md-action="${action}" ${extra}>${label}</button>`;
 export class MarkdownNotebook{
-  constructor(owner){this.m=owner;this.editing=null;this.active=null;this.showChanges=true;this.mode="changes";this.annotationData=null;this.annotationAutoShown=false;this.histories=new Map();}
-  reset(){this.editing=null;this.active=null;this.histories.clear();}
+  constructor(owner){this.m=owner;this.editing=null;this.active=null;this.showChanges=true;this.mode="changes";this.annotationData=null;this.annotationAutoShown=false;this.histories=new Map();this.selectedBlocks=new Set();}
+  reset(){this.editing=null;this.active=null;this.histories.clear();this.selectedBlocks.clear();this.selecting=false;this.lastPicked=null;this.bulkUndo=null;}
   async refreshAnnotations(completed=false){
     const key=`${this.m.state?.actor?.id}:${this.m.id}:${this.m.material?.revision}`,id=this.m.id;
     if(this.m.collaboration.readonly){this.annotationData=null;return;}
     try{const data=await this.m.api('/api/requirement-annotations?'+new URLSearchParams({material_id:id}));
       if(key!==`${this.m.state?.actor?.id}:${this.m.id}:${this.m.material?.revision}`)return;
       this.annotationData=data;
-      if(completed&&!this.annotationAutoShown){this.annotationAutoShown=true;this.mode='annotations';this.showChanges=false;const mode=this.m.q('#md-reading-mode');if(mode)mode.value=this.mode;}
+      // Source colours belong to the Requirement entry, including while collapsed.
       this.m.renderContent();
     }catch(e){this.m.message('Annotations could not be loaded. '+e.message,'warning');}
   }
@@ -167,6 +176,7 @@ export class MarkdownNotebook{
     const blocks=this.m.draft.blocks,levels=[];let html=(this.mode==='annotations'?annotationLegend()+(this.annotationData?.stale_sessions?.length?'<p class="annotation-warning">Some source passages changed. Review their saved splitting before restoring annotations.</p>':''):'')+'<div class="md-document" role="document" aria-label="Complete extracted Markdown">';
     for(let i=0;i<blocks.length;i++){
       const b=blocks[i];if(b.role==='document_information')continue;
+      if(!this.showChanges&&!this.selecting&&!blockMarkdown(b).trim()&&b.markdown?.baseline)continue;
       if(b.type==='heading'){
         const level=b.level||1;
         while(levels.length&&levels.at(-1)>=level){html+='</section>';levels.pop();}
@@ -174,17 +184,33 @@ export class MarkdownNotebook{
       }
       html+=this.markup(b,i)+(this.m.collaboration.merge?this.m.collaboration.blockMarkup(b):'');
     }
-    return html+'</section>'.repeat(levels.length)+'</div>';
+    return `<div class="md-bulk-tools" data-md-bulk>${this.bulkMarkup()}</div>`+html+'</section>'.repeat(levels.length)+'</div>';
   }
   markup(b,i){
     const source=blockMarkdown(b),editing=this.editing===b.id&&!this.m.collaboration.readonly,active=this.active===b.id||editing;
     const baseline=b.markdown?.baseline??source,changed=baseline!==source,deleted=!source.trim()&&!!baseline;
-    const tools=active?`<div class="md-cell-tools"><span>${b.type==='heading'?'Heading':'Content'}</span>${!this.m.collaboration.readonly?btn(editing?'render':'edit',editing?'Render':'Edit'):''}${btn('original','Original')}${b.role!=='document_information'&&!deleted&&['text','heading'].includes(b.type)?btn('requirement','To requirements',this.m.dirty?'disabled title="Save content first"':''):''}${!this.m.collaboration.readonly?`<details><summary>More</summary><div>${b.role==='document_information'?'':btn('insert-before','Insert above')+btn('insert-after','Insert below')}${btn('delete','Delete content')}${changed?btn('restore','Restore original'):''}${btn('source','Source details')}</div></details>`:''}</div>`:'';
+    const tools=active?`<div class="md-cell-tools"><span>${b.type==='heading'?'Heading':'Content'}</span>${!this.m.collaboration.readonly?btn(editing?'render':'edit',editing?'Render':'Edit'):''}${btn('original','Original')}${b.role!=='document_information'&&!deleted&&['text','heading'].includes(b.type)?btn('requirement','To requirements',this.m.dirty?'disabled title="Save content first"':''):''}${!this.m.collaboration.readonly?`<details><summary>More</summary><div>${b.role==='document_information'?'':btn('insert-before','Insert above')+btn('insert-after','Insert below')}${b.role!=='document_information'&&['text','heading'].includes(b.type)?btn('requirement-combine','Combine passages into one Requirement',this.m.dirty?'disabled':''):''}${b.type==='heading'?btn('select-before','Select all content before this section'):''}${btn('select-range','Select passages')}${btn('delete','Delete content')}${changed?btn('restore','Restore original'):''}${btn('source','Source details')}</div></details>`:''}</div>`:'';
     const formatting=editing?`<div class="md-format-tools" role="toolbar" aria-label="Markdown formatting">${[['heading','Heading'],['bold','Bold'],['italic','Italic'],['bullet','List'],['numbered','1. List'],['quote','Quote'],['table','Table'],['link','Link']].map(([k,n])=>btn('format',n,`data-md-format="${k}"`)).join('')}${btn('undo','Undo')}${btn('redo','Redo')}</div>`:'';
     const body=editing?`${formatting}<textarea class="md-cell-editor" data-md-source aria-label="Markdown block ${i+1}" spellcheck="false" rows="${Math.max(3,Math.min(18,source.split('\n').length+1))}">${esc(source)}</textarea><p class="md-edit-hint">Shift+Enter to render · changes stay in your draft</p>${b.markdown?.original?.table?.merges?.length||(!b.markdown&&b.table?.merges?.length)?'<p class="md-edit-hint">Markdown uses simple rows and columns. The original merged layout remains in cell history and the source.</p>':''}`:`<div class="md-cell-preview">${this.mode==='annotations'?this.annotated(b,source):this.showChanges?renderChanges(baseline,source):renderMarkdown(source)}${!source&&!baseline?'<p class="md-empty">Empty paragraph</p>':''}${deleted&&!this.showChanges?'<p class="md-empty">Deleted paragraph</p>':''}</div>`;
-    return `<article class="md-cell ${active?'md-active':''} ${b.type==='heading'?'md-heading-block':''} ${b.id===this.m.highlightBlock?'mw-linked-block':''}" data-block="${esc(b.id)}" data-md-cell="${esc(b.id)}" style="--md-indent:${Math.min(4,Math.max(0,b.list_depth||0))}" tabindex="0" aria-label="Markdown block ${i+1}${changed?' with changes':''}">${tools}${body}</article>`;
+    return `<article class="md-cell ${active?'md-active':''} ${b.type==='heading'?'md-heading-block':''} ${b.id===this.m.highlightBlock?'mw-linked-block':''}" data-block="${esc(b.id)}" data-md-cell="${esc(b.id)}" style="--md-indent:${Math.min(4,Math.max(0,b.list_depth||0))}" tabindex="0" aria-label="Markdown block ${i+1}${changed?' with changes':''}">${this.selecting?`<label class="md-block-select"><input type="checkbox" data-md-select="${esc(b.id)}" ${this.selectedBlocks.has(b.id)?'checked':''}>Select passage ${i+1}</label>`:''}${tools}${body}</article>`;
+  }
+  bulkMarkup(){
+    if(this.m.collaboration.readonly)return '';
+    const tools=this.selectedBlocks.size?`<strong>${this.selectedBlocks.size} whole passages selected</strong> ${btn('bulk-edit','Edit selected')} ${btn('bulk-delete','Delete selected')} ${btn('clear-selection','Clear selection')}`:btn('select-range',this.selecting?'Stop selecting':'Select passages');
+    return tools+(this.bulkUndo?btn('undo-bulk','Undo last bulk change'):'')+(this.selecting?'<small>Shift-click to select a range.</small>':'');
+  }
+  pick(id,checked,extend=false){
+    const blocks=this.m.draft.blocks,a=blocks.findIndex(b=>b.id===this.lastPicked),b=blocks.findIndex(b=>b.id===id);
+    if(b<0)return;
+    const range=extend&&a>=0?blocks.slice(Math.min(a,b),Math.max(a,b)+1):[blocks[b]];
+    for(const item of range)if(item.role!=='document_information')checked?this.selectedBlocks.add(item.id):this.selectedBlocks.delete(item.id);
+    this.lastPicked=id;
   }
   bind(){
+    const content=this.m.q('#mw-content');
+    if(content)content.onmouseup=()=>{const selection=globalThis.getSelection?.();if(!selection||selection.isCollapsed)return;const cell=n=>(n?.nodeType===1?n:n?.parentElement)?.closest('[data-md-cell]');const a=cell(selection.anchorNode),b=cell(selection.focusNode);if(!a||!b||a===b||!content.contains(a)||!content.contains(b))return;const blocks=this.m.draft.blocks,i=blocks.findIndex(x=>x.id===a.dataset.mdCell),j=blocks.findIndex(x=>x.id===b.dataset.mdCell);this.selectedBlocks=new Set(blocks.slice(Math.min(i,j),Math.max(i,j)+1).filter(x=>x.role!=='document_information').map(x=>x.id));const bar=this.m.q('[data-md-bulk]');if(bar){bar.innerHTML=this.bulkMarkup();bar.querySelectorAll('[data-md-action]').forEach(button=>button.onclick=e=>{e.preventDefault();this.action(button.dataset.mdAction,button).catch(error=>this.m.message(error.message,'error'));});}};
+    for(const checkbox of this.m.root.querySelectorAll('[data-md-select]'))checkbox.onclick=e=>{e.stopPropagation();this.pick(checkbox.dataset.mdSelect,checkbox.checked,e.shiftKey);this.m.renderContent();this.m.q(`[data-md-select="${checkbox.dataset.mdSelect}"]`)?.focus({preventScroll:true});};
+
     for(const mark of this.m.root.querySelectorAll('[data-annotations]')){
       const activate=e=>{e.preventDefault();e.stopPropagation();const refs=JSON.parse(mark.dataset.annotations);void this.m.requirements.navigateAnnotation(refs);};
       mark.onclick=activate;mark.onkeydown=e=>{if(e.key==='Enter'||e.key===' ')activate(e);};
@@ -209,15 +235,36 @@ export class MarkdownNotebook{
     if(this.m.busy||this.m.opening||this.m.collaboration.readonly)return;
     const b=this.m.draft.blocks.find(b=>b.id===id),before=blockMarkdown(b);if(before===value)return;
     if(record){let h=this.histories.get(id);if(!h||h.values[h.index]!==before)h={values:[before],index:0};h.values=h.values.slice(0,h.index+1);h.values.push(value);if(h.values.length>100)h.values.shift();h.index=h.values.length-1;this.histories.set(id,h);}
-    this.m.draft.blocks=updateMarkdownBlock(this.m.draft.blocks,id,value);this.m.changed(true);for(const button of this.m.root?.querySelectorAll('[data-md-action="requirement"]')||[])button.disabled=true;
+    this.bulkUndo=null;this.m.draft.blocks=updateMarkdownBlock(this.m.draft.blocks,id,value);this.m.changed(true);for(const button of this.m.root?.querySelectorAll('[data-md-action="requirement"]')||[])button.disabled=true;
   }
   travel(direction){const h=this.histories.get(this.editing);if(!h)return;const index=h.index+direction;if(index<0||index>=h.values.length)return;h.index=index;this.change(this.editing,h.values[index],false);const area=this.m.q('[data-md-source]');area.value=h.values[index];area.focus();}
   format(kind){const area=this.m.q('[data-md-source]');if(!area)return;const x=formatSelection(area.value,area.selectionStart,area.selectionEnd,kind);this.change(this.editing,x.source);area.value=x.source;area.focus();area.setSelectionRange(x.start,x.end);}
   async action(action,node){
+    if(['select-range','clear-selection','select-before','bulk-edit','bulk-delete','undo-bulk'].includes(action)){
+      if(this.m.collaboration.readonly||this.m.busy||this.m.opening)return;
+      if(action==='undo-bulk'){if(!this.bulkUndo)return;if(this.bulkUndo.after!==JSON.stringify(this.m.draft.blocks)){this.bulkUndo=null;this.m.renderContent();return this.m.message('Content changed after that bulk edit. Restore individual passages from Changes instead.','warning');}this.m.draft.blocks=this.bulkUndo.before;this.bulkUndo=null;this.histories.clear();this.m.changed(true);this.m.renderContent();return;}
+      if(action==='select-range'){this.selecting=!this.selecting;if(!this.selecting)this.selectedBlocks.clear();this.lastPicked=null;this.m.renderContent();return;}
+      if(action==='clear-selection'){this.selectedBlocks.clear();this.selecting=false;this.lastPicked=null;this.m.renderContent();return;}
+      if(action==='select-before'){const id=node.closest('[data-md-cell]').dataset.mdCell,index=this.m.draft.blocks.findIndex(b=>b.id===id);this.selectedBlocks=new Set(this.m.draft.blocks.slice(0,index).filter(b=>b.role!=='document_information').map(b=>b.id));this.selecting=true;this.m.renderContent();return;}
+      const selected=this.m.draft.blocks.filter(b=>this.selectedBlocks.has(b.id));if(!selected.length)return;
+      const bound=this.m.id,before=JSON.stringify(this.m.draft.blocks),isDelete=action==='bulk-delete';
+      this.m.dialog(`<h2>${isDelete?'Delete':'Edit'} ${selected.length} selected passages</h2><p>${isDelete?'The selected contents will be cleared in this unsaved draft.':'Edit the selected passages together below. Each keeps its own source links and identity.'} Save material to commit; leaving without saving discards this change.</p><details><summary>Selected range</summary>${selected.map(b=>`<p>${esc(b.text)}</p>`).join('')}</details>${isDelete?'':`<div class="md-bulk-editors">${selected.map((b,i)=>`<label>Passage ${i+1}<textarea data-bulk-text="${esc(b.id)}" aria-label="Edit selected passage ${i+1}" rows="${Math.min(10,Math.max(3,blockMarkdown(b).split('\n').length))}">${esc(blockMarkdown(b))}</textarea></label>`).join('')}</div>`}<p data-bulk-status role="status"></p><button data-bulk-apply>${isDelete?'Delete selected contents':'Apply to draft'}</button>`,d=>{
+        d.querySelector('[data-bulk-apply]').onclick=()=>{if(bound!==this.m.id||before!==JSON.stringify(this.m.draft.blocks)){d.querySelector('[data-bulk-status]').textContent='The draft changed. Close and select the passages again.';return;}
+          if(this.m.busy||this.m.opening||this.m.collaboration.readonly){d.querySelector('[data-bulk-status]').textContent='Editing is unavailable while another operation is in progress.';return;}
+          const changes=new Map(isDelete?selected.map(b=>[b.id,'']):Array.from(d.querySelectorAll('[data-bulk-text]'),area=>[area.dataset.bulkText,area.value]));
+          const original=clone(this.m.draft.blocks),next=updateMarkdownBlocks(original,changes);
+          if(JSON.stringify(next)!==before){this.m.draft.blocks=next;this.bulkUndo={before:original,after:JSON.stringify(next)};this.histories.clear();this.m.changed(true);}
+          this.selecting=false;
+          this.selectedBlocks.clear();this.editing=null;this.m.renderContent();d.close();
+        };
+      });return;
+    }
+
     const id=node.closest('[data-md-cell]')?.dataset.mdCell||this.active,index=this.m.draft.blocks.findIndex(b=>b.id===id),b=this.m.draft.blocks[index];
     if(action==='original')return this.m.locateBlock(b);
     if(action==='requirement'&&b?.role==='document_information')return;
     if(action==='requirement')return this.m.requirements.start(id);
+    if(action==='requirement-combine')return this.m.requirements.start(id,true);
     if(action==='source'){this.m.dialog(`<h2>Cell source</h2>${this.m.collaboration.blockMarkup?.(b)||''}<p>Source links and original cell contents are preserved with this material.</p><pre>${esc(JSON.stringify({source_refs:b.source_refs,original:b.markdown?.original||b},null,2))}</pre>`);return;}
     if(this.m.collaboration.readonly||this.m.busy||this.m.opening)return;
     if(action==='edit')return this.edit(id);

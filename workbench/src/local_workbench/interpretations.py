@@ -56,6 +56,7 @@ def annotations(c, actor, material_id):
         docs = [service.load(db, actor, r[0]) for r in db.execute(
             'SELECT id FROM requirement_sessions WHERE actor=? AND material_id=? ORDER BY rowid', (actor, material_id))]
     for d in docs:
+        if d.get('deleted'):continue
         if service.stale(d, material):
             stale.append(d['id']); continue
         for uid in d['done']:
@@ -69,7 +70,14 @@ def annotations(c, actor, material_id):
                     if child in d['spans']:
                         a,b = d['spans'][child]
                         out.append(dict(base, field=field, target_id=child, start=a, end=b))
-    return dict(material_id=material_id, material_revision=material['revision'], spans=out, stale_sessions=stale)
+    mapped=[];by_session={d['id']:d for d in docs}
+    for span in out:
+        parts=by_session[span['session_id']].get('source_segments')
+        if not parts:mapped.append(span);continue
+        for part in parts:
+            a=max(span['start'],part['start']);b=min(span['end'],part['end'])
+            if a<b:mapped.append(dict(span,block_id=part['block_id'],source_text=part['text'],start=a-part['start'],end=b-part['start']))
+    return dict(material_id=material_id, material_revision=material['revision'], spans=mapped, stale_sessions=stale)
 
 
 class Interpretations:

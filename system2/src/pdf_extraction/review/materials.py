@@ -401,8 +401,39 @@ class MaterialStore(MaterialReads):
             request, material, replay = self._begin(db, request, 'save')
             if replay is not None:
                 return replay
+            choice = request.get('version_choice')
+            if choice is not None:
+                if choice not in ('local', 'saved'):
+                    raise ValueError('invalid_version_choice')
+                # Preserve the complete alternative before choosing either version.
+                # This shares the same transaction, revision guard and replay receipt.
+                validate_blocks(request.get('blocks'), material['scope'])
+                evidence_id = str(uuid.uuid4())
+                evidence = {'id': evidence_id, 'material_id': material['id'],
+                            'actor': request['actor'], 'request': request,
+                            'current_revision': material['revision'], 'at': now(),
+                            'resolution': choice, 'selected_revision': material['revision'] + 1}
+                db.execute('INSERT INTO material_conflicts VALUES(?,?,?)',
+                           (evidence_id, material['id'], encoded(evidence)))
+                material['version_preference'] = {
+                    'choice': choice, 'actor': request['actor'], 'at': evidence['at'],
+                    'compared_revision': material['revision'],
+                    'selected_revision': material['revision'] + 1, 'evidence_id': evidence_id}
+            edit_request = request
+            if choice == 'saved':
+                edit_request = dict(request, blocks=material['blocks'], issues=material['issues'])
+            elif choice == 'local':
+                # Choosing text cannot erase an unresolved finding in the saved version.
+                issues = {item['id']: dict(item) for item in request.get('issues', [])}
+                for item in material['issues']:
+                    if not item.get('resolved'):
+                        issues[item['id']] = dict(item)
+                edit_request = dict(request, issues=list(issues.values()))
+            if choice:
+                edit_request = dict(edit_request, checked_scope=[], association_reviewed=False)
+                material['confirmation'] = None
             old_confirmation = material['confirmation']
-            changed = self._edit(material, request)
+            changed = self._edit(material, edit_request)
             if not changed and old_confirmation:
                 if (set(material['checked_scope']) == {s['id'] for s in material['scope']}
                         and not material['association_review_required']):
@@ -410,7 +441,7 @@ class MaterialStore(MaterialReads):
                 else:
                     material['confirmation'] = None
             material['revision'] += 1
-            self._write(db, material, 'saved', request['actor'])
+            self._write(db, material, 'version_selected' if choice else 'saved', request['actor'])
             return self._receipt(db, request, {'status': 'applied', 'material': self._view(db, material)})
 
     def save_candidate_draft(self, request):

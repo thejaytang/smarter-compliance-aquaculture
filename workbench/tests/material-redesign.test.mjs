@@ -8,9 +8,9 @@ function workspace(){
  w.root={querySelectorAll:()=>[]};w.q=s=>nodes.get(s)||null;w.state={actor:{id:'a'}};w.material={id:'m',revision:4,scope:[{id:'page:1'}],source:{source_id:'s'},collaboration:{view:'personal'}};w.id='m';w.draft={blocks:[{text:'unsaved original text'}],checked_scope:['page:1'],association_reviewed:true,issues:[]};w.dirty=true;w.message=()=>{};
  return {w,classes,nodes};
 }
-test('temporary material list retains the same unsaved draft and returns without API reads or writes',async()=>{
+test('temporary material list requires an explicit unsaved decision before leaving',async()=>{
  const {w,classes}=workspace(),draft=w.draft;let calls=0;w.api=async()=>calls++;
- w.showList();assert.equal(classes.has('list-mode'),true);assert.equal(w.dirty,true);assert.equal(w.draft,draft);
+ let warned=0;w.unsavedDialog=()=>warned++;w.showList();assert.equal(warned,1);assert.equal(classes.has('list-mode'),false);assert.equal(w.dirty,true);assert.equal(w.draft,draft);w.dirty=false;w.showList();assert.equal(classes.has('list-mode'),true);
  await w.action('open',{dataset:{id:'m'}});assert.equal(classes.has('detail-mode'),true);assert.equal(w.draft,draft);assert.equal(calls,0);
 });
 test('archive from a personal draft saves first then opens a guarded preview without automatic adoption or confirmation',async()=>{
