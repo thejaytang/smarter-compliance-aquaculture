@@ -178,3 +178,9 @@
 .rq-linked-requirement { display:inline-flex; align-items:center; gap:4px; }
 .rq-legacy-relation { padding:8px 0; }
 .rq-legacy-relation p { white-space:pre-wrap; }
+
+/* Remove belongs to the owning card; Group removal includes its subtree. */
+.rq-plain-field,.rq-tree-leaf,.rq-reference-picker,.rq-tree-node > summary { position:relative; }
+.rq-plain-field:has(> .rq-node-remove),.rq-tree-leaf:has(> .rq-node-remove),.rq-reference-picker:has(> .rq-node-remove),.rq-tree-node > summary:has(> .rq-node-remove) { padding-right:38px; }
+.rq-node-remove { position:absolute; right:5px; top:5px; width:26px; height:26px; min-height:26px; padding:0; font-size:18px; line-height:1; background:transparent; border:0; color:#8b2735; cursor:pointer; }
+.rq-node-remove:hover,.rq-node-remove:focus-visible { background:#fee5e8; outline:1px solid #ba4253; }

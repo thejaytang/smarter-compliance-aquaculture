@@ -180,3 +180,19 @@ class GroupTests(unittest.TestCase):
   self.add('conditions','after a storm');leaf=self.nodes('fragment')[0];self.edit('decompose',leaf['id'])
   self.edit('degroup-range',leaf['id'],**self.span('after a storm'))
   self.assertEqual(self.tree()['children'],[])
+
+ def test_remove_group_deletes_descendants_only_after_explicit_save(self):
+  self.edit('add-group',**self.span('甲 shall inspect 设备 A'));branch=self.nodes('clause')[-1]
+  self.add('Subject','甲',branch['id']);self.add('Object','设备 A',branch['id'])
+  leaf=self.nodes('fragment','Object')[0];self.edit('decompose',leaf['id']);self.add('Object','设备',leaf['id'])
+  self.add('conditions','after a storm')
+  before=deepcopy(self.doc);removed={n['id'] for n,_ in walk(next(n for n in self.nodes() if n['id']==branch['id']))}
+  request=dict(action='preview',request_id=str(uuid.uuid4()),session_id=self.doc['id'],expected_revision=self.doc['revision'],steps=[dict(action='structure',request_id=str(uuid.uuid4()),unit_id=self.uid,node_id=branch['id'],operation='remove')])
+  preview=self.r.apply(ACTOR,request)['document'];remaining={n['id'] for n,_ in walk(preview['structures'][self.uid])}
+  self.assertFalse(removed & remaining);self.assertEqual(preview['text'],TEXT)
+  self.assertEqual([n['text'] for n,_ in walk(preview['structures'][self.uid]) if n['kind']=='fragment'],['after a storm'])
+  self.assertEqual(self.r.read(ACTOR,self.doc['id'])['revision'],before['revision'])
+  self.assertEqual([n['role'] for n in preview['structures'][self.uid]['children']],['conditions'])
+  self.doc=self.r.apply(ACTOR,dict(request,action='save-draft',request_id=str(uuid.uuid4())))['document']
+  self.step('restore',history_revision=before['revision'])
+  self.assertTrue(removed <= {n['id'] for n in self.nodes()})

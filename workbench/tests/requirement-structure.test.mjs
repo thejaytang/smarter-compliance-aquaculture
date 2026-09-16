@@ -24,7 +24,7 @@ test('clause containers keep bindings; QC belongs only to combinations',()=>{
  assert.match(html,/Shared conditions stay in the enclosing Group/);assert.match(html,/data-straction="add-group"/);
  assert.equal((html.match(/data-structure-qc/g)||[]).length,1);assert.match(html,/Show quantity controls/);
  assert.doesNotMatch(editor.toolsMarkup(),/data-field="exceptions"|data-field="subrequirement"/);assert.doesNotMatch(html,/data-straction="not"/);
- assert.match(html,/data-straction="degroup-range"/);assert.match(html,/data-straction="clear-range"/);
+ assert.match(html,/data-straction="degroup-range"/);assert.doesNotMatch(editor.toolsMarkup(),/data-straction="clear-range"/);
  assert.match(html,/<section class="rq-reference-picker semantic/);
 });
 test('condition and Subject decomposition expose only their role and Group',()=>{
@@ -147,4 +147,17 @@ test('relation picker has one heading and moves inline decomposition and its qua
  assert.doesNotMatch(history,/data-straction|data-structure-reference/);assert.equal(JSON.stringify(e.doc),before);
  relation.children=[external,{...external,id:'ref2',target_id:'w'}];
  assert.match(editor.nodeMarkup(relation,e.doc.units.u,tree,editor.labels(tree),false),/data-structure-qc/);
+});
+
+test('card crosses remain available on completed entries and plain fields have only one',()=>{
+ const tree=clause('root',[group('subject','Subject',[fragment('sf','Subject','甲',[0,1])])],[0,text.length]);
+ const {editor,e}=editorFixture(tree);e.doc.done=['u'];e.doc.phase='complete';e.rootIds=()=>['u'];
+ const html=editor.unitMarkup(e.doc.units.u,true,false);
+ assert.equal((html.match(/class="rq-node-remove"/g)||[]).length,1);assert.match(html,/data-structure-node="subject"/);
+ e.locked=true;assert.doesNotMatch(editor.unitMarkup(e.doc.units.u,true,false),/rq-node-remove/);
+});
+test('removing a completed Group reopens only the draft then removes the whole node',async()=>{
+ const {editor,e}=editorFixture();e.doc.phase='complete';e.host={querySelectorAll:()=>[]};const calls=[];e.step=async(a,b)=>{calls.push({a,b});return true;};
+ await editor.action({dataset:{straction:'remove'},closest:()=>({dataset:{owner:'u',structureNode:'a'}})});
+ assert.deepEqual(calls,[{a:'phase',b:{phase:'fields'}},{a:'structure',b:{unit_id:'u',node_id:'a',operation:'remove'}}]);
 });

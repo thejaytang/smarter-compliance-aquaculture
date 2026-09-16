@@ -309,7 +309,7 @@ def edit(doc, r, _clear_linked=True):
         index = parent['children'].index(target)
         parent['children'][index:index+1] = target['children'] if op == 'ungroup' else []
         if parent['kind'] == 'group': refresh(parent)
-        if op=='ungroup' and not parent.get('children') and not parent.get('span'):
+        if not parent.get('children') and not parent.get('span'):
             outer=next((p for n,p in walk(tree) if n is parent),None)
             if outer and outer['kind']=='clause':outer['children'].remove(parent)
     else:
