@@ -80,7 +80,7 @@ class GroupTests(unittest.TestCase):
   self.step('assign',unit_id=self.uid,field='Subject',**self.span('甲'))
   self.step('extract',unit_id=self.uid,field='exceptions',**self.span('rope secured'))
   before=deepcopy(self.doc);tree=legacy(self.doc,self.uid)
-  self.assertTrue(next(n for n in tree['children'] if n['role']=='conditions')['negated'])
+  self.assertFalse(next(n for n in tree['children'] if n['role']=='exceptions')['negated'])
   self.add('Object','设备 A');self.step('restore',history_revision=before['revision']);self.assertNotIn('structures',self.doc)
   with self.c.db() as db:self.assertEqual(db.execute('SELECT COUNT(*) FROM requirement_structure_nodes').fetchone()[0],0)
  def test_unresolved_counts_block_completion_and_mixed_fields_cannot_get_qc(self):
@@ -123,3 +123,45 @@ class GroupTests(unittest.TestCase):
   other.validate(other.capture()[0]['value'])
   restored=Requirements(peer).read(ACTOR,self.doc['id']);self.assertEqual(restored['structures'],self.doc['structures'])
   with peer.db() as db:self.assertEqual(db.execute('PRAGMA foreign_key_check').fetchall(),[])
+
+ def test_only_conditions_allow_not_and_exception_has_its_own_clause(self):
+  self.add('Subject','甲');node=self.nodes('group','Subject')[0]
+  with self.assertRaisesRegex(ValueError,'only for Conditions'):self.edit('not',node['id'],negated=True)
+  self.add('conditions','after a storm');condition=self.nodes('group','conditions')[0];self.edit('not',condition['id'],negated=True)
+  self.edit('add-exception',**self.span('unless rope secured'))
+  exception=self.nodes('group','exceptions')[0];self.assertFalse(exception['negated'])
+  clause=exception['children'][0];self.assertEqual(clause['kind'],'clause')
+  self.add('Subject','rope',clause['id']);self.add('Main Verb','secured',clause['id'])
+  self.assertTrue(self.nodes('group','conditions')[0]['negated'])
+  self.assertEqual({n['role'] for n in self.nodes('group','exceptions')[0]['children'][0]['children']},{'Subject','Main Verb'})
+  bundle=Delivery(self.c).capture()[0]['value'];Delivery(self.c).validate(bundle)
+
+ def test_source_group_moves_marks_and_degroup_preserves_them(self):
+  self.add('Subject','甲');self.add('Object','设备 A')
+  before={n['id'] for n in self.nodes('fragment')}
+  self.edit('add-group',**self.span('甲 shall inspect 设备 A'))
+  clause=self.nodes('clause')[-1];self.assertEqual({c['role'] for c in clause['children']},{'Subject','Object'})
+  self.assertEqual({n['id'] for n in self.nodes('fragment')},before)
+  self.edit('degroup-range',clause['id'],**self.span('甲 shall inspect 设备 A'))
+  self.assertEqual(len(self.nodes('clause')),1);self.assertEqual({n['id'] for n in self.nodes('fragment')},before)
+ def test_clear_selected_marks_preserves_source_and_explicit_group(self):
+  self.edit('add-group',**self.span('甲 shall inspect 设备 A'));clause=self.nodes('clause')[-1]
+  self.add('Object','设备 A',clause['id']);self.edit('clear-range',clause['id'],**self.span('设备'))
+  self.assertEqual([n['text'] for n in self.nodes('fragment')],[' A']);self.assertEqual(self.doc['units'][self.uid]['text'],TEXT)
+  self.edit('clear-range',clause['id'],**self.span('设备 A'))
+  self.assertEqual(len(self.nodes('fragment')),0);self.assertEqual(len(self.nodes('clause')),2)
+
+ def test_clear_source_marks_also_updates_local_nested_units_without_erasing_history(self):
+  self.step('assign',unit_id=self.uid,field='Main Verb',**self.span('inspect'))
+  self.step('extract',unit_id=self.uid,field='subrequirement',**self.span('inspect 设备 A'))
+  child=next(i for i in self.doc['units'] if i!=self.uid)
+  self.step('assign',unit_id=child,field='Main Verb',start=0,end=7)
+  count=len(self.doc['units']);self.edit('clear-range',**self.span('inspect'))
+  self.assertEqual(len(self.doc['units']),count)
+  self.assertFalse(any(n.get('role')=='Main Verb' and n['kind']=='fragment' for n,_ in walk(self.doc['structures'][child])))
+  self.assertFalse(any(n.get('role')=='Main Verb' and n['kind']=='fragment' for n in self.nodes()))
+
+ def test_degroup_can_remove_an_empty_condition_group_without_a_fake_qc(self):
+  self.add('conditions','after a storm');leaf=self.nodes('fragment')[0];self.edit('decompose',leaf['id'])
+  self.edit('degroup-range',leaf['id'],**self.span('after a storm'))
+  self.assertEqual(self.tree()['children'],[])

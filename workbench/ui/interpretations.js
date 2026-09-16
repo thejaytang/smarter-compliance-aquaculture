@@ -23,11 +23,11 @@ export function logicMarkup(logic){return `<h4>Checking Logic</h4><p class="ip-c
 export function sourceSections(context){
  const u=context?.requirement||{},units=Object.assign({},...(context?.sessions||[]).map(s=>s.units),u.id?{[u.id]:u}:{});
  if(context.structure){
-  const tree=context.structure,trees=Object.assign({},...(context.sessions||[]).map(s=>s.structures||{})),clauses=treeNodes(tree).filter(n=>n.kind==='clause');
+  const tree=context.structure,trees=Object.assign({},...(context.sessions||[]).map(s=>s.structures||{})),clauses=[];const visit=n=>{if(n.role==='exceptions')return;if(n.kind==='clause')clauses.push(n);for(const child of n.children||[])visit(child);};visit(tree);
   const grouped=tree.children.find(n=>n.role==='requirements');let g=0;const labels=Object.fromEntries(treeNodes(tree).filter(n=>['clause','group'].includes(n.kind)).map(n=>[n.id,'G'+(++g)]));
   const pick=(clause,fields)=>clause.children.filter(n=>fields.includes(n.role)).map(n=>`${n.role}: ${treeText(n,units,trees)}`).join('\n');
   const at=(fields)=>clauses.map(c=>{const text=pick(c,fields);return text?`${clauses.length>1?labels[c.id]+': ':''}${text}`:'';}).filter(Boolean).join('\n');
-  const values={scope:at(['Subject']),condition:at(['conditions']),demand:[at(['Modal Verb','Main Verb','Object','subrequirement']),grouped?'Requirement branches (QC applies to complete branches): '+treeText(grouped,units,trees):''].filter(Boolean).join('\n')};
+  const values={scope:at(['Subject']),condition:[at(['conditions']),at(['exceptions'])?'Exception structure (separate scope): '+at(['exceptions']):''].filter(Boolean).join('\n'),demand:[at(['Modal Verb','Main Verb','Object','subrequirement']),grouped?'Requirement branches (QC applies to complete branches): '+treeText(grouped,units,trees):''].filter(Boolean).join('\n')};
   const pending=treeNodes(tree).some(n=>(n.kind==='clause'&&!n.children.length)||(n.kind==='group'&&(n.quantity===null||!n.children.length)));
   return Object.fromEntries(Object.entries(values).map(([key,value])=>[key,{value,basis:value?'interpretation':'unresolved',state:value&&!pending?'specified':'unresolved',references:[],gaps:[...(!value?['No '+key+' wording has been assigned in the Requirement.']:[]),...(pending?['Complete empty groups and unresolved QC in the third pane.']:[])]}]));
  }
@@ -78,9 +78,10 @@ export class InterpretationEditor{
  }
  render(){
   const host=this.host;if(!host)return;
-  const r=this.m.requirements,entries=(r?.orderedSessions?.()||[]).flatMap(s=>Object.values(s.id===r.doc?.id?r.doc.units:s.units||{}).filter(u=>(s.roles||{})[u.id]!=='condition')).sort((a,b)=>r.label(a.id).localeCompare(r.label(b.id),undefined,{numeric:true}));
+  const r=this.m.requirements,entries=(r?.orderedSessions?.()||[]).map(s=>s.id===r.doc?.id?r.doc:s);
   const d=this.draft,valid=d&&this.active?.startsWith(this.owner()+':')&&r?.selected===d.unit_id;
-  const list=entries.map(u=>`<details class="ip-requirement" ${valid&&u.id===d.unit_id?'open':''}><summary data-ip-select="${u.id}"><strong>${esc(r.label(u.id))}</strong> ${esc(u.text.slice(0,100))}</summary>${valid&&u.id===d.unit_id?this.editorMarkup(d):''}</details>`).join('');
+  const list=entries.map(s=>{const ids=r.rootIds?r.rootIds(s):Object.keys(s.units||{}).filter(id=>s.roles?.[id]!=='condition'),id=ids[0];if(!id)return '';const active=valid&&s.units?.[d.unit_id];
+   return `<details class="ip-requirement" ${active?'open':''}><summary data-ip-select="${active?d.unit_id:id}"><strong>${esc(r.entryLabel?r.entryLabel(s):r.label(id))}</strong> ${esc((s.text||s.units[id].text).slice(0,100))}</summary>${active&&ids.length>1?`<div class="ip-clause-choices">${ids.map((uid,i)=>`<button data-ip-select="${uid}" aria-pressed="${d.unit_id===uid}">${esc(r.internalLabel?.(uid)||`G${i+1}`)} · ${esc(s.units[uid].text.slice(0,65))}</button>`).join('')}</div>`:''}${active?this.editorMarkup(d):''}</details>`;}).join('');
   host.innerHTML=(this.loading?'<p role="status">Loading Requirement…</p>':'')+(list||'<p>Select or create a Requirement in the third pane.</p>');
   host.querySelectorAll?.('[data-ip-select]')?.forEach(n=>n.onclick=async e=>{e.preventDefault();await r.selectFromInterpretation(n.dataset.ipSelect);});
   host.onclick=e=>{const b=e.target.closest('[data-ip]');if(b&&!b.disabled)void this.action(b.dataset.ip,b).catch(error=>{this.notice=error.message;this.render();});};

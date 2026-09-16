@@ -7,7 +7,7 @@ from copy import deepcopy
 import uuid
 
 SCHEMA = 'requirement-structure/1'
-FIELDS = ('Subject', 'Modal Verb', 'Main Verb', 'Object', 'conditions', 'subrequirement')
+FIELDS = ('Subject', 'Modal Verb', 'Main Verb', 'Object', 'conditions', 'exceptions', 'subrequirement')
 ROLES = FIELDS + ('requirements',)
 
 
@@ -55,17 +55,10 @@ def legacy(doc, uid):
                 children.append(dict(id=identity, kind='reference', role=field, target_id=child))
         return group(uid + '/' + path, field, children, deepcopy(value[0]))
 
-    conditions = []
     if u.get('conditions'):
-        conditions.append(convert(u['conditions'], 'conditions', 'conditions'))
+        root['children'].append(convert(u['conditions'], 'conditions', 'conditions'))
     if u.get('exceptions'):
-        exception = convert(u['exceptions'], 'conditions', 'exceptions')
-        exception.update(negated=True, origin_role='exceptions')
-        conditions.append(exception)
-    if len(conditions) == 2:
-        root['children'].append(group(uid + '/applicability', 'conditions', conditions, 2))
-    else:
-        root['children'].extend(conditions)
+        root['children'].append(convert(u['exceptions'], 'exceptions', 'exceptions'))
     if u.get('subrequirement'):
         root['children'].append(convert(u['subrequirement'], 'subrequirement', 'subrequirement'))
     return root
@@ -112,8 +105,8 @@ def validate(doc):
                 if parent['kind'] == 'clause' and (kind != 'group' or role not in ROLES):
                     raise ValueError('A clause contains field groups, not a quantity over mixed fields.')
                 if parent['kind'] == 'group':
-                    if parent['role'] == 'requirements':
-                        if kind not in ('clause', 'group', 'reference') or (kind != 'clause' and role != 'requirements'):
+                    if parent['role'] in ('requirements','exceptions'):
+                        if kind not in ('clause', 'group', 'reference') or (kind != 'clause' and role != parent['role']):
                             raise ValueError('Requirement groups contain complete clauses or references.')
                     elif kind == 'clause' or role != parent['role']:
                         raise ValueError('A field group must retain its field role.')
@@ -154,7 +147,7 @@ def pending(tree):
     return any((n['kind']=='clause' and not n['children']) or (n['kind']=='group' and (not n['children'] or n['quantity'] is None)) for n, _ in walk(tree))
 
 
-def edit(doc, r):
+def edit(doc, r, _clear_linked=True):
     uid = r['unit_id']
     tree = legacy(doc, uid)
     nodes = {n['id']: (n, p) for n, p in walk(tree)}
@@ -162,6 +155,11 @@ def edit(doc, r):
     if target is None:
         raise ValueError('This group changed. Select it again.')
     op = r.get('operation')
+    linked_before=[];queue=references(tree)
+    while queue:
+        child_uid=queue.pop()
+        if child_uid not in doc['units'] or child_uid in linked_before or child_uid==uid:continue
+        linked_before.append(child_uid);queue.extend(references(legacy(doc,child_uid)))
     def identity(suffix):
         return str(uuid.uuid5(uuid.UUID(r['request_id']), suffix))
     def refresh(g):
@@ -177,24 +175,98 @@ def edit(doc, r):
         if target['kind'] != 'group' or target['role'] != role:
             raise ValueError('Select the matching field group.')
         return target
-    if op in ('add', 'add-group'):
+    def source_span(n):
+        if n.get('span'):return n['span']
+        if n['kind']=='reference' and n['target_id'] in doc['spans']:
+            offset=doc['spans'][uid][0];return [x-offset for x in doc['spans'][n['target_id']]]
+        spans=[source_span(c) for c in n.get('children',[])];spans=[x for x in spans if x]
+        return [min(x[0] for x in spans),max(x[1] for x in spans)] if spans else None
+    def all_items(n):return (not n.get('children') or n.get('quantity') in (len(n['children']),[len(n['children'])]*2)) and not n.get('negated')
+    if op=='clear-range':
+        start,end=r.get('start'),r.get('end')
+        if type(start) is not int or type(end) is not int or not 0<=start<end<=len(doc['units'][uid]['text']):raise ValueError('Select original wording first.')
+        def clear(n):
+            if 'children' not in n:return
+            result=[];changed=False
+            for c in n['children']:
+                span=source_span(c)
+                if c['kind']=='fragment' and c['role'] in FIELDS[:5] and span and span[0]<end and start<span[1]:
+                    remaining=[(span[0],min(start,span[1])),(max(end,span[0]),span[1])]
+                    for j,(a,b) in enumerate(remaining):
+                        if a<b:result.append(dict(c,id=c['id'] if not j else identity(c['id']+'/remaining'),span=[a,b],text=doc['units'][uid]['text'][a:b]))
+                    changed=True
+                elif c['kind']=='reference' and c['role']=='conditions' and span and start<=span[0]<span[1]<=end and c['target_id'] in doc['units'] and not legacy(doc,c['target_id'])['children']:
+                    changed=True
+                else:
+                    trivial=c['kind']=='group' and not c.get('span') and len(c.get('children',[]))==1 and c.get('quantity')==1 and c['children'][0]['kind']=='fragment'
+                    clear(c)
+                    if not (trivial and not c['children']):result.append(c)
+                    else:changed=True
+            n['children']=result
+            if changed and n['kind']=='group':refresh(n)
+        clear(tree)
+    elif op=='degroup-range':
+        start,end=r.get('start'),r.get('end')
+        candidates=[(n,p) for n,p in walk(tree) if p is not None and n['kind'] in ('group','clause') and n.get('span')==[start,end]]
+        if not candidates:raise ValueError('Select the complete original range of the Group to degroup it.')
+        node,container=candidates[-1]
+        if node['kind']=='clause':
+            outer=next((p for n,p in walk(tree) if n is container),None)
+            if not outer or outer['kind']!='clause' or not all_items(container):raise ValueError('Resolve the surrounding alternative quantity before degrouping this clause.')
+            for field in node['children']:
+                existing=next((c for c in outer['children'] if c.get('role')==field['role']),None)
+                if existing:
+                    if not all_items(existing) or not all_items(field):raise ValueError('Degroup would change an existing field quantity or NOT. Resolve it first.')
+                    existing['children'].extend(field['children']);refresh(existing)
+                else:outer['children'].append(field)
+            container['children'].remove(node)
+            if container['children']:refresh(container)
+            else:outer['children'].remove(container)
+        elif container['kind']=='group' and all_items(node) and all_items(container):
+            index=container['children'].index(node);container['children'][index:index+1]=node['children'];refresh(container)
+            outer=next((p for n,p in walk(tree) if n is container),None)
+            if not container['children'] and not container.get('span') and outer and outer['kind']=='clause':outer['children'].remove(container)
+        else:raise ValueError('Degroup would lose a quantity or NOT. Resolve it first.')
+    elif op in ('add', 'add-group', 'add-exception'):
         start, end = r.get('start'), r.get('end')
         if type(start) is not int or type(end) is not int or not 0 <= start < end <= len(doc['units'][uid]['text']):
             raise ValueError('Select source wording before adding a field or Group.')
         if not doc['units'][uid]['text'][start:end].strip():raise ValueError('Select nonempty source wording.')
         role = r.get('field')
-        if op == 'add-group':
-            role = ('conditions' if doc['roles'].get(uid)=='condition' else 'requirements') if target['kind'] == 'clause' else target.get('role')
-            child = (dict(id=identity('clause'), kind='clause', span=[start, end], children=[]) if role == 'requirements'
+        if op in ('add-group','add-exception'):
+            role = 'exceptions' if op=='add-exception' else ('conditions' if doc['roles'].get(uid)=='condition' else 'requirements') if target['kind'] == 'clause' else target.get('role')
+            child = (dict(id=identity('clause'), kind='clause', span=[start, end], children=[]) if role in ('requirements','exceptions')
                      else group(identity('group'), role, span=[start, end]))
         else:
             if role not in FIELDS:
                 raise ValueError('Choose a source field.')
             child = dict(id=identity('fragment'), kind='fragment', role=role, span=[start, end], text=doc['units'][uid]['text'][start:end])
+        if op=='add-group':
+            def selected_children(holder):
+                chosen=[]
+                for c in holder['children']:
+                    span=source_span(c)
+                    if span and span[0]<end and start<span[1]:
+                        if not start<=span[0]<span[1]<=end:raise ValueError('A Group boundary cuts an existing mark. Clear or adjust that mark first.')
+                        chosen.append(c)
+                if chosen and len(chosen)!=len(holder['children']) and not all_items(holder):raise ValueError('Grouping only part of this combination would change its quantity or NOT.')
+                return chosen
+            if target['kind']=='clause':
+                for holder in list(target['children']):
+                    if holder['role']=='requirements':continue
+                    chosen=selected_children(holder)
+                    if not chosen:continue
+                    if len(chosen)==len(holder['children']):target['children'].remove(holder);child['children'].append(holder)
+                    else:
+                        child['children'].append(group(identity(holder['id']+'/moved'),holder['role'],chosen,len(chosen)))
+                        holder['children']=[c for c in holder['children'] if c not in chosen];refresh(holder)
+            elif target['kind']=='group':
+                chosen=selected_children(target);child['children']=chosen;child['quantity']=len(chosen) if chosen else None
+                target['children']=[c for c in target['children'] if c not in chosen]
         dest = field_group(role); dest['children'].append(child); refresh(dest)
     elif op == 'link':
-        role = 'subrequirement' if target['kind'] == 'clause' else target.get('role')
-        if role not in ('subrequirement', 'requirements'):
+        role = r.get('field','subrequirement') if target['kind'] == 'clause' else target.get('role')
+        if role not in ('subrequirement', 'requirements', 'exceptions'):
             raise ValueError('Link complete Requirements in a requirement group.')
         dest = field_group(role)
         if any(c.get('target_id') == r.get('target_id') for c in dest['children']):
@@ -203,6 +275,8 @@ def edit(doc, r):
     elif op in ('quantity', 'not'):
         if target['kind'] != 'group':
             raise ValueError('QC and NOT apply to a combination, not to mixed fields.')
+        if op=='not' and target['role']!='conditions':
+            raise ValueError('NOT is available only for Conditions.')
         target['quantity' if op == 'quantity' else 'negated'] = deepcopy(r.get('quantity' if op == 'quantity' else 'negated'))
     elif op == 'decompose':
         if target['kind'] != 'fragment' or 'span' not in target:
@@ -226,13 +300,16 @@ def edit(doc, r):
         if parent is None:
             raise ValueError('Remove the Requirement entry to remove its root.')
         if op == 'ungroup':
-            if target['kind'] != 'group' or parent['kind'] != 'group' or target['negated'] or target['quantity'] != len(target['children']):
+            if target['kind'] != 'group' or parent['kind'] != 'group' or not all_items(target):
                 raise ValueError('Only an All group without NOT can be expanded. Other groups would lose their meaning.')
             if parent['quantity'] != len(parent['children']) or parent['negated']:
                 raise ValueError('Expand only inside an All group without NOT.')
         index = parent['children'].index(target)
         parent['children'][index:index+1] = target['children'] if op == 'ungroup' else []
         if parent['kind'] == 'group': refresh(parent)
+        if op=='ungroup' and not parent.get('children') and not parent.get('span'):
+            outer=next((p for n,p in walk(tree) if n is parent),None)
+            if outer and outer['kind']=='clause':outer['children'].remove(parent)
     else:
         raise ValueError('Unknown structure operation.')
     before = set(references(legacy(doc, uid)))
@@ -244,3 +321,9 @@ def edit(doc, r):
             doc['roots'] = append(doc['roots'], removed)
     validate(doc)
     doc['done'] = [x for x in doc['done'] if x != uid]
+    if op=='clear-range' and _clear_linked:
+        offset=doc['spans'][uid][0]
+        for child_uid in linked_before:
+            a,b=doc['spans'][child_uid];left=max(a,offset+r['start']);right=min(b,offset+r['end'])
+            if left<right:
+                edit(doc,dict(r,unit_id=child_uid,node_id=legacy(doc,child_uid)['id'],start=left-a,end=right-a),_clear_linked=False)

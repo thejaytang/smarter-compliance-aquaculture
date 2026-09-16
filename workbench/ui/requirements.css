@@ -138,3 +138,24 @@
 .rq-selectable-source { font-size:14px; caret-color:var(--accent); }
 .rq-tree-node > summary .rq-tree-count { padding:2px 5px; min-height:24px; margin-left:auto; font-size:11px; }
 .rq-tree-node > summary > span:not(.rq-tree-summary) { flex:1; }
+
+.rq-entry-root { border-top:0; margin-top:0; }
+.rq-plain-field { margin:6px 0; padding:8px; border:1px solid var(--semantic-border); border-radius:6px; }
+.rq-plain-field-title { display:flex; align-items:center; justify-content:space-between; gap:8px; font-size:12px; }
+.rq-plain-field > .rq-tree-leaf { border:0; padding:4px 0; }
+
+.rq-session-header { display:flex; align-items:flex-start; gap:8px; padding:12px; background:#f5f7fa; }
+.rq-entry-toggle { display:flex; gap:5px; align-items:center; flex:none; background:transparent; border:0; }
+.rq-session-header .rq-session-title { flex:1; min-width:0; cursor:text; }
+.rq-session-header .rq-source-preview:focus { outline:2px solid var(--accent); outline-offset:3px; }
+.rq-selection-tools { position:fixed; z-index:1200; max-width:calc(100vw - 16px); background:#fff; border:1px solid #8192a8; border-radius:8px; box-shadow:0 4px 18px #18253626; padding:6px; gap:8px; align-items:center; }
+.rq-tool-section { display:flex; flex-wrap:wrap; gap:4px; align-items:center; }
+.rq-tool-divider { align-self:stretch; width:1px; background:#a9b4c3; }
+/* Keep the complete source readable even when the Requirement pane is narrow. */
+.rq-session-header { display:grid; grid-template-columns:auto minmax(0,1fr) auto; }
+.rq-session-header > .rq-entry-toggle { grid-column:1; grid-row:1; }
+.rq-session-header > .rq-badge { grid-column:2; grid-row:1; justify-self:end; }
+.rq-session-header > .rq-locate-text { grid-column:3; grid-row:1; }
+.rq-session-header > .rq-session-title { grid-column:1 / -1; grid-row:2; width:100%; }
+
+.rq-source-preview .semantic--1,.rq-source-groups .semantic--1 { --semantic-bg:#eef2f6; --semantic-border:#6d7b8f; --semantic-text:#23354c; border:1px solid #6d7b8f; }

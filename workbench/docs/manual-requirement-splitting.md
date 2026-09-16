@@ -1,5 +1,17 @@
 # Manual requirement splitting
 
+## Entry identity and selection toolbar (current)
+
+One source entry displays one Rx in both the third and fourth panes. Local historical child units retain their IDs and saved interpretations but appear as Groups within that entry, not additional Requirements. Only another complete entry is offered by the Requirement reference picker. Historical multi-clause entries retain access to their saved clause interpretations under the single entry heading.
+
+Only the arrow beside Rx expands or collapses the entry. Clicking coloured original wording never toggles it. One entry is open at a time. Expanded original text is selectable but read-only; selection opens a floating toolbar beside the pointer (or keyboard selection) with two sections: **Group / Degroup** and **Subject / Modal Verb / Main Verb / Object / conditions / ❌**. Collapsed source text has no annotation toolbar. Escape or clicking elsewhere dismisses the toolbar. The complete source uses a full-width row in narrow panes.
+
+Group retains existing whole source marks inside its selected range. A boundary through an existing mark must be adjusted or cleared first. ❌ clears field marks only in the selected range, including matching local child-unit marks, preserving original text and explicit Groups. Degroup preserves fields and refuses to discard existing alternative quantities or NOT implicitly. Plain single fields have no QC; explicit combinations retain exact/range QC. New NOT operations are accepted only for Conditions.
+
+**Exception remains separate from Condition NOT.** Exception has a full clause structure, may have its own Scope/Conditions/Demand and can reference a complete Requirement. It is not automatically negated or merged into the main Scope. Use the separate Reference a Requirement controls and choose Exception or Subrequirement. The contextual field toolbar excludes both relationship types. A source-defined exception may be incomplete; do not invent a missing demand or deadline. Prior saved records remain readable and unmodified.
+
+These rules supersede conflicting descriptions below, including the earlier conversion of every Exception into a negated Condition. Editing a completed entry from its original text reopens an unsaved preview; explicit Save is still required.
+
 ## Unified source-bound groups (current)
 
 Select wording in the original text inside an open Requirement, then choose **Subject**, **Modal Verb**, **Main Verb**, **Object**, **conditions** or **Group** from the contextual toolbar. The original is selectable but read-only. Coloured source marks remain above each entry when its editor is collapsed. **subrequirement** opens the existing-Requirement picker; references retain real IDs and display Rx labels.

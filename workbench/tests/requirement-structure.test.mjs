@@ -23,8 +23,8 @@ test('clause containers keep bindings; QC belongs only to combinations',()=>{
  assert.match(html,/data-source-node="a"/);assert.match(html,/data-source-node="b"/);
  assert.match(html,/Shared conditions stay in the enclosing Group/);assert.match(html,/data-straction="add-group"/);
  assert.equal((html.match(/data-structure-qc/g)||[]).length,1);assert.match(html,/Show quantity controls/);
- assert.doesNotMatch(html,/data-field="exceptions"/);assert.match(html,/data-straction="not"/);
- assert.match(html,/data-straction="show-link" data-field="subrequirement"/);
+ assert.doesNotMatch(editor.toolsMarkup(),/data-field="exceptions"|data-field="subrequirement"/);assert.match(html,/data-straction="not"/);
+ assert.match(html,/data-straction="degroup-range"/);assert.match(html,/data-straction="clear-range"/);
  assert.match(html,/<details class="rq-reference-picker">/);
 });
 test('condition and Subject decomposition expose only their role and Group',()=>{
@@ -58,4 +58,28 @@ test('selection action sends owner-relative codepoint spans and no invented word
 test('recursive reference rendering preserves nested conditions rather than only source text',()=>{
  const child=clause('c',[group('cg','conditions',[fragment('cf','conditions','unless A',[0,8])],1,true)],[0,8]);
  assert.match(treeText({kind:'reference',target_id:'child'},{child:{text:'unless A'}},{child}),/NOT \(1 of 1: unless A\)/);
+});
+
+test('one entry root has no second R heading and plain fields have no QC or NOT',()=>{
+ const tree=clause('root',[group('subject','Subject',[fragment('sf','Subject','甲',[0,1])]),group('obj','Object',[fragment('of','Object','A',[9,10])])],[0,text.length]);
+ const {editor,e}=editorFixture(tree);e.rootIds=()=>['u'];e.internalLabel=()=> 'G1';
+ const html=editor.unitMarkup(e.doc.units.u,false,false);
+ assert.match(html,/rq-entry-root/);assert.doesNotMatch(html,/>R1<|data-straction="not"|data-structure-qc|>QC /);
+ const nested=group('nested','Object',[fragment('of','Object','A',[9,10])]);nested.span=[9,10];
+ const explicit=editor.nodeMarkup(nested,e.doc.units.u,tree,editor.labels(tree),false);
+ assert.match(explicit,/Group · Object/);assert.match(explicit,/>QC 1/);assert.doesNotMatch(explicit,/data-straction="not"/);
+});
+test('condition NOT and a separate exception clause retain separate scope',()=>{
+ const tree=sample();tree.children[0].negated=true;
+ tree.children.push(group('exceptions','exceptions',[clause('ex',[group('exs','Subject',[fragment('exf','Subject','乙',[12,13])])],[12,22])]));
+ const sections=sourceSections({requirement:{id:'u',text},structure:tree});
+ assert.match(sections.condition.value,/NOT.*after a storm/);assert.match(sections.condition.value,/Exception structure \(separate scope\): .*exceptions/);
+ assert.match(sections.condition.value,/Subject:.*乙/);
+ assert.doesNotMatch(sections.scope.value,/Exception|exceptions/);
+});
+
+test('a Group outline keeps the inner field colour when both share the same source span',()=>{
+ const tree=clause('root',[group('branch','requirements',[clause('nested',[group('subject','Subject',[fragment('field','Subject','甲',[0,1])])],[0,1])])],[0,1]);
+ const html=sourcePreview({text:'甲',units:{u:{text:'甲'}},spans:{u:[0,1]},structures:{u:tree},labels:{u:'R1'}});
+ assert.match(html,/Group · G/);assert.match(html,/annotation-outer/);assert.doesNotMatch(html,/semantic-overlap/);
 });

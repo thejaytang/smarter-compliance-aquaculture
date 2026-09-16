@@ -1,5 +1,11 @@
 # Requirement annotations and check design
 
+## Entry identity and Exception clarification
+
+The current [entry and toolbar contract](manual-requirement-splitting.md#entry-identity-and-selection-toolbar-current) owns display numbering and source interactions. The fourth pane shows one Rx per source entry. Historical internal identities and interpretations remain accessible within their owning entry.
+
+Condition NOT negates only its marked condition expression. Exception is a separate full-clause or Requirement-reference relationship. Source projection carries its complete branch under an explicit separate-scope description; exception subjects are not folded into the main Scope, and no missing exception demand is invented. This supersedes the earlier automatic conversion of exceptions into negated conditions. New NOT mutations on Subject, verbs, Object, exception or subrequirement groups are rejected.
+
 ## Unified group handoff (current)
 
 The [source-bound group editor](manual-requirement-splitting.md#unified-source-bound-groups-current) supersedes the earlier terminal grammatical fields and separate exception operation. Source-derived Scope, Conditions and Demands retain clause labels, subject/object associations, shared outer conditions, exact/range quantities and group NOT. An empty group or unset QC is an unresolved input, never unconditional applicability. This remains a human-authored check design, not an executed compliance result.

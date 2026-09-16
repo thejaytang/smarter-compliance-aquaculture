@@ -102,7 +102,7 @@ test('all three relation counts remain visible with nested ownership and no disc
  }
 });
 test('material-wide labels match headers and complete Requirement reference choices',()=>{
- const {editor}=fixture();const a=documentFixture(),b={...documentFixture(),id:'s2',units:{x:{id:'x',text:'Other full requirement'}},roots:[1,'x'],roles:{x:'requirement'},done:['x'],spans:{x:[0,22]}};
+ const {editor}=fixture();const a=documentFixture(),b={...documentFixture(),id:'s2',text:'Other full requirement',units:{x:{id:'x',text:'Other full requirement'}},roots:[1,'x'],roles:{x:'requirement'},done:['x'],spans:{x:[0,22]}};
  editor.doc=a;a.done=['u','v'];editor.sessions=[a,b];
  const labels=editor.displayLabels();assert.equal(new Set(Object.values(labels)).size,3);assert.equal(editor.entryLabel(b),editor.label('x'));
  const html=editor.relationMarkup(a.units.u,'exceptions','',false);assert.match(html,new RegExp(`${labels.x} · Other full requirement`));assert.match(html,/value="x"/);assert.doesNotMatch(html,/value="u"/);
@@ -198,4 +198,16 @@ test('manual Save flushes the current range before submitting its step list',asy
  const calls=[];editor.action=async()=>{calls.push('quantity');editor._dirty=true;return true;};
  editor.host.querySelectorAll=()=>[row];editor.step=async action=>calls.push(action);
  await editor.saveDraft();assert.deepEqual(calls,['quantity','save-draft']);
+});
+
+test('one R per source entry and local children never become reference choices',()=>{
+ const {editor}=fixture();const d=documentFixture();d.structure_views={u:{id:'ur',kind:'clause',children:[{id:'r',kind:'reference',target_id:'v'}]},v:{id:'vr',kind:'clause',children:[]}};editor.doc=d;editor.sessions=[d];
+ assert.equal(editor.entryLabel(d),'R1');assert.equal(editor.label('v'),'G2');assert.deepEqual(editor.completeRequirements('u'),[]);assert.deepEqual(editor.visibleUnitIds(),['u']);
+});
+
+test('only the entry arrow toggles disclosure; source wording has no disclosure action',()=>{
+ const {editor,host}=fixture();editor.doc=documentFixture();editor.sessions=[editor.doc];editor.selected='u';editor.notice='';editor.loading=false;editor.m.interpretations=null;
+ editor.render(true);assert.match(host.innerHTML,/<button[^>]+data-rq="open-session"[^>]+aria-expanded="true"/);
+ assert.match(host.innerHTML,/<div class="rq-session-title" data-entry-source>/);assert.doesNotMatch(host.innerHTML,/<summary data-rq="open-session"/);
+ editor.sessionCollapsed=true;editor.render(true);assert.doesNotMatch(host.innerHTML,/data-entry-source|rq-session-body/);
 });
