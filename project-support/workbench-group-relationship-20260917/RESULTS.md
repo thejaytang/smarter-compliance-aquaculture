@@ -25,3 +25,7 @@ Live readback: one relationship projection, SQLite integrity `ok`, zero foreign-
 Twelve owning SQLite stores were consistently backed up during controlled service shutdown. Existing business rows were unchanged across activation; integrity and foreign-key checks passed. The new projection table was added without destructive migration. Service launch first stalled reading an existing Python cache; bridge imports also waited on existing local package files. Exact observed files were hydrated and the launcher used a temporary bytecode-cache directory. The service recovered without restoring or rewriting business data. Normal service is running with AI Not connected and automation disabled.
 
 Backups, API receipts and runtime verification JSON remain local in this task folder; they are excluded from Git publication. Source code, tests and this report are the publication scope. Native Windows desktop and actual AI quality were not exercised for this change.
+
+## Publication
+
+2026-09-17: code, tests and design notes were pushed to `codex/workbench-optimization-20260916`, commit `545a0933b554c21ec1c51668508b4dd5fb479fd7`. Remote branch readback matched the local commit. Runtime stores, local backups and API receipts were excluded.
