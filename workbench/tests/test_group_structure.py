@@ -8,7 +8,7 @@ import threading
 import unittest
 import uuid
 from local_workbench.requirements import Requirements
-from local_workbench.requirement_structure import legacy, walk, validate, pending
+from local_workbench.requirement_structure import legacy, walk, validate, pending, edit
 from local_workbench.requirement_delivery import Delivery
 from local_workbench.interpretations import Interpretations, annotations, KEYS
 from local_workbench.sqlite_support import connect
@@ -48,15 +48,15 @@ class GroupTests(unittest.TestCase):
   self.assertFalse(pending(root));self.step('done',unit_id=self.uid)
   ctx=Interpretations(self.c).context(ACTOR,self.uid);self.assertEqual(ctx['structure'],root)
   projected=annotations(self.c,ACTOR,self.material['id'])['spans'];self.assertTrue(any(s['field']=='Object' and TEXT[s['start']:s['end']]=='设备 B' for s in projected))
- def test_group_not_differs_from_negating_each_child(self):
-  self.add('conditions','after a storm');self.add('conditions','rope secured')
-  group=self.nodes('group','conditions')[0];self.edit('quantity',group['id'],quantity=2);self.edit('not',group['id'],negated=True)
-  self.assertTrue(self.tree()['children'][0]['negated']);self.assertFalse(any(n.get('negated') for n in self.nodes('fragment')))
-  children=[n['id'] for n in self.nodes('fragment')];self.edit('not',group['id'],negated=False)
-  for child in children:
-   self.edit('group',group['id'],selected=[child]);nested=[n for n in self.nodes('group','conditions') if n['id']!=group['id']][-1];self.edit('not',nested['id'],negated=True)
-  self.edit('quantity',group['id'],quantity=2)
-  root=self.tree()['children'][0];self.assertFalse(root['negated']);self.assertTrue(all(n['negated'] for n in root['children']))
+ def test_retired_not_operation_is_rejected_without_new_history(self):
+  self.add('conditions','unless rope secured');node=self.nodes('group','conditions')[0]
+  before=deepcopy(self.r.read(ACTOR,self.doc['id']))
+  for value in (True,False):
+   with self.assertRaisesRegex(ValueError,'Explicit NOT editing is unavailable'):
+    self.edit('not',node['id'],negated=value)
+  self.assertEqual(self.r.read(ACTOR,self.doc['id']),before)
+  self.assertEqual(self.nodes('fragment')[0]['text'],'unless rope secured')
+  self.assertFalse(node['negated'])
  def test_nested_fields_and_unicode_offsets_are_exact(self):
   self.add('Object','🐟\nBlå linje');leaf=self.nodes('fragment')[0];self.edit('decompose',leaf['id'])
   node=self.nodes('group','Object')[-1];self.add('Object','🐟',node['id']);self.add('Object','Blå',node['id'])
@@ -108,11 +108,15 @@ class GroupTests(unittest.TestCase):
  def test_ungroup_never_erases_not_or_nonall_meaning(self):
   self.add('conditions','after a storm');self.add('conditions','rope secured');group=self.nodes('group','conditions')[0]
   self.edit('group',group['id'],selected=[n['id'] for n in self.nodes('fragment')]);child=self.nodes('group','conditions')[-1]
-  self.edit('quantity',child['id'],quantity=2);self.edit('not',child['id'],negated=True)
-  with self.assertRaises(ValueError):self.edit('ungroup',child['id'])
+  self.edit('quantity',child['id'],quantity=2)
+  historical=deepcopy(self.doc)
+  next(n for n,_ in walk(historical['structures'][self.uid]) if n['id']==child['id'])['negated']=True
+  validate(historical)
+  with self.assertRaises(ValueError):edit(historical,dict(unit_id=self.uid,node_id=child['id'],operation='ungroup'))
+  self.assertTrue(next(n for n,_ in walk(historical['structures'][self.uid]) if n['id']==child['id'])['negated'])
 
  def test_saved_interpretation_and_full_delivery_keep_group_logic(self):
-  self.add('conditions','after a storm');node=self.nodes('group','conditions')[0];self.edit('not',node['id'],negated=True)
+  self.add('conditions','unless rope secured')
   service=Interpretations(self.c);ctx=service.context(ACTOR,self.uid)
   fields={k:dict(value='',basis='unresolved',references=[],gaps=[]) for k in KEYS}
   saved=service.save(ACTOR,dict(request_id=str(uuid.uuid4()),unit_id=self.uid,expected_revision=0,context_fingerprint=ctx['fingerprint'],fields=fields))
@@ -124,15 +128,16 @@ class GroupTests(unittest.TestCase):
   restored=Requirements(peer).read(ACTOR,self.doc['id']);self.assertEqual(restored['structures'],self.doc['structures'])
   with peer.db() as db:self.assertEqual(db.execute('PRAGMA foreign_key_check').fetchall(),[])
 
- def test_only_conditions_allow_not_and_exception_has_its_own_clause(self):
+ def test_no_role_allows_not_and_exception_has_its_own_clause(self):
   self.add('Subject','甲');node=self.nodes('group','Subject')[0]
-  with self.assertRaisesRegex(ValueError,'only for Conditions'):self.edit('not',node['id'],negated=True)
-  self.add('conditions','after a storm');condition=self.nodes('group','conditions')[0];self.edit('not',condition['id'],negated=True)
+  with self.assertRaisesRegex(ValueError,'Explicit NOT editing is unavailable'):self.edit('not',node['id'],negated=True)
+  self.add('conditions','after a storm');condition=self.nodes('group','conditions')[0]
+  with self.assertRaisesRegex(ValueError,'Explicit NOT editing is unavailable'):self.edit('not',condition['id'],negated=True)
   self.edit('add-exception',**self.span('unless rope secured'))
   exception=self.nodes('group','exceptions')[0];self.assertFalse(exception['negated'])
   clause=exception['children'][0];self.assertEqual(clause['kind'],'clause')
   self.add('Subject','rope',clause['id']);self.add('Main Verb','secured',clause['id'])
-  self.assertTrue(self.nodes('group','conditions')[0]['negated'])
+  self.assertFalse(self.nodes('group','conditions')[0]['negated'])
   self.assertEqual({n['role'] for n in self.nodes('group','exceptions')[0]['children'][0]['children']},{'Subject','Main Verb'})
   bundle=Delivery(self.c).capture()[0]['value'];Delivery(self.c).validate(bundle)
 

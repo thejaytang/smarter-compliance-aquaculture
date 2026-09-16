@@ -26,3 +26,10 @@ Current behavior supersedes the previous automatic Exception-to-NOT conversion. 
 ## Publication
 
 On 2026-09-16, implementation commit `50dc48039e78729129d7ed90ff01f7aa05407727` was pushed to `codex/workbench-optimization-20260916` and verified as [PR #2](https://github.com/thejaytang/smarter-compliance-aquaculture/pull/2)'s head. [CI run 35098706313](https://github.com/thejaytang/smarter-compliance-aquaculture/actions/runs/35098706313) started for this exact commit and was still running at handoff. Local pass counts above do not assert completed remote or native Windows acceptance.
+
+
+## Source-negation follow-up
+
+User requested removing explicit NOT authoring in this version. Plain and nested Conditions no longer show a NOT button. Frontend rejects a stale NOT action before changing a draft; backend rejects the retired operation without adding history. Source wording such as “not installed in the North of Norway” or “unless rope secured” is retained verbatim, without generating an extra NOT operator. Historical stored negation remains readable and visibly read-only; no saved structure or history migration occurs. Group QC, including the previously requested Not All quantity shortcut, and independent Exception relationships are unchanged.
+
+Validation: 286 backend and 332 frontend tests passed. Regression cases cover absent controls for plain/nested Conditions, literal negative wording in fourth-pane projection, stale actions without a draft change or saved revision, and historical structure compatibility. Normal 62742 was activated with nine consistent owning-store backups. Readback confirmed unchanged saved business tables, clean foreign keys and matching served assets. During activation a transient local file-read stall and SQLite I/O error occurred; exact identified iCloud placeholder files were hydrated, then readback passed. No database restore or content rewrite was performed. The actual example browser page shows R1 open, R2/R3 closed, 13 field/group blocks, zero NOT controls, literal negative source wording and no unsaved changes. Native Windows desktop and real AI were not exercised for this change.

@@ -272,12 +272,12 @@ def edit(doc, r, _clear_linked=True):
         if any(c.get('target_id') == r.get('target_id') for c in dest['children']):
             raise ValueError('This Requirement is already in the group.')
         dest['children'].append(dict(id=identity('reference'), kind='reference', role=role, target_id=r.get('target_id'))); refresh(dest)
-    elif op in ('quantity', 'not'):
+    elif op == 'not':
+        raise ValueError('Explicit NOT editing is unavailable. Keep negation in the original wording.')
+    elif op == 'quantity':
         if target['kind'] != 'group':
-            raise ValueError('QC and NOT apply to a combination, not to mixed fields.')
-        if op=='not' and target['role']!='conditions':
-            raise ValueError('NOT is available only for Conditions.')
-        target['quantity' if op == 'quantity' else 'negated'] = deepcopy(r.get('quantity' if op == 'quantity' else 'negated'))
+            raise ValueError('QC applies to a combination, not to mixed fields.')
+        target['quantity'] = deepcopy(r.get('quantity'))
     elif op == 'decompose':
         if target['kind'] != 'fragment' or 'span' not in target:
             raise ValueError('Only an anchored source fragment can be decomposed here.')

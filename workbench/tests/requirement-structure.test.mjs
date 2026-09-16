@@ -23,7 +23,7 @@ test('clause containers keep bindings; QC belongs only to combinations',()=>{
  assert.match(html,/data-source-node="a"/);assert.match(html,/data-source-node="b"/);
  assert.match(html,/Shared conditions stay in the enclosing Group/);assert.match(html,/data-straction="add-group"/);
  assert.equal((html.match(/data-structure-qc/g)||[]).length,1);assert.match(html,/Show quantity controls/);
- assert.doesNotMatch(editor.toolsMarkup(),/data-field="exceptions"|data-field="subrequirement"/);assert.match(html,/data-straction="not"/);
+ assert.doesNotMatch(editor.toolsMarkup(),/data-field="exceptions"|data-field="subrequirement"/);assert.doesNotMatch(html,/data-straction="not"/);
  assert.match(html,/data-straction="degroup-range"/);assert.match(html,/data-straction="clear-range"/);
  assert.match(html,/<details class="rq-reference-picker">/);
 });
@@ -35,7 +35,7 @@ test('condition and Subject decomposition expose only their role and Group',()=>
   for(const other of ['conditions','Subject','Object'].filter(f=>f!==role))assert.doesNotMatch(html,new RegExp(`data-field="${other}"`));
  }
 });
-test('NOT applies to a whole quantified expression and survives fourth-pane projection',()=>{
+test('historical NOT survives read-only fourth-pane projection',()=>{
  const tree=sample();tree.children[0].negated=true;
  const sections=sourceSections({requirement:{id:'u',text},structure:tree,sessions:[{units:{u:{id:'u',text}},structures:{u:tree}}]});
  assert.match(sections.condition.value,/NOT \(1 of 1: after a storm\)/);
@@ -82,4 +82,22 @@ test('a Group outline keeps the inner field colour when both share the same sour
  const tree=clause('root',[group('branch','requirements',[clause('nested',[group('subject','Subject',[fragment('field','Subject','甲',[0,1])])],[0,1])])],[0,1]);
  const html=sourcePreview({text:'甲',units:{u:{text:'甲'}},spans:{u:[0,1]},structures:{u:tree},labels:{u:'R1'}});
  assert.match(html,/Group · G/);assert.match(html,/annotation-outer/);assert.doesNotMatch(html,/semantic-overlap/);
+});
+
+test('plain and nested Conditions have no NOT authoring; source negation stays literal',()=>{
+ const wording='not installed in the North of Norway';
+ const plain=group('c','conditions',[fragment('f','conditions',wording,[0,wording.length])]);
+ const nested=group('outer','conditions',[plain]);nested.span=[0,wording.length];
+ for(const condition of [plain,nested]){
+  const tree=clause('root',[condition],[0,wording.length]);
+  const {editor,e}=editorFixture(tree);e.doc.units.u.text=wording;
+  const html=editor.unitMarkup(e.doc.units.u,false,false);
+  assert.doesNotMatch(html,/data-straction="not"|>NOT</);assert.match(html,/not installed in the North of Norway/);
+  const value=sourceSections({requirement:{id:'u',text:wording},structure:tree}).condition.value;
+  assert.match(value,/not installed in the North of Norway/);assert.doesNotMatch(value,/NOT \(/);
+ }
+});
+test('retired NOT action cannot modify a draft or reopen a completed entry',async()=>{
+ const {editor,e}=editorFixture();e.step=()=>assert.fail('No draft operation expected');
+ await assert.rejects(editor.action({dataset:{straction:'not'}}),/Explicit NOT editing is unavailable/);
 });
