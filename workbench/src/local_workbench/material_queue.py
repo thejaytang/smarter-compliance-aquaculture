@@ -102,7 +102,7 @@ class MaterialQueue:
                         main_body = db.execute("SELECT json_extract(data,'$.blocks'),json_extract(data,'$.issues') FROM material_documents WHERE id=?", (identity,)).fetchone()
                     personal_changed = personal_changed or (changed_from_base and raw != main_body)
                     row = personal
-                    row['collaboration_view'] = 'personal'
+                    row['collaboration_view'] = 'master' if not changed_from_base and personal.get('revision') == master.get('revision') and raw == main_body else 'personal'
             qualified = bool(archived and master.get('content_status') == 'content_review_complete' and master.get('confirmation') and not master.get('source_stale') and not active_candidates(candidates.get(identity, [])) and master['source']['source_id'] not in issue_sources)
             personal_followup = active_candidates(personal_candidates) or bool(personal_candidates and personal_candidates[-1].get('status') == 'failed')
             master_failure = bool(candidates.get(identity) and candidates[identity][-1].get('status') == 'failed')

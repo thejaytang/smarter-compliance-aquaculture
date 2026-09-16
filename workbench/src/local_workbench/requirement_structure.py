@@ -228,6 +228,8 @@ def edit(doc, r, _clear_linked=True):
             if not container['children'] and not container.get('span') and outer and outer['kind']=='clause':outer['children'].remove(container)
         else:raise ValueError('Degroup would lose a quantity or NOT. Resolve it first.')
     elif op in ('add', 'add-group', 'add-exception'):
+        if op=='add-exception' or r.get('field') in ('exceptions','subrequirement') or target.get('role') in ('exceptions','subrequirement'):
+            raise ValueError('Exception and Subrequirement must link another Requirement entry.')
         start, end = r.get('start'), r.get('end')
         if type(start) is not int or type(end) is not int or not 0 <= start < end <= len(doc['units'][uid]['text']):
             raise ValueError('Select source wording before adding a field or Group.')

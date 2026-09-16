@@ -170,3 +170,9 @@
 
 .rq-session-header > .rq-entry-actions { grid-column:2 / -1; grid-row:1; justify-self:end; display:flex; align-items:center; gap:6px; }
 .rq-entry-actions button { padding:5px 9px; min-height:30px; }
+
+.rq-reference-picker { margin:10px 0; padding:10px; border-radius:6px; }
+.rq-tree-link { display:flex; align-items:end; gap:8px; }
+.rq-tree-link label { flex:1; min-width:0; font-size:12px; }
+.rq-tree-link select { display:block; width:100%; margin-top:5px; }
+.rq-linked-requirement > details { flex-basis:100%; }

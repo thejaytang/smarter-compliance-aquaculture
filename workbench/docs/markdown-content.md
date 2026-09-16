@@ -60,3 +60,8 @@ npm run build
 ```
 
 [Current correction and validation](../../project-support/markdown-notebook-20260915/pa004-correction/RESULTS.md) owns current delivery evidence. Native Windows interaction remains unverified.
+
+
+### Pane-width continuity
+
+The second-pane document and block highlights use the full available pane width, without a fixed character-width cap. Resizing the pane repositions existing passage controls and table edge tools through a ResizeObserver without rerendering their buttons, changing selection, closing insertion menus or saving content. The observer is disconnected when rebinding or resetting the editor.

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {MarkdownNotebook,blockMarkdown,reconcileDocument,insertedDocumentBlock,editableMarkdown} from '../ui/markdown-content.js';
+import {ContinuousDocument,MarkdownNotebook,blockMarkdown,reconcileDocument,insertedDocumentBlock,editableMarkdown} from '../ui/markdown-content.js';
 const blocks=()=>[
  {id:'info',role:'document_information',type:'text',text:'Identity',source_refs:[]},
  {id:'h',type:'heading',level:1,text:'Heading',source_refs:[{scope_id:'page:1'}]},
@@ -43,4 +43,14 @@ test('editable serialization retains formatting, Unicode, literal HTML and expli
  assert.equal(editableMarkdown(el('ul',el('li',text('one')),el('li',text('two')))).trim(),'- one\n- two');
  const anchor=el('a',text('safe'));anchor.getAttribute=()=> 'javascript:alert(1)';assert.equal(editableMarkdown(anchor),'safe');
  assert.equal(editableMarkdown(el('script',text('attack()'))),'');
+});
+
+test('resizing repositions existing passage controls without replacing menu or selection',()=>{
+ const w=new ContinuousDocument({m:{}});let box={top:80,height:120};const cell={getBoundingClientRect:()=>({top:110,left:100,height:30}),closest:()=>({getBoundingClientRect:()=>({top:90})})};
+ w.active={isConnected:true,getBoundingClientRect:()=>box,contains:()=>true};w.tableCell=cell;w.root={contains:()=>true};w.host={getBoundingClientRect:()=>({top:20,left:10,width:400})};const row={style:{}},col={style:{}};
+ w.controls={hidden:false,style:{},innerHTML:'existing menu',querySelector:s=>s==='.md-table-row'?row:col};
+ w.positionTools();assert.equal(w.controls.style.top,'60px');assert.equal(w.controls.style.height,'120px');assert.equal(row.style.top,'45px');assert.equal(col.style.left,'90px');
+ box={top:45,height:200};w.positionTools();assert.equal(w.controls.style.top,'25px');assert.equal(w.controls.style.height,'200px');assert.equal(w.controls.innerHTML,'existing menu');
+ w.controls.hidden=true;box.height=300;w.positionTools();assert.equal(w.controls.style.height,'200px');
+ let stopped=false;w.layoutObserver={disconnect(){stopped=true;}};w.reset();assert.equal(stopped,true);
 });

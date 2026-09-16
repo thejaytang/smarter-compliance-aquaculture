@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {sourceListRows,SourceWorkspace,sourceVersion,sourceDecision} from '../ui/source-workspace.js';
+import {sourceListRows,SourceWorkspace,sourceVersion,sourceDecision,sourceFileType} from '../ui/source-workspace.js';
 test('pending groups tasks by source without mutating source records, excludes completed tasks',()=>{
  const data={sources:[{source_id:'S10',source_title:'Ten',effective_selection:'INCLUDE'},{source_id:'S2',source_title:'Two',effective_selection:'PENDING'}],tasks:[{source_id:'S10',operation_id:'a',trigger:'Version',is_open:true},{source_id:'S10',operation_id:'b',trigger:'Original',is_open:true},{source_id:'S2',operation_id:'c',trigger:'Review',is_open:true},{source_id:'S2',operation_id:'d',is_open:false},{operation_id:'candidate',source_title:'New',is_open:true}]};
  const before=structuredClone(data),rows=sourceListRows(data,'pending');assert.deepEqual(rows.map(r=>r.source_id),['S2','S10',undefined]);assert.equal(rows[1].pending_tasks.length,2);assert.equal(rows[1].effective_selection,'INCLUDE');assert.deepEqual(data,before);assert.equal(sourceListRows(data,'pending','original')[0].source_id,'S10');
@@ -74,4 +74,13 @@ test('failed URL or file parsing leaves input in place and makes no intake write
 });
 test('program review rendering escapes document data and labels unknown ratings as needing review',async()=>{
  const {inspectionMarkup}=await import('../ui/source-workspace.js');const html=inspectionMarkup({summary:'<script>bad</script>',dimensions:{access_permission:{rating:'UNKNOWN',reason:'Verify permission',evidence:'<img>'}},coverage:{total_units:9,inspected_units:9,units:'pages'},flags:['No version found']});assert.match(html,/Needs review/);assert.match(html,/Read 9 \/ 9 pages/);assert.doesNotMatch(html,/<script>|<img>/);assert.match(html,/&lt;script&gt;/);
+});
+
+test('register file type describes downloaded evidence only',()=>{
+ assert.equal(sourceFileType({snapshot_status:'STORED',file_format:'html'}),'HTML');
+ assert.equal(sourceFileType({snapshot_status:'STORED',file_format:' PDF '}),'PDF');
+ assert.equal(sourceFileType({snapshot_status:'STORED',file_format:'htm'}),'HTML');
+ assert.equal(sourceFileType({snapshot_status:'ERROR',file_format:'pdf'}),'—');
+ assert.equal(sourceFileType({file_format:'pdf',official_url:'https://example.org/a.pdf'}),'—');
+ assert.equal(sourceFileType({snapshot_status:'STORED'}),'Unknown');
 });

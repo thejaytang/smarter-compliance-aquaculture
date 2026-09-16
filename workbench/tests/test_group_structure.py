@@ -128,18 +128,28 @@ class GroupTests(unittest.TestCase):
   restored=Requirements(peer).read(ACTOR,self.doc['id']);self.assertEqual(restored['structures'],self.doc['structures'])
   with peer.db() as db:self.assertEqual(db.execute('PRAGMA foreign_key_check').fetchall(),[])
 
- def test_no_role_allows_not_and_exception_has_its_own_clause(self):
+ def test_no_role_allows_not_and_exception_links_another_entry(self):
   self.add('Subject','甲');node=self.nodes('group','Subject')[0]
   with self.assertRaisesRegex(ValueError,'Explicit NOT editing is unavailable'):self.edit('not',node['id'],negated=True)
   self.add('conditions','after a storm');condition=self.nodes('group','conditions')[0]
   with self.assertRaisesRegex(ValueError,'Explicit NOT editing is unavailable'):self.edit('not',condition['id'],negated=True)
-  self.edit('add-exception',**self.span('unless rope secured'))
+  with self.assertRaisesRegex(ValueError,'must link another'):self.edit('add-exception',**self.span('unless rope secured'))
+  other=self.r.apply(ACTOR,dict(action='start',request_id=str(uuid.uuid4()),material_id=self.material['id'],material_revision=1,block_id='b'))['document'];oid=next(iter(other['units']))
+  self.edit('link',field='exceptions',target_id=oid)
   exception=self.nodes('group','exceptions')[0];self.assertFalse(exception['negated'])
-  clause=exception['children'][0];self.assertEqual(clause['kind'],'clause')
-  self.add('Subject','rope',clause['id']);self.add('Main Verb','secured',clause['id'])
-  self.assertFalse(self.nodes('group','conditions')[0]['negated'])
-  self.assertEqual({n['role'] for n in self.nodes('group','exceptions')[0]['children'][0]['children']},{'Subject','Main Verb'})
+  self.assertEqual(exception['children'][0]['kind'],'reference');self.assertEqual(exception['children'][0]['target_id'],oid)
   bundle=Delivery(self.c).capture()[0]['value'];Delivery(self.c).validate(bundle)
+
+ def test_links_reject_internal_items_and_keep_referenced_entry_when_unlinked(self):
+  self.step('extract',unit_id=self.uid,field='conditions',**self.span('after a storm'))
+  child=next(uid for uid in self.doc['units'] if uid!=self.uid)
+  with self.assertRaisesRegex(ValueError,'another complete Requirement'):self.edit('link',field='exceptions',target_id=child)
+  other=self.r.apply(ACTOR,dict(action='start',request_id=str(uuid.uuid4()),material_id=self.material['id'],material_revision=1,block_id='b'))['document'];oid=next(iter(other['units']))
+  other=self.r.apply(ACTOR,dict(action='extract',request_id=str(uuid.uuid4()),session_id=other['id'],expected_revision=other['revision'],unit_id=oid,field='conditions',**self.span('after a storm')))['document']
+  internal=next(uid for uid in other['units'] if uid!=oid)
+  with self.assertRaisesRegex(ValueError,'another complete Requirement'):self.edit('link',field='subrequirement',target_id=internal)
+  self.edit('link',field='subrequirement',target_id=oid);ref=self.nodes('reference','subrequirement')[0];self.edit('remove',ref['id'])
+  self.assertEqual(self.r.read(ACTOR,other['id'])['revision'],other['revision'])
 
  def test_source_group_moves_marks_and_degroup_preserves_them(self):
   self.add('Subject','甲');self.add('Object','设备 A')

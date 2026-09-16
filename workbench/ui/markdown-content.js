@@ -225,7 +225,7 @@ function appendRemainder(destination,fragment){
 
 export class ContinuousDocument {
   constructor(notebook){this.n=notebook;this.m=notebook.m;this.undo=[];this.redo=[];this.rendered=new Map();}
-  reset(){this.undo=[];this.redo=[];this.active=null;this.insertAt=null;this.rendered.clear();}
+  reset(){this.layoutObserver?.disconnect();this.undo=[];this.redo=[];this.active=null;this.insertAt=null;this.rendered.clear();}
   get locked(){return this.m.busy||this.m.opening||this.m.collaboration.readonly;}
   markup(){
     const body=this.m.draft.blocks.filter(b=>b.role!=='document_information');
@@ -264,8 +264,10 @@ export class ContinuousDocument {
     to.push({blocks:clone(this.m.draft.blocks),mark:this.bookmark()});this.m.draft.blocks=item.blocks;this.lastEdit=0;this.m.changed(true);this.m.renderContent();this.restore(item.mark);
   }
   bind(){
+    this.layoutObserver?.disconnect();
     this.root=this.m.q('[data-writing-document]');if(!this.root)return;
     this.host=this.root.parentElement;this.controls=this.host.querySelector('[data-writing-controls]');
+    if(globalThis.ResizeObserver){this.layoutObserver=new ResizeObserver(()=>this.positionTools());this.layoutObserver.observe(this.root);}
     this.rendered=new Map(Array.from(this.root.children,b=>[b.dataset.writingBlock,b.innerHTML]));
     this.root.onpointermove=e=>{if(!this.insertAt)this.showTools(this.block(e.target),e.target.closest('td,th'));};
     this.root.onfocusin=e=>this.showTools(this.block(e.target)||this.block(globalThis.getSelection()?.anchorNode));
@@ -384,19 +386,28 @@ export class ContinuousDocument {
   showTools(block,cell=null){
     if(!block||!this.root.contains(block)||this.locked)return;
     this.active=block;this.tableCell=cell;
-    const box=block.getBoundingClientRect(),host=this.host.getBoundingClientRect(),b=this.m.draft.blocks.find(b=>b.id===block.dataset.writingBlock);
+    const b=this.m.draft.blocks.find(b=>b.id===block.dataset.writingBlock);
     const control=(action,label,attrs='')=>`<button type="button" data-write-action="${action}" ${attrs}>${label}</button>`;
-    this.controls.hidden=false;this.controls.style.top=(box.top-host.top)+'px';this.controls.style.height=box.height+'px';
+    this.controls.hidden=false;
     const allowed=['text','heading'].includes(b?.type)&&b.text?.trim();
     this.controls.innerHTML=`${control('requirement','To requirement',`class="md-to-requirement" ${!allowed?'disabled':''} title="${this.m.dirty?'Save content before adding this passage to Requirements':allowed?'Add this passage in source order':'Choose a nonempty text passage'}"`)}${control('above','+', 'class="md-insert-edge md-insert-above" aria-label="Insert above passage"')}${control('below','+', 'class="md-insert-edge md-insert-below" aria-label="Insert below passage"')}`;
     if(cell&&block.contains(cell)){
       const row=cell.parentElement.rowIndex,col=cell.cellIndex,table=cell.closest('table');this.cellPosition={row,col};
-      const cellBox=cell.getBoundingClientRect(),tableBox=table.getBoundingClientRect();
       this.controls.innerHTML+=`<div class="md-table-edge md-table-row" role="group" aria-label="Row ${row+1}">${control('row-before','+','aria-label="Insert row above"')}${control('row-delete','−',`aria-label="Delete row ${row+1}" ${table.rows.length<=1?'disabled':''}`)}${control('row-after','+','aria-label="Insert row below"')}</div><div class="md-table-edge md-table-column" role="group" aria-label="Column ${col+1}">${control('col-before','+','aria-label="Insert column before"')}${control('col-delete','−',`aria-label="Delete column ${col+1}" ${cell.parentElement.cells.length<=1?'disabled':''}`)}${control('col-after','+','aria-label="Insert column after"')}</div>`;
-      // Assign style properties, not inline style attributes blocked by the app CSP.
+    }
+    this.positionTools();
+  }
+  positionTools(){
+    const block=this.active,cell=this.tableCell;
+    if(!block?.isConnected||!this.root?.contains(block)||!this.controls||this.controls.hidden)return;
+    const box=block.getBoundingClientRect(),host=this.host.getBoundingClientRect();
+    this.controls.style.top=(box.top-host.top)+'px';this.controls.style.height=box.height+'px';
+    // Resize only repositions existing controls; it must preserve focus and open menus.
+    if(cell&&block.contains(cell)){
+      const cellBox=cell.getBoundingClientRect(),tableBox=cell.closest('table').getBoundingClientRect();
       const rowEdge=this.controls.querySelector('.md-table-row'),colEdge=this.controls.querySelector('.md-table-column');
-      rowEdge.style.top=(cellBox.top-box.top+cellBox.height/2)+'px';rowEdge.style.right='0';
-      colEdge.style.top=(tableBox.top-box.top-28)+'px';colEdge.style.left=Math.min(Math.max(0,cellBox.left-host.left),Math.max(0,host.width-80))+'px';
+      if(rowEdge){rowEdge.style.top=(cellBox.top-box.top+cellBox.height/2)+'px';rowEdge.style.right='0';}
+      if(colEdge){colEdge.style.top=(tableBox.top-box.top-28)+'px';colEdge.style.left=Math.min(Math.max(0,cellBox.left-host.left),Math.max(0,host.width-80))+'px';}
     }
   }
   async action(action){

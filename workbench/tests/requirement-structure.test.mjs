@@ -25,7 +25,7 @@ test('clause containers keep bindings; QC belongs only to combinations',()=>{
  assert.equal((html.match(/data-structure-qc/g)||[]).length,1);assert.match(html,/Show quantity controls/);
  assert.doesNotMatch(editor.toolsMarkup(),/data-field="exceptions"|data-field="subrequirement"/);assert.doesNotMatch(html,/data-straction="not"/);
  assert.match(html,/data-straction="degroup-range"/);assert.match(html,/data-straction="clear-range"/);
- assert.match(html,/<details class="rq-reference-picker">/);
+ assert.match(html,/<section class="rq-reference-picker semantic/);
 });
 test('condition and Subject decomposition expose only their role and Group',()=>{
  const {editor,e,tree}=editorFixture();for(const role of ['conditions','Subject','Object']){
@@ -119,4 +119,14 @@ test('reference boundaries and repeated same-field marks keep verb and object so
  const doc={text:words,units:{child:{text:'be checked for integrity'},replacement:{text:'replaced'},parent:{text:words,subrequirement:[1,'child','replacement']}},spans:{parent:[0,36],child:[0,24],replacement:[28,36]},field_spans:{parent:{'Main Verb':[0,10],Object:[11,24]},child:{'Main Verb':[0,10],Object:[11,24]},replacement:{'Main Verb':[0,8]}}};
  const before=JSON.stringify(doc),html=sourcePreview(doc);assert.doesNotMatch(html,/semantic-overlap/);assert.match(html,/semantic-2[^>]*>be checked/);assert.match(html,/semantic-3[^>]*>for integrity/);assert.match(html,/semantic-2[^>]*>replaced/);assert.equal(JSON.stringify(doc),before);
  doc.field_spans.parent.Subject=[0,10];assert.match(sourcePreview(doc),/semantic-overlap/);
+});
+
+test('Exception and Subrequirement expose separate other-Requirement link selectors',async()=>{
+ const {editor,e,tree}=editorFixture();e.host={querySelectorAll:()=>[]};
+ const html=editor.linkMarkup(e.doc.units.u,tree,false);assert.match(html,/aria-label="Exception Requirement"/);assert.match(html,/aria-label="Subrequirement Requirement"/);assert.doesNotMatch(html,/<details|data-straction="add-exception"|data-field="exceptions"/);
+ let sent;e.step=async(action,body)=>{sent=body;};
+ const link={dataset:{referenceRole:'exceptions'},querySelector:()=>({value:'v'})},node={dataset:{owner:'u',structureNode:'root'}};
+ await editor.action({dataset:{straction:'link'},closest:s=>s==='.rq-tree-link'?link:node});assert.equal(sent.field,'exceptions');assert.equal(sent.target_id,'v');
+ const ref={kind:'reference',id:'ref',role:'exceptions',target_id:'v'};
+ assert.match(editor.nodeMarkup(ref,e.doc.units.u,tree,{},false),/data-rq="select-unit" data-id="v"/);assert.match(editor.nodeMarkup(ref,e.doc.units.u,tree,{},false),/>Unlink</);
 });

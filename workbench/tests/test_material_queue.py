@@ -157,6 +157,22 @@ class MaterialQueueTests(unittest.TestCase):
         self.assertEqual(self.q.listing(A,'pending')['total'],0)
         self.assertEqual(self.q.listing(A,'archive')['materials'][0]['candidates'][0]['status'],'kept')
 
+    def test_unchanged_empty_personal_copy_is_not_labelled_saved_work(self):
+        material=deepcopy(self.material)
+        material.update(revision=0,content_revision=0,content_status='not_extracted',confirmation=None,blocks=[],last_action={'kind':'opened'})
+        self.write(material)
+        workspace={'id':uid(),'actor':A,'material_id':material['id'],'source_id':'TS001','base_material':deepcopy(material)}
+        runtime=self.c.workspace_runtime(workspace);runtime.mkdir(parents=True)
+        with connect_sqlite(runtime/'workflow.sqlite') as db:
+            db.executescript('CREATE TABLE material_read_index(id TEXT,data TEXT);CREATE TABLE material_documents(id TEXT,data TEXT);CREATE TABLE material_candidate_index(material_id TEXT,data TEXT);')
+            raw=json.dumps(material)
+            db.execute('INSERT INTO material_read_index VALUES(?,?)',(material['id'],raw));db.execute('INSERT INTO material_documents VALUES(?,?)',(material['id'],raw))
+        self.c.put('workspace',A+':'+material['id'],workspace)
+        row=self.q.listing(A,'pending')['materials'][0]
+        self.assertEqual(row['collaboration_view'],'master')
+        self.assertEqual(row['content_status'],'not_extracted')
+        self.assertFalse(row['queue']['personal_changes'])
+
     def test_personal_confirmation_never_becomes_new_master_confirmation_in_queue(self):
         workspace={'id':uid(),'actor':A,'material_id':self.material['id'],'source_id':'TS001','base_material':deepcopy(self.material)}
         runtime=self.c.workspace_runtime(workspace);runtime.mkdir(parents=True)

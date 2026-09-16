@@ -316,10 +316,16 @@ class Requirements:
             if r.get('operation')=='link':
                 target=r.get('target_id')
                 if target==u['id']:raise ValueError('A Requirement cannot reference itself.')
+                node=next((n for n,_ in structure.walk(structure.legacy(doc,u['id'])) if n['id']==r.get('node_id')), {})
+                relation=r.get('field','subrequirement') if node.get('kind')=='clause' else node.get('role')
+                if relation in ('exceptions','subrequirement') and target in doc['units']:
+                    raise ValueError('Choose another complete Requirement entry, not an internal item.')
                 if target not in doc['units']:
                     row=db.execute('SELECT source,text,session_id FROM requirement_units WHERE id=? AND actor=?',(target,actor)).fetchone()
                     if row is None:raise ValueError('Choose an existing Requirement belonging to this reviewer.')
                     linked=self.load(db,actor,row[2])
+                    if relation in ('exceptions','subrequirement') and (linked.get('deleted') or target != next(iter(leaves(linked['roots'])),None)):
+                        raise ValueError('Choose another complete Requirement entry, not an internal item.')
                     if self.stale(linked,self.material(actor,linked['material_id'])):raise ValueError('The linked source changed. Refresh that Requirement first.')
                     doc['reference_evidence'][target]=dict(source=json.loads(row[0]),text=row[1],session_id=row[2],revision=linked['revision'])
             structure.edit(doc,r)
