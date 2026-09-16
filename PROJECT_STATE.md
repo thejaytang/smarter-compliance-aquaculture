@@ -1,5 +1,7 @@
 # Requirement Workstream: current state
 
+2026-09-16 example verb correction: R2 now marks brought into / removed from with their shared participants and location; R4 splits examinations performed / treatments carried out. R3 remains nominal. Four passage/Requirement IDs and original text preserved; source spans, quantities, live links and current interpretations verified. User Chrome shows the verbs in green. [Evidence](project-support/workbench-example-verbs-20260916/RESULTS.md).
+
 2026-09-16 example boundary correction: four passages now form four separate Requirements. R2–R4 no longer copy R1’s lead-in; R1 links all three via Subrequirement All 3. Original text is unchanged and prior combined entries remain recoverable. Four current interpretations/source spans verified. Context now ignores unlinked historical references; 32 interpretation backend tests pass. [Evidence](project-support/workbench-example-separate-20260916/RESULTS.md).
 
 2026-09-16 English example: current PE001-003 presents all four columns in English using the supplied ADF-10 vocabulary. Four saved Requirements/interpretations, all source spans, All 3 links and [2,2]/[5,5] groups verified. Prior Norwegian source and saved work remain in history. User Chrome opened the English example. [Evidence](project-support/workbench-example-english-20260916/RESULTS.md).
