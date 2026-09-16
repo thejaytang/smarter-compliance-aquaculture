@@ -24,3 +24,7 @@
 No real model request was made. Native Windows and OS-level 200% scaling were not rerun for this increment. The implementation uses the existing browser/standard-library components and no new platform-specific dependency. The earlier Windows limitation remains.
 
 The interaction contract is [here](../../workbench/docs/manual-requirement-splitting.md#interaction-language-current-2026-09-17). These local checks establish the tested workflow; colleague acceptance remains separate.
+
+## Publication
+
+2026-09-17: implementation commit `0fae54eac5990a8229fb1f934358771aac7c6baf` was pushed to `origin/codex/workbench-optimization-20260916`. The remote branch reference was read back and matched that commit. Main was not merged. This receipt is maintained separately from local runtime data.
