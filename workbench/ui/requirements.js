@@ -28,7 +28,7 @@ export class RequirementsEditor {
       <p class="rq-status" role="status" aria-live="polite">${esc(this.notice||'Select a source block in the content pane, then choose To requirements.')}</p>
       ${this.dirty?button('save-draft','Save splitting',this.pending?'disabled':''):''}${this.retryRequest?button('retry','Retry saving this step'):''}
       ${annotationLegend()}<div class="rq-list">${this.orderedSessions().map((s,i)=>`<details class="rq-session" data-session="${esc(s.id)}" ${s.id===this.doc?.id&&!this.sessionCollapsed?'open':''}>
-        <summary data-rq="open-session" data-id="${esc(s.id)}"><span class="rq-session-number">${i+1}</span><span class="rq-session-title">${sourcePreview(s.id===this.doc?.id?this.doc:s)}</span><span class="rq-badge">${s.phase==='complete'?'Complete':'In progress'}</span>${button('locate-session','Locate text',`class="rq-locate-text" data-id="${esc(s.id)}"`)}</summary>
+        <summary data-rq="open-session" data-id="${esc(s.id)}"><span class="rq-session-number">${esc(this.entryLabel(s))}</span><span class="rq-session-title">${sourcePreview({...s,...(s.id===this.doc?.id?this.doc:{}),labels:this.displayLabels()})}</span><span class="rq-badge">${s.phase==='complete'?'Complete':'In progress'}</span>${button('locate-session','Locate text',`class="rq-locate-text" data-id="${esc(s.id)}"`)}</summary>
         ${s.id===this.doc?.id?this.documentMarkup():''}</details>`).join('')}</div>
       ${this.deleted?.length?`<details><summary>Removed entries · ${this.deleted.length}</summary>${this.deleted.map(s=>`<p>${esc(s.text.slice(0,100))} ${button('undelete','Restore entry',`data-id="${s.id}"`)}</p>`).join('')}</details>`:''}${!this.sessions.length?'<div class="rq-empty"><h4>Build a requirement from its original text</h4><p>Select a source block in the content pane and choose <strong>To requirements</strong>. Split and assign its wording here; each requirement stays in the list.</p><p>Automatic extraction: Not connected.</p></div>':''}`;
     host.onclick=e=>{const b=e.target.closest('[data-rq]');if(b&&!b.disabled){e.stopPropagation();if(['open-session','select-unit','locate-session','decompose'].includes(b.dataset.rq))e.preventDefault();this.action(b.dataset.rq,b).catch(error=>this.showError(error));}};
@@ -47,14 +47,14 @@ export class RequirementsEditor {
       this.sessions=result.sessions||[];this.deleted=result.deleted||[];this.notice='';this.loading=false;
       let remembered;try{remembered=sessionStorage.getItem('requirement-session:'+context);}catch{}
       const id=this.sessions.find(s=>s.id===remembered)?.id||this.sessions.at(-1)?.id;
-      if(id)await this.open(id);else this.render(true);
+      if(id)await this.open(id,null);else this.render(true);
     }catch(e){if(context===this.context){this.loading=false;this.notice=`Saved splitting work could not be loaded. ${e.message}`;this.render(true);}}
   }
-  async open(id) {
+  async open(id,selectedId=undefined) {
     if(this.pending||this.retryRequest)return;
     if(this.dirty){this.m.unsavedDialog?.();return;}
     const context=this.context,ticket=this.readTicket={};this.loading=true;this.notice='Opening saved splitting work…';this.render(true);
-    try{const doc=await this.m.api('/api/requirements/session?'+new URLSearchParams({id}));if(context!==this.context||ticket!==this.readTicket)return;this.doc=doc;this.sessionCollapsed=false;this.results=[];this.searchPerformed=false;this.selected=this.unitIds()[0];for(const id of doc.done)this.closedUnits.add(id);this.notice=doc.stale?'Source content changed. This saved session is read-only. Bring the current passage to start a new session.':`Saved step ${doc.revision} · ${doc.phase==='complete'?'Splitting complete; material review is separate.':'Ready to continue.'}`;try{sessionStorage.setItem('requirement-session:'+context,id);}catch{}}
+    try{const doc=await this.m.api('/api/requirements/session?'+new URLSearchParams({id}));if(context!==this.context||ticket!==this.readTicket)return;this.doc=doc;this.sessionCollapsed=false;this.results=[];this.searchPerformed=false;this.selected=selectedId===null?null:selectedId||this.unitIds()[0];for(const id of doc.done)this.closedUnits.add(id);this.notice=doc.stale?'Source content changed. This saved session is read-only. Bring the current passage to start a new session.':`Saved step ${doc.revision} · ${doc.phase==='complete'?'Splitting complete; material review is separate.':'Ready to continue.'}`;try{sessionStorage.setItem('requirement-session:'+context,id);}catch{}}
     catch(e){this.showError(e);}finally{if(context===this.context&&ticket===this.readTicket){this.loading=false;this.render(true);void this.syncInterpretation();}}
   }
   showError(error) {this.notice=error.message||String(error);this.render(true);}
@@ -112,7 +112,30 @@ export class RequirementsEditor {
     this.m.q('#mw-dialog').querySelectorAll('[data-ann-choice]').forEach(b=>b.onclick=()=>{this.m.q('#mw-dialog').close();void jump(refs[Number(b.dataset.annChoice)]);});
   }
   unitIds() {return Object.keys(this.doc.units).sort((a,b)=>(this.doc.spans?.[a]?.[0]||0)-(this.doc.spans?.[b]?.[0]||0)||(this.doc.spans?.[b]?.[1]||0)-(this.doc.spans?.[a]?.[1]||0));}
-  label(id) { const local=this.unitIds(),n=local.indexOf(id);return this.doc.labels?.[id] || (n<0?`Linked ${id.slice(0,8)}`:`${this.doc.roles[id]==='condition'?'C':'R'}${n+1}`); }
+  rootIds(doc) {
+    if(doc.roots)return groupIds(doc.roots).filter(id=>doc.units?.[id]);
+    const children=new Set(Object.values(doc.units||{}).flatMap(u=>relations.flatMap(f=>groupIds(u[f]))));
+    return Object.keys(doc.units||{}).filter(id=>!children.has(id));
+  }
+  displayLabels() {
+    const docs=this.orderedSessions().map(s=>s.id===this.doc?.id?this.doc:s);
+    if(this.doc&&!docs.some(s=>s.id===this.doc.id))docs.push(this.doc);
+    const labels={};let r=0,c=0;
+    // Top-level Requirement numbers are shared by headers, cards and references.
+    for(const d of docs)for(const id of this.rootIds(d))labels[id]=`R${++r}`;
+    for(const d of docs)for(const id of Object.keys(d.units||{}).sort((a,b)=>(d.spans?.[a]?.[0]||0)-(d.spans?.[b]?.[0]||0)))if(!labels[id])labels[id]=d.roles?.[id]==='condition'?`C${++c}`:`R${++r}`;
+    return labels;
+  }
+  entryLabel(doc) {return this.rootIds(doc.id===this.doc?.id?this.doc:doc).map(id=>this.label(id)).join(', ');}
+  label(id) {return this.displayLabels()[id] || this.doc?.labels?.[id] || `Linked ${id.slice(0,8)}`;}
+  completeRequirements(owner) {
+    return this.orderedSessions().flatMap(s=>{const d=s.id===this.doc?.id?this.doc:s;return this.rootIds(d).filter(id=>id!==owner&&d.roles?.[id]!=='condition').map(id=>d.units[id]);});
+  }
+  relationMarkup(u,field,disabled,complete) {
+    const linked=new Set(groupIds(u[field])),choices=this.completeRequirements(u.id).filter(x=>!linked.has(x.id));
+    return `<div class="rq-field rq-relation-field semantic semantic-${relations.indexOf(field)+4}" data-field="${field}" tabindex="-1"><dt>${!complete?button('extract',field,`data-field="${field}" title="Extract selected text as ${field}" ${disabled}`):field}</dt><dd>${u[field]?this.groupMarkup(u[field],field,u.id,[],complete):'<span class="rq-blank">Select wording above</span>'}
+      ${!complete&&field!=='conditions'?`<div class="rq-existing"><label>Use a complete Requirement<select data-rq-existing data-field="${field}" aria-label="Complete Requirement for ${field}" ${disabled||!choices.length?'disabled':''}>${choices.map(x=>`<option value="${x.id}" title="${esc(x.text)}">${esc(this.label(x.id))} · ${esc(x.text.slice(0,90))}</option>`).join('')||'<option>No other complete Requirement</option>'}</select></label>${button('link-existing','Link Requirement',`data-field="${field}" ${disabled||!choices.length?'disabled':''}`)}</div>`:''}</dd></div>`;
+  }
   unitText(id) {return this.doc.units[id]?.text||this.doc.reference_evidence[id]?.text||id;}
   documentMarkup() {
     const d=this.doc,disabled=this.locked?'disabled':'',complete=d.phase==='complete';
@@ -124,28 +147,38 @@ export class RequirementsEditor {
       <details class="rq-history"><summary>History &amp; structured result</summary><p>Restoring creates a new saved revision. Original history remains available. Saved splitting and interpretations are included in full workspace ZIPs. Removed entries remain recoverable with their history.</p>${button('history','Load step history',this.pending?'disabled':'')}<div class="rq-history-list">${(d.steps||[]).map(s=>`<div>Step ${s.revision} · ${esc(s.action)} ${button('restore','Restore',`data-revision="${s.revision}" ${disabled}`)}</div>`).join('')}</div><pre>${esc(JSON.stringify({requirements:d.roots,units:Object.values(d.units)},null,2))}</pre></details></div>`;
   }
   unitMarkup(u,disabled,complete) {
-    const done=this.doc.done.includes(u.id);
+    const done=this.doc.done.includes(u.id),conditionOnly=this.doc.roles[u.id]==='condition';
     return `<details class="rq-unit" data-unit="${esc(u.id)}" aria-current="${u.id===this.selected?'true':'false'}" ${!this.closedUnits.has(u.id)?'open':''}>
       <summary data-rq="select-unit" data-id="${esc(u.id)}" data-toggle="true"><strong>${esc(this.label(u.id))}</strong><span class="rq-unit-preview">${esc(u.text.slice(0,100))}</span><span class="rq-badge">${done?'Finished':'Editing'}</span></summary>
       <div class="rq-unit-body"><div class="rq-unit-tools">${done?button('reopen','Continue decomposing',disabled):''}</div><label>Original text<textarea data-rq-text aria-label="${esc(this.label(u.id))} original text" readonly rows="4">${esc(u.text)}</textarea></label>
-      ${!complete?'<p class="rq-hint">Select wording, then choose a field or relationship. Use Decompose on any child to work inside its own text.</p>':''}
-      ${true?`<dl class="rq-fields">${fields.map((f,i)=>`<div class="rq-field rq-field-${i}" data-field="${f}" tabindex="-1"><dt>${!complete?button('assign',esc(f),`data-field="${f}" title="Assign selected original text to ${f}" ${disabled}`):esc(f)}</dt><dd><span>${u[f]?esc(u[f]):'<span class="rq-blank">Select wording above</span>'}</span>${u[f]&&!complete?button('clear','Clear',`data-field="${f}" aria-label="Clear ${f}" ${disabled}`):''}</dd></div>`).join('')}</dl>`:''}
-      ${relations.filter(f=>u[f]).map(f=>`<details class="rq-relation semantic semantic-${relations.indexOf(f)+4}" open><summary>${f}</summary>${this.groupMarkup(u[f],f,u.id,[],complete)}</details>`).join('')}
-      ${!complete?`<div class="rq-add-relations"><p class="rq-hint">Select wording in the original text above, then choose its relationship.</p><div class="rq-assign">${relations.map(f=>button('extract',esc(f),`data-field="${f}" ${disabled}`)).join('')}</div>${this.linkMarkup(u,disabled)}</div>`:''}
+      ${!complete?`<p class="rq-hint">${conditionOnly?'Select wording to extract a child condition. Each child can be decomposed into further conditions.':'Select wording, then choose a coloured field. Use Decompose to work inside a child.'}</p>`:''}
+      <dl class="rq-fields">${!conditionOnly?fields.map((f,i)=>`<div class="rq-field rq-field-${i}" data-field="${f}" tabindex="-1"><dt>${!complete?button('assign',esc(f),`data-field="${f}" title="Assign selected original text to ${f}" ${disabled}`):esc(f)}</dt><dd><span>${u[f]?esc(u[f]):'<span class="rq-blank">Select wording above</span>'}</span>${u[f]&&!complete?button('clear','Clear',`data-field="${f}" aria-label="Clear ${f}" ${disabled}`):''}</dd></div>`).join(''):''}
+      ${(conditionOnly?['conditions']:relations).map(f=>this.relationMarkup(u,f,disabled,complete)).join('')}</dl>
+      ${!complete&&!conditionOnly?this.linkMarkup(u,disabled):''}
       ${!complete?`<div class="rq-unit-finish">${button('done',done?'Finished':'Finish &amp; collapse',`${disabled||done?'disabled':''}`)}</div>`:''}</div></details>`;
   }
   groupMarkup(group,field,owner,path=[],readonly=false) {
     if(!group)return '<p class="rq-blank">Not stated</p>';
     const disabled=this.locked||readonly?'disabled':'',q=group[0],range=Array.isArray(q),identity=path.join('.');
-    return `<div class="rq-group" tabindex="-1" data-rq-group data-field="${field}" data-owner="${owner||''}" data-path="${identity}"><details class="rq-group-options"><summary>${quantityLabel(q)} of ${group.length-1} · count &amp; grouping</summary><div class="rq-quantity">${!readonly?`<label>Count<select data-rq-count ${disabled}><option value="exact" ${!range?'selected':''}>Exactly k</option><option value="range" ${range?'selected':''}>Range min–max</option></select></label><label>k / min<input data-rq-min type="number" min="0" max="${group.length-1}" value="${range?q[0]:q}" ${disabled}></label><label>max<input data-rq-max type="number" min="0" max="${group.length-1}" value="${range?q[1]:q}" ${disabled}></label>${button('quantity','Set count',disabled)}`:''}</div>${!readonly?`<div class="rq-group-actions">${button('group','Group selected',disabled)}${button('ungroup','Expand selected group',disabled)}${field!=='roots'?button('unlink','Detach selected',disabled):''}</div>`:''}</details>
-      <ol class="rq-children">${group.slice(1).map((child,i)=>`<li>${!readonly?`<input type="checkbox" data-rq-pick="${i+1}" aria-label="Select item ${i+1} in ${field} ${identity||'outer group'}" ${disabled}>`:''}${Array.isArray(child)?this.groupMarkup(child,field,owner,[...path,i+1],readonly):`<div class="rq-reference">${button('select-unit',this.label(child),`data-id="${child}" title="${esc(child)}" ${this.doc.units[child]?'':'disabled'}`)}<span>${esc(this.unitText(child))}</span>${this.doc.units[child]?button('decompose','Decompose',`data-id="${child}" aria-label="Decompose ${esc(this.label(child))}" ${this.locked?'disabled':''}`):''}${!this.doc.units[child]?button('reference-source','View linked original',`data-id="${child}"`):''}</div>`}</li>`).join('')}</ol>
+    return `<div class="rq-group" tabindex="-1" data-rq-group data-field="${field}" data-owner="${owner||''}" data-path="${identity}"><div class="rq-group-options"><p class="rq-count-summary">${quantityLabel(q)} of ${group.length-1}</p><div class="rq-quantity">${!readonly?`<label>Count<select data-rq-count ${disabled}><option value="exact" ${!range?'selected':''}>Exactly k</option><option value="range" ${range?'selected':''}>Range min–max</option></select></label><label>k / min<input data-rq-min type="number" min="0" max="${group.length-1}" value="${range?q[0]:q}" ${disabled}></label><label>max<input data-rq-max type="number" min="0" max="${group.length-1}" value="${range?q[1]:q}" ${disabled}></label>${button('quantity','Set count',disabled)}`:''}</div>${!readonly?`<div class="rq-group-actions">${button('group','Group selected',disabled)}${button('ungroup','Expand selected group',disabled)}${field!=='roots'?button('unlink','Detach selected',disabled):''}</div>`:''}</div>
+      <ol class="rq-children">${group.slice(1).map((child,i)=>`<li>${!readonly?`<input type="checkbox" data-rq-pick="${i+1}" aria-label="Select item ${i+1} in ${field} ${identity||'outer group'}" ${disabled}>`:''}${Array.isArray(child)?this.groupMarkup(child,field,owner,[...path,i+1],readonly):`<div class="rq-reference">${button('select-unit',this.label(child),`data-id="${child}" title="${esc(child)}" ${this.doc.units[child]||this.sessions.some(s=>s.units?.[child])?'':'disabled'}`)}<span>${esc(this.unitText(child))}</span>${this.doc.units[child]?button('decompose','Decompose',`data-id="${child}" aria-label="Decompose ${esc(this.label(child))}" ${this.locked?'disabled':''}`):''}${!this.doc.units[child]?button('reference-source','View linked original',`data-id="${child}"`):''}</div>`}</li>`).join('')}</ol>
       </div>`;
   }
   linkMarkup(u,disabled) {
     const local=Object.values(this.doc.units).filter(x=>x.id!==u.id),choices=[...local,...this.results.filter(x=>!this.doc.units[x.id])];
-    return `<details class="rq-links"><summary>Link an existing requirement</summary><p>Select the requirement ID belonging to the referenced passage or chapter.</p><label>Find by original text, extracted chapter or ID<input data-rq-search type="search" aria-label="Find requirement by text chapter or ID"></label>${button('search','Find requirements',disabled)}<label>Requirement<select data-rq-target aria-label="Requirement to link">${choices.map(x=>`<option value="${x.id}">${esc(x.chapter?x.chapter+' · ':'')}${esc(x.text.slice(0,110))} · ${x.id.slice(0,8)}</option>`).join('')}</select></label><label>Relationship<select data-rq-relation>${relations.map(f=>`<option>${f}</option>`).join('')}</select></label>${button('link','Link selected requirement',`${disabled||!choices.length?'disabled':''}`)}<p>${this.searchPerformed?`${this.results.length} saved units found for this reviewer.`:''}</p></details>`;
+    return `<details class="rq-links"><summary>Link an existing requirement</summary><p>Select the requirement ID belonging to the referenced passage or chapter.</p><label>Find by original text, extracted chapter or ID<input data-rq-search type="search" aria-label="Find requirement by text chapter or ID"></label>${button('search','Find requirements',disabled)}<label>Requirement<select data-rq-target aria-label="Requirement to link">${choices.map(x=>`<option value="${x.id}">${esc(x.chapter?x.chapter+' · ':'')}${esc(x.text.slice(0,110))} · ${x.id.slice(0,8)}</option>`).join('')}</select></label><label>Relationship<select data-rq-relation>${(this.doc.roles[u.id]==='condition'?['conditions']:relations).map(f=>`<option>${f}</option>`).join('')}</select></label>${button('link','Link selected requirement',`${disabled||!choices.length?'disabled':''}`)}<p>${this.searchPerformed?`${this.results.length} saved units found for this reviewer.`:''}</p></details>`;
+  }
+  async selectFromInterpretation(id){
+    if(this.selected===id){this.closedUnits.add(id);this.selected=null;this.render(true);return this.syncInterpretation();}
+    const s=this.orderedSessions().find(s=>s.units?.[id]);if(!s)return;
+    const changedSession=this.doc?.id!==s.id;
+    if(changedSession){await this.open(s.id,id);if(this.doc?.id!==s.id)return;}
+    this.selected=id;this.sessionCollapsed=false;this.closedUnits.delete(id);this.render(true);
+    this.host.querySelector?.(`[data-unit="${id}"]`)?.scrollIntoView({block:'nearest'});
+    if(!changedSession)await this.syncInterpretation();
   }
   async syncInterpretation() {
+    if(!this.selected){if(this.m.interpretations){this.m.interpretations.active=null;this.m.interpretations.loading=false;this.m.interpretations.render();}return;}
     if(!this.m.interpretations||this.dirty||this.pending||this.loading||this.m.dirty||this.m.opening||!this.doc?.units?.[this.selected]||this.doc.roles[this.selected]==='condition')return;
     if(this.m.interpretations.pending)return;
     await this.m.interpretations.open(this.selected);
@@ -154,7 +187,7 @@ export class RequirementsEditor {
     if(action==='open-session'){
       if(this.pending||this.retryRequest||this.loading)return;
       if(node.dataset.id!==this.doc?.id)return this.open(node.dataset.id);
-      this.sessionCollapsed=!this.sessionCollapsed;return this.render(true);
+      this.sessionCollapsed=!this.sessionCollapsed;this.selected=this.sessionCollapsed?null:this.rootIds(this.doc)[0];this.render(true);return this.syncInterpretation();
     }
     const card=node.closest?.('[data-unit]'),scope=card||this.host;
     if(card){if(this.selected!==card.dataset.unit){this.results=[];this.searchPerformed=false;}this.selected=card.dataset.unit;}
@@ -180,13 +213,13 @@ export class RequirementsEditor {
     if(action==='start')return this.start(this.host.querySelector('[data-rq-block]')?.value);
     if(action==='reload'||action==='history'){if(this.dirty){this.m.unsavedDialog?.();return;}return this.open(this.doc.id);}
     if(action==='select-unit'||action==='decompose'){
-      const id=node.dataset.id;if(!this.doc.units[id])return;this.selected=id;
+      const id=node.dataset.id;if(!this.doc.units[id])return this.selectFromInterpretation(id);this.selected=id;
       if(action==='decompose'){
         if(this.locked)return;
         if(this.doc.done.includes(id)||this.doc.phase==='complete')await this.step('reopen',{unit_id:id});
         if(this.retryRequest)return;
         this.closedUnits.delete(id);
-      }else if(node.dataset.toggle&& !this.closedUnits.has(id))this.closedUnits.add(id);else this.closedUnits.delete(id);
+      }else if(node.dataset.toggle&& !this.closedUnits.has(id)){this.closedUnits.add(id);this.selected=null;}else this.closedUnits.delete(id);
       this.render(true);const target=this.host.querySelector?.(`[data-unit="${id}"]`);target?.scrollIntoView({block:'nearest'});
       if(action==='decompose')target?.querySelector('[data-rq-text]')?.focus();
       else await this.syncInterpretation();return;
@@ -202,6 +235,7 @@ export class RequirementsEditor {
     if(action==='phase'){await this.step('phase',{phase:node.dataset.phase});if(node.dataset.phase==='complete'&&this.dirty&&!this.retryRequest)await this.saveDraft();return;}
     if(action==='restore')return this.step('restore',{history_revision:Number(node.dataset.revision)});
     if(action==='done')return this.step('done',body);
+    if(action==='link-existing'){body.field=node.dataset.field;body.target_id=scope.querySelector(`[data-rq-existing][data-field="${body.field}"]`).value;return this.step('link',body);}
     if(action==='link'){body.field=scope.querySelector('[data-rq-relation]').value;body.target_id=scope.querySelector('[data-rq-target]').value;return this.step(action,body);}
     if(action==='clear')return this.step('clear',{...body,field:node.dataset.field});
     if(['assign','extract'].includes(action)){

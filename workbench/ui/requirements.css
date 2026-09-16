@@ -84,3 +84,10 @@
 .rq-unit[aria-current="true"] { border-color:#536f94; }
 .rq-add-relations > .rq-assign { display:flex; flex-wrap:wrap; gap:6px; }
 .rq-add-relations > .rq-assign button { flex:1 1 auto; }
+
+.rq-relation-field dd { display:block; min-width:0; }
+.rq-relation-field { border-left:3px solid var(--semantic-border); }
+.rq-relation-field .rq-group { margin-top:0; }
+.rq-existing { margin-top:10px; }
+.rq-count-summary { font-weight:600; font-size:12px; }
+.rq-session-number { font-weight:700; white-space:nowrap; }

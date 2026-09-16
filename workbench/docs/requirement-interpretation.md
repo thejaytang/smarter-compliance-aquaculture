@@ -1,5 +1,18 @@
 # Requirement annotations and check design
 
+## Simplified relationship and interpretation workflow, 2026-09-16
+
+This revision supersedes the earlier separate relationship buttons and six-field status menus. Subject, Modal Verb, Main Verb, Object, conditions, exceptions and subrequirement use the same coloured field-block layout. A Condition editor contains only recursive conditions, not grammatical fields or other relationship types. Exact/range counts are displayed directly in every relationship group, including nested groups; scalar k still means exactly k.
+
+Exceptions and subrequirements can reference another whole top-level Requirement in the current material through its R number. Header numbers, card labels, source chips, reference choices and the fourth-pane list share a material-wide display numbering scheme. Persistent references remain UUIDs; display numbers are not database identities and can change when the material's structure changes. An entry with several roots displays each root number.
+
+The fourth pane lists Requirements as collapsed Rx entries when none is selected. Selecting either pane synchronizes the other. Each opened entry shows source-derived Scope, Conditions and Demands followed by one editable Logic text box per group. The projection uses recorded Subject wording, conditions/exceptions with their quantities, and modal/main verb/object/subrequirements. It preserves nested structure and does not infer unstated semantic predicates or deadlines. Missing assignments are shown as missing, never unconditional applicability. Save the third-pane decomposition before generating or saving the associated interpretation.
+
+AI suggestion operates on one Logic field. Its button becomes Generating, then Accept and Regenerate; the candidate appears in the editable text box. Accepted content and pending candidates remain separate. Edits made while generating are retained alongside the returned suggestion. Unaccepted candidates must be resolved before formal save. Saving does not disable typing; edits made after the save snapshot remain unsaved. Explicit Save is still required; leaving with edits warns before discarding. Source evidence, gaps, review and history remain under details. No real model is configured by default.
+
+The existing six-key persistence contract remains: scope/condition/demand store the source projection on explicit Save; scope_information/condition_information/verification store the three accepted Logic values. Historical records remain unchanged. No schema migration or automatic save is introduced.
+
+
 ## Latest interaction revision, 2026-09-16
 
 This section supersedes earlier autosave and second-pane annotation descriptions below. Unsaved splitting and interpretation changes stay in page memory only. Splitting steps are validated as previews; **Save splitting** or **Save & collapse** commits their final version. **Save interpretation** commits fourth-pane fields. Leaving warns about unsaved work. Earlier saved histories and legacy recovery records are retained, but new edits are not automatically journalled in the browser or database. Semantic colours render over the exact source at the top of each third-pane entry, including when collapsed. Conditions can be decomposed recursively, and one entry may reference multiple source blocks. Second-pane Current text and Changes remain separate from this coloured preview.

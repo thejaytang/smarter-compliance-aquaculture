@@ -324,3 +324,7 @@ Select a saved Requirement card to load its interpretation in the fourth pane. E
 **Site Model mapping · optional** holds explicit field comparisons and nested all/any groups. Configure agreed fields once in Settings → Site Model fields, then select their labels in the rule editor. No downstream fields are invented by default. Each comparison records which interpretation field supports it. The QueryBuilder preview is a handoff format, not an executed query or compliance result. Leave unknown groups unmapped. See [the maintained contract](docs/requirement-interpretation.md).
 
 Working copies save automatically without submitting a formal interpretation. Use **Interpretation drafts** to resume, and **Review changed sources** to find affected fields after source changes. Choose **Not explicitly stated** with a reason when the reviewed source omits a field; this never means an unconditional rule.
+
+## Simplified Requirement checking
+
+See the [current relationship and interpretation workflow](docs/requirement-interpretation.md#simplified-relationship-and-interpretation-workflow-2026-09-16). Open an Rx entry in either pane. Scope, Conditions and Demands follow the third-pane decomposition; each has an editable Logic field and an optional AI suggestion. Accept adopts the candidate; Save persists the draft.

@@ -71,3 +71,10 @@
 .mw-resizer{touch-action:none;cursor:col-resize}.mw-resizer:hover,.mw-resizer:focus-visible{background:#789398}
 .mw-resizing>.mw-pane:not(.mw-collapsed){min-width:0!important}.mw-resizing{user-select:none}
 .mw-resizing iframe{pointer-events:none}
+
+.ip-requirement { border:1px solid var(--line,#d9e2e1); border-radius:6px; margin:0 0 10px; padding:10px; }
+.ip-requirement > summary { cursor:pointer; font-size:13px; line-height:1.5; }
+.ip-requirement > summary strong { display:inline-block; margin-right:6px; color:#234e54; }
+.ip-source-wording { margin:0 0 10px; white-space:pre-wrap; overflow-wrap:anywhere; font-size:13px; line-height:1.6; }
+.ip-ai-actions { display:flex; flex-wrap:wrap; align-items:center; gap:6px; }
+.ip-ai-actions span { font-size:11px; color:var(--muted,#53656a); }

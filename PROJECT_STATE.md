@@ -1,5 +1,7 @@
 # Requirement Workstream: current state
 
+2026-09-16 latest simplification: semantic relationship blocks, condition-only recursive editing, visible quantities, whole-Requirement references and shared Rx labels are served on normal 62742. The fourth pane has synchronized collapsed Rx entries, source-derived Scope/Conditions/Demands and three editable Logic fields with explicit AI candidate acceptance. 303 frontend and 15 interpretation backend tests passed; normal browser interaction was checked without saving test edits. [Current evidence and limits](project-support/workbench-simple-check-design-20260916/RESULTS.md).
+
 2026-09-16 third-pane simplification: relationship children expose **Decompose**, relation actions are expanded, **Locate text** sits on the top coloured source header, and saved Requirement selection loads the fourth pane. Third-pane Split at cursor and Interpret requirement buttons are removed. All 290 frontend tests pass; normal example browser interaction and discarded-preview preservation were verified. [Evidence](project-support/workbench-example-20260916/RESULTS.md).
 
 2026-09-16 example checkpoint: the normal Material review list now has **example (PE001)** pinned first for the requesting reviewer, with three saved decomposition cases and four primary six-field interpretations. [Installation and verification](project-support/workbench-example-20260916/RESULTS.md) supersedes the earlier example-pending status. The demonstration is saved, not legally reviewed or assessed.

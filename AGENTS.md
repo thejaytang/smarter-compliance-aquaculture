@@ -30,6 +30,8 @@ The user-authorized 2026-09-16 [optimization plan](project-support/workbench-opt
 
 The later 2026-09-16 user interaction revision supersedes automatic draft persistence: unsaved material content, Requirement splitting and interpretations stay in page memory, with strong leave warnings and explicit saves. Splitting previews must not append history. Preserve old saved records; do not silently restore them over new edits. Semantic source colours now belong above each third-pane Requirement entry, retained when collapsed; second-pane reading modes are Current text and Changes. Multi-passage edits preserve per-block identity and source references. [Bulk editing contract](workbench/docs/markdown-content.md#select-and-edit-multiple-passages).
 
+The later 2026-09-16 simplification uses coloured relationship fields, condition-only recursive editors, visible exact/range counts and material-wide Rx display labels backed by unchanged UUIDs. The fourth pane derives source wording from decomposition and has three editable Logic fields with explicit AI candidate acceptance. Selection is bidirectional; no selection shows collapsed Rx entries. Preserve manual edits during generation and saves. [Current interaction contract](workbench/docs/requirement-interpretation.md#simplified-relationship-and-interpretation-workflow-2026-09-16).
+
 ## Documentation ownership
 
 - Write all maintained project documentation in English. Preserve exact identifiers, commands, file paths and authoritative source quotations. Historical archives and original source material retain their original language.

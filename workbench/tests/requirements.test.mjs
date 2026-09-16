@@ -59,7 +59,7 @@ test('source-header locate and direct relation actions replace redundant control
  assert.doesNotMatch(host.innerHTML,/Interpret requirement|Split at cursor|<details class="rq-add-relations"/);
  const header=host.innerHTML.slice(host.innerHTML.indexOf('data-rq="open-session"'),host.innerHTML.indexOf('</summary>',host.innerHTML.indexOf('data-rq="open-session"')));
  assert.match(header,/rq-source-preview/);assert.match(header,/data-rq="locate-session"/);
- assert.equal((host.innerHTML.match(/data-rq="extract"/g)||[]).length,6);
+ assert.equal((host.innerHTML.match(/data-rq="extract"/g)||[]).length,4);
  assert.match(host.innerHTML,/data-rq="decompose" data-id="v"/);
 });
 test('decompose reopens only the chosen finished child and exposes its exact text',async()=>{
@@ -84,4 +84,38 @@ test('header location uses that whole entry even when another unit is selected',
  m.jumpToBlock=i=>jumped=i;m.locateBlock=async b=>located=b.id;
  await editor.action('locate-session',{dataset:{id:'other'},closest:()=>null});
  assert.equal(jumped,0);assert.equal(located,'b');assert.equal(editor.selected,'v');
+});
+test('condition cards only expose recursive conditions; relation fields have fixed colours',()=>{
+ const {editor}=fixture();editor.doc=documentFixture();editor.doc.roles.v='condition';
+ const child=editor.unitMarkup(editor.doc.units.v,'',false);
+ assert.doesNotMatch(child,/data-rq="assign"|data-field="exceptions"|data-field="subrequirement"/);
+ assert.match(child,/rq-relation-field semantic semantic-4/);
+ const root=editor.unitMarkup(editor.doc.units.u,'',false);
+ for(const [i,field] of ['conditions','exceptions','subrequirement'].entries())assert.match(root,new RegExp(`semantic-${i+4}" data-field="${field}"`));
+});
+test('all three relation counts remain visible with nested ownership and no disclosure',()=>{
+ const {editor}=fixture();editor.doc=documentFixture();
+ for(const field of ['conditions','exceptions','subrequirement']){
+  const html=editor.groupMarkup([[1,2],'u',[1,'v']],field,'owner',[2],false);
+  assert.match(html,/1 to 2 of 2/);assert.match(html,/data-owner="owner" data-path="2"/);assert.match(html,/data-path="2.2"/);
+  assert.doesNotMatch(html,/<details/);assert.match(html,/data-rq-count/);
+ }
+});
+test('material-wide labels match headers and complete Requirement reference choices',()=>{
+ const {editor}=fixture();const a=documentFixture(),b={...documentFixture(),id:'s2',units:{x:{id:'x',text:'Other full requirement'}},roots:[1,'x'],roles:{x:'requirement'},done:['x'],spans:{x:[0,22]}};
+ editor.doc=a;a.done=['u','v'];editor.sessions=[a,b];
+ const labels=editor.displayLabels();assert.equal(new Set(Object.values(labels)).size,3);assert.equal(editor.entryLabel(b),editor.label('x'));
+ const html=editor.relationMarkup(a.units.u,'exceptions','',false);assert.match(html,new RegExp(`${labels.x} · Other full requirement`));assert.match(html,/value="x"/);assert.doesNotMatch(html,/value="u"/);
+});
+test('right-pane selection reveals the matching left card and deselection clears the active interpretation',async()=>{
+ const {editor,m,host}=fixture();editor.doc=documentFixture();editor.sessions=[editor.doc];editor.selected=null;editor.closedUnits=new Set(['u','v']);editor.render=()=>{};host.querySelector=()=>null;
+ let opened,empty=0;m.interpretations={open:async id=>opened=id,render:()=>empty++,active:'old'};
+ await editor.selectFromInterpretation('v');assert.equal(editor.selected,'v');assert.equal(opened,'v');assert.equal(editor.closedUnits.has('v'),false);
+ await editor.selectFromInterpretation('v');assert.equal(editor.selected,null);assert.equal(m.interpretations.active,null);assert.equal(empty,1);
+});
+test('linking another complete Requirement submits its immutable ID and relationship',async()=>{
+ const {editor}=fixture();editor.doc=documentFixture();let sent;
+ const card={dataset:{unit:'u'},querySelector:()=>({value:'other-root-id'})};editor.step=async(a,b)=>sent={a,b};
+ await editor.action('link-existing',{dataset:{field:'exceptions'},closest:()=>card});
+ assert.deepEqual(sent,{a:'link',b:{unit_id:'u',field:'exceptions',target_id:'other-root-id'}});
 });

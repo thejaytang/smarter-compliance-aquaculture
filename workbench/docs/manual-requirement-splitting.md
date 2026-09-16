@@ -1,5 +1,9 @@
 # Manual requirement splitting
 
+## Current relationship editor
+
+The [simplified workflow contract](requirement-interpretation.md#simplified-relationship-and-interpretation-workflow-2026-09-16) owns the current coloured relationship fields, condition-only decomposition, visible counts, whole-Requirement references and synchronized Rx selection. It supersedes conflicting descriptions below.
+
 ## Latest interaction revision, 2026-09-16
 
 This section supersedes earlier autosave and second-pane annotation descriptions below. Unsaved splitting and interpretation changes stay in page memory only. Splitting steps are validated as previews; **Save splitting** or **Save & collapse** commits their final version. **Save interpretation** commits fourth-pane fields. Leaving warns about unsaved work. Earlier saved histories and legacy recovery records are retained, but new edits are not automatically journalled in the browser or database. Semantic colours render over the exact source at the top of each third-pane entry, including when collapsed. Conditions can be decomposed recursively, and one entry may reference multiple source blocks. Second-pane Current text and Changes remain separate from this coloured preview.
