@@ -22,3 +22,9 @@ AI suggestion is field-specific: Generating transitions to an editable candidate
 The real shared AI service remains Not connected. AI state transitions were tested with simulated responses; real provider quality and native Windows desktop interaction are not newly verified. Display numbers are presentation aliases and can change when the material structure changes; database identity and source/history links remain stable. These are check designs, not compliance findings.
 
 The current workflow contract is [Requirement interpretation](../../workbench/docs/requirement-interpretation.md#simplified-relationship-and-interpretation-workflow-2026-09-16).
+
+## Inline condition follow-up
+
+Conditions now expand in place between their siblings inside the owning Conditions field; attached conditions are no longer duplicated as flat cards. Quantity shortcuts sit above each group's children: All (N) stores N, Any (OR) stores [1,N], Exactly one stores 1, and Range accepts explicit inclusive bounds. A nested combination remains one direct item. Existing non-all bounds are preserved when group membership changes.
+
+Validation: 308 frontend tests and 18 Requirement backend tests passed. Tests cover inline ordering/no duplicate cards, nested ownership, preset semantics, custom ranges and keeping a finished ancestor open during child edits. On normal 62742, the sea-lice R4 displayed the two sibling Conditions below their quantity controls. Decomposing C14 exposed its two child conditions in place. Any (OR) changed that inner group's preview to 1–2 of 2. The leave warning appeared and the test draft was discarded; no formal example save was requested. An approval timeout on the discard operation was resolved by one successful retry. No normal-service restart, model call or business schema change was required.

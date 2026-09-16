@@ -6,10 +6,20 @@ export const fields = ['Subject','Modal Verb','Main Verb','Object'];
 export const relations = ['conditions','exceptions','subrequirement'];
 export const codepointOffset = (text, utf16Offset) => Array.from(text.slice(0, utf16Offset)).length;
 export function quantityLabel(q) { return Array.isArray(q) ? `${q[0]} to ${q[1]}` : `Exactly ${q}`; }
+export function quantityPreset(preset,count) {
+  if(preset==='all')return count;
+  if(preset==='any')return [1,count];
+  if(preset==='one')return 1;
+  throw Error('Choose All, Any (OR), or Exactly one.');
+}
+export function quantityMode(quantity,count) {
+  const [min,max]=Array.isArray(quantity)?quantity:[quantity,quantity];
+  return min===count&&max===count?'all':min===1&&max===count?'any':min===1&&max===1?'one':'custom';
+}
 export function groupIds(group) { return group ? group.slice(1).flatMap(x => Array.isArray(x) ? groupIds(x) : [x]) : []; }
 const button = (action,label,attrs='') => `<button type="button" data-rq="${action}" ${attrs}>${label}</button>`;
 export class RequirementsEditor {
-  constructor(materials) { this.m=materials; this.sessions=[]; this.results=[]; this.closedUnits=new Set(); this.sessionCollapsed=false; }
+  constructor(materials) { this.m=materials; this.sessions=[]; this.results=[]; this.closedUnits=new Set(); this.customGroups=new Set(); this.sessionCollapsed=false; }
   get host() { return this.m.q('#mw-requirement-content'); }
   get locked() { return this.loading || this.pending || this.m.busy || this.m.opening || this.m.dirty || this.doc?.stale || !!this.retryRequest || this.m.collaboration.readonly; }
   key() { return `${this.m.state?.actor?.id || ''}:${this.m.id}:${this.m.material?.revision}:${this.m.material?.collaboration?.view || ''}`; }
@@ -17,7 +27,7 @@ export class RequirementsEditor {
     const host=this.host;if(!host||!this.m.material)return;
     const key=this.key();
     if(key!==this.context) {
-      this.context=key;this.closedUnits.clear();this.sessionCollapsed=false;this.doc=null;this.sessions=[];this.selected=null;this.results=[];this.notice='Loading saved splitting work…';this.lastRender=null;this.loading=true;this.dirty=false;this.edits=[];
+      this.context=key;this.closedUnits.clear();this.customGroups.clear();this.sessionCollapsed=false;this.doc=null;this.sessions=[];this.selected=null;this.results=[];this.notice='Loading saved splitting work…';this.lastRender=null;this.loading=true;this.dirty=false;this.edits=[];
       this.loadList(key);
     }
     const auto=this.m.q('[data-action="reprocess"]');if(auto){auto.disabled=true;auto.title='Automatic requirement extraction is not connected.';}
@@ -75,6 +85,7 @@ export class RequirementsEditor {
     if(this.pending)return;
     if(!retry&&this.locked&&!['start','save-draft'].includes(action))return;
     const request=retry||{request_id:crypto.randomUUID(),action,...(this.doc?{session_id:this.doc.id,expected_revision:this.doc.revision}:{}),...body};
+    const previousDone=new Set(this.doc?.done||[]);
     const context=this.context;this.pending=true;this.notice=['save-draft','delete','undelete'].includes(request.action)?'Saving…':'Updating unsaved splitting…';this.render(true);this.m.updateNavigationLock?.();
     try {
       if(!(this.edits||[]).length){this.baseSession=request.action==='start'?null:this.doc?.id;this.baseRevision=this.doc?.revision;}
@@ -90,7 +101,7 @@ export class RequirementsEditor {
       if(result.status==='conflict')throw Object.assign(Error(result.error),{status:409,definitive:true});
       this.retryRequest=null;this.doc=result.document;this.sessionCollapsed=false;
       if(this.doc.deleted){this.doc=null;this.selected=null;await this.loadList(context);return;}
-      for(const id of this.doc.done)this.closedUnits.add(id);
+      for(const id of this.doc.done)if(!previousDone.has(id))this.closedUnits.add(id);
       if(this.doc.phase==='complete')this.sessionCollapsed=true;
       if(!this.doc.units[this.selected])this.selected=this.unitIds().find(id=>!this.doc.done.includes(id))||this.unitIds()[0];
       const index=this.sessions.findIndex(s=>s.id===this.doc.id);if(index<0)this.sessions.push(this.doc);else this.sessions[index]=this.doc;
@@ -141,16 +152,19 @@ export class RequirementsEditor {
     const d=this.doc,disabled=this.locked?'disabled':'',complete=d.phase==='complete';
     return `<div class="rq-session-body"><div class="rq-source-context"><span>${esc(d.chapter||'Original passage')}</span>${button('delete','Remove entry',disabled)}</div>
       ${complete?`<p class="rq-hint">Splitting complete. Material review is separate.</p>${button('phase','Resume editing',`data-phase="fields" ${disabled}`)}`:''}
-      <div class="rq-units">${this.unitIds().map(id=>this.unitMarkup(d.units[id],disabled,complete)).join('')}</div>
+      <div class="rq-units">${this.unitIds().filter(id=>!this.inlineConditionIds().has(id)).map(id=>this.unitMarkup(d.units[id],disabled,complete)).join('')}</div>
       ${this.unitIds().length>1?`<details class="rq-outer"><summary>Relationships between requirements</summary>${this.groupMarkup(d.roots,'roots',null,[],complete)}</details>`:''}
       <div class="rq-footer">${!complete?button('phase','Save &amp; collapse',`data-phase="complete" ${disabled||d.done.length!==Object.keys(d.units).length?'disabled':''}`):''}${button('reload','Reload saved work',this.pending||this.retryRequest?'disabled':'')}</div>
       <details class="rq-history"><summary>History &amp; structured result</summary><p>Restoring creates a new saved revision. Original history remains available. Saved splitting and interpretations are included in full workspace ZIPs. Removed entries remain recoverable with their history.</p>${button('history','Load step history',this.pending?'disabled':'')}<div class="rq-history-list">${(d.steps||[]).map(s=>`<div>Step ${s.revision} · ${esc(s.action)} ${button('restore','Restore',`data-revision="${s.revision}" ${disabled}`)}</div>`).join('')}</div><pre>${esc(JSON.stringify({requirements:d.roots,units:Object.values(d.units)},null,2))}</pre></details></div>`;
   }
-  unitMarkup(u,disabled,complete) {
+  inlineConditionIds() {
+    return new Set(Object.values(this.doc.units).flatMap(u=>groupIds(u.conditions)).filter(id=>this.doc.roles[id]==='condition'));
+  }
+  unitMarkup(u,disabled,complete,inline=false) {
     const done=this.doc.done.includes(u.id),conditionOnly=this.doc.roles[u.id]==='condition';
-    return `<details class="rq-unit" data-unit="${esc(u.id)}" aria-current="${u.id===this.selected?'true':'false'}" ${!this.closedUnits.has(u.id)?'open':''}>
-      <summary data-rq="select-unit" data-id="${esc(u.id)}" data-toggle="true"><strong>${esc(this.label(u.id))}</strong><span class="rq-unit-preview">${esc(u.text.slice(0,100))}</span><span class="rq-badge">${done?'Finished':'Editing'}</span></summary>
-      <div class="rq-unit-body"><div class="rq-unit-tools">${done?button('reopen','Continue decomposing',disabled):''}</div><label>Original text<textarea data-rq-text aria-label="${esc(this.label(u.id))} original text" readonly rows="4">${esc(u.text)}</textarea></label>
+    return `<details class="rq-unit${inline?' rq-inline-condition':''}" data-unit="${esc(u.id)}" aria-current="${u.id===this.selected?'true':'false'}" ${!this.closedUnits.has(u.id)?'open':''}>
+      <summary data-rq="select-unit" data-id="${esc(u.id)}" data-toggle="true"><strong>${esc(this.label(u.id))}</strong><span class="rq-unit-preview">${esc(u.text.slice(0,100))}</span><span class="rq-badge">${done?'Finished':'Editing'}</span>${inline?button('decompose','Decompose',`data-id="${u.id}" aria-label="Decompose ${esc(this.label(u.id))}" ${disabled}`):''}</summary>
+      <div class="rq-unit-body"><div class="rq-unit-tools">${done&&!inline?button('reopen','Continue decomposing',disabled):''}</div><label>Original text<textarea data-rq-text aria-label="${esc(this.label(u.id))} original text" readonly rows="4">${esc(u.text)}</textarea></label>
       ${!complete?`<p class="rq-hint">${conditionOnly?'Select wording to extract a child condition. Each child can be decomposed into further conditions.':'Select wording, then choose a coloured field. Use Decompose to work inside a child.'}</p>`:''}
       <dl class="rq-fields">${!conditionOnly?fields.map((f,i)=>`<div class="rq-field rq-field-${i}" data-field="${f}" tabindex="-1"><dt>${!complete?button('assign',esc(f),`data-field="${f}" title="Assign selected original text to ${f}" ${disabled}`):esc(f)}</dt><dd><span>${u[f]?esc(u[f]):'<span class="rq-blank">Select wording above</span>'}</span>${u[f]&&!complete?button('clear','Clear',`data-field="${f}" aria-label="Clear ${f}" ${disabled}`):''}</dd></div>`).join(''):''}
       ${(conditionOnly?['conditions']:relations).map(f=>this.relationMarkup(u,f,disabled,complete)).join('')}</dl>
@@ -159,9 +173,13 @@ export class RequirementsEditor {
   }
   groupMarkup(group,field,owner,path=[],readonly=false) {
     if(!group)return '<p class="rq-blank">Not stated</p>';
-    const disabled=this.locked||readonly?'disabled':'',q=group[0],range=Array.isArray(q),identity=path.join('.');
-    return `<div class="rq-group" tabindex="-1" data-rq-group data-field="${field}" data-owner="${owner||''}" data-path="${identity}"><div class="rq-group-options"><p class="rq-count-summary">${quantityLabel(q)} of ${group.length-1}</p><div class="rq-quantity">${!readonly?`<label>Count<select data-rq-count ${disabled}><option value="exact" ${!range?'selected':''}>Exactly k</option><option value="range" ${range?'selected':''}>Range min–max</option></select></label><label>k / min<input data-rq-min type="number" min="0" max="${group.length-1}" value="${range?q[0]:q}" ${disabled}></label><label>max<input data-rq-max type="number" min="0" max="${group.length-1}" value="${range?q[1]:q}" ${disabled}></label>${button('quantity','Set count',disabled)}`:''}</div>${!readonly?`<div class="rq-group-actions">${button('group','Group selected',disabled)}${button('ungroup','Expand selected group',disabled)}${field!=='roots'?button('unlink','Detach selected',disabled):''}</div>`:''}</div>
-      <ol class="rq-children">${group.slice(1).map((child,i)=>`<li>${!readonly?`<input type="checkbox" data-rq-pick="${i+1}" aria-label="Select item ${i+1} in ${field} ${identity||'outer group'}" ${disabled}>`:''}${Array.isArray(child)?this.groupMarkup(child,field,owner,[...path,i+1],readonly):`<div class="rq-reference">${button('select-unit',this.label(child),`data-id="${child}" title="${esc(child)}" ${this.doc.units[child]||this.sessions.some(s=>s.units?.[child])?'':'disabled'}`)}<span>${esc(this.unitText(child))}</span>${this.doc.units[child]?button('decompose','Decompose',`data-id="${child}" aria-label="Decompose ${esc(this.label(child))}" ${this.locked?'disabled':''}`):''}${!this.doc.units[child]?button('reference-source','View linked original',`data-id="${child}"`):''}</div>`}</li>`).join('')}</ol>
+    const disabled=this.locked||readonly?'disabled':'',q=group[0],range=Array.isArray(q),identity=path.join('.'),count=group.length-1,mode=quantityMode(q,count),key=[this.doc.id,owner,field,identity].join(':');
+    const custom=mode==='custom'||this.customGroups.has(key);
+    return `<div class="rq-group" tabindex="-1" data-rq-group data-field="${field}" data-owner="${owner||''}" data-path="${identity}"><div class="rq-group-options"><p class="rq-count-summary">${quantityLabel(q)} of ${count}</p>
+      <div class="rq-quantity-presets" role="group" aria-label="Quantity for ${field}">${[['all',`All (${count})`,'Every direct item must hold'],['any','Any (OR)','At least one; more than one is allowed'],['one','Exactly one','One and only one direct item'],['custom','Range','Set minimum and maximum']].map(([preset,label,title])=>button(preset==='custom'?'quantity-custom':'quantity-preset',label,`data-preset="${preset}" title="${title}" aria-pressed="${mode===preset}" ${disabled}`)).join('')}</div>
+      ${custom&&!readonly?`<div class="rq-quantity"><label>Minimum<input data-rq-min type="number" min="0" max="${count}" value="${range?q[0]:q}" ${disabled}></label><label>Maximum<input data-rq-max type="number" min="0" max="${count}" value="${range?q[1]:q}" ${disabled}></label>${button('quantity','Apply range',disabled)}</div>`:''}
+      ${!readonly?`<div class="rq-group-actions">${button('group','Group selected',disabled)}${button('ungroup','Expand selected group',disabled)}${field!=='roots'?button('unlink','Detach selected',disabled):''}</div>`:''}</div>
+      <ol class="rq-children">${group.slice(1).map((child,i)=>`<li>${!readonly?`<input type="checkbox" data-rq-pick="${i+1}" aria-label="Select item ${i+1} in ${field} ${identity||'outer group'}" ${disabled}>`:''}${Array.isArray(child)?this.groupMarkup(child,field,owner,[...path,i+1],readonly):this.doc.roles[child]==='condition'&&field==='conditions'?`<div class="rq-condition-slot" data-condition-instance="${esc([owner,field,identity,child].join(':'))}">${this.unitMarkup(this.doc.units[child],this.locked?'disabled':'',readonly,true)}</div>`:`<div class="rq-reference">${button('select-unit',this.label(child),`data-id="${child}" title="${esc(child)}" ${this.doc.units[child]||this.sessions.some(s=>s.units?.[child])?'':'disabled'}`)}<span>${esc(this.unitText(child))}</span>${this.doc.units[child]?button('decompose','Decompose',`data-id="${child}" aria-label="Decompose ${esc(this.label(child))}" ${this.locked?'disabled':''}`):''}${!this.doc.units[child]?button('reference-source','View linked original',`data-id="${child}"`):''}</div>`}</li>`).join('')}</ol>
       </div>`;
   }
   linkMarkup(u,disabled) {
@@ -213,6 +231,7 @@ export class RequirementsEditor {
     if(action==='start')return this.start(this.host.querySelector('[data-rq-block]')?.value);
     if(action==='reload'||action==='history'){if(this.dirty){this.m.unsavedDialog?.();return;}return this.open(this.doc.id);}
     if(action==='select-unit'||action==='decompose'){
+      const instance=node.closest?.('[data-condition-instance]')?.dataset?.conditionInstance;
       const id=node.dataset.id;if(!this.doc.units[id])return this.selectFromInterpretation(id);this.selected=id;
       if(action==='decompose'){
         if(this.locked)return;
@@ -220,7 +239,7 @@ export class RequirementsEditor {
         if(this.retryRequest)return;
         this.closedUnits.delete(id);
       }else if(node.dataset.toggle&& !this.closedUnits.has(id)){this.closedUnits.add(id);this.selected=null;}else this.closedUnits.delete(id);
-      this.render(true);const target=this.host.querySelector?.(`[data-unit="${id}"]`);target?.scrollIntoView({block:'nearest'});
+      this.render(true);const target=this.host.querySelector?.(instance?`[data-condition-instance="${instance}"] > [data-unit="${id}"]`:`[data-unit="${id}"]`);target?.scrollIntoView({block:'nearest'});
       if(action==='decompose')target?.querySelector('[data-rq-text]')?.focus();
       else await this.syncInterpretation();return;
     }
@@ -243,11 +262,17 @@ export class RequirementsEditor {
       body.field=node.dataset.field;
       return this.step(action,body);
     }
-    if(['quantity','group','ungroup','unlink'].includes(action)){
+    if(['quantity','quantity-preset','quantity-custom','group','ungroup','unlink'].includes(action)){
       const group=node.closest('[data-rq-group]');body.unit_id=group.dataset.owner;body.field=group.dataset.field;body.path=group.dataset.path?group.dataset.path.split('.').map(Number):[];
+      const key=[this.doc.id,body.unit_id||null,body.field,group.dataset.path||''].join(':');
+      if(action==='quantity-custom'){this.customGroups.add(key);this.render(true);return;}
+      if(action==='quantity-preset'){
+        let combination=body.field==='roots'?this.doc.roots:this.doc.units[body.unit_id][body.field];for(const index of body.path)combination=combination[index];
+        body.quantity=quantityPreset(node.dataset.preset,combination.length-1);this.customGroups.delete(key);return this.step('quantity',body);
+      }
       if(action==='quantity'){
         const controls=group.querySelector('.rq-quantity'),low=Number(controls.querySelector('[data-rq-min]').value),high=Number(controls.querySelector('[data-rq-max]').value);
-        body.quantity=controls.querySelector('[data-rq-count]').value==='exact'?low:[low,high];
+        body.quantity=[low,high];
       }else body.indices=[...group.querySelectorAll(':scope > .rq-children > li > [data-rq-pick]:checked')].map(x=>Number(x.dataset.rqPick));
       return this.step(action,body);
     }

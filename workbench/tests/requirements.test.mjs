@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {RequirementsEditor,codepointOffset,quantityLabel,groupIds} from '../ui/requirements.js';
+import {RequirementsEditor,codepointOffset,quantityLabel,groupIds,quantityPreset,quantityMode} from '../ui/requirements.js';
 function fixture(){
  const host={innerHTML:'',classList:{add(){}},setAttribute(){},removeAttribute(){}};
  const auto={},m={id:'m',state:{actor:{id:'a'}},material:{revision:3,collaboration:{view:'personal'}},draft:{blocks:[{id:'b',type:'text',text:'Original whole passage'}]},collaboration:{readonly:false},q:s=>s==='#mw-requirement-content'?host:auto};
@@ -98,7 +98,7 @@ test('all three relation counts remain visible with nested ownership and no disc
  for(const field of ['conditions','exceptions','subrequirement']){
   const html=editor.groupMarkup([[1,2],'u',[1,'v']],field,'owner',[2],false);
   assert.match(html,/1 to 2 of 2/);assert.match(html,/data-owner="owner" data-path="2"/);assert.match(html,/data-path="2.2"/);
-  assert.doesNotMatch(html,/<details/);assert.match(html,/data-rq-count/);
+  assert.doesNotMatch(html,/<details/);assert.match(html,/data-rq="quantity-preset"/);
  }
 });
 test('material-wide labels match headers and complete Requirement reference choices',()=>{
@@ -118,4 +118,36 @@ test('linking another complete Requirement submits its immutable ID and relation
  const card={dataset:{unit:'u'},querySelector:()=>({value:'other-root-id'})};editor.step=async(a,b)=>sent={a,b};
  await editor.action('link-existing',{dataset:{field:'exceptions'},closest:()=>card});
  assert.deepEqual(sent,{a:'link',b:{unit_id:'u',field:'exceptions',target_id:'other-root-id'}});
+});
+
+test('quantity shortcuts distinguish inclusive OR, exactly one and direct-child All',()=>{
+ assert.equal(quantityPreset('all',3),3);assert.deepEqual(quantityPreset('any',3),[1,3]);assert.equal(quantityPreset('one',3),1);
+ assert.equal(quantityMode([2,3],4),'custom');assert.equal(quantityMode([1,3],3),'any');assert.equal(quantityMode(1,3),'one');
+});
+test('condition editor is nested between its siblings with no duplicate flat card',()=>{
+ const {editor}=fixture();editor.doc=documentFixture();editor.doc.roots=[1,'u'];editor.doc.units.u.conditions=[2,'v','w'];editor.doc.units.v.conditions=[1,'z'];
+ editor.doc.units.w={id:'w',text:'C2 wording'};editor.doc.units.z={id:'z',text:'Nested wording'};editor.doc.roles={u:'requirement',v:'condition',w:'condition',z:'condition'};
+ const html=editor.documentMarkup();
+ assert.equal((html.match(/data-unit="v"/g)||[]).length,1);assert.equal((html.match(/data-unit="z"/g)||[]).length,1);
+ assert.ok(html.indexOf('rq-quantity-presets')<html.indexOf('data-unit="v"'));assert.ok(html.indexOf('data-unit="v"')<html.indexOf('data-unit="z"'));assert.ok(html.indexOf('data-unit="z"')<html.indexOf('data-unit="w"'));
+ assert.match(html,/rq-inline-condition/);
+});
+test('nested quantity preset acts on its own owner and path, counting a nested group once',async()=>{
+ const {editor}=fixture();editor.doc=documentFixture();editor.doc.units.u.conditions=[2,[2,'v',[1,'x']],'y'];let sent;
+ const group={dataset:{owner:'u',field:'conditions',path:'1'}},card={dataset:{unit:'v'}};
+ editor.step=async(a,b)=>sent={a,b};
+ await editor.action('quantity-preset',{dataset:{preset:'any'},closest:s=>s==='[data-rq-group]'?group:card});
+ assert.deepEqual(sent,{a:'quantity',b:{unit_id:'u',field:'conditions',path:[1],quantity:[1,2]}});
+});
+test('editing a nested child keeps its already-finished ancestor open',async()=>{
+ const {editor,m}=fixture();editor.doc=documentFixture();editor.doc.done=['u'];editor.selected='v';editor.closedUnits=new Set();editor.render=()=>{};
+ m.api=async()=>({document:{...editor.doc,revision:3}});await editor.step('extract',{unit_id:'v',field:'conditions',start:0,end:4});
+ assert.equal(editor.closedUnits.has('u'),false);
+});
+test('custom range applies inclusive bounds to the selected group only',async()=>{
+ const {editor}=fixture();editor.doc=documentFixture();let sent;
+ const controls={querySelector:s=>({value:s==='[data-rq-min]'?'0':'2'})};
+ const group={dataset:{owner:'u',field:'exceptions',path:''},querySelector:()=>controls};
+ editor.step=async(a,b)=>sent={a,b};await editor.action('quantity',{dataset:{},closest:s=>s==='[data-rq-group]'?group:null});
+ assert.deepEqual(sent,{a:'quantity',b:{unit_id:'u',field:'exceptions',path:[],quantity:[0,2]}});
 });

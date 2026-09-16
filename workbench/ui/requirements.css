@@ -91,3 +91,17 @@
 .rq-existing { margin-top:10px; }
 .rq-count-summary { font-weight:600; font-size:12px; }
 .rq-session-number { font-weight:700; white-space:nowrap; }
+
+/* Condition decomposition remains beside its siblings inside the same field. */
+.rq-condition-slot { flex:1; min-width:0; }
+.rq-inline-condition { margin:0; border:1px solid var(--semantic-border,#9873c9); border-radius:5px; padding:0; background:rgba(255,255,255,.55); }
+.rq-inline-condition > summary { display:flex; gap:6px; align-items:baseline; padding:8px; }
+.rq-inline-condition > summary > button { margin-left:auto; }
+.rq-inline-condition > .rq-unit-body { padding:8px; }
+.rq-inline-condition .rq-relation-field { display:block; padding:6px; }
+.rq-inline-condition .rq-relation-field > dt { margin-bottom:6px; }
+.rq-inline-condition textarea { min-height:75px; }
+.rq-quantity-presets { display:flex; flex-wrap:wrap; gap:5px; margin:6px 0; }
+.rq-quantity-presets [aria-pressed="true"] { outline:2px solid var(--semantic-border,#526b87); outline-offset:-2px; font-weight:700; }
+.rq-relation-field { display:block; }
+.rq-relation-field > dt { margin-bottom:8px; }

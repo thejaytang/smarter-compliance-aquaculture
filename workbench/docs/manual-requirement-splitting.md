@@ -1,5 +1,19 @@
 # Manual requirement splitting
 
+## Inline conditions and quantity shortcuts
+
+Condition children are edited within their owning Conditions field. **Decompose** opens the child directly below its source header and before the next sibling; recursive children use the same layout. Attached conditions are not duplicated as separate top-level cards. Detached condition units remain accessible. Editing a child keeps its previously finished ancestors open.
+
+Each group has quantity controls above its direct children:
+
+- **All (N)** requires all N direct items and stores scalar N.
+- **Any (OR)** requires at least one, permits several, and stores [1,N].
+- **Exactly one** stores scalar 1; it is distinct from inclusive OR.
+- **Range** exposes minimum and maximum, applied explicitly as [min,max].
+
+A nested group counts as one direct item; its own control governs its children. Shortcuts count the current group, not all descendant leaves. Existing saved scalar/range values are retained on opening. As before, adding an item to an all-items group updates its scalar count, while explicit non-all bounds are preserved and may become a custom range for the larger group. Choose a shortcut again to apply it to the new membership.
+
+
 ## Current relationship editor
 
 The [simplified workflow contract](requirement-interpretation.md#simplified-relationship-and-interpretation-workflow-2026-09-16) owns the current coloured relationship fields, condition-only decomposition, visible counts, whole-Requirement references and synchronized Rx selection. It supersedes conflicting descriptions below.
