@@ -1,5 +1,9 @@
 # Requirement Workstream: current state
 
+2026-09-16 third-pane simplification: relationship children expose **Decompose**, relation actions are expanded, **Locate text** sits on the top coloured source header, and saved Requirement selection loads the fourth pane. Third-pane Split at cursor and Interpret requirement buttons are removed. All 290 frontend tests pass; normal example browser interaction and discarded-preview preservation were verified. [Evidence](project-support/workbench-example-20260916/RESULTS.md).
+
+2026-09-16 example checkpoint: the normal Material review list now has **example (PE001)** pinned first for the requesting reviewer, with three saved decomposition cases and four primary six-field interpretations. [Installation and verification](project-support/workbench-example-20260916/RESULTS.md) supersedes the earlier example-pending status. The demonstration is saved, not legally reviewed or assessed.
+
 2026-09-16 latest interaction checkpoint: second-pane bulk selection/editing/deletion is implemented and served on 62742, with explicit manual saves and leave warnings. [Workbench state](workbench/PROJECT_STATE.md) and [evidence with remaining scope](project-support/workbench-bulk-edit-20260916/RESULTS.md) distinguish the delivered interaction from earlier requests still in progress.
 
 

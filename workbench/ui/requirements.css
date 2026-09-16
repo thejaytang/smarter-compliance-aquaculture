@@ -77,3 +77,10 @@
 .rq-reference > span{flex-basis:100px;min-width:0}
 
 .rq-session-title{white-space:normal!important;overflow:visible!important}.rq-source-preview{display:block;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.8}.rq-source-groups{display:block;margin-top:8px}.rq-source-preview .semantic{border-radius:3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}.rq-session>summary{align-items:flex-start}.rq-session-title{min-width:0;flex:1}
+
+/* Keep navigation on the source header and expose recursive work directly. */
+.material-workbench .rq-session > summary { display:flex; gap:8px; align-items:flex-start; }
+.rq-locate-text { flex:0 0 auto; margin-left:auto; }
+.rq-unit[aria-current="true"] { border-color:#536f94; }
+.rq-add-relations > .rq-assign { display:flex; flex-wrap:wrap; gap:6px; }
+.rq-add-relations > .rq-assign button { flex:1 1 auto; }

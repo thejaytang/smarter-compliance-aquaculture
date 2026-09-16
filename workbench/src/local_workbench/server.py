@@ -741,7 +741,7 @@ class Handler(BaseHTTPRequestHandler):
                 self.close_connection = True
                 return self.send(413,{"error":"The request is empty or exceeds the permitted package/file size."})
             session=self.current_session()
-            if getattr(self.app,'read_only_restored',False) and (self.path.startswith('/api/sync/') or self.path=='/api/automation' or self.path=='/api/requirements/step' or self.path in ('/api/settings/ai','/api/settings/site-catalog') or self.path.startswith('/api/interpretations/')):
+            if getattr(self.app,'read_only_restored',False) and (self.path.startswith('/api/sync/') or self.path=='/api/automation' or self.path in ('/api/requirements/step','/api/material-queue/pin') or self.path in ('/api/settings/ai','/api/settings/site-catalog') or self.path.startswith('/api/interpretations/')):
                 self.close_connection=True
                 return self.send(403,{'error':'Restored inspection keeps synchronization and automation read-only.'})
             if self.path == '/api/sync/import':
@@ -843,6 +843,9 @@ class Handler(BaseHTTPRequestHandler):
                 if action not in routes:return self.send(404,{'error':'Unknown source action.'})
                 result=routes[action](session['name'],body);self.app.snapshot_time=0
                 return self.send(409 if result.get('status')=='conflict' else 200,result)
+            if self.path == '/api/material-queue/pin':
+                from .material_queue import MaterialQueue
+                return self.send(200, MaterialQueue(self.app.collaboration).pin(session['name'], body))
             if self.path == '/api/material/continue':
                 if self.headers.get('X-Material-API-Version')!='3':return self.send(426,{'error':'Refresh the material workspace before continuing.'})
                 if not isinstance(body,dict) or set(body)-{'request_id','material_id','expected_master_revision'}:raise ValueError('Only the current material identity and revision are accepted.')

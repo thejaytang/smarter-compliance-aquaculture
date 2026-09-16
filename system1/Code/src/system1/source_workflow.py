@@ -63,7 +63,7 @@ def intake(config_path, request):
     from .workbench_bridge import digest
     if request.get('actor') != 'Weijie Tang' and not (request.get('peer_sync') is True and request.get('actor') in {'Ana Jokic','Daniel Restad'}): raise ValueError('Only the coordinator may stage source intake.')
     generated=set(h.EDITABLE_CANDIDATE_FIELDS)-{'operator_selection_decision','source_status'}
-    allowed={'request_id','actor','note','upload_path','upload_hash','upload_root','basic_inspection',*generated}
+    allowed={'request_id','actor','peer_sync','note','upload_path','upload_hash','upload_root','basic_inspection',*generated}
     if set(request)-allowed: raise ValueError('Unsupported intake fields.')
     rid=str(uuid.UUID(request['request_id'])); opid='INTAKE-'+rid
     fields={k:str(request.get(k) or '').strip() for k in (generated|{'note'})}

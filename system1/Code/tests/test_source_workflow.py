@@ -54,7 +54,7 @@ class SourceWorkflowTests(CollaborationReviewTests):
  def test_intake_pending_replay_and_changed_identity(self):
   from system1.source_workflow import intake
   self.activate();before=bridge.read(self.config_path)['sources']
-  req={'actor':'Weijie Tang','request_id':str(uuid.uuid4()),'source_title':'Synthetic new source','official_url':'https://example.org/new','issuer':'Synthetic'}
+  req={'actor':'Weijie Tang','peer_sync':False,'request_id':str(uuid.uuid4()),'source_title':'Synthetic new source','official_url':'https://example.org/new','issuer':'Synthetic'}
   result=intake(self.config_path,req)
   self.assertEqual(result['status'],'pending_review');self.assertEqual(intake(self.config_path,req),result)
   with self.assertRaisesRegex(ValueError,'identity conflict'):intake(self.config_path,{**req,'source_title':'Changed'})

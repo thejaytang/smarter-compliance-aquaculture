@@ -46,6 +46,21 @@ class MaterialQueueTests(unittest.TestCase):
         result=self.q.create(A,r);self.assertEqual(self.q.create(A,r),result);return result['inspection']
     def save(self,t,action='save',**extra):
         return self.q.save(B,{'task_id':t['id'],'material_id':t['material_id'],'expected_revision':t['revision'],'request_id':uid(),'action':action,'note':'Engineering evidence','checked_scope':['page:1'],'explicit_confirmation':True,**extra})['inspection']
+    def test_pin_is_persistent_actor_scoped_and_precedes_pagination(self):
+        for i in range(55):
+            m = deepcopy(self.material)
+            m.update(id=f'{i:032x}', title='example' if i == 0 else f'Material {i}', content_status='draft', confirmation=None, last_action={'kind':'opened'})
+            self.write(m)
+        identity = f'{0:032x}'
+        request = {'material_id': identity, 'pinned': True}
+        self.assertEqual(self.q.pin(A, request), self.q.pin(A, request))
+        self.assertEqual(MaterialQueue(self.c).listing(A, 'pending', limit=1)['materials'][0]['id'], identity)
+        self.assertNotEqual(self.q.listing(B, 'pending', limit=1)['materials'][0]['id'], identity)
+        self.assertEqual(self.q.listing(A, 'pending', query='Material 54')['materials'][0]['title'], 'Material 54')
+        self.q.pin(A, {'material_id':identity,'pinned':False})
+        self.assertNotEqual(self.q.listing(A, 'pending', limit=1)['materials'][0]['id'], identity)
+        with self.assertRaises(ValueError): self.q.pin(A, {'material_id':'missing','pinned':True})
+
     def test_task_filter_runs_before_pagination_and_does_not_call_edits_conflicts(self):
         for index in range(58):
             material = deepcopy(self.material)

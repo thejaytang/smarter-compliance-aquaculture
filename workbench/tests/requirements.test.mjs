@@ -37,7 +37,7 @@ test('all units expose inline fields without phase navigation; finished units co
  assert.doesNotMatch(host.innerHTML,/Current unit|rq-steps|Whole source passage|Saved passages|Continue to unit fields/);
  assert.equal((host.innerHTML.match(/data-rq-text/g)||[]).length,2);
  assert.equal((host.innerHTML.match(/data-rq="assign"/g)||[]).length,8);
- assert.match(host.innerHTML,/data-unit="u" >/);assert.match(host.innerHTML,/data-unit="v" open/);
+ assert.match(host.innerHTML,/data-unit="u"[^>]* >/);assert.match(host.innerHTML,/data-unit="v"[^>]* open/);
 });
 test('session order follows source blocks and stays fixed after saving a step',async()=>{
  const {editor,m}=fixture();m.draft.blocks.push({id:'last'});
@@ -53,4 +53,35 @@ test('a field action uses its own card selection, not the first source textarea'
  editor.step=async(a,b)=>{sent={a,b};};
  await editor.action('assign',{dataset:{field:'Subject'},closest:()=>card});
  assert.deepEqual(sent,{a:'assign',b:{unit_id:'v',start:0,end:4,field:'Subject'}});
+});
+test('source-header locate and direct relation actions replace redundant controls',()=>{
+ const {editor,host}=fixture();editor.doc=documentFixture();editor.doc.units.u.conditions=[1,'v'];editor.doc.roles.v='condition';editor.sessions=[editor.doc];editor.render();
+ assert.doesNotMatch(host.innerHTML,/Interpret requirement|Split at cursor|<details class="rq-add-relations"/);
+ const header=host.innerHTML.slice(host.innerHTML.indexOf('data-rq="open-session"'),host.innerHTML.indexOf('</summary>',host.innerHTML.indexOf('data-rq="open-session"')));
+ assert.match(header,/rq-source-preview/);assert.match(header,/data-rq="locate-session"/);
+ assert.equal((host.innerHTML.match(/data-rq="extract"/g)||[]).length,6);
+ assert.match(host.innerHTML,/data-rq="decompose" data-id="v"/);
+});
+test('decompose reopens only the chosen finished child and exposes its exact text',async()=>{
+ const {editor,host}=fixture();editor.doc=documentFixture();editor.doc.phase='complete';editor.doc.done=['u','v'];editor.doc.roles.v='condition';editor.selected='u';editor.closedUnits=new Set(['u','v']);let sent,focused=false;
+ editor.render=()=>{};host.querySelector=()=>({scrollIntoView(){},querySelector:()=>({focus(){focused=true;}})});
+ editor.step=async(a,b)=>{sent={a,b};editor.doc.phase='fields';editor.doc.done=['u'];editor.dirty=true;};
+ await editor.action('decompose',{dataset:{id:'v'},closest:()=>null});
+ assert.deepEqual(sent,{a:'reopen',b:{unit_id:'v'}});assert.equal(editor.selected,'v');assert.ok(editor.closedUnits.has('u'));assert.ok(!editor.closedUnits.has('v'));assert.equal(focused,true);
+ let extracted;editor.step=async(a,b)=>extracted={a,b};
+ const card={dataset:{unit:'v'},querySelector:()=>({value:'Nets shall hold.',selectionStart:0,selectionEnd:4})};
+ await editor.action('extract',{dataset:{field:'conditions'},closest:()=>card});
+ assert.deepEqual(extracted,{a:'extract',b:{unit_id:'v',start:0,end:4,field:'conditions'}});
+});
+test('selection loads saved interpretation without a dedicated button and skips unsaved splitting',async()=>{
+ const {editor,m,host}=fixture();editor.doc=documentFixture();editor.selected='u';editor.render=()=>{};host.querySelector=()=>null;const opened=[];m.interpretations={open:async id=>opened.push(id)};
+ await editor.action('select-unit',{dataset:{id:'v'},closest:()=>null});assert.deepEqual(opened,['v']);
+ editor.dirty=true;await editor.syncInterpretation();assert.deepEqual(opened,['v']);
+ editor.dirty=false;editor.doc.roles.v='condition';await editor.syncInterpretation();assert.deepEqual(opened,['v']);
+});
+test('header location uses that whole entry even when another unit is selected',async()=>{
+ const {editor,m}=fixture();editor.doc=documentFixture();editor.selected='v';editor.sessions=[{id:'other',text:'Original whole passage',block_id:'b'}];let jumped,located;
+ m.jumpToBlock=i=>jumped=i;m.locateBlock=async b=>located=b.id;
+ await editor.action('locate-session',{dataset:{id:'other'},closest:()=>null});
+ assert.equal(jumped,0);assert.equal(located,'b');assert.equal(editor.selected,'v');
 });

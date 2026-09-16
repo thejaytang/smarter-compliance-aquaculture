@@ -1,5 +1,7 @@
 # System1 current state
 
+2026-09-16 demonstration intake: the source adapter now accepts the existing Workbench `peer_sync` payload field; 30 source-workflow tests pass. User-requested local authored training material **example (PE001)** was registered through owning APIs. Its demonstration provenance does not assert legal authority; the missing official URL remains unresolved. [Installation evidence](../project-support/workbench-example-20260916/RESULTS.md).
+
 2026-09-14 Mac integration: the Windows compatibility source is applied locally. All 168 System1 regression tests passed in an isolated candidate; the applied-source SQLite commit/rollback/close/rename check passed again. Source integration does not establish normal worker activation. [Mac evidence](../project-support/macos-windows-sync-20260914/RESULTS.md).
 
 2026-09-14 Windows compatibility: Windows validation passed all 168 System1 tests. Deterministic SQLite handle release, drive-anchor validation and UTF-8 launch/setup settings are implemented. [Windows evidence](../project-support/windows-compatibility-20260914/RESULTS.md) records scope; shared setup remains in ENVIRONMENT.md. Runtime authority and reviewer history remain outside this source change.

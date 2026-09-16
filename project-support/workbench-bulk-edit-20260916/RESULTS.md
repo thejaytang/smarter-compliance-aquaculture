@@ -21,3 +21,5 @@ The local activation manifest and runtime databases are private recovery artifac
 ## Boundaries and outstanding earlier requests
 
 This checkpoint establishes bulk content interaction, manual-save regression and source/runtime activation. It does not establish all earlier interaction acceptance. The shared-API whole-document Auto-extract flow, the fully populated normal `example` material, remaining cross-pane interaction acceptance and fresh native Windows desktop testing are still pending. The example specification alone is not an installed demonstration material. No real model call or Site Model compliance evaluation was run.
+
+Subsequent update: the normal example is now installed and pinned first; see the [example checkpoint](../workbench-example-20260916/RESULTS.md). Other boundaries above remain unchanged.

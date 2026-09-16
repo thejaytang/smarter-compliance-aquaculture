@@ -30,6 +30,20 @@ class MaterialQueue:
     def __init__(self, collaboration):
         self.c = collaboration
 
+    def pin(self, actor, request):
+        from .collaboration import named
+        actor = named(actor)
+        if not isinstance(request, dict) or set(request) != {'material_id', 'pinned'} or type(request['pinned']) is not bool:
+            raise ValueError('Choose a material and whether to pin it.')
+        identity = request['material_id']
+        self.c.app.system2.call('material_read', material_id=identity)
+        with self.c.lock:
+            preferences = self.c.get('material_list_preferences', actor, {'pinned': []})
+            pinned = [x for x in preferences.get('pinned', []) if x != identity]
+            if request['pinned']: pinned.insert(0, identity)
+            self.c.put('material_list_preferences', actor, {'pinned': pinned})
+        return {'material_id': identity, 'pinned': request['pinned']}
+
     def archives(self):
         with read_index(self.c.app.system2.runtime) as db:
             rows = db.execute("""SELECT data FROM material_revision_index r
@@ -123,6 +137,11 @@ class MaterialQueue:
                 'first' if queue.get('unopened') or row.get('content_status') == 'not_extracted' else 'review')
         if task_type and bucket == 'pending':
             rows = [row for row in rows if row['queue']['task_type'] == task_type]
+        pinned = self.c.get('material_list_preferences', actor, {'pinned': []}).get('pinned', [])
+        ranks = {identity: index for index, identity in enumerate(pinned)}
+        if bucket == 'pending':
+            rows.sort(key=lambda row: ranks.get(row.get('id'), len(ranks)))
+            for row in rows: row['queue']['pinned'] = row.get('id') in ranks
         return {**base, 'materials': rows[offset:offset+limit], 'total': len(rows), 'offset': offset, 'limit': limit,
             'has_more': offset+limit < len(rows), 'bucket': bucket, 'counts_scope': 'master'}
 

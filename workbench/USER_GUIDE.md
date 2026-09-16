@@ -319,7 +319,7 @@ Use [the current four-pane guide](docs/requirement-interpretation.md) for source
 
 ## Tracing and mapping a check design
 
-Use **Interpret requirement** on a finished card. Enter the six formal fields; open **Evidence & gaps** or **AI assistance** only when needed. **Save interpretation** (Ctrl/Cmd+S while editing pane four) saves the design without marking it reviewed. **Source trail** shows the saved Requirement, splitting step, source version and extracted passage, even if later versions change.
+Select a saved Requirement card to load its interpretation in the fourth pane. Enter the six formal fields; open **Evidence & gaps** or **AI assistance** only when needed. **Save interpretation** (Ctrl/Cmd+S while editing pane four) saves the design without marking it reviewed. **Source trail** shows the saved Requirement, splitting step, source version and extracted passage, even if later versions change.
 
 **Site Model mapping · optional** holds explicit field comparisons and nested all/any groups. Configure agreed fields once in Settings → Site Model fields, then select their labels in the rule editor. No downstream fields are invented by default. Each comparison records which interpretation field supports it. The QueryBuilder preview is a handoff format, not an executed query or compliance result. Leave unknown groups unmapped. See [the maintained contract](docs/requirement-interpretation.md).
 

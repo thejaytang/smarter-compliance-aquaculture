@@ -162,17 +162,22 @@ class Requirements:
                 with self.c.db() as db:doc=self.load(db,actor,request['session_id'])
                 if doc['revision']!=request.get('expected_revision'):
                     return dict(status='conflict',error='A newer splitting version was saved. Your unsaved edits remain in this page.',document=doc)
+            material_cache={}
             for i,step in enumerate(steps):
                 if not isinstance(step,dict) or step.get('action') not in ('start','split','assign','extract','clear','link','quantity','group','ungroup','unlink','done','reopen','phase','restore'):raise ValueError('Invalid splitting edit.')
                 if (step['action']=='start') != (i==0 and doc is None):raise ValueError('A new entry starts with its original source.')
                 req=dict(step)
                 if doc:req.update(session_id=doc['id'],expected_revision=doc['revision'])
-                doc=self.apply(actor,req,_draft=doc,_preview=True)['document']
+                doc=self.apply(actor,req,_draft=doc,_preview=True,_material_cache=material_cache)['document']
             if request['action']=='preview':return dict(status='preview',document=doc)
             return self.apply(actor,{**request,'action':'commit'},_draft=doc)
 
-    def apply(self, actor, request, _draft=None, _preview=False):
+    def apply(self, actor, request, _draft=None, _preview=False, _material_cache=None):
         actor = named(actor)
+        def current_material(identity):
+            if _material_cache is None:return self.material(actor,identity)
+            if identity not in _material_cache:_material_cache[identity]=self.material(actor,identity)
+            return _material_cache[identity]
         allowed = {'request_id', 'action', 'session_id', 'expected_revision', 'material_id', 'material_revision',
                    'block_id', 'unit_id', 'at', 'start', 'end', 'field', 'target_id', 'path', 'indices',
                    'quantity', 'phase', 'history_revision', 'block_ids', 'steps'}
@@ -190,7 +195,7 @@ class Requirements:
                     raise ValueError('This request ID was already used for another step.')
                 return json.loads(prior[1])
             if action == 'start':
-                material = self.material(actor, request['material_id'])
+                material = current_material(request['material_id'])
                 if material['revision'] != request.get('material_revision') or material.get('source_stale'):
                     raise ValueError('The saved source content changed. Reopen it before starting a new passage.')
                 ids=request.get('block_ids') or [request.get('block_id')]
@@ -226,7 +231,7 @@ class Requirements:
                 doc = deepcopy(_draft) if _draft is not None else self.load(db, actor, request.get('session_id', ''))
                 if action!='commit' and doc['revision'] != request.get('expected_revision'):
                     return {'status': 'conflict', 'error': 'A newer splitting step is saved. Reload before editing.', 'document': doc}
-                if action not in ('delete','undelete') and self.stale(doc, self.material(actor, doc['material_id'])):
+                if action not in ('delete','undelete') and self.stale(doc, current_material(doc['material_id'])):
                     raise ValueError('The source passage changed. This history is retained. Start a new session from the current saved passage.')
                 if action!='commit':self.edit(db, actor, doc, request)
             if _preview:

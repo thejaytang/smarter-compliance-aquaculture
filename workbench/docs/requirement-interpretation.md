@@ -13,7 +13,7 @@ The material workspace has four independently scrolling panes: Original document
 2. **Finish & collapse** saves the unit and displays its completed field ranges in **Requirement annotations**. Other completed units remain visible. **Resume unit editing** removes that unit's completed marks; finishing restores its current ranges. Unmarked text is not a claim of complete parsing.
 3. The Read selector switches between **Current text**, **Changes**, and **Requirement annotations**. Changes retains red strikethrough deletions and green additions. Reading modes do not save or review anything. Markdown editing retains the existing source/baseline behavior.
 4. Activate an annotated fragment by mouse, Enter or Space to locate its splitting field. Overlaps list all referenced field/unit identities. **Locate text** returns to the source passage.
-5. Choose **Interpret requirement**. Fill the two fields in each Scope, Condition and Demand group. Record explicit source quotations, proposed interpretations and unresolved questions separately.
+5. Select a saved Requirement card. Fill the two fields in each Scope, Condition and Demand group. Record explicit source quotations, proposed interpretations and unresolved questions separately.
 6. **Checking Logic** updates from these six fields. It identifies A, filters applicable B within A, and describes checking B against Demand/evidence. C, when displayed, means objects with sufficient evidence of meeting Demand in the same assessment context. `B ⊆ C` is a design criterion, not a computed result. Unknowns, original exception ownership and source combinations remain visible. No operators are guessed from prose; fixed `k` and inclusive `[min,max]` semantics remain unchanged.
 7. **Save interpretation** preserves a separate version. **Mark interpretation reviewed** is a later explicit action, blocked while fields or gaps remain unresolved. Neither action confirms or archives material content.
 
@@ -77,7 +77,7 @@ A sanitized `querybuilder` projection in the interpretation response uses the do
 
 ## Reduced daily controls
 
-Completed cards provide **Interpret requirement** without reopening splitting fields. The six values are visible; **Evidence & gaps**, AI candidates, source structure, history and mapping expand only when needed. Entering a manual nonempty value with no recorded gap marks it as a proposed interpretation, never as source proof. Quoted-source status still requires valid references. **Source trail** shows the fixed saved lineage. Save remains distinct from review and is pinned at the bottom of the pane; Ctrl/Cmd+S inside this pane saves its interpretation. Material-level Save retains its own scope.
+Selecting a saved Requirement card loads its fourth-pane interpretation without reopening splitting fields. The six values are visible; **Evidence & gaps**, AI candidates, source structure, history and mapping expand only when needed. Entering a manual nonempty value with no recorded gap marks it as a proposed interpretation, never as source proof. Quoted-source status still requires valid references. **Source trail** shows the fixed saved lineage. Save remains distinct from review and is pinned at the bottom of the pane; Ctrl/Cmd+S inside this pane saves its interpretation. Material-level Save retains its own scope.
 
 ### Ownership across databases
 

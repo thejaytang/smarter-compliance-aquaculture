@@ -184,3 +184,25 @@ class RequirementTests(unittest.TestCase):
         self.assertEqual(len(self.service.listing(ACTOR,self.material['id'])['sessions']),1)
         root=next(iter(first['units']));request['steps'].append(dict(request_id=str(uuid.uuid4()),action='extract',unit_id=root,field='conditions',start=34,end=50))
         self.assertEqual(self.service.apply(ACTOR,request),self.service.apply(ACTOR,request))
+
+    def test_batch_reuses_one_source_snapshot_but_rechecks_before_commit(self):
+        uid=self.root();calls=[]
+        def read(actor,mid):
+            calls.append(mid);return deepcopy(self.material)
+        self.service.material=read
+        edits=[dict(request_id=str(uuid.uuid4()),action='assign',unit_id=uid,field='Subject',start=0,end=9) for _ in range(20)]
+        request=dict(request_id=str(uuid.uuid4()),action='preview',session_id=self.doc['id'],expected_revision=self.doc['revision'],steps=edits)
+        self.service.apply(ACTOR,request);self.assertEqual(len(calls),1)
+        calls.clear();request.update(request_id=str(uuid.uuid4()),action='save-draft')
+        self.service.apply(ACTOR,request);self.assertEqual(len(calls),2)
+
+    def test_batch_does_not_commit_if_source_changes_after_preview_snapshot(self):
+        calls=[]
+        def read(actor,mid):
+            calls.append(mid);material=deepcopy(self.material)
+            if len(calls)>1:material['blocks'][-1]['text']='Changed original'
+            return material
+        self.service.material=read
+        request=dict(request_id=str(uuid.uuid4()),action='save-draft',session_id=self.doc['id'],expected_revision=self.doc['revision'],steps=[dict(request_id=str(uuid.uuid4()),action='assign',unit_id=self.root(),field='Subject',start=0,end=9)])
+        with self.assertRaises(ValueError):self.service.apply(ACTOR,request)
+        with self.service.c.db() as db:self.assertEqual(db.execute('SELECT COUNT(*) FROM requirement_steps').fetchone()[0],1)
