@@ -2,6 +2,8 @@
 
 Date: 2026-09-16. Base: `f74a780`, branch `codex/workbench-optimization-20260916`.
 
+Published code: [`36f9103`](https://github.com/thejaytang/smarter-compliance-aquaculture/commit/36f9103). The successful Git push receipt confirmed the remote branch advanced from `f74a780` to `36f9103` on 2026-09-16. This updates [PR 2](https://github.com/thejaytang/smarter-compliance-aquaculture/pull/2); main was not merged.
+
 ## Scope and result
 
 Applied the Impeccable Operate layout/polish workflow to the existing four-pane material workspace. A source-only layout assessment and a bounded browser correction/confirmation pass addressed conflicting control styles, redundant root gutters, inconsistent pane minimums, multiline text alignment, and action placement. Existing semantic colours, source content, Requirement structure, manual saves and API behavior are preserved.
