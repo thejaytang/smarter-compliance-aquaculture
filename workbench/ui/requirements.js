@@ -29,7 +29,7 @@ export class RequirementsEditor {
     if(!force&&signature===this.lastRender)return;this.lastRender=signature;
     host.classList?.add('rq-editor');
     host.innerHTML=`${this.m.dirty?'<p class="rq-notice">Save the source content before splitting requirements.</p>':''}
-      <p class="rq-status" role="status" aria-live="polite">${esc(this.notice||'Select a source block in the content pane, then choose To requirements.')}</p>
+      ${this.notice?`<p class="rq-status" role="status" aria-live="polite">${esc(this.notice)}</p>`:''}
       ${this.dirty?button('save-draft','Save splitting',this.pending?'disabled':''):''}${this.retryRequest?button('retry','Retry saving this step'):''}
       ${annotationLegend()}<div class="rq-list">${this.orderedSessions().map(s=>{const opened=s.id===this.doc?.id&&!this.sessionCollapsed;return `<section class="rq-session" data-session="${esc(s.id)}"><div class="rq-session-header"><div class="rq-entry-bar" data-rq="open-session" data-id="${esc(s.id)}"><button type="button" data-rq="open-session" data-id="${esc(s.id)}" class="rq-entry-toggle" aria-expanded="${opened}" aria-label="${opened?'Collapse':'Expand'} ${esc(this.entryLabel(s))}"><span aria-hidden="true">${opened?'▾':'▸'}</span><span class="rq-session-number">${esc(this.entryLabel(s))}</span></button><span class="rq-entry-actions">${button('locate-session','Locate',`data-id="${esc(s.id)}"`)}${button('auto-extract','Auto-extract',`data-id="${esc(s.id)}" disabled title="Automatic requirement extraction: Not connected"`)}${button('delete','Remove',`data-id="${esc(s.id)}" ${this.locked?'disabled':''}`)}</span></div><div class="rq-session-title" ${opened?'data-entry-source':''}>${sourcePreview({...s,...(s.id===this.doc?.id?this.doc:{}),labels:this.displayLabels()})}${opened&&!this.locked?this.groupEditor.toolsMarkup():''}</div></div>${opened?this.documentMarkup():''}</section>`;}).join('')}</div>
       ${this.deleted?.length?`<details><summary>Removed entries · ${this.deleted.length}</summary>${this.deleted.map(s=>`<p>${esc(s.text.slice(0,100))} ${button('undelete','Restore entry',`data-id="${s.id}"`)}</p>`).join('')}</details>`:''}${!this.sessions.length?'<div class="rq-empty"><h4>Build a requirement from its original text</h4><p>Select a source block in the content pane and choose <strong>To requirements</strong>. Split and assign its wording here; each requirement stays in the list.</p><p>Automatic extraction: Not connected.</p></div>':''}`;
@@ -58,7 +58,7 @@ export class RequirementsEditor {
     if(this.pending||this.retryRequest)return;
     if(this.dirty){this.m.unsavedDialog?.();return;}
     const context=this.context,ticket=this.readTicket={};this.loading=true;this.notice='Opening saved splitting work…';this.render(true);
-    try{const doc=await this.m.api('/api/requirements/session?'+new URLSearchParams({id}));if(context!==this.context||ticket!==this.readTicket)return;this.doc=doc;this.sessionCollapsed=false;this.results=[];this.searchPerformed=false;this.selected=selectedId===null?null:selectedId||this.unitIds()[0];for(const id of doc.done)this.closedUnits.add(id);this.notice=doc.stale?'Source content changed. This saved session is read-only. Bring the current passage to start a new session.':`Saved step ${doc.revision} · ${doc.phase==='complete'?'Splitting complete; material review is separate.':'Ready to continue.'}`;try{sessionStorage.setItem('requirement-session:'+context,id);}catch{}}
+    try{const doc=await this.m.api('/api/requirements/session?'+new URLSearchParams({id}));if(context!==this.context||ticket!==this.readTicket)return;this.doc=doc;this.sessionCollapsed=false;this.results=[];this.searchPerformed=false;this.selected=selectedId===null?null:selectedId||this.unitIds()[0];for(const id of doc.done)this.closedUnits.add(id);this.notice=doc.stale?'Source content changed. This saved session is read-only. Bring the current passage to start a new session.':'';try{sessionStorage.setItem('requirement-session:'+context,id);}catch{}}
     catch(e){this.showError(e);}finally{if(context===this.context&&ticket===this.readTicket){this.loading=false;this.render(true);void this.syncInterpretation();}}
   }
   showError(error) {this.notice=error.message||String(error);this.render(true);}
@@ -101,7 +101,7 @@ export class RequirementsEditor {
       const index=this.sessions.findIndex(s=>s.id===this.doc.id);if(index<0)this.sessions.push(this.doc);else this.sessions[index]=this.doc;
       try{sessionStorage.setItem('requirement-session:'+context,this.doc.id);}catch{}
       if(!this.dirty)this.m.interpretations?.sourceChanged();
-      this.notice=`${this.dirty?'Unsaved changes · save before leaving':'Saved step '+this.doc.revision} · ${this.doc.phase==='complete'?'Splitting complete. This does not confirm material review.':this.dirty?'Changes remain only in this page.':'You can leave and resume this passage.'}`;
+      this.notice=this.dirty?'Unsaved changes · save before leaving. Changes remain only in this page.':'';
       return true;
     } catch(e) {
       // Keep the exact request for retry when transport failed after a possible save.
@@ -152,11 +152,17 @@ export class RequirementsEditor {
   documentMarkup() {
     const d=this.doc,disabled=this.locked?'disabled':'',complete=d.phase==='complete';
     return `<div class="rq-session-body"><div class="rq-source-context"><span>${esc(d.chapter||'Original passage')}</span></div>
-      ${complete?`<p class="rq-hint">Splitting complete. Material review is separate.</p>${button('phase','Resume editing',`data-phase="fields" ${disabled}`)}`:''}
+      ${complete?`${button('phase','Resume editing',`data-phase="fields" ${disabled}`)}`:''}
       <div class="rq-units">${(d.structure_views?this.visibleUnitIds():this.unitIds().filter(id=>!this.inlineConditionIds().has(id))).map(id=>this.unitMarkup(d.units[id],disabled,complete)).join('')}</div>
       ${this.rootIds(d).length>1?`<details class="rq-outer"><summary>Group of source clauses</summary>${this.groupMarkup(d.roots,'roots',null,[],complete)}</details>`:''}
       <div class="rq-footer">${!complete?button('phase','Save &amp; collapse',`data-phase="complete" ${disabled||d.done.length!==Object.keys(d.units).length?'disabled':''}`):''}${button('reload','Reload saved work',this.pending||this.retryRequest?'disabled':'')}</div>
-      <details class="rq-history"><summary>History &amp; structured result</summary><p>Restoring creates a new saved revision. Original history remains available. Saved splitting and interpretations are included in full workspace ZIPs. Removed entries remain recoverable with their history.</p>${this.groupEditor.historyMarkup()}${button('history','Load step history',this.pending?'disabled':'')}<div class="rq-history-list">${(d.steps||[]).map(s=>`<div>Step ${s.revision} · ${esc(s.action)} ${button('restore','Restore',`data-revision="${s.revision}" ${disabled}`)}</div>`).join('')}</div><pre>${esc(JSON.stringify({requirements:d.roots,units:Object.values(d.units),...(d.structure_views?{schema:'requirement-structure/1',structures:d.structure_views}:{})},null,2))}</pre></details></div>`;
+      </div>`;
+  }
+  showHelp() {
+    const d=this.doc;
+    this.m.dialog(`<h2>Requirements help</h2><p>Select original wording to assign fields or create a Group. Use × on a card to remove it; removing a Group also removes its contents. Degroup keeps its contents.</p><p>Only manual saves enter history. Finishing a Requirement does not complete material review.</p><p>Earlier inline relationships remain in saved history.</p>${d?`<details class="rq-history"><summary>Saved history · ${esc(this.entryLabel(d))}</summary><p>Restoring creates a new saved revision.</p>${(d.steps||[]).map(s=>`<p>Revision ${s.revision} · ${esc(s.action)} ${button('restore','Restore',`data-revision="${s.revision}" ${this.locked||this.dirty?'disabled':''}`)}</p>`).join('')}<details><summary>Structured result</summary><pre>${esc(JSON.stringify({requirements:d.roots,units:Object.values(d.units),structures:d.structure_views},null,2))}</pre></details></details>`:''}`,dialog=>{
+      dialog.querySelectorAll('[data-rq="restore"]').forEach(b=>b.onclick=()=>{dialog.close();void this.action('restore',b).catch(error=>this.showError(error));});
+    });
   }
   inlineConditionIds() {
     return new Set(Object.values(this.doc.units).flatMap(u=>groupIds(u.conditions)).filter(id=>this.doc.roles[id]==='condition'));

@@ -184,3 +184,7 @@
 .rq-plain-field:has(> .rq-node-remove),.rq-tree-leaf:has(> .rq-node-remove),.rq-reference-picker:has(> .rq-node-remove),.rq-tree-node > summary:has(> .rq-node-remove) { padding-right:38px; }
 .rq-node-remove { position:absolute; right:5px; top:5px; width:26px; height:26px; min-height:26px; padding:0; font-size:18px; line-height:1; background:transparent; border:0; color:#8b2735; cursor:pointer; }
 .rq-node-remove:hover,.rq-node-remove:focus-visible { background:#fee5e8; outline:1px solid #ba4253; }
+
+.material-workbench .mw-requirements > header .rq-help-button { margin-left:auto; border-radius:50%; width:24px; height:24px; min-height:24px; padding:0; color:var(--muted); background:transparent; }
+.mw-requirements.mw-collapsed .rq-help-button { display:none; }
+#mw-dialog .rq-history pre { white-space:pre-wrap; overflow-wrap:anywhere; }

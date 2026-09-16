@@ -1,5 +1,7 @@
 # Workbench current state
 
+2026-09-16 Requirements help: routine saved/completion notices and per-entry history details move out of the working area. A title-side ? opens guidance and collapsed history; actionable unsaved/error warnings remain. 344 frontend tests and normal-browser help open/close checks pass. [Evidence](../project-support/workbench-example-adf10-20260916/RESULTS.md#requirements-help-follow-up).
+
 2026-09-16 card removal: lower field/Group cards now have a top-right ×. Group removal deletes all descendants; Degroup preserves them, and original text remains unchanged. Changes enter history only after manual save. 343 frontend and 17 group backend tests pass; normal-browser field/group deletion and draft discard were verified. [Evidence](../project-support/workbench-example-adf10-20260916/RESULTS.md#card-removal-follow-up).
 
 2026-09-16 toolbar correction: stale interpretation records with missing current context no longer crash rendering or interrupt material navigation. Saved Logic remains visible with its source limitation. Actual mouse dragging in the user’s Chrome tab displayed the floating toolbar on current example R1. All 341 frontend tests pass; no saved annotation was changed. [Evidence](../project-support/workbench-example-adf10-20260916/RESULTS.md#selection-toolbar-follow-up).

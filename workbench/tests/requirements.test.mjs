@@ -231,3 +231,11 @@ test('Remove confirms the clicked entry, cancellation writes nothing and unsaved
  await buttons['[data-remove-entry]'].onclick();assert.deepEqual(sent,{action:'delete',body:{session_id:'other',expected_revision:8}});
  let warned=false;editor.dirty=true;m.unsavedDialog=()=>warned=true;m.dialog=()=>assert.fail('Must warn before confirmation');await editor.action('delete',{dataset:{id:'other'}});assert.equal(warned,true);
 });
+
+test('saved work stays quiet while errors and unsaved notices remain visible; history moves to help',()=>{
+ const {editor,m,host}=fixture();editor.doc={...documentFixture(),phase:'complete',steps:[{revision:2,action:'save-draft'}]};editor.sessions=[editor.doc];
+ editor.render();assert.doesNotMatch(host.innerHTML,/rq-status|Saved step|Splitting complete|History &amp; structured result|rq-history/);
+ editor.notice='Unsaved changes · save before leaving';editor.render();assert.match(host.innerHTML,/role="status"[^>]*>Unsaved changes/);
+ editor.notice='Connection lost';editor.render();assert.match(host.innerHTML,/role="status"[^>]*>Connection lost/);
+ let help;m.dialog=html=>{help=html;};editor.showHelp();assert.match(help,/Requirements help/);assert.match(help,/Saved history/);assert.match(help,/data-rq="restore"/);assert.doesNotMatch(help,/Earlier inline items retained in history|rq-legacy-relations/);
+});

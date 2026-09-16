@@ -115,3 +115,7 @@ Automatic requirement extraction, ontology enrichment, machine learning and comp
 `requirement_relationships` indexes active conditions, exceptions and subrequirements by session, owner, target and nested group path. `quantities` retains the ordered ancestor counts along that path: a scalar remains exact `k`, and an array remains inclusive `[min,max]`. It is not reduced to AND/OR. Deferred foreign keys bind both ends to active units, allowing an atomic splitting update to rebuild rows while rejecting dangling links at commit. `requirement_relationship_versions` prevents repeated legacy migration. Immutable `requirement_steps` remains the historical authority; saved interpretation origins reference those fixed revisions even after active units change.
 
 **Locate text** lives at the right of each top coloured source header and works while the entry is collapsed. It locates that entry in both source panes; multi-passage entries offer their linked passages. Selecting a saved Requirement also loads its fourth-pane interpretation without a separate Interpret requirement button.
+
+### Help and saved history
+
+The **?** beside Requirements opens instructions and the current entry’s saved history/structured result. These details no longer occupy each entry. Normal saved/completed state is quiet; unsaved changes, loading failures and stale-source warnings remain visible. The toolbar has no removal cross: remove annotations using the × on their lower cards.
