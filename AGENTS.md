@@ -34,6 +34,8 @@ The later 2026-09-16 simplification uses coloured relationship fields, condition
 
 The later 2026-09-16 direct-writing revision makes Current text one continuously editable body. Keep stable source-bound block IDs, empty deletion tombstones, original baselines, plain-text paste and manual saves. Passage-edge insertion and table row/column controls replace per-block editing in the default view; no merged-cell editing is offered. [Document editing contract](workbench/docs/markdown-content.md#direct-document-editing).
 
+The 2026-09-16 saved-data revision narrows subsequent Git retention to System1 applied human records and their recovery dependencies, plus explicitly selected Workbench import ZIPs. Keep the authority and immutable companion in `system1/saved-records/` snapshots and selected Workbench packages in `workbench/saved-packages/`. Unexported Workbench state, old test packages, caches and installed environments are outside publication scope. This does not authorize runtime cleanup, history rewriting or deleting earlier releases. [Saved-data policy](workbench/USER_GUIDE.md#saved-data-for-github) owns details; [ENVIRONMENT.md](ENVIRONMENT.md) owns both platform rebuild entry points.
+
 ## Documentation ownership
 
 - Write all maintained project documentation in English. Preserve exact identifiers, commands, file paths and authoritative source quotations. Historical archives and original source material retain their original language.

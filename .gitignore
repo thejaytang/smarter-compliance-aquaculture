@@ -16,6 +16,8 @@
 **/.DS_Store
 
 # Local execution history, service sessions and generated parsing results.
+# Selected importable ZIPs belong in workbench/saved-packages/, outside runtime.
+# Runtime exclusion is a Git publication boundary, not a local deletion rule.
 **/runtime/
 **/tmp/
 system2/outputs/

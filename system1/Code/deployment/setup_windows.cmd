@@ -26,7 +26,7 @@ if errorlevel 1 (
 if errorlevel 1 exit /b 1
 ".venv\Scripts\python.exe" -m pip install --upgrade pip
 if errorlevel 1 exit /b 1
-".venv\Scripts\python.exe" -m pip install -r deployment\requirements.txt
+".venv\Scripts\python.exe" -m pip install --require-hashes -r deployment\requirements.lock
 if errorlevel 1 exit /b 1
 if not exist config\config.json copy config\config.example.json config\config.json >nul
 if not exist config\schedule.json copy config\schedule.example.json config\schedule.json >nul

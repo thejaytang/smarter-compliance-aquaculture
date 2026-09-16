@@ -9,3 +9,7 @@ workbench/ui/vendor/pdfjs/** -text
 *.sh text eol=lf
 *.command text eol=lf
 *.cmd text eol=crlf
+
+# Explicitly saved import packages retain exact ZIP bytes across platforms.
+workbench/saved-packages/*.zip -text
+system1/saved-records/*.zip -text

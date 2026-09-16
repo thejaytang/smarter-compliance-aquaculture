@@ -13,15 +13,30 @@ Keep one isolated environment per executable component. The workbench calls Syst
 | Workbench | `workbench/.venv/` | 3.11+ | [pyproject.toml](workbench/pyproject.toml); standard-library runtime on macOS/Linux; pinned `tzdata` on Windows |
 | System3 | None yet | Not selected | [Design-only state](system3/PROJECT_STATE.md); create an independent environment when implementation begins |
 
-Python 3.12 is the common setup target. Use the explicit component interpreter rather than an ambient `python` or another activated environment. Dependency declarations remain in their owning components; this guide does not replace them. System1 pins its direct dependencies but does not currently provide a complete transitive lockfile. Workbench source execution does not require a package build or a separate dependency lockfile.
+Python 3.12 is the common setup target. Use the explicit component interpreter rather than an ambient `python` or another activated environment. Dependency declarations remain in their owning components; this guide does not replace them. System1 direct requirements resolve through [requirements.lock](system1/Code/deployment/requirements.lock), including transitive dependencies and distribution hashes; both platform setup scripts enforce those hashes. Workbench source execution does not require a package build or a separate dependency lockfile.
 
 ## New-machine setup
 
-The commands in this section create or synchronize environments and may download dependencies. They are setup actions, not daily launch steps. On a new computer, recreate environments instead of copying `.venv` directories. Retain the component directories, configuration, source data and persistent runtime records together.
+The commands in this section create or synchronize environments and may download dependencies. They are setup actions, not daily launch steps. On a new computer, recreate environments instead of copying `.venv` directories. Restore only the explicitly retained data described in [the saved-data policy](workbench/USER_GUIDE.md#saved-data-for-github). A runtime directory is not the unit of Git publication.
+
+### Complete base environment rebuild (macOS and Windows)
+
+The rebuild kit is committed source plus dependency locks, not a copy of installed environments or an offline wheel archive. Install Python **3.12** and `uv` first. Dependency downloads require network access. The Mac system `python3` may still be 3.9; use `python3.12` explicitly.
+
+| Platform | Entry from the repository root |
+| --- | --- |
+| macOS | `./workbench/deployment/Rebuild\ environments.command` |
+| Windows Command Prompt | `call "workbench\deployment\Rebuild environments.cmd"` |
+
+Both entries call [the same setup implementation](workbench/deployment/rebuild_environments.py). It creates the three component environments, installs hash-locked System1 requirements, applies the Workbench Windows-only timezone dependency and synchronizes the base System2 environment with `uv.lock`. Existing business data and configuration are untouched. No service, parsing job or schedule is started. Append `--dry-run` to inspect commands without changing environments, or `--reviewer` to omit System1 for an independent import-only workspace.
+
+This base profile supports the current manual material route. Optional legacy parsing/OCR and development profiles are described below; their native tools/model caches are separate from Python dependency locks. The shipped browser bundles need no Node installation for daily use. To rebuild those bundles, retain `workbench/frontend/package.json` and `package-lock.json` and use the documented `npm ci` workflow.
+
+After setup, restore the System1 saved-record package before starting the normal coordinator. A fresh independent reviewer can instead start with `--reviewer --root reviewer-workspace` and import a selected Workbench ZIP. Rebuilding environments does not recover unexported Workbench state.
 
 ### System1 and the workbench on macOS
 
-Prerequisite: a working Python 3.12 installation available as `python3` on `PATH`. A browser is required for daily operation. Microsoft Excel is used for workbook inspection and native acceptance, not as the daily review interface.
+Prerequisite: Python 3.12. Prefer the complete rebuild entry above, which checks the exact Python minor version. The older component-only setup below requires `python3` on `PATH` to resolve to Python 3.12. A browser is required for daily operation. Microsoft Excel is used for workbook inspection and native acceptance, not as the daily review interface.
 
 ```sh
 python3 --version
@@ -150,7 +165,7 @@ An installed Python OCR wrapper does not install the Tesseract executable or pro
 
 System2's [model-runtime setup](system2/src/pdf_extraction/ocr.py) supplies project-local defaults for `PADDLE_PDX_CACHE_HOME`, `XDG_CACHE_HOME`, `MPLCONFIGDIR` and `HF_HOME`. Run from `system2/` so these defaults remain inside the component. Existing process environment overrides take precedence.
 
-The optional standalone [System2 API module](system2/src/pdf_extraction/api/app.py) no longer creates a job database on import or `/health`. Its default store is deferred until a store operation and belongs to `system2/runtime/jobs.sqlite3`, independent of the caller's working directory. Explicit `create_app(database)` and CLI `--database` paths remain authoritative. Run API/worker operations with the intended component environment and database; no root job store is owned by this workstream. The [root cleanup record](project-support/root-cleanup-20260913/RESULTS.md) retains the empty accidental root database and verifies the import/ownership guard. Component runtimes are persistent application data, not disposable caches.
+The optional standalone [System2 API module](system2/src/pdf_extraction/api/app.py) no longer creates a job database on import or `/health`. Its default store is deferred until a store operation and belongs to `system2/runtime/jobs.sqlite3`, independent of the caller's working directory. Explicit `create_app(database)` and CLI `--database` paths remain authoritative. Run API/worker operations with the intended component environment and database; no root job store is owned by this workstream. The [root cleanup record](project-support/root-cleanup-20260913/RESULTS.md) retains the empty accidental root database and verifies the import/ownership guard. Component runtimes mix business data and local execution state. For Git publication, preserve the selected System1 authority snapshot and explicit Workbench ZIPs under the saved-data policy; do not copy entire runtimes. This publication scope does not itself delete local records.
 
 `ENVIRONMENT.md` is documentation. A `.env` file is a different mechanism for process configuration or secrets; the current launch/setup paths do not require a shared root `.env`. Do not put real credentials into this guide or version control. Keep `.venv`, rebuildable caches and local runtime files out of commits; preserve persistent business and review data during environment repair. Workbench SQLite and System1 history are not disposable environment caches.
 

@@ -20,6 +20,23 @@ Open **Settings**, or your name at the bottom left. Keep using **Current reviewe
 
 Full snapshots include originals once plus saved work/history, and exclude the application, caches and old ZIPs. The measured current snapshot was 20.7 MiB; size grows with material/history. Both collaborators need a version supporting full snapshots. Earlier work/result package code and history remain retained for compatibility, but the new Collaboration dialog accepts full snapshots. [Verification and limits](../project-support/settings-sync-20260914/RESULTS.md).
 
+## Saved data for GitHub
+
+The 2026-09-16 retention decision protects **System1 human records** and **explicitly exported, selected Workbench import packages**. It replaces the earlier all-runtime publication scope for subsequent synchronization. Historical backups remain historical; they are not the default restore path.
+
+| Data | Repository location / rule |
+| --- | --- |
+| System1 applied human decisions and operation history | Consistent authority snapshots in `system1/saved-records/`, including the hash-matched immutable migration workbook, named human assessment holds and recovery manifest. Keep source identities/version links and their referenced originals under `system1/Data/`. |
+| Workbench work selected for retention | Save the downloaded full workspace ZIP into `workbench/saved-packages/`. This directory is outside ignored runtime and is eligible for an explicitly requested Git sync. |
+| Workbench edits saved only in the local application, unexported work and old engineering ZIPs | Outside the selected Git retention scope. The existing local service is not reset or cleaned by this policy. |
+| Sessions, caches, logs, temporary extraction results, machine execution state and `.venv` | Remain excluded. Rebuild environments using [ENVIRONMENT.md](../ENVIRONMENT.md). |
+
+For Workbench retention, use **Settings → Collaboration → Export full workspace → Download full workspace**, then select `workbench/saved-packages/` as the save location or move the downloaded ZIP there. Export includes all saved work within the exporter scope, with referenced originals and history; it does not cherry-pick individual fields. Merely pressing Save in a material does not add anything to Git. A downloaded package is not automatically pushed. Only deliberately selected packages belong here; old test packages are excluded.
+
+On another computer, rebuild the environment and use **Import work** to preview the ZIP, resolve conflicts and confirm synchronization. Do not extract it over live SQLite stores. No Workbench package is selected in the initial 2026-09-16 catalog. The System1 recovery package is a separate authority restore, not a Workbench Import work ZIP. See [System1 recovery instructions](../system1/saved-records/RESTORE.md).
+
+The repository is public as checked on 2026-09-16. Only files selected for publication belong in these directories; credentials and confidential customer originals stay local. Packages above the ordinary Git file limit require a separately authorized GitHub asset/LFS route rather than unignoring runtime.
+
 ## Current source workflows
 
 Add sources expands into three nested entries in the left sidebar. **Official website** needs only the official URL: click **Inspect source**, wait for retrieval and content inspection, then review/edit the generated fields and click **Add to review**. Inspection alone does not create a source-review task. **Upload file** keeps the original local: select an original PDF, HTML or XLSX, then click **Parse file**. Submitting an unparsed attachment runs the same mandatory inspection first. Both routes display a loading spinner and stage text, block repeat submission while busy and retain input after a failure.

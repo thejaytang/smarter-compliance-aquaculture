@@ -16,7 +16,7 @@ if ! python3 -c 'import sys; raise SystemExit(0 if sys.version_info >= (3, 11) e
 fi
 python3 -m venv --prompt SmarterComplianceSystem1 .venv
 .venv/bin/python -m pip install --upgrade pip
-.venv/bin/python -m pip install -r deployment/requirements.txt
+.venv/bin/python -m pip install --require-hashes -r deployment/requirements.lock
 [[ -f config/config.json ]] || cp config/config.example.json config/config.json
 [[ -f config/schedule.json ]] || cp config/schedule.example.json config/schedule.json
 PYTHONPATH=src .venv/bin/python -m system1 doctor --config config/config.json --schedule config/schedule.json || true
