@@ -41,3 +41,5 @@ Activation retained business rows in all 11 owning database stores, with matchin
 ## Requirements help follow-up
 
 Routine Saved step/completion notices and per-entry History & structured result are removed from the working area. The title now has an accessible ? button opening short guidance and collapsed saved history, including restore controls. Old inline relationship detail is no longer rendered in the working area. Unsaved/loading/error/stale notices remain. All 344 frontend tests pass. Normal 62742 browser checks found one help button, no routine status or per-entry history panel; clicking ? opened the guidance dialog. Activation preserved business records in 11 stores and served matching assets. No saved annotation was edited.
+
+Field-colour legend follow-up: removed the remaining Field colours disclosure from the third-pane working area and moved it into Requirements help. All 34 Requirement editor tests pass, including absent working-area legend and retained help legend. The normal service serves the updated file. No saved content changed.

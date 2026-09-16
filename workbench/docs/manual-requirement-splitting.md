@@ -118,4 +118,4 @@ Automatic requirement extraction, ontology enrichment, machine learning and comp
 
 ### Help and saved history
 
-The **?** beside Requirements opens instructions and the current entry’s saved history/structured result. These details no longer occupy each entry. Normal saved/completed state is quiet; unsaved changes, loading failures and stale-source warnings remain visible. The toolbar has no removal cross: remove annotations using the × on their lower cards.
+The **?** beside Requirements opens the field-colour legend, instructions and the current entry’s saved history/structured result. These details no longer occupy each entry. Normal saved/completed state is quiet; unsaved changes, loading failures and stale-source warnings remain visible. The toolbar has no removal cross: remove annotations using the × on their lower cards.
