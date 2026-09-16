@@ -24,3 +24,7 @@ Local cloud-backed source reads stalled during activation. Narrow file recovery 
 ## Boundaries
 
 No real model call, online source lookup, executable Site Model rule or compliance result was produced. Native Windows desktop interaction remains unverified for this change; branch CI tests synthetic cross-platform behavior separately. Saved example content was preserved rather than replaced with the temporary UI test structure. Arbitrary mixed grammatical fields do not receive a shared count: complete clause alternatives and same-role field alternatives are represented separately.
+
+## Publication
+
+Implementation commit `190962142cbf65ec66cf32dd156d66ace3acae53` was pushed to `codex/workbench-optimization-20260916` on 2026-09-16 and verified as the head of [PR #2](https://github.com/thejaytang/smarter-compliance-aquaculture/pull/2). [Windows/Ubuntu CI](https://github.com/thejaytang/smarter-compliance-aquaculture/actions/runs/35095530574) was started for that exact code commit; the initial check showed Ubuntu material-contract passed and five other jobs running. This is not a claim of completed Windows acceptance.
