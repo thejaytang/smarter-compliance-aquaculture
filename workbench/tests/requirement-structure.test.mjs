@@ -24,7 +24,7 @@ test('clause containers keep bindings; QC belongs only to combinations',()=>{
  assert.match(html,/Shared conditions stay in the enclosing Group/);assert.match(html,/data-straction="add-group"/);
  assert.equal((html.match(/data-structure-qc/g)||[]).length,1);assert.match(html,/Show quantity controls/);
  assert.doesNotMatch(editor.toolsMarkup(),/data-field="exceptions"|data-field="subrequirement"/);assert.doesNotMatch(html,/data-straction="not"/);
- assert.match(html,/data-straction="degroup-range"/);assert.doesNotMatch(editor.toolsMarkup(),/data-straction="clear-range"/);
+ assert.doesNotMatch(editor.toolsMarkup(),/data-straction="degroup-range"|>Degroup</);assert.doesNotMatch(editor.toolsMarkup(),/data-straction="clear-range"/);
  assert.match(html,/<section class="rq-reference-picker semantic/);
 });
 test('condition and Subject decomposition expose only their role and Group',()=>{
