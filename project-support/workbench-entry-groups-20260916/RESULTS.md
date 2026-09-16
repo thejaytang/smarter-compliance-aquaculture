@@ -62,3 +62,12 @@ The previous complete-entry link UI wrongly repeated the Exception/Subrequiremen
 All 340 frontend tests passed, including a regression that reproduces the legacy/external mixture, rejects duplicate panels/headings, verifies preserved history/quantity and unchanged data, and retains QC for external-link groups. Backend logic is unchanged.
 
 Normal-browser verification on example R1 found exactly two relation panels, each with one dropdown and no descendant relation panel. Choosing R2 produced only a compact R2/Unlink pair. The preview was discarded, the viewport reset, and the example remained saved revision 1. Static frontend changes are served on normal 62742; no database migration or backend restart was needed.
+
+
+## Subrequirement quantity and link cards
+
+The 2026-09-16 follow-up replaces compact Rx/Unlink pairs with vertical reference cards. Each row shows Rx and source wording, with a top-right × that removes only the reference node. Subrequirement and Exception reference groups show quantity controls above their direct children. Sibling selection can create an inline nested group; every level retains its own exact/range quantity and a subgroup counts as one parent member. A completed entry reopens as an unsaved preview for these actions. Existing source/history, target Requirements and manual-save boundaries are unchanged. Legacy mixed groups retain their hidden quantities in history instead of assigning those counts to a partial visible list.
+
+Validation: all 346 frontend tests and 17 group backend tests passed. New regressions cover nested reference quantities, per-link removal routing, completed-entry draft reopening and read-only controls. On the normal Chrome example, removing R3 left links R2/R4 while the separate R3 Requirement remained. Grouping R2/R3 produced an inline subgroup; choosing inner Any [1,2] and outer All 2 retained both independent values. Screenshots confirmed vertical cards, nested indentation and each row's separate ×. Both previews were explicitly discarded through the leave warning. The complete saved Requirement API response matched the pre-test response exactly, with four active sessions. No browser test created a saved revision.
+
+This static UI increment is served by normal 62742 without a backend restart or database migration. Native Windows desktop interaction and real AI were not exercised. Unrelated runtime files and workbook edits are excluded from publication.

@@ -174,8 +174,15 @@
 .rq-tree-link { display:flex; align-items:end; gap:8px; }
 .rq-tree-link label { flex:1; min-width:0; font-size:12px; }
 .rq-tree-link select { display:block; width:100%; margin-top:5px; }
-.rq-linked-list { display:flex; flex-wrap:wrap; gap:6px; margin:6px 0; }
-.rq-linked-requirement { display:inline-flex; align-items:center; gap:4px; }
+.rq-linked-list { display:flex; flex-direction:column; gap:8px; margin:8px 0; padding:0; list-style:none; }
+.rq-linked-requirement { position:relative; display:flex; align-items:flex-start; flex:1; min-width:0; border:1px solid var(--semantic-border,#acc5cf); border-radius:5px; background:#ffffff90; padding:6px 36px 6px 6px; }
+.material-workbench .rq-linked-target { display:flex; align-items:flex-start; gap:10px; min-width:0; width:100%; padding:4px; border:0; background:transparent; text-align:left; }
+.rq-linked-target strong { flex:0 0 auto; }
+.rq-linked-target span { min-width:0; white-space:normal; overflow-wrap:anywhere; line-height:1.5; }
+.rq-relation-group > .rq-tree-body { padding:6px 0 0; }
+.rq-relation-group > .rq-tree-body > .rq-linked-list > li { display:flex; align-items:flex-start; gap:6px; padding:0; margin:0; }
+.rq-linked-list > li > .rq-relation-group { flex:1; min-width:0; margin:0; }
+.rq-linked-list > li > input { flex:0 0 14px; margin-top:12px; }
 .rq-legacy-relation { padding:8px 0; }
 .rq-legacy-relation p { white-space:pre-wrap; }
 
@@ -188,3 +195,6 @@
 .material-workbench .mw-requirements > header .rq-help-button { margin-left:auto; border-radius:50%; width:24px; height:24px; min-height:24px; padding:0; color:var(--muted); background:transparent; }
 .mw-requirements.mw-collapsed .rq-help-button { display:none; }
 #mw-dialog .rq-history pre { white-space:pre-wrap; overflow-wrap:anywhere; }
+.material-workbench .rq-linked-list > li > input[type=checkbox] { width:14px; height:14px; min-height:14px; flex:0 0 14px; margin:12px 0 0; padding:0; }
+.rq-relation-group:has(> .rq-node-remove) { padding-right:10px; }
+.rq-relation-group > strong { display:block; padding-right:28px; }

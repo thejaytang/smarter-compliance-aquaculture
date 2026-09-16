@@ -128,7 +128,7 @@ test('Exception and Subrequirement expose separate other-Requirement link select
  const link={dataset:{referenceRole:'exceptions'},querySelector:()=>({value:'v'})},node={dataset:{owner:'u',structureNode:'root'}};
  await editor.action({dataset:{straction:'link'},closest:s=>s==='.rq-tree-link'?link:node});assert.equal(sent.field,'exceptions');assert.equal(sent.target_id,'v');
  const ref={kind:'reference',id:'ref',role:'exceptions',target_id:'v'};
- assert.match(editor.nodeMarkup(ref,e.doc.units.u,tree,{},false),/data-rq="select-unit" data-id="v"/);assert.match(editor.nodeMarkup(ref,e.doc.units.u,tree,{},false),/>Unlink</);
+ assert.match(editor.nodeMarkup(ref,e.doc.units.u,tree,{},false),/data-rq="select-unit" data-id="v"/);assert.match(editor.nodeMarkup(ref,e.doc.units.u,tree,{},false),/aria-label="Remove link to v"/);
 });
 
 test('relation picker has one heading and moves inline decomposition and its quantity to history',()=>{
@@ -142,7 +142,7 @@ test('relation picker has one heading and moves inline decomposition and its qua
  assert.equal((html.match(/<section class="rq-reference-picker/g)||[]).length,1);
  assert.equal((html.match(/data-structure-reference/g)||[]).length,1);
  assert.doesNotMatch(html,/Old inline wording|Saved decomposition|Earlier inline item ·|data-structure-qc/);
- assert.match(html,/data-id="v"/);assert.match(html,/>Unlink</);
+ assert.match(html,/data-id="v"/);assert.match(html,/aria-label="Remove link to v"/);
  const history=editor.historyMarkup();assert.match(history,/Old inline wording/);assert.match(history,/\[1, 2\] of 2/);
  assert.doesNotMatch(history,/data-straction|data-structure-reference/);assert.equal(JSON.stringify(e.doc),before);
  relation.children=[external,{...external,id:'ref2',target_id:'w'}];
@@ -160,4 +160,21 @@ test('removing a completed Group reopens only the draft then removes the whole n
  const {editor,e}=editorFixture();e.doc.phase='complete';e.host={querySelectorAll:()=>[]};const calls=[];e.step=async(a,b)=>{calls.push({a,b});return true;};
  await editor.action({dataset:{straction:'remove'},closest:()=>({dataset:{owner:'u',structureNode:'a'}})});
  assert.deepEqual(calls,[{a:'phase',b:{phase:'fields'}},{a:'structure',b:{unit_id:'u',node_id:'a',operation:'remove'}}]);
+});
+
+test('nested Subrequirement links keep separate quantities and per-link removal cards',()=>{
+ const ref=(id,target)=>({id,kind:'reference',role:'subrequirement',target_id:target});
+ const tree=clause('root',[group('subs','subrequirement',[group('choices','subrequirement',[ref('a','v'),ref('b','w')],[1,2]),ref('c','x')],2)],[0,text.length]);
+ const {editor,e}=editorFixture(tree);e.label=id=>({v:'R2',w:'R3',x:'R4'}[id]||id);e.completeRequirements=()=>[{id:'v',text:'First source'},{id:'w',text:'Second source'},{id:'x',text:'Third source'}];
+ const html=editor.nodeMarkup(tree.children[0],e.doc.units.u,tree,editor.labels(tree),true);
+ assert.equal((html.match(/data-structure-qc/g)||[]).length,2);assert.equal((html.match(/rq-tree-children rq-linked-list/g)||[]).length,2);
+ for(const label of ['R2','R3','R4'])assert.match(html,new RegExp('aria-label="Remove link to '+label+'"'));
+ assert.match(html,/>First source</);assert.match(html,/data-straction="group"/);assert.match(html,/data-straction="ungroup"/);assert.doesNotMatch(html,/>Unlink</);
+ e.locked=true;const locked=editor.nodeMarkup(tree.children[0],e.doc.units.u,tree,editor.labels(tree),true);assert.doesNotMatch(locked,/Remove link to|data-structure-pick|data-straction="group"/);
+});
+test('a link-card cross removes only its reference node and stays an unsaved structure action',async()=>{
+ const ref={id:'link',kind:'reference',role:'subrequirement',target_id:'v'},tree=clause('root',[group('subs','subrequirement',[ref],1)],[0,text.length]);
+ const {editor,e}=editorFixture(tree);e.doc.phase='complete';e.host={querySelectorAll:()=>[]};const calls=[];e.step=async(a,b)=>{calls.push({a,b});return true;};
+ await editor.action({dataset:{straction:'remove'},closest:()=>({dataset:{owner:'u',structureNode:'link'}})});
+ assert.deepEqual(calls,[{a:'phase',b:{phase:'fields'}},{a:'structure',b:{unit_id:'u',node_id:'link',operation:'remove'}}]);assert.equal(ref.target_id,'v');
 });
