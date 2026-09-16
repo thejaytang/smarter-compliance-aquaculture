@@ -227,3 +227,30 @@
 .rq-relationship > strong { font-size:12px; }
 .rq-relationship > span { min-width:0; overflow-wrap:anywhere; white-space:pre-wrap; }
 .rq-tree-children > .rq-relationship-row { margin:12px 0; }
+
+/* One source surface, one action vocabulary, one manual-save area. */
+.rq-save-bar { position:sticky; bottom:0; z-index:4; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px 16px; margin:16px -12px -12px; padding:12px; border-top:1px solid var(--line); background:var(--surface,#fff); }
+.rq-save-bar > span { font-size:12px; color:#654507; }
+.rq-save-bar > div { display:flex; flex-wrap:wrap; gap:8px; margin-left:auto; }
+.material-workbench .rq-save-bar button { min-height:34px; padding:6px 10px; }
+.rq-save-bar [data-rq=save-close] { color:#fff; background:var(--accent,#245fa5); border-color:var(--accent,#245fa5); }
+.rq-save-bar [data-rq=save-close]:disabled { color:#445669; background:#e8edf3; border-color:#bcc8d5; }
+.rq-tree-node > summary { gap:8px; padding:10px 40px 10px 12px; min-height:40px; }
+.rq-tree-node > summary::before { content:""; width:6px; height:6px; border-right:1.5px solid currentColor; border-bottom:1.5px solid currentColor; transform:rotate(-45deg); flex:none; margin-right:2px; }
+.rq-tree-node[open] > summary::before { transform:rotate(45deg); margin-top:-3px; }
+.rq-tree-node > summary > span.rq-tree-count { flex:none; padding:0; margin-left:auto; color:inherit; font-size:12px; }
+.rq-tree-node[open] > summary > .rq-tree-summary { display:none; }
+.rq-tree-node > .rq-tree-body { padding:4px 12px 12px; }
+.rq-tree-node > .rq-tree-body > .rq-tree-children { border-left-width:1px; padding-left:12px; margin-left:2px; }
+.rq-tree-node > .rq-tree-body > .rq-tree-children > li::before { left:-12px; width:8px; }
+.rq-tree-actions { align-items:center; gap:8px; margin:8px 0; }
+.rq-nested-links { margin-top:10px; }
+.rq-entry-links { display:grid; gap:8px; margin-top:16px; }
+.rq-entry-links > .rq-reference-picker { margin:0; }
+.material-workbench .rq-tool-target { display:flex; flex-direction:row; justify-content:flex-start; align-items:center; gap:6px; flex-basis:100%; margin:0 0 2px; font-size:12px; font-weight:400; }
+.material-workbench .rq-tool-target select { display:inline-block; width:auto; max-width:100%; min-width:110px; min-height:28px; height:28px; margin:0; padding:3px 24px 3px 8px; font-size:12px; }
+.rq-selection-tools .rq-tool-section [hidden] { display:none; }
+.rq-tree-node > summary:hover,.rq-entry-bar:hover { background:#eef2f680; }
+.rq-tree-leaf > [data-straction=decompose] { margin-left:auto; }
+
+.rq-save-bar > .rq-save-feedback { flex-basis:100%; color:var(--text,#192b3c); overflow-wrap:anywhere; }

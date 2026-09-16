@@ -20,9 +20,9 @@ function editorFixture(tree=sample()){
 }
 test('clause containers keep bindings; QC belongs only to combinations',()=>{
  const {editor,e}=editorFixture();const html=editor.unitMarkup(e.doc.units.u,false,false);
- assert.match(html,/data-source-node="a"/);assert.match(html,/data-source-node="b"/);
- assert.match(html,/Shared conditions stay in the enclosing Group/);assert.match(html,/data-straction="add-group"/);
- assert.equal((html.match(/data-structure-qc/g)||[]).length,1);assert.match(html,/Show quantity controls/);
+ assert.match(html,/data-structure-node="a"/);assert.match(html,/data-structure-node="b"/);assert.doesNotMatch(html,/data-source-node="[ab]"/);
+ assert.match(html,/Select the original text above/);assert.match(editor.toolsMarkup(),/data-straction="add-group"/);
+ assert.equal((html.match(/data-structure-qc/g)||[]).length,1);assert.match(html,/Quantity of direct items/);assert.doesNotMatch(html,/data-straction="show-qc"/);
  assert.doesNotMatch(editor.toolsMarkup(),/data-field="exceptions"|data-field="subrequirement"/);assert.doesNotMatch(html,/data-straction="not"/);
  assert.doesNotMatch(editor.toolsMarkup(),/data-straction="degroup-range"|>Degroup</);assert.doesNotMatch(editor.toolsMarkup(),/data-straction="clear-range"/);
  assert.match(html,/<section class="rq-reference-picker semantic/);
@@ -67,7 +67,7 @@ test('one entry root has no second R heading and plain fields have no QC or NOT'
  assert.match(html,/rq-entry-root/);assert.doesNotMatch(html,/>R1<|data-straction="not"|data-structure-qc|>QC /);
  const nested=group('nested','Object',[fragment('of','Object','A',[9,10])]);nested.span=[9,10];
  const explicit=editor.nodeMarkup(nested,e.doc.units.u,tree,editor.labels(tree),false);
- assert.match(explicit,/Group · Object/);assert.match(explicit,/>1<\/button>/);assert.doesNotMatch(explicit,/data-straction="not"/);
+ assert.match(explicit,/Group · Object/);assert.match(explicit,/>1<\/span>/);assert.doesNotMatch(explicit,/data-straction="not"/);
 });
 test('condition NOT and a separate exception clause retain separate scope',()=>{
  const tree=sample();tree.children[0].negated=true;
@@ -169,7 +169,7 @@ test('nested Subrequirement links keep separate quantities and per-link removal 
  const html=editor.nodeMarkup(tree.children[0],e.doc.units.u,tree,editor.labels(tree),true);
  assert.equal((html.match(/data-structure-qc/g)||[]).length,2);assert.equal((html.match(/rq-tree-children rq-linked-list/g)||[]).length,2);
  for(const label of ['R2','R3','R4'])assert.match(html,new RegExp('aria-label="Remove link to '+label+'"'));
- assert.match(html,/>First source</);assert.match(html,/data-straction="group"/);assert.match(html,/data-straction="ungroup"/);assert.doesNotMatch(html,/>Unlink</);
+ assert.match(html,/>First source</);assert.match(html,/data-straction="group"/);assert.doesNotMatch(html,/data-straction="ungroup"/);assert.doesNotMatch(html,/>Unlink</);
  e.locked=true;const locked=editor.nodeMarkup(tree.children[0],e.doc.units.u,tree,editor.labels(tree),true);assert.doesNotMatch(locked,/Remove link to|data-structure-pick|data-straction="group"/);
 });
 test('a link-card cross removes only its reference node and stays an unsaved structure action',async()=>{
@@ -218,4 +218,39 @@ test('relationship annotation and removal remain explicit unsaved source operati
  assert.equal(calls[0].b.operation,'relationship');assert.equal(calls[0].b.start,2);assert.equal(calls[0].b.end,11);assert.equal(calls[0].b.text,undefined);
  await editor.action({dataset:{straction:'remove-relationship'},closest:()=>({dataset:{owner:'u',structureNode:owner.id}})});
  assert.deepEqual(calls[1],{a:'structure',b:{unit_id:'u',node_id:owner.id,operation:'remove-relationship'}});
+});
+
+test('completed and unfinished entries share enabled editing controls without phase buttons',()=>{
+ const {editor,e}=editorFixture();e.rootIds=()=>['u'];const normal=editor.unitMarkup(e.doc.units.u,false,false);
+ e.doc.phase='complete';e.doc.done=['u'];const saved=editor.unitMarkup(e.doc.units.u,true,false);
+ assert.equal(saved,normal);assert.match(saved,/>Split<\/button>/);assert.doesNotMatch(saved,/Resume editing|Finish|Continue decomposing/);
+ assert.doesNotMatch(saved,/data-source-node=/);assert.match(saved,/data-straction="group" disabled/);
+});
+test('quantity editing reopens a completed draft through the same path as all structure actions',async()=>{
+ const {editor,e}=editorFixture();e.doc.phase='complete';const calls=[];e.step=async(action,body)=>{calls.push({action,body});return true;};
+ await editor.apply({unit_id:'u',node_id:'branches',operation:'quantity',quantity:[1,2]});
+ assert.deepEqual(calls.map(c=>c.action),['phase','structure']);assert.deepEqual(calls[1].body.quantity,[1,2]);
+ calls.length=0;e.step=async()=>false;assert.equal(await editor.apply({unit_id:'u'}),false);
+});
+test('Ungroup appears only where it can preserve both quantities and any connector',()=>{
+ const {editor}=editorFixture();const child=group('child','Object',[fragment('a','Object','A',[0,1]),fragment('b','Object','B',[2,3])],2),parent=group('parent','Object',[child],1),tree=clause('root',[parent]);
+ assert.equal(editor.canUngroup(child,tree),true);child.quantity=[1,2];assert.equal(editor.canUngroup(child,tree),false);
+ child.quantity=2;parent.relationship={text:'including',span:[1,2]};assert.equal(editor.canUngroup(child,tree),false);delete parent.relationship;parent.negated=true;assert.equal(editor.canUngroup(child,tree),false);
+});
+test('toolbar honours same-field nesting and root versus Group relationship eligibility',()=>{
+ const {editor,tree}=editorFixture();const buttons=['Subject','Object','conditions'].map(field=>({dataset:{field},hidden:false})),relation={};const bar={querySelectorAll:()=>buttons,querySelector:()=>relation};
+ editor.updateSelectionTools(bar,'u',{kind:'group',role:'conditions',id:'c',span:[0,10]});assert.deepEqual(buttons.map(b=>b.hidden),[true,true,false]);assert.equal(relation.disabled,false);
+ editor.updateSelectionTools(bar,'u',tree);assert.deepEqual(buttons.map(b=>b.hidden),[false,false,false]);assert.equal(relation.disabled,true);
+});
+test('nested link disclosure is local presentation and does not reopen saved work',async()=>{
+ const {editor,e}=editorFixture();e.doc.phase='complete';e.step=()=>assert.fail('No data step for disclosure');let renders=0;e.render=()=>renders++;
+ const button={dataset:{straction:'show-link'},closest:()=>({dataset:{owner:'u',structureNode:'a'}})};
+ await editor.action(button);assert.equal(editor.linkOpen.has('a'),true);await editor.action(button);assert.equal(editor.linkOpen.has('a'),false);assert.equal(renders,2);
+});
+
+test('Split keeps one visible same-field Group without rewriting its implicit wrapper',()=>{
+ const child=group('split','Object',[],null);child.span=[0,10];const wrapper=group('holder','Object',[child],1),tree=clause('root',[wrapper],[0,text.length]);
+ const {editor,e}=editorFixture(tree);const before=JSON.stringify(tree),html=editor.nodeMarkup(tree,e.doc.units.u,tree,editor.labels(tree),false,true);
+ assert.doesNotMatch(html,/data-structure-node="holder"/);assert.match(html,/data-structure-node="split"/);assert.doesNotMatch(html,/data-straction="group"/);assert.equal(JSON.stringify(tree),before);
+ wrapper.quantity=[0,1];assert.match(editor.nodeMarkup(tree,e.doc.units.u,tree,editor.labels(tree),false,true),/data-structure-node="holder"/);
 });

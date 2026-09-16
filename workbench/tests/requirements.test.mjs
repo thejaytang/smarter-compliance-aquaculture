@@ -13,7 +13,7 @@ test('source selection offsets preserve Unicode outside the BMP',()=>{
  assert.equal(codepointOffset('Fish 🐟 shall',7),6);assert.equal(codepointOffset('Fish 🐟 shall',12),11);
 });
 test('manual intake has honest empty and dirty states without automatic processing',()=>{
- const {editor,m,host,auto}=fixture();editor.render();assert.match(host.innerHTML,/To requirements/);assert.doesNotMatch(host.innerHTML,/data-rq-block|data-rq-session|rq-steps/);assert.match(host.innerHTML,/Not connected/);assert.equal(auto.disabled,undefined);
+ const {editor,m,host,auto}=fixture();editor.render();assert.match(host.innerHTML,/To requirement/);assert.doesNotMatch(host.innerHTML,/data-rq-block|data-rq-session|rq-steps/);assert.match(host.innerHTML,/Not connected/);assert.equal(auto.disabled,undefined);
  m.dirty=true;editor.render();assert.match(host.innerHTML,/Save the source content before splitting/);assert.equal(editor.locked,true);
 });
 test('whole passage start sends a block ID and saved version, never rewritten text',async()=>{
@@ -238,4 +238,58 @@ test('saved work stays quiet while errors and unsaved notices remain visible; hi
  editor.notice='Unsaved changes · save before leaving';editor.render();assert.match(host.innerHTML,/role="status"[^>]*>Unsaved changes/);
  editor.notice='Connection lost';editor.render();assert.match(host.innerHTML,/role="status"[^>]*>Connection lost/);
  let help;m.dialog=html=>{help=html;};editor.showHelp();assert.match(help,/Requirements help/);assert.match(help,/Field colours/);assert.match(help,/Saved history/);assert.match(help,/data-rq="restore"/);assert.doesNotMatch(help,/Earlier inline items retained in history|rq-legacy-relations/);
+});
+
+test('Save & close validates all unfinished units and commits exactly once',async()=>{
+ const {editor,host,m}=fixture();editor.doc=documentFixture();editor.sessions=[editor.doc];editor.selected='u';editor.edits=[{request_id:'edit',action:'assign',unit_id:'u',field:'Subject',start:0,end:4}];editor.dirty=true;editor.baseSession='s';editor.baseRevision=2;editor.doc.done=['u'];
+ host.querySelectorAll=()=>[];editor.render=()=>{};const calls=[];
+ m.api=async(path,body)=>{calls.push(body);return {document:{...editor.doc,phase:'complete',revision:3,done:['u','v']}};};
+ await editor.saveDraft(true);
+ assert.equal(calls.length,1);assert.equal(calls[0].action,'save-draft');assert.equal(calls[0].expected_revision,2);
+ assert.deepEqual(calls[0].steps.map(s=>s.action),['assign','done','phase']);assert.equal(calls[0].steps[1].unit_id,'v');
+ assert.equal(editor.dirty,false);assert.equal(editor.sessionCollapsed,true);
+});
+test('completion failure leaves original draft, groups and disclosure available',async()=>{
+ const {editor,host,m}=fixture();editor.doc=documentFixture();editor.sessions=[editor.doc];editor.edits=[{action:'assign',request_id:'edit'}];editor.dirty=true;editor.render=()=>{};host.querySelectorAll=()=>[];
+ const before=JSON.stringify(editor.doc),edits=JSON.stringify(editor.edits);let writes=0;
+ m.api=async()=>{writes++;throw Object.assign(Error('Choose unresolved quantities before finishing.'),{definitive:true});};
+ assert.equal(await editor.saveDraft(true),false);assert.equal(writes,1);assert.equal(JSON.stringify(editor.doc),before);assert.equal(JSON.stringify(editor.edits),edits);assert.equal(editor.dirty,true);assert.equal(editor.sessionCollapsed,false);assert.equal(editor.retryRequest==null,true);
+});
+test('ordinary Save permits incomplete work and never adds completion steps',async()=>{
+ const {editor,host}=fixture();editor.doc=documentFixture();editor.dirty=true;editor.edits=[{action:'structure'}];editor.baseSession='s';editor.baseRevision=2;host.querySelectorAll=()=>[];let sent;
+ editor.step=async(a,b)=>{sent={a,b};return true;};await editor.saveDraft();assert.equal(sent.a,'save-draft');assert.deepEqual(sent.b.steps,[{action:'structure'}]);assert.equal(editor.sessionCollapsed,false);
+});
+test('new unsaved entry completion keeps null saved identity and retains start step',async()=>{
+ const {editor,host}=fixture();editor.doc=documentFixture();editor.dirty=true;editor.edits=[{action:'start',request_id:'new'}];editor.baseSession=null;editor.baseRevision=undefined;host.querySelectorAll=()=>[];let sent;
+ editor.step=async(a,b)=>sent=b;await editor.saveDraft(true);assert.equal(sent.session_id,null);assert.equal(sent.steps[0].action,'start');assert.equal(sent.steps.at(-1).phase,'complete');
+});
+test('closing unchanged completed work is display-only and does not create history',async()=>{
+ const {editor,host}=fixture();editor.doc={...documentFixture(),phase:'complete',done:['u','v']};editor.render=()=>{};host.querySelectorAll=()=>[];editor.step=()=>assert.fail('No write');editor.selected='u';
+ await editor.saveDraft(true);assert.equal(editor.sessionCollapsed,true);assert.equal(editor.selected,null);assert.equal(editor.dirty,false);
+});
+test('a collapsed entry restores pending range controls before manual saving',async()=>{
+ const {editor,host}=fixture();editor.doc=documentFixture();editor.quantityDrafts.set('range',['0','1']);editor.sessionCollapsed=true;let expanded=false,flushed=false;
+ editor.render=()=>expanded=!editor.sessionCollapsed;host.querySelectorAll=()=>expanded?[{commitQuantity:async()=>{flushed=true;editor.edits=[{action:'structure'}];editor.quantityDrafts.clear();return true;}}]:[];
+ editor.step=async()=>{assert.equal(flushed,true);return true;};await editor.saveDraft();assert.equal(expanded,true);assert.equal(flushed,true);
+});
+test('discard confirmation affects only current Requirement and can be cancelled',()=>{
+ const {editor,m}=fixture();editor.doc=documentFixture();editor.sessions=[editor.doc];editor.dirty=true;const handlers={};let closed=0,discarded=0;
+ m.dialog=(html,bind)=>{assert.match(html,/Discard changes to R1/);bind({querySelector:s=>handlers[s]??={},close:()=>closed++});};editor.discard=()=>discarded++;
+ editor.confirmDiscard();handlers['[data-keep-editing]'].onclick();assert.equal(discarded,0);assert.equal(closed,1);
+ handlers['[data-discard-requirement]'].onclick();assert.equal(discarded,1);
+});
+test('header disclosure never flushes a pending range into a preview',()=>{
+ const {editor,host}=fixture();editor.doc=documentFixture();editor.sessions=[editor.doc];editor.render(true);let actions=0;
+ host.querySelectorAll=()=>[{commitQuantity:()=>assert.fail('Disclosure must not change data')}];editor.action=async()=>actions++;
+ host.onclick({target:{closest:s=>s==='[data-rq]'?{dataset:{rq:'open-session'}}:null},stopPropagation(){},preventDefault(){}});assert.equal(actions,1);
+});
+
+test('finishing a newly opened clean entry uses its own saved version, not prior draft state',async()=>{
+ const {editor,host}=fixture();editor.doc={...documentFixture(),id:'new-session',revision:8};editor.baseSession='previous-session';editor.baseRevision=3;editor.edits=[];host.querySelectorAll=()=>[];let sent;
+ editor.step=async(a,b)=>sent=b;await editor.saveDraft(true);assert.equal(sent.session_id,'new-session');assert.equal(sent.expected_revision,8);
+});
+test('an uncertain completion save retries its exact atomic request and retains the draft',async()=>{
+ const {editor,m,host}=fixture();editor.doc=documentFixture();editor.edits=[{request_id:'edit',action:'assign'}];editor.dirty=true;editor.baseSession='s';editor.baseRevision=2;editor.render=()=>{};host.querySelectorAll=()=>[];let attempted;
+ m.api=async(p,b)=>{attempted=b;throw Error('Network interrupted');};await editor.saveDraft(true);assert.equal(editor.dirty,true);assert.equal(editor.sessionCollapsed,false);assert.deepEqual(editor.retryRequest,attempted);
+ m.api=async(p,b)=>{assert.deepEqual(b,attempted);return {document:{...editor.doc,revision:3,phase:'complete',done:['u','v']}};};await editor.step('',{},editor.retryRequest);assert.equal(editor.dirty,false);assert.equal(editor.sessionCollapsed,true);assert.equal(editor.selected,null);
 });

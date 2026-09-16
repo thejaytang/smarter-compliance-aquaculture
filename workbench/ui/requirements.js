@@ -29,11 +29,11 @@ export class RequirementsEditor {
     if(!force&&signature===this.lastRender)return;this.lastRender=signature;
     host.classList?.add('rq-editor');
     host.innerHTML=`${this.m.dirty?'<p class="rq-notice">Save the source content before splitting requirements.</p>':''}
-      ${this.notice?`<p class="rq-status" role="status" aria-live="polite">${esc(this.notice)}</p>`:''}
-      ${this.dirty?button('save-draft','Save splitting',this.pending?'disabled':''):''}${this.retryRequest?button('retry','Retry saving this step'):''}
+      ${this.notice&&!this.doc?`<p class="rq-status" role="status" aria-live="polite">${esc(this.notice)}</p>`:''}
+      ${this.retryRequest&&!this.doc?button('retry','Retry',this.pending?'disabled':''):''}
       <div class="rq-list">${this.orderedSessions().map(s=>{const opened=s.id===this.doc?.id&&!this.sessionCollapsed;return `<section class="rq-session" data-session="${esc(s.id)}"><div class="rq-session-header"><div class="rq-entry-bar" data-rq="open-session" data-id="${esc(s.id)}"><button type="button" data-rq="open-session" data-id="${esc(s.id)}" class="rq-entry-toggle" aria-expanded="${opened}" aria-label="${opened?'Collapse':'Expand'} ${esc(this.entryLabel(s))}"><span aria-hidden="true">${opened?'▾':'▸'}</span><span class="rq-session-number">${esc(this.entryLabel(s))}</span></button><span class="rq-entry-actions">${button('locate-session','Locate',`data-id="${esc(s.id)}"`)}${button('auto-extract','Auto-extract',`data-id="${esc(s.id)}" disabled title="Automatic requirement extraction: Not connected"`)}${button('delete','Remove',`data-id="${esc(s.id)}" ${this.locked?'disabled':''}`)}</span></div><div class="rq-session-title" ${opened?'data-entry-source':''}>${sourcePreview({...s,...(s.id===this.doc?.id?this.doc:{}),labels:this.displayLabels()})}${opened&&!this.locked?this.groupEditor.toolsMarkup():''}</div></div>${opened?this.documentMarkup():''}</section>`;}).join('')}</div>
-      ${this.deleted?.length?`<details><summary>Removed entries · ${this.deleted.length}</summary>${this.deleted.map(s=>`<p>${esc(s.text.slice(0,100))} ${button('undelete','Restore entry',`data-id="${s.id}"`)}</p>`).join('')}</details>`:''}${!this.sessions.length?'<div class="rq-empty"><h4>Build a requirement from its original text</h4><p>Select a source block in the content pane and choose <strong>To requirements</strong>. Split and assign its wording here; each requirement stays in the list.</p><p>Automatic extraction: Not connected.</p></div>':''}`;
-    host.onclick=e=>{const structureAction=e.target.closest('[data-straction]');if(structureAction){e.stopPropagation();e.preventDefault();void this.groupEditor.action(structureAction).catch(error=>this.showError(error));return;}const b=e.target.closest('[data-rq]');if(b&&!b.disabled){e.stopPropagation();if(['open-session','select-unit','locate-session','decompose'].includes(b.dataset.rq))e.preventDefault();(async()=>{for(const row of host.querySelectorAll?.('[data-rq-qc]')||[]){if(['quantity-preset','quantity-range'].includes(b.dataset.rq)&&row.contains(b))continue;if(row.commitQuantity&&!(await row.commitQuantity()))return;}await this.action(b.dataset.rq,b);})().catch(error=>this.showError(error));}};
+      ${this.deleted?.length?`<details><summary>Removed entries · ${this.deleted.length}</summary>${this.deleted.map(s=>`<p>${esc(s.text.slice(0,100))} ${button('undelete','Restore entry',`data-id="${s.id}"`)}</p>`).join('')}</details>`:''}${this.saveBarMarkup()}${!this.sessions.length?'<div class="rq-empty"><h4>Build a requirement from its original text</h4><p>Select a source block in the content pane and choose <strong>To requirement</strong>. Split and assign its wording here; each requirement stays in the list.</p><p>Automatic extraction: Not connected.</p></div>':''}`;
+    host.onclick=e=>{const structureAction=e.target.closest('[data-straction]');if(structureAction){e.stopPropagation();e.preventDefault();void this.groupEditor.action(structureAction).catch(error=>this.showError(error));return;}const b=e.target.closest('[data-rq]');if(b&&!b.disabled){e.stopPropagation();if(['open-session','select-unit','locate-session','decompose'].includes(b.dataset.rq))e.preventDefault();(async()=>{for(const row of ['open-session','select-unit','locate-session','locate-content','locate','discard-draft'].includes(b.dataset.rq)?[]:host.querySelectorAll?.('[data-rq-qc]')||[]){if(['quantity-preset','quantity-range'].includes(b.dataset.rq)&&row.contains(b))continue;if(row.commitQuantity&&!(await row.commitQuantity()))return;}await this.action(b.dataset.rq,b);})().catch(error=>this.showError(error));}};
     host.querySelectorAll?.('[data-rq-qc]:not([data-structure-qc])').forEach(row=>this.bindQuantity(row));
     this.groupEditor.bind(host);
     // Native disclosure is presentation only; retain it across each saved-step render.
@@ -96,21 +96,45 @@ export class RequirementsEditor {
       this.retryRequest=null;this.doc=result.document;this.sessionCollapsed=false;
       if(this.doc.deleted){this.doc=null;this.selected=null;await this.loadList(context);return;}
       for(const id of this.doc.done)if(!previousDone.has(id))this.closedUnits.add(id);
-      if(this.doc.phase==='complete')this.sessionCollapsed=true;
-      if(!this.doc.units[this.selected])this.selected=this.unitIds().find(id=>!this.doc.done.includes(id))||this.unitIds()[0];
+      if(this.doc.phase==='complete'&&isDirect){this.sessionCollapsed=true;this.selected=null;}
+      if(!this.sessionCollapsed&&!this.doc.units[this.selected])this.selected=this.unitIds().find(id=>!this.doc.done.includes(id))||this.unitIds()[0];
       const index=this.sessions.findIndex(s=>s.id===this.doc.id);if(index<0)this.sessions.push(this.doc);else this.sessions[index]=this.doc;
       try{sessionStorage.setItem('requirement-session:'+context,this.doc.id);}catch{}
       if(!this.dirty)this.m.interpretations?.sourceChanged();
-      this.notice=this.dirty?'Unsaved changes · save before leaving. Changes remain only in this page.':'';
+      this.notice='';
       return true;
     } catch(e) {
       // Keep the exact request for retry when transport failed after a possible save.
       if(!e.definitive)this.retryRequest=request;
-      this.notice=e.status===409?'Another tab saved a newer step. Your attempted step was not applied. Reopen this saved passage to continue.':`${e.message}${this.retryRequest?' Retry this same step before leaving.':''}`;
+      this.notice=e.status===409?'Another tab saved a newer step. Your attempted step was not applied. Reopen this saved passage to continue.':`${e.message}${this.retryRequest?' Retry to confirm the result before leaving.':''}`;
       return false;
     } finally {this.pending=false;this.render(true);this.m.updateNavigationLock?.();}
   }
-  async saveDraft(){if(!this.dirty||this.pending)return;for(const row of this.host.querySelectorAll?.('[data-rq-qc]')||[])if(row.commitQuantity&&!(await row.commitQuantity()))return;return this.step('save-draft',{session_id:this.baseSession,expected_revision:this.baseRevision,steps:this.edits});}
+  saveBarMarkup() {
+    if(!this.doc||(!this.dirty&&this.sessionCollapsed&&!this.notice))return '';
+    const disabled=this.locked?'disabled':'';
+    return `<div class="rq-save-bar" aria-label="Requirement saving">${this.notice?`<span class="rq-save-feedback" role="status" aria-live="polite">${esc(this.notice)}</span>`:`<span>${this.dirty?'Unsaved changes':''}</span>`}<div>${this.retryRequest?button('retry','Retry',this.pending?'disabled':''):''}${this.dirty?button('discard-draft','Discard',disabled):''}${button('save-draft','Save',this.dirty?disabled:'disabled')}${button('save-close','Save &amp; close',disabled)}</div></div>`;
+  }
+  async saveDraft(close=false){
+    if(this.pending||this.retryRequest||this.locked||!this.doc||(!this.dirty&&!close))return;
+    if(this.quantityDrafts.size&&this.sessionCollapsed){this.sessionCollapsed=false;this.render(true);}
+    for(const row of this.host.querySelectorAll?.('[data-rq-qc]')||[])if(row.commitQuantity&&!(await row.commitQuantity()))return;
+    if(close&&!this.dirty&&this.doc.phase==='complete'){this.sessionCollapsed=true;this.selected=null;this.render(true);void this.syncInterpretation();return true;}
+    const hasEdits=!!this.edits?.length,steps=[...(this.edits||[])];
+    if(close&&this.doc.phase!=='complete'){
+      // Validate completion and commit once. Failure keeps the editable draft open.
+      for(const id of this.unitIds())if(!this.doc.done.includes(id))steps.push({request_id:crypto.randomUUID(),action:'done',unit_id:id});
+      steps.push({request_id:crypto.randomUUID(),action:'phase',phase:'complete'});
+    }
+    return this.step('save-draft',{session_id:hasEdits?this.baseSession:this.doc.id,expected_revision:hasEdits?this.baseRevision:this.doc.revision,steps});
+  }
+  confirmDiscard(){
+    if(!this.dirty||this.pending||this.retryRequest)return;
+    this.m.dialog(`<h2>Discard changes to ${esc(this.entryLabel(this.doc))}?</h2><p>Unsaved marks, groups and links in this Requirement will be lost. The last saved version will be kept.</p><button data-keep-editing>Keep editing</button><button data-discard-requirement>Discard changes</button>`,dialog=>{
+      dialog.querySelector('[data-keep-editing]').onclick=()=>dialog.close();
+      dialog.querySelector('[data-discard-requirement]').onclick=()=>{dialog.close();this.discard();};
+    });
+  }
   discard(){this.edits=[];this.dirty=false;this.retryRequest=null;this.doc=null;this.baseSession=null;void this.loadList();}
   async navigateAnnotation(refs){
     const jump=async s=>{await this.open(s.session_id);this.selected=s.unit_id;this.closedUnits.delete(s.unit_id);this.render(true);this.m.revealPane?.('requirements');const card=this.host.querySelector(`[data-unit="${s.unit_id}"]`);const field=card?.querySelector(`[data-field="${s.field}"]`)||card;field?.scrollIntoView({block:'nearest'});field?.focus();};
@@ -151,16 +175,14 @@ export class RequirementsEditor {
   unitText(id) {return this.doc.units[id]?.text||this.doc.reference_evidence[id]?.text||id;}
   documentMarkup() {
     const d=this.doc,disabled=this.locked?'disabled':'',complete=d.phase==='complete';
-    return `<div class="rq-session-body"><div class="rq-source-context"><span>${esc(d.chapter||'Original passage')}</span></div>
-      ${complete?`${button('phase','Resume editing',`data-phase="fields" ${disabled}`)}`:''}
+    return `<div class="rq-session-body">${d.chapter?`<div class="rq-source-context">${esc(d.chapter)}</div>`:''}
       <div class="rq-units">${(d.structure_views?this.visibleUnitIds():this.unitIds().filter(id=>!this.inlineConditionIds().has(id))).map(id=>this.unitMarkup(d.units[id],disabled,complete)).join('')}</div>
       ${this.rootIds(d).length>1?`<details class="rq-outer"><summary>Group of source clauses</summary>${this.groupMarkup(d.roots,'roots',null,[],complete)}</details>`:''}
-      <div class="rq-footer">${!complete?button('phase','Save &amp; collapse',`data-phase="complete" ${disabled||d.done.length!==Object.keys(d.units).length?'disabled':''}`):''}${button('reload','Reload saved work',this.pending||this.retryRequest?'disabled':'')}</div>
       </div>`;
   }
   showHelp() {
     const d=this.doc;
-    this.m.dialog(`<h2>Requirements help</h2>${annotationLegend()}<p>Select original wording to assign fields or create a Group. Use × on a card to remove it; removing a Group also removes its contents. Degroup keeps its contents.</p><p>Inside a Group, select a connector such as “including” and choose Relationship. It connects the marked content before and after it, and does not count towards the Group’s quantity. Use quantity controls for AND / OR. Remove a relationship with its own × to keep both parts.</p><p>Only manual saves enter history. Finishing a Requirement does not complete material review.</p><p>Earlier inline relationships remain in saved history.</p>${d?`<details class="rq-history"><summary>Saved history · ${esc(this.entryLabel(d))}</summary><p>Restoring creates a new saved revision.</p>${(d.steps||[]).map(s=>`<p>Revision ${s.revision} · ${esc(s.action)} ${button('restore','Restore',`data-revision="${s.revision}" ${this.locked||this.dirty?'disabled':''}`)}</p>`).join('')}<details><summary>Structured result</summary><pre>${esc(JSON.stringify({requirements:d.roots,units:Object.values(d.units),structures:d.structure_views},null,2))}</pre></details></details>`:''}`,dialog=>{
+    this.m.dialog(`<h2>Requirements help</h2>${annotationLegend()}<p>Click an Rx header to expand or collapse it. Expanded Requirements can be edited directly. Select original wording to assign fields or create a Group. Use × on a card to remove it; removing a Group also removes its contents. Ungroup keeps its contents and is available only when both quantities are All.</p><p>Inside a Group, select a connector such as “including” and choose Relationship. It connects the marked content before and after it, and does not count towards the Group’s quantity. Use quantity controls for AND / OR. Remove a relationship with its own × to keep both parts.</p><p>The toolbar’s Add to selector chooses the enclosing Group. Split turns a field into a same-field Group. Group selected wraps checked siblings; it becomes available after selecting at least two.</p><p>Save keeps your work open, including incomplete work. Save &amp; close validates the structure, saves it once and closes the entry. Neither action completes material review. Discard returns only this Requirement to its last saved version.</p><p>Earlier inline relationships remain in saved history.</p>${d?`<details class="rq-history"><summary>Saved history · ${esc(this.entryLabel(d))}</summary><p>Restoring creates a new saved revision.</p>${(d.steps||[]).map(s=>`<p>Revision ${s.revision} · ${esc(s.action)} ${button('restore','Restore',`data-revision="${s.revision}" ${this.locked||this.dirty?'disabled':''}`)}</p>`).join('')}<details><summary>Structured result</summary><pre>${esc(JSON.stringify({requirements:d.roots,units:Object.values(d.units),structures:d.structure_views},null,2))}</pre></details></details>`:''}`,dialog=>{
       dialog.querySelectorAll('[data-rq="restore"]').forEach(b=>b.onclick=()=>{dialog.close();void this.action('restore',b).catch(error=>this.showError(error));});
     });
   }
@@ -242,6 +264,8 @@ export class RequirementsEditor {
     const card=node.closest?.('[data-unit]'),scope=card||this.host;
     if(card){if(this.selected!==card.dataset.unit){this.results=[];this.searchPerformed=false;}this.selected=card.dataset.unit;}
     if(action==='save-draft')return this.saveDraft();
+    if(action==='save-close')return this.saveDraft(true);
+    if(action==='discard-draft')return this.confirmDiscard();
     if(action==='locate-session'||action==='locate-content'||action==='locate'){
       this.m.revealPane?.('original');this.m.revealPane?.('content');this.m.revealPane?.('requirements');
       const doc=action==='locate-session'?(this.sessions.find(s=>s.id===node.dataset.id)||this.doc):this.doc;

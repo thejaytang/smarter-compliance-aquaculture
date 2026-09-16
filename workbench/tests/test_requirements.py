@@ -176,6 +176,31 @@ class RequirementTests(unittest.TestCase):
         self.assertEqual(result,self.service.apply(ACTOR,save))
         self.assertEqual(len(self.service.read(ACTOR,self.doc['id'])['steps']),2)
 
+    def test_save_and_close_validates_and_commits_one_replayable_revision(self):
+        uid=self.root()
+        request=dict(request_id=str(uuid.uuid4()),action='save-draft',session_id=self.doc['id'],expected_revision=self.doc['revision'],steps=[
+            dict(request_id=str(uuid.uuid4()),action='assign',unit_id=uid,field='Subject',start=0,end=9),
+            dict(request_id=str(uuid.uuid4()),action='done',unit_id=uid),
+            dict(request_id=str(uuid.uuid4()),action='phase',phase='complete')])
+        result=self.service.apply(ACTOR,request)
+        self.assertEqual(result,self.service.apply(ACTOR,request))
+        saved=self.service.read(ACTOR,self.doc['id'])
+        self.assertEqual(saved['phase'],'complete')
+        self.assertEqual(saved['done'],[uid])
+        self.assertEqual(len(saved['steps']),2)
+        self.assertEqual(saved['text'],TEXT)
+
+    def test_save_and_close_rejects_an_empty_group_without_partial_history(self):
+        uid=self.root();before=self.service.read(ACTOR,self.doc['id'])
+        request=dict(request_id=str(uuid.uuid4()),action='save-draft',session_id=self.doc['id'],expected_revision=self.doc['revision'],steps=[
+            dict(request_id=str(uuid.uuid4()),action='structure',unit_id=uid,node_id=self.doc['structure_views'][uid]['id'],operation='add-group',start=0,end=9),
+            dict(request_id=str(uuid.uuid4()),action='done',unit_id=uid),
+            dict(request_id=str(uuid.uuid4()),action='phase',phase='complete')])
+        with self.assertRaisesRegex(ValueError,'Complete empty groups'):
+            self.service.apply(ACTOR,request)
+        self.assertEqual(self.service.read(ACTOR,self.doc['id']),before)
+        with self.c.db() as db:self.assertEqual(db.execute('PRAGMA foreign_key_check').fetchall(),[])
+
     def test_new_unsaved_entry_and_recursive_preview_use_stable_ids_without_db_rows(self):
         start=dict(request_id=str(uuid.uuid4()),action='start',material_id=self.material['id'],material_revision=3,block_id='b')
         request=dict(request_id=str(uuid.uuid4()),action='preview',steps=[start])

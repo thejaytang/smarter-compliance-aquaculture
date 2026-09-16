@@ -82,3 +82,10 @@ Source status distinguishes specified, explicitly absent and unresolved informat
 ## Source Group relationships
 
 The third-pane selection toolbar places Relationship beside Group. It is enabled only for a source-bound inner Group. Display the exact connector in a compact neutral-colour row between its source-ordered children, with a separate top-right removal action. Preserve the connector highlight in collapsed original text. Do not count the connector, duplicate AND/OR as metadata, expose implicit one-child wrapper boxes, or turn this field into a compliance operator.
+
+
+## Third-pane interaction language, 2026-09-17
+
+Use one action vocabulary and position in saved and unfinished entries: header disclosure for viewing; a single top source surface for marking; Split on field cards; quantity and Group selected above siblings; link selectors for other Rx entries; × on the owning card. The source toolbar names the destination with Add to and restricts same-field nesting. Nested Group link options use a compact reveal; existing links stay visible. Avoid duplicated source editors and Resume editing gates.
+
+One bottom action bar owns Save, Save & close and confirmed Discard. Save & close validates and commits atomically; a rejected or uncertain save retains the draft. Show errors at that action bar. Pure disclosure never commits a pending numeric draft. [Canonical action table](../../workbench/docs/manual-requirement-splitting.md#interaction-language-current-2026-09-17).

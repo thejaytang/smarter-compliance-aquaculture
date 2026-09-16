@@ -6,7 +6,9 @@ The middle pane opens as one directly editable document. Select across paragraph
 
 ## Manual requirement splitting
 
-In personal material work, save the content and choose **To requirements** beside a text passage. Work through **Outer relationships → Unit fields → Result** in the right pane. Every applied step is saved separately. [Full instructions and storage boundaries](docs/manual-requirement-splitting.md). Automatic requirement extraction remains disconnected; the new personal splitting records are not yet included in collaboration ZIPs.
+Save the extracted content, then choose **To requirement** beside a passage. Expand its Rx in the third pane and select original wording to mark fields, Groups or Relationships. **Add to** identifies the destination Group. Use **Split** for same-field nesting, **Group selected** for checked siblings, and Exception/Subrequirement dropdowns for links to other Rx entries. Remove marks using the owning card's ×.
+
+The bottom bar offers **Save** (keep editing), **Save & close** (validate, save once and close), and **Discard** (confirm before discarding this Requirement's unsaved edits). Editing is available immediately after expansion, including previously completed work. Only manual saves enter history. Automatic Requirement extraction remains **Not connected**. [Interaction rules and source-preservation contract](docs/manual-requirement-splitting.md#interaction-language-current-2026-09-17). Saved structure/history is included by current full-workspace snapshots; unsaved work is not.
 
 ## Settings and collaboration (current)
 
