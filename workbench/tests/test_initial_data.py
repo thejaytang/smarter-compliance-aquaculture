@@ -25,7 +25,9 @@ class InitialDataTests(unittest.TestCase):
    z.writestr('manifest.json',json.dumps(manifest))
   return p,hashlib.sha256(p.read_bytes()).hexdigest()
  def test_fresh_restore_and_repeat_refusal(self):
+  guide=self.root/'system1/Data/STORAGE.md';guide.parent.mkdir(parents=True);guide.write_text('Tracked application storage guide')
   p,h=self.archive();self.assertEqual(restore(self.root,p,h)['files'],2)
+  self.assertEqual(guide.read_text(),'Tracked application storage guide')
   self.assertEqual((self.root/'system1/Data/A_Public_Authority/source.html').read_text(),'æ中文')
   config=json.loads((self.root/'system1/Code/config/config.json').read_text());self.assertFalse(config['random_qa']['enabled'])
   with self.assertRaisesRegex(ValueError,'already has work'):restore(self.root,p,h)

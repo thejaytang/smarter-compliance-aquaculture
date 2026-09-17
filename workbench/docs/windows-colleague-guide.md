@@ -14,7 +14,7 @@
 4. **Before the first launch**, have the helper run from the repository root:
 
    ```powershell
-   py -3.12 workbench/deployment/restore_initial_data.py "C:\path\source-initial-data-20260917.zip" --sha256 e24c566133f8829688017ddac01ffb61e7f2bdbac7ce62560f80329c71e8267b
+   py -3.12 workbench/deployment/restore_initial_data.py "C:\path\source-initial-data-20260917.zip" --sha256 6c141d49199a01975d0cc559cc930afbbc6137a604d6b5d46e7fee84b92d8e1a
    ```
 
    Success reports `restored` and source revision `13`. The script verifies every package entry and refuses to overwrite an existing workspace. The package retains source review and required history/originals; it contains no Materials annotations. It is an installation package, not an **Import work** ZIP.

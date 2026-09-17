@@ -1,6 +1,6 @@
 """Build the explicitly authorized one-time handoff; no Materials or credentials."""
 from pathlib import Path
-import hashlib,json,sqlite3,zipfile
+import hashlib,json,sqlite3,subprocess,zipfile
 from local_workbench.recovery import digest
 ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'project-support/shared-workspace-20260917/local-delivery'
@@ -23,7 +23,10 @@ with zipfile.ZipFile(ROOT/'system1/saved-records/governance-20260916-r8.zip') as
  p=OUT/'source-assessments.sqlite';p.write_bytes(z.read('logs/source-assessments.sqlite'))
  files['system1/Code/runtime/logs/source-assessments.sqlite']=p
 for p in (ROOT/'system1/Data').rglob('*'):
- if p.is_file() and p.name!='.DS_Store':files[p.relative_to(ROOT).as_posix()]=p
+ if p.is_file() and p.name not in ('.DS_Store','STORAGE.md','.gitkeep'):files[p.relative_to(ROOT).as_posix()]=p
+# A seed must coexist with a fresh clone, including its tracked storage guide.
+tracked=set(subprocess.check_output(['git','ls-files','-z'],cwd=ROOT).decode().split('\0'))
+assert not tracked.intersection(files), 'Initial data overlaps application files'
 with sqlite3.connect(files['system1/Code/runtime/governance.sqlite']) as db:
  assert db.execute('PRAGMA integrity_check').fetchone()[0]=='ok'
  assert not db.execute('PRAGMA foreign_key_check').fetchall()
