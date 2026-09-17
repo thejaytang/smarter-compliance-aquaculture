@@ -34,7 +34,7 @@ class PdfHandler(BaseHTTPRequestHandler):
 
 class FinalWorkbookContractTest(unittest.TestCase):
     def test_dashboard_management_reporting_contract(self):
-        final_workbook = Path(__file__).resolve().parents[2] / "Requirement_Source_Registry.xlsx"
+        final_workbook = Path(__file__).resolve().parent / "fixtures" / "source_registry.xlsx"
         workbook = load_workbook(final_workbook, data_only=False)
         dashboard = workbook["Dashboard"]
 
@@ -106,13 +106,13 @@ class FinalWorkbookContractTest(unittest.TestCase):
         workbook.close()
 
     def test_updater_preserves_english_contract_dashboard_and_excel_features(self):
-        final_workbook = Path(__file__).resolve().parents[2] / "Requirement_Source_Registry.xlsx"
+        final_workbook = Path(__file__).resolve().parent / "fixtures" / "source_registry.xlsx"
         self.assertTrue(final_workbook.is_file())
         with tempfile.TemporaryDirectory() as temp_name:
             library = Path(temp_name) / "Requirement Source Management"
             updater_dir = library / "Code" / "config"
             updater_dir.mkdir(parents=True)
-            workbook = library / final_workbook.name
+            workbook = library / "Requirement_Source_Registry.xlsx"
             shutil.copy2(final_workbook, workbook)
             source_root = library / "Data"
 

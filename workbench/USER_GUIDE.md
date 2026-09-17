@@ -26,20 +26,13 @@ Full snapshots include originals once plus saved work/history, and exclude the a
 
 ## Saved data for GitHub
 
-The 2026-09-16 retention decision protects **System1 human records** and **explicitly exported, selected Workbench import packages**. It replaces the earlier all-runtime publication scope for subsequent synchronization. Historical backups remain historical; they are not the default restore path.
+The 2026-09-17 handoff supersedes the earlier selected-package Git policy. Git supplies application code, templates, dependency declarations, tests and documentation. Active source originals, databases, local settings, generated registers and Collaboration packages stay on each computer.
 
-| Data | Repository location / rule |
-| --- | --- |
-| System1 applied human decisions and operation history | Consistent authority snapshots in `system1/saved-records/`, including the hash-matched immutable migration workbook, named human assessment holds and recovery manifest. Keep source identities/version links and their referenced originals under `system1/Data/`. |
-| Workbench work selected for retention | Save the downloaded full workspace ZIP into `workbench/saved-packages/`. This directory is outside ignored runtime and is eligible for an explicitly requested Git sync. |
-| Workbench edits saved only in the local application, unexported work and old engineering ZIPs | Outside the selected Git retention scope. The existing local service is not reset or cleaned by this policy. |
-| Sessions, caches, logs, temporary extraction results, machine execution state and `.venv` | Remain excluded. Rebuild environments using [ENVIRONMENT.md](../ENVIRONMENT.md). |
+The initial source dataset is distributed **once** as a separate GitHub Release asset. It retains System1 source review and originals, with Materials test work removed. Restore it only into an unused installation. Later application updates must not restore this seed or replace the local workspace.
 
-For Workbench retention, use **Settings → Collaboration → Export full workspace → Download full workspace**, then select `workbench/saved-packages/` as the save location or move the downloaded ZIP there. Export includes all saved work within the exporter scope, with referenced originals and history; it does not cherry-pick individual fields. Merely pressing Save in a material does not add anything to Git. A downloaded package is not automatically pushed. Only deliberately selected packages belong here; old test packages are excluded.
+Use **Settings → Collaboration → Export full workspace → Download full workspace** to share saved work, then **Import work** to compare and confirm incoming changes. Keep these packages outside Git. The local `workbench/saved-packages/` directory and `system1/saved-records/` archives are ignored; their existence does not publish them.
 
-On another computer, rebuild the environment and use **Import work** to preview the ZIP, resolve conflicts and confirm synchronization. Do not extract it over live SQLite stores. No Workbench package is selected in the initial 2026-09-16 catalog. The System1 recovery package is a separate authority restore, not a Workbench Import work ZIP. See [System1 recovery instructions](../system1/saved-records/RESTORE.md).
-
-The repository is public as checked on 2026-09-16. Only files selected for publication belong in these directories; credentials and confidential customer originals stay local. Packages above the ordinary Git file limit require a separately authorized GitHub asset/LFS route rather than unignoring runtime.
+See the [Windows colleague guide](docs/windows-colleague-guide.md) for first setup, the one-time transition for older clones, daily Collaboration and application updates. [ENVIRONMENT.md](../ENVIRONMENT.md) owns environment rebuilding. Earlier published data still exists in Git history and older releases; stopping tracking does not erase that history.
 
 ## Current source workflows
 

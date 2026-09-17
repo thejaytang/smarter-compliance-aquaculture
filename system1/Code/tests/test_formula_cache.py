@@ -14,7 +14,7 @@ import source_updater as u
 
 class FormulaCacheTests(unittest.TestCase):
     def test_real_template_all_caches_preserve_formulas_history_and_structure(self):
-        original = Path(__file__).resolve().parents[2] / 'Requirement_Source_Registry.xlsx'
+        original = Path(__file__).resolve().parent / 'fixtures' / 'source_registry.xlsx'
         before = original.read_bytes()
         with tempfile.TemporaryDirectory() as name:
             path = Path(name) / 'registry.xlsx'
@@ -67,7 +67,7 @@ class FormulaCacheTests(unittest.TestCase):
                          ['Fish & water', 'pending', '13% total', 46272, 'empty', 8])
 
     def test_chart_cache_changes_with_source_selection(self):
-        original = Path(__file__).resolve().parents[2] / 'Requirement_Source_Registry.xlsx'
+        original = Path(__file__).resolve().parent / 'fixtures' / 'source_registry.xlsx'
         with tempfile.TemporaryDirectory() as name:
             path = Path(name) / 'registry.xlsx'; shutil.copy2(original, path)
             wb = load_workbook(path)

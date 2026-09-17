@@ -35,6 +35,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Keep business data outside application updates
+        run: python workbench/deployment/check_app_boundary.py
       - name: Install platform timezone data
         run: python -m pip install tzdata==2026.3
       - name: Recreate System2 environment for the reviewer HTTP bridge

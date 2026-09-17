@@ -20,7 +20,7 @@ def business_content(workbook):
 
 class BrowserWorkbookPresentationTest(unittest.TestCase):
     def test_controlled_save_preserves_records_and_retires_legacy_surfaces(self):
-        source = Path(__file__).resolve().parents[2] / "Requirement_Source_Registry.xlsx"
+        source = Path(__file__).resolve().parent / "fixtures" / "source_registry.xlsx"
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / source.name
             shutil.copy2(source, path)

@@ -60,4 +60,3 @@ class SharedRequirementsTests(unittest.TestCase):
   rs=Requirements(peer);self.assertEqual(len(rs.listing(B,self.material['id'])['sessions']),1)
   self.assertEqual(rs.read(B,self.doc['id'])['created_by'],A)
   delivery.validate(delivery.capture()[0]['value'])
-
