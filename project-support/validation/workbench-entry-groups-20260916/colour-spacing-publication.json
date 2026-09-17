@@ -1,0 +1,7 @@
+{
+  "date": "2026-09-16",
+  "commit": "91821ad77ca41921396d2ee24bc62584a465f95d",
+  "pr": "https://github.com/thejaytang/smarter-compliance-aquaculture/pull/2",
+  "validation": "336 frontend tests; normal-browser colours, exclusive range mode, Remove cancellation, group indentation, fourth-pane gutters, second-pane button spacing; test drafts discarded",
+  "platform_limit": "Native Windows desktop not exercised"
+}

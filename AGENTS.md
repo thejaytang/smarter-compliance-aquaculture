@@ -1,6 +1,6 @@
 # Workbench Agent Instructions
 
-This is the single Agent entry point, including for local VS Code Copilot. Read `README.md`, `USER_GUIDE.md`, `ENVIRONMENT.md` and the relevant contract under `workbench/contracts/`. The optional local `PROJECT_STATE.md` and `project-support/` hold development status/evidence; they are not needed to operate a product checkout. Maintained project documentation is English; preserve original source language and identifiers.
+This is the single Agent entry point, including for local VS Code Copilot. Read `README.md`, `USER_GUIDE.md`, `ENVIRONMENT.md` and the relevant contract under `workbench/contracts/`. `PROJECT_STATE.md`, `project-support/` and tests are versioned on Jay’s development branch; they are not required by the main product checkout. Maintained project documentation is English; preserve original source language and identifiers.
 
 ## 1. Boundaries and ownership
 
@@ -39,7 +39,8 @@ This is the single Agent entry point, including for local VS Code Copilot. Read 
 
 ## 4. Git, collaboration and external actions
 
-- Git carries application code/resources, dependency declarations/locks, templates, guides and this file. It excludes local tests, project-support, development state, originals, databases, packages, private configuration, environments and cache. `workspace/` and `runtime/` carry only README files in Git.
+- `main` carries application code/resources, dependency declarations/locks, templates, guides and the authorized initial business snapshot. `developing-only-jay` additionally carries development plans, designs, tests and validation evidence. Active databases are shared through consistent snapshots. Private authentication configuration, sessions, environments and cache stay local; `workspace/` and `runtime/` carry only README files in Git.
+- This branch is public, not access-restricted to Jay. Agent guides retained inside project-support are historical evidence; this root remains the current entry point. Transfer selected product changes to `main`; never merge development-only documents, data policies or records wholesale into `main`.
 - The user authorized public publication of the complete business seed on 2026-09-17. The audited, immutable `workbench/initial-data/` package is the sole data exception to the application-only Git rule. It contains the four business stores, originals and human history, including confidential business content. Credentials and runtime state stay local. Never restore it over existing work or during application updates. Cleaning development Materials was a previous one-time user action, never a startup/migration policy.
 - Retire already tracked excluded files from the index without deleting local copies. Do not rewrite old Git history or remove earlier release assets.
 - Routine changes stay local. Commit, push, PR update, merge, tag and release each require the user's applicable milestone authorization. Previous one-off authorization does not carry forward automatically.
@@ -53,7 +54,7 @@ This is the single Agent entry point, including for local VS Code Copilot. Read 
 - Own Python modules use `snake_case`; own directories use lowercase; web and contract filenames use `kebab-case`. Preserve standard root guide names, platform-labelled launchers, original evidence filenames and vendor distributions. Reject Windows reserved names and case/Unicode collisions.
 - `local_workbench` contains application orchestration. Cross-system utilities import from `backend.shared`; Requirement/SCD code imports from `backend.system3`. Do not extend package search paths or have shared/System3 modules import application orchestration.
 - System1 source and deployment folders live directly below `backend/system1`. Each entry point declares its source roots through the shared `python_path` helper. No generated `.pth` files are required.
-- Run `workbench/deployment/check_app_boundary.py` against the staged product index. Local development suites use `workbench/tests/run_checks.py` in their owning environments.
+- Run `workbench/deployment/check_app_boundary.py` against the staged product index; use `--development` for this development branch. Local development suites use `workbench/tests/run_checks.py` in their owning environments.
 
 ## 6. Local Copilot update procedure
 

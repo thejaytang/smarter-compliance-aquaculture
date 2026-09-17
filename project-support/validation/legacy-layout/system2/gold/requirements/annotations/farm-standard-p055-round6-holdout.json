@@ -1,0 +1,1152 @@
+{
+  "schema_version": "3.0",
+  "gold_revision": 1,
+  "supersedes": null,
+  "supersedes_sha256": null,
+  "revision_reason": "Initial source-only frozen annotation for the Round 6 blind holdout.",
+  "sample_id": "farm-standard-p055-round6-holdout",
+  "source": {
+    "file_name": "ASC-STD-001-ASC-Farm-Standard-V1.0.1-Aug-2025.pdf",
+    "sha256": "3b0cdf01f72b518710d5af9c1d8ccaa653c381f45053c7b20a102e06c1de4b20",
+    "language": "en",
+    "document_family": "certification_standard",
+    "page_count": 256
+  },
+  "sample": {
+    "round_id": "goal04-round6",
+    "split": "holdout",
+    "page_numbers": [
+      55
+    ],
+    "selection_rationale": "Untouched risk-driven single-page holdout selected before source inspection to test formal Requirement recovery, including a page-top continuation, grouped applicability, list structure, thresholds, conditions, and internal references."
+  },
+  "annotation": {
+    "status": "frozen",
+    "frozen_at": "2026-08-28",
+    "verification": [
+      "visual_page",
+      "native_text"
+    ],
+    "notes": [
+      "Pass 1 annotated every formal Requirement region visible on human page 55 from the rendered source page.",
+      "Pass 2 independently reconciled each ID, text span, field, qualifier, list marker, threshold, reference, and bounding box against native PDF objects.",
+      "The page-top c-e list is retained as the visible continuation of Requirement 2.6.13; its governing subject, modality, and opening clauses occur on page 54 and are not copied into this one-page Gold window.",
+      "Criterion-level scope printed on page 52 is not duplicated into page-local applicability because schema-v3 requires every direct provenance segment to remain inside the selected page window."
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "p055-header-001",
+      "page_number": 55,
+      "page_index": 54,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 394.27,
+        "y0": 33.84192,
+        "x1": 543.26248,
+        "y1": 43.05756
+      },
+      "role": "header",
+      "object_kind": "text_block",
+      "segment_order": 0,
+      "source_text": "Aquaculture Stewardship Council"
+    },
+    {
+      "segment_id": "p055-r2.6.13-cont-c",
+      "page_number": 55,
+      "page_index": 54,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 135.74,
+        "y0": 73.704768,
+        "x1": 503.992,
+        "y1": 100.079
+      },
+      "role": "requirement_continuation",
+      "object_kind": "list",
+      "segment_order": 1,
+      "source_text": "c. the distance from the surface to the zone of oxygen depletion or to the zone of anoxia has decreased by ≥25% over the past 24 months; or"
+    },
+    {
+      "segment_id": "p055-r2.6.13-cont-d",
+      "page_number": 55,
+      "page_index": 54,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 135.74,
+        "y0": 110.468,
+        "x1": 402.496,
+        "y1": 121.439
+      },
+      "role": "requirement_continuation",
+      "object_kind": "list",
+      "segment_order": 2,
+      "source_text": "d. BOD has increased by ≥15% over the past 24 months; or"
+    },
+    {
+      "segment_id": "p055-r2.6.13-cont-e",
+      "page_number": 55,
+      "page_index": 54,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 135.74,
+        "y0": 131.828,
+        "x1": 501.109,
+        "y1": 158.159
+      },
+      "role": "requirement_continuation",
+      "object_kind": "list",
+      "segment_order": 3,
+      "source_text": "e. ≥1 adverse turnover event (ATE) or ≥1 harmful algal bloom (HAB) within the past 10 years."
+    },
+    {
+      "segment_id": "p055-r2.6.14-id",
+      "page_number": 55,
+      "page_index": 54,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 53.88,
+        "y0": 186.22928,
+        "x1": 93.55704,
+        "y1": 203.34404
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 4,
+      "source_text": "2.6.14"
+    },
+    {
+      "segment_id": "p055-r2.6.14-text",
+      "page_number": 55,
+      "page_index": 54,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 117.74,
+        "y0": 186.308,
+        "x1": 442.271,
+        "y1": 212.639
+      },
+      "role": "normative_text",
+      "object_kind": "table_cell",
+      "segment_order": 5,
+      "source_text": "The UoC shall report annually to ASC the WUM hydraulic characteristics, according to ASC data submission procedures."
+    },
+    {
+      "segment_id": "p055-r2.6.15-id",
+      "page_number": 55,
+      "page_index": 54,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 53.88,
+        "y0": 246.94928,
+        "x1": 92.23728,
+        "y1": 264.06404
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 6,
+      "source_text": "2.6.15"
+    },
+    {
+      "segment_id": "p055-r2.6.15-text",
+      "page_number": 55,
+      "page_index": 54,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 117.74,
+        "y0": 247.028,
+        "x1": 467.552,
+        "y1": 273.389
+      },
+      "role": "normative_text",
+      "object_kind": "table_cell",
+      "segment_order": 7,
+      "source_text": "The UoC shall report annually to ASC the water quality monitoring results and the BOD value, according to ASC data submission procedures."
+    },
+    {
+      "segment_id": "p055-group-2.6.16-2.6.18-heading",
+      "page_number": 55,
+      "page_index": 54,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 53.88,
+        "y0": 333.72872,
+        "x1": 174.80744,
+        "y1": 345.86996
+      },
+      "role": "criterion_heading",
+      "object_kind": "text_block",
+      "segment_order": 8,
+      "source_text": "Indicators 2.6.16 - 2.6.18"
+    },
+    {
+      "segment_id": "p055-group-2.6.16-2.6.18-scope",
+      "page_number": 55,
+      "page_index": 54,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 53.88,
+        "y0": 350.88872,
+        "x1": 195.83988,
+        "y1": 363.02996
+      },
+      "role": "applicability",
+      "object_kind": "text_block",
+      "segment_order": 9,
+      "source_text": "Scope: Point source systems"
+    },
+    {
+      "segment_id": "p055-r2.6.16-id",
+      "page_number": 55,
+      "page_index": 54,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 53.88,
+        "y0": 397.57928,
+        "x1": 92.82696,
+        "y1": 414.69404
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 10,
+      "source_text": "2.6.16"
+    },
+    {
+      "segment_id": "p055-r2.6.16-root",
+      "page_number": 55,
+      "page_index": 54,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 117.74,
+        "y0": 397.658,
+        "x1": 525.467,
+        "y1": 408.629
+      },
+      "role": "normative_text",
+      "object_kind": "text_block",
+      "segment_order": 11,
+      "source_text": "The UoC shall use a treatment system prior to the discharge of effluent water that ensures:"
+    },
+    {
+      "segment_id": "p055-r2.6.16-clause-a",
+      "page_number": 55,
+      "page_index": 54,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 135.74,
+        "y0": 419.018,
+        "x1": 408.388,
+        "y1": 429.989
+      },
+      "role": "normative_text",
+      "object_kind": "list",
+      "segment_order": 12,
+      "source_text": "a. ≥65% of Total Suspended Solids (TSS) are captured; and"
+    },
+    {
+      "segment_id": "p055-r2.6.16-clause-b",
+      "page_number": 55,
+      "page_index": 54,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 135.74,
+        "y0": 440.398,
+        "x1": 434.99,
+        "y1": 451.369
+      },
+      "role": "normative_text",
+      "object_kind": "list",
+      "segment_order": 13,
+      "source_text": "b. concentration of settleable solids in effluent water is <3.3ml/L."
+    },
+    {
+      "segment_id": "p055-r2.6.17-id",
+      "page_number": 55,
+      "page_index": 54,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 53.88,
+        "y0": 479.55928,
+        "x1": 92.58828,
+        "y1": 496.67404
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 14,
+      "source_text": "2.6.17"
+    },
+    {
+      "segment_id": "p055-r2.6.17-applicability",
+      "page_number": 55,
+      "page_index": 54,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 117.74,
+        "y0": 479.638,
+        "x1": 304.544,
+        "y1": 490.609
+      },
+      "role": "applicability",
+      "object_kind": "table_cell",
+      "segment_order": 15,
+      "source_text": "Indicator applicability: waterbody Type B"
+    },
+    {
+      "segment_id": "p055-r2.6.17-root",
+      "page_number": 55,
+      "page_index": 54,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 117.74,
+        "y0": 500.998,
+        "x1": 522.883,
+        "y1": 542.689
+      },
+      "role": "normative_text",
+      "object_kind": "text_block",
+      "segment_order": 16,
+      "source_text": "The UoC shall conduct monitoring of TN, TP and TSS upstream from the inflow point and downstream from the outflow point, following the method outlined in Appendix 8 (8.9), if one of the following conditions applies:"
+    },
+    {
+      "segment_id": "p055-r2.6.17-clause-a",
+      "page_number": 55,
+      "page_index": 54,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 135.74,
+        "y0": 553.078,
+        "x1": 523.946,
+        "y1": 579.409
+      },
+      "role": "normative_text",
+      "object_kind": "list",
+      "segment_order": 17,
+      "source_text": "a. the site effluent flow contribution to the receiving water flow is >10%, as calculated following the method outlined in Appendix 8 (8.10); or"
+    },
+    {
+      "segment_id": "p055-r2.6.17-clause-b",
+      "page_number": 55,
+      "page_index": 54,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 135.74,
+        "y0": 589.798,
+        "x1": 512.444,
+        "y1": 600.769
+      },
+      "role": "normative_text",
+      "object_kind": "list",
+      "segment_order": 18,
+      "source_text": "b. the site effluent enters a river or channel <1km upstream of a Type A waterbody."
+    },
+    {
+      "segment_id": "p055-r2.6.18-id",
+      "page_number": 55,
+      "page_index": 54,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 53.88,
+        "y0": 628.86928,
+        "x1": 93.23412,
+        "y1": 645.98404
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 19,
+      "source_text": "2.6.18"
+    },
+    {
+      "segment_id": "p055-r2.6.18-applicability",
+      "page_number": 55,
+      "page_index": 54,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 117.74,
+        "y0": 628.948,
+        "x1": 304.544,
+        "y1": 639.919
+      },
+      "role": "applicability",
+      "object_kind": "table_cell",
+      "segment_order": 20,
+      "source_text": "Indicator applicability: waterbody Type B"
+    },
+    {
+      "segment_id": "p055-r2.6.18-root",
+      "page_number": 55,
+      "page_index": 54,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 117.74,
+        "y0": 650.308,
+        "x1": 507.92,
+        "y1": 691.999
+      },
+      "role": "normative_text",
+      "object_kind": "table_cell",
+      "segment_order": 21,
+      "source_text": "The UoC shall, if Indicator 2.6.17 applies, ensure there is <25% increase in TN, TP and TSS concentrations between the measured upstream concentration and the calculated downstream concentration."
+    },
+    {
+      "segment_id": "p055-footer-001",
+      "page_number": 55,
+      "page_index": 54,
+      "page_size": {
+        "width": 595.32,
+        "height": 841.92,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 59.304,
+        "y0": 792.53664,
+        "x1": 538.77928,
+        "y1": 799.26552
+      },
+      "role": "footer",
+      "object_kind": "text_block",
+      "segment_order": 22,
+      "source_text": "Document Name ASC Farm Standard Document ID ASC-STD-001 Version V1.0.1 Page 55 of 256"
+    }
+  ],
+  "requirements": [
+    {
+      "requirement_id": "2.6.13",
+      "requirement_form": "normative_indicator",
+      "criterion_path": [
+        "Principle 2: The aquaculture industry demonstrates environmental stewardship",
+        "Criterion 2.6 – Water Quality"
+      ],
+      "language": "en",
+      "indicator_text": "2.6.13",
+      "requirement_value": null,
+      "normative_text": "c. the distance from the surface to the zone of oxygen depletion or to the zone of anoxia has decreased by ≥25% over the past 24 months; or\nd. BOD has increased by ≥15% over the past 24 months; or\ne. ≥1 adverse turnover event (ATE) or ≥1 harmful algal bloom (HAB) within the past 10 years.",
+      "normative_subjects": [],
+      "applicability": [],
+      "modalities": [],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "2.6.13-root-visible-continuation",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "c. the distance from the surface to the zone of oxygen depletion or to the zone of anoxia has decreased by ≥25% over the past 24 months; or d. BOD has increased by ≥15% over the past 24 months; or e. ≥1 adverse turnover event (ATE) or ≥1 harmful algal bloom (HAB) within the past 10 years.",
+          "joins_next": null
+        },
+        {
+          "clause_id": "2.6.13-c",
+          "parent_clause_id": "2.6.13-root-visible-continuation",
+          "marker": "c.",
+          "text": "the distance from the surface to the zone of oxygen depletion or to the zone of anoxia has decreased by ≥25% over the past 24 months",
+          "joins_next": "or"
+        },
+        {
+          "clause_id": "2.6.13-d",
+          "parent_clause_id": "2.6.13-root-visible-continuation",
+          "marker": "d.",
+          "text": "BOD has increased by ≥15% over the past 24 months",
+          "joins_next": "or"
+        },
+        {
+          "clause_id": "2.6.13-e",
+          "parent_clause_id": "2.6.13-root-visible-continuation",
+          "marker": "e.",
+          "text": "≥1 adverse turnover event (ATE) or ≥1 harmful algal bloom (HAB) within the past 10 years",
+          "joins_next": null
+        }
+      ],
+      "conditions": [
+        {
+          "text": "the distance from the surface to the zone of oxygen depletion or to the zone of anoxia has decreased by ≥25% over the past 24 months",
+          "applies_to": "Requirement 2.6.13"
+        },
+        {
+          "text": "BOD has increased by ≥15% over the past 24 months",
+          "applies_to": "Requirement 2.6.13"
+        },
+        {
+          "text": "≥1 adverse turnover event (ATE) or ≥1 harmful algal bloom (HAB) within the past 10 years",
+          "applies_to": "Requirement 2.6.13"
+        }
+      ],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [
+        {
+          "raw_text": "≥25%",
+          "operator": "gte",
+          "normalized_value": 25,
+          "unit": "%",
+          "applies_to": "decrease in distance from the surface to the zone of oxygen depletion or anoxia",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p055-r2.6.13-cont-c"
+          ]
+        },
+        {
+          "raw_text": "≥15%",
+          "operator": "gte",
+          "normalized_value": 15,
+          "unit": "%",
+          "applies_to": "increase in BOD",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p055-r2.6.13-cont-d"
+          ]
+        },
+        {
+          "raw_text": "≥1 adverse turnover event (ATE)",
+          "operator": "gte",
+          "normalized_value": 1,
+          "unit": "event",
+          "applies_to": "adverse turnover events (ATE)",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p055-r2.6.13-cont-e"
+          ]
+        },
+        {
+          "raw_text": "≥1 harmful algal bloom (HAB)",
+          "operator": "gte",
+          "normalized_value": 1,
+          "unit": "event",
+          "applies_to": "harmful algal blooms (HAB)",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p055-r2.6.13-cont-e"
+          ]
+        }
+      ],
+      "dates": [
+        {
+          "text": "over the past 24 months",
+          "applies_to": "the decrease threshold in clause c"
+        },
+        {
+          "text": "over the past 24 months",
+          "applies_to": "the BOD increase threshold in clause d"
+        },
+        {
+          "text": "within the past 10 years",
+          "applies_to": "the event thresholds in clause e"
+        }
+      ],
+      "cross_references": [],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": [],
+      "source_segment_ids": [
+        "p055-r2.6.13-cont-c",
+        "p055-r2.6.13-cont-d",
+        "p055-r2.6.13-cont-e"
+      ],
+      "source_anomalies": [
+        "page_top_requirement_continuation_without_visible_requirement_id_or_governing_modal_clause"
+      ],
+      "gold_notes": [
+        "Requirement ID is source-confirmed from the immediately preceding source page; only the page-55 continuation text is transcribed and directly evidenced in this one-page sample."
+      ]
+    },
+    {
+      "requirement_id": "2.6.14",
+      "requirement_form": "normative_indicator",
+      "criterion_path": [
+        "Principle 2: The aquaculture industry demonstrates environmental stewardship",
+        "Criterion 2.6 – Water Quality"
+      ],
+      "language": "en",
+      "indicator_text": "2.6.14",
+      "requirement_value": null,
+      "normative_text": "The UoC shall report annually to ASC the WUM hydraulic characteristics, according to ASC data submission procedures.",
+      "normative_subjects": [
+        "The UoC"
+      ],
+      "applicability": [],
+      "modalities": [
+        {
+          "token": "shall",
+          "type": "obligation",
+          "scope": "report annually to ASC the WUM hydraulic characteristics, according to ASC data submission procedures"
+        }
+      ],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "2.6.14-root",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "The UoC shall report annually to ASC the WUM hydraulic characteristics, according to ASC data submission procedures.",
+          "joins_next": null
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [
+        {
+          "text": "annually",
+          "applies_to": "reporting the WUM hydraulic characteristics to ASC"
+        }
+      ],
+      "cross_references": [
+        {
+          "text": "ASC data submission procedures",
+          "target": "ASC data submission procedures",
+          "type": "external_document"
+        }
+      ],
+      "footnote_refs": [],
+      "associated_instructions": [
+        {
+          "marker": null,
+          "text": "according to ASC data submission procedures",
+          "effect": "procedure",
+          "source_segment_ids": [
+            "p055-r2.6.14-text"
+          ]
+        }
+      ],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": [],
+      "source_segment_ids": [
+        "p055-r2.6.14-id",
+        "p055-r2.6.14-text"
+      ],
+      "source_anomalies": [],
+      "gold_notes": []
+    },
+    {
+      "requirement_id": "2.6.15",
+      "requirement_form": "normative_indicator",
+      "criterion_path": [
+        "Principle 2: The aquaculture industry demonstrates environmental stewardship",
+        "Criterion 2.6 – Water Quality"
+      ],
+      "language": "en",
+      "indicator_text": "2.6.15",
+      "requirement_value": null,
+      "normative_text": "The UoC shall report annually to ASC the water quality monitoring results and the BOD value, according to ASC data submission procedures.",
+      "normative_subjects": [
+        "The UoC"
+      ],
+      "applicability": [],
+      "modalities": [
+        {
+          "token": "shall",
+          "type": "obligation",
+          "scope": "report annually to ASC the water quality monitoring results and the BOD value, according to ASC data submission procedures"
+        }
+      ],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "2.6.15-root",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "The UoC shall report annually to ASC the water quality monitoring results and the BOD value, according to ASC data submission procedures.",
+          "joins_next": null
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [
+        {
+          "text": "annually",
+          "applies_to": "reporting the water quality monitoring results and BOD value to ASC"
+        }
+      ],
+      "cross_references": [
+        {
+          "text": "ASC data submission procedures",
+          "target": "ASC data submission procedures",
+          "type": "external_document"
+        }
+      ],
+      "footnote_refs": [],
+      "associated_instructions": [
+        {
+          "marker": null,
+          "text": "according to ASC data submission procedures",
+          "effect": "procedure",
+          "source_segment_ids": [
+            "p055-r2.6.15-text"
+          ]
+        }
+      ],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": [],
+      "source_segment_ids": [
+        "p055-r2.6.15-id",
+        "p055-r2.6.15-text"
+      ],
+      "source_anomalies": [],
+      "gold_notes": []
+    },
+    {
+      "requirement_id": "2.6.16",
+      "requirement_form": "normative_indicator",
+      "criterion_path": [
+        "Principle 2: The aquaculture industry demonstrates environmental stewardship",
+        "Criterion 2.6 – Water Quality"
+      ],
+      "language": "en",
+      "indicator_text": "2.6.16",
+      "requirement_value": null,
+      "normative_text": "The UoC shall use a treatment system prior to the discharge of effluent water that ensures:\na. ≥65% of Total Suspended Solids (TSS) are captured; and\nb. concentration of settleable solids in effluent water is <3.3ml/L.",
+      "normative_subjects": [
+        "The UoC"
+      ],
+      "applicability": [
+        "Point source systems"
+      ],
+      "modalities": [
+        {
+          "token": "shall",
+          "type": "obligation",
+          "scope": "use a treatment system prior to the discharge of effluent water that ensures the listed outcomes"
+        }
+      ],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "2.6.16-root",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "The UoC shall use a treatment system prior to the discharge of effluent water that ensures:",
+          "joins_next": null
+        },
+        {
+          "clause_id": "2.6.16-a",
+          "parent_clause_id": "2.6.16-root",
+          "marker": "a.",
+          "text": "≥65% of Total Suspended Solids (TSS) are captured",
+          "joins_next": "and"
+        },
+        {
+          "clause_id": "2.6.16-b",
+          "parent_clause_id": "2.6.16-root",
+          "marker": "b.",
+          "text": "concentration of settleable solids in effluent water is <3.3ml/L",
+          "joins_next": null
+        }
+      ],
+      "conditions": [
+        {
+          "text": "prior to the discharge of effluent water",
+          "applies_to": "use of a treatment system"
+        }
+      ],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [
+        {
+          "raw_text": "≥65%",
+          "operator": "gte",
+          "normalized_value": 65,
+          "unit": "%",
+          "applies_to": "Total Suspended Solids (TSS) captured",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p055-r2.6.16-clause-a"
+          ]
+        },
+        {
+          "raw_text": "<3.3ml/L",
+          "operator": "lt",
+          "normalized_value": 3.3,
+          "unit": "ml/L",
+          "applies_to": "concentration of settleable solids in effluent water",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p055-r2.6.16-clause-b"
+          ]
+        }
+      ],
+      "dates": [],
+      "cross_references": [],
+      "footnote_refs": [],
+      "associated_instructions": [
+        {
+          "marker": null,
+          "text": "prior to the discharge of effluent water",
+          "effect": "condition",
+          "source_segment_ids": [
+            "p055-r2.6.16-root"
+          ]
+        }
+      ],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": [
+        "p055-group-2.6.16-2.6.18-heading"
+      ],
+      "source_segment_ids": [
+        "p055-group-2.6.16-2.6.18-scope",
+        "p055-r2.6.16-id",
+        "p055-r2.6.16-root",
+        "p055-r2.6.16-clause-a",
+        "p055-r2.6.16-clause-b"
+      ],
+      "source_anomalies": [],
+      "gold_notes": []
+    },
+    {
+      "requirement_id": "2.6.17",
+      "requirement_form": "normative_indicator",
+      "criterion_path": [
+        "Principle 2: The aquaculture industry demonstrates environmental stewardship",
+        "Criterion 2.6 – Water Quality"
+      ],
+      "language": "en",
+      "indicator_text": "2.6.17",
+      "requirement_value": null,
+      "normative_text": "The UoC shall conduct monitoring of TN, TP and TSS upstream from the inflow point and downstream from the outflow point, following the method outlined in Appendix 8 (8.9), if one of the following conditions applies:\na. the site effluent flow contribution to the receiving water flow is >10%, as calculated following the method outlined in Appendix 8 (8.10); or\nb. the site effluent enters a river or channel <1km upstream of a Type A waterbody.",
+      "normative_subjects": [
+        "The UoC"
+      ],
+      "applicability": [
+        "Point source systems",
+        "waterbody Type B"
+      ],
+      "modalities": [
+        {
+          "token": "shall",
+          "type": "obligation",
+          "scope": "conduct monitoring of TN, TP and TSS at the specified upstream and downstream locations when either listed condition applies"
+        }
+      ],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "2.6.17-root",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "The UoC shall conduct monitoring of TN, TP and TSS upstream from the inflow point and downstream from the outflow point, following the method outlined in Appendix 8 (8.9), if one of the following conditions applies:",
+          "joins_next": null
+        },
+        {
+          "clause_id": "2.6.17-a",
+          "parent_clause_id": "2.6.17-root",
+          "marker": "a.",
+          "text": "the site effluent flow contribution to the receiving water flow is >10%, as calculated following the method outlined in Appendix 8 (8.10)",
+          "joins_next": "or"
+        },
+        {
+          "clause_id": "2.6.17-b",
+          "parent_clause_id": "2.6.17-root",
+          "marker": "b.",
+          "text": "the site effluent enters a river or channel <1km upstream of a Type A waterbody",
+          "joins_next": null
+        }
+      ],
+      "conditions": [
+        {
+          "text": "the site effluent flow contribution to the receiving water flow is >10%, as calculated following the method outlined in Appendix 8 (8.10)",
+          "applies_to": "monitoring obligation in Requirement 2.6.17"
+        },
+        {
+          "text": "the site effluent enters a river or channel <1km upstream of a Type A waterbody",
+          "applies_to": "monitoring obligation in Requirement 2.6.17"
+        }
+      ],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [
+        {
+          "raw_text": ">10%",
+          "operator": "gt",
+          "normalized_value": 10,
+          "unit": "%",
+          "applies_to": "site effluent flow contribution to the receiving water flow",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p055-r2.6.17-clause-a"
+          ]
+        },
+        {
+          "raw_text": "<1km",
+          "operator": "lt",
+          "normalized_value": 1,
+          "unit": "km",
+          "applies_to": "upstream distance from a Type A waterbody",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p055-r2.6.17-clause-b"
+          ]
+        }
+      ],
+      "dates": [],
+      "cross_references": [
+        {
+          "text": "Appendix 8 (8.9)",
+          "target": "Appendix 8 (8.9)",
+          "type": "internal_exact"
+        },
+        {
+          "text": "Appendix 8 (8.10)",
+          "target": "Appendix 8 (8.10)",
+          "type": "internal_exact"
+        }
+      ],
+      "footnote_refs": [],
+      "associated_instructions": [
+        {
+          "marker": null,
+          "text": "following the method outlined in Appendix 8 (8.9)",
+          "effect": "method",
+          "source_segment_ids": [
+            "p055-r2.6.17-root"
+          ]
+        },
+        {
+          "marker": "a.",
+          "text": "as calculated following the method outlined in Appendix 8 (8.10)",
+          "effect": "method",
+          "source_segment_ids": [
+            "p055-r2.6.17-clause-a"
+          ]
+        }
+      ],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": [
+        "p055-group-2.6.16-2.6.18-heading"
+      ],
+      "source_segment_ids": [
+        "p055-group-2.6.16-2.6.18-scope",
+        "p055-r2.6.17-id",
+        "p055-r2.6.17-applicability",
+        "p055-r2.6.17-root",
+        "p055-r2.6.17-clause-a",
+        "p055-r2.6.17-clause-b"
+      ],
+      "source_anomalies": [],
+      "gold_notes": []
+    },
+    {
+      "requirement_id": "2.6.18",
+      "requirement_form": "normative_indicator",
+      "criterion_path": [
+        "Principle 2: The aquaculture industry demonstrates environmental stewardship",
+        "Criterion 2.6 – Water Quality"
+      ],
+      "language": "en",
+      "indicator_text": "2.6.18",
+      "requirement_value": null,
+      "normative_text": "The UoC shall, if Indicator 2.6.17 applies, ensure there is <25% increase in TN, TP and TSS concentrations between the measured upstream concentration and the calculated downstream concentration.",
+      "normative_subjects": [
+        "The UoC"
+      ],
+      "applicability": [
+        "Point source systems",
+        "waterbody Type B"
+      ],
+      "modalities": [
+        {
+          "token": "shall",
+          "type": "obligation",
+          "scope": "if Indicator 2.6.17 applies, ensure the increase in TN, TP and TSS concentrations is below the specified threshold"
+        }
+      ],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "2.6.18-root",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "The UoC shall, if Indicator 2.6.17 applies, ensure there is <25% increase in TN, TP and TSS concentrations between the measured upstream concentration and the calculated downstream concentration.",
+          "joins_next": null
+        }
+      ],
+      "conditions": [
+        {
+          "text": "if Indicator 2.6.17 applies",
+          "applies_to": "the obligation to ensure the concentration increase remains below 25%"
+        }
+      ],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [
+        {
+          "raw_text": "<25%",
+          "operator": "lt",
+          "normalized_value": 25,
+          "unit": "%",
+          "applies_to": "increase in TN, TP and TSS concentrations between measured upstream and calculated downstream concentrations",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p055-r2.6.18-root"
+          ]
+        }
+      ],
+      "dates": [],
+      "cross_references": [
+        {
+          "text": "Indicator 2.6.17",
+          "target": "2.6.17",
+          "type": "internal_exact"
+        }
+      ],
+      "footnote_refs": [],
+      "associated_instructions": [
+        {
+          "marker": null,
+          "text": "if Indicator 2.6.17 applies",
+          "effect": "condition",
+          "source_segment_ids": [
+            "p055-r2.6.18-root"
+          ]
+        }
+      ],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": [
+        "p055-group-2.6.16-2.6.18-heading"
+      ],
+      "source_segment_ids": [
+        "p055-group-2.6.16-2.6.18-scope",
+        "p055-r2.6.18-id",
+        "p055-r2.6.18-applicability",
+        "p055-r2.6.18-root"
+      ],
+      "source_anomalies": [],
+      "gold_notes": []
+    }
+  ],
+  "excluded_regions": [
+    {
+      "source_segment_ids": [
+        "p055-header-001",
+        "p055-footer-001"
+      ],
+      "classification": "header_footer",
+      "reason": "Repeated publisher header and document-control footer are not formal Requirement content."
+    }
+  ],
+  "summary": {
+    "requirement_count": 6,
+    "cross_page_requirement_count": 0,
+    "client_action_count": 0,
+    "auditor_action_count": 0,
+    "critical_gold_ambiguities": [
+      "Requirement 2.6.13 begins on the preceding page. This one-page Gold records its visible c-e continuation only, while retaining the source-confirmed ID and explicitly abstaining from copying the off-window governing clause."
+    ]
+  }
+}

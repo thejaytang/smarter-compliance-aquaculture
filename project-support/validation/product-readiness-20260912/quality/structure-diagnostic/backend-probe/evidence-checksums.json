@@ -1,0 +1,14 @@
+{
+  "summary.json": "aa7e96418bdffcdc063438d5914e2f9f583b5aa42373000a7f416d53a3c9b67b",
+  "ascii-path-control-native.json": "9dbd8454b276eb645998bf6226bfca5918d1f5066dfe76d7b2df6efe8a031738",
+  "installed-after-copy-receipt.json": "88f355343a09871c7e49521f4cbe608be7d72dd0f65b5761fe2136d1afa32f8d",
+  "package-copy-hashes.json": "4d32225d564a9456e57e7008f11bb56bde14d47a7089bb4e05bc895a31294e2a",
+  "preservation.json": "5996554f51bcde6a51d3a9f78a6acd11cba5fa15f5b6e3090adc429251607c2c",
+  "ascii-control.json": "410e1ac9147af844731ac02f1938113c8566737b5175060542861cd739a8c6b6",
+  "ascii-path-control-receipt.json": "d26969c17816b40a727eae5c37e8022b08af352496197e4c4276f024b78fdcd9",
+  "probe.py": "0ccbec85fa3a77018e51d25fd276eb0f25fb1f8e4e02f2df20495ff9cbec62eb",
+  "installed-path-receipt.json": "b1bb5133079eb6c691d19df24ca1c9bbff453dc49530dfde0d7073eb66ced4fa",
+  "inventory.json": "1bf9cbff7d28d42c8b54cc2e46ed85022ce0ac4e116897a7861213528dd9e88d",
+  "installed-after-copy-native.json": "434fd1ae83a12dfb6702f432b8adf9b5ff5c16e3c9460ecdc0647ef495f539c0",
+  "installed-path-native.json": "5bcdcd32d914c9cfe9dd9274470f60a88a945b6b2f7c3ff442504b3db02a4a7a"
+}

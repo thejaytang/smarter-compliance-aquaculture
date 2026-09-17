@@ -1,0 +1,42 @@
+[
+  {
+    "antipattern": "side-tab",
+    "name": "Side-tab accent border",
+    "description": "Thick colored border on one side of a card — the most recognizable tell of AI-generated UIs. Use a subtler accent or remove it entirely.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/ui/four-pane.css",
+    "line": 18,
+    "snippet": "border-left:3px solid var(--semantic-border)}"
+  },
+  {
+    "antipattern": "side-tab",
+    "name": "Side-tab accent border",
+    "description": "Thick colored border on one side of a card — the most recognizable tell of AI-generated UIs. Use a subtler accent or remove it entirely.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/ui/four-pane.css",
+    "line": 24,
+    "snippet": "border-left:3px solid #986724"
+  },
+  {
+    "antipattern": "border-accent-on-rounded",
+    "name": "Border accent on rounded element",
+    "description": "Thick accent border on a rounded card — the border clashes with the rounded corners. Remove the border or the border-radius.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/ui/four-pane.css",
+    "line": 21,
+    "snippet": "border-bottom:3px solid"
+  },
+  {
+    "antipattern": "broken-image",
+    "name": "Broken or placeholder image",
+    "description": "<img> tags with empty src, missing src, or placeholder values ship as broken-image boxes. Use real images, generated assets, or remove the tag.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/ui/materials.js",
+    "line": 564,
+    "snippet": "<img alt=\"Region from the saved original PDF\">"
+  }
+]

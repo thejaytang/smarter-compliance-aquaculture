@@ -1,0 +1,361 @@
+- link "Skip to content":
+  - /url: "#main"
+- complementary:
+  - text: Smarter Compliance
+  - generic: Requirement workbench
+  - navigation "Workspace navigation":
+    - button "Overview Sources and materials":
+      - text: Overview
+      - generic: Sources and materials
+    - button "Source Management System Sources and original files" [expanded]:
+      - text: Source Management System
+      - generic: ⌄
+      - generic: Sources and original files
+    - button "Pending review"
+    - button "Source records"
+    - button "Review history"
+    - button "Requirement Extraction System Human content review" [expanded]:
+      - text: Requirement Extraction System
+      - generic: ⌄
+      - generic: Human content review
+    - button "Pending materials"
+    - button "Archive"
+    - button "Confidence settings"
+  - text: Local workspace
+  - button "Exit workbench"
+- banner:
+  - button "Collapse navigation" [expanded]:
+  - heading "Pending materials" [level=1]
+  - button "Runtime status"
+  - generic: Current reviewer
+  - combobox "Current reviewer":
+    - option "Select a reviewer"
+    - option "Ana Jokic"
+    - option "Daniel Restad"
+    - option "Weijie Tang" [selected]
+  - button "Switch reviewer"
+- main:
+  - heading "ENGINEERING FIXTURE · Excel measurements" [level=2]
+  - generic: TS002 · TS002-001 · saved revision 2 · Content review complete · Saved content · no current extraction
+  - button "Expand workspace"
+  - button "Materials" [expanded]
+  - button "Reset column widths"
+  - button "Save material" [disabled]
+  - button "Confirm personal content review" [disabled]
+  - status: Return to My personal work to edit this content.
+  - strong: Coordinator workspace
+  - generic: Spot-check · archived content unchanged
+  - button "Source review"
+  - button "Review my changes"
+  - button "View master"
+  - generic "Exchange work packages & submissions"
+  - button "Import package"
+  - button "Create work package"
+  - button "My submissions"
+  - button "Submission inbox"
+  - button "Task results"
+  - paragraph: Import keeps a separate candidate. Only explicit coordinator adoption changes the master. Send the exported file to your colleague manually.
+  - complementary "Materials":
+    - text: Find a material
+    - searchbox "Find a material"
+    - heading "Pending materials · 5" [level=4]
+    - button "ENGINEERING FIXTURE · HTML water checks Personal content · Not extracted Master revision 0 · Not extracted":
+      - strong: ENGINEERING FIXTURE · HTML water checks
+      - generic: Personal content · Not extracted
+      - generic: Master revision 0 · Not extracted
+    - button "ENGINEERING FIXTURE · Excel measurements Spot-check pending 1 open spot-check(s)":
+      - strong: ENGINEERING FIXTURE · Excel measurements
+      - generic: Spot-check pending
+      - generic: 1 open spot-check(s)
+    - button "Spot-check · Ana Jokic · pending"
+    - button "ENGINEERING FIXTURE · Native, scan and blank PDF Personal content · Content draft Master revision 0 · Not extracted Personal changes await adoption":
+      - strong: ENGINEERING FIXTURE · Native, scan and blank PDF
+      - generic: Personal content · Content draft
+      - generic: Master revision 0 · Not extracted
+      - generic: Personal changes await adoption
+    - 'button "Public saved original: PA001 Personal content · Content review complete Master revision 4 · Content draft New revision requires review · accepted archive retained Submitted changes await review 1 open spot-check(s)"':
+      - strong: "Public saved original: PA001"
+      - generic: Personal content · Content review complete
+      - generic: Master revision 4 · Content draft
+      - generic: New revision requires review · accepted archive retained
+      - generic: Submitted changes await review
+      - generic: 1 open spot-check(s)
+    - button "Spot-check · Weijie Tang · finding open"
+    - 'button "Public saved original: CS010 Not extracted"':
+      - strong: "Public saved original: CS010"
+      - generic: Not extracted
+    - generic "Open a source snapshot"
+    - option "Select source" [selected]
+    - 'option "Public saved original: PA001"'
+    - 'option "Public saved original: CS010"'
+    - option "ENGINEERING FIXTURE · HTML water checks"
+    - option "ENGINEERING FIXTURE · Excel measurements"
+    - option "ENGINEERING FIXTURE · Native, scan and blank PDF"
+  - heading "Original document" [level=3]
+  - button "Extract →" [disabled]
+  - text: Sheet
+  - combobox "Sheet":
+    - option "Measurements"
+    - option "Empty sheet" [selected]
+    - option "Hidden notes (hidden)"
+  - text: Row
+  - spinbutton "Row": "1"
+  - text: Column
+  - spinbutton "Column": "1"
+  - button "Go"
+  - link "Open original ↗":
+    - /url: /api/material/original?id=84194a9c4deb7df4b2fdc98a6245f374&view=archive
+  - button "Linked content"
+  - paragraph: Stored cells · formulas and saved values shown separately.
+  - generic "Workbook display limitations"
+  - paragraph: Empty sheet · 1 rows × 1 columns · window starts at row 1, column 1
+  - table:
+    - rowgroup:
+      - row "1 A1":
+        - rowheader "1"
+        - cell "A1":
+          - generic: A1
+  - paragraph: End of worksheet rows
+  - button "← Previous columns" [disabled]
+  - button "Next columns →" [disabled]
+  - generic "Merged cell relationships"
+  - separator "Resize original pane"
+  - generic: "02"
+  - heading "Extracted original text" [level=3]
+  - text: Saved master · read-only
+  - button "Process →" [disabled]
+  - button "Rebuild table"
+  - button "History"
+  - button "Reload saved"
+  - text: Search all content
+  - searchbox "Search all content"
+  - text: Chapters
+  - combobox "Chapters":
+    - option "Choose heading" [selected]
+    - option "Measurements"
+    - option "Empty sheet"
+    - option "Hidden notes"
+  - paragraph: Read this saved version. Use inline choices in a merge; return to personal work for ordinary edits.
+  - heading "Spot-check · pending" [level=4]
+  - paragraph: Assigned to Ana Jokic · archived revision 2
+  - paragraph: "ENGINEERING ONLY: local-delivery-rc1 archive pass and offline result-return validation. Check Empty sheet against the saved original; no real business review."
+  - paragraph: Checks apply to the selected original ranges. They do not rewrite the archive or confirm the whole material.
+  - checkbox "Worksheet Empty sheet View original"
+  - text: Worksheet Empty sheet
+  - button "View original"
+  - text: Evidence and exact finding
+  - textbox "Evidence and exact finding"
+  - checkbox "I checked the displayed ranges against the original and explicitly confirm this result."
+  - text: I checked the displayed ranges against the original and explicitly confirm this result.
+  - button "Save check progress"
+  - button "Compare saved check"
+  - button "Pass selected checks"
+  - button "Record a problem"
+  - generic "Check history · 0"
+  - generic "3 affected ranges · 0 prior checks retained"
+  - article:
+    - generic: 1 · heading
+    - button "Original"
+    - heading "Measurements" [level=4]
+    - text: Measurements · A1
+  - text: Machine candidate · Weijie Tang · Human Reviewed
+  - generic "Source, version and people"
+  - article:
+    - generic: 2 · table
+    - button "Original"
+    - paragraph
+    - generic: Rows 1–3 / 3 · columns 1–3 / 3
+    - button "↑ Rows" [disabled]
+    - button "↓ Rows" [disabled]
+    - button "← Columns" [disabled]
+    - button "Columns →" [disabled]
+    - text: Row
+    - spinbutton "Row": "1"
+    - text: Column
+    - spinbutton "Column": "1"
+    - button "Go"
+    - table:
+      - rowgroup:
+        - row "1 2 3":
+          - columnheader
+          - columnheader "1"
+          - columnheader "2"
+          - columnheader "3"
+      - rowgroup:
+        - row "1 ENGINEERING FIXTURE":
+          - rowheader "1"
+          - cell "ENGINEERING FIXTURE"
+          - cell
+          - cell
+        - row "2":
+          - rowheader "2"
+          - cell
+          - cell
+          - cell
+        - row "3 Temperature 12 =B3+1":
+          - rowheader "3"
+          - cell "Temperature"
+          - cell "12"
+          - cell "=B3+1"
+    - paragraph: "C3 saved value: [cache unavailable]. Formula has not been calculated."
+    - text: 1 merged relationships · edit to inspect their coordinatesMeasurements · A1:C3
+  - text: Machine candidate · Weijie Tang · Human Reviewed
+  - generic "Source, version and people"
+  - article:
+    - generic: 3 · table
+    - button "Original"
+    - paragraph
+    - generic: Rows 1–1 / 1 · columns 1–1 / 1
+    - button "↑ Rows" [disabled]
+    - button "↓ Rows" [disabled]
+    - button "← Columns" [disabled]
+    - button "Columns →" [disabled]
+    - text: Row
+    - spinbutton "Row": "1"
+    - text: Column
+    - spinbutton "Column": "1"
+    - button "Go"
+    - table:
+      - rowgroup:
+        - row "1":
+          - columnheader
+          - columnheader "1"
+      - rowgroup:
+        - 'row "1 Far cell: original retained"':
+          - rowheader "1"
+          - 'cell "Far cell: original retained"'
+    - paragraph
+    - text: 0 merged relationships · edit to inspect their coordinatesMeasurements · Z105:Z105
+  - text: Machine candidate · Weijie Tang · Human Reviewed
+  - generic "Source, version and people"
+  - article:
+    - generic: 4 · heading
+    - button "Original"
+    - heading "Empty sheet" [level=4]
+    - text: Empty sheet · A1
+  - text: Machine candidate · Weijie Tang · Human Reviewed
+  - generic "Source, version and people"
+  - article:
+    - generic: 5 · heading
+    - button "Original"
+    - heading "Hidden notes" [level=4]
+    - text: Hidden notes · A1
+  - text: Machine candidate · Weijie Tang · Human Reviewed
+  - generic "Source, version and people"
+  - generic "Whole-material review · 3/3 ranges checked"
+  - separator "Resize requirements pane"
+  - generic: "03"
+  - heading "Structured requirements" [level=3]
+  - text: Future form-based review
+  - heading "Not connected" [level=4]
+  - paragraph: Structure and processor pending.
+  - paragraph: The future Process action will use a confirmed content version and selected scope to produce a separate candidate for human review.
+  - paragraph: Content review can be completed here. Requirement structuring remains unavailable.
+  - generic "Future connection boundary"
+  - paragraph: Content review complete · Requirement structuring not connected
+  - dialog:
+    - heading "Review task result" [level=2]
+    - paragraph: Ana Jokic · Current task matches the assigned starting version.
+    - heading "Current task" [level=3]
+    - term: Archive Content Revision
+    - definition: "1"
+    - term: Archive Key
+    - definition: 6ab90d20e541e6da74206330c63f4b5714971224e206125d68e936ed70790257
+    - term: Archive Revision
+    - definition: "2"
+    - term: Assignee
+    - definition: Ana Jokic
+    - term: At
+    - definition: 2026-09-13T18:21:04.807452+00:00
+    - term: Checked Scope
+    - definition
+    - term: Created By
+    - definition: Weijie Tang
+    - term: History
+    - definition
+    - term: Id
+    - definition: 3014718c-83dc-442f-97d6-061b75fb4e24
+    - term: Material Id
+    - definition: 84194a9c4deb7df4b2fdc98a6245f374
+    - term: Note
+    - definition
+    - term: Reason
+    - definition: "ENGINEERING ONLY: local-delivery-rc1 archive pass and offline result-return validation. Check Empty sheet against the saved original; no real business review."
+    - term: Revision
+    - definition: "0"
+    - term: Scope
+    - definition:
+      - term: "0"
+      - definition: sheet:Empty sheet
+    - term: Source Hash
+    - definition: 78edf06e79c11edfb67d99ff0bca026ddd93b116ec4441c2ce9c59cd3fd89344
+    - term: Status
+    - definition: pending
+    - term: Title
+    - definition: ENGINEERING FIXTURE · Excel measurements
+    - heading "Submitted result" [level=3]
+    - term: Archive Content Revision
+    - definition: "1"
+    - term: Archive Key
+    - definition: 6ab90d20e541e6da74206330c63f4b5714971224e206125d68e936ed70790257
+    - term: Archive Revision
+    - definition: "2"
+    - term: Assignee
+    - definition: Ana Jokic
+    - term: At
+    - definition: 2026-09-13T18:21:04.807452+00:00
+    - term: Checked Scope
+    - definition:
+      - term: "0"
+      - definition: sheet:Empty sheet
+    - term: Created By
+    - definition: Weijie Tang
+    - term: History
+    - definition:
+      - term: "0"
+      - definition:
+        - term: Action
+        - definition: pass
+        - term: Actor
+        - definition: Ana Jokic
+        - term: At
+        - definition: 2026-09-13T18:24:27.685666+00:00
+        - term: Checked Scope
+        - definition:
+          - term: "0"
+          - definition: sheet:Empty sheet
+        - term: Note
+        - definition: "ENGINEERING ONLY: viewed saved TS002-001 Empty sheet, A1 empty and worksheet ends at row 1. The archived content retains the Empty sheet heading and no invented values. Selected range agrees with original; formula evaluation and other worksheets are outside this spot-check."
+        - term: Revision
+        - definition: "1"
+        - term: Target Revision
+        - definition: "2"
+    - term: Id
+    - definition: 3014718c-83dc-442f-97d6-061b75fb4e24
+    - term: Material Id
+    - definition: 84194a9c4deb7df4b2fdc98a6245f374
+    - term: Note
+    - definition: "ENGINEERING ONLY: viewed saved TS002-001 Empty sheet, A1 empty and worksheet ends at row 1. The archived content retains the Empty sheet heading and no invented values. Selected range agrees with original; formula evaluation and other worksheets are outside this spot-check."
+    - term: Progress Target Revision
+    - definition: "2"
+    - term: Reason
+    - definition: "ENGINEERING ONLY: local-delivery-rc1 archive pass and offline result-return validation. Check Empty sheet against the saved original; no real business review."
+    - term: Revision
+    - definition: "1"
+    - term: Scope
+    - definition:
+      - term: "0"
+      - definition: sheet:Empty sheet
+    - term: Source Hash
+    - definition: 78edf06e79c11edfb67d99ff0bca026ddd93b116ec4441c2ce9c59cd3fd89344
+    - term: Status
+    - definition: passed
+    - term: Title
+    - definition: ENGINEERING FIXTURE · Excel measurements
+    - generic "Shared starting version"
+    - checkbox "I reviewed the scope, evidence and current task. Apply only this selected decision." [checked]
+    - text: I reviewed the scope, evidence and current task. Apply only this selected decision.
+    - button "Keep current"
+    - button "Adopt submitted result"
+    - status: Selected decision recorded; the receipt preserves contributor and adopter.
+    - button "Close"

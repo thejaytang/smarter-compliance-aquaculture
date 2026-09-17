@@ -1,0 +1,539 @@
+{
+  "source_sha256": "966ec5d7eb8af5ea97cd478b6560e3f2e836202a1a0f3f7138f9b016349a0138",
+  "config_hash": "0a86dae0ddc7110290fbf0ec1c2e8302563e084ecbb008783275adbaacd0ab97",
+  "adapter_config_hash": "95139f25df3346636edb926ec41e9871139dc61beffaa3ede90092d92924078e",
+  "material_backend_policy": "pdfium",
+  "legacy_config_backend": "docling-parse",
+  "original_page_indices": [
+    0
+  ],
+  "backend": "pypdfium2",
+  "version": "5.13.0",
+  "pages": [
+    {
+      "page_index": 0,
+      "width_points": 612.0,
+      "height_points": 792.0,
+      "words": [
+        {
+          "id": "native_p0000_fw000000",
+          "text": "Annex 2 - Mixed Objects",
+          "bbox_points": [
+            54.0,
+            39.8079833984375,
+            215.1539764404297,
+            52.926025390625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000001",
+          "text": "The following table contains a merged header.",
+          "bbox_points": [
+            54.22999954223633,
+            84.719970703125,
+            258.22998046875,
+            94.09002685546875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000002",
+          "text": "Table 3: Borderless Values",
+          "bbox_points": [
+            54.209999084472656,
+            122.80999755859375,
+            181.3499755859375,
+            130.1099853515625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000003",
+          "text": "Combined category",
+          "bbox_points": [
+            54.45000076293945,
+            150.447998046875,
+            131.94900512695312,
+            158.8809814453125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000004",
+          "text": "Item",
+          "bbox_points": [
+            54.83700180053711,
+            172.5560302734375,
+            71.5050048828125,
+            179.0989990234375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000005",
+          "text": "Low",
+          "bbox_points": [
+            220.65699768066406,
+            172.5560302734375,
+            236.50599670410156,
+            179.0989990234375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000006",
+          "text": "High",
+          "bbox_points": [
+            320.7200012207031,
+            172.5560302734375,
+            337.8919982910156,
+            180.8809814453125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000007",
+          "text": "Alpha",
+          "bbox_points": [
+            54.0,
+            194.5560302734375,
+            77.01300048828125,
+            202.781982421875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000008",
+          "text": "2",
+          "bbox_points": [
+            220.26100158691406,
+            194.52899169921875,
+            225.00399780273438,
+            201.0
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000009",
+          "text": "8",
+          "bbox_points": [
+            320.3689880371094,
+            194.52899169921875,
+            324.6080017089844,
+            201.0989990234375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000010",
+          "text": "Beta",
+          "bbox_points": [
+            54.65700149536133,
+            216.5560302734375,
+            72.51300048828125,
+            223.0989990234375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000011",
+          "text": "3",
+          "bbox_points": [
+            220.3780059814453,
+            216.52899169921875,
+            225.00399780273438,
+            223.10797119140625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000012",
+          "text": "9",
+          "bbox_points": [
+            320.37799072265625,
+            216.52899169921875,
+            324.6080017089844,
+            223.0989990234375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000013",
+          "text": "Source: synthetic scheme-two gold fixture.",
+          "bbox_points": [
+            54.36000061035156,
+            251.176025390625,
+            203.583984375,
+            258.6719970703125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000014",
+          "text": "Figure 1: Embedded label",
+          "bbox_points": [
+            54.7400016784668,
+            314.80999755859375,
+            175.00997924804688,
+            324.0899963378906
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000015",
+          "text": "TARGET 42",
+          "bbox_points": [
+            170.2760009765625,
+            393.2640075683594,
+            234.71600341796875,
+            402.1319885253906
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000016",
+          "text": "LIMIT 7 mg",
+          "bbox_points": [
+            170.87600708007812,
+            433.4079895019531,
+            229.8800048828125,
+            444.50799560546875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        }
+      ],
+      "bitmap_boxes_points": [],
+      "characters": [],
+      "text_lines": [
+        {
+          "id": "native_p0000_ft000000",
+          "text": "Annex 2 - Mixed Objects",
+          "bbox_points": [
+            54.0,
+            39.8079833984375,
+            215.1539764404297,
+            52.926025390625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000001",
+          "text": "The following table contains a merged header.",
+          "bbox_points": [
+            54.22999954223633,
+            84.719970703125,
+            258.22998046875,
+            94.09002685546875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000002",
+          "text": "Table 3: Borderless Values",
+          "bbox_points": [
+            54.209999084472656,
+            122.80999755859375,
+            181.3499755859375,
+            130.1099853515625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000003",
+          "text": "Combined category",
+          "bbox_points": [
+            54.45000076293945,
+            150.447998046875,
+            131.94900512695312,
+            158.8809814453125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000004",
+          "text": "Item",
+          "bbox_points": [
+            54.83700180053711,
+            172.5560302734375,
+            71.5050048828125,
+            179.0989990234375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000005",
+          "text": "Low",
+          "bbox_points": [
+            220.65699768066406,
+            172.5560302734375,
+            236.50599670410156,
+            179.0989990234375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000006",
+          "text": "High",
+          "bbox_points": [
+            320.7200012207031,
+            172.5560302734375,
+            337.8919982910156,
+            180.8809814453125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000007",
+          "text": "Alpha",
+          "bbox_points": [
+            54.0,
+            194.5560302734375,
+            77.01300048828125,
+            202.781982421875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000008",
+          "text": "2",
+          "bbox_points": [
+            220.26100158691406,
+            194.52899169921875,
+            225.00399780273438,
+            201.0
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000009",
+          "text": "8",
+          "bbox_points": [
+            320.3689880371094,
+            194.52899169921875,
+            324.6080017089844,
+            201.0989990234375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000010",
+          "text": "Beta",
+          "bbox_points": [
+            54.65700149536133,
+            216.5560302734375,
+            72.51300048828125,
+            223.0989990234375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000011",
+          "text": "3",
+          "bbox_points": [
+            220.3780059814453,
+            216.52899169921875,
+            225.00399780273438,
+            223.10797119140625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000012",
+          "text": "9",
+          "bbox_points": [
+            320.37799072265625,
+            216.52899169921875,
+            324.6080017089844,
+            223.0989990234375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000013",
+          "text": "Source: synthetic scheme-two gold fixture.",
+          "bbox_points": [
+            54.36000061035156,
+            251.176025390625,
+            203.583984375,
+            258.6719970703125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000014",
+          "text": "Figure 1: Embedded label",
+          "bbox_points": [
+            54.7400016784668,
+            314.80999755859375,
+            175.00997924804688,
+            324.0899963378906
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000015",
+          "text": "TARGET 42",
+          "bbox_points": [
+            170.2760009765625,
+            393.2640075683594,
+            234.71600341796875,
+            402.1319885253906
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000016",
+          "text": "LIMIT 7 mg",
+          "bbox_points": [
+            170.87600708007812,
+            433.4079895019531,
+            229.8800048828125,
+            444.50799560546875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        }
+      ],
+      "shapes": [],
+      "bitmap_resources": [],
+      "backend": "pypdfium2",
+      "fallback_reason": null
+    }
+  ]
+}

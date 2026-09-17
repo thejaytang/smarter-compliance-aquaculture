@@ -1,0 +1,1494 @@
+{
+  "method": "same-page-source-preserving/1",
+  "source_sha256": "804ead3d1d1a53019869b5385dabfb86356b8276b990538c0d782e750167777e",
+  "groups": [
+    {
+      "operation": "same_page_paragraph_group",
+      "group_block_id": "block-ed21f97b3c555eedd96fb589",
+      "numbering": "1.4.1",
+      "fragments": [
+        {
+          "id": "block-590aff6670468ae1c48d81a9",
+          "type": "text",
+          "text": "1.4.1",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:19",
+              "page_index": 18,
+              "page": 19,
+              "bbox": [
+                54.002281188964844,
+                161.4320068359375,
+                81.92951965332031,
+                171.3582763671875
+              ],
+              "native_id": "native_p0000_ft000028"
+            }
+          ]
+        },
+        {
+          "id": "block-563fac0b88372b298f1a5a25",
+          "type": "text",
+          "text": "The UoC shall identify, evaluate and mitigate risks of mixing and substituting ASC",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:19",
+              "page_index": 18,
+              "page": 19,
+              "bbox": [
+                117.77791595458984,
+                159.85845947265625,
+                507.0802001953125,
+                168.8170166015625
+              ],
+              "native_id": "native_p0000_ft000029"
+            }
+          ]
+        },
+        {
+          "id": "block-0ad0db48c76375a062d9daae",
+          "type": "text",
+          "text": "certified products with non-certified products at all sites.",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:19",
+              "page_index": 18,
+              "page": 19,
+              "bbox": [
+                118.17607879638672,
+                176.05841064453125,
+                386.16424560546875,
+                184.9696044921875
+              ],
+              "native_id": "native_p0000_ft000030"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "same_page_paragraph_group",
+      "group_block_id": "block-aecd7f16fced17e19c3cab2e",
+      "numbering": "1.4.2",
+      "fragments": [
+        {
+          "id": "block-fa562e5a9b0e0e992668e397",
+          "type": "text",
+          "text": "1.4.2",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:19",
+              "page_index": 18,
+              "page": 19,
+              "bbox": [
+                54.002281188964844,
+                217.54351806640625,
+                84.69371795654297,
+                227.63824462890625
+              ],
+              "native_id": "native_p0000_ft000031"
+            }
+          ]
+        },
+        {
+          "id": "block-584637ba81c1468b5953a918",
+          "type": "text",
+          "text": "The UoC shall develop, implement and maintain a traceability system, covering all sites,",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:19",
+              "page_index": 18,
+              "page": 19,
+              "bbox": [
+                117.77791595458984,
+                216.185791015625,
+                534.9737548828125,
+                225.09698486328125
+              ],
+              "native_id": "native_p0000_ft000032"
+            }
+          ]
+        },
+        {
+          "id": "block-1c528496e5fcde0920978737",
+          "type": "text",
+          "text": "to ensure that the following conditions are met:",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:19",
+              "page_index": 18,
+              "page": 19,
+              "bbox": [
+                117.90116119384766,
+                232.36846923828125,
+                343.98016357421875,
+                241.3270263671875
+              ],
+              "native_id": "native_p0000_ft000033"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "same_page_paragraph_group",
+      "group_block_id": "block-3e0f6c512390418a86bf72eb",
+      "numbering": "a.",
+      "fragments": [
+        {
+          "id": "block-e42621a718dfda9641ee42ca",
+          "type": "text",
+          "text": "a.",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:19",
+              "page_index": 18,
+              "page": 19,
+              "bbox": [
+                118.26139831542969,
+                256.62554931640625,
+                125.38975524902344,
+                261.6878662109375
+              ],
+              "native_id": "native_p0000_ft000034"
+            }
+          ]
+        },
+        {
+          "id": "block-a19bc056664f2d9c8b38d30e",
+          "type": "text",
+          "text": "only larvae/juveniles that conform with the requirements in Criterion 1.5 are used to",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:19",
+              "page_index": 18,
+              "page": 19,
+              "bbox": [
+                136.17608642578125,
+                253.66778564453125,
+                533.890625,
+                263.5269775390625
+              ],
+              "native_id": "native_p0000_ft000035"
+            }
+          ]
+        },
+        {
+          "id": "block-1adc320896358f0577d0c9bb",
+          "type": "text",
+          "text": "produce certified product; and",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:19",
+              "page_index": 18,
+              "page": 19,
+              "bbox": [
+                136.67852783203125,
+                270.7684326171875,
+                280.291015625,
+                279.67962646484375
+              ],
+              "native_id": "native_p0000_ft000036"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "same_page_paragraph_group",
+      "group_block_id": "block-57286dbcf8a825e821ef157f",
+      "numbering": "b.",
+      "fragments": [
+        {
+          "id": "block-efc674aaf36c3d5cad7da7ce",
+          "type": "text",
+          "text": "b.",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:19",
+              "page_index": 18,
+              "page": 19,
+              "bbox": [
+                118.67852020263672,
+                293.01580810546875,
+                126.22979736328125,
+                300.087890625
+              ],
+              "native_id": "native_p0000_ft000037"
+            }
+          ]
+        },
+        {
+          "id": "block-f6bac566d30409e7480029a9",
+          "type": "text",
+          "text": "all stocked animals are traceable back to the supplier; and",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:19",
+              "page_index": 18,
+              "page": 19,
+              "bbox": [
+                136.2613983154297,
+                293.01580810546875,
+                410.70745849609375,
+                301.879638671875
+              ],
+              "native_id": "native_p0000_ft000038"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "same_page_paragraph_group",
+      "group_block_id": "block-837e1a5da2feaf9f601f3c69",
+      "numbering": "c.",
+      "fragments": [
+        {
+          "id": "block-2f7a84980873c8039801f76d",
+          "type": "text",
+          "text": "c.",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:19",
+              "page_index": 18,
+              "page": 19,
+              "bbox": [
+                118.17607879638672,
+                317.2255859375,
+                125.14979553222656,
+                322.28790283203125
+              ],
+              "native_id": "native_p0000_ft000039"
+            }
+          ]
+        },
+        {
+          "id": "block-694588ac3c9a7e348cba39fc",
+          "type": "text",
+          "text": "all batches of ASC certified and non-certified product are identifiable and segregated",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:19",
+              "page_index": 18,
+              "page": 19,
+              "bbox": [
+                136.2613983154297,
+                315.16845703125,
+                542.6103515625,
+                324.12701416015625
+              ],
+              "native_id": "native_p0000_ft000040"
+            }
+          ]
+        },
+        {
+          "id": "block-18cfe0da4c269e8d14167b40",
+          "type": "text",
+          "text": "at all sites and at all times; and",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:19",
+              "page_index": 18,
+              "page": 19,
+              "bbox": [
+                136.2613983154297,
+                331.41583251953125,
+                279.7127380371094,
+                339.8245849609375
+              ],
+              "native_id": "native_p0000_ft000041"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "same_page_paragraph_group",
+      "group_block_id": "block-9f11eb165e56d18cf9b45bb8",
+      "numbering": "d.",
+      "fragments": [
+        {
+          "id": "block-ae1a7fa0abc9b4b97966b667",
+          "type": "text",
+          "text": "d.",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:19",
+              "page_index": 18,
+              "page": 19,
+              "bbox": [
+                118.17607879638672,
+                353.6158447265625,
+                126.22979736328125,
+                360.68792724609375
+              ],
+              "native_id": "native_p0000_ft000042"
+            }
+          ]
+        },
+        {
+          "id": "block-fdab07aa358682f72dc09e88",
+          "type": "text",
+          "text": "all batches of ASC certified product are traceable at all times to:",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:19",
+              "page_index": 18,
+              "page": 19,
+              "bbox": [
+                136.2613983154297,
+                353.56842041015625,
+                439.15692138671875,
+                362.4796447753906
+              ],
+              "native_id": "native_p0000_ft000043"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "same_page_paragraph_group",
+      "group_block_id": "block-19a95916c7ad4f6efa4c1725",
+      "numbering": "e.",
+      "fragments": [
+        {
+          "id": "block-31e237ba96f1b9f342a1b327",
+          "type": "text",
+          "text": "e.",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:19",
+              "page_index": 18,
+              "page": 19,
+              "bbox": [
+                118.17607879638672,
+                422.3655700683594,
+                125.50977325439453,
+                427.42791748046875
+              ],
+              "native_id": "native_p0000_ft000048"
+            }
+          ]
+        },
+        {
+          "id": "block-553ae8142f4650f17013db09",
+          "type": "text",
+          "text": "corrective actions are taken if non-conforming product is identified, sold or",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:19",
+              "page_index": 18,
+              "page": 19,
+              "bbox": [
+                136.17608642578125,
+                420.30841064453125,
+                494.15057373046875,
+                429.26702880859375
+              ],
+              "native_id": "native_p0000_ft000049"
+            }
+          ]
+        },
+        {
+          "id": "block-ff72a5df4f3dcb82a775aee3",
+          "type": "text",
+          "text": "dispatched; and",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:19",
+              "page_index": 18,
+              "page": 19,
+              "bbox": [
+                136.17608642578125,
+                436.55584716796875,
+                211.25767517089844,
+                445.4196472167969
+              ],
+              "native_id": "native_p0000_ft000050"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "same_page_paragraph_group",
+      "group_block_id": "block-dd4d4b6cf9c3a89e7741fda6",
+      "numbering": "f.",
+      "fragments": [
+        {
+          "id": "block-63ea8486d83fcff8c6981453",
+          "type": "text",
+          "text": "f.",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:19",
+              "page_index": 18,
+              "page": 19,
+              "bbox": [
+                117.90116119384766,
+                458.7084045410156,
+                122.98977661132812,
+                465.8279113769531
+              ],
+              "native_id": "native_p0000_ft000051"
+            }
+          ]
+        },
+        {
+          "id": "block-837866d088bd25d3fa383d02",
+          "type": "text",
+          "text": "accompanying documentation shall identify product sold or dispatched as ASC",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:19",
+              "page_index": 18,
+              "page": 19,
+              "bbox": [
+                136.2613983154297,
+                458.7084045410156,
+                515.07275390625,
+                467.6670227050781
+              ],
+              "native_id": "native_p0000_ft000052"
+            }
+          ]
+        },
+        {
+          "id": "block-f6a0e46a8fd967cf20e871f4",
+          "type": "text",
+          "text": "certified or non-certified.",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:19",
+              "page_index": 18,
+              "page": 19,
+              "bbox": [
+                136.17608642578125,
+                474.9084167480469,
+                253.04037475585938,
+                482.0279235839844
+              ],
+              "native_id": "native_p0000_ft000053"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "same_page_paragraph_group",
+      "group_block_id": "block-dee51b7c46a6a4d5309bdd45",
+      "numbering": "",
+      "fragments": [
+        {
+          "id": "block-491989cda0107b1b8429464b",
+          "type": "text",
+          "text": "Standard, Section 3.2, to identify, evaluate and mitigate risks of mixing and substituting ASC",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:19",
+              "page_index": 18,
+              "page": 19,
+              "bbox": [
+                72.37211608886719,
+                596.0198516845703,
+                533.2512817382812,
+                605.4320526123047
+              ],
+              "native_id": "native_p0000_ft000016"
+            }
+          ]
+        },
+        {
+          "id": "block-8057d4d6265fc50611fcb7d2",
+          "type": "text",
+          "text": "certified products with non-certified products at all sites (Indicator 1.4.1).",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:19",
+              "page_index": 18,
+              "page": 19,
+              "bbox": [
+                72.3621597290039,
+                613.0598602294922,
+                429.21795654296875,
+                622.4222717285156
+              ],
+              "native_id": "native_p0000_ft000017"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "same_page_paragraph_group",
+      "group_block_id": "block-0fd2b50bc00f99e6eef3acbe",
+      "numbering": "•",
+      "fragments": [
+        {
+          "id": "block-b4a786ded489ddfd81704a0a",
+          "type": "text",
+          "text": "•",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:19",
+              "page_index": 18,
+              "page": 19,
+              "bbox": [
+                72.42192077636719,
+                683.4086608886719,
+                76.485595703125,
+                688.0599822998047
+              ],
+              "native_id": "native_p0000_ft000021"
+            }
+          ]
+        },
+        {
+          "id": "block-1b7feafa86ccb1b876cc3803",
+          "type": "text",
+          "text": "This includes during production while fish are alive.",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:19",
+              "page_index": 18,
+              "page": 19,
+              "bbox": [
+                89.94384002685547,
+                680.6198577880859,
+                345.03936767578125,
+                690.0320587158203
+              ],
+              "native_id": "native_p0000_ft000022"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "same_page_paragraph_group",
+      "group_block_id": "block-6bbc0b3760fb12eb17b547d8",
+      "numbering": "•",
+      "fragments": [
+        {
+          "id": "block-0636220e10516d89bf721a10",
+          "type": "text",
+          "text": "•",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:20",
+              "page_index": 19,
+              "page": 20,
+              "bbox": [
+                72.42192077636719,
+                101.44866943359375,
+                76.485595703125,
+                106.0999755859375
+              ],
+              "native_id": "native_p0001_ft000011"
+            }
+          ]
+        },
+        {
+          "id": "block-ebef259a04901fad7016daea",
+          "type": "text",
+          "text": "In this case, the products shall be identified as non-certified when sold or dispatched.",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:20",
+              "page_index": 19,
+              "page": 20,
+              "bbox": [
+                91.03943634033203,
+                98.65985107421875,
+                514.9923706054688,
+                108.02227783203125
+              ],
+              "native_id": "native_p0001_ft000012"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "same_page_paragraph_group",
+      "group_block_id": "block-e095368bfb406710567902c3",
+      "numbering": "•",
+      "fragments": [
+        {
+          "id": "block-f71bf8ac8e972365ba61d3d3",
+          "type": "text",
+          "text": "•",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:20",
+              "page_index": 19,
+              "page": 20,
+              "bbox": [
+                72.42192077636719,
+                169.0086669921875,
+                76.485595703125,
+                173.65997314453125
+              ],
+              "native_id": "native_p0001_ft000016"
+            }
+          ]
+        },
+        {
+          "id": "block-690d8e5450ae75309a6b3956",
+          "type": "text",
+          "text": "They relieve the need for separate Chain of Custody certification to cover farming activities.",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:20",
+              "page_index": 19,
+              "page": 20,
+              "bbox": [
+                89.94384002685547,
+                166.2198486328125,
+                543.9008178710938,
+                175.632080078125
+              ],
+              "native_id": "native_p0001_ft000017"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "same_page_paragraph_group",
+      "group_block_id": "block-a60742c831405f681b101112",
+      "numbering": "•",
+      "fragments": [
+        {
+          "id": "block-d3b147449b30c2ed0429b44f",
+          "type": "text",
+          "text": "•",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:20",
+              "page_index": 19,
+              "page": 20,
+              "bbox": [
+                72.42192077636719,
+                256.7586669921875,
+                76.485595703125,
+                261.40997314453125
+              ],
+              "native_id": "native_p0001_ft000021"
+            }
+          ]
+        },
+        {
+          "id": "block-9e83bd46ba60dc499baff6a8",
+          "type": "text",
+          "text": "risk assessment and any resulting actions.",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:20",
+              "page_index": 19,
+              "page": 20,
+              "bbox": [
+                90.8900375366211,
+                254.0196533203125,
+                299.2831115722656,
+                263.382080078125
+              ],
+              "native_id": "native_p0001_ft000022"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "same_page_paragraph_group",
+      "group_block_id": "block-5c9f8f3f056d080106d49eb0",
+      "numbering": "•",
+      "fragments": [
+        {
+          "id": "block-509ad7a7c84c4045f86a3084",
+          "type": "text",
+          "text": "•",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:20",
+              "page_index": 19,
+              "page": 20,
+              "bbox": [
+                72.42192077636719,
+                280.2786865234375,
+                76.485595703125,
+                284.92999267578125
+              ],
+              "native_id": "native_p0001_ft000023"
+            }
+          ]
+        },
+        {
+          "id": "block-1403d67f5ac5fd34ad841fd2",
+          "type": "text",
+          "text": "use or verification of the effectiveness of the traceability system, for example:",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:20",
+              "page_index": 19,
+              "page": 20,
+              "bbox": [
+                90.84024047851562,
+                277.4898681640625,
+                472.906005859375,
+                286.902099609375
+              ],
+              "native_id": "native_p0001_ft000024"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "same_page_paragraph_group",
+      "group_block_id": "block-6f153ba8b0b6796005bbfea3",
+      "numbering": "1.4.3",
+      "fragments": [
+        {
+          "id": "block-b0ca90d1f9479f7e97dc0425",
+          "type": "text",
+          "text": "1.4.3",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:20",
+              "page_index": 19,
+              "page": 20,
+              "bbox": [
+                54.002281188964844,
+                586.0719757080078,
+                84.27023315429688,
+                596.0544128417969
+              ],
+              "native_id": "native_p0001_ft000038"
+            }
+          ]
+        },
+        {
+          "id": "block-6122b07daee9e21bb60e7121",
+          "type": "text",
+          "text": "Indicator applicability: every UoC using compound feed",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:20",
+              "page_index": 19,
+              "page": 20,
+              "bbox": [
+                118.50788116455078,
+                584.5173950195312,
+                384.02362060546875,
+                593.4380645751953
+              ],
+              "native_id": "native_p0001_ft000039"
+            }
+          ]
+        },
+        {
+          "id": "block-e18abc4400e33fab429b123a",
+          "type": "text",
+          "text": "The UoC shall demonstrate that feed products, subject to conformance with Indicator",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:20",
+              "page_index": 19,
+              "page": 20,
+              "bbox": [
+                117.77791595458984,
+                606.6984252929688,
+                527.8035278320312,
+                615.6570281982422
+              ],
+              "native_id": "native_p0001_ft000040"
+            }
+          ]
+        },
+        {
+          "id": "block-50435882e21b2382dc63468f",
+          "type": "text",
+          "text": "2.12.1, are accompanied by the following information:",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:20",
+              "page_index": 19,
+              "page": 20,
+              "bbox": [
+                117.91063690185547,
+                622.8984222412109,
+                369.4908752441406,
+                631.8570251464844
+              ],
+              "native_id": "native_p0001_ft000041"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "same_page_paragraph_group",
+      "group_block_id": "block-2c207b4c7f18ff50c0a07534",
+      "numbering": "a.",
+      "fragments": [
+        {
+          "id": "block-fe28dadf16691d1a34d9f646",
+          "type": "text",
+          "text": "a.",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:20",
+              "page_index": 19,
+              "page": 20,
+              "bbox": [
+                118.26139831542969,
+                647.1555786132812,
+                125.38975524902344,
+                652.2178955078125
+              ],
+              "native_id": "native_p0001_ft000042"
+            }
+          ]
+        },
+        {
+          "id": "block-45dbfdb2916fbce4438581d0",
+          "type": "text",
+          "text": "the originating feed mill holds valid certification against the ASC Feed Standard with",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:20",
+              "page_index": 19,
+              "page": 20,
+              "bbox": [
+                135.9011688232422,
+                645.0984191894531,
+                540.3843383789062,
+                654.0570220947266
+              ],
+              "native_id": "native_p0001_ft000043"
+            }
+          ]
+        },
+        {
+          "id": "block-4ba053a64bca8737664129a7",
+          "type": "text",
+          "text": "the appropriate scope of certification in relation to the ASC Production Model (i.e.",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:20",
+              "page_index": 19,
+              "page": 20,
+              "bbox": [
+                135.9011688232422,
+                661.2984313964844,
+                523.8109741210938,
+                670.2096252441406
+              ],
+              "native_id": "native_p0001_ft000044"
+            }
+          ]
+        },
+        {
+          "id": "block-059049d12a79e4caad73cb41",
+          "type": "text",
+          "text": "Mass Balance Production Model or Segregation Production Model product); and",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:20",
+              "page_index": 19,
+              "page": 20,
+              "bbox": [
+                136.8207244873047,
+                677.5458221435547,
+                516.134521484375,
+                686.45703125
+              ],
+              "native_id": "native_p0001_ft000045"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "same_page_paragraph_group",
+      "group_block_id": "block-9bf86188b9dcd79e032708af",
+      "numbering": "b.",
+      "fragments": [
+        {
+          "id": "block-b51a132ed35b9d674b548ddc",
+          "type": "text",
+          "text": "b.",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:20",
+              "page_index": 19,
+              "page": 20,
+              "bbox": [
+                118.67852020263672,
+                699.7458190917969,
+                126.22979736328125,
+                706.8179016113281
+              ],
+              "native_id": "native_p0001_ft000046"
+            }
+          ]
+        },
+        {
+          "id": "block-9b709d6d4edd5b93b770d8f2",
+          "type": "text",
+          "text": "feed is traceable as ASC-conforming throughout all steps between the feed mill and",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:20",
+              "page_index": 19,
+              "page": 20,
+              "bbox": [
+                135.9011688232422,
+                699.6984252929688,
+                537.77392578125,
+                708.6570281982422
+              ],
+              "native_id": "native_p0001_ft000047"
+            }
+          ]
+        },
+        {
+          "id": "block-e95c6d16d6f50e4f3357fd14",
+          "type": "text",
+          "text": "site; and",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:20",
+              "page_index": 19,
+              "page": 20,
+              "bbox": [
+                135.98648071289062,
+                715.9458236694336,
+                174.56060791015625,
+                724.3545837402344
+              ],
+              "native_id": "native_p0001_ft000048"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "same_page_paragraph_group",
+      "group_block_id": "block-e7b4ba531892e75be86bbd20",
+      "numbering": "d.",
+      "fragments": [
+        {
+          "id": "block-c4565570c76535525d645c6d",
+          "type": "text",
+          "text": "d.",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:21",
+              "page_index": 20,
+              "page": 21,
+              "bbox": [
+                118.17607879638672,
+                98.10577392578125,
+                126.22979736328125,
+                105.1778564453125
+              ],
+              "native_id": "native_p0002_ft000043"
+            }
+          ]
+        },
+        {
+          "id": "block-0b1ce72fae324d32b65eb7bd",
+          "type": "text",
+          "text": "documentation accompanying the feed identifies the production model applied (i.e.",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:21",
+              "page_index": 20,
+              "page": 21,
+              "bbox": [
+                136.17608642578125,
+                98.05841064453125,
+                538.6115112304688,
+                107.0169677734375
+              ],
+              "native_id": "native_p0002_ft000044"
+            }
+          ]
+        },
+        {
+          "id": "block-397ad5d049e1df65c3fb2a8c",
+          "type": "text",
+          "text": "Mass Balance Production Model or Segregation Production Model); and",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:21",
+              "page_index": 20,
+              "page": 21,
+              "bbox": [
+                136.8207244873047,
+                114.3057861328125,
+                478.9444580078125,
+                123.21697998046875
+              ],
+              "native_id": "native_p0002_ft000045"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "same_page_paragraph_group",
+      "group_block_id": "block-562b0ef20148f0bccfc72bd4",
+      "numbering": "e.",
+      "fragments": [
+        {
+          "id": "block-061cb0c9b56305ec1edf6f48",
+          "type": "text",
+          "text": "e.",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:21",
+              "page_index": 20,
+              "page": 21,
+              "bbox": [
+                118.17607879638672,
+                138.51556396484375,
+                125.50977325439453,
+                143.577880859375
+              ],
+              "native_id": "native_p0002_ft000046"
+            }
+          ]
+        },
+        {
+          "id": "block-c696e8264f4065b8a9b820e5",
+          "type": "text",
+          "text": "for ASC-conforming Segregation Production Model feed, the product is identifiable",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:21",
+              "page_index": 20,
+              "page": 21,
+              "bbox": [
+                135.9011688232422,
+                136.45843505859375,
+                532.8961181640625,
+                145.4169921875
+              ],
+              "native_id": "native_p0002_ft000047"
+            }
+          ]
+        },
+        {
+          "id": "block-a5b9b694dc92ee8046e1e73b",
+          "type": "text",
+          "text": "by a distinct feed name in formal documentation accompanying the product and is",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:21",
+              "page_index": 20,
+              "page": 21,
+              "bbox": [
+                136.67852783203125,
+                152.7784423828125,
+                535.966552734375,
+                161.73699951171875
+              ],
+              "native_id": "native_p0002_ft000048"
+            }
+          ]
+        },
+        {
+          "id": "block-13e2bcc23f372d7cbd0e2f95",
+          "type": "text",
+          "text": "listed on the schedule to the feed mill certificate.",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:21",
+              "page_index": 20,
+              "page": 21,
+              "bbox": [
+                136.67852783203125,
+                168.97845458984375,
+                366.8624267578125,
+                176.097900390625
+              ],
+              "native_id": "native_p0002_ft000049"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "same_page_paragraph_group",
+      "group_block_id": "block-dabfed76fd6ff709773c34be",
+      "numbering": "•",
+      "fragments": [
+        {
+          "id": "block-dc2bc91c7c1d4997e044a058",
+          "type": "text",
+          "text": "•",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:21",
+              "page_index": 20,
+              "page": 21,
+              "bbox": [
+                72.42192077636719,
+                259.0386962890625,
+                76.485595703125,
+                263.69000244140625
+              ],
+              "native_id": "native_p0002_ft000012"
+            }
+          ]
+        },
+        {
+          "id": "block-0eb9d88dc5a6b0422125bd1d",
+          "type": "text",
+          "text": "Use of non-conforming feed will be treated as a non-conformity against Indicator 2.12.1.",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:21",
+              "page_index": 20,
+              "page": 21,
+              "bbox": [
+                90.97968292236328,
+                256.2498779296875,
+                523.27001953125,
+                265.662109375
+              ],
+              "native_id": "native_p0002_ft000013"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "same_page_paragraph_group",
+      "group_block_id": "block-584cf49fbd5ae52cd4f297af",
+      "numbering": "•",
+      "fragments": [
+        {
+          "id": "block-00b31a4278fa6ca84b364f62",
+          "type": "text",
+          "text": "•",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:21",
+              "page_index": 20,
+              "page": 21,
+              "bbox": [
+                72.42192077636719,
+                429.0986633300781,
+                76.485595703125,
+                433.7499694824219
+              ],
+              "native_id": "native_p0002_ft000023"
+            }
+          ]
+        },
+        {
+          "id": "block-07d5d9ede3f2b37a7990d10c",
+          "type": "text",
+          "text": "traceability system and its verification, for example:",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:21",
+              "page_index": 20,
+              "page": 21,
+              "bbox": [
+                90.07331848144531,
+                426.3098449707031,
+                344.49151611328125,
+                435.7220458984375
+              ],
+              "native_id": "native_p0002_ft000024"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "same_page_paragraph_group",
+      "group_block_id": "block-e90194e04fb69b7cd910dff1",
+      "numbering": "•",
+      "fragments": [
+        {
+          "id": "block-02fbf044b11bc7fec7a60d86",
+          "type": "text",
+          "text": "•",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:21",
+              "page_index": 20,
+              "page": 21,
+              "bbox": [
+                72.42192077636719,
+                498.69866943359375,
+                76.485595703125,
+                503.3499755859375
+              ],
+              "native_id": "native_p0002_ft000029"
+            }
+          ]
+        },
+        {
+          "id": "block-12ce4be225a3cf3159490b8b",
+          "type": "text",
+          "text": "accompanying documents incorporating information required by 1.4.3(c), (d) and (e).",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:21",
+              "page_index": 20,
+              "page": 21,
+              "bbox": [
+                90.45179748535156,
+                495.90985107421875,
+                510.84332275390625,
+                505.3220520019531
+              ],
+              "native_id": "native_p0002_ft000030"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

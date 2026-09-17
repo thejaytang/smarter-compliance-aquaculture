@@ -1,0 +1,82 @@
+{
+  "restored_count": 180,
+  "packages": [
+    {
+      "package": "numba",
+      "version": "0.67.0",
+      "recorded_package_files": 808,
+      "dataless_before": 196,
+      "restored_exact_RECORD_bytes": 164,
+      "dataless_remaining": 32,
+      "missing_files": [],
+      "remaining_paths": [
+        "numba/_unicodetype_db.h",
+        "numba/core/callconv.py",
+        "numba/core/rewrites/ir_print.py",
+        "numba/core/rewrites/registry.py",
+        "numba/core/types/abstract.pyi",
+        "numba/cuda/cudadrv/__init__.py",
+        "numba/cuda/cudadrv/rtapi.py",
+        "numba/cuda/deviceufunc.py",
+        "numba/cuda/simulator/api.py",
+        "numba/cuda/simulator/cudadrv/devicearray.py",
+        "numba/cuda/simulator_init.py",
+        "numba/cuda/tests/cudapy/test_overload.py",
+        "numba/cuda/tests/cudapy/test_sm.py",
+        "numba/cuda/tests/cudapy/test_vectorize.py",
+        "numba/cuda/tests/cudasim/test_cudasim_issues.py",
+        "numba/cuda/tests/nocuda/test_nvvm.py",
+        "numba/np/numpy_support.py",
+        "numba/stencils/__init__.py",
+        "numba/testing/loader.py",
+        "numba/tests/orphaned_semaphore_usecase.py",
+        "numba/tests/test_conditions_as_predicates.py",
+        "numba/tests/test_debug.py",
+        "numba/tests/test_dictobject.py",
+        "numba/tests/test_import.py",
+        "numba/tests/test_lists.py",
+        "numba/tests/test_mangling.py",
+        "numba/tests/test_mathlib.py",
+        "numba/tests/test_multi3.py",
+        "numba/tests/test_remove_dead.py",
+        "numba/tests/test_setobject.py",
+        "numba/tests/test_stencils.py",
+        "numba/tests/test_unicode.py"
+      ]
+    },
+    {
+      "package": "anyio",
+      "version": "4.14.2",
+      "recorded_package_files": 44,
+      "dataless_before": 7,
+      "restored_exact_RECORD_bytes": 3,
+      "dataless_remaining": 4,
+      "missing_files": [],
+      "remaining_paths": [
+        "anyio/_backends/_asyncio.py",
+        "anyio/streams/__init__.py",
+        "anyio/streams/tls.py",
+        "anyio/to_process.py"
+      ]
+    },
+    {
+      "package": "img2table",
+      "version": "1.4.0",
+      "recorded_package_files": 55,
+      "dataless_before": 18,
+      "restored_exact_RECORD_bytes": 13,
+      "dataless_remaining": 5,
+      "missing_files": [],
+      "remaining_paths": [
+        "img2table/tables/objects/cell.py",
+        "img2table/tables/objects/line.py",
+        "img2table/tables/objects/row.py",
+        "img2table/tables/objects/table.py",
+        "img2table/tables/processing/borderless_tables/layout/image_elements.py"
+      ]
+    }
+  ],
+  "scope": "Only installed RECORD-listed dataless files of numba, anyio and img2table; exact-byte project-cache recovery, no install/network/version change",
+  "finished_at": "2026-09-13T12:46:22.006397+00:00",
+  "whole_environment_health": "NOT_ESTABLISHED"
+}

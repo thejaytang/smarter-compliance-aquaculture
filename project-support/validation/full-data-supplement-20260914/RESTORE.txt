@@ -1,0 +1,13 @@
+COMPLETE WORKSPACE BACKUP - VERIFIED 2026-09-14
+
+All 260,759 original file/symlink paths and 18,826 directories are covered. FINAL-VERIFICATION.json records remote SHA-256/size checks for all 766 data ZIPs. FINAL-MISSING-PATHS.json is empty.
+
+1. Clone/download main into a NEW isolated workspace.
+2. Download and checksum-verify all 01, 02, 03 and 04 numbered ZIPs, using the release indices, then extract them into the repository root.
+3. Extract 00-current-review-databases.zip LAST. For each of the eight database paths in DATABASE-SNAPSHOT.json, remove matching -wal and -shm files ONLY in this new restored copy before opening. Never overwrite a running or newly edited workspace.
+4. Follow ENVIRONMENT.md and workbench/deployment/setup_windows.cmd. Copied macOS environments are archive material; rebuild Windows environments.
+5. Preserve historical evidence paths. Use existing recovery-mapping/serve-restored support and verify required original/Canonical paths. Do not blindly rewrite history or enable business schedules.
+
+If the other computer already has new reviews, receive packages into staging and use the existing conflict-aware synchronization workflow. The consistent database ZIP alone is not a full workspace. Edits after this inventory/snapshot are separate increments. Windows execution and acceptance remain to be tested.
+
+Indices: PRIORITY-DATA-INDEX.json (01), FULL-DATA-INDEX.json (02), DEFERRED-DATA-INDEX.json (03), DIRECTORY-INVENTORY-INDEX.json (04). UPLOAD-STATUS.json and FINAL-VERIFICATION.json record combined completion.

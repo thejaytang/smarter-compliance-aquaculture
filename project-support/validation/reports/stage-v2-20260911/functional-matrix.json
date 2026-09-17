@@ -1,0 +1,237 @@
+{
+  "schema": "stage-functional-matrix/1",
+  "status": "RESTRICTED_CANDIDATE",
+  "as_of": "2026-09-11T06:57:48.606573+00:00",
+  "scenarios": [
+    {
+      "id": 1,
+      "scenario": "Normal entry, connections and loaded version",
+      "status": "PASS",
+      "code_implemented": true,
+      "daily_instance_loaded": "Current normal parent and UI loaded at 06:53 UTC; actual S1 history/A/B/reference/HTML navigation verified in checkpoint 15.",
+      "isolated_sample_verified": false,
+      "quality_evidence": "Separate source/classification/verification metrics; functional PASS is not accuracy PASS",
+      "evidence": [
+        "checkpoint-0.md",
+        "checkpoint-2.md",
+        "checkpoint-3.md",
+        "checkpoint-15.md"
+      ],
+      "remaining_gap": "Normal-entry gap closed. Source fidelity, natural verifier quality and safe release remain separate quantitative failures."
+    },
+    {
+      "id": 2,
+      "scenario": "Source history and isolated source supplement",
+      "status": "PASS",
+      "code_implemented": true,
+      "daily_instance_loaded": "Representative historical route evidence; see owning checkpoint, not an assertion that every new module is loaded",
+      "isolated_sample_verified": true,
+      "quality_evidence": "Separate source/classification/verification metrics; functional PASS is not accuracy PASS",
+      "evidence": [
+        "../../../system1/Code/reports/2026-09-10-governance-database-transition.md",
+        "../../../system2/docs/reports/37-actionable-source-failures.md"
+      ],
+      "remaining_gap": "Reuse actual normal source history and isolated PA011 supplement; no repeated migration or source decisions."
+    },
+    {
+      "id": 3,
+      "scenario": "PDF, complete HTML and XLSX path",
+      "status": "PASS",
+      "code_implemented": true,
+      "daily_instance_loaded": "Representative historical route evidence; see owning checkpoint, not an assertion that every new module is loaded",
+      "isolated_sample_verified": true,
+      "quality_evidence": "Separate source/classification/verification metrics; functional PASS is not accuracy PASS",
+      "evidence": [
+        "../../../system2/docs/reports/16-workflow-functional-audit.md",
+        "checkpoint-1.md"
+      ],
+      "remaining_gap": "Actual historical HTML/XLSX entry evidence retained; current eight-page PDF parser run is separate from quality acceptance."
+    },
+    {
+      "id": 4,
+      "scenario": "Missing body, unavailable and unsupported material",
+      "status": "PASS",
+      "code_implemented": true,
+      "daily_instance_loaded": "Representative historical route evidence; see owning checkpoint, not an assertion that every new module is loaded",
+      "isolated_sample_verified": true,
+      "quality_evidence": "Separate source/classification/verification metrics; functional PASS is not accuracy PASS",
+      "evidence": [
+        "../../../system2/docs/reports/37-actionable-source-failures.md",
+        "../../../system2/docs/reports/16-workflow-functional-audit.md"
+      ],
+      "remaining_gap": "Seven current empty-body sources retain actionable follow-ups. Missing/unreadable/unsupported contracts survive the current regression."
+    },
+    {
+      "id": 5,
+      "scenario": "Original-side unmapped region and workbench supplement",
+      "status": "PASS",
+      "code_implemented": true,
+      "daily_instance_loaded": "Representative historical route evidence; see owning checkpoint, not an assertion that every new module is loaded",
+      "isolated_sample_verified": true,
+      "quality_evidence": "Separate source/classification/verification metrics; functional PASS is not accuracy PASS",
+      "evidence": [
+        "../../../system2/docs/reports/32-original-page-verifier.md",
+        "../../../system2/docs/reports/38-scan-manual-delivery.md"
+      ],
+      "remaining_gap": "Actual original-side omission and located supplement history reused; current scan recheck preserves supplemented text."
+    },
+    {
+      "id": 6,
+      "scenario": "Scan correction and retained original image",
+      "status": "PASS",
+      "code_implemented": true,
+      "daily_instance_loaded": "Representative historical route evidence; see owning checkpoint, not an assertion that every new module is loaded",
+      "isolated_sample_verified": true,
+      "quality_evidence": "Separate source/classification/verification metrics; functional PASS is not accuracy PASS",
+      "evidence": [
+        "../../../system2/docs/reports/38-scan-manual-delivery.md",
+        "checkpoint-2.md"
+      ],
+      "remaining_gap": "Current METHOD 6 isolated synthetic scan completes A/B and one delivery; not real-scan accuracy evidence."
+    },
+    {
+      "id": 7,
+      "scenario": "Tables, spans, notes and cross-page links",
+      "status": "PASS",
+      "code_implemented": true,
+      "daily_instance_loaded": "Representative historical route evidence; see owning checkpoint, not an assertion that every new module is loaded",
+      "isolated_sample_verified": true,
+      "quality_evidence": "Separate source/classification/verification metrics; functional PASS is not accuracy PASS",
+      "evidence": [
+        "../../../system2/docs/reports/28-pdf-cell-boundaries.md",
+        "../../../system2/docs/reports/31-pdf-cross-page-table.md",
+        "../../../system2/docs/reports/40-complete-parent-and-history.md",
+        "checkpoint-2.md"
+      ],
+      "remaining_gap": "Existing actual table and complete-parent repairs plus current real footnote repair/recheck. Automatic relationship fidelity remains failed."
+    },
+    {
+      "id": 8,
+      "scenario": "Draft restore and stale or incomplete submission",
+      "status": "PASS",
+      "code_implemented": true,
+      "daily_instance_loaded": "Representative historical route evidence; see owning checkpoint, not an assertion that every new module is loaded",
+      "isolated_sample_verified": true,
+      "quality_evidence": "Separate source/classification/verification metrics; functional PASS is not accuracy PASS",
+      "evidence": [
+        "../../../system2/docs/reports/16-workflow-functional-audit.md",
+        "checkpoint-2.md"
+      ],
+      "remaining_gap": "Historical draft UI and current full-load stale HTTP 409, unchanged pending content and conflicting-replay rejection."
+    },
+    {
+      "id": 9,
+      "scenario": "Persistent A history and matching B unlock",
+      "status": "PASS",
+      "code_implemented": true,
+      "daily_instance_loaded": "Representative historical route evidence; see owning checkpoint, not an assertion that every new module is loaded",
+      "isolated_sample_verified": true,
+      "quality_evidence": "Separate source/classification/verification metrics; functional PASS is not accuracy PASS",
+      "evidence": [
+        "../../../system2/docs/reports/40-complete-parent-and-history.md",
+        "checkpoint-2.md"
+      ],
+      "remaining_gap": "Current synthetic scan METHOD 6 resolves page scope, accepts only inspected content, then classifies B; history now 30 records, one delivery."
+    },
+    {
+      "id": 10,
+      "scenario": "B false-positive/negative and advisory correction",
+      "status": "PASS",
+      "code_implemented": true,
+      "daily_instance_loaded": "Representative historical route evidence; see owning checkpoint, not an assertion that every new module is loaded",
+      "isolated_sample_verified": true,
+      "quality_evidence": "Separate source/classification/verification metrics; functional PASS is not accuracy PASS",
+      "evidence": [
+        "../../../system2/docs/reports/16-workflow-functional-audit.md",
+        "../../../system2/docs/reports/40-complete-parent-and-history.md"
+      ],
+      "remaining_gap": "Actual previous B correction/advisory interface evidence reused; classifier-5 development diagnostic has 41 TP, zero FP/FN and 53/60 decisive; checkpoint 8 owns this exposed diagnostic."
+    },
+    {
+      "id": 11,
+      "scenario": "Add, change, withdraw provisional subitems",
+      "status": "PASS",
+      "code_implemented": true,
+      "daily_instance_loaded": "Representative historical route evidence; see owning checkpoint, not an assertion that every new module is loaded",
+      "isolated_sample_verified": true,
+      "quality_evidence": "Separate source/classification/verification metrics; functional PASS is not accuracy PASS",
+      "evidence": [
+        "../../../system2/docs/reports/34-provisional-b-subdivision.md",
+        "checkpoint-2.md"
+      ],
+      "remaining_gap": "Actual lifecycle and policy reversals retained; current 10-parent/55-span source diagnostic verifies mechanical source/count/context binding."
+    },
+    {
+      "id": 12,
+      "scenario": "Targeted content/context invalidation",
+      "status": "PASS",
+      "code_implemented": true,
+      "daily_instance_loaded": "Representative historical route evidence; see owning checkpoint, not an assertion that every new module is loaded",
+      "isolated_sample_verified": true,
+      "quality_evidence": "Separate source/classification/verification metrics; functional PASS is not accuracy PASS",
+      "evidence": [
+        "../../../system2/docs/reports/34-provisional-b-subdivision.md",
+        "checkpoint-2.md"
+      ],
+      "remaining_gap": "Current note repair stales its original check; recheck removes only that missing-link finding. Old history remains. Ten diagnostic parent-context changes stale splits."
+    },
+    {
+      "id": 13,
+      "scenario": "Replay, conflict and isolated recovery integrity",
+      "status": "PASS",
+      "code_implemented": true,
+      "daily_instance_loaded": "Representative historical route evidence; see owning checkpoint, not an assertion that every new module is loaded",
+      "isolated_sample_verified": true,
+      "quality_evidence": "Separate source/classification/verification metrics; functional PASS is not accuracy PASS",
+      "evidence": [
+        "../../../system2/docs/reports/16-workflow-functional-audit.md",
+        "checkpoint-2.md",
+        "checkpoint-13.md"
+      ],
+      "remaining_gap": "Fresh candidate-08 full-workload HTTP checks pass with exact replay, 409 stale rejection, 400 conflicting replay and event-81 lock/retry recovery. Original facts and all prior history retained. Normal loading and native Office visual acceptance remain separate."
+    },
+    {
+      "id": 14,
+      "scenario": "Excel pending, lock failure, retry and coherent versions",
+      "status": "PASS",
+      "code_implemented": true,
+      "daily_instance_loaded": "Representative historical route evidence; see owning checkpoint, not an assertion that every new module is loaded",
+      "isolated_sample_verified": true,
+      "quality_evidence": "Separate source/classification/verification metrics; functional PASS is not accuracy PASS",
+      "evidence": [
+        "checkpoint-2.md",
+        "../../../system2/docs/reports/33-background-export-performance.md",
+        "checkpoint-13.md"
+      ],
+      "remaining_gap": "Fresh candidate-08 full-workload HTTP checks pass with exact replay, 409 stale rejection, 400 conflicting replay and event-81 lock/retry recovery. Original facts and all prior history retained. Normal loading and native Office visual acceptance remain separate."
+    },
+    {
+      "id": 15,
+      "scenario": "Weekly sampling and shortfalls",
+      "status": "PASS",
+      "code_implemented": true,
+      "daily_instance_loaded": "Representative historical route evidence; see owning checkpoint, not an assertion that every new module is loaded",
+      "isolated_sample_verified": true,
+      "quality_evidence": "Separate source/classification/verification metrics; functional PASS is not accuracy PASS",
+      "evidence": [
+        "../../../system2/docs/reports/35-weekly-original-sampling.md"
+      ],
+      "remaining_gap": "Reused isolated original-side A and positive/negative B sampling, shortfalls, retained unresolved issues and history; no normal schedule activation."
+    },
+    {
+      "id": 16,
+      "scenario": "Offline local completion and provider fallback",
+      "status": "PASS",
+      "code_implemented": true,
+      "daily_instance_loaded": "Representative historical route evidence; see owning checkpoint, not an assertion that every new module is loaded",
+      "isolated_sample_verified": true,
+      "quality_evidence": "Separate source/classification/verification metrics; functional PASS is not accuracy PASS",
+      "evidence": [
+        "../../../system2/docs/reports/16-workflow-functional-audit.md",
+        "checkpoint-2.md"
+      ],
+      "remaining_gap": "Current offline scan reaches one delivery. Retained provider timeout/disabled/invalid JSON/citation/budget checks pass current regression; no live model enhancement claim."
+    }
+  ],
+  "functional_acceptance": "PASS"
+}

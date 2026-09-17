@@ -1,0 +1,421 @@
+{
+  "results": [
+    {
+      "sample": "asc-farm",
+      "before_blocks": 44,
+      "after_blocks": 50,
+      "inspected_tables": 4,
+      "rejected_tables": 4,
+      "retained_tables": 0,
+      "retained_table_payloads_exact": true,
+      "expected_table_ids_remaining": true,
+      "all_native_page_evidence_exact": true,
+      "all_original_nonrejected_fragment_payloads_exact": true,
+      "all_original_nonrejected_fragment_order_exact": true,
+      "all_new_fallback_lines_exact": true,
+      "fallback_lines": [
+        {
+          "page_index": 27,
+          "native_id": "native_p0000_ft000008",
+          "matches": 1,
+          "exact_text": true,
+          "exact_bbox": true
+        },
+        {
+          "page_index": 27,
+          "native_id": "native_p0000_ft000027",
+          "matches": 1,
+          "exact_text": true,
+          "exact_bbox": true
+        },
+        {
+          "page_index": 27,
+          "native_id": "native_p0000_ft000028",
+          "matches": 1,
+          "exact_text": true,
+          "exact_bbox": true
+        },
+        {
+          "page_index": 27,
+          "native_id": "native_p0000_ft000029",
+          "matches": 1,
+          "exact_text": true,
+          "exact_bbox": true
+        },
+        {
+          "page_index": 27,
+          "native_id": "native_p0000_ft000019",
+          "matches": 1,
+          "exact_text": true,
+          "exact_bbox": true
+        },
+        {
+          "page_index": 28,
+          "native_id": "native_p0001_ft000008",
+          "matches": 1,
+          "exact_text": true,
+          "exact_bbox": true
+        },
+        {
+          "page_index": 28,
+          "native_id": "native_p0001_ft000033",
+          "matches": 1,
+          "exact_text": true,
+          "exact_bbox": true
+        },
+        {
+          "page_index": 28,
+          "native_id": "native_p0001_ft000034",
+          "matches": 1,
+          "exact_text": true,
+          "exact_bbox": true
+        },
+        {
+          "page_index": 28,
+          "native_id": "native_p0001_ft000035",
+          "matches": 1,
+          "exact_text": true,
+          "exact_bbox": true
+        },
+        {
+          "page_index": 28,
+          "native_id": "native_p0001_ft000018",
+          "matches": 1,
+          "exact_text": true,
+          "exact_bbox": true
+        }
+      ],
+      "recomputed_ratios_equal_predeclared_diagnosis": true,
+      "unresolved_ranges": [
+        {
+          "scope_id": "page:28",
+          "code": "table_grid_inconsistent",
+          "message": "Page 28: table layout could not be established (2/4 native lines cross proposed cells). Original positioned text is retained; compare the marked range with the source and reconstruct the table if needed.",
+          "source_refs": [
+            {
+              "scope_id": "page:28",
+              "page_index": 27,
+              "page": 28,
+              "bbox": [
+                46.666666666666664,
+                61.333333333333336,
+                541.3333333333334,
+                101.33333333333333
+              ]
+            }
+          ],
+          "rejected_candidate_id": "block-4759623c2382f78bab8d39d3",
+          "evidence_ref": "pdf-table-grid-review-0028.json"
+        },
+        {
+          "scope_id": "page:28",
+          "code": "table_grid_inconsistent",
+          "message": "Page 28: table layout could not be established (1/1 native lines cross proposed cells). Original positioned text is retained; compare the marked range with the source and reconstruct the table if needed.",
+          "source_refs": [
+            {
+              "scope_id": "page:28",
+              "page_index": 27,
+              "page": 28,
+              "bbox": [
+                54.0,
+                334.0,
+                542.0,
+                368.6666666666667
+              ]
+            }
+          ],
+          "rejected_candidate_id": "block-0031678dbbee5f7883675be2",
+          "evidence_ref": "pdf-table-grid-review-0028.json"
+        },
+        {
+          "scope_id": "page:29",
+          "code": "table_grid_inconsistent",
+          "message": "Page 29: table layout could not be established (4/4 native lines cross proposed cells). Original positioned text is retained; compare the marked range with the source and reconstruct the table if needed.",
+          "source_refs": [
+            {
+              "scope_id": "page:29",
+              "page_index": 28,
+              "page": 29,
+              "bbox": [
+                51.333333333333336,
+                62.666666666666664,
+                552.0,
+                102.66666666666667
+              ]
+            }
+          ],
+          "rejected_candidate_id": "block-e51332517c8a3a4a4190df4c",
+          "evidence_ref": "pdf-table-grid-review-0029.json"
+        },
+        {
+          "scope_id": "page:29",
+          "code": "table_grid_inconsistent",
+          "message": "Page 29: table layout could not be established (1/1 native lines cross proposed cells). Original positioned text is retained; compare the marked range with the source and reconstruct the table if needed.",
+          "source_refs": [
+            {
+              "scope_id": "page:29",
+              "page_index": 28,
+              "page": 29,
+              "bbox": [
+                53.333333333333336,
+                331.3333333333333,
+                540.6666666666666,
+                366.0
+              ]
+            }
+          ],
+          "rejected_candidate_id": "block-4e4c05a6bc51dbe8f3d649dd",
+          "evidence_ref": "pdf-table-grid-review-0029.json"
+        }
+      ],
+      "all_rejections_located_and_warned": true,
+      "candidate_status": "partial",
+      "scope_coverage_unchanged": true,
+      "all_candidate_blocks_equal": false
+    },
+    {
+      "sample": "asc-interpretation",
+      "before_blocks": 115,
+      "after_blocks": 117,
+      "inspected_tables": 2,
+      "rejected_tables": 2,
+      "retained_tables": 0,
+      "retained_table_payloads_exact": true,
+      "expected_table_ids_remaining": true,
+      "all_native_page_evidence_exact": true,
+      "all_original_nonrejected_fragment_payloads_exact": true,
+      "all_original_nonrejected_fragment_order_exact": true,
+      "all_new_fallback_lines_exact": true,
+      "fallback_lines": [
+        {
+          "page_index": 18,
+          "native_id": "native_p0000_ft000026",
+          "matches": 1,
+          "exact_text": true,
+          "exact_bbox": true
+        },
+        {
+          "page_index": 18,
+          "native_id": "native_p0000_ft000027",
+          "matches": 1,
+          "exact_text": true,
+          "exact_bbox": true
+        },
+        {
+          "page_index": 19,
+          "native_id": "native_p0001_ft000036",
+          "matches": 1,
+          "exact_text": true,
+          "exact_bbox": true
+        },
+        {
+          "page_index": 19,
+          "native_id": "native_p0001_ft000037",
+          "matches": 1,
+          "exact_text": true,
+          "exact_bbox": true
+        }
+      ],
+      "recomputed_ratios_equal_predeclared_diagnosis": true,
+      "unresolved_ranges": [
+        {
+          "scope_id": "page:19",
+          "code": "table_grid_inconsistent",
+          "message": "Page 19: table layout could not be established (2/2 native lines cross proposed cells). Original positioned text is retained; compare the marked range with the source and reconstruct the table if needed.",
+          "source_refs": [
+            {
+              "scope_id": "page:19",
+              "page_index": 18,
+              "page": 19,
+              "bbox": [
+                54.0,
+                108.66666666666667,
+                542.0,
+                143.33333333333334
+              ]
+            }
+          ],
+          "rejected_candidate_id": "block-e66702ee289904396e640ea2",
+          "evidence_ref": "pdf-table-grid-review-0019.json"
+        },
+        {
+          "scope_id": "page:20",
+          "code": "table_grid_inconsistent",
+          "message": "Page 20: table layout could not be established (2/2 native lines cross proposed cells). Original positioned text is retained; compare the marked range with the source and reconstruct the table if needed.",
+          "source_refs": [
+            {
+              "scope_id": "page:20",
+              "page_index": 19,
+              "page": 20,
+              "bbox": [
+                54.0,
+                533.3333333333334,
+                542.0,
+                568.0
+              ]
+            }
+          ],
+          "rejected_candidate_id": "block-31adb1c846913e395fa421f8",
+          "evidence_ref": "pdf-table-grid-review-0020.json"
+        }
+      ],
+      "all_rejections_located_and_warned": true,
+      "candidate_status": "partial",
+      "scope_coverage_unchanged": true,
+      "all_candidate_blocks_equal": false
+    },
+    {
+      "sample": "asc-audit",
+      "before_blocks": 14,
+      "after_blocks": 14,
+      "inspected_tables": 3,
+      "rejected_tables": 0,
+      "retained_tables": 3,
+      "retained_table_payloads_exact": true,
+      "expected_table_ids_remaining": true,
+      "all_native_page_evidence_exact": true,
+      "all_original_nonrejected_fragment_payloads_exact": true,
+      "all_original_nonrejected_fragment_order_exact": true,
+      "all_new_fallback_lines_exact": true,
+      "fallback_lines": [],
+      "recomputed_ratios_equal_predeclared_diagnosis": true,
+      "unresolved_ranges": [],
+      "all_rejections_located_and_warned": true,
+      "candidate_status": "partial",
+      "scope_coverage_unchanged": true,
+      "all_candidate_blocks_equal": true
+    },
+    {
+      "sample": "asc-salmon-cod",
+      "before_blocks": 16,
+      "after_blocks": 16,
+      "inspected_tables": 2,
+      "rejected_tables": 0,
+      "retained_tables": 2,
+      "retained_table_payloads_exact": true,
+      "expected_table_ids_remaining": true,
+      "all_native_page_evidence_exact": true,
+      "all_original_nonrejected_fragment_payloads_exact": true,
+      "all_original_nonrejected_fragment_order_exact": true,
+      "all_new_fallback_lines_exact": true,
+      "fallback_lines": [],
+      "recomputed_ratios_equal_predeclared_diagnosis": true,
+      "unresolved_ranges": [],
+      "all_rejections_located_and_warned": true,
+      "candidate_status": "partial",
+      "scope_coverage_unchanged": true,
+      "all_candidate_blocks_equal": true
+    },
+    {
+      "sample": "borderless-merged-figure",
+      "before_blocks": 16,
+      "after_blocks": 16,
+      "inspected_tables": 1,
+      "rejected_tables": 0,
+      "retained_tables": 1,
+      "retained_table_payloads_exact": true,
+      "expected_table_ids_remaining": true,
+      "all_native_page_evidence_exact": true,
+      "all_original_nonrejected_fragment_payloads_exact": true,
+      "all_original_nonrejected_fragment_order_exact": true,
+      "all_new_fallback_lines_exact": true,
+      "fallback_lines": [],
+      "recomputed_ratios_equal_predeclared_diagnosis": true,
+      "unresolved_ranges": [],
+      "all_rejections_located_and_warned": true,
+      "candidate_status": "candidate_available",
+      "scope_coverage_unchanged": true,
+      "all_candidate_blocks_equal": true,
+      "synthetic_gold_cell_multiset": {
+        "denominator": 10,
+        "before_matches": 0,
+        "after_matches": 0,
+        "rules": "Exact whitespace-normalized string multiset intersection of Gold cells and candidate nonempty table cells; mechanism diagnostic, not real-material acceptance.",
+        "missing_before": {
+          "Combined category": 1,
+          "Item": 1,
+          "Low": 1,
+          "High": 1,
+          "Alpha": 1,
+          "2": 1,
+          "8": 1,
+          "Beta": 1,
+          "3": 1,
+          "9": 1
+        },
+        "missing_after": {
+          "Combined category": 1,
+          "Item": 1,
+          "Low": 1,
+          "High": 1,
+          "Alpha": 1,
+          "2": 1,
+          "8": 1,
+          "Beta": 1,
+          "3": 1,
+          "9": 1
+        }
+      }
+    },
+    {
+      "sample": "born-digital-multicolumn",
+      "before_blocks": 9,
+      "after_blocks": 9,
+      "inspected_tables": 1,
+      "rejected_tables": 0,
+      "retained_tables": 1,
+      "retained_table_payloads_exact": true,
+      "expected_table_ids_remaining": true,
+      "all_native_page_evidence_exact": true,
+      "all_original_nonrejected_fragment_payloads_exact": true,
+      "all_original_nonrejected_fragment_order_exact": true,
+      "all_new_fallback_lines_exact": true,
+      "fallback_lines": [],
+      "recomputed_ratios_equal_predeclared_diagnosis": true,
+      "unresolved_ranges": [],
+      "all_rejections_located_and_warned": true,
+      "candidate_status": "candidate_available",
+      "scope_coverage_unchanged": true,
+      "all_candidate_blocks_equal": true,
+      "synthetic_gold_cell_multiset": {
+        "denominator": 6,
+        "before_matches": 6,
+        "after_matches": 6,
+        "rules": "Exact whitespace-normalized string multiset intersection of Gold cells and candidate nonempty table cells; mechanism diagnostic, not real-material acceptance.",
+        "missing_before": {},
+        "missing_after": {}
+      }
+    },
+    {
+      "sample": "cross-page-content",
+      "before_blocks": 7,
+      "after_blocks": 7,
+      "inspected_tables": 2,
+      "rejected_tables": 0,
+      "retained_tables": 2,
+      "retained_table_payloads_exact": true,
+      "expected_table_ids_remaining": true,
+      "all_native_page_evidence_exact": true,
+      "all_original_nonrejected_fragment_payloads_exact": true,
+      "all_original_nonrejected_fragment_order_exact": true,
+      "all_new_fallback_lines_exact": true,
+      "fallback_lines": [],
+      "recomputed_ratios_equal_predeclared_diagnosis": true,
+      "unresolved_ranges": [],
+      "all_rejections_located_and_warned": true,
+      "candidate_status": "candidate_available",
+      "scope_coverage_unchanged": true,
+      "all_candidate_blocks_equal": true,
+      "synthetic_gold_cell_multiset": {
+        "denominator": 12,
+        "before_matches": 12,
+        "after_matches": 12,
+        "rules": "Exact whitespace-normalized string multiset intersection of Gold cells and candidate nonempty table cells; mechanism diagnostic, not real-material acceptance.",
+        "missing_before": {},
+        "missing_after": {}
+      }
+    }
+  ],
+  "verification_script_sha256": "2c2b060e2235329168d36b802d991ff3d75459bcdf3f0dcf5db1158febfaf001",
+  "boundary": "Preservation/rejection behavior on exposed DEV, no production or independent quality acceptance."
+}

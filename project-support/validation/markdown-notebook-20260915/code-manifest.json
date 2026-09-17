@@ -1,0 +1,12 @@
+{
+  "workbench/ui/materials.js": "9b645b8ba514e7c975e59471202256aa2c8b1931e496dd5f7fda4f6140804051",
+  "workbench/ui/markdown-content.js": "4d3d3f864801558d39008cbd55e97110f8bdbfb7c045fbeaaa27544eca734d8b",
+  "workbench/ui/markdown-content.css": "064cccbe2bbe9ae81f2a111656984c0fb77c3162081ec6beceed6301b6e45e2a",
+  "workbench/ui/vendor/markdown/tools.mjs": "6de7c8acf8660e84822ccf63d3d37c1b21eca82b108a4b95cab9e128e5fe67b4",
+  "workbench/ui/index.html": "e10d3c4b25f79d6fb906e5f0c1415153cb09ee3a9c0f3859cf43253464ce83ef",
+  "workbench/src/local_workbench/server.py": "d38bae666cecc3c7d18c692343c90b03af67fe3f6e031efe17ab55d70ca5e4e3",
+  "system2/src/pdf_extraction/review/materials.py": "a8d094ac4e1df1f71836d4c585c20ea3d73b724a40e545178431385e8fd7ff74",
+  "system2/src/pdf_extraction/orchestration/material_parser.py": "a03869896e3e75a5a30b895d21650bb7984c48074f36e455c571a0d847bafe04",
+  "system2/src/pdf_extraction/orchestration/material_body.py": "4af3e68b6ebfc4dff789777ed8baedf3f1ff3809553b4f5f83a20cad400698e4",
+  "system2/src/pdf_extraction/orchestration/material_service.py": "40d19479feb800261a0803e36c40c7a65d5b7a265ee3781f9f7119f374adf832"
+}

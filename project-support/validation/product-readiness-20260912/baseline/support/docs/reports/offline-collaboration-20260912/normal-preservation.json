@@ -1,0 +1,27 @@
+{
+  "originals_unchanged": 73,
+  "canonical_unchanged": 75,
+  "existing_table_changes": [
+    {
+      "store": "workbench",
+      "table": "sessions",
+      "before": {
+        "rows": 254,
+        "sha256": "5a790306615ece73541d1b9312e1aba5eb10352a9e8dc478a9b4fe14f20375d1"
+      },
+      "after": {
+        "rows": 255,
+        "sha256": "3fabc6f8f60466748b9437d420af46ffe58c6b0e770c666674fbd3e8f14cce99"
+      }
+    }
+  ],
+  "new_tables": {
+    "workbench": [
+      "collaboration_objects"
+    ],
+    "system2": [],
+    "governance": [],
+    "assessments": [],
+    "leader": []
+  }
+}

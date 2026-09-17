@@ -1,0 +1,257 @@
+{
+  "schema_version": "material-structural-parser/4",
+  "parser_version": "material-structural-parser/4",
+  "source_sha256": "a01ea98a16cc107450e54cabf9f4e577b9c83652a6145bac4a94e352f617a981",
+  "snapshot_id": "QS007-001",
+  "config_hash": "8ea2433849e058d0ba409fbc5eeaea9dbe0b6f700f49a4c22eb8f968f9a702b9",
+  "blocks": [
+    {
+      "id": "block-5baa7021fca81df45d69fb3b",
+      "type": "text",
+      "text": "Section 2 - Cross-page Evidence",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:1",
+          "page_index": 0,
+          "page": 1,
+          "bbox": [
+            54.50400161743164,
+            39.8079833984375,
+            270.552001953125,
+            52.926025390625
+          ],
+          "native_id": "native_p0000_ft000000"
+        }
+      ]
+    },
+    {
+      "id": "block-5e49cba7366c4efb66b0435e",
+      "type": "text",
+      "text": "This paragraph deliberately continues",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:1",
+          "page_index": 0,
+          "page": 1,
+          "bbox": [
+            54.22999954223633,
+            594.8399963378906,
+            220.34999084472656,
+            604.0899963378906
+          ],
+          "native_id": "native_p0000_ft000001"
+        }
+      ]
+    },
+    {
+      "id": "block-afdf02e0c6e4ff7a96722645",
+      "type": "text",
+      "text": "across the page boundary with a hy￾",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:1",
+          "page_index": 0,
+          "page": 1,
+          "bbox": [
+            54.36000061035156,
+            614.8399963378906,
+            214.87998962402344,
+            624.0899963378906
+          ],
+          "native_id": "native_p0000_ft000002"
+        }
+      ]
+    },
+    {
+      "id": "block-3c99c43224fd5569e377f09d",
+      "type": "text",
+      "text": "Table 2: Continued Limits",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:1",
+          "page_index": 0,
+          "page": 1,
+          "bbox": [
+            300.1889953613281,
+            625.447998046875,
+            409.583984375,
+            632.0989990234375
+          ],
+          "native_id": "native_p0000_ft000003"
+        }
+      ]
+    },
+    {
+      "id": "block-d7b74bbb37a471b6e583e70d",
+      "type": "table",
+      "text": "",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:1",
+          "page_index": 0,
+          "page": 1,
+          "bbox": [
+            300.0,
+            646.6666666666666,
+            557.3333333333334,
+            712.6666666666666
+          ]
+        }
+      ],
+      "table": {
+        "rows": [
+          [
+            "Item",
+            "Min",
+            "Max"
+          ],
+          [
+            "A",
+            "1",
+            "5"
+          ],
+          [
+            "B",
+            "2",
+            ""
+          ]
+        ],
+        "merges": [],
+        "notes": []
+      }
+    },
+    {
+      "id": "block-de0b2a6ed8113d38c39671e9",
+      "type": "text",
+      "text": "phenated word and ends on the next page.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:2",
+          "page_index": 1,
+          "page": 2,
+          "bbox": [
+            54.65999984741211,
+            44.84002685546875,
+            243.2599639892578,
+            54.09002685546875
+          ],
+          "native_id": "native_p0001_ft000000"
+        }
+      ]
+    },
+    {
+      "id": "block-c0eb553ee843c95491d68e77",
+      "type": "table",
+      "text": "",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:2",
+          "page_index": 1,
+          "page": 2,
+          "bbox": [
+            300.0,
+            72.0,
+            557.3333333333334,
+            137.33333333333334
+          ]
+        }
+      ],
+      "table": {
+        "rows": [
+          [
+            "Item",
+            "Min",
+            "Max"
+          ],
+          [
+            "B",
+            "",
+            "8"
+          ],
+          [
+            "C",
+            "3",
+            "9"
+          ]
+        ],
+        "merges": [],
+        "notes": []
+      }
+    }
+  ],
+  "scope": [
+    {
+      "id": "page:1",
+      "kind": "page",
+      "label": "Page 1",
+      "location": {
+        "page": 1
+      }
+    },
+    {
+      "id": "page:2",
+      "kind": "page",
+      "label": "Page 2",
+      "location": {
+        "page": 2
+      }
+    }
+  ],
+  "covered_scope": [
+    "page:1",
+    "page:2"
+  ],
+  "processed_scope": [
+    "page:1",
+    "page:2"
+  ],
+  "usable_scope": [
+    "page:1",
+    "page:2"
+  ],
+  "unprocessed_scope": [],
+  "warnings": [
+    "Native text can differ from visible page marks. Compare it with the original page image. Scanned pages may require manual transcription; no OCR is run when viewing.",
+    "PDF candidate uses the existing positioned PDFium parser in mapped three-page windows. Ruled-table grids use existing local geometry assembly. Reading order, headings and unruled tables may need manual correction; source page images and complete native evidence are retained. No Requirement classifier, semantic processor, OCR model or external service runs."
+  ],
+  "unresolved": [],
+  "canonical_artifacts": [
+    "pdf-window-0001.pdf",
+    "pdf-native-0001.json",
+    "pdf-page-0001.png",
+    "pdf-page-0002.png",
+    "pdf-order-repairs.json",
+    "pdf-paragraph-groups.json"
+  ],
+  "status": "candidate_available",
+  "review_policy": "human_material_confirmation_required",
+  "requirement_status": "not_connected"
+}

@@ -1,0 +1,1032 @@
+{
+  "samples": [
+    {
+      "id": "asc-farm",
+      "path": "system2/data/inputs/ASC-STD-001-ASC-Farm-Standard-V1.0.1-Aug-2025.pdf",
+      "page_indices": [
+        27,
+        28
+      ],
+      "split": "development",
+      "family": "ASC_PDF",
+      "annotation": {
+        "path": "system2/gold/requirements/annotations/farm-standard-p028-p029.json",
+        "sha256": "97e70763c7ac03221e0f3ea47437817c6c4859308d2282939988ce2f306dd35e",
+        "trust": "existing source-backed engineering annotation; not business expert Gold",
+        "counts": {
+          "segments": 25,
+          "requirements": 6,
+          "excluded_regions": 4
+        },
+        "denominator_status": "UNMEASURED: complete content-unit and binary positive/negative denominator not yet validated"
+      },
+      "sha256": "3b0cdf01f72b518710d5af9c1d8ccaa653c381f45053c7b20a102e06c1de4b20",
+      "bytes": 7007852,
+      "engineering_source_id": "QS001",
+      "pdf_page_numbers": [
+        28,
+        29
+      ]
+    },
+    {
+      "id": "asc-interpretation",
+      "path": "system2/data/inputs/ASC-INT-001-ASC-Farm-Standard-Interpretation-Manual-V1.0-May-2025.pdf",
+      "page_indices": [
+        18,
+        19,
+        20
+      ],
+      "split": "development",
+      "family": "ASC_PDF",
+      "annotation": {
+        "path": "system2/gold/requirements/annotations/interpretation-manual-p019-p021.json",
+        "sha256": "ce4c1e9a6b2f9814a5b407414462d01c6d6cba57b0c55f10cc7ab76f0872f6fa",
+        "trust": "existing source-backed engineering annotation; not business expert Gold",
+        "counts": {
+          "segments": 12,
+          "requirements": 3,
+          "excluded_regions": 2
+        },
+        "denominator_status": "UNMEASURED: complete content-unit and binary positive/negative denominator not yet validated"
+      },
+      "sha256": "804ead3d1d1a53019869b5385dabfb86356b8276b990538c0d782e750167777e",
+      "bytes": 8351485,
+      "engineering_source_id": "QS002",
+      "pdf_page_numbers": [
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "id": "asc-audit",
+      "path": "system2/data/inputs/download-module-691-ASC-Salmon-Audit-Manual_v1.4.pdf",
+      "page_indices": [
+        0,
+        1,
+        2
+      ],
+      "split": "development",
+      "family": "ASC_PDF",
+      "annotation": {
+        "path": "system2/gold/requirements/annotations/audit-manual-p001-p003.json",
+        "sha256": "5eb981d4022e5380132a6a72dc5e88a8bbbf41a2f42ee89cbe95c2efbf93dd69",
+        "trust": "existing source-backed engineering annotation; not business expert Gold",
+        "counts": {
+          "segments": 79,
+          "requirements": 12,
+          "excluded_regions": 4
+        },
+        "denominator_status": "UNMEASURED: complete content-unit and binary positive/negative denominator not yet validated"
+      },
+      "sha256": "911b716d6e4f9aacc1e0c7999dbcf1e009f08c3b322269c748d867006521e76d",
+      "bytes": 651898,
+      "engineering_source_id": "QS003",
+      "pdf_page_numbers": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "asc-salmon-cod",
+      "path": "system2/data/inputs/ASC-STD-010-ASC-Salmon-and-Cod-Standard-V1.5-Oct-2025-1.pdf",
+      "page_indices": [
+        17
+      ],
+      "split": "development",
+      "family": "ASC_PDF",
+      "annotation": {
+        "path": "system2/gold/requirements/annotations/salmon-cod-standard-p018-v2.json",
+        "sha256": "2387bedc12a12ca9374c63207e9f2b61580e176d48615746c72614c1b1bf7ecb",
+        "trust": "existing source-backed engineering annotation; not business expert Gold",
+        "counts": {
+          "segments": 21,
+          "requirements": 4,
+          "excluded_regions": 5
+        },
+        "denominator_status": "UNMEASURED: complete content-unit and binary positive/negative denominator not yet validated"
+      },
+      "sha256": "a34e5f4fc78486136ddbf3d661d26aad85e4b8a1990b2e6eda3f3ac1df7f7b5c",
+      "bytes": 1739158,
+      "engineering_source_id": "QS004",
+      "pdf_page_numbers": [
+        18
+      ]
+    },
+    {
+      "id": "borderless-merged-figure",
+      "path": "system2/gold/pdfs/borderless-merged-figure.pdf",
+      "page_indices": [
+        0
+      ],
+      "split": "mechanism_regression",
+      "family": "synthetic_PDF",
+      "annotation": {
+        "path": "system2/gold/annotations/borderless-merged-figure.json",
+        "sha256": "138b24b0ec8b0a201ccb5463a86c84d0062afc7a5ac6f96964d543ffcd6a4e8d",
+        "trust": "synthetic authored visible-content expectations; not real-format acceptance",
+        "denominator_status": "UNMEASURED for real-material quality; expected fields can diagnose mechanisms"
+      },
+      "sha256": "966ec5d7eb8af5ea97cd478b6560e3f2e836202a1a0f3f7138f9b016349a0138",
+      "bytes": 1968,
+      "engineering_source_id": "QS005",
+      "pdf_page_numbers": [
+        1
+      ]
+    },
+    {
+      "id": "born-digital-multicolumn",
+      "path": "system2/gold/pdfs/born-digital-multicolumn.pdf",
+      "page_indices": [
+        0
+      ],
+      "split": "mechanism_regression",
+      "family": "synthetic_PDF",
+      "annotation": {
+        "path": "system2/gold/annotations/born-digital-multicolumn.json",
+        "sha256": "987d352aa0aa32f048d43681b05a2ac5af0d735db202dea977a7a7d5ad094c1e",
+        "trust": "synthetic authored visible-content expectations; not real-format acceptance",
+        "denominator_status": "UNMEASURED for real-material quality; expected fields can diagnose mechanisms"
+      },
+      "sha256": "c2d87f054ce7e88fca96557cdc85f52fb579a472eb301d62e6f70618775811a3",
+      "bytes": 1824,
+      "engineering_source_id": "QS006",
+      "pdf_page_numbers": [
+        1
+      ]
+    },
+    {
+      "id": "cross-page-content",
+      "path": "system2/gold/pdfs/cross-page-content.pdf",
+      "page_indices": [
+        0,
+        1
+      ],
+      "split": "mechanism_regression",
+      "family": "synthetic_PDF",
+      "annotation": {
+        "path": "system2/gold/annotations/cross-page-content.json",
+        "sha256": "09ef87c8f0847e70795da1abcd5453d70a9a08711aa6bc8da30e1d3f5836111f",
+        "trust": "synthetic authored visible-content expectations; not real-format acceptance",
+        "denominator_status": "UNMEASURED for real-material quality; expected fields can diagnose mechanisms"
+      },
+      "sha256": "a01ea98a16cc107450e54cabf9f4e577b9c83652a6145bac4a94e352f617a981",
+      "bytes": 2437,
+      "engineering_source_id": "QS007",
+      "pdf_page_numbers": [
+        1,
+        2
+      ]
+    }
+  ],
+  "code": {
+    "material_parser.py": "ae3745c920366edfb70934e540f2fbe745835ff772a16aa540b751713123388e",
+    "native_extractor.py": "600c4368acebd0f18b533c491118b64dfc74c9bf57a1a81b99a5d2accf1d63f5",
+    "pdf-intake-positioned.yaml": "046cc0b932a113c9cedd543770bf402abccfe1afc465943c74066fb54dc52776",
+    "pyproject.toml": "af7ab07d32ae5806be2e91d37cde794eba7fc8768e78a1af3009f04477e86626",
+    "uv.lock": "de4049919fe35a6cedf4fd4188c6e7d8692516e1c2fc0fb551b7901448f6d4cc",
+    "experiment_source": "4f4d4858998dfb7b718dfcc97bdb400b14904edc9e66c5a8227f284069e9a25a",
+    "comparison_script": "cbabf5f1c8b4c6a47fdc4a51c7a72c7d57c199da8a4b4f8760dac759bb476858"
+  },
+  "reference_denominators": [
+    {
+      "sample": "asc-farm",
+      "annotation": {
+        "path": "system2/gold/requirements/annotations/farm-standard-p028-p029.json",
+        "sha256": "97e70763c7ac03221e0f3ea47437817c6c4859308d2282939988ce2f306dd35e",
+        "trust": "existing source-backed engineering annotation; not business expert Gold",
+        "counts": {
+          "segments": 25,
+          "requirements": 6,
+          "excluded_regions": 4
+        },
+        "denominator_status": "UNMEASURED: complete content-unit and binary positive/negative denominator not yet validated"
+      },
+      "segments": 25,
+      "formal_texts": 6,
+      "clause_bodies": 7,
+      "critical_phrases": [
+        {
+          "id": "1.1.1:modalities:0",
+          "requirement_id": "1.1.1",
+          "field": "modalities",
+          "text": "shall",
+          "expected_page_indices": [
+            27
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.1.2:modalities:0",
+          "requirement_id": "1.1.2",
+          "field": "modalities",
+          "text": "shall",
+          "expected_page_indices": [
+            27
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.2.1:modalities:0",
+          "requirement_id": "1.2.1",
+          "field": "modalities",
+          "text": "shall",
+          "expected_page_indices": [
+            28
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.2.2:modalities:0",
+          "requirement_id": "1.2.2",
+          "field": "modalities",
+          "text": "shall",
+          "expected_page_indices": [
+            28
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.2.2:thresholds:0",
+          "requirement_id": "1.2.2",
+          "field": "thresholds",
+          "text": "at least one",
+          "expected_page_indices": [
+            28
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.2.3:modalities:0",
+          "requirement_id": "1.2.3",
+          "field": "modalities",
+          "text": "shall",
+          "expected_page_indices": [
+            28
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.2.4:modalities:0",
+          "requirement_id": "1.2.4",
+          "field": "modalities",
+          "text": "shall",
+          "expected_page_indices": [
+            28
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.2.4:conditions:0",
+          "requirement_id": "1.2.4",
+          "field": "conditions",
+          "text": "where necessary",
+          "expected_page_indices": [
+            28
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.2.4:dates:0",
+          "requirement_id": "1.2.4",
+          "field": "dates",
+          "text": "annually",
+          "expected_page_indices": [
+            28
+          ],
+          "located_in_existing_source_segment": true
+        }
+      ]
+    },
+    {
+      "sample": "asc-interpretation",
+      "annotation": {
+        "path": "system2/gold/requirements/annotations/interpretation-manual-p019-p021.json",
+        "sha256": "ce4c1e9a6b2f9814a5b407414462d01c6d6cba57b0c55f10cc7ab76f0872f6fa",
+        "trust": "existing source-backed engineering annotation; not business expert Gold",
+        "counts": {
+          "segments": 12,
+          "requirements": 3,
+          "excluded_regions": 2
+        },
+        "denominator_status": "UNMEASURED: complete content-unit and binary positive/negative denominator not yet validated"
+      },
+      "segments": 12,
+      "formal_texts": 3,
+      "clause_bodies": 13,
+      "critical_phrases": [
+        {
+          "id": "1.4.1:modalities:0",
+          "requirement_id": "1.4.1",
+          "field": "modalities",
+          "text": "shall",
+          "expected_page_indices": [
+            18
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.4.2:modalities:0",
+          "requirement_id": "1.4.2",
+          "field": "modalities",
+          "text": "shall",
+          "expected_page_indices": [
+            18
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.4.2:modalities:1",
+          "requirement_id": "1.4.2",
+          "field": "modalities",
+          "text": "shall",
+          "expected_page_indices": [
+            18
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.4.2:conditions:0",
+          "requirement_id": "1.4.2",
+          "field": "conditions",
+          "text": "if non-conforming product is identified, sold or dispatched",
+          "expected_page_indices": [
+            18
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.4.3:modalities:0",
+          "requirement_id": "1.4.3",
+          "field": "modalities",
+          "text": "shall",
+          "expected_page_indices": [
+            19
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.4.3:conditions:0",
+          "requirement_id": "1.4.3",
+          "field": "conditions",
+          "text": "subject to conformance with Indicator 2.12.1",
+          "expected_page_indices": [
+            19
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.4.3:conditions:1",
+          "requirement_id": "1.4.3",
+          "field": "conditions",
+          "text": "for ASC-conforming Segregation Production Model feed",
+          "expected_page_indices": [
+            20
+          ],
+          "located_in_existing_source_segment": true
+        }
+      ]
+    },
+    {
+      "sample": "asc-audit",
+      "annotation": {
+        "path": "system2/gold/requirements/annotations/audit-manual-p001-p003.json",
+        "sha256": "5eb981d4022e5380132a6a72dc5e88a8bbbf41a2f42ee89cbe95c2efbf93dd69",
+        "trust": "existing source-backed engineering annotation; not business expert Gold",
+        "counts": {
+          "segments": 79,
+          "requirements": 12,
+          "excluded_regions": 4
+        },
+        "denominator_status": "UNMEASURED: complete content-unit and binary positive/negative denominator not yet validated"
+      },
+      "segments": 79,
+      "formal_texts": 12,
+      "clause_bodies": 16,
+      "critical_phrases": [
+        {
+          "id": "1.1.1:modalities:0",
+          "requirement_id": "1.1.1",
+          "field": "modalities",
+          "text": "Requirement",
+          "expected_page_indices": [
+            0
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.1.2:modalities:0",
+          "requirement_id": "1.1.2",
+          "field": "modalities",
+          "text": "Requirement",
+          "expected_page_indices": [
+            0
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.1.3:modalities:0",
+          "requirement_id": "1.1.3",
+          "field": "modalities",
+          "text": "Requirement",
+          "expected_page_indices": [
+            0
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.1.4:modalities:0",
+          "requirement_id": "1.1.4",
+          "field": "modalities",
+          "text": "Requirement",
+          "expected_page_indices": [
+            0
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.1.1:modalities:0",
+          "requirement_id": "2.1.1",
+          "field": "modalities",
+          "text": "Requirement",
+          "expected_page_indices": [
+            0
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.1.1:thresholds:0",
+          "requirement_id": "2.1.1",
+          "field": "thresholds",
+          "text": "> 0 mV",
+          "expected_page_indices": [
+            0
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.1.1:thresholds:1",
+          "requirement_id": "2.1.1",
+          "field": "thresholds",
+          "text": "≤ 1,500 μMol/L",
+          "expected_page_indices": [
+            0
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.1.1:thresholds:2",
+          "requirement_id": "2.1.1",
+          "field": "thresholds",
+          "text": "> 75% of solid nutrients",
+          "expected_page_indices": [
+            0
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.1.1:conditions:0",
+          "requirement_id": "2.1.1",
+          "field": "conditions",
+          "text": "Sediment is sampled outside of the Allowable Zone of Effect (AZE), following Appendix I-1.",
+          "expected_page_indices": [],
+          "located_in_existing_source_segment": false
+        },
+        {
+          "id": "2.1.1:conditions:1",
+          "requirement_id": "2.1.1",
+          "field": "conditions",
+          "text": "Farms can choose to measure redox potential (Option #1) or sulphide concentration (Option #2).",
+          "expected_page_indices": [],
+          "located_in_existing_source_segment": false
+        },
+        {
+          "id": "2.1.1:exemptions:0",
+          "requirement_id": "2.1.1",
+          "field": "exemptions",
+          "text": "Closed production systems that can demonstrate that they collect and responsibly dispose of > 75% of solid nutrients from the production system are exempt from standards under Criterion 2.1.",
+          "expected_page_indices": [
+            0
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.1.1:exemptions:1",
+          "requirement_id": "2.1.1",
+          "field": "exemptions",
+          "text": "If benthos throughout the full AZE is hard bottom, provide evidence to the CAB and request an exemption from 2.1.1c-f, 2.1.2 and 2.1.3.",
+          "expected_page_indices": [],
+          "located_in_existing_source_segment": false
+        },
+        {
+          "id": "2.1.2:modalities:0",
+          "requirement_id": "2.1.2",
+          "field": "modalities",
+          "text": "Requirement",
+          "expected_page_indices": [
+            1
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.1.2:thresholds:0",
+          "requirement_id": "2.1.2",
+          "field": "thresholds",
+          "text": "≤ 3.3",
+          "expected_page_indices": [
+            1
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.1.2:thresholds:1",
+          "requirement_id": "2.1.2",
+          "field": "thresholds",
+          "text": "> 3",
+          "expected_page_indices": [
+            1
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.1.2:thresholds:2",
+          "requirement_id": "2.1.2",
+          "field": "thresholds",
+          "text": "≥ 15",
+          "expected_page_indices": [
+            1
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.1.2:thresholds:3",
+          "requirement_id": "2.1.2",
+          "field": "thresholds",
+          "text": "≥ 25",
+          "expected_page_indices": [
+            1
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.1.2:thresholds:4",
+          "requirement_id": "2.1.2",
+          "field": "thresholds",
+          "text": "> 75% of solid nutrients",
+          "expected_page_indices": [
+            0
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.1.2:conditions:0",
+          "requirement_id": "2.1.2",
+          "field": "conditions",
+          "text": "The faunal index is measured in sediment outside the AZE following Appendix I-1.",
+          "expected_page_indices": [],
+          "located_in_existing_source_segment": false
+        },
+        {
+          "id": "2.1.2:conditions:1",
+          "requirement_id": "2.1.2",
+          "field": "conditions",
+          "text": "Farms can choose one of four measurements and do not have to meet all four threshold values.",
+          "expected_page_indices": [],
+          "located_in_existing_source_segment": false
+        },
+        {
+          "id": "2.1.2:exemptions:0",
+          "requirement_id": "2.1.2",
+          "field": "exemptions",
+          "text": "Closed production systems that can demonstrate that they collect and responsibly dispose of > 75% of solid nutrients from the production system are exempt from standards under Criterion 2.1.",
+          "expected_page_indices": [
+            0
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.1.2:exemptions:1",
+          "requirement_id": "2.1.2",
+          "field": "exemptions",
+          "text": "If a farm is exempt due to hard bottom benthos (see 2.1.1b), then 2.1.2 does not apply and this shall be noted in the audit report.",
+          "expected_page_indices": [],
+          "located_in_existing_source_segment": false
+        },
+        {
+          "id": "2.1.3:modalities:0",
+          "requirement_id": "2.1.3",
+          "field": "modalities",
+          "text": "Requirement",
+          "expected_page_indices": [
+            1
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.1.3:thresholds:0",
+          "requirement_id": "2.1.3",
+          "field": "thresholds",
+          "text": "≥ 2",
+          "expected_page_indices": [
+            1
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.1.3:thresholds:1",
+          "requirement_id": "2.1.3",
+          "field": "thresholds",
+          "text": "Greater than 100 organisms per square metre",
+          "expected_page_indices": [
+            1
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.1.3:thresholds:2",
+          "requirement_id": "2.1.3",
+          "field": "thresholds",
+          "text": "> 75% of solid nutrients",
+          "expected_page_indices": [
+            0
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.1.3:conditions:0",
+          "requirement_id": "2.1.3",
+          "field": "conditions",
+          "text": "The taxa are counted in sediment within the AZE following Appendix I-1.",
+          "expected_page_indices": [],
+          "located_in_existing_source_segment": false
+        },
+        {
+          "id": "2.1.3:exemptions:0",
+          "requirement_id": "2.1.3",
+          "field": "exemptions",
+          "text": "Closed production systems that can demonstrate that they collect and responsibly dispose of > 75% of solid nutrients from the production system are exempt from standards under Criterion 2.1.",
+          "expected_page_indices": [
+            0
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.1.3:negations:0",
+          "requirement_id": "2.1.3",
+          "field": "negations",
+          "text": "not pollution indicator species",
+          "expected_page_indices": [
+            1
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.1.4:modalities:0",
+          "requirement_id": "2.1.4",
+          "field": "modalities",
+          "text": "Requirement",
+          "expected_page_indices": [
+            1
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.1.4:thresholds:0",
+          "requirement_id": "2.1.4",
+          "field": "thresholds",
+          "text": "> 75% of solid nutrients",
+          "expected_page_indices": [
+            0
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.1.4:exemptions:0",
+          "requirement_id": "2.1.4",
+          "field": "exemptions",
+          "text": "Closed production systems that can demonstrate that they collect and responsibly dispose of > 75% of solid nutrients from the production system are exempt from standards under Criterion 2.1.",
+          "expected_page_indices": [
+            0
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.1.4:dates:0",
+          "requirement_id": "2.1.4",
+          "field": "dates",
+          "text": "verified with > 6 months of monitoring data",
+          "expected_page_indices": [],
+          "located_in_existing_source_segment": false
+        },
+        {
+          "id": "2.2.1:modalities:0",
+          "requirement_id": "2.2.1",
+          "field": "modalities",
+          "text": "Requirement",
+          "expected_page_indices": [
+            2
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.2.1:thresholds:0",
+          "requirement_id": "2.2.1",
+          "field": "thresholds",
+          "text": "≥ 70%",
+          "expected_page_indices": [
+            2
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.2.1:thresholds:1",
+          "requirement_id": "2.2.1",
+          "field": "thresholds",
+          "text": "at least twice daily",
+          "expected_page_indices": [],
+          "located_in_existing_source_segment": false
+        },
+        {
+          "id": "2.2.1:thresholds:2",
+          "requirement_id": "2.2.1",
+          "field": "thresholds",
+          "text": "5 meters depth",
+          "expected_page_indices": [],
+          "located_in_existing_source_segment": false
+        },
+        {
+          "id": "2.2.1:thresholds:3",
+          "requirement_id": "2.2.1",
+          "field": "thresholds",
+          "text": "one sample per day",
+          "expected_page_indices": [],
+          "located_in_existing_source_segment": false
+        },
+        {
+          "id": "2.2.1:thresholds:4",
+          "requirement_id": "2.2.1",
+          "field": "thresholds",
+          "text": "at least 500 meters",
+          "expected_page_indices": [],
+          "located_in_existing_source_segment": false
+        },
+        {
+          "id": "2.2.1:conditions:0",
+          "requirement_id": "2.2.1",
+          "field": "conditions",
+          "text": "The weekly average is calculated from on-farm dissolved-oxygen measurements following Appendix I-4.",
+          "expected_page_indices": [],
+          "located_in_existing_source_segment": false
+        },
+        {
+          "id": "2.2.1:conditions:1",
+          "requirement_id": "2.2.1",
+          "field": "conditions",
+          "text": "In limited and well-justified situations, farms may request that the CAB approve reduction of DO monitoring frequency to one sample per day.",
+          "expected_page_indices": [],
+          "located_in_existing_source_segment": false
+        },
+        {
+          "id": "2.2.1:exceptions:0",
+          "requirement_id": "2.2.1",
+          "field": "exceptions",
+          "text": "An exception to this standard shall be made for farms that can demonstrate consistency with a reference site in the same water body.",
+          "expected_page_indices": [
+            2
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.2.1:exceptions:1",
+          "requirement_id": "2.2.1",
+          "field": "exceptions",
+          "text": "If a farm does not meet the minimum 70 percent weekly average saturation requirement, the farm must demonstrate the consistency of percent saturation with a reference site.",
+          "expected_page_indices": [],
+          "located_in_existing_source_segment": false
+        },
+        {
+          "id": "2.2.1:negations:0",
+          "requirement_id": "2.2.1",
+          "field": "negations",
+          "text": "is not influenced by nutrient inputs from anthropogenic causes",
+          "expected_page_indices": [],
+          "located_in_existing_source_segment": false
+        },
+        {
+          "id": "2.2.1:dates:0",
+          "requirement_id": "2.2.1",
+          "field": "dates",
+          "text": "For first audits, farm records must cover ≥ 6 months.",
+          "expected_page_indices": [],
+          "located_in_existing_source_segment": false
+        },
+        {
+          "id": "2.2.2:modalities:0",
+          "requirement_id": "2.2.2",
+          "field": "modalities",
+          "text": "Requirement",
+          "expected_page_indices": [
+            2
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.2.2:thresholds:0",
+          "requirement_id": "2.2.2",
+          "field": "thresholds",
+          "text": "5%",
+          "expected_page_indices": [
+            2
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.2.2:thresholds:1",
+          "requirement_id": "2.2.2",
+          "field": "thresholds",
+          "text": "under 2 mg/L DO",
+          "expected_page_indices": [
+            2
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.2.2:conditions:0",
+          "requirement_id": "2.2.2",
+          "field": "conditions",
+          "text": "The denominator is weekly samples from 2.2.1 and the counted samples fall under 2 mg/L DO.",
+          "expected_page_indices": [],
+          "located_in_existing_source_segment": false
+        },
+        {
+          "id": "2.2.3:modalities:0",
+          "requirement_id": "2.2.3",
+          "field": "modalities",
+          "text": "Requirement",
+          "expected_page_indices": [
+            2
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.2.3:thresholds:0",
+          "requirement_id": "2.2.3",
+          "field": "thresholds",
+          "text": "Within the two years prior to the first audit",
+          "expected_page_indices": [
+            2
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.2.3:thresholds:1",
+          "requirement_id": "2.2.3",
+          "field": "thresholds",
+          "text": "> 75% of solid nutrients",
+          "expected_page_indices": [
+            2
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.2.3:thresholds:2",
+          "requirement_id": "2.2.3",
+          "field": "thresholds",
+          "text": "> 50% of dissolved nutrients",
+          "expected_page_indices": [
+            2
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.2.3:conditions:0",
+          "requirement_id": "2.2.3",
+          "field": "conditions",
+          "text": "For jurisdictions that have national or regional coastal water quality targets.",
+          "expected_page_indices": [],
+          "located_in_existing_source_segment": false
+        },
+        {
+          "id": "2.2.3:conditions:1",
+          "requirement_id": "2.2.3",
+          "field": "conditions",
+          "text": "The classification is based on third-party analysis and is recent as defined in [13].",
+          "expected_page_indices": [],
+          "located_in_existing_source_segment": false
+        },
+        {
+          "id": "2.2.3:exemptions:0",
+          "requirement_id": "2.2.3",
+          "field": "exemptions",
+          "text": "Closed production systems that can demonstrate the collection and responsible disposal of > 75% of solid nutrients as well as > 50% of dissolved nutrients (through biofiltration, settling and/or other technologies) are exempt from standards 2.2.3 and 2.2.4.",
+          "expected_page_indices": [
+            2
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.2.3:dates:0",
+          "requirement_id": "2.2.3",
+          "field": "dates",
+          "text": "Within the two years prior to the first audit.",
+          "expected_page_indices": [
+            2
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.2.4:modalities:0",
+          "requirement_id": "2.2.4",
+          "field": "modalities",
+          "text": "Requirement",
+          "expected_page_indices": [
+            2
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.2.4:thresholds:0",
+          "requirement_id": "2.2.4",
+          "field": "thresholds",
+          "text": "> 75% of solid nutrients",
+          "expected_page_indices": [
+            2
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.2.4:thresholds:1",
+          "requirement_id": "2.2.4",
+          "field": "thresholds",
+          "text": "> 50% of dissolved nutrients",
+          "expected_page_indices": [
+            2
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.2.4:conditions:0",
+          "requirement_id": "2.2.4",
+          "field": "conditions",
+          "text": "For jurisdictions without national or regional coastal water quality targets.",
+          "expected_page_indices": [],
+          "located_in_existing_source_segment": false
+        },
+        {
+          "id": "2.2.4:exemptions:0",
+          "requirement_id": "2.2.4",
+          "field": "exemptions",
+          "text": "Closed production systems that can demonstrate the collection and responsible disposal of > 75% of solid nutrients as well as > 50% of dissolved nutrients (through biofiltration, settling and/or other technologies) are exempt from standards 2.2.3 and 2.2.4.",
+          "expected_page_indices": [
+            2
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.2.4:negations:0",
+          "requirement_id": "2.2.4",
+          "field": "negations",
+          "text": "without national or regional coastal water quality targets",
+          "expected_page_indices": [
+            2
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "2.2.4:dates:0",
+          "requirement_id": "2.2.4",
+          "field": "dates",
+          "text": "For first audits, farm records must cover ≥ 6 months.",
+          "expected_page_indices": [],
+          "located_in_existing_source_segment": false
+        }
+      ]
+    },
+    {
+      "sample": "asc-salmon-cod",
+      "annotation": {
+        "path": "system2/gold/requirements/annotations/salmon-cod-standard-p018-v2.json",
+        "sha256": "2387bedc12a12ca9374c63207e9f2b61580e176d48615746c72614c1b1bf7ecb",
+        "trust": "existing source-backed engineering annotation; not business expert Gold",
+        "counts": {
+          "segments": 21,
+          "requirements": 4,
+          "excluded_regions": 5
+        },
+        "denominator_status": "UNMEASURED: complete content-unit and binary positive/negative denominator not yet validated"
+      },
+      "segments": 21,
+      "formal_texts": 4,
+      "clause_bodies": 4,
+      "critical_phrases": []
+    }
+  ],
+  "relation_subset_hash": "b3f9d4338df816cb3246ab703c866a959731b81f4e10c571d1ad85fd0647dec0",
+  "base_parser": "Current source parser /6, compared with preserved /4 and isolated guard outputs; /5 HTML fix retained",
+  "predeclared_guard": {
+    "tolerance_points": 1,
+    "reject_crossing_ratio_at_least": 0.25
+  },
+  "matching_policy": "Same whitespace-only/page-bound and marker rules; existing real engineering and synthetic annotations, no changed denominator/Gold; DEV calibration, no independent acceptance."
+}

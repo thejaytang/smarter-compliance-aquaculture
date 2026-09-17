@@ -1,0 +1,278 @@
+{
+  "started_at": "2026-09-13T11:13:06.319204+00:00",
+  "samples": [
+    {
+      "id": "asc-farm",
+      "path": "system2/data/inputs/ASC-STD-001-ASC-Farm-Standard-V1.0.1-Aug-2025.pdf",
+      "page_indices": [
+        27,
+        28
+      ],
+      "split": "development",
+      "family": "ASC_PDF",
+      "annotation": {
+        "path": "system2/gold/requirements/annotations/farm-standard-p028-p029.json",
+        "sha256": "97e70763c7ac03221e0f3ea47437817c6c4859308d2282939988ce2f306dd35e",
+        "trust": "existing source-backed engineering annotation; not business expert Gold",
+        "counts": {
+          "segments": 25,
+          "requirements": 6,
+          "excluded_regions": 4
+        },
+        "denominator_status": "UNMEASURED: complete content-unit and binary positive/negative denominator not yet validated"
+      },
+      "sha256": "3b0cdf01f72b518710d5af9c1d8ccaa653c381f45053c7b20a102e06c1de4b20",
+      "bytes": 7007852,
+      "engineering_source_id": "QS001",
+      "pdf_page_numbers": [
+        28,
+        29
+      ]
+    },
+    {
+      "id": "asc-interpretation",
+      "path": "system2/data/inputs/ASC-INT-001-ASC-Farm-Standard-Interpretation-Manual-V1.0-May-2025.pdf",
+      "page_indices": [
+        18,
+        19,
+        20
+      ],
+      "split": "development",
+      "family": "ASC_PDF",
+      "annotation": {
+        "path": "system2/gold/requirements/annotations/interpretation-manual-p019-p021.json",
+        "sha256": "ce4c1e9a6b2f9814a5b407414462d01c6d6cba57b0c55f10cc7ab76f0872f6fa",
+        "trust": "existing source-backed engineering annotation; not business expert Gold",
+        "counts": {
+          "segments": 12,
+          "requirements": 3,
+          "excluded_regions": 2
+        },
+        "denominator_status": "UNMEASURED: complete content-unit and binary positive/negative denominator not yet validated"
+      },
+      "sha256": "804ead3d1d1a53019869b5385dabfb86356b8276b990538c0d782e750167777e",
+      "bytes": 8351485,
+      "engineering_source_id": "QS002",
+      "pdf_page_numbers": [
+        19,
+        20,
+        21
+      ]
+    }
+  ],
+  "reference_denominators": [
+    {
+      "sample": "asc-farm",
+      "annotation": {
+        "path": "system2/gold/requirements/annotations/farm-standard-p028-p029.json",
+        "sha256": "97e70763c7ac03221e0f3ea47437817c6c4859308d2282939988ce2f306dd35e",
+        "trust": "existing source-backed engineering annotation; not business expert Gold",
+        "counts": {
+          "segments": 25,
+          "requirements": 6,
+          "excluded_regions": 4
+        },
+        "denominator_status": "UNMEASURED: complete content-unit and binary positive/negative denominator not yet validated"
+      },
+      "segments": 25,
+      "formal_texts": 6,
+      "clause_bodies": 7,
+      "critical_phrases": [
+        {
+          "id": "1.1.1:modalities:0",
+          "requirement_id": "1.1.1",
+          "field": "modalities",
+          "text": "shall",
+          "expected_page_indices": [
+            27
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.1.2:modalities:0",
+          "requirement_id": "1.1.2",
+          "field": "modalities",
+          "text": "shall",
+          "expected_page_indices": [
+            27
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.2.1:modalities:0",
+          "requirement_id": "1.2.1",
+          "field": "modalities",
+          "text": "shall",
+          "expected_page_indices": [
+            28
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.2.2:modalities:0",
+          "requirement_id": "1.2.2",
+          "field": "modalities",
+          "text": "shall",
+          "expected_page_indices": [
+            28
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.2.2:thresholds:0",
+          "requirement_id": "1.2.2",
+          "field": "thresholds",
+          "text": "at least one",
+          "expected_page_indices": [
+            28
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.2.3:modalities:0",
+          "requirement_id": "1.2.3",
+          "field": "modalities",
+          "text": "shall",
+          "expected_page_indices": [
+            28
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.2.4:modalities:0",
+          "requirement_id": "1.2.4",
+          "field": "modalities",
+          "text": "shall",
+          "expected_page_indices": [
+            28
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.2.4:conditions:0",
+          "requirement_id": "1.2.4",
+          "field": "conditions",
+          "text": "where necessary",
+          "expected_page_indices": [
+            28
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.2.4:dates:0",
+          "requirement_id": "1.2.4",
+          "field": "dates",
+          "text": "annually",
+          "expected_page_indices": [
+            28
+          ],
+          "located_in_existing_source_segment": true
+        }
+      ]
+    },
+    {
+      "sample": "asc-interpretation",
+      "annotation": {
+        "path": "system2/gold/requirements/annotations/interpretation-manual-p019-p021.json",
+        "sha256": "ce4c1e9a6b2f9814a5b407414462d01c6d6cba57b0c55f10cc7ab76f0872f6fa",
+        "trust": "existing source-backed engineering annotation; not business expert Gold",
+        "counts": {
+          "segments": 12,
+          "requirements": 3,
+          "excluded_regions": 2
+        },
+        "denominator_status": "UNMEASURED: complete content-unit and binary positive/negative denominator not yet validated"
+      },
+      "segments": 12,
+      "formal_texts": 3,
+      "clause_bodies": 13,
+      "critical_phrases": [
+        {
+          "id": "1.4.1:modalities:0",
+          "requirement_id": "1.4.1",
+          "field": "modalities",
+          "text": "shall",
+          "expected_page_indices": [
+            18
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.4.2:modalities:0",
+          "requirement_id": "1.4.2",
+          "field": "modalities",
+          "text": "shall",
+          "expected_page_indices": [
+            18
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.4.2:modalities:1",
+          "requirement_id": "1.4.2",
+          "field": "modalities",
+          "text": "shall",
+          "expected_page_indices": [
+            18
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.4.2:conditions:0",
+          "requirement_id": "1.4.2",
+          "field": "conditions",
+          "text": "if non-conforming product is identified, sold or dispatched",
+          "expected_page_indices": [
+            18
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.4.3:modalities:0",
+          "requirement_id": "1.4.3",
+          "field": "modalities",
+          "text": "shall",
+          "expected_page_indices": [
+            19
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.4.3:conditions:0",
+          "requirement_id": "1.4.3",
+          "field": "conditions",
+          "text": "subject to conformance with Indicator 2.12.1",
+          "expected_page_indices": [
+            19
+          ],
+          "located_in_existing_source_segment": true
+        },
+        {
+          "id": "1.4.3:conditions:1",
+          "requirement_id": "1.4.3",
+          "field": "conditions",
+          "text": "for ASC-conforming Segregation Production Model feed",
+          "expected_page_indices": [
+            20
+          ],
+          "located_in_existing_source_segment": true
+        }
+      ]
+    }
+  ],
+  "code": {
+    "material_parser.py": "3696f3aab5aff829e7247418bd0b22cec1b5f3008c6419ac842f67ff7c38bce2",
+    "native_extractor.py": "600c4368acebd0f18b533c491118b64dfc74c9bf57a1a81b99a5d2accf1d63f5",
+    "pdf-intake-positioned.yaml": "046cc0b932a113c9cedd543770bf402abccfe1afc465943c74066fb54dc52776",
+    "pyproject.toml": "af7ab07d32ae5806be2e91d37cde794eba7fc8768e78a1af3009f04477e86626",
+    "uv.lock": "de4049919fe35a6cedf4fd4188c6e7d8692516e1c2fc0fb551b7901448f6d4cc",
+    "experiment_source": "4f4d4858998dfb7b718dfcc97bdb400b14904edc9e66c5a8227f284069e9a25a",
+    "comparison_script": "cbabf5f1c8b4c6a47fdc4a51c7a72c7d57c199da8a4b4f8760dac759bb476858"
+  },
+  "dependencies": {
+    "docling-parse": "7.15.0",
+    "pypdfium2": "5.13.0"
+  },
+  "relation_subset_hash": "b3f9d4338df816cb3246ab703c866a959731b81f4e10c571d1ad85fd0647dec0",
+  "policy": "Whitespace-only complete source segment/formal/clause containment, raw/native ordering never repaired for scoring. Every existing annotation segment/requirement/clause retained. Critical phrases enumerate existing labelled verbatim fields; unlocated-in-Gold phrases remain UNMEASURED. Existing 8 positive/1 negative marker relations reused. Font or native heading confidence is not a heading PASS. No acceptance/generalization metric claim."
+}

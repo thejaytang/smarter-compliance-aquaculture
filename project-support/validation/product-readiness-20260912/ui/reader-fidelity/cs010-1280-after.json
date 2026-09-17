@@ -1,0 +1,45 @@
+{
+  "elements": [
+    {
+      "clientHeight": 107,
+      "height": 108,
+      "naturalWidth": 0,
+      "scrollHeight": 107,
+      "selector": "#mw-original-toolbar",
+      "width": 294,
+      "y": 330.796875
+    },
+    {
+      "clientHeight": 268,
+      "height": 268.203125,
+      "naturalWidth": 0,
+      "scrollHeight": 268,
+      "selector": "#mw-reader",
+      "width": 294,
+      "y": 438.796875
+    },
+    {
+      "clientHeight": 242,
+      "height": 241.8046875,
+      "naturalWidth": 0,
+      "scrollHeight": 409,
+      "selector": ".mw-pdf-image-scroll",
+      "width": 294,
+      "y": 438.796875
+    },
+    {
+      "clientHeight": 393,
+      "height": 393.1796875,
+      "naturalWidth": 893,
+      "scrollHeight": 393,
+      "selector": ".mw-pdf-page-image",
+      "width": 278,
+      "y": 446.796875
+    }
+  ],
+  "viewport": {
+    "dpr": 2,
+    "height": 720,
+    "width": 1280
+  }
+}

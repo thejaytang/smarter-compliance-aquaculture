@@ -1,0 +1,12 @@
+{
+  "count": 114,
+  "mismatches": [
+    {
+      "path": "project-support/root-cleanup-20260913/retained/browser-traces/console-2026-09-12T18-16-20-395Z.log",
+      "before": "6be4aeeaff36616922bf702cec1cd32212144aabde3203554451ea747823ffb3",
+      "after": "9c869d7995c3f54107f45c6de38807a6af9e9ce78a9aef38108f0cad65104d51",
+      "bytes_before": 3820065,
+      "bytes_after": 3820509
+    }
+  ]
+}

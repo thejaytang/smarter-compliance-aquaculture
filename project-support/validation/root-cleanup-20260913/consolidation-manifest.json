@@ -1,0 +1,1351 @@
+{
+  "scope": "Root auxiliary documentation and Windows launchers only; business data and component documentation stay owned by their components.",
+  "moves": [
+    {
+      "old": "docs/design/human-led-workbench-goal.md",
+      "new": "project-support/design/human-led-workbench-goal.md",
+      "sha256": "67d3244c0a60d5e55097c810a478a55936b8f914d218995cdc885a1e98a41aff",
+      "bytes": 33844
+    },
+    {
+      "old": "docs/design/decision-boundaries.md",
+      "new": "project-support/design/decision-boundaries.md",
+      "sha256": "b4df09e66bd7102e7192a9deea2e16b128a25a45f1604f56948aa01d816ded29",
+      "bytes": 19954
+    },
+    {
+      "old": "docs/design/requirement-workstream-stage-goal-v2.md",
+      "new": "project-support/design/requirement-workstream-stage-goal-v2.md",
+      "sha256": "98832e9967c2280346390eca649ca1216ca2f7c00eb600d1da4a778ce19aa00c",
+      "bytes": 39759
+    },
+    {
+      "old": "docs/design/offline-human-review.md",
+      "new": "project-support/design/offline-human-review.md",
+      "sha256": "4abc7257dd6e712a8a8bd7bfe1b41fda219491d6c024e405b85302269ec10319",
+      "bytes": 17570
+    },
+    {
+      "old": "docs/design/requirement-workstream-target.md",
+      "new": "project-support/design/requirement-workstream-target.md",
+      "sha256": "356b3835f376bd5e39e05e785845360061025fc8342ff8293b112ab717abb7da",
+      "bytes": 34872
+    },
+    {
+      "old": "docs/design/user-stage-goal-20260910.txt",
+      "new": "project-support/design/user-stage-goal-20260910.txt",
+      "sha256": "27cda9d204a51c2a19541a0cc7ac1a1c6fabe87ed2750a4e4be164214977bc2d",
+      "bytes": 18256
+    },
+    {
+      "old": "docs/design/requirement-workstream-stage-goal-v2.zh.txt",
+      "new": "project-support/design/requirement-workstream-stage-goal-v2.zh.txt",
+      "sha256": "29e83c4d68c281ae512081bacac446c24a10a625afba559ce1659be3a4db42d6",
+      "bytes": 36970
+    },
+    {
+      "old": "docs/design/human-led-workbench-goal-prompt.txt",
+      "new": "project-support/design/human-led-workbench-goal-prompt.txt",
+      "sha256": "66c7f3ce520e4d5774de905edf33787161e75efb873b9749e7337d6eb3b5f3b3",
+      "bytes": 4711
+    },
+    {
+      "old": "docs/design/requirement-workstream-stage-delivery.md",
+      "new": "project-support/design/requirement-workstream-stage-delivery.md",
+      "sha256": "85359fb515eb647ff406f56b2d5846bf79b145a6ac6c9b7957f05ebde9d2d8a4",
+      "bytes": 6200
+    },
+    {
+      "old": "docs/plans/requirement-workstream-improvements.md",
+      "new": "project-support/plans/requirement-workstream-improvements.md",
+      "sha256": "f3f730bd0a65f63bba92da292d5067e7a9f662979d2dd0300b7d6d8d955838e5",
+      "bytes": 5419
+    },
+    {
+      "old": "docs/plans/requirement-workstream-implementation.md",
+      "new": "project-support/plans/requirement-workstream-implementation.md",
+      "sha256": "d51cdb4d7039775927d63c9c37dbb0c03454c1dfade0ccd0768f33f08b2ae9cb",
+      "bytes": 1789
+    },
+    {
+      "old": "docs/plans/offline-human-review.md",
+      "new": "project-support/plans/offline-human-review.md",
+      "sha256": "1fe5f0b67f9ab6ee4e8b7e7e19d81c67f354c42345f8dd91488517016ad34829",
+      "bytes": 1066
+    },
+    {
+      "old": "docs/plans/human-led-workbench.md",
+      "new": "project-support/plans/human-led-workbench.md",
+      "sha256": "5bfaa3f0923594a2f015d262937fce9c2fced5ac6008b5a2528d7208d7e02ab6",
+      "bytes": 2282
+    },
+    {
+      "old": "docs/plans/human-led-workbench-round2.md",
+      "new": "project-support/plans/human-led-workbench-round2.md",
+      "sha256": "8a552ac0796f27b06f700288d357316a7f275fa101086d4cd4934e25998aa7c4",
+      "bytes": 5151
+    },
+    {
+      "old": "docs/plans/requirement-workstream-stage-v2.md",
+      "new": "project-support/plans/requirement-workstream-stage-v2.md",
+      "sha256": "95860bcc4ea2fdb86f245c1ae62b7cc90607a12c1c0152413629556d3bdd8019",
+      "bytes": 16778
+    },
+    {
+      "old": "docs/plans/requirement-workstream-acceptance.md",
+      "new": "project-support/plans/requirement-workstream-acceptance.md",
+      "sha256": "60d557dec2ac045757c959f4773e78a634b90562e530cc52140b573729d9bd17",
+      "bytes": 3951
+    },
+    {
+      "old": "docs/reports/requirement-workstream-functional-delivery-20260910.md",
+      "new": "project-support/reports/requirement-workstream-functional-delivery-20260910.md",
+      "sha256": "4603ba14a55f6fe93f98ff6a20149ac5661b2411110f64e31f0ce11b71574ec6",
+      "bytes": 15682
+    },
+    {
+      "old": "docs/reports/stage-goal-v2-maintenance-evidence.json",
+      "new": "project-support/reports/stage-goal-v2-maintenance-evidence.json",
+      "sha256": "74bb5c64f8ec9dd6814baed7b3c169cabea1c16e1c5e479fefc911211818fd33",
+      "bytes": 2071
+    },
+    {
+      "old": "docs/visuals/system-detail-maps-20260911/system2a.html",
+      "new": "project-support/visuals/system-detail-maps-20260911/system2a.html",
+      "sha256": "c1ac2fe318c423bdaede1dd781e0fdb08aeb987bfc2738934e26ce24c6d6063a",
+      "bytes": 93818
+    },
+    {
+      "old": "docs/visuals/system-detail-maps-20260911/review.html",
+      "new": "project-support/visuals/system-detail-maps-20260911/review.html",
+      "sha256": "ceec422403b9e80dc43a14234eaeff17171fc5aefac363b7ec7bc915e113f36a",
+      "bytes": 2395
+    },
+    {
+      "old": "docs/visuals/system-detail-maps-20260911/system2a-layout.json",
+      "new": "project-support/visuals/system-detail-maps-20260911/system2a-layout.json",
+      "sha256": "c9f954737fb8f9e1cb5f3ddad56a39e27d9b6230378dc219bc0395f83bc4d224",
+      "bytes": 34472
+    },
+    {
+      "old": "docs/visuals/system-detail-maps-20260911/system2b-layout.json",
+      "new": "project-support/visuals/system-detail-maps-20260911/system2b-layout.json",
+      "sha256": "c5a52b27181c16e541006c5733d49ab3d47c592dbb166384ec87b758cd834a20",
+      "bytes": 35572
+    },
+    {
+      "old": "docs/visuals/system-detail-maps-20260911/system1.html",
+      "new": "project-support/visuals/system-detail-maps-20260911/system1.html",
+      "sha256": "f7292a52dc673b4650ef3d55e2824b661d61e1ccc57428afd500d53636c2834c",
+      "bytes": 83277
+    },
+    {
+      "old": "docs/visuals/system-detail-maps-20260911/delivery-note.md",
+      "new": "project-support/visuals/system-detail-maps-20260911/delivery-note.md",
+      "sha256": "d6220cfe52bbd0c7637d01215ddfd3de314d1dd75df7a6e852808c5802c0d97b",
+      "bytes": 3410
+    },
+    {
+      "old": "docs/visuals/system-detail-maps-20260911/system1-layout.json",
+      "new": "project-support/visuals/system-detail-maps-20260911/system1-layout.json",
+      "sha256": "93eabf8ac39289dd7e306a4b621b5227e0666ee288b62991cb7090b8f5beece5",
+      "bytes": 29282
+    },
+    {
+      "old": "docs/visuals/system-detail-maps-20260911/layouts.json",
+      "new": "project-support/visuals/system-detail-maps-20260911/layouts.json",
+      "sha256": "03431f47ca805e27bb75e52b0537e1a5085f6378704fb645eb863c9e40022d07",
+      "bytes": 109728
+    },
+    {
+      "old": "docs/visuals/system-detail-maps-20260911/build_details.py",
+      "new": "project-support/visuals/system-detail-maps-20260911/build_details.py",
+      "sha256": "699fc50c065719d0c7e91c4a36152d72219cb2f831f671784fd183de5ddc6e30",
+      "bytes": 40036
+    },
+    {
+      "old": "docs/visuals/system-detail-maps-20260911/system2b.html",
+      "new": "project-support/visuals/system-detail-maps-20260911/system2b.html",
+      "sha256": "9c08ddac62cffd2a8c5ee222395a92194847d2ce931422bc62b2d37df1124517",
+      "bytes": 97529
+    },
+    {
+      "old": "docs/visuals/system-detail-maps-20260911/geometry-check.json",
+      "new": "project-support/visuals/system-detail-maps-20260911/geometry-check.json",
+      "sha256": "1ea8134d33a8996bdb2272ed5737e1e5261c2160e6219ec0fa4cce011ac33744",
+      "bytes": 304
+    },
+    {
+      "old": "docs/visuals/requirement-workstream-map-20260911/architecture-map.html",
+      "new": "project-support/visuals/requirement-workstream-map-20260911/architecture-map.html",
+      "sha256": "2d9ed6d9c8a996e09eb5395e6d5bb753194d102f1787155f3f3759d5cc3d231f",
+      "bytes": 127001
+    },
+    {
+      "old": "docs/visuals/requirement-workstream-map-20260911/review.html",
+      "new": "project-support/visuals/requirement-workstream-map-20260911/review.html",
+      "sha256": "e8e334790071cdb92332b7c67c14770916785c28a576741e8e553c769cb3fcbc",
+      "bytes": 130486
+    },
+    {
+      "old": "docs/visuals/requirement-workstream-map-20260911/build_map.py",
+      "new": "project-support/visuals/requirement-workstream-map-20260911/build_map.py",
+      "sha256": "019f0b2230570f8a9d004c27526d04d7e60fa8f52182d891b171f34975f81ca9",
+      "bytes": 27902
+    },
+    {
+      "old": "docs/visuals/requirement-workstream-map-20260911/delivery-note.md",
+      "new": "project-support/visuals/requirement-workstream-map-20260911/delivery-note.md",
+      "sha256": "fb33d3d8a53535f1add03e3c3c895ad224ea42a13ffeb274c9f20b31d5854ede",
+      "bytes": 5126
+    },
+    {
+      "old": "docs/visuals/requirement-workstream-map-20260911/canva-text-readback.json",
+      "new": "project-support/visuals/requirement-workstream-map-20260911/canva-text-readback.json",
+      "sha256": "830c84cfdcf4953ad16880dc106185d29e4d3cdb2d2bbcc501bb3769a46822bb",
+      "bytes": 16095
+    },
+    {
+      "old": "docs/visuals/requirement-workstream-map-20260911/layout.json",
+      "new": "project-support/visuals/requirement-workstream-map-20260911/layout.json",
+      "sha256": "a41d4de0547ab85a9b886303d586c32227befba365d41e911f0e65e31a957012",
+      "bytes": 10530
+    },
+    {
+      "old": "docs/visuals/requirement-workstream-map-20260911/canva-delivery.json",
+      "new": "project-support/visuals/requirement-workstream-map-20260911/canva-delivery.json",
+      "sha256": "4c22cdf43c6b171b20b434efaac63264d2c00a4af8668b3fdc10b1a85d70d4c1",
+      "bytes": 772
+    },
+    {
+      "old": "docs/visuals/requirement-workstream-map-20260911/quality-check.json",
+      "new": "project-support/visuals/requirement-workstream-map-20260911/quality-check.json",
+      "sha256": "8a7b56e5a18c8ceba941d55acd4c96e66eb0544267b010d57182feacd2bc2d95",
+      "bytes": 1261
+    },
+    {
+      "old": "docs/reports/human-led-workbench-20260911/normal-loaded.json",
+      "new": "project-support/reports/human-led-workbench-20260911/normal-loaded.json",
+      "sha256": "d6f21c5ffb9f5a476545ce379d4d113f496b632a3da702282c0af5306cee0845",
+      "bytes": 15444
+    },
+    {
+      "old": "docs/reports/human-led-workbench-20260911/source-version-change.json",
+      "new": "project-support/reports/human-led-workbench-20260911/source-version-change.json",
+      "sha256": "1d15bf53b572da5a06b48be90c82a2ac3799addf9c006c3f5edc068173a8a05d",
+      "bytes": 27289
+    },
+    {
+      "old": "docs/reports/human-led-workbench-20260911/preservation.json",
+      "new": "project-support/reports/human-led-workbench-20260911/preservation.json",
+      "sha256": "3d07f6d57672bf4040e62f75ca72f41cf01ae2e6ffc5e28ef1eca9f8d084a4fb",
+      "bytes": 1024
+    },
+    {
+      "old": "docs/reports/human-led-workbench-20260911/normal-before-load.json",
+      "new": "project-support/reports/human-led-workbench-20260911/normal-before-load.json",
+      "sha256": "fdd343b9d212c081dc067d5ba87934eca9812416230faedb27cd0a0e284f83aa",
+      "bytes": 2945
+    },
+    {
+      "old": "docs/reports/human-led-workbench-20260911/browser-evidence.json",
+      "new": "project-support/reports/human-led-workbench-20260911/browser-evidence.json",
+      "sha256": "ad9485cd531fc6dafce5689698a0178fe4668ff87ecdb0477a433cd58857dc52",
+      "bytes": 5956
+    },
+    {
+      "old": "docs/reports/human-led-workbench-20260911/isolated-before-restart.json",
+      "new": "project-support/reports/human-led-workbench-20260911/isolated-before-restart.json",
+      "sha256": "0cbdbfed537a401ba845e911389c7f44ca61a59976e8badc8949a9f30ca39a8f",
+      "bytes": 311760
+    },
+    {
+      "old": "docs/reports/human-led-workbench-20260911/restart-and-history.json",
+      "new": "project-support/reports/human-led-workbench-20260911/restart-and-history.json",
+      "sha256": "b3a446501e0e67b4be946676778ffe763f78470e85d1313e81fdeeddd90700d1",
+      "bytes": 4811
+    },
+    {
+      "old": "docs/reports/human-led-workbench-20260911/concurrent-session-save.json",
+      "new": "project-support/reports/human-led-workbench-20260911/concurrent-session-save.json",
+      "sha256": "c0afccfcc2269864a8dc52a89b532b83b76dfdeee47ba073bc52753c8e1fff1b",
+      "bytes": 3242
+    },
+    {
+      "old": "docs/reports/human-led-workbench-20260911/javascript-tests.tap",
+      "new": "project-support/reports/human-led-workbench-20260911/javascript-tests.tap",
+      "sha256": "14b1256fd1e9143aa8dbca8411ea424929c7b24493aaaf79178e0cea4788f427",
+      "bytes": 11360
+    },
+    {
+      "old": "docs/reports/human-led-workbench-20260911/test-evidence.json",
+      "new": "project-support/reports/human-led-workbench-20260911/test-evidence.json",
+      "sha256": "03095f5fe64d32336a6eb19b4b7237487938d917caa09505d569e64a25c491ac",
+      "bytes": 993
+    },
+    {
+      "old": "docs/reports/human-led-workbench-20260911/acceptance.md",
+      "new": "project-support/reports/human-led-workbench-20260911/acceptance.md",
+      "sha256": "566303a07ab0cf4366937fe762654d52a12a24cb08d0052032bbe40fe1734a61",
+      "bytes": 10562
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/restored-service-probe-v2.log",
+      "new": "project-support/reports/offline-collaboration-20260912/restored-service-probe-v2.log",
+      "sha256": "833b0a75bea71e62b532421156c3ac2cd9e39ca486bf3a3f413314737e2b87db",
+      "bytes": 2522
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/navigation-tests.tap",
+      "new": "project-support/reports/offline-collaboration-20260912/navigation-tests.tap",
+      "sha256": "8c0da1e46beb1f7a0cb5ff9aa8ef51ea5e811345120a9689f527d36bb97e598c",
+      "bytes": 22147
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/workflow-ui-tests.tap",
+      "new": "project-support/reports/offline-collaboration-20260912/workflow-ui-tests.tap",
+      "sha256": "2ae2c26132d54714b1efe968e5a7590bcad7ecdb294b642aa6e6932959af06da",
+      "bytes": 23437
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-reviewer-code-pre-freeze-a0588478016f.zip",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-reviewer-code-pre-freeze-a0588478016f.zip",
+      "sha256": "a0588478016f5b2ddad19aa6830c76b90a99eaed7e6ab15ee1e78f3f8af564d1",
+      "bytes": 1277454
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-workflow-fixtures.zip",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-workflow-fixtures.zip",
+      "sha256": "8065400257fa28b120c955ff6f4569d88ea027df0b2db66dca385e5ed1fba1d6",
+      "bytes": 23837
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/workflow-source-tests.log",
+      "new": "project-support/reports/offline-collaboration-20260912/workflow-source-tests.log",
+      "sha256": "3a707c196c5ea3e76195eac6afa205a74c65141248f7ab5a4b29f823e18f025a",
+      "bytes": 1932
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/restored-service-evidence.json",
+      "new": "project-support/reports/offline-collaboration-20260912/restored-service-evidence.json",
+      "sha256": "e356b33cf1170c6be1fdb23effb3005e9c47a999da90be20ba51c47b3e4df376",
+      "bytes": 2943
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-reviewer-code-before-names-2d9996d62962.zip",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-reviewer-code-before-names-2d9996d62962.zip",
+      "sha256": "2d9996d629620cda6e175fe2eefda462ba2063e0635bafb88563e405ad310962",
+      "bytes": 1306921
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/workflow-final-runtime-status.json",
+      "new": "project-support/reports/offline-collaboration-20260912/workflow-final-runtime-status.json",
+      "sha256": "e55edac0e8e0c5813856fc8a21e46e20bae1b6b1aacbc9c99d010026b2c09298",
+      "bytes": 2943
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-reviewer-code-before-names-2d9996d62962.inventory.json",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-reviewer-code-before-names-2d9996d62962.inventory.json",
+      "sha256": "58da406d6dc8d171765bb8a5612dc381cf6d777741149188ea93b4683779ec54",
+      "bytes": 59607
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/edge-cases.json",
+      "new": "project-support/reports/offline-collaboration-20260912/edge-cases.json",
+      "sha256": "266672f85edd696b17ac29e822adc4dad630d1638470ebdf8e70f298d96e0c5a",
+      "bytes": 10646
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-work-packages.json",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-work-packages.json",
+      "sha256": "64350dfa69751209fc92562653c6d51de010afab32acf7a424745ce21ff00176",
+      "bytes": 811
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/normal-browser-load.json",
+      "new": "project-support/reports/offline-collaboration-20260912/normal-browser-load.json",
+      "sha256": "820fa01a7b2a7493c938b2c13840a8785fcd5b5bf8b5b08e510fce5c65d2bd84",
+      "bytes": 1223
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/exchange-safety-tests.log",
+      "new": "project-support/reports/offline-collaboration-20260912/exchange-safety-tests.log",
+      "sha256": "a78b8c4a3f9eaa996224446b3324927be22e45e531b6936d3d9178ea9dde38c1",
+      "bytes": 957
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/workflow-browser-services.json",
+      "new": "project-support/reports/offline-collaboration-20260912/workflow-browser-services.json",
+      "sha256": "af9329d9872daf1d1653dfbb3a27162add9aee91fd4ce65d60bb9add2fb5f2ec",
+      "bytes": 470
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/workflow-browser.json",
+      "new": "project-support/reports/offline-collaboration-20260912/workflow-browser.json",
+      "sha256": "1763ee5bb1810a07dc7127be7e17f991a85a968b4f2127d9c25ea14597304c89",
+      "bytes": 1632
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/reviewer-runtime-observation.json",
+      "new": "project-support/reports/offline-collaboration-20260912/reviewer-runtime-observation.json",
+      "sha256": "819a8aa9a1027204aeb5308855507d6364f89dc1b791eefab30dac9276da66f1",
+      "bytes": 3003
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-code-verification-before-names-2d9996d62962.json",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-code-verification-before-names-2d9996d62962.json",
+      "sha256": "caf72090fa191f27c35768a78eba19692d2cc58796e699ae4a6942ef8c791c86",
+      "bytes": 549
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/workflow-correction.json",
+      "new": "project-support/reports/offline-collaboration-20260912/workflow-correction.json",
+      "sha256": "3a963285dc6e0ef96abd5a0e9c6b30ddf6250f89bfe222ce644df56d6f251ad2",
+      "bytes": 1142
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/restored-service-probe.log",
+      "new": "project-support/reports/offline-collaboration-20260912/restored-service-probe.log",
+      "sha256": "8cc80df64135477159d85e9ffec95596b433d25f797183bd37954ea7f8bd35a5",
+      "bytes": 1855
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/edge-cases.log",
+      "new": "project-support/reports/offline-collaboration-20260912/edge-cases.log",
+      "sha256": "6341931eaf32a36deec449ef0ac202afb5f9ab284800469dcfb1b397c7df83ff",
+      "bytes": 9309
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/machine-cases.json",
+      "new": "project-support/reports/offline-collaboration-20260912/machine-cases.json",
+      "sha256": "bd85da49e2ba778ee424804cb3a7e59e17d7f70d872bfc0c5e7f54be7f1bd8a2",
+      "bytes": 568
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/workbench-portability-integration-tests.log",
+      "new": "project-support/reports/offline-collaboration-20260912/workbench-portability-integration-tests.log",
+      "sha256": "a30fadf8c40fc4f0f7f5751f646ae94213d7802cfb4d87ea1dc882f6df85b749",
+      "bytes": 410
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-reviewer-code-before-archive-focus-896e2bb844b4.zip",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-reviewer-code-before-archive-focus-896e2bb844b4.zip",
+      "sha256": "896e2bb844b41fe19a8ab0fa8586e827356171b3df98a2fb1a94b1c5e86946d0",
+      "bytes": 1293060
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/machine-cases-final.log",
+      "new": "project-support/reports/offline-collaboration-20260912/machine-cases-final.log",
+      "sha256": "65f31102a8d52974bebefdba04cf4ab285b2ee2ab0a88f5688e1c1ae36677c63",
+      "bytes": 569
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/archive-inspection.json",
+      "new": "project-support/reports/offline-collaboration-20260912/archive-inspection.json",
+      "sha256": "a96bc52f7627612b529176bf169780ff224e01ed1765d4714ef15ec34b9373d9",
+      "bytes": 917
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-reviewer-code-before-navigation-c77baecd1a6f.zip",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-reviewer-code-before-navigation-c77baecd1a6f.zip",
+      "sha256": "c77baecd1a6f9dcb67d74f60c0c23d6d14e8db60b3acecaa652cb00026fc4929",
+      "bytes": 1293156
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-reviewer-code.inventory.json",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-reviewer-code.inventory.json",
+      "sha256": "b96a43e9d9e391ba086c88ca611fac01543aed1a66a722df9c63c65980199649",
+      "bytes": 61875
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/archive-focus-browser.json",
+      "new": "project-support/reports/offline-collaboration-20260912/archive-focus-browser.json",
+      "sha256": "1f3733e5bf51d19c04168b9250d8e27a62e2c62da4476a9b7deea6c337a77492",
+      "bytes": 2313
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-reviewer-code-before-navigation-c77baecd1a6f.inventory.json",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-reviewer-code-before-navigation-c77baecd1a6f.inventory.json",
+      "sha256": "0f45b3cbbf1395bb1392d03f113eb8331e0352c8e174d2647f083af96bef7b33",
+      "bytes": 59825
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-reviewer-code-before-mapped-read-aac5a4025bf3.zip",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-reviewer-code-before-mapped-read-aac5a4025bf3.zip",
+      "sha256": "aac5a4025bf395f401a6b5d13b70bb2e140c1011aacb72fcc72573c0080bf584",
+      "bytes": 1368439
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/edge-cases-final.log",
+      "new": "project-support/reports/offline-collaboration-20260912/edge-cases-final.log",
+      "sha256": "55a13f60cb4f3e9830af21c1220d342fdd386109819ea633efd4cf92270c477d",
+      "bytes": 9315
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/frontend-tests.tap",
+      "new": "project-support/reports/offline-collaboration-20260912/frontend-tests.tap",
+      "sha256": "e4a45fa55619d3740f7e59c0d5d1a94186fea227a58817939f5e04051524d738",
+      "bytes": 21903
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/portability-evidence.json",
+      "new": "project-support/reports/offline-collaboration-20260912/portability-evidence.json",
+      "sha256": "c905902bc7eeaf24e33ebbec90bb2c9805bb4a0d2c9d7fb1d8ca11dfee1d63ad",
+      "bytes": 2760
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-reviewer-code-before-workflow-e60fdd770ab0.inventory.json",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-reviewer-code-before-workflow-e60fdd770ab0.inventory.json",
+      "sha256": "bb2948ce5e8aea3a3eeb4cf1ef99f48c4de5eff86bff4c378f85d2d95f74c190",
+      "bytes": 59607
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-reviewer-code-intermediate-caab8dafdaa5.inventory.json",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-reviewer-code-intermediate-caab8dafdaa5.inventory.json",
+      "sha256": "f780742cb8f445555d8062ad7815bc7df3b2c61593c9cbf6d2b26541630bd087",
+      "bytes": 59810
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-reviewer-code-before-workflow-e60fdd770ab0.zip",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-reviewer-code-before-workflow-e60fdd770ab0.zip",
+      "sha256": "e60fdd770ab075e5332d8621a9ffb749802bfd7888b348edbef057cf88516177",
+      "bytes": 1307256
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-reviewer-code-before-mapped-read-aac5a4025bf3.inventory.json",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-reviewer-code-before-mapped-read-aac5a4025bf3.inventory.json",
+      "sha256": "4362af09780c13bc4a12ccff397c7ea4e9b253fd8d500c836a0f42bc570d47c3",
+      "bytes": 61875
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-reviewer-code-before-backup-diagnostic-1443d5aae92d.zip",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-reviewer-code-before-backup-diagnostic-1443d5aae92d.zip",
+      "sha256": "1443d5aae92de9c8f930587d50ffa3c4d2a8ac657339e23a5f4fdcb27191401b",
+      "bytes": 1368385
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/recovery-tests.log",
+      "new": "project-support/reports/offline-collaboration-20260912/recovery-tests.log",
+      "sha256": "d1bbd274d8e9b224170f9919ec79b8bebc78cf002f013b9c4301ebfdd03fa443",
+      "bytes": 1587
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/material-http-tests.log",
+      "new": "project-support/reports/offline-collaboration-20260912/material-http-tests.log",
+      "sha256": "f52d38caf766c3f79fec274cf6021fdb52c4673d072a54f535bec45cd1ccbf43",
+      "bytes": 1606
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/workflow-normal-runtime.json",
+      "new": "project-support/reports/offline-collaboration-20260912/workflow-normal-runtime.json",
+      "sha256": "aab79fc249bb5e6a797ac338e4416191fad21aa1caced1df2dc1ba41180089ef",
+      "bytes": 9674
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/workflow-service-tests.log",
+      "new": "project-support/reports/offline-collaboration-20260912/workflow-service-tests.log",
+      "sha256": "b28e599194e8e64702d5bb24f26a64d88c880741bc1d82424b4c9e3beef113e2",
+      "bytes": 433
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/archive-focus-runtime.json",
+      "new": "project-support/reports/offline-collaboration-20260912/archive-focus-runtime.json",
+      "sha256": "e6ad6edf14525f098529902635c8db75d6fb2d045b18baee5609de25ba326239",
+      "bytes": 6749
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-reviewer-code-intermediate-caab8dafdaa5.zip",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-reviewer-code-intermediate-caab8dafdaa5.zip",
+      "sha256": "caab8dafdaa5c750b9f5d109d73a73078bef30e103c755bbc385c13e0b3206f3",
+      "bytes": 1292907
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-review-work-TS003.zip",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-review-work-TS003.zip",
+      "sha256": "2ad42f48f77d89ccb88fa032f85d99f02201e7f631a2e8215dd46ddcd0dad155",
+      "bytes": 6284
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/normal-runtime.json",
+      "new": "project-support/reports/offline-collaboration-20260912/normal-runtime.json",
+      "sha256": "c45de87575a119e1c90993f1eef43f370cf4a4a5195f3c8146a9f51c16e8fb46",
+      "bytes": 3704
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/workflow-acceptance.md",
+      "new": "project-support/reports/offline-collaboration-20260912/workflow-acceptance.md",
+      "sha256": "d3c5d39a9102afc192fe1a195af7a564f69ad84e188be3e928b253a77b5779b0",
+      "bytes": 8071
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-code-verification-before-workflow-e60fdd770ab0.json",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-code-verification-before-workflow-e60fdd770ab0.json",
+      "sha256": "36a81d6a79c4d167221b0b0e0536dd2447406bd05587b82ede0b17030a314f6b",
+      "bytes": 526
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/platform-smoke.json",
+      "new": "project-support/reports/offline-collaboration-20260912/platform-smoke.json",
+      "sha256": "11966529015dd8a2a11f8a43d5be32f2e216ffdbed9018a5e55f6572b757a767",
+      "bytes": 619
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/archive-focus-preservation.json",
+      "new": "project-support/reports/offline-collaboration-20260912/archive-focus-preservation.json",
+      "sha256": "a43cbc688451972778efeab768a742def6e5d77782e43afbc3b70f8f069be9e4",
+      "bytes": 284
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-code-verification-before-archive-focus-896e2bb844b4.json",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-code-verification-before-archive-focus-896e2bb844b4.json",
+      "sha256": "2395206fe8c9acfd091fcfa4481e7f077d7f370984042319193a357663c1ffd1",
+      "bytes": 488
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-review-work-TS002.zip",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-review-work-TS002.zip",
+      "sha256": "fb74532beb1dd7a229603644884fd86d44e9ab2c979ab8ec64c14e2e01b78485",
+      "bytes": 7065
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/browser-evidence.json",
+      "new": "project-support/reports/offline-collaboration-20260912/browser-evidence.json",
+      "sha256": "36370a1c13cc2531d5f09fd01235628e247e17d459903b920ab55d0a720fc59d",
+      "bytes": 7640
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/navigation-browser.json",
+      "new": "project-support/reports/offline-collaboration-20260912/navigation-browser.json",
+      "sha256": "5bdef3b550d88e0c84341ab0332e223a7451acd6978aebbec3c9b88b5a7fb37e",
+      "bytes": 902
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-code-verification-before-navigation-c77baecd1a6f.json",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-code-verification-before-navigation-c77baecd1a6f.json",
+      "sha256": "3762819a29558239ddab024beeb77e14af87049bdaa688dbf3e323c36e40c974",
+      "bytes": 405
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-reviewer-code-pre-freeze-a0588478016f.inventory.json",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-reviewer-code-pre-freeze-a0588478016f.inventory.json",
+      "sha256": "41342761dfa8e9e4795776e6caca45d2b8d64015bda51047e1ae635703665934",
+      "bytes": 58288
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/display-names-tests.tap",
+      "new": "project-support/reports/offline-collaboration-20260912/display-names-tests.tap",
+      "sha256": "90eb4f5f366a4afd90b472a43b4ebdf9d76e2c89a7bc2643422716fbae6ead3d",
+      "bytes": 22822
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/workflow-material-tests.log",
+      "new": "project-support/reports/offline-collaboration-20260912/workflow-material-tests.log",
+      "sha256": "a4195c5e7b1cd3cf8245ff52175a9beabe0b85262837e21dc3f91e1e431bebff",
+      "bytes": 160
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-review-work-TS001.zip",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-review-work-TS001.zip",
+      "sha256": "1a2a26c9a39fca34e120a67ef8ecbaa6b34d3a24b2db900d80b4289bf4d374af",
+      "bytes": 4976
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-workflow-fixtures.json",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-workflow-fixtures.json",
+      "sha256": "bd8792f441eb65eeb2e76c403d28a656132df88530a58eaa4d92f2e0a0d4e14f",
+      "bytes": 825
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/ui-ux-review.md",
+      "new": "project-support/reports/offline-collaboration-20260912/ui-ux-review.md",
+      "sha256": "4c38dd05457fc76002edad9dcd91f1919328bab541f7cca6e3ba0202f79d0430",
+      "bytes": 5969
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-reviewer-code-before-backup-diagnostic-1443d5aae92d.inventory.json",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-reviewer-code-before-backup-diagnostic-1443d5aae92d.inventory.json",
+      "sha256": "c9f41d0cb84e9d4e995893455cb44fb1955f485182610ce525fbf17509b7a7b3",
+      "bytes": 61875
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-code-independent-verification.json",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-code-independent-verification.json",
+      "sha256": "c1e29ee875b42a8720ae621cd2f489eeffbaf35874e30469bd97ae0178a5b300",
+      "bytes": 292
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/normal-browser-requests.txt",
+      "new": "project-support/reports/offline-collaboration-20260912/normal-browser-requests.txt",
+      "sha256": "171b48800889c5c73c141c7dec6ae1316b2cba9eaa523680925a7713518e7f9f",
+      "bytes": 3509
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-reviewer-code-before-archive-focus-896e2bb844b4.inventory.json",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-reviewer-code-before-archive-focus-896e2bb844b4.inventory.json",
+      "sha256": "2dc663405dfc3ffaacf4d62f85f818ba5ade20c148d7c2c1aecbb5a2c83b0ed3",
+      "bytes": 58955
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/workflow-preservation.json",
+      "new": "project-support/reports/offline-collaboration-20260912/workflow-preservation.json",
+      "sha256": "9dcb4d5304d1be498593888e7fd084bb85eec70404ab3a7d2c9d9c61b07df29b",
+      "bytes": 891
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/archive-service-tests.log",
+      "new": "project-support/reports/offline-collaboration-20260912/archive-service-tests.log",
+      "sha256": "1389207515952dfe1654ed97fff0776f541ddad92cbffec191ee615d6954aebd",
+      "bytes": 424
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/workbench-final-tests.log",
+      "new": "project-support/reports/offline-collaboration-20260912/workbench-final-tests.log",
+      "sha256": "2ff298bd0bc223dac60616d18c5a2cc5648151bd9078946c20d0cb9c2b67aad0",
+      "bytes": 318
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/reviewer-http-tests.log",
+      "new": "project-support/reports/offline-collaboration-20260912/reviewer-http-tests.log",
+      "sha256": "76bf467a3de21ed67bab9dcb04ed73dcd7c551328a43e8e99981a33c50a6eaa5",
+      "bytes": 590
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-workflow-code-verification.json",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-workflow-code-verification.json",
+      "sha256": "c1e29ee875b42a8720ae621cd2f489eeffbaf35874e30469bd97ae0178a5b300",
+      "bytes": 292
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/archive-browser-service.json",
+      "new": "project-support/reports/offline-collaboration-20260912/archive-browser-service.json",
+      "sha256": "549d6834b915415ef14a54383d1b26b66011ff8b2f48a6706fe659fad56c6c75",
+      "bytes": 219
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/windows-reviewer-code.zip",
+      "new": "project-support/reports/offline-collaboration-20260912/windows-reviewer-code.zip",
+      "sha256": "fba105d5711a7106889b0c73287a85f083582f9bef28c799bd3510d1fd8ef422",
+      "bytes": 1368878
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/archive-ui-tests.tap",
+      "new": "project-support/reports/offline-collaboration-20260912/archive-ui-tests.tap",
+      "sha256": "618455bd6c24563f07f879680755c06d609bee26e0be53b9f9dfbb4227be70cb",
+      "bytes": 22831
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/acceptance.md",
+      "new": "project-support/reports/offline-collaboration-20260912/acceptance.md",
+      "sha256": "ac2744362fa1d0bddd73de8b1c4760eb6b7b2988c2870a3661c611f8032b82ba",
+      "bytes": 7695
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/platform-tests.log",
+      "new": "project-support/reports/offline-collaboration-20260912/platform-tests.log",
+      "sha256": "4f0377ce10fc903e13692000a99279b91d531596dfe985ca425a071abd2e620a",
+      "bytes": 1084
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/system2-platform-tests.log",
+      "new": "project-support/reports/offline-collaboration-20260912/system2-platform-tests.log",
+      "sha256": "11faa3a2862b12f02ec479665dd82ca891e848a2cae9b2e23c130a4a89adfe8a",
+      "bytes": 663
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/normal-preservation.json",
+      "new": "project-support/reports/offline-collaboration-20260912/normal-preservation.json",
+      "sha256": "b71fdc969183ef15734a431d3728ae38bf593c0f59b93fda98d56981f4398250",
+      "bytes": 586
+    },
+    {
+      "old": "docs/reports/offline-collaboration-20260912/ui-detector.json",
+      "new": "project-support/reports/offline-collaboration-20260912/ui-detector.json",
+      "sha256": "b1b141f52a83a3998b37a0143a91ab8a1468e2cbbc4791e32a299068ef228be8",
+      "bytes": 3444
+    },
+    {
+      "old": "docs/reports/human-led-round2-20260911/parent-allocation-snapshots.jsonl",
+      "new": "project-support/reports/human-led-round2-20260911/parent-allocation-snapshots.jsonl",
+      "sha256": "7e03e076ce6d5a313b7c5c07598f3e5deb106121cbe7a8ded7fc67f12ac32ecd",
+      "bytes": 46867
+    },
+    {
+      "old": "docs/reports/human-led-round2-20260911/large-table-ui-readback.json",
+      "new": "project-support/reports/human-led-round2-20260911/large-table-ui-readback.json",
+      "sha256": "5566e782c6888c8454218685ae84cbeafbce54546f699c2c89d26c3188a2f5ba",
+      "bytes": 377
+    },
+    {
+      "old": "docs/reports/human-led-round2-20260911/reader-baseline.json",
+      "new": "project-support/reports/human-led-round2-20260911/reader-baseline.json",
+      "sha256": "7022d2461bfa3059a4b52e49aa4cc8242ae4085015e0b269894b48c42ef512e8",
+      "bytes": 328
+    },
+    {
+      "old": "docs/reports/human-led-round2-20260911/normal-browser-evidence.json",
+      "new": "project-support/reports/human-led-round2-20260911/normal-browser-evidence.json",
+      "sha256": "2e7c79c8cd94e28fe05b2dba25b18c359c12ab6e65f85c08725c322fbc201ee1",
+      "bytes": 4245
+    },
+    {
+      "old": "docs/reports/human-led-round2-20260911/normal-load.json",
+      "new": "project-support/reports/human-led-round2-20260911/normal-load.json",
+      "sha256": "ad49372bd2721f8f1d56e79dd0312316b0d895cfd5a4728e488fe16b56eb8f9d",
+      "bytes": 11883
+    },
+    {
+      "old": "docs/reports/human-led-round2-20260911/http-allocation-diagnosis.json",
+      "new": "project-support/reports/human-led-round2-20260911/http-allocation-diagnosis.json",
+      "sha256": "0efa28ab4997bfab027c196df445140d29dbdf84bc193762d077f5ea862a4bad",
+      "bytes": 49249
+    },
+    {
+      "old": "docs/reports/human-led-round2-20260911/fault-evidence.json",
+      "new": "project-support/reports/human-led-round2-20260911/fault-evidence.json",
+      "sha256": "982c2cd13d58bf70e701c853b2584c05e60c8af77a71d534d060b87b51f74d99",
+      "bytes": 8105
+    },
+    {
+      "old": "docs/reports/human-led-round2-20260911/parent-memory-diagnosis.json",
+      "new": "project-support/reports/human-led-round2-20260911/parent-memory-diagnosis.json",
+      "sha256": "1c3d76fe72da2442c1bf54aa40ee0dc4d5a3928cf2f196ef8f7998e1ffcc9e61",
+      "bytes": 4030
+    },
+    {
+      "old": "docs/reports/human-led-round2-20260911/previous-system2-state.md",
+      "new": "project-support/reports/human-led-round2-20260911/previous-system2-state.md",
+      "sha256": "c2183cfc6a57a169ad5701678a69ab22fe1216415771c5836886f2d238142666",
+      "bytes": 99141
+    },
+    {
+      "old": "docs/reports/human-led-round2-20260911/isolated-shutdown.json",
+      "new": "project-support/reports/human-led-round2-20260911/isolated-shutdown.json",
+      "sha256": "f1a7b88fd0bdf4c4cd899a41833740d2f0d9b33cfd4901127bd0f099a6d220e6",
+      "bytes": 229
+    },
+    {
+      "old": "docs/reports/human-led-round2-20260911/memory-diagnosis.md",
+      "new": "project-support/reports/human-led-round2-20260911/memory-diagnosis.md",
+      "sha256": "43298590d844a93eab3d17b10cbde9cbd6e646df135d653acd6a51b4307c4f9a",
+      "bytes": 3911
+    },
+    {
+      "old": "docs/reports/human-led-round2-20260911/soak.jsonl",
+      "new": "project-support/reports/human-led-round2-20260911/soak.jsonl",
+      "sha256": "da120f838690e7d68903a70a715e7634b14f44e9bca96e72bfa571b83647362c",
+      "bytes": 24094
+    },
+    {
+      "old": "docs/reports/human-led-round2-20260911/previous-integration-state.md",
+      "new": "project-support/reports/human-led-round2-20260911/previous-integration-state.md",
+      "sha256": "9a0f15b8319ce2f513393443d83b98b11ea5a4ae24d6dcb70bc7eb36cd0b605b",
+      "bytes": 53406
+    },
+    {
+      "old": "docs/reports/human-led-round2-20260911/reader-v6-cold-and-repeat.json",
+      "new": "project-support/reports/human-led-round2-20260911/reader-v6-cold-and-repeat.json",
+      "sha256": "cbe62a77050df9e8b1f15cdadb790cd04043559481b4f602b4d70ba967c34220",
+      "bytes": 4649
+    },
+    {
+      "old": "docs/reports/human-led-round2-20260911/previous-workbench-state.md",
+      "new": "project-support/reports/human-led-round2-20260911/previous-workbench-state.md",
+      "sha256": "34406916d6b44168c9b4bb432c6f67d1f74497e9d4a3696b29c00bbaf1c7adc1",
+      "bytes": 57409
+    },
+    {
+      "old": "docs/reports/human-led-round2-20260911/soak-result.json",
+      "new": "project-support/reports/human-led-round2-20260911/soak-result.json",
+      "sha256": "0a4ff4ad7ec3f8cec94eadbe3fe682d2d32b376d48119b564490f1fe76e9b0d1",
+      "bytes": 140
+    },
+    {
+      "old": "docs/reports/human-led-round2-20260911/performance.json",
+      "new": "project-support/reports/human-led-round2-20260911/performance.json",
+      "sha256": "903879dd88f1e322b0db4cca1b979cb3893ca6c6bcf022f8b284af38b57edb1c",
+      "bytes": 6560
+    },
+    {
+      "old": "docs/reports/human-led-round2-20260911/http-pool-fixed-diagnosis.json",
+      "new": "project-support/reports/human-led-round2-20260911/http-pool-fixed-diagnosis.json",
+      "sha256": "39e6c48cc5b95188f5e1d9ea07b509f52096cfbf1192eda25a5c77b8ad2d9ca3",
+      "bytes": 12395
+    },
+    {
+      "old": "docs/reports/human-led-round2-20260911/large-read-current-memory.json",
+      "new": "project-support/reports/human-led-round2-20260911/large-read-current-memory.json",
+      "sha256": "98748a1b4915e452467b6bf4c288f7bc129f1e06d1f30c67c9dd74e2f68bad9b",
+      "bytes": 4840
+    },
+    {
+      "old": "docs/reports/human-led-round2-20260911/large-read-resource-series.json",
+      "new": "project-support/reports/human-led-round2-20260911/large-read-resource-series.json",
+      "sha256": "22a8cdbd8663ac317c30a2c20690273890ee197fe83e957005dbc5e7ea7ab2f1",
+      "bytes": 3044
+    },
+    {
+      "old": "docs/reports/human-led-round2-20260911/browser-evidence.json",
+      "new": "project-support/reports/human-led-round2-20260911/browser-evidence.json",
+      "sha256": "dd7e6e1f04ad87556ed34ba10d252088f4c5d4664c4064d06a3c26de694445c4",
+      "bytes": 17740
+    },
+    {
+      "old": "docs/reports/human-led-round2-20260911/javascript-tests.tap",
+      "new": "project-support/reports/human-led-round2-20260911/javascript-tests.tap",
+      "sha256": "f19e0235f2a56d3d60686d40d18c44833ccf5dfab9b3633bd05a64f47177400a",
+      "bytes": 16812
+    },
+    {
+      "old": "docs/reports/human-led-round2-20260911/adapter-memory-diagnosis.json",
+      "new": "project-support/reports/human-led-round2-20260911/adapter-memory-diagnosis.json",
+      "sha256": "07c4dab2e27fa584bd76d7191dc9cfb1d414a1b8cfbdc38a3323feb4fe608e20",
+      "bytes": 4238
+    },
+    {
+      "old": "docs/reports/human-led-round2-20260911/documentation-check.json",
+      "new": "project-support/reports/human-led-round2-20260911/documentation-check.json",
+      "sha256": "9e47177c7138726bebd8687fd38a749c24f70573861424196b3173f149f8d184",
+      "bytes": 137
+    },
+    {
+      "old": "docs/reports/human-led-round2-20260911/acceptance.md",
+      "new": "project-support/reports/human-led-round2-20260911/acceptance.md",
+      "sha256": "4cc94d1506600f3c26fa8dc849fada8bf0080e3a92aab79ffcaa08917bc1b07b",
+      "bytes": 11621
+    },
+    {
+      "old": "docs/reports/human-led-round2-20260911/normal-preservation.json",
+      "new": "project-support/reports/human-led-round2-20260911/normal-preservation.json",
+      "sha256": "f32c1cf497c69fedbbc7a911b475899da8de279a92368859a27006fd097df0f9",
+      "bytes": 1048
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/functional-matrix.md",
+      "new": "project-support/reports/stage-v2-20260911/functional-matrix.md",
+      "sha256": "41db7e40f37c9b401f4c58b3b63e31153c08466e7cc6f9d7a0a776a04e0892bc",
+      "bytes": 7769
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/metrics.json",
+      "new": "project-support/reports/stage-v2-20260911/metrics.json",
+      "sha256": "5c0643458200a80a760c01e1e97cc4df9a0a70673354462a638b36f70d5c3094",
+      "bytes": 33331
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/checkpoint-12.md",
+      "new": "project-support/reports/stage-v2-20260911/checkpoint-12.md",
+      "sha256": "0d2c544a9beb2f092e28a1c05deb0eabc8baf20dac090f5c112df752382dd5fe",
+      "bytes": 3820
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/completion-audit.json",
+      "new": "project-support/reports/stage-v2-20260911/completion-audit.json",
+      "sha256": "418aa82cb7015fcc462d1981ecda6b8b08ff583beee7e7ed444f0106b3539f74",
+      "bytes": 28995
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/execution-state.json",
+      "new": "project-support/reports/stage-v2-20260911/execution-state.json",
+      "sha256": "f977e4359c5541b30fcb3b4cf3551b01d89589730bb4f7034f47bb349e74bc9d",
+      "bytes": 8582
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/checkpoint-8.md",
+      "new": "project-support/reports/stage-v2-20260911/checkpoint-8.md",
+      "sha256": "4a50c28ebc0e8d07c328c0b4024621368a44fe4cb56d4276f87568fa583ba932",
+      "bytes": 6733
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/checkpoint-9.md",
+      "new": "project-support/reports/stage-v2-20260911/checkpoint-9.md",
+      "sha256": "cedcdcd4c2be6ca33c47197d77ac1fa8cc4b7a6b322c2052af95252996e93d5e",
+      "bytes": 5022
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/canva-commit-confirmation.md",
+      "new": "project-support/reports/stage-v2-20260911/canva-commit-confirmation.md",
+      "sha256": "53e405ba5fcbd5fcd39b1c6d36f99c202a182b0846366a36d7616e6a2eae562c",
+      "bytes": 1341
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/checkpoint-13.md",
+      "new": "project-support/reports/stage-v2-20260911/checkpoint-13.md",
+      "sha256": "05f38d95ccfe6947cca105991e0a722ae4a9cd7dc8ce5dd5236abb7322ef0e1e",
+      "bytes": 6044
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/checkpoint-6.md",
+      "new": "project-support/reports/stage-v2-20260911/checkpoint-6.md",
+      "sha256": "a85449740df0b830257063f5cae4171a7a46fc808e1f6316de5ee0e3e980f89d",
+      "bytes": 5137
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/completion-audit.md",
+      "new": "project-support/reports/stage-v2-20260911/completion-audit.md",
+      "sha256": "c93bf6da7e1ddd7867a74085e3509625c9d126ac755e6e270f2474bec8788848",
+      "bytes": 2489
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/checkpoint-2.md",
+      "new": "project-support/reports/stage-v2-20260911/checkpoint-2.md",
+      "sha256": "4c3583cbefb9c3905d10ebc442d0522b2884914aa8ccc4a66f6bebc37297971c",
+      "bytes": 8034
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/metrics.csv",
+      "new": "project-support/reports/stage-v2-20260911/metrics.csv",
+      "sha256": "e6c6634db07f7a43dd466c273a3bc762bdf51e2cac4c40e11d54ae8611bd69b3",
+      "bytes": 16070
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/checkpoint-3.md",
+      "new": "project-support/reports/stage-v2-20260911/checkpoint-3.md",
+      "sha256": "3de77cc3cdb06262b35ce1caad63e045702f67ce26151aa8a343e9ce7810fc70",
+      "bytes": 4338
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/checkpoint-7.md",
+      "new": "project-support/reports/stage-v2-20260911/checkpoint-7.md",
+      "sha256": "fea5a51a280fc4a263d641dbb2cc7a60e14aa8c4aa736374936beed9984e5896",
+      "bytes": 5140
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/functional-matrix.json",
+      "new": "project-support/reports/stage-v2-20260911/functional-matrix.json",
+      "sha256": "5f27df5269dc3bf5051f8ecfead893b0ca9e9acf655a9feb76a755fab23d2c81",
+      "bytes": 12792
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/canva-visual-review.md",
+      "new": "project-support/reports/stage-v2-20260911/canva-visual-review.md",
+      "sha256": "fc7a65d57a781fde78809f2612af57b5e35b27d3cac0f02529a9404c38dc7e40",
+      "bytes": 6477
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/checkpoint-0.md",
+      "new": "project-support/reports/stage-v2-20260911/checkpoint-0.md",
+      "sha256": "b93e37c8db66f7caf480aa29544817ab768cbea9de513d434676174828b33b0d",
+      "bytes": 3856
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/checkpoint-4.md",
+      "new": "project-support/reports/stage-v2-20260911/checkpoint-4.md",
+      "sha256": "fb6f2736aac887ecfe0cf6fd061422403359e414e0fa66a06306a1c6e583ff4c",
+      "bytes": 4889
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/checkpoint-5.md",
+      "new": "project-support/reports/stage-v2-20260911/checkpoint-5.md",
+      "sha256": "47987861cae10b929a85f7aa712dff79b67ad4e294827f907e1265c56c218a60",
+      "bytes": 6130
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/normal-location-followup.md",
+      "new": "project-support/reports/stage-v2-20260911/normal-location-followup.md",
+      "sha256": "4c8182f12830b2bee74d172592b8662bd07ece9b728aaef2d7ea066c7f022f02",
+      "bytes": 4931
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/runtime-load-review.md",
+      "new": "project-support/reports/stage-v2-20260911/runtime-load-review.md",
+      "sha256": "6999cab3f0558dd3f9727321e7b025641ffaa21f6855c3e3b482b2e9e31cf9d4",
+      "bytes": 3839
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/user-started-objective.zh.txt",
+      "new": "project-support/reports/stage-v2-20260911/user-started-objective.zh.txt",
+      "sha256": "2db03ca4505a258cf6db23d381606a1de6e547a4d7e7e5d398636415f1e86e2b",
+      "bytes": 23304
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/checkpoint-1.md",
+      "new": "project-support/reports/stage-v2-20260911/checkpoint-1.md",
+      "sha256": "fa68ea91ff685bdc8ad345d04075295abf5f6f112b34dff984968db5fdd9bbcf",
+      "bytes": 6562
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/checkpoint-14.md",
+      "new": "project-support/reports/stage-v2-20260911/checkpoint-14.md",
+      "sha256": "d243a890bf8e341d66bda0a481ac8ca1d4c3483b38ce2764f44c10918b8b4497",
+      "bytes": 2246
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/quantitative-report.md",
+      "new": "project-support/reports/stage-v2-20260911/quantitative-report.md",
+      "sha256": "4ddd211896417bf7120e197fcb9b0be4173821d3cbecc8fc3fc7efd7901633e2",
+      "bytes": 12270
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/checkpoint-10.md",
+      "new": "project-support/reports/stage-v2-20260911/checkpoint-10.md",
+      "sha256": "9502b3333f8f1be9a43f8da5622c378fb5d08bf45338629fdec286242deb9e03",
+      "bytes": 7617
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/checkpoint-11.md",
+      "new": "project-support/reports/stage-v2-20260911/checkpoint-11.md",
+      "sha256": "9e75db7c956c4ad22122c5f34a88ad3452905081d047513f99c91469b3aca0af",
+      "bytes": 6627
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/handoff.md",
+      "new": "project-support/reports/stage-v2-20260911/handoff.md",
+      "sha256": "b57d66cf6046fa851f0ed02380c8fe0d94d59638ad0390d99c062e7bb36e74b9",
+      "bytes": 8492
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/checkpoint-15.md",
+      "new": "project-support/reports/stage-v2-20260911/checkpoint-15.md",
+      "sha256": "5e937f4e3778aa885a079af6fb25e488e2d8fffd4042f99954eaa07793b064b3",
+      "bytes": 4452
+    },
+    {
+      "old": "docs/reports/stage-v2-20260911/stage-applicability.md",
+      "new": "project-support/reports/stage-v2-20260911/stage-applicability.md",
+      "sha256": "8d81bb811ef456c7dc7c476e03cd42d6766f6db2e0b1d08f3beb73d1ba5efd45",
+      "bytes": 1962
+    },
+    {
+      "old": "Open Workbench.cmd",
+      "new": "workbench/deployment/Open Workbench.cmd",
+      "sha256": "087da617427c55316c8e4e8c7dc725c45b8e66999b252b8f65fd90db08608f1c",
+      "bytes": 379
+    },
+    {
+      "old": "Open Reviewer Workbench.cmd",
+      "new": "workbench/deployment/Open Reviewer Workbench.cmd",
+      "sha256": "5161a9c94aba9c2824b5545f9ed07875c2e839352dd18122d5986e4eb63ddbb9",
+      "bytes": 187
+    }
+  ],
+  "edits": [
+    {
+      "path": "AGENTS.md",
+      "before": "bde9836108881daf14cbf2649a9b9ac743150d00459bc44fa948080aaf933d19",
+      "after": "97504a4b698c32207e31f6395fd5faf3acd50a2731548b5cf290f814ee6dbda3",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/AGENTS.md"
+    },
+    {
+      "path": "PROJECT_STATE.md",
+      "before": "fdb926eb55617d81b73fea357055126a9c423c49e489115b84fa314b085b49d6",
+      "after": "96c58d159f65e3c27e444bea043dbcc5b455e7258f100d6859db3c52674d7ae2",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/PROJECT_STATE.md"
+    },
+    {
+      "path": "README.md",
+      "before": "b3175dc5cc9733602c877a44ece0a96153614c07d51559563b1763be29e80d7b",
+      "after": "da077cf0b2c84321668c14a52e006795d1b5c39855fb91ce95d3826180ad5fa6",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/README.md"
+    },
+    {
+      "path": "project-support/design/PRODUCT.md",
+      "before": "b9fae8706905e90c30a4304f5ea173e6f9f72c2a8a971622f67881233b864bd1",
+      "after": "49c3114f20cd1a19ebfdb99b22106f02b36a813504d145e8d840c47a6e2da5ad",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/project-support/design/PRODUCT.md"
+    },
+    {
+      "path": "project-support/plans/human-led-workbench.md",
+      "before": "5bfaa3f0923594a2f015d262937fce9c2fced5ac6008b5a2528d7208d7e02ab6",
+      "after": "cd5fd643b3034a7c8fcba7464f1bc002ce202cbe19d4322f064c3fb05735b6e3",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/project-support/plans/human-led-workbench.md"
+    },
+    {
+      "path": "project-support/product-readiness-20260912/execution.md",
+      "before": "398659c9f19ac9fc8d79afe3c53b6a9bc2400a6fcedcb491758238ba341143a5",
+      "after": "8f77600da7cf3b4effc9d60e898f69e79e1297975a3e2551616d273b9cde4b82",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/project-support/product-readiness-20260912/execution.md"
+    },
+    {
+      "path": "system1/PROJECT_STATE.md",
+      "before": "e5604b4653b8f8d9acd7db9a9beeb33253ceec16f7ed737b430ba0c3a2f46b34",
+      "after": "929b49aea30c622ec38874c3321637751db6dad3b717ac0502921f7682d36833",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/system1/PROJECT_STATE.md"
+    },
+    {
+      "path": "system1/USER_GUIDE.md",
+      "before": "19ce6ef4a67f812e66a9fe949fb301def369a6a249131117f1deda014ffe1d71",
+      "after": "161743261c5434429e52fcc0106b0f330d847287795b4ee05885b6de2b3ac55b",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/system1/USER_GUIDE.md"
+    },
+    {
+      "path": "system2/PROJECT_STATE.md",
+      "before": "186c0f1e8c31b5fd748a8f6b4b659a3b7b45c523805ce1ee06b548c6993e6c9c",
+      "after": "d39edbf6758210eb8321a3225f38ed13d3edcd3dbb269043f8d8d729fd262cc7",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/system2/PROJECT_STATE.md"
+    },
+    {
+      "path": "system2/docs/contracts/human-material-workbench.md",
+      "before": "48b4aed09702415da14e4095c614445e9c701a4e52a41fc2af215430da9fd5dd",
+      "after": "21e307964f313edbcb251e395e704990d372d4d1f0438049ba621d9441fabd78",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/system2/docs/contracts/human-material-workbench.md"
+    },
+    {
+      "path": "system2/docs/contracts/original-verification.md",
+      "before": "7e5e04545a1c4b758cb0fe141fc75b6713870cf71f1829b798dda200c6b08228",
+      "after": "9ff07bf0ffda1a3aacae8b992c26b5ac0e4a15805b393d55bda74cbf906d5156",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/system2/docs/contracts/original-verification.md"
+    },
+    {
+      "path": "system2/docs/contracts/requirement-subdivision.md",
+      "before": "f40146192980da47743cf6ec1a60cb1a059271d03eabf633ce325a5cf2ea4a41",
+      "after": "01c5c86257be3cac811ce90e001b25bbbcd3a8d0f76fef6e07d8e23c56db1124",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/system2/docs/contracts/requirement-subdivision.md"
+    },
+    {
+      "path": "system2/docs/plans/pdf-verification-reliability.md",
+      "before": "559b8b46a028a1782492265c0f9c2e087ceec571e792ab1c29aa0622541a9e31",
+      "after": "b6b993497c8298fd13cd3af438e6d1db959845ab49585261fcd9ff2ba76b843e",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/system2/docs/plans/pdf-verification-reliability.md"
+    },
+    {
+      "path": "system2/docs/reports/32-original-page-verifier.md",
+      "before": "e5831b7c26de59f24a5a54d7506a340147057d641eceef34a35f888dbc530b38",
+      "after": "029a85c0aef1432c30e0478d1cedd40892a64bd56f3b0de4d79f4f0f00a11b7c",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/system2/docs/reports/32-original-page-verifier.md"
+    },
+    {
+      "path": "system2/docs/reports/33-background-export-performance.md",
+      "before": "11c448ef9926bd22e4ed4d3d6560ef51c3fcd1a6f465fb7544efc730e4174e1e",
+      "after": "117982d2a7a04bfe3a7d236e691859e48b4bac026b14b196bc5a4103825923f3",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/system2/docs/reports/33-background-export-performance.md"
+    },
+    {
+      "path": "system2/docs/reports/37-actionable-source-failures.md",
+      "before": "9f9dc37ab4f81e2d3b8acde0f23d33038e118b6a5ee43c38afa2c42222b5ff95",
+      "after": "c0d3250ba33d62ab598a91bee558fbf136c6c8827478094f315386a219034bcd",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/system2/docs/reports/37-actionable-source-failures.md"
+    },
+    {
+      "path": "system2/docs/reports/38-scan-manual-delivery.md",
+      "before": "b246f86c6527958730b15b737a3a4e735183fe00621be5b38f1e240af63cc717",
+      "after": "d23a569bd17a8bce1174e89f50fc1aeb9b27a5f95a1bd6858ad70e8409bfc2aa",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/system2/docs/reports/38-scan-manual-delivery.md"
+    },
+    {
+      "path": "system2/docs/reports/40-complete-parent-and-history.md",
+      "before": "3dc7f6545f5f12d9e273742fcb47685b0c6d1e6231124f5500e89b3c534baaf9",
+      "after": "7bddbaa11cc9f9c734a798edff773da51a9aad4c4fabbf7835a47bba04a7aa2d",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/system2/docs/reports/40-complete-parent-and-history.md"
+    },
+    {
+      "path": "system2/docs/reports/41-pdf-verifier-critical-differences.md",
+      "before": "c61d82b4e8ff83425dbf07c24f5348e688b079487ff93da3f25f4edd2b1a0a2c",
+      "after": "de8bab4139b9ad315fb66eb46088b8349d40c241214d9bf4ae093bc472111770",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/system2/docs/reports/41-pdf-verifier-critical-differences.md"
+    },
+    {
+      "path": "system3/PROJECT_STATE.md",
+      "before": "7db722bbcdf02777e261d0d14b67061eeb7e342228e04f9694f9ca6f7d298e57",
+      "after": "365547cdb7926a5683ce533c448885a2690c235052af2d17a6a6c337698d9df5",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/system3/PROJECT_STATE.md"
+    },
+    {
+      "path": "workbench/PROJECT_STATE.md",
+      "before": "7910e6090b65255bbbc7e68c8d1a25d7e7999c88711b45db3914a858caded756",
+      "after": "401c927c114514a9fb82c40be109c1878a9c2210ff5af850b6e07c5eb55e76c7",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/workbench/PROJECT_STATE.md"
+    },
+    {
+      "path": "workbench/USER_GUIDE.md",
+      "before": "44b1925b2dc7191b393956fed81e598c5080a90d9f6adcd137c23d1fa4a810f2",
+      "after": "1e6859260210600b46bc69d4dd984545f5c2286bccd27380f5182067e45f3cc1",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/workbench/USER_GUIDE.md"
+    },
+    {
+      "path": "workbench/scripts/round2_faults.py",
+      "before": "095cd2976080bb9c03b036e38008075d643316bd8a5e4519a91fe3f88ac90ae3",
+      "after": "7c96ed4155394b3469627e73c2c4da0cf230ee3421dee3ac58a73d56ed5ecdeb",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/workbench/scripts/round2_faults.py"
+    },
+    {
+      "path": "workbench/scripts/check_collaboration_edge_cases.py",
+      "before": "20b9cb04dd27837e35d19cec7b2c32ce982081e40d047978970564a3eaed9cf8",
+      "after": "9d6e97eaa895c17678f50213dfd2e0cd56a6b0e70afb0ae24da69ef576743fe7",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/workbench/scripts/check_collaboration_edge_cases.py"
+    },
+    {
+      "path": "workbench/scripts/verify_processing_fault.py",
+      "before": "319d7e722bce416e787223f295e555f3f3b62d5c448ffe0f3dcbde7b5cc0738e",
+      "after": "742150f256bc6bdc666057353c12b55f1e08828e4e0b7ac6f51e4a122000a1ae",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/workbench/scripts/verify_processing_fault.py"
+    },
+    {
+      "path": "workbench/scripts/check_workflow_correction.py",
+      "before": "11ee422adf6515300f066988eb0f215e4de4dcf3c801f05ef0b5f5130a8dc6e5",
+      "after": "bbeac9da7959685dbe005e808cfe84684a55f1427fb501cd6d15d2b4e6883ebb",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/workbench/scripts/check_workflow_correction.py"
+    },
+    {
+      "path": "workbench/scripts/build_windows_reviewer_code.py",
+      "before": "bc0d2387ed959b7ecedf31f2a72a178084171c6848d64dbc5d79471e05ead93d",
+      "after": "3377e4d12a9a46f5de97954ccd0410b5b4bcd5c290f16f7d46981de4584ff6dd",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/workbench/scripts/build_windows_reviewer_code.py"
+    },
+    {
+      "path": "workbench/scripts/check_archive_inspection.py",
+      "before": "78e032264df1e0ca9f14e0426b71e35eceecfc6464686d9408687768aea6a93d",
+      "after": "689a59cd0ca1c36741ab20a2377f154cfa3f888538d3a334b34ac62e1e355eb5",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/workbench/scripts/check_archive_inspection.py"
+    },
+    {
+      "path": "workbench/scripts/check_machine_collaboration.py",
+      "before": "6385db3042aee208ae62dd01d95633bff699e46b458a2e51f346e4cd50eaa564",
+      "after": "ccf5fe8baa577ca2e7869b0e2c1f36f8f38f27220dac514c3644887490dad72f",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/workbench/scripts/check_machine_collaboration.py"
+    },
+    {
+      "path": "workbench/scripts/serve_archive_fixture.py",
+      "before": "98518404e4ed71a989cc2745b3d6753f191b01176e73612d1d44ed81ad5aa3d3",
+      "after": "478292e87be2501ea3817c826b09ce9e3aaee8210e0fd32d0ece76870743e2e3",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/workbench/scripts/serve_archive_fixture.py"
+    },
+    {
+      "path": "workbench/scripts/serve_workflow_fixture.py",
+      "before": "e340f05ead66f5fdd47be5326dd8ff4266ac4c28f471f1724f26596fe022f4f9",
+      "after": "0ea35847fb4164d12aa4bf8c886623b4ba264fe5a3cb59d32dfb695486bd4e1a",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/workbench/scripts/serve_workflow_fixture.py"
+    },
+    {
+      "path": "workbench/src/local_workbench/recovery.py",
+      "before": "0b54939f30f2e47a0e1c340b728c2fbf76702f4549a2e8b394399b66d5489339",
+      "after": "248cb62e91ac0260af9f135f33910ee26e8065614c76d39890e113d5be9c5e45",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/workbench/src/local_workbench/recovery.py"
+    },
+    {
+      "path": "workbench/deployment/Open Workbench.cmd",
+      "before": "087da617427c55316c8e4e8c7dc725c45b8e66999b252b8f65fd90db08608f1c",
+      "after": "87fc1e97433be02b5479dcfa1040f1d409671a4b8921f10b98e47d34ed2767f4",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/workbench/deployment/Open Workbench.cmd"
+    },
+    {
+      "path": "workbench/deployment/Open Reviewer Workbench.cmd",
+      "before": "5161a9c94aba9c2824b5545f9ed07875c2e839352dd18122d5986e4eb63ddbb9",
+      "after": "732d275d2f94de92f21ae13861204bdb065b771a27537c4f83ebcbbcfb637c12",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/workbench/deployment/Open Reviewer Workbench.cmd"
+    },
+    {
+      "path": "ENVIRONMENT.md",
+      "before": "1da04f43ed9167dfc72ffb6841b846ca409131b4e11a1ed0d9b0edf5eb88b566",
+      "after": "d67034824f754295749fe15cc091f365a112876095e7117e4d549ea29cb95eeb",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/ENVIRONMENT.md"
+    },
+    {
+      "path": "workbench/docs/windows-offline-review-checklist.md",
+      "before": "8fa1492aa2496e7165e7b50ad609bdc991cca991f989e9812c2cd31bbeaad72f",
+      "after": "dd748aa250fdf791863f311ead9ea4485c309e89ca496d4ef2231655a8069d71",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/workbench/docs/windows-offline-review-checklist.md"
+    },
+    {
+      "path": "project-support/root-cleanup-20260913/RESULTS.md",
+      "before": "e2278f1c058dcb6e0ffab32b881b5b95793f82f210218bd1c3a49cf06642574f",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/project-support/root-cleanup-20260913/RESULTS.md",
+      "after": "5efad1ecf83a43567e08650457b27377b4e6384617678b77c1aad1075b778a40"
+    },
+    {
+      "path": "project-support/product-readiness-20260912/workflow/review-confirmation/PAUSED.md",
+      "before": "f76923a04066161d6355246b374589dc6f0fa9b410427ede31dc9f51bc00b7e7",
+      "backup": "project-support/root-cleanup-20260913/pre-change/consolidation/project-support/product-readiness-20260912/workflow/review-confirmation/PAUSED.md",
+      "after": "14a7f73e11af4519c97fa25d342e9125abb07f5d8e81473761d63f4391dfe389"
+    }
+  ]
+}

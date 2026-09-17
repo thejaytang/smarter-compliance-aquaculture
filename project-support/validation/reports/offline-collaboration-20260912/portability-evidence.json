@@ -1,0 +1,73 @@
+{
+  "scope": "Windows/macOS portability foundations for isolated offline reviewer workflows",
+  "native_platform": "macOS 26.6.2 arm64 / Python 3.12.12",
+  "windows_acceptance": "PENDING_ACTUAL_WINDOWS",
+  "normal_service_operations": "none",
+  "checks": {
+    "workbench_platform": {
+      "passed": 6,
+      "evidence": "platform-tests.log"
+    },
+    "system2_platform_and_lock_regression": {
+      "passed": 26,
+      "evidence": "system2-platform-tests.log"
+    },
+    "recovery": {
+      "passed": 9,
+      "evidence": "recovery-tests.log"
+    },
+    "exchange_path_and_payload": {
+      "passed": 5,
+      "evidence": "exchange-safety-tests.log"
+    },
+    "native_temporary_directory_smoke": {
+      "result": "PASS",
+      "evidence": "platform-smoke.json"
+    },
+    "reviewer_http": {
+      "passed": 3,
+      "evidence": "reviewer-http-tests.log"
+    },
+    "workbench_integration": {
+      "passed": 91,
+      "evidence": "workbench-portability-integration-tests.log"
+    }
+  },
+  "restored_service": {
+    "result": "PASS",
+    "evidence": "restored-service-evidence.json",
+    "materials": 6,
+    "stores": 6,
+    "restored_symlinks": 0,
+    "personal_workspace_created": false,
+    "original_and_package_files_unavailable": true,
+    "initial_integration_failure": "Initial GET returned HTTP400 because inspection called material_get; UI owner changed it to existing material_read. First attempt and logs retained."
+  },
+  "inspection_finding": {
+    "folder_traversal": "Reproduced in an isolated temporary directory, fixed by parent, rejected by current import regression",
+    "large_history_manifest": "Parent exchange file payload passes multi-megabyte Unicode roundtrip"
+  },
+  "remaining_legacy_boundaries": [
+    "System2 optional Chrome screenshot POSIX process groups",
+    "System1 process-lock fallback os.kill if required portalocker absent; reviewer mode does not call System1"
+  ],
+  "checklist": "../../../workbench/docs/windows-offline-review-checklist.md",
+  "reviewer_runtime_observation": "reviewer-runtime-observation.json",
+  "code_delivery": {
+    "status": "PREPARED_VERIFIED_NOT_SENT",
+    "zip": "windows-reviewer-code.zip",
+    "inventory": "windows-reviewer-code.inventory.json",
+    "verification": "windows-code-independent-verification.json",
+    "sha256": "c77baecd1a6f9dcb67d74f60c0c23d6d14e8db60b3acecaa652cb00026fc4929",
+    "bytes": 1293156,
+    "members": 351,
+    "repository_files_byte_matched": 349,
+    "separate_work_packages_verified": 3,
+    "windows_acceptance": "PENDING_ACTUAL_WINDOWS",
+    "source_or_ui_changed_during_packaging": false,
+    "preserved_packages": [
+      "windows-reviewer-code-pre-freeze-a0588478016f.zip",
+      "windows-reviewer-code-intermediate-caab8dafdaa5.zip"
+    ]
+  }
+}

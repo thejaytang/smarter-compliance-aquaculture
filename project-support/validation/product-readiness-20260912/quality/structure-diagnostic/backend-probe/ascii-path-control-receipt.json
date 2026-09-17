@@ -1,0 +1,8 @@
+{
+  "exit_code": 0,
+  "stdout": "{\"status\": \"success\", \"backend\": \"docling-parse\", \"version\": \"7.15.0\", \"package_path\": \"/private/tmp/smarter-native-backend-6usdc7u4/ascii-package/docling_parse\"}\n",
+  "stderr": "",
+  "mode": "ascii-path-control",
+  "elapsed_seconds": 1.8948856669594534,
+  "cwd": "/private/tmp/smarter-native-backend-6usdc7u4"
+}

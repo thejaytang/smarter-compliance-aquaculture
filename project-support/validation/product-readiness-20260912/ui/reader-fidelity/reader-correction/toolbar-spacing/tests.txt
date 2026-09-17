@@ -1,0 +1,20 @@
+✔ physical render requests follow displayed width and DPR with bounded 64-pixel steps (0.8155ms)
+✔ detail update preserves displayed page and latest user scroll while pending and sends only a reader request (1.635541ms)
+✔ late responses after material, page, view, reader ticket or source changes cannot replace the displayed image (0.425583ms)
+✔ source mismatch, failed fetch and failed image decode retain the old image with actionable retry (0.538083ms)
+✔ an old backend that ignores render_width is detected once and cannot trigger an automatic refresh storm (0.229666ms)
+✔ reported physical limit is retained honestly and repeated requests at that target stop (0.135208ms)
+✔ resize bursts debounce and at most one resolution request runs for the current page (0.353208ms)
+✔ observer and DPR listeners request refresh and disconnect with the reader session (0.3865ms)
+✔ reading details remain available outside the PDF viewport and HTML names its reflowed rendering (0.810458ms)
+✔ document CSS gives remaining space to one evidence viewport and keeps compact original controls (4.746542ms)
+✔ explicit Retry recovers an image-detail failure without clearing the current page (0.465042ms)
+✔ known malformed PDF open failure gives recovery guidance and preserves the prior draft without masking unknown errors (0.329584ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 63.118584

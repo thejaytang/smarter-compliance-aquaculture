@@ -1,0 +1,806 @@
+{
+  "source_root": "/Users/tang/Desktop/smarter-compliance-aquaculture",
+  "excluded": [
+    ".venv",
+    "caches",
+    "data",
+    "gold",
+    "outputs",
+    "runtime",
+    "tmp"
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "34f72804a61737030d276959ce1dae7770129f783bb335fc5c0ce1d8615c9b21"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "e5b80784c5a4f0124094c9a4a30e46bfed735cbe405a1b5063ec8b3af6190847"
+    },
+    {
+      "path": "PROJECT_STATE.md",
+      "sha256": "098ea09a51d527c62f3fe2c41d6eb0874acf99623dbc00ef0166b9bc0d5fe1ea"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/config.py",
+      "sha256": "2bb4b177f3bdef1adc4c30297a73f41eb407329d9a2e4fdbf356b56eb7b6763a"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/__init__.py",
+      "sha256": "5c872edc9ed879876930a12ab7fd83db9a15695a240787d7b12a455dcc6c675f"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/derived 2.py",
+      "sha256": "676397fe7b65f10866be70f9bedaddeef9fbc99db436c5b5a0ff41a5c59c9450"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/types.py",
+      "sha256": "4505aba348e328ff59a079e47c86bfeaf1971ad8cb9cd3118ab20dd6be3adc00"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/ocr.py",
+      "sha256": "e8e4b57d7334140f087d1818b27b0faeaf41d6ed9857e46c82a4e19224619d1b"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/cli.py",
+      "sha256": "4f265567a1a56acef118b3bc01ef690030c6251e67c794d6ad7acb7c2bb1cd5c"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/pipeline.py",
+      "sha256": "ed0b358b599126c55ea4f7131f5105bdd703c448c68345c0f08caaeb10a1c56e"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/release_gate.py",
+      "sha256": "90705d959f0b1c69a8c3d53e842bfba00a8a9d7f9d63150fa0659daac8670e2d"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/derived.py",
+      "sha256": "df097360cfa06335c8a4fdb10ad39b8e118e33c2046c42e8ebd23f3ba4796c9b"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/__main__.py",
+      "sha256": "76fa916e93e0ae1a6c1bb51dcc0bcf289c014e9f760a47165f8a84401ccf41d7"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/validate/schema_validator.py",
+      "sha256": "d260efe674755c1ee8badf9cab40a9a7e210d95edb7bb15f0e3a775a22f2d06f"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/validate/secondary_native_gate.py",
+      "sha256": "6861f3a4a5c395a6726cded87112a5e102c35e4512bf4191f96072df812c99aa"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/validate/fingerprint.py",
+      "sha256": "226b041c15bf910b12542c3a8fdded2e3a29c39929add27e060906cbedbf0ec3"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/validate/__init__.py",
+      "sha256": "3b3f6e2ddef41c67d70a585d4c02d9fa08990c1da71a557c1ece11a89e1c3a71"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/validate/completeness_gate.py",
+      "sha256": "40698b66f59f04d4a98ec1aae03ca2dc9ed1a278d48a4ac0a83d84ec99deb165"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/validate/quality_gate.py",
+      "sha256": "dbd973dad117dd8685aa10de8efaf5ebe3517f5c782528f1b5985998cfaa8685"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/parsers/registry.py",
+      "sha256": "12eb9ff600bfff4149b3f7e54262de2e16183531f45a73a4fad04b1e5513f9d9"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/parsers/figure.py",
+      "sha256": "6ed2945906b02b05ac57c925982feb890a283271533969ced21d7abd132bd818"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/parsers/__init__.py",
+      "sha256": "9d6699b535923ab81e912d3f01171183a09f74fb7179012938e842bd4d4818ca"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/parsers/text.py",
+      "sha256": "ec3cb9cde30074071db3e59fca767b273ab64889c0723e5b912ab14f8196a1bb"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/parsers/table.py",
+      "sha256": "54909fb1f785efd32a279060d5878c70fe43a33d76477a38ee96596029be8949"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/parsers/special.py",
+      "sha256": "6bd761cae479cb1861021a13b443f5df408d678e39ce2cd01e18f206b4a6ac14"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/reconcile/precision_review.py",
+      "sha256": "0f0093c19d7fe47fa2b27fe9e2e8c476a29399317eb66ba2293cf03879d0eb6c"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/reconcile/__init__.py",
+      "sha256": "aa2b489be4ae317b5cc0268ad245b8c0201d0ccca03ee70a5bda826cbfe7640d"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/reconcile/span_aligner.py",
+      "sha256": "889426790487bbdb1d574e9a970bfe290797d79b663cb2010f225ea9e5ce19f3"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/reconcile/conflict_detector.py",
+      "sha256": "e889710b4073788f022ab84681d67fa3bc8dcdb3bfe848ff93597287f08b8890"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/reconcile/resolver.py",
+      "sha256": "c06995ed46850ce84701fecb1b0d6d1c7bfa6ef124289673e8fdaaeb35e1799a"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/domains/__init__.py",
+      "sha256": "006eb64667897fe35bace87894b589ea1e34f8cfaf959ae440d2bc91a7066fd1"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/domains/regulatory/models.py",
+      "sha256": "66afd51b350812919e78e2a0778a4ddfb216bbcbd4b79c12fb78b1457872ed61"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/domains/regulatory/__init__.py",
+      "sha256": "52c7e284cc874cef065f0dee75d848eff5ffb949123edac2ad81513a4dc89f15"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/domains/regulatory/extractor.py",
+      "sha256": "b11330520c46050a2e94bf5969a9ce7254dcc95aa5dcc67eac1c699d50fd4568"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/domains/requirements/native_assembler.py",
+      "sha256": "fa626481353f83270fbe7f43d44678427dc32f47160d20b9b1ad7f7880faa2be"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/domains/requirements/semantics.py",
+      "sha256": "452478d72d8152f7a00c452bfea0d3710f96c28133e12626547cb2ced0f56227"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/domains/requirements/profile.py",
+      "sha256": "9c15cfd5d8b25008edcdf85313eb09996a1f425e141b76fd2d186c67905aff15"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/domains/requirements/__init__.py",
+      "sha256": "2e51f4a34ddcff444e195313a56ee65a3e55d22a1906d3d9fd84d3789a84d2ad"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/domains/requirements/hierarchy.py",
+      "sha256": "76bc39f34135eb7b11816c6bdd5d5adb4e13c7c8ad013be015dc7902b7102812"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/domains/requirements/canonical.py",
+      "sha256": "a4be024b35d3ca2e46d314f7d93ce1c3bb7c47e26b73700c8794fd185db5aa42"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/domains/requirements/footnotes.py",
+      "sha256": "a2c8b6712fa195a89f659dd931f6c0b17ed5bcb39bd77ff39cfc938b64dc94ab"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/domains/requirements/clauses.py",
+      "sha256": "9d84d8f762276b6a190ea66d46a69e3606996b8627e31345501cafa5f20cef95"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/evidence/__init__.py",
+      "sha256": "ee3deca021337f742d5f1fa2e0bca492179f62161a5835d3e9b8e1055ee94047"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/canonical/__init__.py",
+      "sha256": "9bf3af36942aae587e87027e5d8d51d5108b0d515ae5392ab19e86c06ef1a656"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/assemble/note_parser.py",
+      "sha256": "834191a0ac4273472d9720a2b9d65b530f41fbc60ad31d0aca5a042e978137ee"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/assemble/document_assembler.py",
+      "sha256": "ee6b3ce715fb4aab1c02a351427f419104bf6d7d3af7de86e67f63c39cd0b524"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/assemble/__init__.py",
+      "sha256": "28b5f676e91bfa6d4ab9fb03b79c9b7ca2edcbf5f835b275e1ecc295bbfd6865"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/assemble/hierarchy.py",
+      "sha256": "68cab6fedc981868aa6215dfa09ef9bef3af587adb186e7b3c60c847ee409241"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/assemble/content_linker.py",
+      "sha256": "1e15717ea2ac681ed447175095ed12e1c4c49f64c2c67bf1b8711a5e5c7f4ac6"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/assemble/paragraph_assembler.py",
+      "sha256": "c5f153f4965bcbf5fbbe3fc23653363962de24354fad3c369b4c410f20b87ff9"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/assemble/table_assembler.py",
+      "sha256": "e52ec1d0911f0e56c1991a0ef2113bfecb7a2711606034038798b638fcba1b8d"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/layout/detector.py",
+      "sha256": "6b1ddde29956c56a4d42bb7003958f51a2f10f2283270e043ff698a82b1d7f19"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/layout/aligner.py",
+      "sha256": "29ffee2124c31b04dcd3f48cd6c6b9d67dc01e325b2e0e64f717d20a4d5fd380"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/layout/__init__.py",
+      "sha256": "1e5d31b6b1f86bab6836c5c0d00a75c96aad5d69f2caf7b0297caf2461720437"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/layout/marginals.py",
+      "sha256": "dfdd67cab5156c643a15f8e6199614744492806479317e8db603b6e643642730"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/layout/reading_order.py",
+      "sha256": "ceba330f58621138b9d2ed77926f0bbfbe646dfdcea31e3a80711f812369409a"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/layout/native_visuals.py",
+      "sha256": "fe61ac082d1996d44f0c4c04649ae2df563cc09b005626ea5d7a1607573ad366"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/contracts/verification.py",
+      "sha256": "40f81e91498e687d138ec67e80a7a592eff45828bc3c56eb967609f1b19dc16a"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/contracts/__init__.py",
+      "sha256": "2272820a7c50436d3bee883d6a11b1022b9ac480ef94cd046a0566b552e60558"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/contracts/canonical.py",
+      "sha256": "f696ef6468c99098fe8714e40cd936e531c5d6f7b5fa8dae90e57ae66881b3b2"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/contracts/evidence.py",
+      "sha256": "8f682de0d9d779d0e82c010e68491913e52ebc71de03aebedf16c8e648833203"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/ingest/native_extractor.py",
+      "sha256": "600c4368acebd0f18b533c491118b64dfc74c9bf57a1a81b99a5d2accf1d63f5"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/ingest/renderer.py",
+      "sha256": "01e626ae08a97b4a2783b7be7cd659a8ed58700884ecf3481068ba3963e711b1"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/ingest/__init__.py",
+      "sha256": "718521edda3792533764bedf6872ea2295b44e810bc43be39d096286f2442091"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/ingest/secondary_native.py",
+      "sha256": "c8bfbb5582ee0d3d49e0d356bb9534a727a9df8ea404f4fa0ca474484592065b"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/ingest/preflight.py",
+      "sha256": "218a0f49b10580d8e6f7ee6d8e5f21d6fd8e405dc2632b315cc7b25e3273c5db"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/regulatory_ir/__init__.py",
+      "sha256": "1cbfeab01af1deacc0b89b537e9c582d4fbb07fd6996677ac109abfdf4dc2fdb"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/models/evidence_span.py",
+      "sha256": "316c5d23245539035076b8c47945358020d53b99a694593a07b088f042fa7f9b"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/models/requirement.py",
+      "sha256": "4268864e850ffd1d4b232ea6e4234240f017c06a8173c6b19cb8dd647f24e654"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/models/__init__.py",
+      "sha256": "9fbb8b5c80fe4159a17d684e157e480e1e578777d97e8552bfe29a1e95770146"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/models/conflict.py",
+      "sha256": "9e9e23eb67b948dea97db15a329b647cb5cc73afdf1ac921082bef9e238ee422"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/models/review.py",
+      "sha256": "366398a9d2080725f92f8f8178d861b760e25f2ce67997e003a90229abfb88c9"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/models/document.py",
+      "sha256": "c860def1815c480cf00d4e233ab1f1626ce1c68007a4a83e5dcfcc80c5e78deb"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/requirements/__init__.py",
+      "sha256": "d96d3a2029f174fd1735eec951a0b2027ebcf1ef7e6f941e8364df54fa96f8b0"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/ontology/__init__.py",
+      "sha256": "129b259656a0b5fdfe6ca7bf17ac42d8aa3df3b87d8af3f923bf3f915a694da0"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/verification/evidence_routing.py",
+      "sha256": "6cbb235798d274158941bfa5256db2715e15830304ca10e911005c2ea147ed34"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/verification/conflict_review.py",
+      "sha256": "f5c5819d58fd2a03bb26c3b76d4fc7b29c175c982f870b06c8b762dbfece596d"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/verification/__init__.py",
+      "sha256": "23444e9e316810093455929d10a1751c97d6d011bb8c860d812a4f1efabaeb43"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/verification/review_router.py",
+      "sha256": "b0044f4dbd8303905c315813401dce19d6450e50ce951b1ea52fca645df29982"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/profiling/repair.py",
+      "sha256": "ea1fd148d4e1912ec6c04d076da246a5799c3b52b487908f848c28de500cc82a"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/profiling/models.py",
+      "sha256": "298e1ab988eec9756c907604dbb0cd22a1e1eb65056f91042ca219497795d602"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/profiling/validators.py",
+      "sha256": "1ee9425a5eb497496132fbd39b4a7adac8507d12a63083e0c2f3df222a85f8db"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/profiling/__init__.py",
+      "sha256": "405dd535524889ecf965a394e9f052cb127f4123cd303a1ca785255680c40df7"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/profiling/learner.py",
+      "sha256": "f21c330214060752ba072108514e2c697a061e6bb734fa879d911c291a1f19e4"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/review/service.py",
+      "sha256": "25292cc6c954add7016fb80711ae5b31545386d238d957a2aaceef076cee9d8c"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/review/__init__.py",
+      "sha256": "1823c8417ef5b5dd18440cc4567d11b3940e5cc13157b5edc5c93a5df36f3fa2"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/orchestration/finalization.py",
+      "sha256": "bbb6a18dfdea03f1754985d42cdfb898823696b8ab70eafdedade6f1ad0e53ac"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/orchestration/__init__.py",
+      "sha256": "190f683fdda1d03e710807c71d0975816d6508d7ae4eca7debf2348abef17102"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/orchestration/runtime.py",
+      "sha256": "791ef262d5d60aae7a504d4b9a24edb3f64b3b7b923ee569707095adc78612c2"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/orchestration/context.py",
+      "sha256": "7a1c049e9517bc295eb4ff2466f85d90bb0e36b195432bba544272d619511a56"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/orchestration/pipeline.py",
+      "sha256": "504e4da2fedca48246946f0a56817912f3adfca07929658c5f33728071cccd23"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/delivery/__init__.py",
+      "sha256": "13d2c700eaeba9337f5dfd7fd0f1cf50fcda62062dbb2cf9de35ce2ad832d5cb"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/delivery/writer.py",
+      "sha256": "758f47dfc38ff98d32d55bd60f867c0bd1b4e4b78f9f8dc1d9f9bdc99a12dd2b"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/delivery/exporters/overlay.py",
+      "sha256": "41a727f4a33a90edc8605c7f2a24c37c15709853a8b87bd694959b98d280d343"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/delivery/exporters/html.py",
+      "sha256": "80591d60fcb2212f59a10d644548fc611d887e5304a2ffc7282a91bbb168065e"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/delivery/exporters/xml.py",
+      "sha256": "7f6d2649902b63833fdb11701be62d7b325ac7758a602f10d487c6b8f81636ed"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/delivery/exporters/__init__.py",
+      "sha256": "99971fec9bcda2af59cb3927a4c0560a43bed76e918bc02f4b62655567d391b4"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/delivery/exporters/jsonl.py",
+      "sha256": "96bcc2f6f598364178a5ad2307013472eb07e9ed77557f65ab7b324784c831a5"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/delivery/exporters/markdown.py",
+      "sha256": "7313f6238111fae5814820cdfaa85817de4617f3bdaa8840a4fe217033d5434d"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/delivery/exporters/rag.py",
+      "sha256": "7e79b99b398b19665c4fe54a7d33aa2b0b459394c9a0bfcde312b72e1f2d07ad"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/delivery/ontology/mapper.py",
+      "sha256": "a5b2d5baf98f6c983cfbfa06c50d17dfb01c12ad67f83a2e8a688f8bac8829c8"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/delivery/ontology/__init__.py",
+      "sha256": "fc795ad801b2c7971b0ae37a220bea14eb40d75b320b2daf49e0de7fa918b147"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/api/worker.py",
+      "sha256": "f27a01fe4cd76bd199c1e0de0c3606b407a0e0cfcde0df5a571f72eddf87f120"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/api/store.py",
+      "sha256": "7822be73a4407d1c0a5469b30011431aa98552ff8323ff3811a31fedb4e1a666"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/api/__init__.py",
+      "sha256": "889379ecd96126ecb9a3aabba6b8d6a6fab2f630dfb798382ba77994d0d24538"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/api/app.py",
+      "sha256": "991a69f6331ca812488c7dd4be2fffb8989c93769264a301c2ca3eb8d367ea5f"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/evaluation/requirement_gold.py",
+      "sha256": "20784d7ad93ce6377ca8ca16a2cb02e1f7bd76cb16e1cdb45f08e49d2933b29e"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/evaluation/full_cli.py",
+      "sha256": "ebf7c68a6b35914f3d7f5f59db8daabed9e2843e389cb9d5caef1f585a39fc6c"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/evaluation/metrics.py",
+      "sha256": "f9d5980a7afad57a4f5de9149fc4683ec5e62b1d2043b986cd704e78dd075dd7"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/evaluation/full_system.py",
+      "sha256": "588dd95a0d6d2c4486ee5bfd7dfdee11996c9d47ba9c1e3168402bc4c603bdf4"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/evaluation/__init__.py",
+      "sha256": "b608c2bf189c7fde4732e4cf2bfc9565d30129cc2fb376b9bed7c1ebd7910e54"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/evaluation/requirement_evaluator.py",
+      "sha256": "8cf4cbb11915963888b90084b75d3af74018192b4a27acc32587e94d7d175604"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/evaluation/cli.py",
+      "sha256": "9db63b1f15b497b72a3966f2ad4b85b7345715f88e909931df5a9ca2b2345002"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/evaluation/evaluator.py",
+      "sha256": "586c05adbf3d78c06f9e2d56ae95bdd7b69e4b41625da127ea5a3c705c3e86b9"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/routing/text_layer.py",
+      "sha256": "8f7112eeb184f91df7588250e25faa3f1ed23c7823be6201e562095de052fdc0"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/routing/__init__.py",
+      "sha256": "58b345e650f8bc7c6bbac61971ba3ef89c40be08fb14d76f78408e82174cb5aa"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/export/__init__.py",
+      "sha256": "2f938e27997a6cade520102386fdcfdafe3128fe33fa00ebd220d9e3bafb6cc0"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/extraction/regions.py",
+      "sha256": "b54582b2e59c1f65203b7e7951b06a6c3954acb9b90785b24350988cdd780122"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/extraction/__init__.py",
+      "sha256": "e50e96665176fc5e617a78ea9c97cebf9ebe7031f4661bdba0f608d6d3a0a6c8"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/src/pdf_extraction/preflight/__init__.py",
+      "sha256": "6fec32cd4180a5caebf71bb66a0654c2255dd1f5bc4793b894d907fbdf9240ad"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/__init__.py",
+      "sha256": "5b280167dfe875afefb89eeadf35d617dbdd5cdb7a274bc2d2eabfa3ba400221"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/TESTING.md",
+      "sha256": "d66149692bf3bde5cabb5853374ef71edb3c9bfa6025b80db4c35781c007f851"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/unit/test_models_and_validation.py",
+      "sha256": "d931f83bb8f733f28a4587a5a0e2433a98af77595b1d2b063fd333f0b3996549"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/unit/__init__.py",
+      "sha256": "94ab3e591a3fde1641451778a474aa01d83e501802a2c84390343ec1902e3686"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/unit/test_text_routing.py",
+      "sha256": "bebb9874c8b91bd0404a4a695fd884c47e3b94ec9e46658141054d31d970faa3"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/unit/test_reading_order.py",
+      "sha256": "b92c3f24d1e55d65ef703499982bc8771f0764a4ba96f5c8fc59a2c9f0fe832a"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/unit/test_document_profile.py",
+      "sha256": "a6b1efb5a6c0ff0e12202697e50c251caf152bf1ee3e3fb8533f8f389c791398"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/unit/test_equation_parser.py",
+      "sha256": "b377a535938c337c72ec9c7bac0b3deb4ce1ce9f16b45ff29a993c1309f6b3b1"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/unit/test_native_extractor.py",
+      "sha256": "498a4c2693f67b020a03b09de3a341a7dc30299f63103a62e1306791f1ed17d9"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/domains/__init__.py",
+      "sha256": "7bdceaeb823ad2483c8a1a64dabf6b6a4c61e9a152acfe31ad95caa6de2fc3f5"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/domains/requirements/test_requirement_semantic_active.py",
+      "sha256": "ad63b6f4c458307cb99884e443b13738bda9c0b0174325d6c08c078e2e852521"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/domains/requirements/test_native_requirement_assembler.py",
+      "sha256": "7aeb252c5e245f9d6d6096155e53423ac9515a4d816e80dfde20e5b699a961cd"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/domains/requirements/test_requirement_template_profile.py",
+      "sha256": "cf39319cda489b080c695ab53f8b475b4cc4edfc1c028defcdd67a17a54438f4"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/domains/requirements/test_requirement_hierarchy_profile.py",
+      "sha256": "3e36d6c3cab2b9988a67ec73e32c1e2a0bf30875d89f4c7aebba41e3e708363c"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/domains/requirements/test_requirement_gold_revision.py",
+      "sha256": "d06e7cb31b26e8bfc3c294ba4bba99ce019ca48c10a0119c9c1230fa62b5ac10"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/domains/requirements/__init__.py",
+      "sha256": "b49e4247860181350608d2e3bd0e9d418ed62e4ca190cdef063132ce176ff287"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/domains/requirements/test_canonical_requirement_adapter.py",
+      "sha256": "b1163127413c736b69929a0b5f4532f1f0fdb85ec8d87c1cdef408e2d0c51e6a"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/domains/requirements/test_requirement_manifest_gate.py",
+      "sha256": "3206a230f8641ace3fc5f0280f0ac21d060324a7c153a2046a62a8e69521b3da"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/domains/requirements/test_requirement_models.py",
+      "sha256": "e3a628ba33ed1dbbc57cea7db7a9fc9b21fee353d8e72ad094461d0379b041b4"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/domains/requirements/test_requirement_gold.py",
+      "sha256": "ed15a050c4b3ff876e31e588e7efb8b75cf9fe34ebdf7c780d7b9e24e131c9df"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/domains/requirements/test_requirement_footnote_linker.py",
+      "sha256": "72100431247a0cb4aa2dce90109a2972a70fe0d0f395c11bf7b646e537491374"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/domains/requirements/test_requirement_semantics.py",
+      "sha256": "35bf7b4c382419b4c2929c06b48168058fb991c679a369ce784a68dfd889f734"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/integration/test_text_layout_and_export.py",
+      "sha256": "be9db69f33403910b121f23420d45e9fc9dedc5cc049c49f065ed47d2193b025"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/integration/__init__.py",
+      "sha256": "6f893370fa3a2f5ce4051f37f3109035e1e8e91926e338d76357235b4fd8ee5d"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/integration/test_regulatory_integrity.py",
+      "sha256": "34ef96447237d198407615870b50eff80532023ed2a30beeadc3d34ce9cc6b38"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/integration/test_safety_closure.py",
+      "sha256": "550407a1071b530d0f238fac211e8eb99e64b2c733be957fb8e2c219320d6006"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/integration/test_scheme2.py",
+      "sha256": "0b7dc389ebbe7b6df5a30ce11539c90e1312c4219c6008486364ca31786f420a"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/integration/test_real_pdf_preflight.py",
+      "sha256": "9699202fe98c12ec60da03fcd71c44cf1cae888daeb43b4a4ddd01b5d183b196"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/integration/test_scheme3.py",
+      "sha256": "bfe907bb5429f17958dbdc3349bfae7a8f66022dcf33de2b291870da2a9f485f"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/contracts/test_namespace_layout.py",
+      "sha256": "e270a6cfde57d5e6758d4c2dfb43e9c4e9c27788c67bf8c99500f1a4d4144e67"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/contracts/test_evidence_span_review_routing.py",
+      "sha256": "f3f1f65d61f261815ff560b313120c8d5e2da6c8e0490a64d34d7800e18dba50"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/contracts/__init__.py",
+      "sha256": "0a50d204c0d15f0e22a237d904466828912ef552323a92cf6504f1e10eff516f"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/contracts/test_verification_review_routing.py",
+      "sha256": "e087c0d25b96a2cc7dcf24fe629cbeaa5a24fb4e2c5bb259f15afa1ff8b5250b"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/contracts/test_module_boundaries.py",
+      "sha256": "21f530e8d41c75c7b53d1130d8bcdf5e48fba8e3e80979724aa76a24c95952f4"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/support/paths.py",
+      "sha256": "8b1723b6c78a2f057caed4900f2ec7b4006252fd0fe4283451df27c1f109fbab"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/tests/support/__init__.py",
+      "sha256": "a6948d5b5a5d6e0bc3da15b594132ec3015c2108a0aadf6f6150625a0c393c7a"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/config/asc-sample-no-vl.yaml",
+      "sha256": "f7283ef70112db2bfcea7ebfca15e79f2db6ab156d3752cff3f6f4f888bb2a8e"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/config/default.yaml",
+      "sha256": "ddf28e1d432d5e18ed69e44901b2054e8bae65dad41b4b310cad60f17f43cb48"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/INDEX.md",
+      "sha256": "5ad6d59f6a1048b0b4b6444abbe903b1cbe72f64eb1647edfa9bd4eded68dc92"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/goals/04-requirement-convergence-goal.md",
+      "sha256": "148517948c6a6d8660214512e71cf7d46fdb6f4960fd75bc9bdf8e4ad3a32178"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/goals/02-\u65b9\u6848\u4e8c\u76ee\u6807.md",
+      "sha256": "02894be9a140e461ae644a6e75e597abb7a3b1bcc324fdf6411caff26a8a7971"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/goals/03-\u65b9\u6848\u4e09\u76ee\u6807.md",
+      "sha256": "8bd71719d663d089828bafa9096bac4d2cea80141a7aa57ebc1d735b58388c6e"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/plans/01-\u6a21\u5757\u5316\u8fc1\u79fb\u8ba1\u5212.md",
+      "sha256": "9bbce596d8875c06cc372ee51f46987c70e0942abb05db19751692bef54afd30"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/plans/02-\u76ee\u5f55\u804c\u8d23\u6536\u655b\u8ba1\u5212.md",
+      "sha256": "f3f01f1eacce9f62452bf2af33dcbea12b56a4b6d2dd55dda7882be83748c429"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/contracts/requirement-semantic-scope-v4.md",
+      "sha256": "1aafff5d062bbfed71abaeae9ca91583be2e62b54914549bbe807a66ad9169c3"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/architecture/00-\u5b8c\u6574\u5de5\u7a0b\u65b9\u6848.md",
+      "sha256": "2e036e9ea88254d6d2c64986dea91c7acb4bd55e90219324c961b135d3996db6"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/architecture/05-\u6a21\u5757\u8fb9\u754c\u4e0e\u5de5\u7a0b\u76ee\u5f55.md",
+      "sha256": "b90dd439d4fe5aa9c80a1c52013fcc8bfa43fbffd0aff649c6a7cbb9d7375ea2"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/architecture/02-\u80fd\u529b\u8865\u5168\u4e0e\u7cbe\u5ea6\u63d0\u5347.md",
+      "sha256": "011fc465af517cb133ad8bfd314db93491d867585dfd76930bc02313f76aedff"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/architecture/04-\u6587\u6863\u81ea\u9002\u5e94\u4e0e\u6587\u5b57\u8def\u7531.md",
+      "sha256": "830ef76a065e41eb2d6fd25ee081a8216d56b1a1cd80e638208a73f717ccd5c2"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/architecture/03-\u5b8c\u6574\u5de5\u7a0b\u5b9e\u73b0.md",
+      "sha256": "090912fbad1bef78ce4ae1dace42725bd11d28ec483636d7e2d194167bc17e12"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/architecture/01-\u6838\u5fc3\u9700\u6c42\u4e0e\u529f\u80fd\u95ed\u73af.md",
+      "sha256": "bd3ab58c6c5fb02ad6ac105b3ae8e9378ed26719ae6e8442fd0fa70a03a72439"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/reports/06-workspace-relocation-20260907.md",
+      "sha256": "0cce1ac9c9a8bc54fd4c94e5796b8df128afa8f03dcd3b890867f235461a3ef6"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/reports/05-\u6a21\u5757\u5316\u91cd\u6784\u5b9e\u65bd\u8bb0\u5f55.md",
+      "sha256": "2cb485e34901d17e5eda8c4c94edaca8a09ebfd5eeca95d1363018ed67c52ead"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/reports/06-\u76ee\u5f55\u804c\u8d23\u6536\u655b\u5b9e\u65bd\u8bb0\u5f55.md",
+      "sha256": "809b386f7c3edf4c63e3de2e421fd80930253053af242a3134d39a44cf87c03a"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/reports/03-\u65b9\u6848\u4e09\u5b9e\u65bd\u4e0e\u9a8c\u6536\u8bb0\u5f55.md",
+      "sha256": "e92648a558a22ce65f733b54b011c47aaa2a001390a572f341045a40df0b82dc"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/docs/reports/04-requirement-convergence-ledger.md",
+      "sha256": "451535aa058e9f5eb19981c29743784e27d70c2495f8ba2cc05f320e8e08d40c"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/scripts/extract_requirement_gold_source.py",
+      "sha256": "6d5a8a33fb32e431f12d3bc456f9d6fe4dc668cf0be2a12f6dae8eb0f35ca2b6"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/scripts/fingerprint_parser_state.py",
+      "sha256": "dfb3b624b5323f16de3c4ca07cdf1eb2ee7364edd0a77001326881a0d98b485f"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/scripts/build_gold_fixtures.py",
+      "sha256": "865187f0ed329a3c1ea35387dfb3494054adf6d8077d1fae49d2dc893f08301d"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/scripts/SCRIPTS.md",
+      "sha256": "eec399e8b9c27fb98a5b7eebbadbfd5d992355beb74f579dd5a5db73c72b7ecd"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/scripts/run_gold_set.py",
+      "sha256": "c40d585aba1a85dc4185e15cd7c3d445ed232db64255ddf48b71ed639aff07aa"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/scripts/build_round7_audit_gold_v4.py",
+      "sha256": "141d135acc4fc1395c5641db2170f360e2287f265aa69e44e379f71530e3aae8"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/scripts/evaluate_requirement_gold.py",
+      "sha256": "f96c95cf2f0a1e64c19028c24422b251d8a9a9969b31b1f125bdf3f741f0f819"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/scripts/build_requirement_schema_v4.py",
+      "sha256": "057f71d09062bbd13fc3d7fdf34b4884eaedad2026e54f0f34608fe757c517d8"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/scripts/build_round7_audit_gold.py",
+      "sha256": "37253a65e8ada838ce4122f95a8e87c879797465baf7ac0a9cc7384c78c1c200"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/scripts/build_round8_interpretation_gold_v2.py",
+      "sha256": "540971f2991899c721e786361a64d4b743016cfae891cd0695f10c618bd1f95f"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/deployments/Dockerfile",
+      "sha256": "d289f9be8dd9bf71ef07fd6867b5c4b24f3de98f4cd07fac73f22e31886a0120"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/deployments/DEPLOYMENT.md",
+      "sha256": "c496177831be3e84bd24db7f89064d5ca1812375892eed25f5ecc6e1a3fba57d"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/deployments/compose.yaml",
+      "sha256": "e4ed5fd3ac41d03939860aded51667cc0cf568af781801f909d0d41fb77e8f3e"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/ui/review.css",
+      "sha256": "ab9589f44e2b5be6e9b9dde6481029b04776954b9572d9cd34e9a06581f18e3f"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/ui/review.js",
+      "sha256": "4266b196c267d98f23752ae868211630a62c1dd7715c8f7f74167ff32cf63077"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/ui/review.html",
+      "sha256": "c16ffe6c2631e4129f106cb5491cbdbd4771a8635cd2cc02af780875f0e1a2a6"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/pyproject.toml",
+      "sha256": "9ee0d00dd096f1c0cce284095321ca3e739963e0e20f3ef47bd1400eb25acb5e"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/uv.lock",
+      "sha256": "dfdcb1c37b46cd73e28709158edb3973eff203952eec49277c2b3c0c91db9f48"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/USER_GUIDE.md",
+      "sha256": "dfed47ea3e65aec6a55697fbed32bda96b147e6846b4234e1a78c193f51756a3"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/PROJECT_STATE.md",
+      "sha256": "777371e69b7d2015cfcde49fea394b8c6c3b98a2f3eddfa2a9f612f43a8a0cf6"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/Parser v1.py.txt",
+      "sha256": "83054a2b4bed425c4a8fc929ec93314926f21ff5db5d0ec0ee5189437c7d04eb"
+    },
+    {
+      "path": "05_Working area of requirements side/system2/.gitignore",
+      "sha256": "9b33ca878808ce345cca022a7602f551418e18e0a92a38f67646006fba506b18"
+    }
+  ]
+}

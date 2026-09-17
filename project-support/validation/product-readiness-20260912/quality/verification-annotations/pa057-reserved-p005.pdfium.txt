@@ -1,0 +1,16 @@
+Veileder | Tilstandsanalyse av landbaserte akvakulturanlegg 3
+Forord
+Denne veilederen er ment å benyttes sammen med standardene NS 3424:2012
+Tilstandsanalyse av byggverk og NS 9416:2013 Landbaserte akvakulturanlegg for fisk til 
+å fastsette tilstandsgrad for komponenter, avdelinger og fellesfunksjoner i samsvar med 
+forskrift om krav til teknisk standard for landbaserte akvakulturanlegg for fisk. Formålet 
+med veilederen er å sikre at tilstandsanalyser av landbaserte akvakulturanlegg blir 
+gjennomført med beste faglig skjønn, og på en enhetlig og konsekvent måte på tvers av 
+ulike anlegg og aktører. 
+Veilederen er utarbeidet i perioden 01.01.18-01.07.18 av Norconsult AS på oppdrag fra 
+Fiskeridirektoratet.
+Revisjonshistorikk
+Dato Revisjon 
+22.11.2019 Utgitt
+23.04.2021 Tilpasset endring ved forskrift 19. okt 2020 nr. 2117
+11.10.2024 Korrektur

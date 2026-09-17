@@ -1,0 +1,8 @@
+{
+  "id": "cross-page-content",
+  "exit_code": 0,
+  "stdout": "{\"id\": \"cross-page-content\", \"status\": \"candidate_available\", \"block_count\": 7, \"block_types\": {\"text\": 5, \"table\": 2}, \"covered_scope\": [\"page:1\", \"page:2\"], \"total_scope_count\": 2, \"warnings\": [\"Native text can differ from visible page marks. Compare it with the original page image. Scanned pages may require manual transcription; no OCR is run when viewing.\", \"PDF candidate uses the existing positioned PDFium parser in mapped three-page windows. Ruled-table grids use existing local geometry assembly. Reading order, headings and unruled tables may need manual correction; source page images and complete native evidence are retained. No Requirement classifier, semantic processor, OCR model or external service runs.\"], \"unresolved\": [], \"requirement_status\": \"not_connected\", \"candidate_path\": \"after-pdf/cross-page-content/candidate.json\", \"mode\": \"after-pdf\", \"baseline_equivalent\": true}\n",
+  "stderr": "",
+  "status": "returned",
+  "elapsed_seconds": 0.379
+}

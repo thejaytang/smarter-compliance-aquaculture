@@ -1,0 +1,251 @@
+{
+  "materials": [
+    {
+      "id": "9ae7419590bec49fd8389243f4ff4f3e",
+      "revision": 4,
+      "content_status": "draft",
+      "confirmation": null,
+      "checked_scope": [],
+      "blocks": [
+        {
+          "id": "9c6b41ea-e729-4f87-8cb7-ec6a6ec24139",
+          "level": 1,
+          "source_refs": [
+            {
+              "anchor": "original-document",
+              "scope_id": "html:document"
+            }
+          ],
+          "text": "Chapter 2",
+          "type": "heading"
+        },
+        {
+          "id": "2b291259-dde3-40a6-a412-7c797f22454f",
+          "markdown": {
+            "baseline": "The human shall remove the fish if the water is hot or the pump is off. Small fish are exempt when the water is cold.",
+            "original": {
+              "id": "2b291259-dde3-40a6-a412-7c797f22454f",
+              "level": null,
+              "source_refs": [
+                {
+                  "anchor": "original-document",
+                  "scope_id": "html:document"
+                }
+              ],
+              "text": "The human shall remove the fish if the water is hot or the pump is off. Small fish are exempt when the water is cold.",
+              "type": "text"
+            },
+            "source": "The human shall inspect the fish if the water is hot or the pump is off. Small fish are exempt when the water is cold.",
+            "version": 1
+          },
+          "numbering": "",
+          "source_refs": [
+            {
+              "anchor": "original-document",
+              "scope_id": "html:document"
+            }
+          ],
+          "text": "The human shall inspect the fish if the water is hot or the pump is off. Small fish are exempt when the water is cold.",
+          "type": "text"
+        },
+        {
+          "id": "47893732-82cf-46cc-bf5d-21f622d0758d",
+          "source_refs": [
+            {
+              "anchor": "original-document",
+              "scope_id": "html:document"
+            }
+          ],
+          "text": "- Inspect the net.\n- Record the result.",
+          "type": "text"
+        },
+        {
+          "id": "d5e58d82-d43a-496f-b70d-a47a28f4bbbd",
+          "markdown": {
+            "baseline": "| Check | Limit |\n| --- | --- |\n| Temperature | 20 |",
+            "original": {
+              "id": "d5e58d82-d43a-496f-b70d-a47a28f4bbbd",
+              "source_refs": [
+                {
+                  "anchor": "original-document",
+                  "scope_id": "html:document"
+                }
+              ],
+              "table": {
+                "merges": [],
+                "notes": [],
+                "rows": [
+                  [
+                    "Check",
+                    "Limit"
+                  ],
+                  [
+                    "Temperature",
+                    "20"
+                  ]
+                ]
+              },
+              "text": "",
+              "type": "table"
+            },
+            "source": "| Check | Limit |\n| --- | --- |\n| Temperature | 25 |",
+            "version": 1
+          },
+          "numbering": "",
+          "source_refs": [
+            {
+              "anchor": "original-document",
+              "scope_id": "html:document"
+            }
+          ],
+          "table": {
+            "merges": [],
+            "notes": [],
+            "rows": [
+              [
+                "Check",
+                "Limit"
+              ],
+              [
+                "Temperature",
+                "25"
+              ]
+            ]
+          },
+          "text": "Check\tLimit\nTemperature\t25",
+          "type": "table"
+        },
+        {
+          "id": "577b49b3-20a9-482b-a494-2d954c4bafdf",
+          "level": 1,
+          "source_refs": [
+            {
+              "anchor": "original-document",
+              "scope_id": "html:document"
+            }
+          ],
+          "text": "Chapter 3",
+          "type": "heading"
+        },
+        {
+          "id": "4fee3431-1cb1-42a9-8b7b-026b07c6e021",
+          "markdown": {
+            "baseline": "The human shall use a net.",
+            "original": {
+              "id": "4fee3431-1cb1-42a9-8b7b-026b07c6e021",
+              "level": null,
+              "source_refs": [
+                {
+                  "anchor": "original-document",
+                  "scope_id": "html:document"
+                }
+              ],
+              "text": "The human shall use a net.",
+              "type": "text"
+            },
+            "source": "",
+            "version": 1
+          },
+          "numbering": "",
+          "source_refs": [
+            {
+              "anchor": "original-document",
+              "scope_id": "html:document"
+            }
+          ],
+          "text": "",
+          "type": "text"
+        },
+        {
+          "dependencies": [],
+          "id": "6d6680d5-4899-495f-becb-09a8861ef3dd",
+          "markdown": {
+            "added": true,
+            "baseline": "",
+            "source": "Additional human note.",
+            "version": 1
+          },
+          "numbering": "",
+          "parent_id": null,
+          "source_refs": [
+            {
+              "anchor": "original-document",
+              "scope_id": "html:document"
+            }
+          ],
+          "text": "Additional human note.",
+          "type": "text"
+        }
+      ]
+    }
+  ],
+  "requirement_sessions": [
+    {
+      "block_id": "2b291259-dde3-40a6-a412-7c797f22454f",
+      "chapter": "Chapter 2",
+      "done": [],
+      "field_spans": {},
+      "id": "fd4c8534-9a94-477b-9b3b-b31a73571601",
+      "labels": {
+        "1b2ee88b-6d3d-4209-a055-869867d0827c": "R1"
+      },
+      "material_id": "9ae7419590bec49fd8389243f4ff4f3e",
+      "material_revision": 2,
+      "phase": "relationships",
+      "reference_evidence": {},
+      "revision": 1,
+      "roles": {
+        "1b2ee88b-6d3d-4209-a055-869867d0827c": "requirement"
+      },
+      "roots": [
+        1,
+        "1b2ee88b-6d3d-4209-a055-869867d0827c"
+      ],
+      "saved_at": "2026-09-15T11:03:05.499181+00:00",
+      "source": {
+        "assessment_id": null,
+        "content_hash": "44962537e92594af443065e5df0ae5152335e675be5f98fc44bb1e3d8842c29d",
+        "download_status": "SUCCESS",
+        "file_format": "html",
+        "operator_selection_decision": "INCLUDE",
+        "parsing_copy_of": null,
+        "registry_kind": "sqlite_snapshot",
+        "registry_sha256": "d507308f1543a29355305fe5fd1148c1040ff392a690ef74fe1896d451f09403",
+        "relative_path": "A_Public_Authority/TS005-001_material.html",
+        "selection_origin": "human",
+        "selection_status": "INCLUDE",
+        "snapshot_id": "TS005-001",
+        "snapshot_status": "STORED",
+        "source_id": "TS005",
+        "source_status": "CURRENT"
+      },
+      "source_refs": [
+        {
+          "anchor": "original-document",
+          "scope_id": "html:document"
+        }
+      ],
+      "spans": {
+        "1b2ee88b-6d3d-4209-a055-869867d0827c": [
+          0,
+          118
+        ]
+      },
+      "text": "The human shall inspect the fish if the water is hot or the pump is off. Small fish are exempt when the water is cold.",
+      "title": "ENGINEERING FIXTURE: Markdown notebook",
+      "units": {
+        "1b2ee88b-6d3d-4209-a055-869867d0827c": {
+          "Main Verb": null,
+          "Modal Verb": null,
+          "Object": null,
+          "Subject": null,
+          "conditions": null,
+          "exceptions": null,
+          "id": "1b2ee88b-6d3d-4209-a055-869867d0827c",
+          "subrequirement": null,
+          "text": "The human shall inspect the fish if the water is hot or the pump is off. Small fish are exempt when the water is cold."
+        }
+      }
+    }
+  ]
+}

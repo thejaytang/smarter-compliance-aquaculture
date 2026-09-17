@@ -1,13 +1,8 @@
-# Product updates exclude active local data, development evidence and credentials.
+# Jay development branch includes code, development documents, tests and evidence.
+# Active data is preserved by the versioned initial-data snapshot.
 # The immutable workbench/initial-data snapshot is the authorized first-handoff exception.
-/project-support/
-/PROJECT_STATE.md
 /.github/
-/workbench/PROJECT_STATE.md
-/workbench/tests/
-/workbench/examples/
-/workbench/scripts/
-/reviewer-workspace/
+/workbench/reviewer-workspace/
 /system1/
 /system2/
 /system3/
@@ -59,3 +54,26 @@
 **/.system1-source-management.lock
 !**/vendor/pdfjs/build/
 !**/vendor/pdfjs/build/**
+
+# Retained on this Mac: old runtime copies, not development source or reports.
+/project-support/**/*backup*/
+/project-support/validation/architecture-20260917/recovery/
+/project-support/validation/architecture-20260917/four-store-recovery/
+/project-support/validation/architecture-20260917/restored-data/
+/project-support/validation/legacy-layout/system2/outputs/
+/project-support/validation/legacy-layout/system2/System2_Requirement_Register 2.xlsx
+**/.tools/
+**/cache/
+**/old-system1-environment/
+**/server.json
+**/service.lock
+*.sqlite-journal
+
+# Machine-specific historical fixture links and generated test runs.
+/project-support/**/fixture/system2
+/project-support/**/fixture/workbench/src
+/project-support/**/fixture/workbench/ui
+/project-support/**/pytest-tmp/
+
+# Historical recovery archives.
+/project-support/**/*backup*.zip

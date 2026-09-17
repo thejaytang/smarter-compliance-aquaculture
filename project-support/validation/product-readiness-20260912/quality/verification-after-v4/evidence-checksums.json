@@ -1,0 +1,56 @@
+{
+  "inputs": [
+    {
+      "id": "pa057-reserved",
+      "path": "system1/Data/A_Public_Authority/PA057-001_Guidance_for_condition_assessment_of_land-based_aquaculture_facilities.pdf",
+      "sha256": "f9f6bd8531c2cd8a4cc7dd49e4035aaef6ff33cb2f7dbf93f0e340ca0b454778",
+      "page_indices": [
+        4,
+        5
+      ]
+    },
+    {
+      "id": "cs010-reserved",
+      "path": "system1/Data/C_Certification_Scheme/CS010-001_GLOBALG.A.P._General_Regulations_-_Rules_for_aquaculture_scope.pdf",
+      "sha256": "ce5c8950c69e3b5b60b85110f5abd2c6d8637c83291c6c00ac03f28b102dac54",
+      "page_indices": [
+        2,
+        3
+      ]
+    }
+  ],
+  "parser_sha256": "3696f3aab5aff829e7247418bd0b22cec1b5f3008c6419ac842f67ff7c38bce2",
+  "all_annotation_artifacts_unchanged": true,
+  "artifacts": {
+    "comparison.json": "2734bd6a4633ac5e8160a194ad2857ac7937b582a873bae43160cb37c57a15a9",
+    "cs010-reserved/candidate.json": "c3036c19b4cca2d891d35dd03bc0fdb2325f88b7f43c9523d0277164d9fa23a2",
+    "cs010-reserved/pdf-native-0001.json": "2041c85483171b1e2c84b1aeaeb027e7a5d2468154d82190f2ffc74acdc610b1",
+    "cs010-reserved/pdf-order-repairs.json": "71ebe3aee3570cccbfa1b6c8bdce6526cc98b8c603f66049195144baf45222e3",
+    "cs010-reserved/pdf-page-0003.png": "8f46b54dbeab81cf0c2e1e946b0dca5cae935e336d7295bb8af87fe26f844360",
+    "cs010-reserved/pdf-page-0004.png": "cd866af1be1eba814b67b0efb69d6b7c12e8705c6549c8ddf1b86e43a4f3458f",
+    "cs010-reserved/pdf-paragraph-groups.json": "711cfde8c3575da5e39547cb5f8671e830111dbc7b75284f42e462afb4d33006",
+    "cs010-reserved/pdf-window-0001.pdf": "7aaa2569d21228a79a280104e98ad66dd38576a53bfadf4b5203038000b5806d",
+    "cs010-reserved/source.pdf": "ce5c8950c69e3b5b60b85110f5abd2c6d8637c83291c6c00ac03f28b102dac54",
+    "cs010-reserved-measurement.json": "c30b290537ac43238db85b432d9f68fb24e9a8fefee9244d8e27e22f7c6c9768",
+    "failed-import-run-start.json": "62b36794dc4ebe4e688792e374560a1ee5085522c3862d5a32aea05c6cf34006",
+    "matching-policy.json": "9897376faebfd73c856af3cc02f04decc2c95d30bfabc0029ac4cd0bd3a8f9ee",
+    "measure_frozen_windows.py": "c9a0fa2f5fdc5c627f2eb21b339f4679fcc126fc4e32926b251c9dc22c8e0f52",
+    "measurement-freeze.json": "2f32dd5cc9cc56dcf875790c74e23c50c6c16e9317d6bc530c5f323c83d7c64e",
+    "oracle-classifier-diagnostic.json": "cdc7914d6e94496f818f26cd06eab23936e59a5a0a68b677399a4923c344da9b",
+    "pa057-reserved/candidate.json": "b1c4c769d39631244e74565d40f1854430e5e13508175a6011be92dd5d0ba7b5",
+    "pa057-reserved/pdf-native-0001.json": "874f50bb5c94740b49bcde4d7d526ae21558ef437d43816c8cb1b9279975aa0d",
+    "pa057-reserved/pdf-order-repairs.json": "6724de11956eaeeec8e769ab96d35dcdadc5bcb4419519468dd196325a6d6a05",
+    "pa057-reserved/pdf-page-0005.png": "d689b955a8caad2821e03b5a834f620b556d843ba2da41ce22c7b4d7322efa43",
+    "pa057-reserved/pdf-page-0006.png": "65e78b6aa2c94f43a071887112187b6e411d9789b1b8b812503a3f8d56a27903",
+    "pa057-reserved/pdf-paragraph-groups.json": "afbf628f0051861dc71b430aacd3880e0d340acfe38ecca15eedf2b65683b49a",
+    "pa057-reserved/pdf-window-0001.pdf": "e01eaf110a73a53cd9259b249349fe3a47c8984282b01d08b34670848553cd70",
+    "pa057-reserved/source.pdf": "f9f6bd8531c2cd8a4cc7dd49e4035aaef6ff33cb2f7dbf93f0e340ca0b454778",
+    "pa057-reserved-measurement.json": "096c89dd9755caa35dc995c5505049d3a3cf9b377eaaff48b7755dc498aa2e8a",
+    "replication-provenance.json": "d0b6efa5d43ad5321c11a7b434132f96099d6796507fdbb82b4536254ea7bb60",
+    "run-start.json": "c3fcb43df2289ced131beafb0dd42466e2fcf0c3249ad94749c3e507316b0e25",
+    "runner-correct-environment-receipt.json": "82eb2cdc1631b7efc7fc3997599acecebbd4a62ef3b1aea260e2324093761a85",
+    "runner-receipt.json": "dc75ecdf9303a2385bdb9525378773324f120fc01fa5830875175f4223c856f9",
+    "summary.json": "138d9894f3245415cecdc896b4e28105b84fb0ad7cfb1774c96e18e82d5cded0",
+    "RESULTS.md": "5d0322913a3b0584b623b9fcd2f7964cb17e065bc19b585e5d80ab2e3f158dc4"
+  }
+}

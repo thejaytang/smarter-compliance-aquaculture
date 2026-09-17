@@ -1,0 +1,22 @@
+[
+  "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/bin/python",
+  "-m",
+  "pytest",
+  "system2/tests/test_material_collaboration.py",
+  "system2/tests/test_material_html_display.py",
+  "system2/tests/test_material_impact.py",
+  "system2/tests/test_material_legacy.py",
+  "system2/tests/test_material_parser_grid.py",
+  "system2/tests/test_material_parser_quality.py",
+  "system2/tests/test_material_pdf_rows.py",
+  "system2/tests/test_material_processor.py",
+  "system2/tests/test_material_provenance.py",
+  "system2/tests/test_material_read_performance.py",
+  "system2/tests/test_material_reader_navigation.py",
+  "system2/tests/test_material_reader_parser.py",
+  "system2/tests/test_material_reader_resolution.py",
+  "system2/tests/test_material_service.py",
+  "system2/tests/test_materials.py",
+  "-q",
+  "--junitxml=/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/quality/structure-diagnostic/source-line-fidelity/product-v7/junit.xml"
+]

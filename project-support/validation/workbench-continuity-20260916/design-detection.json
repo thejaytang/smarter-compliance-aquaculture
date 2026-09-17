@@ -1,0 +1,32 @@
+[
+  {
+    "antipattern": "broken-image",
+    "name": "Broken or placeholder image",
+    "description": "<img> tags with empty src, missing src, or placeholder values ship as broken-image boxes. Use real images, generated assets, or remove the tag.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/ui/materials.js",
+    "line": 566,
+    "snippet": "<img alt=\"Region from the saved original PDF\">"
+  },
+  {
+    "antipattern": "clipped-overflow-container",
+    "name": "Positioned child clipped by overflow container",
+    "description": "A clipping container (overflow hidden or clip) wrapping an absolutely-positioned child cuts off tooltips, menus, and popovers that need to escape. Let the overflow be visible, or move the positioned layer out of the clip.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/ui/index.html",
+    "line": 0,
+    "snippet": "body.compact-shell clips a positioned child"
+  },
+  {
+    "antipattern": "dark-glow",
+    "name": "Glowing shadow accents",
+    "description": "Colored glow shadows — a zero-offset chromatic halo (box- or text-shadow) on any background, or any colored blurred shadow on a dark background — are the default \"cool\" look of AI-generated UIs. Use neutral elevation shadows and subtle, purposeful lighting instead.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/ui/index.html",
+    "line": 0,
+    "snippet": "Colored box-shadow glow (#1f354f) on dark page"
+  }
+]

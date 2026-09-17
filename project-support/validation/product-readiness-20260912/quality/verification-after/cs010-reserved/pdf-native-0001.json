@@ -1,0 +1,4785 @@
+{
+  "source_sha256": "ce5c8950c69e3b5b60b85110f5abd2c6d8637c83291c6c00ac03f28b102dac54",
+  "config_hash": "0a86dae0ddc7110290fbf0ec1c2e8302563e084ecbb008783275adbaacd0ab97",
+  "adapter_config_hash": "7803c0e0a77352a7206a8dd459abf30b1dad68ee77b6646cf99bc41ba9d75e9b",
+  "material_backend_policy": "pdfium",
+  "legacy_config_backend": "docling-parse",
+  "original_page_indices": [
+    2,
+    3
+  ],
+  "backend": "pypdfium2",
+  "version": "5.13.0",
+  "pages": [
+    {
+      "page_index": 0,
+      "width_points": 595.3200073242188,
+      "height_points": 841.9199829101562,
+      "words": [
+        {
+          "id": "native_p0000_fw000000",
+          "text": "Code ref.: GR – Rules for aquaculture; v6.0_Sep22; English version",
+          "bbox_points": [
+            71.08200073242188,
+            794.4268646240234,
+            310.3892822265625,
+            801.9603424072266
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000001",
+          "text": "GLOBALG.A.P. general regulations – Rules for aquaculture scope",
+          "bbox_points": [
+            71.10611724853516,
+            803.658821105957,
+            304.7324523925781,
+            811.2003421783447
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000002",
+          "text": "Page 3 of 4",
+          "bbox_points": [
+            71.29104614257812,
+            812.904821395874,
+            111.3543701171875,
+            820.4383029937744
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000003",
+          "text": "220929_",
+          "bbox_points": [
+            29.259241104125977,
+            743.6528167724609,
+            36.631919860839844,
+            774.606819152832
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000004",
+          "text": "G",
+          "bbox_points": [
+            29.186880111694336,
+            738.0248184204102,
+            35.128440856933594,
+            743.347297668457
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000005",
+          "text": "G_",
+          "bbox_points": [
+            29.186880111694336,
+            726.7350616455078,
+            36.631919860839844,
+            737.1074523925781
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000006",
+          "text": "G",
+          "bbox_points": [
+            29.186880111694336,
+            721.1070556640625,
+            35.128440856933594,
+            726.4295349121094
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000007",
+          "text": "R_",
+          "bbox_points": [
+            29.283361434936523,
+            710.2964782714844,
+            36.631919860839844,
+            719.9798583984375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000008",
+          "text": "Ru",
+          "bbox_points": [
+            29.283361434936523,
+            700.7658538818359,
+            35.128440856933594,
+            709.7819213867188
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000009",
+          "text": "les_",
+          "bbox_points": [
+            29.283361434936523,
+            685.343505859375,
+            36.631919860839844,
+            699.7045745849609
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000010",
+          "text": "for_",
+          "bbox_points": [
+            29.186880111694336,
+            671.5484924316406,
+            36.631919860839844,
+            685.3917541503906
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000011",
+          "text": "aquacu",
+          "bbox_points": [
+            30.77880096435547,
+            645.9450988769531,
+            36.631919860839844,
+            671.379638671875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000012",
+          "text": "lture_",
+          "bbox_points": [
+            29.283361434936523,
+            625.2429046630859,
+            36.631919860839844,
+            644.8838195800781
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000013",
+          "text": "v",
+          "bbox_points": [
+            30.86724090576172,
+            621.4399719238281,
+            35.040000915527344,
+            625.2589721679688
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000014",
+          "text": "6_",
+          "bbox_points": [
+            29.259241104125977,
+            612.2864532470703,
+            36.631919860839844,
+            620.9776763916016
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000015",
+          "text": "0_",
+          "bbox_points": [
+            29.259241104125977,
+            603.4102783203125,
+            36.631919860839844,
+            612.0693664550781
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000016",
+          "text": "Sep",
+          "bbox_points": [
+            29.186880111694336,
+            589.6618804931641,
+            36.631919860839844,
+            603.2872619628906
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000017",
+          "text": "22_",
+          "bbox_points": [
+            29.259241104125977,
+            575.9376220703125,
+            36.631919860839844,
+            589.1392822265625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000018",
+          "text": "en",
+          "bbox_points": [
+            30.77880096435547,
+            567.7046508789062,
+            35.128440856933594,
+            575.7607116699219
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000019",
+          "text": "1",
+          "bbox_points": [
+            71.47599792480469,
+            93.10223388671875,
+            75.26976013183594,
+            101.03997802734375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000020",
+          "text": "INTRODUCTION",
+          "bbox_points": [
+            92.91167449951172,
+            93.00286865234375,
+            175.79115295410156,
+            101.16143798828125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000021",
+          "text": "This document, part of the GLOBALG.A.P. general regulations (GR), applies to the Integrated",
+          "bbox_points": [
+            71.17391967773438,
+            111.59423828125,
+            541.5640258789062,
+            121.94976806640625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000022",
+          "text": "Farm Assurance version 6 Smart (IFA v6 Smart)",
+          "bbox_points": [
+            71.81427001953125,
+            124.3233642578125,
+            317.06011962890625,
+            134.6678466796875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000023",
+          "text": "edition and",
+          "bbox_points": [
+            322.5878601074219,
+            124.455810546875,
+            376.83837890625,
+            132.48193359375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000024",
+          "text": "the Integrated Farm Assurance",
+          "bbox_points": [
+            382.501953125,
+            124.455810546875,
+            541.5850219726562,
+            134.6678466796875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000025",
+          "text": "version 6 GFS (IFA v6 GFS) edition.",
+          "bbox_points": [
+            71.04142761230469,
+            136.91998291015625,
+            246.74745178222656,
+            147.26446533203125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000026",
+          "text": "These rules for the aquaculture scope shall be used in combination with the GLOBALG.A.P. GR",
+          "bbox_points": [
+            71.1518325805664,
+            155.5113525390625,
+            538.6847534179688,
+            165.74542236328125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000027",
+          "text": "and apply",
+          "bbox_points": [
+            71.28429412841797,
+            168.3729248046875,
+            122.984619140625,
+            178.5849609375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000028",
+          "text": "to",
+          "bbox_points": [
+            130.8450927734375,
+            168.549560546875,
+            139.50045776367188,
+            176.3990478515625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000029",
+          "text": "the production of all products listed under the aquaculture scope in the",
+          "bbox_points": [
+            147.5265350341797,
+            168.240478515625,
+            541.591552734375,
+            178.4635009765625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000030",
+          "text": "GLOBALG.A.P. product list.",
+          "bbox_points": [
+            71.48296356201172,
+            180.8260498046875,
+            209.81857299804688,
+            191.06011962890625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000031",
+          "text": "The term “shall” is used throughout the GLOBALG.A.P. normative documents",
+          "bbox_points": [
+            71.1517562866211,
+            199.5499267578125,
+            478.2296447753906,
+            209.90545654296875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000032",
+          "text": "to indicate",
+          "bbox_points": [
+            485.3394775390625,
+            199.69342041015625,
+            541.6004028320312,
+            207.71954345703125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000033",
+          "text": "mandatory",
+          "bbox_points": [
+            71.62648010253906,
+            212.2900390625,
+            122.86422729492188,
+            222.5020751953125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000034",
+          "text": "provisions.",
+          "bbox_points": [
+            126.82648468017578,
+            212.2900390625,
+            177.64361572265625,
+            222.380615234375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000035",
+          "text": "2",
+          "bbox_points": [
+            71.17385864257812,
+            242.98126220703125,
+            76.48410034179688,
+            250.91900634765625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000036",
+          "text": "CERTIFICATION SCOPE",
+          "bbox_points": [
+            92.65769958496094,
+            242.88189697265625,
+            218.105224609375,
+            251.051513671875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000037",
+          "text": "2.1",
+          "bbox_points": [
+            71.17385864257812,
+            267.57843017578125,
+            84.48478698730469,
+            275.51617431640625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000038",
+          "text": "GLOBALG.A.P. product list",
+          "bbox_points": [
+            99.74537658691406,
+            267.47906494140625,
+            241.51222229003906,
+            277.67999267578125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000039",
+          "text": "The aquaculture",
+          "bbox_points": [
+            71.1407470703125,
+            286.2138671875,
+            150.83187866210938,
+            296.304443359375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000040",
+          "text": "scope",
+          "bbox_points": [
+            155.46426391601562,
+            288.267333984375,
+            184.07994079589844,
+            296.304443359375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000041",
+          "text": "includes the following product categories",
+          "bbox_points": [
+            189.09210205078125,
+            286.0814208984375,
+            389.1291809082031,
+            296.4259033203125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000042",
+          "text": "at all stages of their life cycle",
+          "bbox_points": [
+            393.8399353027344,
+            286.0814208984375,
+            541.5872192382812,
+            296.4259033203125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000043",
+          "text": "and those species listed in the GLOBALG.A.P. product list:",
+          "bbox_points": [
+            71.28427124023438,
+            298.7884521484375,
+            356.1824951171875,
+            309.02252197265625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000044",
+          "text": "•",
+          "bbox_points": [
+            85.51113891601562,
+            321.12237548828125,
+            89.56649780273438,
+            326.278076171875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000045",
+          "text": "Finfish",
+          "bbox_points": [
+            107.8045883178711,
+            318.240966796875,
+            138.56202697753906,
+            326.3995361328125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000046",
+          "text": "•",
+          "bbox_points": [
+            85.52217864990234,
+            340.5638122558594,
+            89.5775375366211,
+            345.719482421875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000047",
+          "text": "Crustaceans",
+          "bbox_points": [
+            107.46234130859375,
+            337.682373046875,
+            168.37664794921875,
+            345.8409118652344
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000048",
+          "text": "•",
+          "bbox_points": [
+            85.52217864990234,
+            359.8838195800781,
+            89.5775375366211,
+            365.03948974609375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000049",
+          "text": "Molluscs",
+          "bbox_points": [
+            107.72730255126953,
+            357.1348571777344,
+            149.3149871826172,
+            365.1609191894531
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000050",
+          "text": "•",
+          "bbox_points": [
+            85.52217864990234,
+            379.32525634765625,
+            89.5775375366211,
+            384.4809265136719
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000051",
+          "text": "Seaweed",
+          "bbox_points": [
+            107.40714263916016,
+            376.4438171386719,
+            151.95794677734375,
+            384.60235595703125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000052",
+          "text": "At all stages, seedlings (ova and/or juveniles) shall originate from producers with",
+          "bbox_points": [
+            70.90889739990234,
+            394.9247741699219,
+            458.80810546875,
+            405.2692565917969
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000053",
+          "text": "GLOBALG.A.P.",
+          "bbox_points": [
+            462.9172058105469,
+            394.9137268066406,
+            537.6591186523438,
+            403.08331298828125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000054",
+          "text": "registration/certification. Brood",
+          "bbox_points": [
+            71.61544036865234,
+            407.6428527832031,
+            218.1935272216797,
+            417.9873352050781
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000055",
+          "text": "stock shall be",
+          "bbox_points": [
+            221.9581756591797,
+            407.77532958984375,
+            286.804931640625,
+            415.8013916015625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000056",
+          "text": "obtained through",
+          "bbox_points": [
+            290.13018798828125,
+            407.77532958984375,
+            371.1980285644531,
+            417.9873352050781
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000057",
+          "text": "an",
+          "bbox_points": [
+            374.8842468261719,
+            409.8287658691406,
+            385.9794921875,
+            415.8013916015625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000058",
+          "text": "aquaculture",
+          "bbox_points": [
+            389.6336975097656,
+            407.77532958984375,
+            446.26007080078125,
+            417.8658752441406
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000059",
+          "text": "breeding",
+          "bbox_points": [
+            450.07769775390625,
+            407.77532958984375,
+            491.343017578125,
+            417.9873352050781
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000060",
+          "text": "program.",
+          "bbox_points": [
+            495.45208740234375,
+            409.8287658691406,
+            537.7573852539062,
+            417.9873352050781
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000061",
+          "text": "If wild-caught brood",
+          "bbox_points": [
+            71.91357421875,
+            420.239501953125,
+            170.05917358398438,
+            430.583984375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000062",
+          "text": "stock is used, it shall originate",
+          "bbox_points": [
+            176.2415771484375,
+            420.3719787597656,
+            331.2276916503906,
+            430.583984375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000063",
+          "text": "from a",
+          "bbox_points": [
+            336.80731201171875,
+            420.239501953125,
+            369.3885498046875,
+            428.3980407714844
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000064",
+          "text": "fishery that has proven",
+          "bbox_points": [
+            374.85113525390625,
+            420.239501953125,
+            491.1188659667969,
+            430.583984375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000065",
+          "text": "that it is",
+          "bbox_points": [
+            497.10809326171875,
+            420.3719787597656,
+            541.61474609375,
+            428.3980407714844
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000066",
+          "text": "ecologically managed. Passive collection of seedlings from the planktonic phase is allowed",
+          "bbox_points": [
+            71.3173599243164,
+            432.9576110839844,
+            521.0393676757812,
+            443.3020935058594
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000067",
+          "text": "for",
+          "bbox_points": [
+            525.9335327148438,
+            432.9576110839844,
+            541.6180419921875,
+            441.11614990234375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000068",
+          "text": "molluscs’ spat.",
+          "bbox_points": [
+            71.63751983642578,
+            445.60943603515625,
+            142.1389617919922,
+            455.77728271484375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000069",
+          "text": "Aquaculture certification cannot be achieved for wild aquatic species/catch that is",
+          "bbox_points": [
+            70.90888214111328,
+            464.278076171875,
+            464.91546630859375,
+            474.5010986328125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000070",
+          "text": "not farmed.",
+          "bbox_points": [
+            469.198974609375,
+            464.278076171875,
+            523.127197265625,
+            472.4366149902344
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000071",
+          "text": "Postharvest",
+          "bbox_points": [
+            71.77003479003906,
+            483.0129699707031,
+            128.97488403320312,
+            491.0390319824219
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000072",
+          "text": "handling of aquaculture products by the same legal entity",
+          "bbox_points": [
+            134.41099548339844,
+            482.8804931640625,
+            424.08624267578125,
+            493.2249755859375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000073",
+          "text": "as the farm",
+          "bbox_points": [
+            429.1569519042969,
+            482.8804931640625,
+            486.0769958496094,
+            491.0390319824219
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000074",
+          "text": "shall also",
+          "bbox_points": [
+            491.7427062988281,
+            483.0129699707031,
+            541.6290893554688,
+            491.0390319824219
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000075",
+          "text": "demonstrate compliance with",
+          "bbox_points": [
+            71.2953109741211,
+            495.6095886230469,
+            211.54306030273438,
+            505.70013427734375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000076",
+          "text": "the postharvest/mass balance and traceability sections of the P&Cs",
+          "bbox_points": [
+            215.00299072265625,
+            495.47711181640625,
+            538.254150390625,
+            505.82159423828125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000077",
+          "text": "applicable to aquaculture",
+          "bbox_points": [
+            71.31735229492188,
+            508.32769775390625,
+            192.84457397460938,
+            518.4182434082031
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000078",
+          "text": "in order for the producer to",
+          "bbox_points": [
+            197.05191040039062,
+            508.1952209472656,
+            326.2530517578125,
+            518.4182434082031
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000079",
+          "text": "achieve certification.",
+          "bbox_points": [
+            330.0397644042969,
+            508.1952209472656,
+            428.33221435546875,
+            516.353759765625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000080",
+          "text": "The scope of certification clearly defines the scientific name of the farmed species",
+          "bbox_points": [
+            71.17383575439453,
+            526.797607421875,
+            460.12298583984375,
+            537.14208984375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000081",
+          "text": "in the electronic",
+          "bbox_points": [
+            463.69000244140625,
+            526.9300842285156,
+            541.6026000976562,
+            534.9561462402344
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000082",
+          "text": "certificate issued in the GLOBALG.A.P. IT systems.",
+          "bbox_points": [
+            71.35047149658203,
+            539.5046691894531,
+            320.7109375,
+            549.8601989746094
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000083",
+          "text": "3",
+          "bbox_points": [
+            71.33940887451172,
+            570.2179260253906,
+            76.58341217041016,
+            578.2771301269531
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000084",
+          "text": "REGISTRATION",
+          "bbox_points": [
+            92.9667739868164,
+            570.1185913085938,
+            174.47618103027344,
+            578.2881774902344
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000085",
+          "text": "Producers shall register with the same certification body (CB) for the aquaculture certification and",
+          "bbox_points": [
+            71.76997375488281,
+            588.7209930419922,
+            541.6047973632812,
+            599.0654754638672
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000086",
+          "text": "for the GLOBALG.A.P. Risk Assessment on Social Practices (GRASP). Registration for GRASP",
+          "bbox_points": [
+            70.99716186523438,
+            601.4280395507812,
+            541.541748046875,
+            611.7835540771484
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000087",
+          "text": "shall follow the GRASP general rules.",
+          "bbox_points": [
+            71.24004364013672,
+            614.0356903076172,
+            253.35035705566406,
+            624.3801727294922
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000088",
+          "text": "4",
+          "bbox_points": [
+            71.0965347290039,
+            644.8593597412109,
+            76.7710952758789,
+            652.797119140625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000089",
+          "text": "CB AUDIT",
+          "bbox_points": [
+            92.64661407470703,
+            644.7599945068359,
+            144.46835327148438,
+            652.9185638427734
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000090",
+          "text": "4.1",
+          "bbox_points": [
+            71.08549499511719,
+            669.4565277099609,
+            84.46266174316406,
+            677.394287109375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000091",
+          "text": "CB farm audit timing",
+          "bbox_points": [
+            99.71221160888672,
+            669.3571624755859,
+            206.7571563720703,
+            679.7016448974609
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000092",
+          "text": "The registered aquaculture species shall be present on the farm at the time of the CB audit.",
+          "bbox_points": [
+            71.11861419677734,
+            687.9595794677734,
+            541.566162109375,
+            698.3040618896484
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000093",
+          "text": "Postharvest handling operations performed by the same legal entity as the farm shall also be",
+          "bbox_points": [
+            71.70370483398438,
+            700.6776580810547,
+            541.5550537109375,
+            711.0221405029297
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000094",
+          "text": "audited.",
+          "bbox_points": [
+            71.25106048583984,
+            713.4067687988281,
+            109.06306457519531,
+            721.4328384399414
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        }
+      ],
+      "bitmap_boxes_points": [],
+      "characters": [],
+      "text_lines": [
+        {
+          "id": "native_p0000_ft000000",
+          "text": "Code ref.: GR – Rules for aquaculture; v6.0_Sep22; English version",
+          "bbox_points": [
+            71.08200073242188,
+            794.4268646240234,
+            310.3892822265625,
+            801.9603424072266
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000001",
+          "text": "GLOBALG.A.P. general regulations – Rules for aquaculture scope",
+          "bbox_points": [
+            71.10611724853516,
+            803.658821105957,
+            304.7324523925781,
+            811.2003421783447
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000002",
+          "text": "Page 3 of 4",
+          "bbox_points": [
+            71.29104614257812,
+            812.904821395874,
+            111.3543701171875,
+            820.4383029937744
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000003",
+          "text": "220929_",
+          "bbox_points": [
+            29.259241104125977,
+            743.6528167724609,
+            36.631919860839844,
+            774.606819152832
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000004",
+          "text": "G",
+          "bbox_points": [
+            29.186880111694336,
+            738.0248184204102,
+            35.128440856933594,
+            743.347297668457
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000005",
+          "text": "G_",
+          "bbox_points": [
+            29.186880111694336,
+            726.7350616455078,
+            36.631919860839844,
+            737.1074523925781
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000006",
+          "text": "G",
+          "bbox_points": [
+            29.186880111694336,
+            721.1070556640625,
+            35.128440856933594,
+            726.4295349121094
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000007",
+          "text": "R_",
+          "bbox_points": [
+            29.283361434936523,
+            710.2964782714844,
+            36.631919860839844,
+            719.9798583984375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000008",
+          "text": "Ru",
+          "bbox_points": [
+            29.283361434936523,
+            700.7658538818359,
+            35.128440856933594,
+            709.7819213867188
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000009",
+          "text": "les_",
+          "bbox_points": [
+            29.283361434936523,
+            685.343505859375,
+            36.631919860839844,
+            699.7045745849609
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000010",
+          "text": "for_",
+          "bbox_points": [
+            29.186880111694336,
+            671.5484924316406,
+            36.631919860839844,
+            685.3917541503906
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000011",
+          "text": "aquacu",
+          "bbox_points": [
+            30.77880096435547,
+            645.9450988769531,
+            36.631919860839844,
+            671.379638671875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000012",
+          "text": "lture_",
+          "bbox_points": [
+            29.283361434936523,
+            625.2429046630859,
+            36.631919860839844,
+            644.8838195800781
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000013",
+          "text": "v",
+          "bbox_points": [
+            30.86724090576172,
+            621.4399719238281,
+            35.040000915527344,
+            625.2589721679688
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000014",
+          "text": "6_",
+          "bbox_points": [
+            29.259241104125977,
+            612.2864532470703,
+            36.631919860839844,
+            620.9776763916016
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000015",
+          "text": "0_",
+          "bbox_points": [
+            29.259241104125977,
+            603.4102783203125,
+            36.631919860839844,
+            612.0693664550781
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000016",
+          "text": "Sep",
+          "bbox_points": [
+            29.186880111694336,
+            589.6618804931641,
+            36.631919860839844,
+            603.2872619628906
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000017",
+          "text": "22_",
+          "bbox_points": [
+            29.259241104125977,
+            575.9376220703125,
+            36.631919860839844,
+            589.1392822265625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000018",
+          "text": "en",
+          "bbox_points": [
+            30.77880096435547,
+            567.7046508789062,
+            35.128440856933594,
+            575.7607116699219
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000019",
+          "text": "1",
+          "bbox_points": [
+            71.47599792480469,
+            93.10223388671875,
+            75.26976013183594,
+            101.03997802734375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000020",
+          "text": "INTRODUCTION",
+          "bbox_points": [
+            92.91167449951172,
+            93.00286865234375,
+            175.79115295410156,
+            101.16143798828125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000021",
+          "text": "This document, part of the GLOBALG.A.P. general regulations (GR), applies to the Integrated",
+          "bbox_points": [
+            71.17391967773438,
+            111.59423828125,
+            541.5640258789062,
+            121.94976806640625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000022",
+          "text": "Farm Assurance version 6 Smart (IFA v6 Smart)",
+          "bbox_points": [
+            71.81427001953125,
+            124.3233642578125,
+            317.06011962890625,
+            134.6678466796875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000023",
+          "text": "edition and",
+          "bbox_points": [
+            322.5878601074219,
+            124.455810546875,
+            376.83837890625,
+            132.48193359375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000024",
+          "text": "the Integrated Farm Assurance",
+          "bbox_points": [
+            382.501953125,
+            124.455810546875,
+            541.5850219726562,
+            134.6678466796875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000025",
+          "text": "version 6 GFS (IFA v6 GFS) edition.",
+          "bbox_points": [
+            71.04142761230469,
+            136.91998291015625,
+            246.74745178222656,
+            147.26446533203125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000026",
+          "text": "These rules for the aquaculture scope shall be used in combination with the GLOBALG.A.P. GR",
+          "bbox_points": [
+            71.1518325805664,
+            155.5113525390625,
+            538.6847534179688,
+            165.74542236328125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000027",
+          "text": "and apply",
+          "bbox_points": [
+            71.28429412841797,
+            168.3729248046875,
+            122.984619140625,
+            178.5849609375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000028",
+          "text": "to",
+          "bbox_points": [
+            130.8450927734375,
+            168.549560546875,
+            139.50045776367188,
+            176.3990478515625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000029",
+          "text": "the production of all products listed under the aquaculture scope in the",
+          "bbox_points": [
+            147.5265350341797,
+            168.240478515625,
+            541.591552734375,
+            178.4635009765625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000030",
+          "text": "GLOBALG.A.P. product list.",
+          "bbox_points": [
+            71.48296356201172,
+            180.8260498046875,
+            209.81857299804688,
+            191.06011962890625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000031",
+          "text": "The term “shall” is used throughout the GLOBALG.A.P. normative documents",
+          "bbox_points": [
+            71.1517562866211,
+            199.5499267578125,
+            478.2296447753906,
+            209.90545654296875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000032",
+          "text": "to indicate",
+          "bbox_points": [
+            485.3394775390625,
+            199.69342041015625,
+            541.6004028320312,
+            207.71954345703125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000033",
+          "text": "mandatory",
+          "bbox_points": [
+            71.62648010253906,
+            212.2900390625,
+            122.86422729492188,
+            222.5020751953125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000034",
+          "text": "provisions.",
+          "bbox_points": [
+            126.82648468017578,
+            212.2900390625,
+            177.64361572265625,
+            222.380615234375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000035",
+          "text": "2",
+          "bbox_points": [
+            71.17385864257812,
+            242.98126220703125,
+            76.48410034179688,
+            250.91900634765625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000036",
+          "text": "CERTIFICATION SCOPE",
+          "bbox_points": [
+            92.65769958496094,
+            242.88189697265625,
+            218.105224609375,
+            251.051513671875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000037",
+          "text": "2.1",
+          "bbox_points": [
+            71.17385864257812,
+            267.57843017578125,
+            84.48478698730469,
+            275.51617431640625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000038",
+          "text": "GLOBALG.A.P. product list",
+          "bbox_points": [
+            99.74537658691406,
+            267.47906494140625,
+            241.51222229003906,
+            277.67999267578125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000039",
+          "text": "The aquaculture",
+          "bbox_points": [
+            71.1407470703125,
+            286.2138671875,
+            150.83187866210938,
+            296.304443359375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000040",
+          "text": "scope",
+          "bbox_points": [
+            155.46426391601562,
+            288.267333984375,
+            184.07994079589844,
+            296.304443359375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000041",
+          "text": "includes the following product categories",
+          "bbox_points": [
+            189.09210205078125,
+            286.0814208984375,
+            389.1291809082031,
+            296.4259033203125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000042",
+          "text": "at all stages of their life cycle",
+          "bbox_points": [
+            393.8399353027344,
+            286.0814208984375,
+            541.5872192382812,
+            296.4259033203125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000043",
+          "text": "and those species listed in the GLOBALG.A.P. product list:",
+          "bbox_points": [
+            71.28427124023438,
+            298.7884521484375,
+            356.1824951171875,
+            309.02252197265625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000044",
+          "text": "•",
+          "bbox_points": [
+            85.51113891601562,
+            321.12237548828125,
+            89.56649780273438,
+            326.278076171875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000045",
+          "text": "Finfish",
+          "bbox_points": [
+            107.8045883178711,
+            318.240966796875,
+            138.56202697753906,
+            326.3995361328125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000046",
+          "text": "•",
+          "bbox_points": [
+            85.52217864990234,
+            340.5638122558594,
+            89.5775375366211,
+            345.719482421875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000047",
+          "text": "Crustaceans",
+          "bbox_points": [
+            107.46234130859375,
+            337.682373046875,
+            168.37664794921875,
+            345.8409118652344
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000048",
+          "text": "•",
+          "bbox_points": [
+            85.52217864990234,
+            359.8838195800781,
+            89.5775375366211,
+            365.03948974609375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000049",
+          "text": "Molluscs",
+          "bbox_points": [
+            107.72730255126953,
+            357.1348571777344,
+            149.3149871826172,
+            365.1609191894531
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000050",
+          "text": "•",
+          "bbox_points": [
+            85.52217864990234,
+            379.32525634765625,
+            89.5775375366211,
+            384.4809265136719
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000051",
+          "text": "Seaweed",
+          "bbox_points": [
+            107.40714263916016,
+            376.4438171386719,
+            151.95794677734375,
+            384.60235595703125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000052",
+          "text": "At all stages, seedlings (ova and/or juveniles) shall originate from producers with",
+          "bbox_points": [
+            70.90889739990234,
+            394.9247741699219,
+            458.80810546875,
+            405.2692565917969
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000053",
+          "text": "GLOBALG.A.P.",
+          "bbox_points": [
+            462.9172058105469,
+            394.9137268066406,
+            537.6591186523438,
+            403.08331298828125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000054",
+          "text": "registration/certification. Brood",
+          "bbox_points": [
+            71.61544036865234,
+            407.6428527832031,
+            218.1935272216797,
+            417.9873352050781
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000055",
+          "text": "stock shall be",
+          "bbox_points": [
+            221.9581756591797,
+            407.77532958984375,
+            286.804931640625,
+            415.8013916015625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000056",
+          "text": "obtained through",
+          "bbox_points": [
+            290.13018798828125,
+            407.77532958984375,
+            371.1980285644531,
+            417.9873352050781
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000057",
+          "text": "an",
+          "bbox_points": [
+            374.8842468261719,
+            409.8287658691406,
+            385.9794921875,
+            415.8013916015625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000058",
+          "text": "aquaculture",
+          "bbox_points": [
+            389.6336975097656,
+            407.77532958984375,
+            446.26007080078125,
+            417.8658752441406
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000059",
+          "text": "breeding",
+          "bbox_points": [
+            450.07769775390625,
+            407.77532958984375,
+            491.343017578125,
+            417.9873352050781
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000060",
+          "text": "program.",
+          "bbox_points": [
+            495.45208740234375,
+            409.8287658691406,
+            537.7573852539062,
+            417.9873352050781
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000061",
+          "text": "If wild-caught brood",
+          "bbox_points": [
+            71.91357421875,
+            420.239501953125,
+            170.05917358398438,
+            430.583984375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000062",
+          "text": "stock is used, it shall originate",
+          "bbox_points": [
+            176.2415771484375,
+            420.3719787597656,
+            331.2276916503906,
+            430.583984375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000063",
+          "text": "from a",
+          "bbox_points": [
+            336.80731201171875,
+            420.239501953125,
+            369.3885498046875,
+            428.3980407714844
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000064",
+          "text": "fishery that has proven",
+          "bbox_points": [
+            374.85113525390625,
+            420.239501953125,
+            491.1188659667969,
+            430.583984375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000065",
+          "text": "that it is",
+          "bbox_points": [
+            497.10809326171875,
+            420.3719787597656,
+            541.61474609375,
+            428.3980407714844
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000066",
+          "text": "ecologically managed. Passive collection of seedlings from the planktonic phase is allowed",
+          "bbox_points": [
+            71.3173599243164,
+            432.9576110839844,
+            521.0393676757812,
+            443.3020935058594
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000067",
+          "text": "for",
+          "bbox_points": [
+            525.9335327148438,
+            432.9576110839844,
+            541.6180419921875,
+            441.11614990234375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000068",
+          "text": "molluscs’ spat.",
+          "bbox_points": [
+            71.63751983642578,
+            445.60943603515625,
+            142.1389617919922,
+            455.77728271484375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000069",
+          "text": "Aquaculture certification cannot be achieved for wild aquatic species/catch that is",
+          "bbox_points": [
+            70.90888214111328,
+            464.278076171875,
+            464.91546630859375,
+            474.5010986328125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000070",
+          "text": "not farmed.",
+          "bbox_points": [
+            469.198974609375,
+            464.278076171875,
+            523.127197265625,
+            472.4366149902344
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000071",
+          "text": "Postharvest",
+          "bbox_points": [
+            71.77003479003906,
+            483.0129699707031,
+            128.97488403320312,
+            491.0390319824219
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000072",
+          "text": "handling of aquaculture products by the same legal entity",
+          "bbox_points": [
+            134.41099548339844,
+            482.8804931640625,
+            424.08624267578125,
+            493.2249755859375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000073",
+          "text": "as the farm",
+          "bbox_points": [
+            429.1569519042969,
+            482.8804931640625,
+            486.0769958496094,
+            491.0390319824219
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000074",
+          "text": "shall also",
+          "bbox_points": [
+            491.7427062988281,
+            483.0129699707031,
+            541.6290893554688,
+            491.0390319824219
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000075",
+          "text": "demonstrate compliance with",
+          "bbox_points": [
+            71.2953109741211,
+            495.6095886230469,
+            211.54306030273438,
+            505.70013427734375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000076",
+          "text": "the postharvest/mass balance and traceability sections of the P&Cs",
+          "bbox_points": [
+            215.00299072265625,
+            495.47711181640625,
+            538.254150390625,
+            505.82159423828125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000077",
+          "text": "applicable to aquaculture",
+          "bbox_points": [
+            71.31735229492188,
+            508.32769775390625,
+            192.84457397460938,
+            518.4182434082031
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000078",
+          "text": "in order for the producer to",
+          "bbox_points": [
+            197.05191040039062,
+            508.1952209472656,
+            326.2530517578125,
+            518.4182434082031
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000079",
+          "text": "achieve certification.",
+          "bbox_points": [
+            330.0397644042969,
+            508.1952209472656,
+            428.33221435546875,
+            516.353759765625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000080",
+          "text": "The scope of certification clearly defines the scientific name of the farmed species",
+          "bbox_points": [
+            71.17383575439453,
+            526.797607421875,
+            460.12298583984375,
+            537.14208984375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000081",
+          "text": "in the electronic",
+          "bbox_points": [
+            463.69000244140625,
+            526.9300842285156,
+            541.6026000976562,
+            534.9561462402344
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000082",
+          "text": "certificate issued in the GLOBALG.A.P. IT systems.",
+          "bbox_points": [
+            71.35047149658203,
+            539.5046691894531,
+            320.7109375,
+            549.8601989746094
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000083",
+          "text": "3",
+          "bbox_points": [
+            71.33940887451172,
+            570.2179260253906,
+            76.58341217041016,
+            578.2771301269531
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000084",
+          "text": "REGISTRATION",
+          "bbox_points": [
+            92.9667739868164,
+            570.1185913085938,
+            174.47618103027344,
+            578.2881774902344
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000085",
+          "text": "Producers shall register with the same certification body (CB) for the aquaculture certification and",
+          "bbox_points": [
+            71.76997375488281,
+            588.7209930419922,
+            541.6047973632812,
+            599.0654754638672
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000086",
+          "text": "for the GLOBALG.A.P. Risk Assessment on Social Practices (GRASP). Registration for GRASP",
+          "bbox_points": [
+            70.99716186523438,
+            601.4280395507812,
+            541.541748046875,
+            611.7835540771484
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000087",
+          "text": "shall follow the GRASP general rules.",
+          "bbox_points": [
+            71.24004364013672,
+            614.0356903076172,
+            253.35035705566406,
+            624.3801727294922
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000088",
+          "text": "4",
+          "bbox_points": [
+            71.0965347290039,
+            644.8593597412109,
+            76.7710952758789,
+            652.797119140625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000089",
+          "text": "CB AUDIT",
+          "bbox_points": [
+            92.64661407470703,
+            644.7599945068359,
+            144.46835327148438,
+            652.9185638427734
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000090",
+          "text": "4.1",
+          "bbox_points": [
+            71.08549499511719,
+            669.4565277099609,
+            84.46266174316406,
+            677.394287109375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000091",
+          "text": "CB farm audit timing",
+          "bbox_points": [
+            99.71221160888672,
+            669.3571624755859,
+            206.7571563720703,
+            679.7016448974609
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000092",
+          "text": "The registered aquaculture species shall be present on the farm at the time of the CB audit.",
+          "bbox_points": [
+            71.11861419677734,
+            687.9595794677734,
+            541.566162109375,
+            698.3040618896484
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000093",
+          "text": "Postharvest handling operations performed by the same legal entity as the farm shall also be",
+          "bbox_points": [
+            71.70370483398438,
+            700.6776580810547,
+            541.5550537109375,
+            711.0221405029297
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000094",
+          "text": "audited.",
+          "bbox_points": [
+            71.25106048583984,
+            713.4067687988281,
+            109.06306457519531,
+            721.4328384399414
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        }
+      ],
+      "shapes": [],
+      "bitmap_resources": [],
+      "backend": "pypdfium2",
+      "fallback_reason": null
+    },
+    {
+      "page_index": 1,
+      "width_points": 595.3200073242188,
+      "height_points": 841.9199829101562,
+      "words": [
+        {
+          "id": "native_p0001_fw000000",
+          "text": "Code ref.: GR – Rules for aquaculture; v6.0_Sep22; English version",
+          "bbox_points": [
+            71.08200073242188,
+            794.4268646240234,
+            310.3892822265625,
+            801.9603424072266
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000001",
+          "text": "GLOBALG.A.P. general regulations – Rules for aquaculture scope",
+          "bbox_points": [
+            71.10611724853516,
+            803.658821105957,
+            304.732421875,
+            811.2003421783447
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000002",
+          "text": "Page 4 of 4",
+          "bbox_points": [
+            71.29104614257812,
+            812.904821395874,
+            113.82264709472656,
+            820.4383029937744
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000003",
+          "text": "220929_",
+          "bbox_points": [
+            29.259241104125977,
+            743.6528167724609,
+            36.631919860839844,
+            774.606819152832
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000004",
+          "text": "G",
+          "bbox_points": [
+            29.186880111694336,
+            738.0248184204102,
+            35.128440856933594,
+            743.347297668457
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000005",
+          "text": "G_",
+          "bbox_points": [
+            29.186880111694336,
+            726.7350616455078,
+            36.631919860839844,
+            737.1074523925781
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000006",
+          "text": "G",
+          "bbox_points": [
+            29.186880111694336,
+            721.1070556640625,
+            35.128440856933594,
+            726.4295349121094
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000007",
+          "text": "R_",
+          "bbox_points": [
+            29.283361434936523,
+            710.2964782714844,
+            36.631919860839844,
+            719.9798583984375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000008",
+          "text": "Ru",
+          "bbox_points": [
+            29.283361434936523,
+            700.7658538818359,
+            35.128440856933594,
+            709.7819213867188
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000009",
+          "text": "les_",
+          "bbox_points": [
+            29.283361434936523,
+            685.343505859375,
+            36.631919860839844,
+            699.7045745849609
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000010",
+          "text": "for_",
+          "bbox_points": [
+            29.186880111694336,
+            671.5484924316406,
+            36.631919860839844,
+            685.3917541503906
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000011",
+          "text": "aquacu",
+          "bbox_points": [
+            30.77880096435547,
+            645.9450988769531,
+            36.631919860839844,
+            671.379638671875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000012",
+          "text": "lture_",
+          "bbox_points": [
+            29.283361434936523,
+            625.2429046630859,
+            36.631919860839844,
+            644.8838195800781
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000013",
+          "text": "v",
+          "bbox_points": [
+            30.86724090576172,
+            621.4399719238281,
+            35.040000915527344,
+            625.2589721679688
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000014",
+          "text": "6_",
+          "bbox_points": [
+            29.259241104125977,
+            612.2864532470703,
+            36.631919860839844,
+            620.9776763916016
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000015",
+          "text": "0_",
+          "bbox_points": [
+            29.259241104125977,
+            603.4102783203125,
+            36.631919860839844,
+            612.0693664550781
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000016",
+          "text": "Sep",
+          "bbox_points": [
+            29.186880111694336,
+            589.6618804931641,
+            36.631919860839844,
+            603.2872619628906
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000017",
+          "text": "22_",
+          "bbox_points": [
+            29.259241104125977,
+            575.9376220703125,
+            36.631919860839844,
+            589.1392822265625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000018",
+          "text": "en",
+          "bbox_points": [
+            30.77880096435547,
+            567.7046508789062,
+            35.128440856933594,
+            575.7607116699219
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000019",
+          "text": "4.2",
+          "bbox_points": [
+            71.1297607421875,
+            93.10223388671875,
+            85.743408203125,
+            101.03997802734375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000020",
+          "text": "CB audit of product handling units",
+          "bbox_points": [
+            99.75647735595703,
+            93.00286865234375,
+            279.6941223144531,
+            103.34735107421875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000021",
+          "text": "Where an Option 2 producer group or an Option",
+          "bbox_points": [
+            71.05247497558594,
+            111.59423828125,
+            306.5710144042969,
+            121.94976806640625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000022",
+          "text": "1 multisite producer (with or without QMS) has",
+          "bbox_points": [
+            311.51470947265625,
+            111.59423828125,
+            541.5628662109375,
+            121.94976806640625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000023",
+          "text": "more than one product handling unit, each unit shall be audited while in operation (there",
+          "bbox_points": [
+            71.63760375976562,
+            124.3233642578125,
+            497.4349365234375,
+            134.6678466796875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000024",
+          "text": "shall be",
+          "bbox_points": [
+            501.2261047363281,
+            124.455810546875,
+            541.6258544921875,
+            132.48193359375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000025",
+          "text": "no sampling of product handling units).",
+          "bbox_points": [
+            71.648681640625,
+            136.91998291015625,
+            258.987548828125,
+            147.26446533203125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000026",
+          "text": "4.3",
+          "bbox_points": [
+            71.12980651855469,
+            161.616455078125,
+            85.82073211669922,
+            169.6756591796875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000027",
+          "text": "CB farm audit duration",
+          "bbox_points": [
+            99.75652313232422,
+            161.51708984375,
+            217.79620361328125,
+            169.6756591796875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000028",
+          "text": "a)",
+          "bbox_points": [
+            85.48179626464844,
+            180.240966796875,
+            94.47940063476562,
+            190.58544921875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000029",
+          "text": "The CB farm audit duration",
+          "bbox_points": [
+            106.57923889160156,
+            180.240966796875,
+            238.6375274658203,
+            188.3995361328125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000030",
+          "text": "shall allow for an",
+          "bbox_points": [
+            243.1109161376953,
+            180.240966796875,
+            324.81134033203125,
+            188.3995361328125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000031",
+          "text": "opening meeting with farm management, a",
+          "bbox_points": [
+            329.3001708984375,
+            180.240966796875,
+            541.587158203125,
+            190.58544921875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000032",
+          "text": "complete evaluation of all relevant standard requirements, completion of the applicable",
+          "bbox_points": [
+            106.76689910888672,
+            192.83758544921875,
+            541.5960693359375,
+            203.06060791015625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000033",
+          "text": "checklist, and the presentation of the results to the producer.",
+          "bbox_points": [
+            106.75584411621094,
+            205.5556640625,
+            400.14166259765625,
+            215.7786865234375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000034",
+          "text": "b)",
+          "bbox_points": [
+            85.79759979248047,
+            224.16290283203125,
+            94.47504425048828,
+            234.50738525390625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000035",
+          "text": "The initial CB farm audit duration for the aquaculture scope shall be no less than one and",
+          "bbox_points": [
+            106.57488250732422,
+            224.16290283203125,
+            541.52197265625,
+            234.38592529296875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000036",
+          "text": "a half days. This duration excludes the GRASP assessment or any other add-on CB audit",
+          "bbox_points": [
+            106.71839904785156,
+            236.8809814453125,
+            541.6358642578125,
+            247.2254638671875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000037",
+          "text": "and shall also be applied in the first year of the",
+          "bbox_points": [
+            106.72943115234375,
+            249.47760009765625,
+            332.9346008300781,
+            259.82208251953125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000038",
+          "text": "IFA Smart or IFA GFS CB audit.",
+          "bbox_points": [
+            337.2777404785156,
+            249.47760009765625,
+            491.70526123046875,
+            257.63616943359375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000039",
+          "text": "c)",
+          "bbox_points": [
+            85.51055908203125,
+            268.0828857421875,
+            97.26815795898438,
+            278.4273681640625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000040",
+          "text": "In subsequent years, the usual CB farm audit duration for the aquaculture scope is",
+          "bbox_points": [
+            107.3476791381836,
+            268.0828857421875,
+            501.1610107421875,
+            278.4273681640625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000041",
+          "text": "no",
+          "bbox_points": [
+            504.975341796875,
+            270.268798828125,
+            516.0926513671875,
+            276.241455078125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000042",
+          "text": "less",
+          "bbox_points": [
+            519.8351440429688,
+            268.21533203125,
+            538.253173828125,
+            276.241455078125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000043",
+          "text": "than seven",
+          "bbox_points": [
+            106.53071594238281,
+            280.93341064453125,
+            159.57791137695312,
+            288.95953369140625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000044",
+          "text": "hours on-site.",
+          "bbox_points": [
+            164.06015014648438,
+            280.93341064453125,
+            228.92015075683594,
+            288.95953369140625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000045",
+          "text": "d)",
+          "bbox_points": [
+            85.45536041259766,
+            299.40289306640625,
+            94.47504425048828,
+            309.74737548828125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000046",
+          "text": "The minimum duration of seven",
+          "bbox_points": [
+            106.57488250732422,
+            299.40289306640625,
+            275.13360595703125,
+            307.56146240234375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000047",
+          "text": "hours shall apply to the simplest circumstances:",
+          "bbox_points": [
+            283.44671630859375,
+            299.53533935546875,
+            541.628173828125,
+            309.74737548828125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000048",
+          "text": "Subsequent CB audits of typically mollusc farms but potentially also other small finfish and",
+          "bbox_points": [
+            106.81776428222656,
+            312.1209716796875,
+            541.5895385742188,
+            322.4654541015625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000049",
+          "text": "crustacean farms that have very simple or compact operations, a single species, no",
+          "bbox_points": [
+            106.75151824951172,
+            324.71759033203125,
+            541.4954833984375,
+            335.0621032714844
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000050",
+          "text": "product handling, and",
+          "bbox_points": [
+            107.04959869384766,
+            337.4467468261719,
+            218.57568359375,
+            347.65875244140625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000051",
+          "text": "less than five",
+          "bbox_points": [
+            226.66799926757812,
+            337.31427001953125,
+            296.80072021484375,
+            345.4728088378906
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000052",
+          "text": "workers. The seven",
+          "bbox_points": [
+            303.8706970214844,
+            337.4467468261719,
+            406.16845703125,
+            345.4728088378906
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000053",
+          "text": "hours exclude",
+          "bbox_points": [
+            414.24859619140625,
+            337.4467468261719,
+            484.9498596191406,
+            345.4728088378906
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000054",
+          "text": "reporting,",
+          "bbox_points": [
+            492.8424072265625,
+            337.4467468261719,
+            541.6226196289062,
+            347.65875244140625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000055",
+          "text": "preparation, and travel (during the CB audit). Any other type of operation will require more",
+          "bbox_points": [
+            107.04959869384766,
+            350.0323486328125,
+            541.5618896484375,
+            360.3768310546875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000056",
+          "text": "than seven",
+          "bbox_points": [
+            106.51966094970703,
+            362.7614440917969,
+            159.93118286132812,
+            370.7875061035156
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000057",
+          "text": "hours on-site audit time. These seven",
+          "bbox_points": [
+            164.76669311523438,
+            362.7614440917969,
+            348.80352783203125,
+            370.7875061035156
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000058",
+          "text": "hours also exclude the duration of the",
+          "bbox_points": [
+            353.6390380859375,
+            362.62896728515625,
+            541.5508422851562,
+            370.7875061035156
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000059",
+          "text": "GRASP assessment or any other add-on CB audit.",
+          "bbox_points": [
+            106.8950424194336,
+            375.3470458984375,
+            356.9399719238281,
+            385.6915283203125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000060",
+          "text": "Copyright",
+          "bbox_points": [
+            71.43888092041016,
+            714.9628601074219,
+            122.83338928222656,
+            725.3073425292969
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000061",
+          "text": "© Copyright: GLOBALG.A.P. c/o FoodPLUS GmbH, Spichernstr. 55, 50672 Cologne, Germany.",
+          "bbox_points": [
+            70.93103790283203,
+            733.6718292236328,
+            541.6214599609375,
+            744.02734375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000062",
+          "text": "Copying and distribution permitted only in unaltered form.",
+          "bbox_points": [
+            71.47200012207031,
+            746.2795104980469,
+            348.720458984375,
+            756.6239852905273
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        }
+      ],
+      "bitmap_boxes_points": [],
+      "characters": [],
+      "text_lines": [
+        {
+          "id": "native_p0001_ft000000",
+          "text": "Code ref.: GR – Rules for aquaculture; v6.0_Sep22; English version",
+          "bbox_points": [
+            71.08200073242188,
+            794.4268646240234,
+            310.3892822265625,
+            801.9603424072266
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000001",
+          "text": "GLOBALG.A.P. general regulations – Rules for aquaculture scope",
+          "bbox_points": [
+            71.10611724853516,
+            803.658821105957,
+            304.732421875,
+            811.2003421783447
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000002",
+          "text": "Page 4 of 4",
+          "bbox_points": [
+            71.29104614257812,
+            812.904821395874,
+            113.82264709472656,
+            820.4383029937744
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000003",
+          "text": "220929_",
+          "bbox_points": [
+            29.259241104125977,
+            743.6528167724609,
+            36.631919860839844,
+            774.606819152832
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000004",
+          "text": "G",
+          "bbox_points": [
+            29.186880111694336,
+            738.0248184204102,
+            35.128440856933594,
+            743.347297668457
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000005",
+          "text": "G_",
+          "bbox_points": [
+            29.186880111694336,
+            726.7350616455078,
+            36.631919860839844,
+            737.1074523925781
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000006",
+          "text": "G",
+          "bbox_points": [
+            29.186880111694336,
+            721.1070556640625,
+            35.128440856933594,
+            726.4295349121094
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000007",
+          "text": "R_",
+          "bbox_points": [
+            29.283361434936523,
+            710.2964782714844,
+            36.631919860839844,
+            719.9798583984375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000008",
+          "text": "Ru",
+          "bbox_points": [
+            29.283361434936523,
+            700.7658538818359,
+            35.128440856933594,
+            709.7819213867188
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000009",
+          "text": "les_",
+          "bbox_points": [
+            29.283361434936523,
+            685.343505859375,
+            36.631919860839844,
+            699.7045745849609
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000010",
+          "text": "for_",
+          "bbox_points": [
+            29.186880111694336,
+            671.5484924316406,
+            36.631919860839844,
+            685.3917541503906
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000011",
+          "text": "aquacu",
+          "bbox_points": [
+            30.77880096435547,
+            645.9450988769531,
+            36.631919860839844,
+            671.379638671875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000012",
+          "text": "lture_",
+          "bbox_points": [
+            29.283361434936523,
+            625.2429046630859,
+            36.631919860839844,
+            644.8838195800781
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000013",
+          "text": "v",
+          "bbox_points": [
+            30.86724090576172,
+            621.4399719238281,
+            35.040000915527344,
+            625.2589721679688
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000014",
+          "text": "6_",
+          "bbox_points": [
+            29.259241104125977,
+            612.2864532470703,
+            36.631919860839844,
+            620.9776763916016
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000015",
+          "text": "0_",
+          "bbox_points": [
+            29.259241104125977,
+            603.4102783203125,
+            36.631919860839844,
+            612.0693664550781
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000016",
+          "text": "Sep",
+          "bbox_points": [
+            29.186880111694336,
+            589.6618804931641,
+            36.631919860839844,
+            603.2872619628906
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000017",
+          "text": "22_",
+          "bbox_points": [
+            29.259241104125977,
+            575.9376220703125,
+            36.631919860839844,
+            589.1392822265625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000018",
+          "text": "en",
+          "bbox_points": [
+            30.77880096435547,
+            567.7046508789062,
+            35.128440856933594,
+            575.7607116699219
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000019",
+          "text": "4.2",
+          "bbox_points": [
+            71.1297607421875,
+            93.10223388671875,
+            85.743408203125,
+            101.03997802734375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000020",
+          "text": "CB audit of product handling units",
+          "bbox_points": [
+            99.75647735595703,
+            93.00286865234375,
+            279.6941223144531,
+            103.34735107421875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000021",
+          "text": "Where an Option 2 producer group or an Option",
+          "bbox_points": [
+            71.05247497558594,
+            111.59423828125,
+            306.5710144042969,
+            121.94976806640625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000022",
+          "text": "1 multisite producer (with or without QMS) has",
+          "bbox_points": [
+            311.51470947265625,
+            111.59423828125,
+            541.5628662109375,
+            121.94976806640625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000023",
+          "text": "more than one product handling unit, each unit shall be audited while in operation (there",
+          "bbox_points": [
+            71.63760375976562,
+            124.3233642578125,
+            497.4349365234375,
+            134.6678466796875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000024",
+          "text": "shall be",
+          "bbox_points": [
+            501.2261047363281,
+            124.455810546875,
+            541.6258544921875,
+            132.48193359375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000025",
+          "text": "no sampling of product handling units).",
+          "bbox_points": [
+            71.648681640625,
+            136.91998291015625,
+            258.987548828125,
+            147.26446533203125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000026",
+          "text": "4.3",
+          "bbox_points": [
+            71.12980651855469,
+            161.616455078125,
+            85.82073211669922,
+            169.6756591796875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000027",
+          "text": "CB farm audit duration",
+          "bbox_points": [
+            99.75652313232422,
+            161.51708984375,
+            217.79620361328125,
+            169.6756591796875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000028",
+          "text": "a)",
+          "bbox_points": [
+            85.48179626464844,
+            180.240966796875,
+            94.47940063476562,
+            190.58544921875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000029",
+          "text": "The CB farm audit duration",
+          "bbox_points": [
+            106.57923889160156,
+            180.240966796875,
+            238.6375274658203,
+            188.3995361328125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000030",
+          "text": "shall allow for an",
+          "bbox_points": [
+            243.1109161376953,
+            180.240966796875,
+            324.81134033203125,
+            188.3995361328125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000031",
+          "text": "opening meeting with farm management, a",
+          "bbox_points": [
+            329.3001708984375,
+            180.240966796875,
+            541.587158203125,
+            190.58544921875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000032",
+          "text": "complete evaluation of all relevant standard requirements, completion of the applicable",
+          "bbox_points": [
+            106.76689910888672,
+            192.83758544921875,
+            541.5960693359375,
+            203.06060791015625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000033",
+          "text": "checklist, and the presentation of the results to the producer.",
+          "bbox_points": [
+            106.75584411621094,
+            205.5556640625,
+            400.14166259765625,
+            215.7786865234375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000034",
+          "text": "b)",
+          "bbox_points": [
+            85.79759979248047,
+            224.16290283203125,
+            94.47504425048828,
+            234.50738525390625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000035",
+          "text": "The initial CB farm audit duration for the aquaculture scope shall be no less than one and",
+          "bbox_points": [
+            106.57488250732422,
+            224.16290283203125,
+            541.52197265625,
+            234.38592529296875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000036",
+          "text": "a half days. This duration excludes the GRASP assessment or any other add-on CB audit",
+          "bbox_points": [
+            106.71839904785156,
+            236.8809814453125,
+            541.6358642578125,
+            247.2254638671875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000037",
+          "text": "and shall also be applied in the first year of the",
+          "bbox_points": [
+            106.72943115234375,
+            249.47760009765625,
+            332.9346008300781,
+            259.82208251953125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000038",
+          "text": "IFA Smart or IFA GFS CB audit.",
+          "bbox_points": [
+            337.2777404785156,
+            249.47760009765625,
+            491.70526123046875,
+            257.63616943359375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000039",
+          "text": "c)",
+          "bbox_points": [
+            85.51055908203125,
+            268.0828857421875,
+            97.26815795898438,
+            278.4273681640625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000040",
+          "text": "In subsequent years, the usual CB farm audit duration for the aquaculture scope is",
+          "bbox_points": [
+            107.3476791381836,
+            268.0828857421875,
+            501.1610107421875,
+            278.4273681640625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000041",
+          "text": "no",
+          "bbox_points": [
+            504.975341796875,
+            270.268798828125,
+            516.0926513671875,
+            276.241455078125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000042",
+          "text": "less",
+          "bbox_points": [
+            519.8351440429688,
+            268.21533203125,
+            538.253173828125,
+            276.241455078125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000043",
+          "text": "than seven",
+          "bbox_points": [
+            106.53071594238281,
+            280.93341064453125,
+            159.57791137695312,
+            288.95953369140625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000044",
+          "text": "hours on-site.",
+          "bbox_points": [
+            164.06015014648438,
+            280.93341064453125,
+            228.92015075683594,
+            288.95953369140625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000045",
+          "text": "d)",
+          "bbox_points": [
+            85.45536041259766,
+            299.40289306640625,
+            94.47504425048828,
+            309.74737548828125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000046",
+          "text": "The minimum duration of seven",
+          "bbox_points": [
+            106.57488250732422,
+            299.40289306640625,
+            275.13360595703125,
+            307.56146240234375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000047",
+          "text": "hours shall apply to the simplest circumstances:",
+          "bbox_points": [
+            283.44671630859375,
+            299.53533935546875,
+            541.628173828125,
+            309.74737548828125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000048",
+          "text": "Subsequent CB audits of typically mollusc farms but potentially also other small finfish and",
+          "bbox_points": [
+            106.81776428222656,
+            312.1209716796875,
+            541.5895385742188,
+            322.4654541015625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000049",
+          "text": "crustacean farms that have very simple or compact operations, a single species, no",
+          "bbox_points": [
+            106.75151824951172,
+            324.71759033203125,
+            541.4954833984375,
+            335.0621032714844
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000050",
+          "text": "product handling, and",
+          "bbox_points": [
+            107.04959869384766,
+            337.4467468261719,
+            218.57568359375,
+            347.65875244140625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000051",
+          "text": "less than five",
+          "bbox_points": [
+            226.66799926757812,
+            337.31427001953125,
+            296.80072021484375,
+            345.4728088378906
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000052",
+          "text": "workers. The seven",
+          "bbox_points": [
+            303.8706970214844,
+            337.4467468261719,
+            406.16845703125,
+            345.4728088378906
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000053",
+          "text": "hours exclude",
+          "bbox_points": [
+            414.24859619140625,
+            337.4467468261719,
+            484.9498596191406,
+            345.4728088378906
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000054",
+          "text": "reporting,",
+          "bbox_points": [
+            492.8424072265625,
+            337.4467468261719,
+            541.6226196289062,
+            347.65875244140625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000055",
+          "text": "preparation, and travel (during the CB audit). Any other type of operation will require more",
+          "bbox_points": [
+            107.04959869384766,
+            350.0323486328125,
+            541.5618896484375,
+            360.3768310546875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000056",
+          "text": "than seven",
+          "bbox_points": [
+            106.51966094970703,
+            362.7614440917969,
+            159.93118286132812,
+            370.7875061035156
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000057",
+          "text": "hours on-site audit time. These seven",
+          "bbox_points": [
+            164.76669311523438,
+            362.7614440917969,
+            348.80352783203125,
+            370.7875061035156
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000058",
+          "text": "hours also exclude the duration of the",
+          "bbox_points": [
+            353.6390380859375,
+            362.62896728515625,
+            541.5508422851562,
+            370.7875061035156
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000059",
+          "text": "GRASP assessment or any other add-on CB audit.",
+          "bbox_points": [
+            106.8950424194336,
+            375.3470458984375,
+            356.9399719238281,
+            385.6915283203125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000060",
+          "text": "Copyright",
+          "bbox_points": [
+            71.43888092041016,
+            714.9628601074219,
+            122.83338928222656,
+            725.3073425292969
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000061",
+          "text": "© Copyright: GLOBALG.A.P. c/o FoodPLUS GmbH, Spichernstr. 55, 50672 Cologne, Germany.",
+          "bbox_points": [
+            70.93103790283203,
+            733.6718292236328,
+            541.6214599609375,
+            744.02734375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000062",
+          "text": "Copying and distribution permitted only in unaltered form.",
+          "bbox_points": [
+            71.47200012207031,
+            746.2795104980469,
+            348.720458984375,
+            756.6239852905273
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        }
+      ],
+      "shapes": [],
+      "bitmap_resources": [],
+      "backend": "pypdfium2",
+      "fallback_reason": null
+    }
+  ]
+}

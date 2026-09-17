@@ -1,0 +1,146 @@
+[
+  {
+    "threaded": false,
+    "reads": 5,
+    "current_rss": 121946112,
+    "traced_bytes": [
+      21788,
+      43659704
+    ]
+  },
+  {
+    "threaded": false,
+    "reads": 10,
+    "current_rss": 124092416,
+    "traced_bytes": [
+      22985,
+      43660893
+    ]
+  },
+  {
+    "threaded": false,
+    "reads": 15,
+    "current_rss": 125566976,
+    "traced_bytes": [
+      24150,
+      43662002
+    ]
+  },
+  {
+    "threaded": false,
+    "reads": 20,
+    "current_rss": 126615552,
+    "traced_bytes": [
+      25256,
+      43663060
+    ]
+  },
+  {
+    "threaded": false,
+    "reads": 25,
+    "current_rss": 127827968,
+    "traced_bytes": [
+      26421,
+      43664201
+    ]
+  },
+  {
+    "threaded": false,
+    "reads": 30,
+    "current_rss": 129368064,
+    "traced_bytes": [
+      27618,
+      43665398
+    ]
+  },
+  {
+    "threaded": false,
+    "collected": 0,
+    "after_gc_traced": [
+      9146,
+      43665398
+    ],
+    "top_live_delta": [
+      "/Users/tang/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/subprocess.py:1018: size=1770 B (+1770 B), count=30 (+30), average=59 B",
+      "/Users/tang/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/subprocess.py:1012: size=1770 B (+1770 B), count=30 (+30), average=59 B",
+      "/Users/tang/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/subprocess.py:1023: size=1711 B (+1711 B), count=29 (+29), average=59 B",
+      "<stdin>:18: size=960 B (+960 B), count=24 (+24), average=40 B",
+      "/Users/tang/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/json/decoder.py:354: size=720 B (+720 B), count=6 (+6), average=120 B",
+      "<frozen abc>:123: size=503 B (+503 B), count=5 (+5), average=101 B",
+      "/Users/tang/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/tracemalloc.py:560: size=312 B (+312 B), count=2 (+2), average=156 B",
+      "/Users/tang/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/tracemalloc.py:423: size=312 B (+312 B), count=2 (+2), average=156 B"
+    ]
+  },
+  {
+    "threaded": true,
+    "reads": 5,
+    "current_rss": 130498560,
+    "traced_bytes": [
+      36689,
+      43675125
+    ]
+  },
+  {
+    "threaded": true,
+    "reads": 10,
+    "current_rss": 131547136,
+    "traced_bytes": [
+      37649,
+      43676133
+    ]
+  },
+  {
+    "threaded": true,
+    "reads": 15,
+    "current_rss": 125190144,
+    "traced_bytes": [
+      38995,
+      43677479
+    ]
+  },
+  {
+    "threaded": true,
+    "reads": 20,
+    "current_rss": 126255104,
+    "traced_bytes": [
+      39825,
+      43678368
+    ]
+  },
+  {
+    "threaded": true,
+    "reads": 25,
+    "current_rss": 127303680,
+    "traced_bytes": [
+      40604,
+      43679088
+    ]
+  },
+  {
+    "threaded": true,
+    "reads": 30,
+    "current_rss": 128352256,
+    "traced_bytes": [
+      41640,
+      43680124
+    ]
+  },
+  {
+    "threaded": true,
+    "collected": 0,
+    "after_gc_traced": [
+      20696,
+      43680124
+    ],
+    "top_live_delta": [
+      "/Users/tang/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/subprocess.py:1023: size=3245 B (+1534 B), count=55 (+26), average=59 B",
+      "/Users/tang/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/subprocess.py:1018: size=3186 B (+1416 B), count=54 (+24), average=59 B",
+      "<stdin>:18: size=2144 B (+1184 B), count=52 (+28), average=41 B",
+      "/Users/tang/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/subprocess.py:1012: size=2950 B (+1180 B), count=50 (+20), average=59 B",
+      "/Users/tang/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/tracemalloc.py:558: size=992 B (+880 B), count=20 (+18), average=50 B",
+      "/Users/tang/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/tracemalloc.py:115: size=0 B (-880 B), count=0 (-11)",
+      "/Users/tang/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/threading.py:293: size=760 B (+760 B), count=2 (+2), average=380 B",
+      "/Users/tang/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/json/decoder.py:354: size=1440 B (+720 B), count=12 (+6), average=120 B"
+    ]
+  }
+]

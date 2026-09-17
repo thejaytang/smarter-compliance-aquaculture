@@ -1,0 +1,36 @@
+[
+  {
+    "command": [
+      "ls",
+      "-lO",
+      "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/ui/review.html"
+    ],
+    "returncode": 0,
+    "stdout": "-rw-r--r--  1 tang  staff  compressed,dataless 1711 Sep  7 13:36 /Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/ui/review.html\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "xattr",
+      "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/ui/review.html"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "mdls",
+      "-name",
+      "kMDItemIsUbiquitous",
+      "-name",
+      "kMDItemUbiquitousItemDownloadingStatus",
+      "-name",
+      "kMDItemUbiquitousItemIsDownloaded",
+      "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/ui/review.html"
+    ],
+    "returncode": 1,
+    "stdout": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/ui/review.html: could not find /Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/ui/review.html.\n",
+    "stderr": ""
+  }
+]

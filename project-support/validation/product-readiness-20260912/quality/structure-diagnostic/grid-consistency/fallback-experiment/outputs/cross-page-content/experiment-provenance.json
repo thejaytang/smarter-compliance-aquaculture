@@ -1,0 +1,28 @@
+{
+  "actual_native_backends": [
+    "pypdfium2"
+  ],
+  "module_policy": {
+    "adapter": "material-structural-parser/4+dev-grid-consistency",
+    "semantic_processing": false,
+    "external_models": false,
+    "ocr": false,
+    "pdf_window_pages": 3,
+    "pdf_backend": "pdfium",
+    "table_grid_guard": "native-line-grid-consistency/experiment-1",
+    "table_grid_tolerance_points": 1.0,
+    "table_grid_reject_ratio": 0.25,
+    "pdf_marker_order": "same-row-before-body/1",
+    "pdf_paragraph_grouping": "same-page-source-preserving/1",
+    "human_adoption_required": true
+  },
+  "config_hash": "1ab4bc5e976bcd128cd37d47c95e068275d9b8ed426f5d30fbf832adadfc4b2c",
+  "parser_version": "material-structural-parser/4+dev-grid-consistency",
+  "production_parser_hash": "3696f3aab5aff829e7247418bd0b22cec1b5f3008c6419ac842f67ff7c38bce2",
+  "experimental_source_hash": "868091ac28287e0ddd732ad87a3980b32f231d9fece1d284961447e57778b5d9",
+  "experimental_grid_guard": "native-line-grid-consistency/experiment-1",
+  "grid_guard_sha256": "59cfbab77edf48abf2b1af9561ce8c866f536d2a78eebf875d5661b1aa22d933",
+  "all_group_invariants": true,
+  "business_adoption": false,
+  "docling_imported": false
+}

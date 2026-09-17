@@ -1,0 +1,1864 @@
+{
+  "schema_version": "material-structural-parser/2",
+  "parser_version": "material-structural-parser/2",
+  "source_sha256": "a34e5f4fc78486136ddbf3d661d26aad85e4b8a1990b2e6eda3f3ac1df7f7b5c",
+  "snapshot_id": "QS004-001",
+  "config_hash": "7803c0e0a77352a7206a8dd459abf30b1dad68ee77b6646cf99bc41ba9d75e9b",
+  "blocks": [
+    {
+      "id": "block-f4dd657418c46416de5090c7",
+      "type": "text",
+      "text": "Aquaculture Stewardship Council",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:18",
+          "page_index": 17,
+          "page": 18,
+          "bbox": [
+            396.9100036621094,
+            37.47711181640625,
+            545.1994018554688,
+            44.65911865234375
+          ],
+          "native_id": "native_p0000_ft000000"
+        }
+      ]
+    },
+    {
+      "id": "block-072b523c92903d8be138fa53",
+      "type": "text",
+      "text": "PRINCIPLE 1: COMPLY WITH ALL APPLICABLE",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:18",
+          "page_index": 17,
+          "page": 18,
+          "bbox": [
+            58.13399887084961,
+            66.446044921875,
+            488.491943359375,
+            79.65802001953125
+          ],
+          "native_id": "native_p0000_ft000016"
+        }
+      ]
+    },
+    {
+      "id": "block-52eb621da8cdde48d325cfaf",
+      "type": "text",
+      "text": "NATIONAL LAWS AND LOCAL REGULATIONS",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:18",
+          "page_index": 17,
+          "page": 18,
+          "bbox": [
+            58.13399887084961,
+            88.406005859375,
+            479.8380126953125,
+            101.61798095703125
+          ],
+          "native_id": "native_p0000_ft000017"
+        }
+      ]
+    },
+    {
+      "id": "block-320f16364f3be9fb53ec0697",
+      "type": "text",
+      "text": "Principle 1 is intended to ensure that all farms aiming to be certified against the ASC",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:18",
+          "page_index": 17,
+          "page": 18,
+          "bbox": [
+            57.8985595703125,
+            120.4130859375,
+            555.716796875,
+            130.84588623046875
+          ],
+          "native_id": "native_p0000_ft000018"
+        }
+      ]
+    },
+    {
+      "id": "block-413dc1f9093517907a9e8c5e",
+      "type": "text",
+      "text": "Salmon Standard standards meet their legal obligations as a baseline requirement.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:18",
+          "page_index": 17,
+          "page": 18,
+          "bbox": [
+            57.158878326416016,
+            136.54833984375,
+            555.4130249023438,
+            146.9259033203125
+          ],
+          "native_id": "native_p0000_ft000019"
+        }
+      ]
+    },
+    {
+      "id": "block-0ca151446c8fb76290155a1f",
+      "type": "text",
+      "text": "Adhering to the law will ensure that producers meet the basic environmental and social",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:18",
+          "page_index": 17,
+          "page": 18,
+          "bbox": [
+            56.662078857421875,
+            152.62835693359375,
+            555.3167114257812,
+            163.00592041015625
+          ],
+          "native_id": "native_p0000_ft000020"
+        }
+      ]
+    },
+    {
+      "id": "block-b5b0c9ff96c1a410118f13b5",
+      "type": "text",
+      "text": "requirements and the minimal structures, such as legitimate land tenure rights, on which",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:18",
+          "page_index": 17,
+          "page": 18,
+          "bbox": [
+            57.73295974731445,
+            168.7083740234375,
+            555.3721313476562,
+            179.0859375
+          ],
+          "native_id": "native_p0000_ft000021"
+        }
+      ]
+    },
+    {
+      "id": "block-ab7b513482d830bead8903e3",
+      "type": "text",
+      "text": "the effectiveness of the requirements will stand.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:18",
+          "page_index": 17,
+          "page": 18,
+          "bbox": [
+            56.82767868041992,
+            184.85308837890625,
+            320.5157470703125,
+            195.230712890625
+          ],
+          "native_id": "native_p0000_ft000022"
+        }
+      ]
+    },
+    {
+      "id": "block-178593b759a43bacc48be3a8",
+      "type": "text",
+      "text": "Criterion 1.1",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:18",
+          "page_index": 17,
+          "page": 18,
+          "bbox": [
+            92.71199798583984,
+            212.87603759765625,
+            161.8679962158203,
+            222.24798583984375
+          ],
+          "native_id": "native_p0000_ft000023"
+        }
+      ]
+    },
+    {
+      "id": "block-2308cc5c992bec58b67fc558",
+      "type": "text",
+      "text": "Compliance with all applicable local and national legal",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:18",
+          "page_index": 17,
+          "page": 18,
+          "bbox": [
+            184.7480010986328,
+            212.87603759765625,
+            524.4940185546875,
+            224.5400390625
+          ],
+          "native_id": "native_p0000_ft000024"
+        }
+      ]
+    },
+    {
+      "id": "block-20b621ac564c2f191832c777",
+      "type": "text",
+      "text": "requirements and regulations",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:18",
+          "page_index": 17,
+          "page": 18,
+          "bbox": [
+            185.20399475097656,
+            227.51605224609375,
+            369.1400146484375,
+            239.1800537109375
+          ],
+          "native_id": "native_p0000_ft000025"
+        }
+      ]
+    },
+    {
+      "id": "block-8dc1de113a1a22b3100f7551",
+      "type": "table",
+      "text": "",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:18",
+          "page_index": 17,
+          "page": 18,
+          "bbox": [
+            56.666666666666664,
+            253.33333333333334,
+            552.6666666666666,
+            577.3333333333334
+          ]
+        }
+      ],
+      "table": {
+        "rows": [
+          [
+            "INDICATOR REQUIREMENT",
+            ""
+          ],
+          [
+            "1.1.1 Presence of documents demonstrating compliance with local and national regulations and requirements on land and water use",
+            "Yes"
+          ],
+          [
+            "1.1.2 Presence of documents demonstrating compliance with all tax laws",
+            "Yes"
+          ],
+          [
+            "1.1.3 Presence of documents demonstrating compliance with all relevant national and local labour laws and regulations",
+            "Yes"
+          ],
+          [
+            "1.1.4 Presence of documents demonstrating compliance with regulations and permits concerning water quality impacts",
+            "Yes"
+          ]
+        ],
+        "merges": [
+          {
+            "row": 0,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 2
+          }
+        ],
+        "notes": []
+      }
+    },
+    {
+      "id": "block-344367323e8b42d17e662636",
+      "type": "text",
+      "text": "Rationale - Salmon aquaculture operations must, as a baseline, adhere to the national",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:18",
+          "page_index": 17,
+          "page": 18,
+          "bbox": [
+            57.55632019042969,
+            592.3715209960938,
+            533.671630859375,
+            603.1907196044922
+          ],
+          "native_id": "native_p0000_ft000046"
+        }
+      ]
+    },
+    {
+      "id": "block-5e372856ab8d7d1649cacd7f",
+      "type": "text",
+      "text": "and local laws of the regions where production is taking place. Farm operations that,",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:18",
+          "page_index": 17,
+          "page": 18,
+          "bbox": [
+            57.24720001220703,
+            608.8931121826172,
+            524.8132934570312,
+            619.3259124755859
+          ],
+          "native_id": "native_p0000_ft000047"
+        }
+      ]
+    },
+    {
+      "id": "block-c3065c7de2b47562d092f890",
+      "type": "text",
+      "text": "intentionally or unintentionally, break the law violate a fundamental benchmark of",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:18",
+          "page_index": 17,
+          "page": 18,
+          "bbox": [
+            57.55632019042969,
+            624.9731140136719,
+            514.3253784179688,
+            635.4059143066406
+          ],
+          "native_id": "native_p0000_ft000048"
+        }
+      ]
+    },
+    {
+      "id": "block-59b2ad1a18ed0cf2466fd734",
+      "type": "text",
+      "text": "performance for certified farms. It is important that aquaculture operations demonstrate",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:18",
+          "page_index": 17,
+          "page": 18,
+          "bbox": [
+            57.73295974731445,
+            641.0531158447266,
+            548.2332763671875,
+            651.4307250976562
+          ],
+          "native_id": "native_p0000_ft000049"
+        }
+      ]
+    },
+    {
+      "id": "block-92da95504f71ab94bc931dd1",
+      "type": "text",
+      "text": "a pattern of legal and responsible behaviour, including the implementation of corrective",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:18",
+          "page_index": 17,
+          "page": 18,
+          "bbox": [
+            57.24720001220703,
+            657.1331176757812,
+            545.7020263671875,
+            667.56591796875
+          ],
+          "native_id": "native_p0000_ft000050"
+        }
+      ]
+    },
+    {
+      "id": "block-75b04bb05521a00692513378",
+      "type": "text",
+      "text": "actions for any legal violations.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:18",
+          "page_index": 17,
+          "page": 18,
+          "bbox": [
+            57.24720001220703,
+            673.2131195068359,
+            227.21905517578125,
+            683.6459197998047
+          ],
+          "native_id": "native_p0000_ft000051"
+        }
+      ]
+    },
+    {
+      "id": "block-87fbc08f60350a185d0f6b0f",
+      "type": "table",
+      "text": "",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:18",
+          "page_index": 17,
+          "page": 18,
+          "bbox": [
+            270.0,
+            701.3333333333334,
+            528.6666666666666,
+            744.6666666666666
+          ]
+        }
+      ],
+      "table": {
+        "rows": [
+          [
+            "Document ID: Version:",
+            "ASC-STD-010 1.5",
+            "Date issued: Last reviewed:",
+            "13/10/2025 13/10/2025"
+          ],
+          [
+            "",
+            "",
+            "Page 18 of 134",
+            ""
+          ]
+        ],
+        "merges": [],
+        "notes": []
+      }
+    },
+    {
+      "id": "block-5bb8fabaf3438bb0afd0f719",
+      "type": "text",
+      "text": "ASC Salmon and Cod Standard",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:18",
+          "page_index": 17,
+          "page": 18,
+          "bbox": [
+            163.71295166015625,
+            705.4478378295898,
+            264.81439208984375,
+            710.2883987426758
+          ],
+          "native_id": "native_p0000_ft000002"
+        }
+      ]
+    },
+    {
+      "id": "block-d99f4c90dc939c7600f93987",
+      "type": "text",
+      "text": "Document Name:",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:18",
+          "page_index": 17,
+          "page": 18,
+          "bbox": [
+            90.6427230834961,
+            705.7199935913086,
+            148.12681579589844,
+            710.2819137573242
+          ],
+          "native_id": "native_p0000_ft000001"
+        }
+      ]
+    },
+    {
+      "id": "block-1645a1cf08feeae19a93228e",
+      "type": "text",
+      "text": "Director of Standards and Science",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:18",
+          "page_index": 17,
+          "page": 18,
+          "bbox": [
+            159.3987274169922,
+            719.8154373168945,
+            269.6170349121094,
+            724.6884002685547
+          ],
+          "native_id": "native_p0000_ft000008"
+        }
+      ]
+    },
+    {
+      "id": "block-c05bda871e9196e4b1402493",
+      "type": "text",
+      "text": "Document Owner:",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:18",
+          "page_index": 17,
+          "page": 18,
+          "bbox": [
+            89.5627212524414,
+            720.0811157226562,
+            149.30833435058594,
+            724.6884002685547
+          ],
+          "native_id": "native_p0000_ft000007"
+        }
+      ]
+    },
+    {
+      "id": "block-e37e89032c6e1e4cd8e6c113",
+      "type": "text",
+      "text": "Classification:",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:18",
+          "page_index": 17,
+          "page": 18,
+          "bbox": [
+            97.44095611572266,
+            734.2154388427734,
+            141.15504455566406,
+            739.0883979797363
+          ],
+          "native_id": "native_p0000_ft000013"
+        }
+      ]
+    },
+    {
+      "id": "block-3d2f8560d138f14b3063d08c",
+      "type": "text",
+      "text": "EXTERNAL (PUBLIC)",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:18",
+          "page_index": 17,
+          "page": 18,
+          "bbox": [
+            181.71871948242188,
+            734.2478408813477,
+            247.14727783203125,
+            740.306640625
+          ],
+          "native_id": "native_p0000_ft000014"
+        }
+      ]
+    }
+  ],
+  "scope": [
+    {
+      "id": "page:1",
+      "kind": "page",
+      "label": "Page 1",
+      "location": {
+        "page": 1
+      }
+    },
+    {
+      "id": "page:2",
+      "kind": "page",
+      "label": "Page 2",
+      "location": {
+        "page": 2
+      }
+    },
+    {
+      "id": "page:3",
+      "kind": "page",
+      "label": "Page 3",
+      "location": {
+        "page": 3
+      }
+    },
+    {
+      "id": "page:4",
+      "kind": "page",
+      "label": "Page 4",
+      "location": {
+        "page": 4
+      }
+    },
+    {
+      "id": "page:5",
+      "kind": "page",
+      "label": "Page 5",
+      "location": {
+        "page": 5
+      }
+    },
+    {
+      "id": "page:6",
+      "kind": "page",
+      "label": "Page 6",
+      "location": {
+        "page": 6
+      }
+    },
+    {
+      "id": "page:7",
+      "kind": "page",
+      "label": "Page 7",
+      "location": {
+        "page": 7
+      }
+    },
+    {
+      "id": "page:8",
+      "kind": "page",
+      "label": "Page 8",
+      "location": {
+        "page": 8
+      }
+    },
+    {
+      "id": "page:9",
+      "kind": "page",
+      "label": "Page 9",
+      "location": {
+        "page": 9
+      }
+    },
+    {
+      "id": "page:10",
+      "kind": "page",
+      "label": "Page 10",
+      "location": {
+        "page": 10
+      }
+    },
+    {
+      "id": "page:11",
+      "kind": "page",
+      "label": "Page 11",
+      "location": {
+        "page": 11
+      }
+    },
+    {
+      "id": "page:12",
+      "kind": "page",
+      "label": "Page 12",
+      "location": {
+        "page": 12
+      }
+    },
+    {
+      "id": "page:13",
+      "kind": "page",
+      "label": "Page 13",
+      "location": {
+        "page": 13
+      }
+    },
+    {
+      "id": "page:14",
+      "kind": "page",
+      "label": "Page 14",
+      "location": {
+        "page": 14
+      }
+    },
+    {
+      "id": "page:15",
+      "kind": "page",
+      "label": "Page 15",
+      "location": {
+        "page": 15
+      }
+    },
+    {
+      "id": "page:16",
+      "kind": "page",
+      "label": "Page 16",
+      "location": {
+        "page": 16
+      }
+    },
+    {
+      "id": "page:17",
+      "kind": "page",
+      "label": "Page 17",
+      "location": {
+        "page": 17
+      }
+    },
+    {
+      "id": "page:18",
+      "kind": "page",
+      "label": "Page 18",
+      "location": {
+        "page": 18
+      }
+    },
+    {
+      "id": "page:19",
+      "kind": "page",
+      "label": "Page 19",
+      "location": {
+        "page": 19
+      }
+    },
+    {
+      "id": "page:20",
+      "kind": "page",
+      "label": "Page 20",
+      "location": {
+        "page": 20
+      }
+    },
+    {
+      "id": "page:21",
+      "kind": "page",
+      "label": "Page 21",
+      "location": {
+        "page": 21
+      }
+    },
+    {
+      "id": "page:22",
+      "kind": "page",
+      "label": "Page 22",
+      "location": {
+        "page": 22
+      }
+    },
+    {
+      "id": "page:23",
+      "kind": "page",
+      "label": "Page 23",
+      "location": {
+        "page": 23
+      }
+    },
+    {
+      "id": "page:24",
+      "kind": "page",
+      "label": "Page 24",
+      "location": {
+        "page": 24
+      }
+    },
+    {
+      "id": "page:25",
+      "kind": "page",
+      "label": "Page 25",
+      "location": {
+        "page": 25
+      }
+    },
+    {
+      "id": "page:26",
+      "kind": "page",
+      "label": "Page 26",
+      "location": {
+        "page": 26
+      }
+    },
+    {
+      "id": "page:27",
+      "kind": "page",
+      "label": "Page 27",
+      "location": {
+        "page": 27
+      }
+    },
+    {
+      "id": "page:28",
+      "kind": "page",
+      "label": "Page 28",
+      "location": {
+        "page": 28
+      }
+    },
+    {
+      "id": "page:29",
+      "kind": "page",
+      "label": "Page 29",
+      "location": {
+        "page": 29
+      }
+    },
+    {
+      "id": "page:30",
+      "kind": "page",
+      "label": "Page 30",
+      "location": {
+        "page": 30
+      }
+    },
+    {
+      "id": "page:31",
+      "kind": "page",
+      "label": "Page 31",
+      "location": {
+        "page": 31
+      }
+    },
+    {
+      "id": "page:32",
+      "kind": "page",
+      "label": "Page 32",
+      "location": {
+        "page": 32
+      }
+    },
+    {
+      "id": "page:33",
+      "kind": "page",
+      "label": "Page 33",
+      "location": {
+        "page": 33
+      }
+    },
+    {
+      "id": "page:34",
+      "kind": "page",
+      "label": "Page 34",
+      "location": {
+        "page": 34
+      }
+    },
+    {
+      "id": "page:35",
+      "kind": "page",
+      "label": "Page 35",
+      "location": {
+        "page": 35
+      }
+    },
+    {
+      "id": "page:36",
+      "kind": "page",
+      "label": "Page 36",
+      "location": {
+        "page": 36
+      }
+    },
+    {
+      "id": "page:37",
+      "kind": "page",
+      "label": "Page 37",
+      "location": {
+        "page": 37
+      }
+    },
+    {
+      "id": "page:38",
+      "kind": "page",
+      "label": "Page 38",
+      "location": {
+        "page": 38
+      }
+    },
+    {
+      "id": "page:39",
+      "kind": "page",
+      "label": "Page 39",
+      "location": {
+        "page": 39
+      }
+    },
+    {
+      "id": "page:40",
+      "kind": "page",
+      "label": "Page 40",
+      "location": {
+        "page": 40
+      }
+    },
+    {
+      "id": "page:41",
+      "kind": "page",
+      "label": "Page 41",
+      "location": {
+        "page": 41
+      }
+    },
+    {
+      "id": "page:42",
+      "kind": "page",
+      "label": "Page 42",
+      "location": {
+        "page": 42
+      }
+    },
+    {
+      "id": "page:43",
+      "kind": "page",
+      "label": "Page 43",
+      "location": {
+        "page": 43
+      }
+    },
+    {
+      "id": "page:44",
+      "kind": "page",
+      "label": "Page 44",
+      "location": {
+        "page": 44
+      }
+    },
+    {
+      "id": "page:45",
+      "kind": "page",
+      "label": "Page 45",
+      "location": {
+        "page": 45
+      }
+    },
+    {
+      "id": "page:46",
+      "kind": "page",
+      "label": "Page 46",
+      "location": {
+        "page": 46
+      }
+    },
+    {
+      "id": "page:47",
+      "kind": "page",
+      "label": "Page 47",
+      "location": {
+        "page": 47
+      }
+    },
+    {
+      "id": "page:48",
+      "kind": "page",
+      "label": "Page 48",
+      "location": {
+        "page": 48
+      }
+    },
+    {
+      "id": "page:49",
+      "kind": "page",
+      "label": "Page 49",
+      "location": {
+        "page": 49
+      }
+    },
+    {
+      "id": "page:50",
+      "kind": "page",
+      "label": "Page 50",
+      "location": {
+        "page": 50
+      }
+    },
+    {
+      "id": "page:51",
+      "kind": "page",
+      "label": "Page 51",
+      "location": {
+        "page": 51
+      }
+    },
+    {
+      "id": "page:52",
+      "kind": "page",
+      "label": "Page 52",
+      "location": {
+        "page": 52
+      }
+    },
+    {
+      "id": "page:53",
+      "kind": "page",
+      "label": "Page 53",
+      "location": {
+        "page": 53
+      }
+    },
+    {
+      "id": "page:54",
+      "kind": "page",
+      "label": "Page 54",
+      "location": {
+        "page": 54
+      }
+    },
+    {
+      "id": "page:55",
+      "kind": "page",
+      "label": "Page 55",
+      "location": {
+        "page": 55
+      }
+    },
+    {
+      "id": "page:56",
+      "kind": "page",
+      "label": "Page 56",
+      "location": {
+        "page": 56
+      }
+    },
+    {
+      "id": "page:57",
+      "kind": "page",
+      "label": "Page 57",
+      "location": {
+        "page": 57
+      }
+    },
+    {
+      "id": "page:58",
+      "kind": "page",
+      "label": "Page 58",
+      "location": {
+        "page": 58
+      }
+    },
+    {
+      "id": "page:59",
+      "kind": "page",
+      "label": "Page 59",
+      "location": {
+        "page": 59
+      }
+    },
+    {
+      "id": "page:60",
+      "kind": "page",
+      "label": "Page 60",
+      "location": {
+        "page": 60
+      }
+    },
+    {
+      "id": "page:61",
+      "kind": "page",
+      "label": "Page 61",
+      "location": {
+        "page": 61
+      }
+    },
+    {
+      "id": "page:62",
+      "kind": "page",
+      "label": "Page 62",
+      "location": {
+        "page": 62
+      }
+    },
+    {
+      "id": "page:63",
+      "kind": "page",
+      "label": "Page 63",
+      "location": {
+        "page": 63
+      }
+    },
+    {
+      "id": "page:64",
+      "kind": "page",
+      "label": "Page 64",
+      "location": {
+        "page": 64
+      }
+    },
+    {
+      "id": "page:65",
+      "kind": "page",
+      "label": "Page 65",
+      "location": {
+        "page": 65
+      }
+    },
+    {
+      "id": "page:66",
+      "kind": "page",
+      "label": "Page 66",
+      "location": {
+        "page": 66
+      }
+    },
+    {
+      "id": "page:67",
+      "kind": "page",
+      "label": "Page 67",
+      "location": {
+        "page": 67
+      }
+    },
+    {
+      "id": "page:68",
+      "kind": "page",
+      "label": "Page 68",
+      "location": {
+        "page": 68
+      }
+    },
+    {
+      "id": "page:69",
+      "kind": "page",
+      "label": "Page 69",
+      "location": {
+        "page": 69
+      }
+    },
+    {
+      "id": "page:70",
+      "kind": "page",
+      "label": "Page 70",
+      "location": {
+        "page": 70
+      }
+    },
+    {
+      "id": "page:71",
+      "kind": "page",
+      "label": "Page 71",
+      "location": {
+        "page": 71
+      }
+    },
+    {
+      "id": "page:72",
+      "kind": "page",
+      "label": "Page 72",
+      "location": {
+        "page": 72
+      }
+    },
+    {
+      "id": "page:73",
+      "kind": "page",
+      "label": "Page 73",
+      "location": {
+        "page": 73
+      }
+    },
+    {
+      "id": "page:74",
+      "kind": "page",
+      "label": "Page 74",
+      "location": {
+        "page": 74
+      }
+    },
+    {
+      "id": "page:75",
+      "kind": "page",
+      "label": "Page 75",
+      "location": {
+        "page": 75
+      }
+    },
+    {
+      "id": "page:76",
+      "kind": "page",
+      "label": "Page 76",
+      "location": {
+        "page": 76
+      }
+    },
+    {
+      "id": "page:77",
+      "kind": "page",
+      "label": "Page 77",
+      "location": {
+        "page": 77
+      }
+    },
+    {
+      "id": "page:78",
+      "kind": "page",
+      "label": "Page 78",
+      "location": {
+        "page": 78
+      }
+    },
+    {
+      "id": "page:79",
+      "kind": "page",
+      "label": "Page 79",
+      "location": {
+        "page": 79
+      }
+    },
+    {
+      "id": "page:80",
+      "kind": "page",
+      "label": "Page 80",
+      "location": {
+        "page": 80
+      }
+    },
+    {
+      "id": "page:81",
+      "kind": "page",
+      "label": "Page 81",
+      "location": {
+        "page": 81
+      }
+    },
+    {
+      "id": "page:82",
+      "kind": "page",
+      "label": "Page 82",
+      "location": {
+        "page": 82
+      }
+    },
+    {
+      "id": "page:83",
+      "kind": "page",
+      "label": "Page 83",
+      "location": {
+        "page": 83
+      }
+    },
+    {
+      "id": "page:84",
+      "kind": "page",
+      "label": "Page 84",
+      "location": {
+        "page": 84
+      }
+    },
+    {
+      "id": "page:85",
+      "kind": "page",
+      "label": "Page 85",
+      "location": {
+        "page": 85
+      }
+    },
+    {
+      "id": "page:86",
+      "kind": "page",
+      "label": "Page 86",
+      "location": {
+        "page": 86
+      }
+    },
+    {
+      "id": "page:87",
+      "kind": "page",
+      "label": "Page 87",
+      "location": {
+        "page": 87
+      }
+    },
+    {
+      "id": "page:88",
+      "kind": "page",
+      "label": "Page 88",
+      "location": {
+        "page": 88
+      }
+    },
+    {
+      "id": "page:89",
+      "kind": "page",
+      "label": "Page 89",
+      "location": {
+        "page": 89
+      }
+    },
+    {
+      "id": "page:90",
+      "kind": "page",
+      "label": "Page 90",
+      "location": {
+        "page": 90
+      }
+    },
+    {
+      "id": "page:91",
+      "kind": "page",
+      "label": "Page 91",
+      "location": {
+        "page": 91
+      }
+    },
+    {
+      "id": "page:92",
+      "kind": "page",
+      "label": "Page 92",
+      "location": {
+        "page": 92
+      }
+    },
+    {
+      "id": "page:93",
+      "kind": "page",
+      "label": "Page 93",
+      "location": {
+        "page": 93
+      }
+    },
+    {
+      "id": "page:94",
+      "kind": "page",
+      "label": "Page 94",
+      "location": {
+        "page": 94
+      }
+    },
+    {
+      "id": "page:95",
+      "kind": "page",
+      "label": "Page 95",
+      "location": {
+        "page": 95
+      }
+    },
+    {
+      "id": "page:96",
+      "kind": "page",
+      "label": "Page 96",
+      "location": {
+        "page": 96
+      }
+    },
+    {
+      "id": "page:97",
+      "kind": "page",
+      "label": "Page 97",
+      "location": {
+        "page": 97
+      }
+    },
+    {
+      "id": "page:98",
+      "kind": "page",
+      "label": "Page 98",
+      "location": {
+        "page": 98
+      }
+    },
+    {
+      "id": "page:99",
+      "kind": "page",
+      "label": "Page 99",
+      "location": {
+        "page": 99
+      }
+    },
+    {
+      "id": "page:100",
+      "kind": "page",
+      "label": "Page 100",
+      "location": {
+        "page": 100
+      }
+    },
+    {
+      "id": "page:101",
+      "kind": "page",
+      "label": "Page 101",
+      "location": {
+        "page": 101
+      }
+    },
+    {
+      "id": "page:102",
+      "kind": "page",
+      "label": "Page 102",
+      "location": {
+        "page": 102
+      }
+    },
+    {
+      "id": "page:103",
+      "kind": "page",
+      "label": "Page 103",
+      "location": {
+        "page": 103
+      }
+    },
+    {
+      "id": "page:104",
+      "kind": "page",
+      "label": "Page 104",
+      "location": {
+        "page": 104
+      }
+    },
+    {
+      "id": "page:105",
+      "kind": "page",
+      "label": "Page 105",
+      "location": {
+        "page": 105
+      }
+    },
+    {
+      "id": "page:106",
+      "kind": "page",
+      "label": "Page 106",
+      "location": {
+        "page": 106
+      }
+    },
+    {
+      "id": "page:107",
+      "kind": "page",
+      "label": "Page 107",
+      "location": {
+        "page": 107
+      }
+    },
+    {
+      "id": "page:108",
+      "kind": "page",
+      "label": "Page 108",
+      "location": {
+        "page": 108
+      }
+    },
+    {
+      "id": "page:109",
+      "kind": "page",
+      "label": "Page 109",
+      "location": {
+        "page": 109
+      }
+    },
+    {
+      "id": "page:110",
+      "kind": "page",
+      "label": "Page 110",
+      "location": {
+        "page": 110
+      }
+    },
+    {
+      "id": "page:111",
+      "kind": "page",
+      "label": "Page 111",
+      "location": {
+        "page": 111
+      }
+    },
+    {
+      "id": "page:112",
+      "kind": "page",
+      "label": "Page 112",
+      "location": {
+        "page": 112
+      }
+    },
+    {
+      "id": "page:113",
+      "kind": "page",
+      "label": "Page 113",
+      "location": {
+        "page": 113
+      }
+    },
+    {
+      "id": "page:114",
+      "kind": "page",
+      "label": "Page 114",
+      "location": {
+        "page": 114
+      }
+    },
+    {
+      "id": "page:115",
+      "kind": "page",
+      "label": "Page 115",
+      "location": {
+        "page": 115
+      }
+    },
+    {
+      "id": "page:116",
+      "kind": "page",
+      "label": "Page 116",
+      "location": {
+        "page": 116
+      }
+    },
+    {
+      "id": "page:117",
+      "kind": "page",
+      "label": "Page 117",
+      "location": {
+        "page": 117
+      }
+    },
+    {
+      "id": "page:118",
+      "kind": "page",
+      "label": "Page 118",
+      "location": {
+        "page": 118
+      }
+    },
+    {
+      "id": "page:119",
+      "kind": "page",
+      "label": "Page 119",
+      "location": {
+        "page": 119
+      }
+    },
+    {
+      "id": "page:120",
+      "kind": "page",
+      "label": "Page 120",
+      "location": {
+        "page": 120
+      }
+    },
+    {
+      "id": "page:121",
+      "kind": "page",
+      "label": "Page 121",
+      "location": {
+        "page": 121
+      }
+    },
+    {
+      "id": "page:122",
+      "kind": "page",
+      "label": "Page 122",
+      "location": {
+        "page": 122
+      }
+    },
+    {
+      "id": "page:123",
+      "kind": "page",
+      "label": "Page 123",
+      "location": {
+        "page": 123
+      }
+    },
+    {
+      "id": "page:124",
+      "kind": "page",
+      "label": "Page 124",
+      "location": {
+        "page": 124
+      }
+    },
+    {
+      "id": "page:125",
+      "kind": "page",
+      "label": "Page 125",
+      "location": {
+        "page": 125
+      }
+    },
+    {
+      "id": "page:126",
+      "kind": "page",
+      "label": "Page 126",
+      "location": {
+        "page": 126
+      }
+    },
+    {
+      "id": "page:127",
+      "kind": "page",
+      "label": "Page 127",
+      "location": {
+        "page": 127
+      }
+    },
+    {
+      "id": "page:128",
+      "kind": "page",
+      "label": "Page 128",
+      "location": {
+        "page": 128
+      }
+    },
+    {
+      "id": "page:129",
+      "kind": "page",
+      "label": "Page 129",
+      "location": {
+        "page": 129
+      }
+    },
+    {
+      "id": "page:130",
+      "kind": "page",
+      "label": "Page 130",
+      "location": {
+        "page": 130
+      }
+    },
+    {
+      "id": "page:131",
+      "kind": "page",
+      "label": "Page 131",
+      "location": {
+        "page": 131
+      }
+    },
+    {
+      "id": "page:132",
+      "kind": "page",
+      "label": "Page 132",
+      "location": {
+        "page": 132
+      }
+    },
+    {
+      "id": "page:133",
+      "kind": "page",
+      "label": "Page 133",
+      "location": {
+        "page": 133
+      }
+    },
+    {
+      "id": "page:134",
+      "kind": "page",
+      "label": "Page 134",
+      "location": {
+        "page": 134
+      }
+    }
+  ],
+  "covered_scope": [
+    "page:18"
+  ],
+  "processed_scope": [
+    "page:18"
+  ],
+  "usable_scope": [
+    "page:18"
+  ],
+  "unprocessed_scope": [
+    "page:1",
+    "page:2",
+    "page:3",
+    "page:4",
+    "page:5",
+    "page:6",
+    "page:7",
+    "page:8",
+    "page:9",
+    "page:10",
+    "page:11",
+    "page:12",
+    "page:13",
+    "page:14",
+    "page:15",
+    "page:16",
+    "page:17",
+    "page:19",
+    "page:20",
+    "page:21",
+    "page:22",
+    "page:23",
+    "page:24",
+    "page:25",
+    "page:26",
+    "page:27",
+    "page:28",
+    "page:29",
+    "page:30",
+    "page:31",
+    "page:32",
+    "page:33",
+    "page:34",
+    "page:35",
+    "page:36",
+    "page:37",
+    "page:38",
+    "page:39",
+    "page:40",
+    "page:41",
+    "page:42",
+    "page:43",
+    "page:44",
+    "page:45",
+    "page:46",
+    "page:47",
+    "page:48",
+    "page:49",
+    "page:50",
+    "page:51",
+    "page:52",
+    "page:53",
+    "page:54",
+    "page:55",
+    "page:56",
+    "page:57",
+    "page:58",
+    "page:59",
+    "page:60",
+    "page:61",
+    "page:62",
+    "page:63",
+    "page:64",
+    "page:65",
+    "page:66",
+    "page:67",
+    "page:68",
+    "page:69",
+    "page:70",
+    "page:71",
+    "page:72",
+    "page:73",
+    "page:74",
+    "page:75",
+    "page:76",
+    "page:77",
+    "page:78",
+    "page:79",
+    "page:80",
+    "page:81",
+    "page:82",
+    "page:83",
+    "page:84",
+    "page:85",
+    "page:86",
+    "page:87",
+    "page:88",
+    "page:89",
+    "page:90",
+    "page:91",
+    "page:92",
+    "page:93",
+    "page:94",
+    "page:95",
+    "page:96",
+    "page:97",
+    "page:98",
+    "page:99",
+    "page:100",
+    "page:101",
+    "page:102",
+    "page:103",
+    "page:104",
+    "page:105",
+    "page:106",
+    "page:107",
+    "page:108",
+    "page:109",
+    "page:110",
+    "page:111",
+    "page:112",
+    "page:113",
+    "page:114",
+    "page:115",
+    "page:116",
+    "page:117",
+    "page:118",
+    "page:119",
+    "page:120",
+    "page:121",
+    "page:122",
+    "page:123",
+    "page:124",
+    "page:125",
+    "page:126",
+    "page:127",
+    "page:128",
+    "page:129",
+    "page:130",
+    "page:131",
+    "page:132",
+    "page:133",
+    "page:134"
+  ],
+  "warnings": [
+    "Native text can differ from visible page marks. Compare it with the original page image. Scanned pages may require manual transcription; no OCR is run when viewing.",
+    "PDF candidate uses the existing positioned PDFium parser in mapped three-page windows. Ruled-table grids use existing local geometry assembly. Reading order, headings and unruled tables may need manual correction; source page images and complete native evidence are retained. No Requirement classifier, semantic processor, OCR model or external service runs."
+  ],
+  "unresolved": [],
+  "canonical_artifacts": [
+    "pdf-window-0001.pdf",
+    "pdf-native-0001.json",
+    "pdf-page-0018.png"
+  ],
+  "status": "partial",
+  "review_policy": "human_material_confirmation_required",
+  "requirement_status": "not_connected"
+}

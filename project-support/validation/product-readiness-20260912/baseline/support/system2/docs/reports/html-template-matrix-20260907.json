@@ -1,0 +1,465 @@
+{
+  "scope": "explicit existing HTML snapshots only; no PDF or network",
+  "registry_sha256": "96aebadfbb42265c8a0e050cc0014006372b33711a5ed371a3ce0e61a7bf1fab",
+  "samples": [
+    {
+      "source": {
+        "source_id": "CS001",
+        "snapshot_id": "CS001-001",
+        "relative_path": "C_Certification_Scheme/CS001-001_ASC_Farm_Standard.html",
+        "content_hash": "a40846bb23436f8ab6c5971f8a33577660eaed1059861ee01cdb2ca3f60c062b",
+        "file_format": "html",
+        "operator_selection_decision": "INCLUDE",
+        "selection_status": "INCLUDE",
+        "snapshot_status": "STORED",
+        "source_status": "CURRENT",
+        "download_status": "SUCCESS",
+        "registry_sha256": "96aebadfbb42265c8a0e050cc0014006372b33711a5ed371a3ce0e61a7bf1fab"
+      },
+      "title": "ASC Farm Standard",
+      "host": "programme-centre.asc-aqua.org",
+      "family": "asc_programme_centre",
+      "bytes": 6941861,
+      "region_text_characters": 499563,
+      "dom_paragraph_divs": 0,
+      "dom_tables": 48,
+      "status": "failed",
+      "failure_reasons": [
+        "HtmlError:html_template_mismatch"
+      ],
+      "region_excerpt": "Filter content by selecting applicable filters below System Ponds Flowthrough/Raceway Cages Suspended Other - water based Other - land based Water Type Freshwater Brackish water Marine water Feed Dependent Fed Non-fed Species Abalone Bivalves Shrimp Freshwater prawn Crayfish Flatfish Pangasius Pike-",
+      "table_excerpts": [
+        "Version: Issue Date: Effective date: Mandatory date: Remarks/changes V1.0 1 May 2025 1 August 2025 1 May 2027 New document V1.0.1 1 August 2025 1 August 2025 1 May 2027 Non-substantive corrections and clarifications only – full details can be found here: https://programme-centre.asc-aqua.org/app/upl",
+        "Version: Available languages: V1.0 English (official language) Japanese Korean Spanish Turkish Vietnamese"
+      ],
+      "source_unchanged": true
+    },
+    {
+      "source": {
+        "source_id": "CS002",
+        "snapshot_id": "CS002-001",
+        "relative_path": "C_Certification_Scheme/CS002-001_ASC_Farm_Standard_Interpretation_Manual.html",
+        "content_hash": "44da418c7669b1b9162a153aa76389722f9d0e6415864d2618b5d381e82232ea",
+        "file_format": "html",
+        "operator_selection_decision": "INCLUDE",
+        "selection_status": "INCLUDE",
+        "snapshot_status": "STORED",
+        "source_status": "CURRENT",
+        "download_status": "SUCCESS",
+        "registry_sha256": "96aebadfbb42265c8a0e050cc0014006372b33711a5ed371a3ce0e61a7bf1fab"
+      },
+      "title": "ASC Farm Standard Interpretation Manual",
+      "host": "programme-centre.asc-aqua.org",
+      "family": "asc_programme_centre",
+      "bytes": 1590671,
+      "region_text_characters": 690724,
+      "dom_paragraph_divs": 0,
+      "dom_tables": 28,
+      "status": "failed",
+      "failure_reasons": [
+        "HtmlError:html_template_mismatch"
+      ],
+      "region_excerpt": "Filter content by selecting applicable filters below System Ponds Flowthrough/Raceway Cages Suspended Other - water based Other - land based Water Type Freshwater Brackish water Marine water Feed Dependent Fed Non-fed Species Abalone Bivalves Shrimp Freshwater prawn Crayfish Flatfish Pangasius Pike-",
+      "table_excerpts": [
+        "Version: Issue Date: Remarks/changes V1.0 1 May 2025 New document – to be used with ASC Farm Standard V1.0 V1.0.1 1 Sept 2025 Revised document (non-substantive changes) – to be used with ASC Farm Standard V1.0.1. – Amendments to referenced Indicators to reflect changes in the Farm Standard V1.0.1. –",
+        "Version: Available languages: V1.0 English (official language) Japanese Korean Spanish Turkish Vietnamese"
+      ],
+      "source_unchanged": true
+    },
+    {
+      "source": {
+        "source_id": "PA002",
+        "snapshot_id": "PA002-001",
+        "relative_path": "A_Public_Authority/PA002-001_Regulation_on_production_areas_for_sea-based_salmon_trout_and_rainbow_trout_aquaculture.html",
+        "content_hash": "19a632a343fe10fa8262a0ed8df8daa6d3e96e34ff686704da4c28e3671b2833",
+        "file_format": "html",
+        "operator_selection_decision": "INCLUDE",
+        "selection_status": "INCLUDE",
+        "snapshot_status": "STORED",
+        "source_status": "CURRENT",
+        "download_status": "SUCCESS",
+        "registry_sha256": "96aebadfbb42265c8a0e050cc0014006372b33711a5ed371a3ce0e61a7bf1fab"
+      },
+      "title": "Regulation on production areas for sea-based salmon, trout and rainbow trout aquaculture",
+      "host": "lovdata.no",
+      "family": "lovdata_statute",
+      "bytes": 129356,
+      "region_text_characters": 22527,
+      "dom_paragraph_divs": 20,
+      "dom_tables": 115,
+      "status": "review_required",
+      "failure_reasons": [],
+      "region_excerpt": "Kapittel 1. Innledende bestemmelser § 1. Formål Forskriften skal fremme akvakulturnæringens lønnsomhet og konkurransekraft innenfor rammene av en miljømessig bærekraftig utvikling og bidra til verdiskaping på kysten, ved opprettelse av produksjonsområder og regulering av produksjonskapasitet for akv",
+      "table_excerpts": [
+        "0 Endret ved forskrift 28 sep 2023 nr. 1520 .",
+        "a. Område 1: Svenskegrensen til Jæren"
+      ],
+      "source_unchanged": true,
+      "parser_version": "lovdata-html/0.1.1",
+      "canonical_paragraphs": 20,
+      "node_locator_checks": 40,
+      "paragraph_text_checks": 20,
+      "issue_counts": {
+        "unrepresented_body_text": 173
+      },
+      "issue_examples": [
+        {
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(4) > table:nth-of-type(1) > tr:nth-of-type(1) > td:nth-of-type(1)",
+          "text": "0"
+        },
+        {
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(4) > table:nth-of-type(1) > tr:nth-of-type(1) > td:nth-of-type(2)",
+          "text": "Tilføyd ved forskrift 10 okt 2025 nr. 2019 ."
+        },
+        {
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(4) > table:nth-of-type(1) > tr:nth-of-type(1) > td:nth-of-type(2) > a:nth-of-type(1)",
+          "text": "10 okt 2025 nr. 2019"
+        }
+      ],
+      "explicit_table_nodes": 0
+    },
+    {
+      "source": {
+        "source_id": "PA005",
+        "snapshot_id": "PA005-001",
+        "relative_path": "A_Public_Authority/PA005-001_Animal_Welfare_Act.html",
+        "content_hash": "121dce4cf5263302d47a467a612b437ffb1a6c660fb7454b6698101f16ea3808",
+        "file_format": "html",
+        "operator_selection_decision": "INCLUDE",
+        "selection_status": "INCLUDE",
+        "snapshot_status": "STORED",
+        "source_status": "CURRENT",
+        "download_status": "SUCCESS",
+        "registry_sha256": "96aebadfbb42265c8a0e050cc0014006372b33711a5ed371a3ce0e61a7bf1fab"
+      },
+      "title": "Animal Welfare Act",
+      "host": "lovdata.no",
+      "family": "lovdata_statute",
+      "bytes": 106243,
+      "region_text_characters": 25229,
+      "dom_paragraph_divs": 43,
+      "dom_tables": 27,
+      "status": "review_required",
+      "failure_reasons": [],
+      "region_excerpt": "Kapittel I. Generelle bestemmelser § 1. Formål Formålet med loven er å fremme god dyrevelferd og respekt for dyr. 🔗 Del paragraf § 2. Virkeområde Loven omfatter forhold som påvirker velferd hos eller respekt for pattedyr, fugler, krypdyr, amfibier, fisk, tifotkreps, blekksprut og honningbier. Loven ",
+      "table_excerpts": [
+        "a. utøve vold mot dyr,",
+        "b. hensette dyr i hjelpeløs tilstand,"
+      ],
+      "source_unchanged": true,
+      "parser_version": "lovdata-html/0.1.1",
+      "canonical_paragraphs": 43,
+      "node_locator_checks": 48,
+      "paragraph_text_checks": 43,
+      "issue_counts": {},
+      "issue_examples": [],
+      "explicit_table_nodes": 0
+    },
+    {
+      "source": {
+        "source_id": "PA015",
+        "snapshot_id": "PA015-001",
+        "relative_path": "A_Public_Authority/PA015-001_Regulation_on_control_of_salmon_lice_in_aquaculture_facilities.html",
+        "content_hash": "9334a78a021971411e5c8826a2bb16aab1db707d778f6249c9a36b0afc90a4a1",
+        "file_format": "html",
+        "operator_selection_decision": "INCLUDE",
+        "selection_status": "INCLUDE",
+        "snapshot_status": "STORED",
+        "source_status": "CURRENT",
+        "download_status": "SUCCESS",
+        "registry_sha256": "96aebadfbb42265c8a0e050cc0014006372b33711a5ed371a3ce0e61a7bf1fab"
+      },
+      "title": "Regulation on control of salmon lice in aquaculture facilities",
+      "host": "lovdata.no",
+      "family": "lovdata_statute",
+      "bytes": 70151,
+      "region_text_characters": 11248,
+      "dom_paragraph_divs": 16,
+      "dom_tables": 40,
+      "status": "review_required",
+      "failure_reasons": [],
+      "region_excerpt": "§ 1. Formål Formålet med forskriften er å redusere forekomsten av lakselus slik at skadevirkningene på fisk i akvakulturanlegg og i viltlevende bestander av laksefisk minimaliseres, samt redusere og bekjempe resistensutvikling hos lakselus. 🔗 Del paragraf § 2. Virkeområde Forskriften gjelder for akv",
+      "table_excerpts": [
+        "0 Endret ved forskrift 14 des 2023 nr. 2087 .",
+        "a. Behandling : Medikamentell avlusning ved bad eller gjennom fôret, eller andre metoder som fjerner lakselus, herunder mekanisk fjerning. Bruk av rensefisk regnes ikke som behandling."
+      ],
+      "source_unchanged": true,
+      "parser_version": "lovdata-html/0.1.1",
+      "canonical_paragraphs": 16,
+      "node_locator_checks": 18,
+      "paragraph_text_checks": 16,
+      "issue_counts": {
+        "paragraph_without_p_text": 1,
+        "unrepresented_body_text": 23
+      },
+      "issue_examples": [
+        {
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(17) > table:nth-of-type(1) > tr:nth-of-type(1) > td:nth-of-type(1)",
+          "text": "1."
+        },
+        {
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(17) > table:nth-of-type(1) > tr:nth-of-type(1) > td:nth-of-type(2)",
+          "text": "Det skal telles lakselus i følgende tre stadiegrupper:"
+        },
+        {
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(17) > table:nth-of-type(2) > tr:nth-of-type(1) > td:nth-of-type(1)",
+          "text": "a."
+        }
+      ],
+      "explicit_table_nodes": 0
+    },
+    {
+      "source": {
+        "source_id": "PA024",
+        "snapshot_id": "PA024-001",
+        "relative_path": "A_Public_Authority/PA024-001_Fiskeridirektoratet_guidance_to_NYTEK23.html",
+        "content_hash": "e331c25d9cf82bf550a1e76076c3ad72ef36a37c8f04ca6b17d52d556753c375",
+        "file_format": "html",
+        "operator_selection_decision": "INCLUDE",
+        "selection_status": "INCLUDE",
+        "snapshot_status": "STORED",
+        "source_status": "CURRENT",
+        "download_status": "SUCCESS",
+        "registry_sha256": "96aebadfbb42265c8a0e050cc0014006372b33711a5ed371a3ce0e61a7bf1fab"
+      },
+      "title": "Fiskeridirektoratet guidance to NYTEK23",
+      "host": "www.fiskeridir.no",
+      "family": "fiskeridirektoratet_guide",
+      "bytes": 133998,
+      "region_text_characters": 89291,
+      "dom_paragraph_divs": 0,
+      "dom_tables": 1,
+      "status": "failed",
+      "failure_reasons": [
+        "HtmlError:html_template_mismatch"
+      ],
+      "region_excerpt": "Veileder til NYTEK23 Veilederen til NYTEK23 gir deg større forståelse av forskriftens krav og hvordan kravene kan oppfylles Innhold Innledning Om veilederen Kapittel 1. Formål, virkeområde og definisjoner § 1. Formål § 2. Forskriftens geografiske og personelle virkeområde § 3. Forskriftens saklige v",
+      "table_excerpts": [
+        "Dato Endring Paragraf 31.03.2023 Veileder publisert - 17.10.2023 - Det er lagt presisering angående grensetilstander - endret fra \"hoppenett\" til \"fuglenett\" Veiledning til § 11 første ledd og bokstav b og c 17.10.2023 Det er lagt til en presisering ved valg av strekklast Veiledning til § 23 første "
+      ],
+      "source_unchanged": true
+    },
+    {
+      "source": {
+        "source_id": "PA025",
+        "snapshot_id": "PA025-001",
+        "relative_path": "A_Public_Authority/PA025-001_Guidance_on_holistic_risk_management_in_aquaculture.html",
+        "content_hash": "6b02f98209cd66f8d09b279dd0ba86c8cf84324e5d65599ca0c476490d10c801",
+        "file_format": "html",
+        "operator_selection_decision": "INCLUDE",
+        "selection_status": "INCLUDE",
+        "snapshot_status": "STORED",
+        "source_status": "CURRENT",
+        "download_status": "SUCCESS",
+        "registry_sha256": "96aebadfbb42265c8a0e050cc0014006372b33711a5ed371a3ce0e61a7bf1fab"
+      },
+      "title": "Guidance on holistic risk management in aquaculture",
+      "host": "www.fiskeridir.no",
+      "family": "fiskeridirektoratet_guide",
+      "bytes": 111860,
+      "region_text_characters": 64339,
+      "dom_paragraph_divs": 0,
+      "dom_tables": 0,
+      "status": "failed",
+      "failure_reasons": [
+        "HtmlError:html_template_mismatch"
+      ],
+      "region_excerpt": "Veileder - helhetlig risikostyring innen akvakultur Safetec har på oppdrag fra Fiskeridirektoratet utarbeidet en veileder som gir innsikt og praktiske råd om helhetlig risikostyring i akvakulturnæringen. Innhold Om veilederen 1. Innledning 1.1 Sammendrag 2. Hva menes med helhetlig risikostyring? 2.1",
+      "table_excerpts": [],
+      "source_unchanged": true
+    },
+    {
+      "source": {
+        "source_id": "PA026",
+        "snapshot_id": "PA026-001",
+        "relative_path": "A_Public_Authority/PA026-001_Environmental_authority_guidance_on_aquaculture_pollution_management.html",
+        "content_hash": "b21a5486fb976b28eaab6a693a453e5e39ccf551e5b0fe3dbfc376f923b028a1",
+        "file_format": "html",
+        "operator_selection_decision": "INCLUDE",
+        "selection_status": "INCLUDE",
+        "snapshot_status": "STORED",
+        "source_status": "CURRENT",
+        "download_status": "SUCCESS",
+        "registry_sha256": "96aebadfbb42265c8a0e050cc0014006372b33711a5ed371a3ce0e61a7bf1fab"
+      },
+      "title": "Environmental authority guidance on aquaculture pollution management",
+      "host": "www.miljodirektoratet.no",
+      "family": "miljodirektoratet_guidance",
+      "bytes": 847182,
+      "region_text_characters": 8273,
+      "dom_paragraph_divs": 0,
+      "dom_tables": 0,
+      "status": "failed",
+      "failure_reasons": [
+        "HtmlError:html_template_mismatch"
+      ],
+      "region_excerpt": "For å etablere et anlegg for fiskeoppdrett, må bedriften søke om tillatelse fra flere myndigheter. Tillatelse til å drive oppdrett på en bestemt lokalitet gis etter enkeltsøknad. Statsforvalteren vurderer søknaden etter forurensningsloven. Roller og ansvar for oppdrett-anlegg i sjø og på land Den so",
+      "table_excerpts": [],
+      "source_unchanged": true
+    },
+    {
+      "source": {
+        "source_id": "PA027",
+        "snapshot_id": "PA027-001",
+        "relative_path": "A_Public_Authority/PA027-001_Mattilsynet_fish_welfare_guidance_hub.html",
+        "content_hash": "32a13fc92400f9d3afede91b9772367087a32fcd4bb72541cf576b4f2367e4dd",
+        "file_format": "html",
+        "operator_selection_decision": "INCLUDE",
+        "selection_status": "INCLUDE",
+        "snapshot_status": "STORED",
+        "source_status": "CURRENT",
+        "download_status": "SUCCESS",
+        "registry_sha256": "96aebadfbb42265c8a0e050cc0014006372b33711a5ed371a3ce0e61a7bf1fab"
+      },
+      "title": "Mattilsynet fish welfare guidance hub",
+      "host": "www.mattilsynet.no",
+      "family": "mattilsynet_guidance_or_hub",
+      "bytes": 100661,
+      "region_text_characters": 3095,
+      "dom_paragraph_divs": 0,
+      "dom_tables": 0,
+      "status": "failed",
+      "failure_reasons": [
+        "HtmlError:html_template_mismatch"
+      ],
+      "region_excerpt": "Hjem Fisk og akvakultur Fiskevelferd Fiskevelferd Profesjonelle oppdrettere og alle som driver fangstvirksomhet, har et ansvar for at fisk og andre akvatiske dyr ikke lider unødvendig. Abonner på nyhetsbrev om dette temaet Velg oppgave Krav når du utvikler metoder, utstyr og teknologi i akvakultur L",
+      "table_excerpts": [],
+      "source_unchanged": true
+    },
+    {
+      "source": {
+        "source_id": "PA039",
+        "snapshot_id": "PA039-001",
+        "relative_path": "A_Public_Authority/PA039-001_Animal_Health_Regulation.html",
+        "content_hash": "9c505be3af04d8879ed1361628aaa96d5a45cacf20987849139a7636c1d97343",
+        "file_format": "html",
+        "operator_selection_decision": "INCLUDE",
+        "selection_status": "INCLUDE",
+        "snapshot_status": "STORED",
+        "source_status": "CURRENT",
+        "download_status": "SUCCESS",
+        "registry_sha256": "96aebadfbb42265c8a0e050cc0014006372b33711a5ed371a3ce0e61a7bf1fab"
+      },
+      "title": "Animal Health Regulation",
+      "host": "lovdata.no",
+      "family": "lovdata_empty_document_body",
+      "bytes": 159677,
+      "region_text_characters": 0,
+      "dom_paragraph_divs": 0,
+      "dom_tables": 0,
+      "status": "failed",
+      "failure_reasons": [
+        "HtmlError:html_empty_result"
+      ],
+      "region_excerpt": "",
+      "table_excerpts": [],
+      "source_unchanged": true
+    },
+    {
+      "source": {
+        "source_id": "PA043",
+        "snapshot_id": "PA043-001",
+        "relative_path": "A_Public_Authority/PA043-001_Mattilsynet_guidance_on_biosafety_plans_in_aquaculture_facilities.html",
+        "content_hash": "56101f0aa402aaec3c59774403a0047534b1c05a5cd4541a00e64f5fb52970ad",
+        "file_format": "html",
+        "operator_selection_decision": "INCLUDE",
+        "selection_status": "INCLUDE",
+        "snapshot_status": "STORED",
+        "source_status": "CURRENT",
+        "download_status": "SUCCESS",
+        "registry_sha256": "96aebadfbb42265c8a0e050cc0014006372b33711a5ed371a3ce0e61a7bf1fab"
+      },
+      "title": "Mattilsynet guidance on biosafety plans in aquaculture facilities",
+      "host": "mattilsynet.no",
+      "family": "mattilsynet_guidance_or_hub",
+      "bytes": 6831915,
+      "region_text_characters": 35593,
+      "dom_paragraph_divs": 0,
+      "dom_tables": 0,
+      "status": "failed",
+      "failure_reasons": [
+        "HtmlError:html_template_mismatch"
+      ],
+      "region_excerpt": "Hjem Fisk og akvakultur Biosikkerhetsplan i akvakulturanlegg Biosikkerhetsplan i akvakulturanlegg Veilederen er en hjelp til virksomheter som skal utarbeide, bruke og oppdatere sine biosikkerhetsplaner. Vis endring Oppdatert tekst i kapittel 2.5 om biosikkerhetsplaner er unntatt offentlighet Endret ",
+      "table_excerpts": [],
+      "source_unchanged": true
+    },
+    {
+      "source": {
+        "source_id": "PA047",
+        "snapshot_id": "PA047-001",
+        "relative_path": "A_Public_Authority/PA047-001_Regulations_concerning_action_and_limit_values.html",
+        "content_hash": "c30790d1b5cdb2e3fc192d1e2141a7996f5e3a3d42983671189edd232c7cbd14",
+        "file_format": "html",
+        "operator_selection_decision": "INCLUDE",
+        "selection_status": "INCLUDE",
+        "snapshot_status": "STORED",
+        "source_status": "CURRENT",
+        "download_status": "SUCCESS",
+        "registry_sha256": "96aebadfbb42265c8a0e050cc0014006372b33711a5ed371a3ce0e61a7bf1fab"
+      },
+      "title": "Regulations concerning action and limit values",
+      "host": "lovdata.no",
+      "family": "lovdata_statute",
+      "bytes": 876332,
+      "region_text_characters": 100942,
+      "dom_paragraph_divs": 26,
+      "dom_tables": 124,
+      "status": "review_required",
+      "failure_reasons": [],
+      "region_excerpt": "Kapittel 1. Innledende bestemmelser § 1-1. Formål Formålet med forskriften er å beskytte arbeidstakerne mot farer på grunn av fysiske, kjemiske eller biologiske faktorer i virksomheten ved å angi grenseverdier, tiltaksverdier og smitterisikogrupper. 🔗 Del paragraf § 1-2. Virkeområde Forskriften gjel",
+      "table_excerpts": [
+        "0 Endret ved forskrift 19 des 2012 nr. 1376 (i kraft 1 jan 2013).",
+        "- i bygge- og anleggsvirksomhet"
+      ],
+      "source_unchanged": true,
+      "parser_version": "lovdata-html/0.1.1",
+      "canonical_paragraphs": 26,
+      "node_locator_checks": 41,
+      "paragraph_text_checks": 26,
+      "issue_counts": {
+        "paragraph_without_p_text": 1,
+        "unrepresented_body_text": 6018
+      },
+      "issue_examples": [
+        {
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(8) > p:nth-of-type(1)",
+          "text": "For petroleumsvirksomhet til havs gjelder grenseverdiene med sikkerhetsfaktorer som angitt i aktivitetsforskriften § 36 . For virksomheten på landanlegg, jf. rammeforskriften § 6 e, skal det prosjekteres med en sikkerhet"
+        },
+        {
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(8) > p:nth-of-type(1) > a:nth-of-type(1)",
+          "text": "aktivitetsforskriften § 36"
+        },
+        {
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(8) > p:nth-of-type(1) > a:nth-of-type(2)",
+          "text": "rammeforskriften § 6"
+        }
+      ],
+      "explicit_table_nodes": 0
+    }
+  ],
+  "rejected": [
+    {
+      "source_id": "PA010",
+      "reason": "ineligible_or_uncached_selection",
+      "fields": [
+        "operator_selection_decision",
+        "selection_status"
+      ]
+    }
+  ],
+  "status_counts": {
+    "failed": 8,
+    "review_required": 4
+  },
+  "family_counts": {
+    "asc_programme_centre": 2,
+    "lovdata_statute": 4,
+    "fiskeridirektoratet_guide": 2,
+    "miljodirektoratet_guidance": 1,
+    "mattilsynet_guidance_or_hub": 2,
+    "lovdata_empty_document_body": 1
+  },
+  "canonical_paragraph_total": 105,
+  "limitation": "DOM checks demonstrate localization and supported structure consistency, not independent semantic or full-document completeness acceptance."
+}

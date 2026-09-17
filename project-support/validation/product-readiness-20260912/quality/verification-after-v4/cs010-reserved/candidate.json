@@ -1,0 +1,3661 @@
+{
+  "schema_version": "material-structural-parser/4",
+  "parser_version": "material-structural-parser/4",
+  "source_sha256": "ce5c8950c69e3b5b60b85110f5abd2c6d8637c83291c6c00ac03f28b102dac54",
+  "snapshot_id": "QS013-001",
+  "config_hash": "8ea2433849e058d0ba409fbc5eeaea9dbe0b6f700f49a4c22eb8f968f9a702b9",
+  "blocks": [
+    {
+      "id": "block-0d5a31fcb7cf2dece60d23cd",
+      "type": "text",
+      "text": "INTRODUCTION",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            92.91167449951172,
+            93.00286865234375,
+            175.79115295410156,
+            101.16143798828125
+          ],
+          "native_id": "native_p0000_ft000020"
+        }
+      ]
+    },
+    {
+      "id": "block-973d854e53f5d51ac296136c",
+      "type": "text",
+      "text": "1",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.47599792480469,
+            93.10223388671875,
+            75.26976013183594,
+            101.03997802734375
+          ],
+          "native_id": "native_p0000_ft000019"
+        }
+      ]
+    },
+    {
+      "id": "block-19ff5d5c06e1d41fc1bac0b3",
+      "type": "text",
+      "text": "This document, part of the GLOBALG.A.P. general regulations (GR), applies to the Integrated\nFarm Assurance version 6 Smart (IFA v6 Smart)",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.17391967773438,
+            111.59423828125,
+            541.5640258789062,
+            121.94976806640625
+          ],
+          "native_id": "native_p0000_ft000021"
+        },
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.81427001953125,
+            124.3233642578125,
+            317.06011962890625,
+            134.6678466796875
+          ],
+          "native_id": "native_p0000_ft000022"
+        }
+      ]
+    },
+    {
+      "id": "block-de1085438e618378701ef77b",
+      "type": "text",
+      "text": "edition and",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            322.5878601074219,
+            124.455810546875,
+            376.83837890625,
+            132.48193359375
+          ],
+          "native_id": "native_p0000_ft000023"
+        }
+      ]
+    },
+    {
+      "id": "block-ed364d517849360c5c239e36",
+      "type": "text",
+      "text": "the Integrated Farm Assurance",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            382.501953125,
+            124.455810546875,
+            541.5850219726562,
+            134.6678466796875
+          ],
+          "native_id": "native_p0000_ft000024"
+        }
+      ]
+    },
+    {
+      "id": "block-11394f202f68b7d2682592df",
+      "type": "text",
+      "text": "version 6 GFS (IFA v6 GFS) edition.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.04142761230469,
+            136.91998291015625,
+            246.74745178222656,
+            147.26446533203125
+          ],
+          "native_id": "native_p0000_ft000025"
+        }
+      ]
+    },
+    {
+      "id": "block-b88f8938e845b6f0b61e0e5c",
+      "type": "text",
+      "text": "These rules for the aquaculture scope shall be used in combination with the GLOBALG.A.P. GR",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.1518325805664,
+            155.5113525390625,
+            538.6847534179688,
+            165.74542236328125
+          ],
+          "native_id": "native_p0000_ft000026"
+        }
+      ]
+    },
+    {
+      "id": "block-16e2a29e431efbf89afb21f0",
+      "type": "text",
+      "text": "the production of all products listed under the aquaculture scope in the",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            147.5265350341797,
+            168.240478515625,
+            541.591552734375,
+            178.4635009765625
+          ],
+          "native_id": "native_p0000_ft000029"
+        }
+      ]
+    },
+    {
+      "id": "block-f0c1d27a429fb478770c53f2",
+      "type": "text",
+      "text": "and apply",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.28429412841797,
+            168.3729248046875,
+            122.984619140625,
+            178.5849609375
+          ],
+          "native_id": "native_p0000_ft000027"
+        }
+      ]
+    },
+    {
+      "id": "block-473b49e22c64f680ee9b2b79",
+      "type": "text",
+      "text": "to",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            130.8450927734375,
+            168.549560546875,
+            139.50045776367188,
+            176.3990478515625
+          ],
+          "native_id": "native_p0000_ft000028"
+        }
+      ]
+    },
+    {
+      "id": "block-0c57d1899e1ef659972c3ab6",
+      "type": "text",
+      "text": "GLOBALG.A.P. product list.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.48296356201172,
+            180.8260498046875,
+            209.81857299804688,
+            191.06011962890625
+          ],
+          "native_id": "native_p0000_ft000030"
+        }
+      ]
+    },
+    {
+      "id": "block-8513760c62abfe1308721011",
+      "type": "text",
+      "text": "The term “shall” is used throughout the GLOBALG.A.P. normative documents",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.1517562866211,
+            199.5499267578125,
+            478.2296447753906,
+            209.90545654296875
+          ],
+          "native_id": "native_p0000_ft000031"
+        }
+      ]
+    },
+    {
+      "id": "block-f534052b1791ca80c9e9764e",
+      "type": "text",
+      "text": "to indicate",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            485.3394775390625,
+            199.69342041015625,
+            541.6004028320312,
+            207.71954345703125
+          ],
+          "native_id": "native_p0000_ft000032"
+        }
+      ]
+    },
+    {
+      "id": "block-066a7a776b48d242547c408c",
+      "type": "text",
+      "text": "mandatory",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.62648010253906,
+            212.2900390625,
+            122.86422729492188,
+            222.5020751953125
+          ],
+          "native_id": "native_p0000_ft000033"
+        }
+      ]
+    },
+    {
+      "id": "block-cc4525699390ae4212944a45",
+      "type": "text",
+      "text": "provisions.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            126.82648468017578,
+            212.2900390625,
+            177.64361572265625,
+            222.380615234375
+          ],
+          "native_id": "native_p0000_ft000034"
+        }
+      ]
+    },
+    {
+      "id": "block-2ca5a16b6e4dc39884ab6a23",
+      "type": "text",
+      "text": "CERTIFICATION SCOPE",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            92.65769958496094,
+            242.88189697265625,
+            218.105224609375,
+            251.051513671875
+          ],
+          "native_id": "native_p0000_ft000036"
+        }
+      ]
+    },
+    {
+      "id": "block-ed1ba41c373ddc9f6b72f060",
+      "type": "text",
+      "text": "2",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.17385864257812,
+            242.98126220703125,
+            76.48410034179688,
+            250.91900634765625
+          ],
+          "native_id": "native_p0000_ft000035"
+        }
+      ]
+    },
+    {
+      "id": "block-ccd85c694e2fa9db721fd9db",
+      "type": "text",
+      "text": "2.1\nGLOBALG.A.P. product list",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "2.1",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.17385864257812,
+            267.57843017578125,
+            84.48478698730469,
+            275.51617431640625
+          ],
+          "native_id": "native_p0000_ft000037"
+        },
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            99.74537658691406,
+            267.47906494140625,
+            241.51222229003906,
+            277.67999267578125
+          ],
+          "native_id": "native_p0000_ft000038"
+        }
+      ]
+    },
+    {
+      "id": "block-a24efcc1f6bf8aecd8683256",
+      "type": "text",
+      "text": "includes the following product categories",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            189.09210205078125,
+            286.0814208984375,
+            389.1291809082031,
+            296.4259033203125
+          ],
+          "native_id": "native_p0000_ft000041"
+        }
+      ]
+    },
+    {
+      "id": "block-04dfac2a30e752662cbd8e8d",
+      "type": "text",
+      "text": "at all stages of their life cycle",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            393.8399353027344,
+            286.0814208984375,
+            541.5872192382812,
+            296.4259033203125
+          ],
+          "native_id": "native_p0000_ft000042"
+        }
+      ]
+    },
+    {
+      "id": "block-6e424d481296f3fbca4335cc",
+      "type": "text",
+      "text": "The aquaculture",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.1407470703125,
+            286.2138671875,
+            150.83187866210938,
+            296.304443359375
+          ],
+          "native_id": "native_p0000_ft000039"
+        }
+      ]
+    },
+    {
+      "id": "block-c9ba2df34893b8976e5d7249",
+      "type": "text",
+      "text": "scope",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            155.46426391601562,
+            288.267333984375,
+            184.07994079589844,
+            296.304443359375
+          ],
+          "native_id": "native_p0000_ft000040"
+        }
+      ]
+    },
+    {
+      "id": "block-7247733078dc052aa3a8370d",
+      "type": "text",
+      "text": "and those species listed in the GLOBALG.A.P. product list:",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.28427124023438,
+            298.7884521484375,
+            356.1824951171875,
+            309.02252197265625
+          ],
+          "native_id": "native_p0000_ft000043"
+        }
+      ]
+    },
+    {
+      "id": "block-61c9da2d60b703441ab0afda",
+      "type": "text",
+      "text": "•\nFinfish",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "•",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            85.51113891601562,
+            321.12237548828125,
+            89.56649780273438,
+            326.278076171875
+          ],
+          "native_id": "native_p0000_ft000044"
+        },
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            107.8045883178711,
+            318.240966796875,
+            138.56202697753906,
+            326.3995361328125
+          ],
+          "native_id": "native_p0000_ft000045"
+        }
+      ]
+    },
+    {
+      "id": "block-c12c38d1316b100c9b0bdbcc",
+      "type": "text",
+      "text": "•\nCrustaceans",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "•",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            85.52217864990234,
+            340.5638122558594,
+            89.5775375366211,
+            345.719482421875
+          ],
+          "native_id": "native_p0000_ft000046"
+        },
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            107.46234130859375,
+            337.682373046875,
+            168.37664794921875,
+            345.8409118652344
+          ],
+          "native_id": "native_p0000_ft000047"
+        }
+      ]
+    },
+    {
+      "id": "block-4e2f65c407ad5e6515dbc81f",
+      "type": "text",
+      "text": "•\nMolluscs",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "•",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            85.52217864990234,
+            359.8838195800781,
+            89.5775375366211,
+            365.03948974609375
+          ],
+          "native_id": "native_p0000_ft000048"
+        },
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            107.72730255126953,
+            357.1348571777344,
+            149.3149871826172,
+            365.1609191894531
+          ],
+          "native_id": "native_p0000_ft000049"
+        }
+      ]
+    },
+    {
+      "id": "block-04c672d562871d9743d2ce1b",
+      "type": "text",
+      "text": "•\nSeaweed",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "•",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            85.52217864990234,
+            379.32525634765625,
+            89.5775375366211,
+            384.4809265136719
+          ],
+          "native_id": "native_p0000_ft000050"
+        },
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            107.40714263916016,
+            376.4438171386719,
+            151.95794677734375,
+            384.60235595703125
+          ],
+          "native_id": "native_p0000_ft000051"
+        }
+      ]
+    },
+    {
+      "id": "block-ebb04b28a7e44e8a20129476",
+      "type": "text",
+      "text": "GLOBALG.A.P.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            462.9172058105469,
+            394.9137268066406,
+            537.6591186523438,
+            403.08331298828125
+          ],
+          "native_id": "native_p0000_ft000053"
+        }
+      ]
+    },
+    {
+      "id": "block-3d1511b137e70fd10e1f6e3b",
+      "type": "text",
+      "text": "At all stages, seedlings (ova and/or juveniles) shall originate from producers with\nregistration/certification. Brood",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            70.90889739990234,
+            394.9247741699219,
+            458.80810546875,
+            405.2692565917969
+          ],
+          "native_id": "native_p0000_ft000052"
+        },
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.61544036865234,
+            407.6428527832031,
+            218.1935272216797,
+            417.9873352050781
+          ],
+          "native_id": "native_p0000_ft000054"
+        }
+      ]
+    },
+    {
+      "id": "block-15b0a868bd2c2a6f836ce2ad",
+      "type": "text",
+      "text": "stock shall be",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            221.9581756591797,
+            407.77532958984375,
+            286.804931640625,
+            415.8013916015625
+          ],
+          "native_id": "native_p0000_ft000055"
+        }
+      ]
+    },
+    {
+      "id": "block-41ae06e6ff849b51800e04c1",
+      "type": "text",
+      "text": "obtained through",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            290.13018798828125,
+            407.77532958984375,
+            371.1980285644531,
+            417.9873352050781
+          ],
+          "native_id": "native_p0000_ft000056"
+        }
+      ]
+    },
+    {
+      "id": "block-ea3436a732bae4e4f5439e03",
+      "type": "text",
+      "text": "aquaculture",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            389.6336975097656,
+            407.77532958984375,
+            446.26007080078125,
+            417.8658752441406
+          ],
+          "native_id": "native_p0000_ft000058"
+        }
+      ]
+    },
+    {
+      "id": "block-1552959e4b7334950b76691e",
+      "type": "text",
+      "text": "breeding",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            450.07769775390625,
+            407.77532958984375,
+            491.343017578125,
+            417.9873352050781
+          ],
+          "native_id": "native_p0000_ft000059"
+        }
+      ]
+    },
+    {
+      "id": "block-88ceb9ea822e362e1e451d7f",
+      "type": "text",
+      "text": "an",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            374.8842468261719,
+            409.8287658691406,
+            385.9794921875,
+            415.8013916015625
+          ],
+          "native_id": "native_p0000_ft000057"
+        }
+      ]
+    },
+    {
+      "id": "block-b974733f1028ce4d470c837b",
+      "type": "text",
+      "text": "program.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            495.45208740234375,
+            409.8287658691406,
+            537.7573852539062,
+            417.9873352050781
+          ],
+          "native_id": "native_p0000_ft000060"
+        }
+      ]
+    },
+    {
+      "id": "block-b7b9f15c67d1191d6062879c",
+      "type": "text",
+      "text": "If wild-caught brood",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.91357421875,
+            420.239501953125,
+            170.05917358398438,
+            430.583984375
+          ],
+          "native_id": "native_p0000_ft000061"
+        }
+      ]
+    },
+    {
+      "id": "block-0139ab96d4983deea3ecf1e7",
+      "type": "text",
+      "text": "from a",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            336.80731201171875,
+            420.239501953125,
+            369.3885498046875,
+            428.3980407714844
+          ],
+          "native_id": "native_p0000_ft000063"
+        }
+      ]
+    },
+    {
+      "id": "block-1631a879760fc34120df4883",
+      "type": "text",
+      "text": "fishery that has proven",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            374.85113525390625,
+            420.239501953125,
+            491.1188659667969,
+            430.583984375
+          ],
+          "native_id": "native_p0000_ft000064"
+        }
+      ]
+    },
+    {
+      "id": "block-06d586dd4198367d515c64e9",
+      "type": "text",
+      "text": "stock is used, it shall originate",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            176.2415771484375,
+            420.3719787597656,
+            331.2276916503906,
+            430.583984375
+          ],
+          "native_id": "native_p0000_ft000062"
+        }
+      ]
+    },
+    {
+      "id": "block-cc4a8d2c07ce93eaef79a838",
+      "type": "text",
+      "text": "that it is",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            497.10809326171875,
+            420.3719787597656,
+            541.61474609375,
+            428.3980407714844
+          ],
+          "native_id": "native_p0000_ft000065"
+        }
+      ]
+    },
+    {
+      "id": "block-9ef23008911475d4d3b06f38",
+      "type": "text",
+      "text": "ecologically managed. Passive collection of seedlings from the planktonic phase is allowed",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.3173599243164,
+            432.9576110839844,
+            521.0393676757812,
+            443.3020935058594
+          ],
+          "native_id": "native_p0000_ft000066"
+        }
+      ]
+    },
+    {
+      "id": "block-0dcc71d7edb4afa7e5bab0e0",
+      "type": "text",
+      "text": "for",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            525.9335327148438,
+            432.9576110839844,
+            541.6180419921875,
+            441.11614990234375
+          ],
+          "native_id": "native_p0000_ft000067"
+        }
+      ]
+    },
+    {
+      "id": "block-c8f849f7ec63e36f722fc9ea",
+      "type": "text",
+      "text": "molluscs’ spat.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.63751983642578,
+            445.60943603515625,
+            142.1389617919922,
+            455.77728271484375
+          ],
+          "native_id": "native_p0000_ft000068"
+        }
+      ]
+    },
+    {
+      "id": "block-ff0547f9532eb0cee4439993",
+      "type": "text",
+      "text": "Aquaculture certification cannot be achieved for wild aquatic species/catch that is",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            70.90888214111328,
+            464.278076171875,
+            464.91546630859375,
+            474.5010986328125
+          ],
+          "native_id": "native_p0000_ft000069"
+        }
+      ]
+    },
+    {
+      "id": "block-be2d79c3d4b36bcd678bc9e7",
+      "type": "text",
+      "text": "not farmed.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            469.198974609375,
+            464.278076171875,
+            523.127197265625,
+            472.4366149902344
+          ],
+          "native_id": "native_p0000_ft000070"
+        }
+      ]
+    },
+    {
+      "id": "block-0ebddd37dd8014d43531f6ae",
+      "type": "text",
+      "text": "handling of aquaculture products by the same legal entity",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            134.41099548339844,
+            482.8804931640625,
+            424.08624267578125,
+            493.2249755859375
+          ],
+          "native_id": "native_p0000_ft000072"
+        }
+      ]
+    },
+    {
+      "id": "block-1d28b5d0d3d467e8a9c9cee0",
+      "type": "text",
+      "text": "as the farm",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            429.1569519042969,
+            482.8804931640625,
+            486.0769958496094,
+            491.0390319824219
+          ],
+          "native_id": "native_p0000_ft000073"
+        }
+      ]
+    },
+    {
+      "id": "block-5354a88b0bd152459a28d89e",
+      "type": "text",
+      "text": "Postharvest",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.77003479003906,
+            483.0129699707031,
+            128.97488403320312,
+            491.0390319824219
+          ],
+          "native_id": "native_p0000_ft000071"
+        }
+      ]
+    },
+    {
+      "id": "block-efc95dcfb94e84584052146b",
+      "type": "text",
+      "text": "shall also",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            491.7427062988281,
+            483.0129699707031,
+            541.6290893554688,
+            491.0390319824219
+          ],
+          "native_id": "native_p0000_ft000074"
+        }
+      ]
+    },
+    {
+      "id": "block-e149e07c770bd25568265d88",
+      "type": "text",
+      "text": "the postharvest/mass balance and traceability sections of the P&Cs",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            215.00299072265625,
+            495.47711181640625,
+            538.254150390625,
+            505.82159423828125
+          ],
+          "native_id": "native_p0000_ft000076"
+        }
+      ]
+    },
+    {
+      "id": "block-2bd7c39ab04f478acad093a6",
+      "type": "text",
+      "text": "demonstrate compliance with",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.2953109741211,
+            495.6095886230469,
+            211.54306030273438,
+            505.70013427734375
+          ],
+          "native_id": "native_p0000_ft000075"
+        }
+      ]
+    },
+    {
+      "id": "block-e9131006576b1d0d920604eb",
+      "type": "text",
+      "text": "in order for the producer to",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            197.05191040039062,
+            508.1952209472656,
+            326.2530517578125,
+            518.4182434082031
+          ],
+          "native_id": "native_p0000_ft000078"
+        }
+      ]
+    },
+    {
+      "id": "block-685a9f4b37d62a23045a188f",
+      "type": "text",
+      "text": "achieve certification.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            330.0397644042969,
+            508.1952209472656,
+            428.33221435546875,
+            516.353759765625
+          ],
+          "native_id": "native_p0000_ft000079"
+        }
+      ]
+    },
+    {
+      "id": "block-bdd64e70b8d52443d4745efc",
+      "type": "text",
+      "text": "applicable to aquaculture",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.31735229492188,
+            508.32769775390625,
+            192.84457397460938,
+            518.4182434082031
+          ],
+          "native_id": "native_p0000_ft000077"
+        }
+      ]
+    },
+    {
+      "id": "block-f55166feef07d9a481eb5e30",
+      "type": "text",
+      "text": "The scope of certification clearly defines the scientific name of the farmed species",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.17383575439453,
+            526.797607421875,
+            460.12298583984375,
+            537.14208984375
+          ],
+          "native_id": "native_p0000_ft000080"
+        }
+      ]
+    },
+    {
+      "id": "block-5d5aa4e772beb6b7ce4d78ac",
+      "type": "text",
+      "text": "in the electronic",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            463.69000244140625,
+            526.9300842285156,
+            541.6026000976562,
+            534.9561462402344
+          ],
+          "native_id": "native_p0000_ft000081"
+        }
+      ]
+    },
+    {
+      "id": "block-5488a5ab7f6cd4516c08881c",
+      "type": "text",
+      "text": "certificate issued in the GLOBALG.A.P. IT systems.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.35047149658203,
+            539.5046691894531,
+            320.7109375,
+            549.8601989746094
+          ],
+          "native_id": "native_p0000_ft000082"
+        }
+      ]
+    },
+    {
+      "id": "block-b28d6ef71192b0490e8bdc08",
+      "type": "text",
+      "text": "en",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            30.77880096435547,
+            567.7046508789062,
+            35.128440856933594,
+            575.7607116699219
+          ],
+          "native_id": "native_p0000_ft000018"
+        }
+      ]
+    },
+    {
+      "id": "block-3cc84ebe84b2e0c91849b961",
+      "type": "text",
+      "text": "REGISTRATION",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            92.9667739868164,
+            570.1185913085938,
+            174.47618103027344,
+            578.2881774902344
+          ],
+          "native_id": "native_p0000_ft000084"
+        }
+      ]
+    },
+    {
+      "id": "block-32d9581fea6f3e800bd337c5",
+      "type": "text",
+      "text": "3",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.33940887451172,
+            570.2179260253906,
+            76.58341217041016,
+            578.2771301269531
+          ],
+          "native_id": "native_p0000_ft000083"
+        }
+      ]
+    },
+    {
+      "id": "block-36e738c468178d29bab7f1c2",
+      "type": "text",
+      "text": "22_",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            29.259241104125977,
+            575.9376220703125,
+            36.631919860839844,
+            589.1392822265625
+          ],
+          "native_id": "native_p0000_ft000017"
+        }
+      ]
+    },
+    {
+      "id": "block-e3dc7eca0dcbde1b240e5633",
+      "type": "text",
+      "text": "Producers shall register with the same certification body (CB) for the aquaculture certification and",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.76997375488281,
+            588.7209930419922,
+            541.6047973632812,
+            599.0654754638672
+          ],
+          "native_id": "native_p0000_ft000085"
+        }
+      ]
+    },
+    {
+      "id": "block-a55ec13058d45108988c8f9c",
+      "type": "text",
+      "text": "Sep",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            29.186880111694336,
+            589.6618804931641,
+            36.631919860839844,
+            603.2872619628906
+          ],
+          "native_id": "native_p0000_ft000016"
+        }
+      ]
+    },
+    {
+      "id": "block-0d06b15ef386aa43a6a5bc6a",
+      "type": "text",
+      "text": "for the GLOBALG.A.P. Risk Assessment on Social Practices (GRASP). Registration for GRASP",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            70.99716186523438,
+            601.4280395507812,
+            541.541748046875,
+            611.7835540771484
+          ],
+          "native_id": "native_p0000_ft000086"
+        }
+      ]
+    },
+    {
+      "id": "block-5b333b45d8b17e174712279b",
+      "type": "text",
+      "text": "0_",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            29.259241104125977,
+            603.4102783203125,
+            36.631919860839844,
+            612.0693664550781
+          ],
+          "native_id": "native_p0000_ft000015"
+        }
+      ]
+    },
+    {
+      "id": "block-010055c730fe5b6c996cb2eb",
+      "type": "text",
+      "text": "6_",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            29.259241104125977,
+            612.2864532470703,
+            36.631919860839844,
+            620.9776763916016
+          ],
+          "native_id": "native_p0000_ft000014"
+        }
+      ]
+    },
+    {
+      "id": "block-e93abfc8a25e5752ebcc3e27",
+      "type": "text",
+      "text": "shall follow the GRASP general rules.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.24004364013672,
+            614.0356903076172,
+            253.35035705566406,
+            624.3801727294922
+          ],
+          "native_id": "native_p0000_ft000087"
+        }
+      ]
+    },
+    {
+      "id": "block-f6b1516a0eefba92cdbc0740",
+      "type": "text",
+      "text": "v",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            30.86724090576172,
+            621.4399719238281,
+            35.040000915527344,
+            625.2589721679688
+          ],
+          "native_id": "native_p0000_ft000013"
+        }
+      ]
+    },
+    {
+      "id": "block-39d972a4f16615d39f6e95b7",
+      "type": "text",
+      "text": "lture_",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            29.283361434936523,
+            625.2429046630859,
+            36.631919860839844,
+            644.8838195800781
+          ],
+          "native_id": "native_p0000_ft000012"
+        }
+      ]
+    },
+    {
+      "id": "block-40998211aa00df121e7d5acd",
+      "type": "text",
+      "text": "CB AUDIT",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            92.64661407470703,
+            644.7599945068359,
+            144.46835327148438,
+            652.9185638427734
+          ],
+          "native_id": "native_p0000_ft000089"
+        }
+      ]
+    },
+    {
+      "id": "block-2ec86376eadeb8fd5e2a0b2d",
+      "type": "text",
+      "text": "4",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.0965347290039,
+            644.8593597412109,
+            76.7710952758789,
+            652.797119140625
+          ],
+          "native_id": "native_p0000_ft000088"
+        }
+      ]
+    },
+    {
+      "id": "block-914cd5139254938ea01c73bf",
+      "type": "text",
+      "text": "aquacu",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            30.77880096435547,
+            645.9450988769531,
+            36.631919860839844,
+            671.379638671875
+          ],
+          "native_id": "native_p0000_ft000011"
+        }
+      ]
+    },
+    {
+      "id": "block-c2cad64b929cbf86c608fce9",
+      "type": "text",
+      "text": "4.1\nCB farm audit timing",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "4.1",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.08549499511719,
+            669.4565277099609,
+            84.46266174316406,
+            677.394287109375
+          ],
+          "native_id": "native_p0000_ft000090"
+        },
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            99.71221160888672,
+            669.3571624755859,
+            206.7571563720703,
+            679.7016448974609
+          ],
+          "native_id": "native_p0000_ft000091"
+        }
+      ]
+    },
+    {
+      "id": "block-6d156d630e69178437d18abb",
+      "type": "text",
+      "text": "for_",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            29.186880111694336,
+            671.5484924316406,
+            36.631919860839844,
+            685.3917541503906
+          ],
+          "native_id": "native_p0000_ft000010"
+        }
+      ]
+    },
+    {
+      "id": "block-aefef9aa7226236c4dc2a5c8",
+      "type": "text",
+      "text": "les_",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            29.283361434936523,
+            685.343505859375,
+            36.631919860839844,
+            699.7045745849609
+          ],
+          "native_id": "native_p0000_ft000009"
+        }
+      ]
+    },
+    {
+      "id": "block-4956015ae88275e9eeddadc8",
+      "type": "text",
+      "text": "The registered aquaculture species shall be present on the farm at the time of the CB audit.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.11861419677734,
+            687.9595794677734,
+            541.566162109375,
+            698.3040618896484
+          ],
+          "native_id": "native_p0000_ft000092"
+        }
+      ]
+    },
+    {
+      "id": "block-b35e44842fc4cc3c667de27a",
+      "type": "text",
+      "text": "Postharvest handling operations performed by the same legal entity as the farm shall also be",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.70370483398438,
+            700.6776580810547,
+            541.5550537109375,
+            711.0221405029297
+          ],
+          "native_id": "native_p0000_ft000093"
+        }
+      ]
+    },
+    {
+      "id": "block-f71a662a7f0904d2f65a6060",
+      "type": "text",
+      "text": "Ru",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            29.283361434936523,
+            700.7658538818359,
+            35.128440856933594,
+            709.7819213867188
+          ],
+          "native_id": "native_p0000_ft000008"
+        }
+      ]
+    },
+    {
+      "id": "block-d423af7c62840da0bd42041d",
+      "type": "text",
+      "text": "R_",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            29.283361434936523,
+            710.2964782714844,
+            36.631919860839844,
+            719.9798583984375
+          ],
+          "native_id": "native_p0000_ft000007"
+        }
+      ]
+    },
+    {
+      "id": "block-fecd728dd4a67db41d10343d",
+      "type": "text",
+      "text": "audited.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.25106048583984,
+            713.4067687988281,
+            109.06306457519531,
+            721.4328384399414
+          ],
+          "native_id": "native_p0000_ft000094"
+        }
+      ]
+    },
+    {
+      "id": "block-af00e9ccc7401d76bbe31522",
+      "type": "text",
+      "text": "G",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            29.186880111694336,
+            721.1070556640625,
+            35.128440856933594,
+            726.4295349121094
+          ],
+          "native_id": "native_p0000_ft000006"
+        }
+      ]
+    },
+    {
+      "id": "block-37ba2a0d03ddc9e81c457e0d",
+      "type": "text",
+      "text": "G_",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            29.186880111694336,
+            726.7350616455078,
+            36.631919860839844,
+            737.1074523925781
+          ],
+          "native_id": "native_p0000_ft000005"
+        }
+      ]
+    },
+    {
+      "id": "block-bbf63687a46ceb5d2e43e7db",
+      "type": "text",
+      "text": "G",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            29.186880111694336,
+            738.0248184204102,
+            35.128440856933594,
+            743.347297668457
+          ],
+          "native_id": "native_p0000_ft000004"
+        }
+      ]
+    },
+    {
+      "id": "block-b21605fe034dffc07cd9b004",
+      "type": "text",
+      "text": "220929_",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            29.259241104125977,
+            743.6528167724609,
+            36.631919860839844,
+            774.606819152832
+          ],
+          "native_id": "native_p0000_ft000003"
+        }
+      ]
+    },
+    {
+      "id": "block-3dd7f58d7dd3e24610276c11",
+      "type": "text",
+      "text": "Code ref.: GR – Rules for aquaculture; v6.0_Sep22; English version",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.08200073242188,
+            794.4268646240234,
+            310.3892822265625,
+            801.9603424072266
+          ],
+          "native_id": "native_p0000_ft000000"
+        }
+      ]
+    },
+    {
+      "id": "block-6c36d27e19581122f8152a5e",
+      "type": "text",
+      "text": "GLOBALG.A.P. general regulations – Rules for aquaculture scope",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.10611724853516,
+            803.658821105957,
+            304.7324523925781,
+            811.2003421783447
+          ],
+          "native_id": "native_p0000_ft000001"
+        }
+      ]
+    },
+    {
+      "id": "block-aff455afdef8eca55964d8b4",
+      "type": "text",
+      "text": "Page 3 of 4",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            71.29104614257812,
+            812.904821395874,
+            111.3543701171875,
+            820.4383029937744
+          ],
+          "native_id": "native_p0000_ft000002"
+        }
+      ]
+    },
+    {
+      "id": "block-f602b5c3d539fec9f15dc3d7",
+      "type": "image",
+      "text": "",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            0.0,
+            765.39990234375,
+            592.9925537109375,
+            841.6498983204365
+          ]
+        }
+      ],
+      "image": {
+        "source_ref": {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            0.0,
+            765.39990234375,
+            592.9925537109375,
+            841.6498983204365
+          ]
+        },
+        "attachment": null,
+        "attribution": "Embedded image in the bound original PDF."
+      }
+    },
+    {
+      "id": "block-70daa6b23ef501ce00acb2e1",
+      "type": "image",
+      "text": "",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            490.44989013671875,
+            11.35003662109375,
+            580.849853515625,
+            84.18011474609375
+          ]
+        }
+      ],
+      "image": {
+        "source_ref": {
+          "scope_id": "page:3",
+          "page_index": 2,
+          "page": 3,
+          "bbox": [
+            490.44989013671875,
+            11.35003662109375,
+            580.849853515625,
+            84.18011474609375
+          ]
+        },
+        "attachment": null,
+        "attribution": "Embedded image in the bound original PDF."
+      }
+    },
+    {
+      "id": "block-c1afb0a84c2c546a2c9e819c",
+      "type": "text",
+      "text": "4.2\nCB audit of product handling units",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "4.2",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            71.1297607421875,
+            93.10223388671875,
+            85.743408203125,
+            101.03997802734375
+          ],
+          "native_id": "native_p0001_ft000019"
+        },
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            99.75647735595703,
+            93.00286865234375,
+            279.6941223144531,
+            103.34735107421875
+          ],
+          "native_id": "native_p0001_ft000020"
+        }
+      ]
+    },
+    {
+      "id": "block-2d17e286509d1502fa65edfd",
+      "type": "text",
+      "text": "Where an Option 2 producer group or an Option",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            71.05247497558594,
+            111.59423828125,
+            306.5710144042969,
+            121.94976806640625
+          ],
+          "native_id": "native_p0001_ft000021"
+        }
+      ]
+    },
+    {
+      "id": "block-7d0e994d30fa86a909e023c4",
+      "type": "text",
+      "text": "1 multisite producer (with or without QMS) has",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            311.51470947265625,
+            111.59423828125,
+            541.5628662109375,
+            121.94976806640625
+          ],
+          "native_id": "native_p0001_ft000022"
+        }
+      ]
+    },
+    {
+      "id": "block-fe7829de18ef9a083ec1c0ef",
+      "type": "text",
+      "text": "more than one product handling unit, each unit shall be audited while in operation (there",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            71.63760375976562,
+            124.3233642578125,
+            497.4349365234375,
+            134.6678466796875
+          ],
+          "native_id": "native_p0001_ft000023"
+        }
+      ]
+    },
+    {
+      "id": "block-3ab93ec7d13cab3baaab7a1d",
+      "type": "text",
+      "text": "shall be",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            501.2261047363281,
+            124.455810546875,
+            541.6258544921875,
+            132.48193359375
+          ],
+          "native_id": "native_p0001_ft000024"
+        }
+      ]
+    },
+    {
+      "id": "block-8908915ea050d96e7d51c812",
+      "type": "text",
+      "text": "no sampling of product handling units).",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            71.648681640625,
+            136.91998291015625,
+            258.987548828125,
+            147.26446533203125
+          ],
+          "native_id": "native_p0001_ft000025"
+        }
+      ]
+    },
+    {
+      "id": "block-cf54f3d26b84f04a67b5a57c",
+      "type": "text",
+      "text": "4.3\nCB farm audit duration",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "4.3",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            71.12980651855469,
+            161.616455078125,
+            85.82073211669922,
+            169.6756591796875
+          ],
+          "native_id": "native_p0001_ft000026"
+        },
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            99.75652313232422,
+            161.51708984375,
+            217.79620361328125,
+            169.6756591796875
+          ],
+          "native_id": "native_p0001_ft000027"
+        }
+      ]
+    },
+    {
+      "id": "block-3c0040b582dcde61df08affb",
+      "type": "text",
+      "text": "a)\nThe CB farm audit duration",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "a)",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            85.48179626464844,
+            180.240966796875,
+            94.47940063476562,
+            190.58544921875
+          ],
+          "native_id": "native_p0001_ft000028"
+        },
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            106.57923889160156,
+            180.240966796875,
+            238.6375274658203,
+            188.3995361328125
+          ],
+          "native_id": "native_p0001_ft000029"
+        }
+      ]
+    },
+    {
+      "id": "block-73f1853a5b081e73f01947fe",
+      "type": "text",
+      "text": "shall allow for an",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            243.1109161376953,
+            180.240966796875,
+            324.81134033203125,
+            188.3995361328125
+          ],
+          "native_id": "native_p0001_ft000030"
+        }
+      ]
+    },
+    {
+      "id": "block-4af1b32e7c4e274acbd2c719",
+      "type": "text",
+      "text": "opening meeting with farm management, a",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            329.3001708984375,
+            180.240966796875,
+            541.587158203125,
+            190.58544921875
+          ],
+          "native_id": "native_p0001_ft000031"
+        }
+      ]
+    },
+    {
+      "id": "block-2feb328f8a38a38ff22cff61",
+      "type": "text",
+      "text": "complete evaluation of all relevant standard requirements, completion of the applicable\nchecklist, and the presentation of the results to the producer.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            106.76689910888672,
+            192.83758544921875,
+            541.5960693359375,
+            203.06060791015625
+          ],
+          "native_id": "native_p0001_ft000032"
+        },
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            106.75584411621094,
+            205.5556640625,
+            400.14166259765625,
+            215.7786865234375
+          ],
+          "native_id": "native_p0001_ft000033"
+        }
+      ]
+    },
+    {
+      "id": "block-900561a82d2a3c671f4db3a0",
+      "type": "text",
+      "text": "b)\nThe initial CB farm audit duration for the aquaculture scope shall be no less than one and\na half days. This duration excludes the GRASP assessment or any other add-on CB audit\nand shall also be applied in the first year of the",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "b)",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            85.79759979248047,
+            224.16290283203125,
+            94.47504425048828,
+            234.50738525390625
+          ],
+          "native_id": "native_p0001_ft000034"
+        },
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            106.57488250732422,
+            224.16290283203125,
+            541.52197265625,
+            234.38592529296875
+          ],
+          "native_id": "native_p0001_ft000035"
+        },
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            106.71839904785156,
+            236.8809814453125,
+            541.6358642578125,
+            247.2254638671875
+          ],
+          "native_id": "native_p0001_ft000036"
+        },
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            106.72943115234375,
+            249.47760009765625,
+            332.9346008300781,
+            259.82208251953125
+          ],
+          "native_id": "native_p0001_ft000037"
+        }
+      ]
+    },
+    {
+      "id": "block-68e219d7050daa97179b88d4",
+      "type": "text",
+      "text": "IFA Smart or IFA GFS CB audit.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            337.2777404785156,
+            249.47760009765625,
+            491.70526123046875,
+            257.63616943359375
+          ],
+          "native_id": "native_p0001_ft000038"
+        }
+      ]
+    },
+    {
+      "id": "block-95ab4b8749f058ca0609c88d",
+      "type": "text",
+      "text": "c)\nIn subsequent years, the usual CB farm audit duration for the aquaculture scope is",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "c)",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            85.51055908203125,
+            268.0828857421875,
+            97.26815795898438,
+            278.4273681640625
+          ],
+          "native_id": "native_p0001_ft000039"
+        },
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            107.3476791381836,
+            268.0828857421875,
+            501.1610107421875,
+            278.4273681640625
+          ],
+          "native_id": "native_p0001_ft000040"
+        }
+      ]
+    },
+    {
+      "id": "block-29ccea52024cee076e8b8ec0",
+      "type": "text",
+      "text": "less",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            519.8351440429688,
+            268.21533203125,
+            538.253173828125,
+            276.241455078125
+          ],
+          "native_id": "native_p0001_ft000042"
+        }
+      ]
+    },
+    {
+      "id": "block-3b1dc774fa13fe1aae6365c0",
+      "type": "text",
+      "text": "no",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            504.975341796875,
+            270.268798828125,
+            516.0926513671875,
+            276.241455078125
+          ],
+          "native_id": "native_p0001_ft000041"
+        }
+      ]
+    },
+    {
+      "id": "block-2b3a7fd1ff3e0a656b1ddd47",
+      "type": "text",
+      "text": "than seven",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            106.53071594238281,
+            280.93341064453125,
+            159.57791137695312,
+            288.95953369140625
+          ],
+          "native_id": "native_p0001_ft000043"
+        }
+      ]
+    },
+    {
+      "id": "block-e1b41187b8ba8a64c1028cbf",
+      "type": "text",
+      "text": "hours on-site.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            164.06015014648438,
+            280.93341064453125,
+            228.92015075683594,
+            288.95953369140625
+          ],
+          "native_id": "native_p0001_ft000044"
+        }
+      ]
+    },
+    {
+      "id": "block-dc25becb5e4e1444e746b72c",
+      "type": "text",
+      "text": "d)\nThe minimum duration of seven",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "d)",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            85.45536041259766,
+            299.40289306640625,
+            94.47504425048828,
+            309.74737548828125
+          ],
+          "native_id": "native_p0001_ft000045"
+        },
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            106.57488250732422,
+            299.40289306640625,
+            275.13360595703125,
+            307.56146240234375
+          ],
+          "native_id": "native_p0001_ft000046"
+        }
+      ]
+    },
+    {
+      "id": "block-967a30e87a0adaa19eab82ff",
+      "type": "text",
+      "text": "hours shall apply to the simplest circumstances:",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            283.44671630859375,
+            299.53533935546875,
+            541.628173828125,
+            309.74737548828125
+          ],
+          "native_id": "native_p0001_ft000047"
+        }
+      ]
+    },
+    {
+      "id": "block-1e9df74e27514bfb39144236",
+      "type": "text",
+      "text": "Subsequent CB audits of typically mollusc farms but potentially also other small finfish and\ncrustacean farms that have very simple or compact operations, a single species, no",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            106.81776428222656,
+            312.1209716796875,
+            541.5895385742188,
+            322.4654541015625
+          ],
+          "native_id": "native_p0001_ft000048"
+        },
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            106.75151824951172,
+            324.71759033203125,
+            541.4954833984375,
+            335.0621032714844
+          ],
+          "native_id": "native_p0001_ft000049"
+        }
+      ]
+    },
+    {
+      "id": "block-5398e27584d29384edca06d8",
+      "type": "text",
+      "text": "less than five",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            226.66799926757812,
+            337.31427001953125,
+            296.80072021484375,
+            345.4728088378906
+          ],
+          "native_id": "native_p0001_ft000051"
+        }
+      ]
+    },
+    {
+      "id": "block-fb14d45d47ffff469026a692",
+      "type": "text",
+      "text": "product handling, and",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            107.04959869384766,
+            337.4467468261719,
+            218.57568359375,
+            347.65875244140625
+          ],
+          "native_id": "native_p0001_ft000050"
+        }
+      ]
+    },
+    {
+      "id": "block-993755d49613d20674e34cfa",
+      "type": "text",
+      "text": "workers. The seven",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            303.8706970214844,
+            337.4467468261719,
+            406.16845703125,
+            345.4728088378906
+          ],
+          "native_id": "native_p0001_ft000052"
+        }
+      ]
+    },
+    {
+      "id": "block-7a0d62ed4e284c32c96d145d",
+      "type": "text",
+      "text": "hours exclude",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            414.24859619140625,
+            337.4467468261719,
+            484.9498596191406,
+            345.4728088378906
+          ],
+          "native_id": "native_p0001_ft000053"
+        }
+      ]
+    },
+    {
+      "id": "block-e252a4efe9ac63240bc764c6",
+      "type": "text",
+      "text": "reporting,",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            492.8424072265625,
+            337.4467468261719,
+            541.6226196289062,
+            347.65875244140625
+          ],
+          "native_id": "native_p0001_ft000054"
+        }
+      ]
+    },
+    {
+      "id": "block-7f4b2b17c79968cd9f21c83e",
+      "type": "text",
+      "text": "preparation, and travel (during the CB audit). Any other type of operation will require more",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            107.04959869384766,
+            350.0323486328125,
+            541.5618896484375,
+            360.3768310546875
+          ],
+          "native_id": "native_p0001_ft000055"
+        }
+      ]
+    },
+    {
+      "id": "block-34a9e8fb6e8381ecff0e47ac",
+      "type": "text",
+      "text": "hours also exclude the duration of the",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            353.6390380859375,
+            362.62896728515625,
+            541.5508422851562,
+            370.7875061035156
+          ],
+          "native_id": "native_p0001_ft000058"
+        }
+      ]
+    },
+    {
+      "id": "block-7bb33a71873c8feb7ddc9ffb",
+      "type": "text",
+      "text": "than seven",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            106.51966094970703,
+            362.7614440917969,
+            159.93118286132812,
+            370.7875061035156
+          ],
+          "native_id": "native_p0001_ft000056"
+        }
+      ]
+    },
+    {
+      "id": "block-6c63fb0faddc6e492b3ae321",
+      "type": "text",
+      "text": "hours on-site audit time. These seven",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            164.76669311523438,
+            362.7614440917969,
+            348.80352783203125,
+            370.7875061035156
+          ],
+          "native_id": "native_p0001_ft000057"
+        }
+      ]
+    },
+    {
+      "id": "block-c388f6e0dc7d426c17f8ca23",
+      "type": "text",
+      "text": "GRASP assessment or any other add-on CB audit.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            106.8950424194336,
+            375.3470458984375,
+            356.9399719238281,
+            385.6915283203125
+          ],
+          "native_id": "native_p0001_ft000059"
+        }
+      ]
+    },
+    {
+      "id": "block-260d14b7d889d528e7320ad2",
+      "type": "text",
+      "text": "en",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            30.77880096435547,
+            567.7046508789062,
+            35.128440856933594,
+            575.7607116699219
+          ],
+          "native_id": "native_p0001_ft000018"
+        }
+      ]
+    },
+    {
+      "id": "block-75855c98ec35975c46707ed5",
+      "type": "text",
+      "text": "22_",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            29.259241104125977,
+            575.9376220703125,
+            36.631919860839844,
+            589.1392822265625
+          ],
+          "native_id": "native_p0001_ft000017"
+        }
+      ]
+    },
+    {
+      "id": "block-4163db14d90172f10fb27751",
+      "type": "text",
+      "text": "Sep",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            29.186880111694336,
+            589.6618804931641,
+            36.631919860839844,
+            603.2872619628906
+          ],
+          "native_id": "native_p0001_ft000016"
+        }
+      ]
+    },
+    {
+      "id": "block-b6acd2bf86f90653e615b89e",
+      "type": "text",
+      "text": "0_",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            29.259241104125977,
+            603.4102783203125,
+            36.631919860839844,
+            612.0693664550781
+          ],
+          "native_id": "native_p0001_ft000015"
+        }
+      ]
+    },
+    {
+      "id": "block-6fc824381bd933f6e8992f9d",
+      "type": "text",
+      "text": "6_",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            29.259241104125977,
+            612.2864532470703,
+            36.631919860839844,
+            620.9776763916016
+          ],
+          "native_id": "native_p0001_ft000014"
+        }
+      ]
+    },
+    {
+      "id": "block-cae17136e54049376c56ea11",
+      "type": "text",
+      "text": "v",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            30.86724090576172,
+            621.4399719238281,
+            35.040000915527344,
+            625.2589721679688
+          ],
+          "native_id": "native_p0001_ft000013"
+        }
+      ]
+    },
+    {
+      "id": "block-508d745f4f305186e8d104a6",
+      "type": "text",
+      "text": "lture_",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            29.283361434936523,
+            625.2429046630859,
+            36.631919860839844,
+            644.8838195800781
+          ],
+          "native_id": "native_p0001_ft000012"
+        }
+      ]
+    },
+    {
+      "id": "block-d50dae2fdcede9c86920b175",
+      "type": "text",
+      "text": "aquacu",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            30.77880096435547,
+            645.9450988769531,
+            36.631919860839844,
+            671.379638671875
+          ],
+          "native_id": "native_p0001_ft000011"
+        }
+      ]
+    },
+    {
+      "id": "block-7fa20e4fa45e094f59103d65",
+      "type": "text",
+      "text": "for_",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            29.186880111694336,
+            671.5484924316406,
+            36.631919860839844,
+            685.3917541503906
+          ],
+          "native_id": "native_p0001_ft000010"
+        }
+      ]
+    },
+    {
+      "id": "block-e95191b5a715bd174ea4189f",
+      "type": "text",
+      "text": "les_",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            29.283361434936523,
+            685.343505859375,
+            36.631919860839844,
+            699.7045745849609
+          ],
+          "native_id": "native_p0001_ft000009"
+        }
+      ]
+    },
+    {
+      "id": "block-a14e88e1ef504436ab1d04cf",
+      "type": "text",
+      "text": "Ru",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            29.283361434936523,
+            700.7658538818359,
+            35.128440856933594,
+            709.7819213867188
+          ],
+          "native_id": "native_p0001_ft000008"
+        }
+      ]
+    },
+    {
+      "id": "block-a84df21e8fe25d5b4b868931",
+      "type": "text",
+      "text": "R_",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            29.283361434936523,
+            710.2964782714844,
+            36.631919860839844,
+            719.9798583984375
+          ],
+          "native_id": "native_p0001_ft000007"
+        }
+      ]
+    },
+    {
+      "id": "block-7b456275f30ec43338f63f93",
+      "type": "text",
+      "text": "Copyright",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            71.43888092041016,
+            714.9628601074219,
+            122.83338928222656,
+            725.3073425292969
+          ],
+          "native_id": "native_p0001_ft000060"
+        }
+      ]
+    },
+    {
+      "id": "block-97651f3615632c82525eb062",
+      "type": "text",
+      "text": "G",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            29.186880111694336,
+            721.1070556640625,
+            35.128440856933594,
+            726.4295349121094
+          ],
+          "native_id": "native_p0001_ft000006"
+        }
+      ]
+    },
+    {
+      "id": "block-79233eabaf283f4742d9feea",
+      "type": "text",
+      "text": "G_",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            29.186880111694336,
+            726.7350616455078,
+            36.631919860839844,
+            737.1074523925781
+          ],
+          "native_id": "native_p0001_ft000005"
+        }
+      ]
+    },
+    {
+      "id": "block-9a69b2c35281f1b0aedaf634",
+      "type": "text",
+      "text": "© Copyright: GLOBALG.A.P. c/o FoodPLUS GmbH, Spichernstr. 55, 50672 Cologne, Germany.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            70.93103790283203,
+            733.6718292236328,
+            541.6214599609375,
+            744.02734375
+          ],
+          "native_id": "native_p0001_ft000061"
+        }
+      ]
+    },
+    {
+      "id": "block-2890f2dfb6db283d6db2f832",
+      "type": "text",
+      "text": "G",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            29.186880111694336,
+            738.0248184204102,
+            35.128440856933594,
+            743.347297668457
+          ],
+          "native_id": "native_p0001_ft000004"
+        }
+      ]
+    },
+    {
+      "id": "block-73a05b23ea5bf4bedbb9c3d8",
+      "type": "text",
+      "text": "220929_",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            29.259241104125977,
+            743.6528167724609,
+            36.631919860839844,
+            774.606819152832
+          ],
+          "native_id": "native_p0001_ft000003"
+        }
+      ]
+    },
+    {
+      "id": "block-cde327bf753eeee8eaed59f7",
+      "type": "text",
+      "text": "Copying and distribution permitted only in unaltered form.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            71.47200012207031,
+            746.2795104980469,
+            348.720458984375,
+            756.6239852905273
+          ],
+          "native_id": "native_p0001_ft000062"
+        }
+      ]
+    },
+    {
+      "id": "block-8d496c6723cbcadfbc358801",
+      "type": "text",
+      "text": "Code ref.: GR – Rules for aquaculture; v6.0_Sep22; English version",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            71.08200073242188,
+            794.4268646240234,
+            310.3892822265625,
+            801.9603424072266
+          ],
+          "native_id": "native_p0001_ft000000"
+        }
+      ]
+    },
+    {
+      "id": "block-c93c1d700ee627739869bf16",
+      "type": "text",
+      "text": "GLOBALG.A.P. general regulations – Rules for aquaculture scope",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            71.10611724853516,
+            803.658821105957,
+            304.732421875,
+            811.2003421783447
+          ],
+          "native_id": "native_p0001_ft000001"
+        }
+      ]
+    },
+    {
+      "id": "block-728519b0b400724b1a03eb75",
+      "type": "text",
+      "text": "Page 4 of 4",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            71.29104614257812,
+            812.904821395874,
+            113.82264709472656,
+            820.4383029937744
+          ],
+          "native_id": "native_p0001_ft000002"
+        }
+      ]
+    },
+    {
+      "id": "block-0cfdd1973e0f860f69d05240",
+      "type": "image",
+      "text": "",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            0.0,
+            765.39990234375,
+            592.9925537109375,
+            841.6498983204365
+          ]
+        }
+      ],
+      "image": {
+        "source_ref": {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            0.0,
+            765.39990234375,
+            592.9925537109375,
+            841.6498983204365
+          ]
+        },
+        "attachment": null,
+        "attribution": "Embedded image in the bound original PDF."
+      }
+    },
+    {
+      "id": "block-c028af582f4b3c0a50860d86",
+      "type": "image",
+      "text": "",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            490.44989013671875,
+            11.35003662109375,
+            580.849853515625,
+            84.18011474609375
+          ]
+        }
+      ],
+      "image": {
+        "source_ref": {
+          "scope_id": "page:4",
+          "page_index": 3,
+          "page": 4,
+          "bbox": [
+            490.44989013671875,
+            11.35003662109375,
+            580.849853515625,
+            84.18011474609375
+          ]
+        },
+        "attachment": null,
+        "attribution": "Embedded image in the bound original PDF."
+      }
+    }
+  ],
+  "scope": [
+    {
+      "id": "page:1",
+      "kind": "page",
+      "label": "Page 1",
+      "location": {
+        "page": 1
+      }
+    },
+    {
+      "id": "page:2",
+      "kind": "page",
+      "label": "Page 2",
+      "location": {
+        "page": 2
+      }
+    },
+    {
+      "id": "page:3",
+      "kind": "page",
+      "label": "Page 3",
+      "location": {
+        "page": 3
+      }
+    },
+    {
+      "id": "page:4",
+      "kind": "page",
+      "label": "Page 4",
+      "location": {
+        "page": 4
+      }
+    }
+  ],
+  "covered_scope": [
+    "page:3",
+    "page:4"
+  ],
+  "processed_scope": [
+    "page:3",
+    "page:4"
+  ],
+  "usable_scope": [
+    "page:3",
+    "page:4"
+  ],
+  "unprocessed_scope": [
+    "page:1",
+    "page:2"
+  ],
+  "warnings": [
+    "Native text can differ from visible page marks. Compare it with the original page image. Scanned pages may require manual transcription; no OCR is run when viewing.",
+    "Separate numbering or list markers were placed before adjacent same-row text using native geometry. Text and source references are unchanged; verify the associations against the original.",
+    "Adjacent same-page text fragments were grouped for editing. Original text, numbering and every source fragment remain in extraction evidence; check paragraph boundaries against the original.",
+    "PDF candidate uses the existing positioned PDFium parser in mapped three-page windows. Ruled-table grids use existing local geometry assembly. Reading order, headings and unruled tables may need manual correction; source page images and complete native evidence are retained. No Requirement classifier, semantic processor, OCR model or external service runs."
+  ],
+  "unresolved": [],
+  "canonical_artifacts": [
+    "pdf-window-0001.pdf",
+    "pdf-native-0001.json",
+    "pdf-page-0003.png",
+    "pdf-page-0004.png",
+    "pdf-order-repairs.json",
+    "pdf-paragraph-groups.json"
+  ],
+  "status": "partial",
+  "review_policy": "human_material_confirmation_required",
+  "requirement_status": "not_connected"
+}

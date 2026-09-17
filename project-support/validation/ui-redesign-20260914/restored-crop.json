@@ -1,0 +1,12 @@
+{
+  "path": "system2/runtime/workflow/artifacts/ecd506cd90695697577fcca2065a0a49/attempt-43/native/crops/p0127_paragraph_0003.png",
+  "restored_sha256": "45d3704d15ade10c456b3021f5fbc13ed6f04ba1b716ffd177c7e8d68e6181cc",
+  "bytes": 16438,
+  "retained_unreadable": "project-support/ui-redesign-20260914/unreadable-retained/artifacts/ecd506cd90695697577fcca2065a0a49/attempt-43/native/crops/p0127_paragraph_0003.png",
+  "matching_copies": [
+    "workbench/runtime/acceptance-stage-v2/full-current08/system2-workflow/artifacts/ecd506cd90695697577fcca2065a0a49/attempt-43/native/crops/p0127_paragraph_0003.png",
+    "workbench/runtime/acceptance-stage-v2/full/system2-workflow/artifacts/ecd506cd90695697577fcca2065a0a49/attempt-43/native/crops/p0127_paragraph_0003.png"
+  ],
+  "canonical_sha256_all_three": "76a05945f94a710d00bc869dcdb26b619f10e9b9dd89987e8b72bbc8676f63cf",
+  "scope": "restore one unreadable historical crop; no original PDF, Canonical, review or business decision modified"
+}

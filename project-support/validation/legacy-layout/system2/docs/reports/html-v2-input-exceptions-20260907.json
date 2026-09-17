@@ -1,0 +1,90 @@
+{
+  "observed_after_holdout": true,
+  "parser_changes_for_these_inputs": false,
+  "exceptions": [
+    {
+      "source_id": "PA011",
+      "snapshot_id": "PA011-001",
+      "source_sha256": "96cec52793e643ff1daf51254216f36e1ac4b2216e80dea9f09161708d0a9170",
+      "body_count": 1,
+      "body_text_characters": 0,
+      "body_markup": "<div id=\"documentBody\"></div>",
+      "iframe_count": 0,
+      "page_title": "Lov om arbeidsmiljø, arbeidstid og stillingsvern mv. (arbeidsmiljøloven) - Lovdata",
+      "classification": "input_body_empty",
+      "action": "System1 source-completeness review required; do not substitute navigation or synthesize content."
+    },
+    {
+      "source_id": "PA012",
+      "snapshot_id": "PA012-001",
+      "source_sha256": "15cc7d1de65ea3277121031dd0c7e4d7b44ea7950fdfbd38df7d402255860e68",
+      "body_count": 1,
+      "body_text_characters": 0,
+      "body_markup": "<div id=\"documentBody\"></div>",
+      "iframe_count": 0,
+      "page_title": "Forskrift om utførelse av arbeid, psykososialt arbeidsmiljø, bruk av arbeidsutstyr og tilhørende tekniske krav (forskrift om utførelse av arbeid) - Lovdata",
+      "classification": "input_body_empty",
+      "action": "System1 source-completeness review required; do not substitute navigation or synthesize content."
+    },
+    {
+      "source_id": "PA039",
+      "snapshot_id": "PA039-001",
+      "source_sha256": "9c505be3af04d8879ed1361628aaa96d5a45cacf20987849139a7636c1d97343",
+      "body_count": 1,
+      "body_text_characters": 0,
+      "body_markup": "<div id=\"documentBody\"></div>",
+      "iframe_count": 0,
+      "page_title": "Forskrift om dyrehelse (dyrehelseforskriften) - Lovdata",
+      "classification": "input_body_empty",
+      "action": "System1 source-completeness review required; do not substitute navigation or synthesize content."
+    },
+    {
+      "source_id": "PA041",
+      "snapshot_id": "PA041-001",
+      "source_sha256": "ac4adc7d9df4f75a93328f2fd196b1fb854fcc4696e26c150015ec3b30f6ff65",
+      "body_count": 1,
+      "body_text_characters": 0,
+      "body_markup": "<div id=\"documentBody\"></div>",
+      "iframe_count": 0,
+      "page_title": "Forskrift som utfyller dyrehelseforskriften med bestemmelser om melding, rapportering, overvåkning, utryddelsesprogram og sykdomsfri status for bestemte dyresykdommer (dyrehelseovervåkningsforskriften... - Lovdata",
+      "classification": "input_body_empty",
+      "action": "System1 source-completeness review required; do not substitute navigation or synthesize content."
+    },
+    {
+      "source_id": "PA042",
+      "snapshot_id": "PA042-001",
+      "source_sha256": "0c5693b8397db63986f66ac880a8fae1ba72a0f02771de366f103d3ee196e2e8",
+      "body_count": 1,
+      "body_text_characters": 0,
+      "body_markup": "<div id=\"documentBody\"></div>",
+      "iframe_count": 0,
+      "page_title": "Forskrift som utfyller dyrehelseforskriften med bestemmelser om forebygging og bekjempelse av smittsomme dyresykdommer (dyresykdomsbekjempelsesforskriften) - Lovdata",
+      "classification": "input_body_empty",
+      "action": "System1 source-completeness review required; do not substitute navigation or synthesize content."
+    },
+    {
+      "source_id": "PA044",
+      "snapshot_id": "PA044-001",
+      "source_sha256": "64436e3a3f3ade668fd3eaa53ce867914caf1d3a2f972c3bfd8d034b37641848",
+      "body_count": 1,
+      "body_text_characters": 0,
+      "body_markup": "<div id=\"documentBody\"></div>",
+      "iframe_count": 0,
+      "page_title": "Forskrift om begrensning av forurensning (forurensningsforskriften) - Lovdata",
+      "classification": "input_body_empty",
+      "action": "System1 source-completeness review required; do not substitute navigation or synthesize content."
+    },
+    {
+      "source_id": "PA058",
+      "snapshot_id": "PA058-001",
+      "source_sha256": "fd75ab8dd58b68417b6da68c10c92a6952c7e7e2c8fdb7d48b02c8a46c6dee6a",
+      "body_count": 1,
+      "body_text_characters": 0,
+      "body_markup": "<div id=\"documentBody\"></div>",
+      "iframe_count": 0,
+      "page_title": "Forskrift om animalske biprodukter som ikke er beregnet på konsum (animaliebiproduktforskriften) - Lovdata",
+      "classification": "input_body_empty",
+      "action": "System1 source-completeness review required; do not substitute navigation or synthesize content."
+    }
+  ]
+}

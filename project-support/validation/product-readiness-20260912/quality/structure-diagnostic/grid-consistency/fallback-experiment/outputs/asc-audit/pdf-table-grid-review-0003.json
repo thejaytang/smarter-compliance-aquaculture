@@ -1,0 +1,6992 @@
+{
+  "method": "native-line-grid-consistency/experiment-1",
+  "source_sha256": "911b716d6e4f9aacc1e0c7999dbcf1e009f08c3b322269c748d867006521e76d",
+  "page_reference": {
+    "scope_id": "page:3",
+    "page_index": 2,
+    "page": 3
+  },
+  "rejected": [],
+  "inspected": [
+    {
+      "candidate_id": "block-672017a57cc898b8ecc61e05",
+      "method": "native-line-grid-consistency/experiment-1",
+      "tolerance_points": 1.0,
+      "reject_ratio": 0.25,
+      "captured_line_denominator": 107,
+      "crossing_line_numerator": 8,
+      "crossing_ratio": 0.07476635514018691,
+      "reject": false,
+      "cells": [
+        {
+          "row": 0,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            50.666666666666664,
+            100.0,
+            78.66666666666667,
+            106.0
+          ]
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 3,
+          "bbox": [
+            78.66666666666667,
+            100.0,
+            557.3333333333334,
+            106.0
+          ]
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            50.666666666666664,
+            106.0,
+            78.66666666666667,
+            112.0
+          ]
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            78.66666666666667,
+            106.0,
+            192.66666666666666,
+            112.0
+          ]
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            192.66666666666666,
+            106.0,
+            375.3333333333333,
+            112.0
+          ]
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            375.3333333333333,
+            106.0,
+            557.3333333333334,
+            112.0
+          ]
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            50.666666666666664,
+            112.0,
+            78.66666666666667,
+            120.66666666666667
+          ]
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            78.66666666666667,
+            112.0,
+            192.66666666666666,
+            120.66666666666667
+          ]
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 2,
+          "bbox": [
+            192.66666666666666,
+            112.0,
+            557.3333333333334,
+            120.66666666666667
+          ]
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "rowspan": 7,
+          "colspan": 1,
+          "bbox": [
+            50.666666666666664,
+            120.66666666666667,
+            78.66666666666667,
+            416.0
+          ]
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "rowspan": 7,
+          "colspan": 1,
+          "bbox": [
+            78.66666666666667,
+            120.66666666666667,
+            192.66666666666666,
+            416.0
+          ]
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 2,
+          "bbox": [
+            192.66666666666666,
+            120.66666666666667,
+            557.3333333333334,
+            270.6666666666667
+          ]
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            192.66666666666666,
+            270.6666666666667,
+            375.3333333333333,
+            300.0
+          ]
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            375.3333333333333,
+            270.6666666666667,
+            557.3333333333334,
+            300.0
+          ]
+        },
+        {
+          "row": 5,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            192.66666666666666,
+            300.0,
+            375.3333333333333,
+            320.6666666666667
+          ]
+        },
+        {
+          "row": 5,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            375.3333333333333,
+            300.0,
+            557.3333333333334,
+            320.6666666666667
+          ]
+        },
+        {
+          "row": 6,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            192.66666666666666,
+            320.6666666666667,
+            375.3333333333333,
+            336.6666666666667
+          ]
+        },
+        {
+          "row": 6,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            375.3333333333333,
+            320.6666666666667,
+            557.3333333333334,
+            336.6666666666667
+          ]
+        },
+        {
+          "row": 7,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            192.66666666666666,
+            336.6666666666667,
+            375.3333333333333,
+            366.0
+          ]
+        },
+        {
+          "row": 7,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            375.3333333333333,
+            336.6666666666667,
+            557.3333333333334,
+            366.0
+          ]
+        },
+        {
+          "row": 8,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            192.66666666666666,
+            366.0,
+            375.3333333333333,
+            395.3333333333333
+          ]
+        },
+        {
+          "row": 8,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            375.3333333333333,
+            366.0,
+            557.3333333333334,
+            395.3333333333333
+          ]
+        },
+        {
+          "row": 9,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            192.66666666666666,
+            395.3333333333333,
+            375.3333333333333,
+            416.0
+          ]
+        },
+        {
+          "row": 9,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            375.3333333333333,
+            395.3333333333333,
+            557.3333333333334,
+            416.0
+          ]
+        },
+        {
+          "row": 10,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            50.666666666666664,
+            416.0,
+            78.66666666666667,
+            424.6666666666667
+          ]
+        },
+        {
+          "row": 10,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            78.66666666666667,
+            416.0,
+            192.66666666666666,
+            424.6666666666667
+          ]
+        },
+        {
+          "row": 10,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            192.66666666666666,
+            416.0,
+            375.3333333333333,
+            424.6666666666667
+          ]
+        },
+        {
+          "row": 10,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            375.3333333333333,
+            416.0,
+            557.3333333333334,
+            424.6666666666667
+          ]
+        },
+        {
+          "row": 11,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            50.666666666666664,
+            424.6666666666667,
+            78.66666666666667,
+            433.3333333333333
+          ]
+        },
+        {
+          "row": 11,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            78.66666666666667,
+            424.6666666666667,
+            192.66666666666666,
+            433.3333333333333
+          ]
+        },
+        {
+          "row": 11,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 2,
+          "bbox": [
+            192.66666666666666,
+            424.6666666666667,
+            557.3333333333334,
+            433.3333333333333
+          ]
+        },
+        {
+          "row": 12,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            50.666666666666664,
+            433.3333333333333,
+            78.66666666666667,
+            442.6666666666667
+          ]
+        },
+        {
+          "row": 12,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            78.66666666666667,
+            433.3333333333333,
+            192.66666666666666,
+            442.6666666666667
+          ]
+        },
+        {
+          "row": 12,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 2,
+          "bbox": [
+            192.66666666666666,
+            433.3333333333333,
+            557.3333333333334,
+            442.6666666666667
+          ]
+        },
+        {
+          "row": 13,
+          "col": 0,
+          "rowspan": 2,
+          "colspan": 1,
+          "bbox": [
+            50.666666666666664,
+            442.6666666666667,
+            78.66666666666667,
+            489.3333333333333
+          ]
+        },
+        {
+          "row": 13,
+          "col": 1,
+          "rowspan": 2,
+          "colspan": 1,
+          "bbox": [
+            78.66666666666667,
+            442.6666666666667,
+            192.66666666666666,
+            489.3333333333333
+          ]
+        },
+        {
+          "row": 13,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            192.66666666666666,
+            442.6666666666667,
+            375.3333333333333,
+            468.0
+          ]
+        },
+        {
+          "row": 13,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            375.3333333333333,
+            442.6666666666667,
+            557.3333333333334,
+            468.0
+          ]
+        },
+        {
+          "row": 14,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            192.66666666666666,
+            468.0,
+            375.3333333333333,
+            489.3333333333333
+          ]
+        },
+        {
+          "row": 14,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            375.3333333333333,
+            468.0,
+            557.3333333333334,
+            489.3333333333333
+          ]
+        },
+        {
+          "row": 15,
+          "col": 0,
+          "rowspan": 3,
+          "colspan": 1,
+          "bbox": [
+            50.666666666666664,
+            489.3333333333333,
+            78.66666666666667,
+            568.6666666666666
+          ]
+        },
+        {
+          "row": 15,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            78.66666666666667,
+            489.3333333333333,
+            192.66666666666666,
+            518.6666666666666
+          ]
+        },
+        {
+          "row": 15,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            192.66666666666666,
+            489.3333333333333,
+            375.3333333333333,
+            518.6666666666666
+          ]
+        },
+        {
+          "row": 15,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            375.3333333333333,
+            489.3333333333333,
+            557.3333333333334,
+            518.6666666666666
+          ]
+        },
+        {
+          "row": 16,
+          "col": 1,
+          "rowspan": 2,
+          "colspan": 1,
+          "bbox": [
+            78.66666666666667,
+            518.6666666666666,
+            192.66666666666666,
+            568.6666666666666
+          ]
+        },
+        {
+          "row": 16,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            192.66666666666666,
+            518.6666666666666,
+            375.3333333333333,
+            548.0
+          ]
+        },
+        {
+          "row": 16,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            375.3333333333333,
+            518.6666666666666,
+            557.3333333333334,
+            548.0
+          ]
+        },
+        {
+          "row": 17,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            192.66666666666666,
+            548.0,
+            375.3333333333333,
+            568.6666666666666
+          ]
+        },
+        {
+          "row": 17,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            375.3333333333333,
+            548.0,
+            557.3333333333334,
+            568.6666666666666
+          ]
+        },
+        {
+          "row": 18,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            50.666666666666664,
+            568.6666666666666,
+            78.66666666666667,
+            577.3333333333334
+          ]
+        },
+        {
+          "row": 18,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 3,
+          "bbox": [
+            78.66666666666667,
+            568.6666666666666,
+            557.3333333333334,
+            577.3333333333334
+          ]
+        },
+        {
+          "row": 19,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            50.666666666666664,
+            577.3333333333334,
+            78.66666666666667,
+            589.3333333333334
+          ]
+        },
+        {
+          "row": 19,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 3,
+          "bbox": [
+            78.66666666666667,
+            577.3333333333334,
+            557.3333333333334,
+            589.3333333333334
+          ]
+        },
+        {
+          "row": 20,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            50.666666666666664,
+            589.3333333333334,
+            78.66666666666667,
+            598.0
+          ]
+        },
+        {
+          "row": 20,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            78.66666666666667,
+            589.3333333333334,
+            192.66666666666666,
+            598.0
+          ]
+        },
+        {
+          "row": 20,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            192.66666666666666,
+            589.3333333333334,
+            375.3333333333333,
+            598.0
+          ]
+        },
+        {
+          "row": 20,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            375.3333333333333,
+            589.3333333333334,
+            557.3333333333334,
+            598.0
+          ]
+        },
+        {
+          "row": 21,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            50.666666666666664,
+            598.0,
+            78.66666666666667,
+            616.0
+          ]
+        },
+        {
+          "row": 21,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 3,
+          "bbox": [
+            78.66666666666667,
+            598.0,
+            557.3333333333334,
+            616.0
+          ]
+        },
+        {
+          "row": 22,
+          "col": 0,
+          "rowspan": 3,
+          "colspan": 1,
+          "bbox": [
+            50.666666666666664,
+            616.0,
+            78.66666666666667,
+            682.6666666666666
+          ]
+        },
+        {
+          "row": 22,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            78.66666666666667,
+            616.0,
+            192.66666666666666,
+            645.3333333333334
+          ]
+        },
+        {
+          "row": 22,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            192.66666666666666,
+            616.0,
+            375.3333333333333,
+            645.3333333333334
+          ]
+        },
+        {
+          "row": 22,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            375.3333333333333,
+            616.0,
+            557.3333333333334,
+            645.3333333333334
+          ]
+        },
+        {
+          "row": 23,
+          "col": 1,
+          "rowspan": 2,
+          "colspan": 1,
+          "bbox": [
+            78.66666666666667,
+            645.3333333333334,
+            192.66666666666666,
+            682.6666666666666
+          ]
+        },
+        {
+          "row": 23,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            192.66666666666666,
+            645.3333333333334,
+            375.3333333333333,
+            664.0
+          ]
+        },
+        {
+          "row": 23,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            375.3333333333333,
+            645.3333333333334,
+            557.3333333333334,
+            664.0
+          ]
+        },
+        {
+          "row": 24,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            192.66666666666666,
+            664.0,
+            375.3333333333333,
+            682.6666666666666
+          ]
+        },
+        {
+          "row": 24,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            375.3333333333333,
+            664.0,
+            557.3333333333334,
+            682.6666666666666
+          ]
+        },
+        {
+          "row": 25,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            50.666666666666664,
+            682.6666666666666,
+            78.66666666666667,
+            691.3333333333334
+          ]
+        },
+        {
+          "row": 25,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            78.66666666666667,
+            682.6666666666666,
+            192.66666666666666,
+            691.3333333333334
+          ]
+        },
+        {
+          "row": 25,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            192.66666666666666,
+            682.6666666666666,
+            375.3333333333333,
+            691.3333333333334
+          ]
+        },
+        {
+          "row": 25,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            375.3333333333333,
+            682.6666666666666,
+            557.3333333333334,
+            691.3333333333334
+          ]
+        }
+      ],
+      "captured_lines": [
+        {
+          "line": {
+            "id": "native_p0002_ft000000",
+            "text": "Compliance Criteria (Required Client Actions):",
+            "bbox_points": [
+              239.15719604492188,
+              107.42401123046875,
+              329.9779968261719,
+              111.60479736328125
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 1,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              192.66666666666666,
+              106.0,
+              375.3333333333333,
+              112.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000001",
+            "text": "Auditor Evaluation (Required CAB Actions):",
+            "bbox_points": [
+              423.602783203125,
+              107.42401123046875,
+              510.377197265625,
+              111.60479736328125
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 1,
+            "col": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              375.3333333333333,
+              106.0,
+              557.3333333333334,
+              112.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000002",
+            "text": "Footnote",
+            "bbox_points": [
+              56.56319808959961,
+              115.5263671875,
+              73.68000030517578,
+              118.598388671875
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 2,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              50.666666666666664,
+              112.0,
+              78.66666666666667,
+              120.66666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000003",
+            "text": "a. Monitor and record on-farm percent saturation of DO at a minimum of twice daily using a",
+            "bbox_points": [
+              194.156005859375,
+              277.80682373046875,
+              373.7816162109375,
+              281.9396057128906
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 4,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              192.66666666666666,
+              270.6666666666667,
+              375.3333333333333,
+              300.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000004",
+            "text": "calibrated oxygen meter or equivalent method. For first audits, farm records must cover ≥ 6",
+            "bbox_points": [
+              194.1511993408203,
+              284.0467834472656,
+              373.2747802734375,
+              288.1795959472656
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 4,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              192.66666666666666,
+              270.6666666666667,
+              375.3333333333333,
+              300.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000005",
+            "text": "months.",
+            "bbox_points": [
+              194.3000030517578,
+              290.3059997558594,
+              209.67440795898438,
+              293.6083984375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 4,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              192.66666666666666,
+              270.6666666666667,
+              375.3333333333333,
+              300.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000006",
+            "text": "A. Do not schedule audit until client provides a minimum of 6 months of DO data.",
+            "bbox_points": [
+              376.47161865234375,
+              284.0467834472656,
+              534.0604248046875,
+              288.1795959472656
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 4,
+            "col": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              375.3333333333333,
+              270.6666666666667,
+              557.3333333333334,
+              300.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000007",
+            "text": "b. Provide a written justification for any missed samples or deviations in sampling time.",
+            "bbox_points": [
+              194.3000030517578,
+              309.0068054199219,
+              363.56243896484375,
+              313.1396179199219
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 5,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              192.66666666666666,
+              300.0,
+              375.3333333333333,
+              320.6666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000008",
+            "text": "B. Review records for completeness and conformity with methodology in Appendix 1-4.",
+            "bbox_points": [
+              376.793212890625,
+              309.0068054199219,
+              547.481201171875,
+              313.1396179199219
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 5,
+            "col": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              375.3333333333333,
+              300.0,
+              557.3333333333334,
+              320.6666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000009",
+            "text": "c. Calculate weekly average percent saturation based on data.",
+            "bbox_points": [
+              194.1511993408203,
+              327.5059814453125,
+              315.36083984375,
+              331.6195983886719
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 6,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              192.66666666666666,
+              320.6666666666667,
+              375.3333333333333,
+              336.6666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000010",
+            "text": "C. Review calculation and confirm all weekly averages ≥ 70%.",
+            "bbox_points": [
+              376.6156005859375,
+              327.19879150390625,
+              495.53564453125,
+              331.3796081542969
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 6,
+            "col": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              375.3333333333333,
+              320.6666666666667,
+              557.3333333333334,
+              336.6666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000011",
+            "text": "d. If any weekly average DO values are < 70%, or approaching that level, monitor and record",
+            "bbox_points": [
+              194.1656036376953,
+              347.16680908203125,
+              374.085205078125,
+              351.29962158203125
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 7,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              192.66666666666666,
+              336.6666666666667,
+              375.3333333333333,
+              366.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000012",
+            "text": "DO at a reference site and compare to on-farm levels (see Instructions).",
+            "bbox_points": [
+              194.34320068359375,
+              353.3636169433594,
+              334.3016052246094,
+              357.53961181640625
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 7,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              192.66666666666666,
+              336.6666666666667,
+              375.3333333333333,
+              366.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000013",
+            "text": "D. As needed, review DO data from reference site and document in the audit report (see",
+            "bbox_points": [
+              376.793212890625,
+              347.1236267089844,
+              549.6172485351562,
+              351.29962158203125
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 7,
+            "col": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              375.3333333333333,
+              336.6666666666667,
+              557.3333333333334,
+              366.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000014",
+            "text": "instruction).",
+            "bbox_points": [
+              376.7020263671875,
+              353.3636169433594,
+              401.11480712890625,
+              357.4916076660156
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 7,
+            "col": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              375.3333333333333,
+              336.6666666666667,
+              557.3333333333334,
+              366.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000015",
+            "text": "e. Arrange for auditor to witness DO monitoring and calibration while on site.",
+            "bbox_points": [
+              194.156005859375,
+              379.5668029785156,
+              343.91119384765625,
+              383.6996154785156
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 8,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              192.66666666666666,
+              366.0,
+              375.3333333333333,
+              395.3333333333333
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000016",
+            "text": "E. Witness DO monitoring and verify calibration while on site. On-site values should fall",
+            "bbox_points": [
+              376.793212890625,
+              373.3267822265625,
+              546.4971923828125,
+              377.4595947265625
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 8,
+            "col": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              375.3333333333333,
+              366.0,
+              557.3333333333334,
+              395.3333333333333
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000017",
+            "text": "within range of farm data for DO. If an out of range measurement is observed, raise a",
+            "bbox_points": [
+              376.5148010253906,
+              379.5668029785156,
+              543.3820190429688,
+              383.6996154785156
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 8,
+            "col": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              375.3333333333333,
+              366.0,
+              557.3333333333334,
+              395.3333333333333
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000018",
+            "text": "nonconformity.",
+            "bbox_points": [
+              376.75,
+              385.8067932128906,
+              406.1692199707031,
+              389.9396057128906
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 8,
+            "col": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              375.3333333333333,
+              366.0,
+              557.3333333333334,
+              395.3333333333333
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000019",
+            "text": "f. Submit results from monitoring of average weekly DO as per Appendix VI to ASC at least",
+            "bbox_points": [
+              194.02639770507812,
+              401.40679931640625,
+              369.6967468261719,
+              405.53961181640625
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 9,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              192.66666666666666,
+              395.3333333333333,
+              375.3333333333333,
+              416.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000020",
+            "text": "once per year.",
+            "bbox_points": [
+              194.1511993408203,
+              408.6748046875,
+              221.5592041015625,
+              411.79962158203125
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 9,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              192.66666666666666,
+              395.3333333333333,
+              375.3333333333333,
+              416.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000021",
+            "text": "F. Confirm that client has submitted DO results to ASC (Appendix VI).",
+            "bbox_points": [
+              376.793212890625,
+              404.2436218261719,
+              509.22039794921875,
+              408.41961669921875
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 9,
+            "col": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              375.3333333333333,
+              395.3333333333333,
+              557.3333333333334,
+              416.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000022",
+            "text": "Footnote",
+            "bbox_points": [
+              56.56319808959961,
+              419.556396484375,
+              73.68000030517578,
+              422.6283874511719
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 10,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              50.666666666666664,
+              416.0,
+              78.66666666666667,
+              424.6666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000023",
+            "text": "Footnote",
+            "bbox_points": [
+              56.56319808959961,
+              428.31640625,
+              73.68000030517578,
+              431.3883972167969
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 11,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              50.666666666666664,
+              424.6666666666667,
+              78.66666666666667,
+              433.3333333333333
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000024",
+            "text": "Footnote",
+            "bbox_points": [
+              56.56319808959961,
+              437.0763854980469,
+              73.68000030517578,
+              440.14837646484375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 12,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              50.666666666666664,
+              433.3333333333333,
+              78.66666666666667,
+              442.6666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000025",
+            "text": "a. Calculate the percentage of on-farm samples taken for 2.2.1a that fall under 2 mg/L DO. A. Review the farm's calculation and confirm that ≤ 5% of weekly samples fall under 2 mg/L",
+            "bbox_points": [
+              194.156005859375,
+              450.5307922363281,
+              554.6620483398438,
+              457.9996032714844
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 13,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              192.66666666666666,
+              442.6666666666667,
+              375.3333333333333,
+              468.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            179.32871500651044,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": true,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000026",
+            "text": "DO.",
+            "bbox_points": [
+              376.793212890625,
+              457.19317626953125,
+              383.3644104003906,
+              460.3083801269531
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 13,
+            "col": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              375.3333333333333,
+              442.6666666666667,
+              557.3333333333334,
+              468.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000027",
+            "text": "b. Submit results from 2.2.2a as per Appendix VI to ASC at least once per year.",
+            "bbox_points": [
+              194.3000030517578,
+              477.3868103027344,
+              345.47601318359375,
+              481.5196228027344
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 14,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              192.66666666666666,
+              468.0,
+              375.3333333333333,
+              489.3333333333333
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000028",
+            "text": "B. Confirm that client has submitted results to ASC (Appendix VI).",
+            "bbox_points": [
+              376.793212890625,
+              477.1036071777344,
+              502.4956359863281,
+              481.27960205078125
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 14,
+            "col": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              375.3333333333333,
+              468.0,
+              557.3333333333334,
+              489.3333333333333
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000029",
+            "text": "a. Inform the CAB whether relevant targets and classification systems are applicable in the",
+            "bbox_points": [
+              194.156005859375,
+              496.706787109375,
+              370.52239990234375,
+              500.839599609375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 15,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              192.66666666666666,
+              489.3333333333333,
+              375.3333333333333,
+              518.6666666666666
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000030",
+            "text": "jurisdiction. If applicable, proceed to \"2.2.3.b\". If not applicable, take action as required",
+            "bbox_points": [
+              193.84400939941406,
+              502.9468078613281,
+              365.76080322265625,
+              507.0796203613281
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 15,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              192.66666666666666,
+              489.3333333333333,
+              375.3333333333333,
+              518.6666666666666
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000031",
+            "text": "under 2.2.4",
+            "bbox_points": [
+              194.2855987548828,
+              509.2156066894531,
+              216.16400146484375,
+              512.5083923339844
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 15,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              192.66666666666666,
+              489.3333333333333,
+              375.3333333333333,
+              518.6666666666666
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000032",
+            "text": "A. Record whether indicator is applicable.",
+            "bbox_points": [
+              376.47161865234375,
+              502.96600341796875,
+              457.015625,
+              507.0796203613281
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 15,
+            "col": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              375.3333333333333,
+              489.3333333333333,
+              557.3333333333334,
+              518.6666666666666
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000033",
+            "text": "b. Compile a summary of relevant national or regional water quality targets and",
+            "bbox_points": [
+              194.3000030517578,
+              529.1068115234375,
+              349.67596435546875,
+              533.2396240234375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 16,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              192.66666666666666,
+              518.6666666666666,
+              375.3333333333333,
+              548.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000034",
+            "text": "classifications, identifying the third-party responsible for the analysis and classification.",
+            "bbox_points": [
+              194.1511993408203,
+              535.3468017578125,
+              362.64080810546875,
+              539.4795989990234
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 16,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              192.66666666666666,
+              518.6666666666666,
+              375.3333333333333,
+              548.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000035",
+            "text": "B. Confirm that there has been a recent third-party analysis (within two years prior to the",
+            "bbox_points": [
+              376.793212890625,
+              529.0636291503906,
+              550.9371337890625,
+              533.2396240234375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 16,
+            "col": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              375.3333333333333,
+              518.6666666666666,
+              557.3333333333334,
+              548.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000036",
+            "text": "audit) to classify areas according to national or regional water quality targets.",
+            "bbox_points": [
+              376.60601806640625,
+              535.3036193847656,
+              526.2364501953125,
+              539.4795989990234
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 16,
+            "col": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              375.3333333333333,
+              518.6666666666666,
+              557.3333333333334,
+              548.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000037",
+            "text": "c. Identify the most recent classification of water quality for the area in which the farm",
+            "bbox_points": [
+              194.1511993408203,
+              554.0968017578125,
+              363.3368225097656,
+              558.2295989990234
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 17,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              192.66666666666666,
+              548.0,
+              375.3333333333333,
+              568.6666666666666
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000038",
+            "text": "operates.",
+            "bbox_points": [
+              194.1511993408203,
+              560.8167877197266,
+              213.50961303710938,
+              564.4695892333984
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 17,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              192.66666666666666,
+              548.0,
+              375.3333333333333,
+              568.6666666666666
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000039",
+            "text": "C. Confirm that the analysis and classification shows the farm is located in an area where the",
+            "bbox_points": [
+              376.6156005859375,
+              554.0968017578125,
+              557.2923583984375,
+              558.2295989990234
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 17,
+            "col": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              375.3333333333333,
+              548.0,
+              557.3333333333334,
+              568.6666666666666
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000040",
+            "text": "water quality complies with the requirement.",
+            "bbox_points": [
+              376.5148010253906,
+              560.3559875488281,
+              464.3404235839844,
+              564.4695892333984
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 17,
+            "col": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              375.3333333333333,
+              548.0,
+              557.3333333333334,
+              568.6666666666666
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000041",
+            "text": "Footnote",
+            "bbox_points": [
+              56.56319808959961,
+              572.2263946533203,
+              73.68000030517578,
+              575.2984008789062
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 18,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              50.666666666666664,
+              568.6666666666666,
+              78.66666666666667,
+              577.3333333333334
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000042",
+            "text": "Footnote",
+            "bbox_points": [
+              56.56319808959961,
+              582.5464019775391,
+              73.68000030517578,
+              585.618408203125
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 19,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              50.666666666666664,
+              577.3333333333334,
+              78.66666666666667,
+              589.3333333333334
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000043",
+            "text": "Footnote",
+            "bbox_points": [
+              56.56319808959961,
+              592.7463989257812,
+              73.68000030517578,
+              595.8184051513672
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 20,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              50.666666666666664,
+              589.3333333333334,
+              78.66666666666667,
+              598.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000044",
+            "text": "Footnote",
+            "bbox_points": [
+              56.56319808959961,
+              606.306396484375,
+              73.68000030517578,
+              609.3784027099609
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 21,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              50.666666666666664,
+              598.0,
+              78.66666666666667,
+              616.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000045",
+            "text": "a. Develop, implement, and document a monitoring plan for N, NH4, NO3, total P, and ortho￾",
+            "bbox_points": [
+              194.156005859375,
+              626.6967926025391,
+              374.50152587890625,
+              630.82958984375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 22,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              192.66666666666666,
+              616.0,
+              375.3333333333333,
+              645.3333333333334
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000046",
+            "text": "P in compliance with Appendix I-5. For first audits, farm records must cover ≥ 6 months.",
+            "bbox_points": [
+              194.34320068359375,
+              632.8887939453125,
+              364.12042236328125,
+              637.0695953369141
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 22,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              192.66666666666666,
+              616.0,
+              375.3333333333333,
+              645.3333333333334
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000047",
+            "text": "A. Review the farm's monitoring plan and verify that the farm has collected monitoring data",
+            "bbox_points": [
+              376.47161865234375,
+              626.6967926025391,
+              555.87158203125,
+              630.82958984375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 22,
+            "col": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              375.3333333333333,
+              616.0,
+              557.3333333333334,
+              645.3333333333334
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000048",
+            "text": "for N and P following the methodology in Appendix I-5.",
+            "bbox_points": [
+              376.4764099121094,
+              632.9367980957031,
+              482.95001220703125,
+              637.0695953369141
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 22,
+            "col": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              375.3333333333333,
+              616.0,
+              557.3333333333334,
+              645.3333333333334
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000049",
+            "text": "b. Calibrate all equipment according to the manufacturer's recommendations.",
+            "bbox_points": [
+              194.3000030517578,
+              653.6967926025391,
+              345.5912170410156,
+              657.82958984375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 23,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              192.66666666666666,
+              645.3333333333334,
+              375.3333333333333,
+              664.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000050",
+            "text": "B. Verify that client calibrates equipment as needed.",
+            "bbox_points": [
+              376.793212890625,
+              653.3367919921875,
+              477.8860168457031,
+              657.4695892333984
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 23,
+            "col": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              375.3333333333333,
+              645.3333333333334,
+              557.3333333333334,
+              664.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000051",
+            "text": "c. Submit data on N and P to ASC as per Appendix VI at least once per year.",
+            "bbox_points": [
+              194.1511993408203,
+              672.1959991455078,
+              339.3608093261719,
+              676.3096008300781
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 24,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              192.66666666666666,
+              664.0,
+              375.3333333333333,
+              682.6666666666666
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000052",
+            "text": "C. Confirm that client has submitted N and P data to ASC (Appendix VI).",
+            "bbox_points": [
+              376.6156005859375,
+              672.1335983276367,
+              514.1452026367188,
+              676.3096008300781
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 24,
+            "col": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              375.3333333333333,
+              664.0,
+              557.3333333333334,
+              682.6666666666666
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000053",
+            "text": "Footnote",
+            "bbox_points": [
+              56.56319808959961,
+              686.0064010620117,
+              73.68000030517578,
+              689.0783996582031
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 25,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              50.666666666666664,
+              682.6666666666666,
+              78.66666666666667,
+              691.3333333333334
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000054",
+            "text": "Criterion 2.2 Water quality in and near the site of operation [8]",
+            "bbox_points": [
+              52.228797912597656,
+              100.63677978515625,
+              175.32003784179688,
+              104.76959228515625
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 0,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 3,
+            "bbox": [
+              78.66666666666667,
+              100.0,
+              557.3333333333334,
+              106.0
+            ]
+          },
+          "internal_overflow_points": [
+            26.437868754069015,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": true,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000055",
+            "text": "2.2.2",
+            "bbox_points": [
+              60.5088005065918,
+              464.51318359375,
+              69.6144027709961,
+              467.6044006347656
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 13,
+            "col": 0,
+            "rowspan": 2,
+            "colspan": 1,
+            "bbox": [
+              50.666666666666664,
+              442.6666666666667,
+              78.66666666666667,
+              489.3333333333333
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000056",
+            "text": "Indicator: Maximum percentage of weekly samples from",
+            "bbox_points": [
+              80.27519989013672,
+              448.706787109375,
+              192.71038818359375,
+              452.839599609375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 13,
+            "col": 1,
+            "rowspan": 2,
+            "colspan": 1,
+            "bbox": [
+              78.66666666666667,
+              442.6666666666667,
+              192.66666666666666,
+              489.3333333333333
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.04372151692709281,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000057",
+            "text": "2.2.1 that fall under 2 mg/L DO",
+            "bbox_points": [
+              80.21279907226562,
+              454.7835998535156,
+              139.75201416015625,
+              459.0796203613281
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 13,
+            "col": 1,
+            "rowspan": 2,
+            "colspan": 1,
+            "bbox": [
+              78.66666666666667,
+              442.6666666666667,
+              192.66666666666666,
+              489.3333333333333
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000058",
+            "text": "Requirement: 5%",
+            "bbox_points": [
+              80.27519989013672,
+              467.527587890625,
+              115.1240005493164,
+              471.5547790527344
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 13,
+            "col": 1,
+            "rowspan": 2,
+            "colspan": 1,
+            "bbox": [
+              78.66666666666667,
+              442.6666666666667,
+              192.66666666666666,
+              489.3333333333333
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000059",
+            "text": "Applicability: All",
+            "bbox_points": [
+              79.9968032836914,
+              479.9259948730469,
+              112.84400177001953,
+              484.0347900390625
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 13,
+            "col": 1,
+            "rowspan": 2,
+            "colspan": 1,
+            "bbox": [
+              78.66666666666667,
+              442.6666666666667,
+              192.66666666666666,
+              489.3333333333333
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000060",
+            "text": "Instruction to Clients for Indicator 2.2.1 - Monitoring Average Weekly Percent Saturation of Dissolved Oxygen",
+            "bbox_points": [
+              194.27120971679688,
+              137.8568115234375,
+              411.47125244140625,
+              141.9896240234375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 3,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 2,
+            "bbox": [
+              192.66666666666666,
+              120.66666666666667,
+              557.3333333333334,
+              270.6666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000061",
+            "text": "Appendix I-4 presents the required methodology that farms must follow for sampling the average weekly percent saturation of dissolved oxygen (DO). Key points of the method are as",
+            "bbox_points": [
+              194.0216064453125,
+              144.0535888671875,
+              550.2345581054688,
+              148.2296142578125
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 3,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 2,
+            "bbox": [
+              192.66666666666666,
+              120.66666666666667,
+              557.3333333333334,
+              270.6666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000062",
+            "text": "follows:",
+            "bbox_points": [
+              194.02639770507812,
+              150.3367919921875,
+              208.90159606933594,
+              153.65838623046875
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 3,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 2,
+            "bbox": [
+              192.66666666666666,
+              120.66666666666667,
+              557.3333333333334,
+              270.6666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000063",
+            "text": "- measurements may be taken with a handheld oxygen meter or equivalent chemical method;",
+            "bbox_points": [
+              194.1031951904297,
+              156.59600830078125,
+              376.16241455078125,
+              160.7095947265625
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 3,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 2,
+            "bbox": [
+              192.66666666666666,
+              120.66666666666667,
+              557.3333333333334,
+              270.6666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000064",
+            "text": "- equipment is calibrated according to manufacturer's recommendations;",
+            "bbox_points": [
+              194.1031951904297,
+              162.8167724609375,
+              336.0679931640625,
+              166.9495849609375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 3,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 2,
+            "bbox": [
+              192.66666666666666,
+              120.66666666666667,
+              557.3333333333334,
+              270.6666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000065",
+            "text": "- measurements are taken at least twice daily: once in the morning (6 -9 am) and once in the afternoon (3-6 pm ) as appropriate for the location and season;",
+            "bbox_points": [
+              194.1031951904297,
+              169.01361083984375,
+              497.08880615234375,
+              173.18963623046875
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 3,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 2,
+            "bbox": [
+              192.66666666666666,
+              120.66666666666667,
+              557.3333333333334,
+              270.6666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000066",
+            "text": "- salinity and temperature must also be measured when DO is sampled;",
+            "bbox_points": [
+              194.1031951904297,
+              175.3160400390625,
+              332.68402099609375,
+              179.42962646484375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 3,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 2,
+            "bbox": [
+              192.66666666666666,
+              120.66666666666667,
+              557.3333333333334,
+              270.6666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000067",
+            "text": "- sampling should be done at 5 meters depth in water conditions that would be experienced by fish (e.g., at the downstream edge of a net pen array):",
+            "bbox_points": [
+              194.1031951904297,
+              181.49359130859375,
+              484.3496398925781,
+              185.66961669921875
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 3,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 2,
+            "bbox": [
+              192.66666666666666,
+              120.66666666666667,
+              557.3333333333334,
+              270.6666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000068",
+            "text": "- each week, all DO measurements are used in the calculation of a weekly average percent saturation.",
+            "bbox_points": [
+              194.1031951904297,
+              187.77679443359375,
+              391.416748046875,
+              191.90960693359375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 3,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 2,
+            "bbox": [
+              192.66666666666666,
+              120.66666666666667,
+              557.3333333333334,
+              270.6666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000069",
+            "text": "If monitoring deviates from prescribed sampling methodology, the farm shall provide the auditor with a written justification (e.g., when samples are missed due to bad weather). In",
+            "bbox_points": [
+              194.34320068359375,
+              200.21356201171875,
+              544.738525390625,
+              204.38958740234375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 3,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 2,
+            "bbox": [
+              192.66666666666666,
+              120.66666666666667,
+              557.3333333333334,
+              270.6666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000070",
+            "text": "limited and well-justified situations, farms may request that the CAB approve reduction of DO monitoring frequency to one sample per day.",
+            "bbox_points": [
+              194.3000030517578,
+              206.496826171875,
+              464.7224426269531,
+              210.629638671875
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 3,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 2,
+            "bbox": [
+              192.66666666666666,
+              120.66666666666667,
+              557.3333333333334,
+              270.6666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000071",
+            "text": "Exception [see footnote 12] If a farm does not meet the minimum 70 percent weekly average saturation requirement, the farm must demonstrate the consistency of percent saturation",
+            "bbox_points": [
+              194.34320068359375,
+              218.976806640625,
+              552.7735595703125,
+              223.109619140625
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 3,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 2,
+            "bbox": [
+              192.66666666666666,
+              120.66666666666667,
+              557.3333333333334,
+              270.6666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000072",
+            "text": "with a reference site. The reference site shall be at least 500 meters from the edge of the net pen array, in a location that is understood to follow similar patterns in upwelling to the farm",
+            "bbox_points": [
+              194.06480407714844,
+              225.216796875,
+              556.1001586914062,
+              229.349609375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 3,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 2,
+            "bbox": [
+              192.66666666666666,
+              120.66666666666667,
+              557.3333333333334,
+              270.6666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000073",
+            "text": "site and is not influenced by nutrient inputs from anthropogenic causes including aquaculture, agricultural runoff or nutrient releases from coastal communities. For any such exceptions,",
+            "bbox_points": [
+              194.1320037841797,
+              231.456787109375,
+              555.6585083007812,
+              235.589599609375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 3,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 2,
+            "bbox": [
+              192.66666666666666,
+              120.66666666666667,
+              557.3333333333334,
+              270.6666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000074",
+            "text": "the auditor shall fully document in the audit report how the farm has demonstrated consistency with the reference site.",
+            "bbox_points": [
+              194.0167999267578,
+              237.69677734375,
+              426.682373046875,
+              241.82958984375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 3,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 2,
+            "bbox": [
+              192.66666666666666,
+              120.66666666666667,
+              557.3333333333334,
+              270.6666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000075",
+            "text": "Note: Percent saturation is the amount of oxygen dissolved in the water sample compared to the maximum amount that could be present at the same temperature and salinity.",
+            "bbox_points": [
+              194.34320068359375,
+              250.17681884765625,
+              536.262939453125,
+              254.30963134765625
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 3,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 2,
+            "bbox": [
+              192.66666666666666,
+              120.66666666666667,
+              557.3333333333334,
+              270.6666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000076",
+            "text": "2.2.4",
+            "bbox_points": [
+              60.5088005065918,
+              648.0232086181641,
+              69.74400329589844,
+              651.1144104003906
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 22,
+            "col": 0,
+            "rowspan": 3,
+            "colspan": 1,
+            "bbox": [
+              50.666666666666664,
+              616.0,
+              78.66666666666667,
+              682.6666666666666
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000077",
+            "text": "[11] An exception to this standard shall be made for farms that can demonstrate consistency with a reference site in the same water body.",
+            "bbox_points": [
+              80.3904037475586,
+              436.3468017578125,
+              348.801513671875,
+              440.4796142578125
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 12,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 2,
+            "bbox": [
+              192.66666666666666,
+              433.3333333333333,
+              557.3333333333334,
+              442.6666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            112.27626291910806,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": true,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000078",
+            "text": "[16] Farms shall monitor total N, NH4, NO3, total P and Ortho-P in the water column. Results shall be submitted to the ASC database. Methods such as a Hach kit are acceptable.",
+            "bbox_points": [
+              80.3904037475586,
+              685.2816009521484,
+              422.4576416015625,
+              689.4095993041992
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 25,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              192.66666666666666,
+              682.6666666666666,
+              375.3333333333333,
+              691.3333333333334
+            ]
+          },
+          "internal_overflow_points": [
+            112.27626291910806,
+            47.124308268229186,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": true,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000079",
+            "text": "Indicator: For jurisdictions without national or regional",
+            "bbox_points": [
+              80.27519989013672,
+              625.9959869384766,
+              189.00001525878906,
+              630.1095886230469
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 22,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              78.66666666666667,
+              616.0,
+              192.66666666666666,
+              645.3333333333334
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000080",
+            "text": "coastal water quality targets, evidence of monitoring of",
+            "bbox_points": [
+              80.15519714355469,
+              632.216796875,
+              188.75521850585938,
+              636.3495941162109
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 22,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              78.66666666666667,
+              616.0,
+              192.66666666666666,
+              645.3333333333334
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000081",
+            "text": "nitrogen and phosphorous [16] levels on farm and at a",
+            "bbox_points": [
+              80.30400085449219,
+              638.4568023681641,
+              186.7296142578125,
+              642.589599609375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 22,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              78.66666666666667,
+              616.0,
+              192.66666666666666,
+              645.3333333333334
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000082",
+            "text": "reference site, following methodology in Appendix I-5",
+            "bbox_points": [
+              80.30400085449219,
+              644.6967926025391,
+              184.18560791015625,
+              648.82958984375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 23,
+            "col": 1,
+            "rowspan": 2,
+            "colspan": 1,
+            "bbox": [
+              78.66666666666667,
+              645.3333333333334,
+              192.66666666666666,
+              682.6666666666666
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.6365407307943087,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000083",
+            "text": "Requirement: Consistency with reference site",
+            "bbox_points": [
+              80.27519989013672,
+              657.1768035888672,
+              170.14642333984375,
+              661.3096008300781
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 23,
+            "col": 1,
+            "rowspan": 2,
+            "colspan": 1,
+            "bbox": [
+              78.66666666666667,
+              645.3333333333334,
+              192.66666666666666,
+              682.6666666666666
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000084",
+            "text": "Applicability: All farms except as noted in [16]",
+            "bbox_points": [
+              79.9968032836914,
+              669.6567993164062,
+              170.35281372070312,
+              673.7896041870117
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 23,
+            "col": 1,
+            "rowspan": 2,
+            "colspan": 1,
+            "bbox": [
+              78.66666666666667,
+              645.3333333333334,
+              192.66666666666666,
+              682.6666666666666
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000085",
+            "text": "[14] Classifications of “good” and “very good” are used in the EU Water Framework Directive. Equivalent classification from other water quality monitoring systems in other jurisdictions are acceptable.",
+            "bbox_points": [
+              80.3904037475586,
+              591.9687957763672,
+              469.4305725097656,
+              596.1495971679688
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 20,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              192.66666666666666,
+              589.3333333333334,
+              375.3333333333333,
+              598.0
+            ]
+          },
+          "internal_overflow_points": [
+            112.27626291910806,
+            94.09723917643231,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": true,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000086",
+            "text": "[15] Closed production systems that can demonstrate the collection and responsible disposal of > 75% of solid nutrients as well as > 50% of dissolved nutrients (through biofiltration, settling and/or other technologies) are exempt from standards",
+            "bbox_points": [
+              80.3904037475586,
+              602.2936096191406,
+              555.6098022460938,
+              606.589599609375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 21,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 3,
+            "bbox": [
+              78.66666666666667,
+              598.0,
+              557.3333333333334,
+              616.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000087",
+            "text": "2.2.3 and 2.2.4.",
+            "bbox_points": [
+              80.21279907226562,
+              608.7256011962891,
+              109.48320007324219,
+              612.0184020996094
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 21,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 3,
+            "bbox": [
+              78.66666666666667,
+              598.0,
+              557.3333333333334,
+              616.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000088",
+            "text": "2.2.1",
+            "bbox_points": [
+              60.5088005065918,
+              267.063232421875,
+              69.6240005493164,
+              270.1544189453125
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 3,
+            "col": 0,
+            "rowspan": 7,
+            "colspan": 1,
+            "bbox": [
+              50.666666666666664,
+              120.66666666666667,
+              78.66666666666667,
+              416.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000089",
+            "text": "[10] Averaged weekly from two daily measurements (proposed at 6 am and 3 pm).",
+            "bbox_points": [
+              80.3904037475586,
+              427.5436096191406,
+              240.00477600097656,
+              431.7196044921875
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 11,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              78.66666666666667,
+              424.6666666666667,
+              192.66666666666666,
+              433.3333333333333
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            47.338109334309905,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": true,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000090",
+            "text": "[12] Related to nutrients (e.g., N, P, chlorophyll A).",
+            "bbox_points": [
+              80.3904037475586,
+              571.4535980224609,
+              177.4991912841797,
+              575.6295928955078
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 18,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 3,
+            "bbox": [
+              78.66666666666667,
+              568.6666666666666,
+              557.3333333333334,
+              577.3333333333334
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000091",
+            "text": "[13] Within the two years prior to the first audit.",
+            "bbox_points": [
+              80.3904037475586,
+              581.8168029785156,
+              173.42401123046875,
+              585.9496002197266
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 19,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 3,
+            "bbox": [
+              78.66666666666667,
+              577.3333333333334,
+              557.3333333333334,
+              589.3333333333334
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000092",
+            "text": "[8] See Appendix VI for transparency requirements for 2.2.1, 2.2.2, 2.2.3 and 2.2.5.",
+            "bbox_points": [
+              80.3904037475586,
+              114.79681396484375,
+              239.77435302734375,
+              118.92962646484375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 2,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              78.66666666666667,
+              112.0,
+              192.66666666666666,
+              120.66666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            47.10768636067709,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": true,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000093",
+            "text": "[9] Percent saturation: Percent saturation is the amount of oxygen dissolved in the water sample compared to the maximum amount that could be present at the same temperature and salinity.",
+            "bbox_points": [
+              80.3904037475586,
+              418.8267822265625,
+              455.0929870605469,
+              422.9595947265625
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 10,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              192.66666666666666,
+              416.0,
+              375.3333333333333,
+              424.6666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            112.27626291910806,
+            79.75965372721356,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": true,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000094",
+            "text": "Indicator: Weekly average percent saturation [9] of",
+            "bbox_points": [
+              80.27519989013672,
+              248.13677978515625,
+              182.15521240234375,
+              252.26959228515625
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 3,
+            "col": 1,
+            "rowspan": 7,
+            "colspan": 1,
+            "bbox": [
+              78.66666666666667,
+              120.66666666666667,
+              192.66666666666666,
+              416.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000095",
+            "text": "dissolved oxygen (DO) [10] on farm, calculated following",
+            "bbox_points": [
+              80.16960144042969,
+              254.33355712890625,
+              190.55517578125,
+              258.50958251953125
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 3,
+            "col": 1,
+            "rowspan": 7,
+            "colspan": 1,
+            "bbox": [
+              78.66666666666667,
+              120.66666666666667,
+              192.66666666666666,
+              416.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000096",
+            "text": "methodology in Appendix I-4",
+            "bbox_points": [
+              80.30400085449219,
+              260.63604736328125,
+              137.18881225585938,
+              264.7496337890625
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 3,
+            "col": 1,
+            "rowspan": 7,
+            "colspan": 1,
+            "bbox": [
+              78.66666666666667,
+              120.66666666666667,
+              192.66666666666666,
+              416.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000097",
+            "text": "Requirement: ≥ 70% [11]",
+            "bbox_points": [
+              80.27519989013672,
+              273.08355712890625,
+              129.56240844726562,
+              277.2547607421875
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 3,
+            "col": 1,
+            "rowspan": 7,
+            "colspan": 1,
+            "bbox": [
+              78.66666666666667,
+              120.66666666666667,
+              192.66666666666666,
+              416.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000098",
+            "text": "Applicability: All farms except as noted in [11]",
+            "bbox_points": [
+              79.9968032836914,
+              285.6068115234375,
+              170.35281372070312,
+              289.7396240234375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 3,
+            "col": 1,
+            "rowspan": 7,
+            "colspan": 1,
+            "bbox": [
+              78.66666666666667,
+              120.66666666666667,
+              192.66666666666666,
+              416.0
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000099",
+            "text": "2.2.3",
+            "bbox_points": [
+              60.5088005065918,
+              527.6331787109375,
+              69.59040069580078,
+              530.7483825683594
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 15,
+            "col": 0,
+            "rowspan": 3,
+            "colspan": 1,
+            "bbox": [
+              50.666666666666664,
+              489.3333333333333,
+              78.66666666666667,
+              568.6666666666666
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000100",
+            "text": "Indicator: For jurisdictions that have national or regional",
+            "bbox_points": [
+              80.27519989013672,
+              502.4859924316406,
+              192.12481689453125,
+              506.599609375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 15,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              78.66666666666667,
+              489.3333333333333,
+              192.66666666666666,
+              518.6666666666666
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000101",
+            "text": "coastal water quality targets [12], demonstration through",
+            "bbox_points": [
+              80.15519714355469,
+              508.7115783691406,
+              192.82562255859375,
+              512.839599609375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 15,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              78.66666666666667,
+              489.3333333333333,
+              192.66666666666666,
+              518.6666666666666
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.1589558919270928,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000102",
+            "text": "third-party analysis that the farm is in an area recently",
+            "bbox_points": [
+              80.02079772949219,
+              514.9468078613281,
+              186.48480224609375,
+              519.0796203613281
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 15,
+            "col": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              78.66666666666667,
+              489.3333333333333,
+              192.66666666666666,
+              518.6666666666666
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.41295369466149623
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000103",
+            "text": "[13] classified as having “good” or “very good” water",
+            "bbox_points": [
+              80.3904037475586,
+              521.1387939453125,
+              183.93124389648438,
+              525.3196105957031
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 16,
+            "col": 1,
+            "rowspan": 2,
+            "colspan": 1,
+            "bbox": [
+              78.66666666666667,
+              518.6666666666666,
+              192.66666666666666,
+              568.6666666666666
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000104",
+            "text": "quality [14]",
+            "bbox_points": [
+              80.16960144042969,
+              527.4315795898438,
+              101.49120330810547,
+              531.5596008300781
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 16,
+            "col": 1,
+            "rowspan": 2,
+            "colspan": 1,
+            "bbox": [
+              78.66666666666667,
+              518.6666666666666,
+              192.66666666666666,
+              568.6666666666666
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000105",
+            "text": "Requirement: Yes [15]",
+            "bbox_points": [
+              80.27519989013672,
+              539.9116058349609,
+              124.51760864257812,
+              544.0348052978516
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 16,
+            "col": 1,
+            "rowspan": 2,
+            "colspan": 1,
+            "bbox": [
+              78.66666666666667,
+              518.6666666666666,
+              192.66666666666666,
+              568.6666666666666
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0002_ft000106",
+            "text": "Applicability: All farms except as noted in [15]",
+            "bbox_points": [
+              79.9968032836914,
+              552.4167938232422,
+              170.35281372070312,
+              556.5495910644531
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 16,
+            "col": 1,
+            "rowspan": 2,
+            "colspan": 1,
+            "bbox": [
+              78.66666666666667,
+              518.6666666666666,
+              192.66666666666666,
+              568.6666666666666
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "original_positioned_line_fallback": [
+        {
+          "id": "native_p0002_ft000000",
+          "text": "Compliance Criteria (Required Client Actions):",
+          "bbox_points": [
+            239.15719604492188,
+            107.42401123046875,
+            329.9779968261719,
+            111.60479736328125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000001",
+          "text": "Auditor Evaluation (Required CAB Actions):",
+          "bbox_points": [
+            423.602783203125,
+            107.42401123046875,
+            510.377197265625,
+            111.60479736328125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000002",
+          "text": "Footnote",
+          "bbox_points": [
+            56.56319808959961,
+            115.5263671875,
+            73.68000030517578,
+            118.598388671875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000003",
+          "text": "a. Monitor and record on-farm percent saturation of DO at a minimum of twice daily using a",
+          "bbox_points": [
+            194.156005859375,
+            277.80682373046875,
+            373.7816162109375,
+            281.9396057128906
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000004",
+          "text": "calibrated oxygen meter or equivalent method. For first audits, farm records must cover ≥ 6",
+          "bbox_points": [
+            194.1511993408203,
+            284.0467834472656,
+            373.2747802734375,
+            288.1795959472656
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000005",
+          "text": "months.",
+          "bbox_points": [
+            194.3000030517578,
+            290.3059997558594,
+            209.67440795898438,
+            293.6083984375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000006",
+          "text": "A. Do not schedule audit until client provides a minimum of 6 months of DO data.",
+          "bbox_points": [
+            376.47161865234375,
+            284.0467834472656,
+            534.0604248046875,
+            288.1795959472656
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000007",
+          "text": "b. Provide a written justification for any missed samples or deviations in sampling time.",
+          "bbox_points": [
+            194.3000030517578,
+            309.0068054199219,
+            363.56243896484375,
+            313.1396179199219
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000008",
+          "text": "B. Review records for completeness and conformity with methodology in Appendix 1-4.",
+          "bbox_points": [
+            376.793212890625,
+            309.0068054199219,
+            547.481201171875,
+            313.1396179199219
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000009",
+          "text": "c. Calculate weekly average percent saturation based on data.",
+          "bbox_points": [
+            194.1511993408203,
+            327.5059814453125,
+            315.36083984375,
+            331.6195983886719
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000010",
+          "text": "C. Review calculation and confirm all weekly averages ≥ 70%.",
+          "bbox_points": [
+            376.6156005859375,
+            327.19879150390625,
+            495.53564453125,
+            331.3796081542969
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000011",
+          "text": "d. If any weekly average DO values are < 70%, or approaching that level, monitor and record",
+          "bbox_points": [
+            194.1656036376953,
+            347.16680908203125,
+            374.085205078125,
+            351.29962158203125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000012",
+          "text": "DO at a reference site and compare to on-farm levels (see Instructions).",
+          "bbox_points": [
+            194.34320068359375,
+            353.3636169433594,
+            334.3016052246094,
+            357.53961181640625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000013",
+          "text": "D. As needed, review DO data from reference site and document in the audit report (see",
+          "bbox_points": [
+            376.793212890625,
+            347.1236267089844,
+            549.6172485351562,
+            351.29962158203125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000014",
+          "text": "instruction).",
+          "bbox_points": [
+            376.7020263671875,
+            353.3636169433594,
+            401.11480712890625,
+            357.4916076660156
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000015",
+          "text": "e. Arrange for auditor to witness DO monitoring and calibration while on site.",
+          "bbox_points": [
+            194.156005859375,
+            379.5668029785156,
+            343.91119384765625,
+            383.6996154785156
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000016",
+          "text": "E. Witness DO monitoring and verify calibration while on site. On-site values should fall",
+          "bbox_points": [
+            376.793212890625,
+            373.3267822265625,
+            546.4971923828125,
+            377.4595947265625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000017",
+          "text": "within range of farm data for DO. If an out of range measurement is observed, raise a",
+          "bbox_points": [
+            376.5148010253906,
+            379.5668029785156,
+            543.3820190429688,
+            383.6996154785156
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000018",
+          "text": "nonconformity.",
+          "bbox_points": [
+            376.75,
+            385.8067932128906,
+            406.1692199707031,
+            389.9396057128906
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000019",
+          "text": "f. Submit results from monitoring of average weekly DO as per Appendix VI to ASC at least",
+          "bbox_points": [
+            194.02639770507812,
+            401.40679931640625,
+            369.6967468261719,
+            405.53961181640625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000020",
+          "text": "once per year.",
+          "bbox_points": [
+            194.1511993408203,
+            408.6748046875,
+            221.5592041015625,
+            411.79962158203125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000021",
+          "text": "F. Confirm that client has submitted DO results to ASC (Appendix VI).",
+          "bbox_points": [
+            376.793212890625,
+            404.2436218261719,
+            509.22039794921875,
+            408.41961669921875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000022",
+          "text": "Footnote",
+          "bbox_points": [
+            56.56319808959961,
+            419.556396484375,
+            73.68000030517578,
+            422.6283874511719
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000023",
+          "text": "Footnote",
+          "bbox_points": [
+            56.56319808959961,
+            428.31640625,
+            73.68000030517578,
+            431.3883972167969
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000024",
+          "text": "Footnote",
+          "bbox_points": [
+            56.56319808959961,
+            437.0763854980469,
+            73.68000030517578,
+            440.14837646484375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000025",
+          "text": "a. Calculate the percentage of on-farm samples taken for 2.2.1a that fall under 2 mg/L DO. A. Review the farm's calculation and confirm that ≤ 5% of weekly samples fall under 2 mg/L",
+          "bbox_points": [
+            194.156005859375,
+            450.5307922363281,
+            554.6620483398438,
+            457.9996032714844
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000026",
+          "text": "DO.",
+          "bbox_points": [
+            376.793212890625,
+            457.19317626953125,
+            383.3644104003906,
+            460.3083801269531
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000027",
+          "text": "b. Submit results from 2.2.2a as per Appendix VI to ASC at least once per year.",
+          "bbox_points": [
+            194.3000030517578,
+            477.3868103027344,
+            345.47601318359375,
+            481.5196228027344
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000028",
+          "text": "B. Confirm that client has submitted results to ASC (Appendix VI).",
+          "bbox_points": [
+            376.793212890625,
+            477.1036071777344,
+            502.4956359863281,
+            481.27960205078125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000029",
+          "text": "a. Inform the CAB whether relevant targets and classification systems are applicable in the",
+          "bbox_points": [
+            194.156005859375,
+            496.706787109375,
+            370.52239990234375,
+            500.839599609375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000030",
+          "text": "jurisdiction. If applicable, proceed to \"2.2.3.b\". If not applicable, take action as required",
+          "bbox_points": [
+            193.84400939941406,
+            502.9468078613281,
+            365.76080322265625,
+            507.0796203613281
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000031",
+          "text": "under 2.2.4",
+          "bbox_points": [
+            194.2855987548828,
+            509.2156066894531,
+            216.16400146484375,
+            512.5083923339844
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000032",
+          "text": "A. Record whether indicator is applicable.",
+          "bbox_points": [
+            376.47161865234375,
+            502.96600341796875,
+            457.015625,
+            507.0796203613281
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000033",
+          "text": "b. Compile a summary of relevant national or regional water quality targets and",
+          "bbox_points": [
+            194.3000030517578,
+            529.1068115234375,
+            349.67596435546875,
+            533.2396240234375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000034",
+          "text": "classifications, identifying the third-party responsible for the analysis and classification.",
+          "bbox_points": [
+            194.1511993408203,
+            535.3468017578125,
+            362.64080810546875,
+            539.4795989990234
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000035",
+          "text": "B. Confirm that there has been a recent third-party analysis (within two years prior to the",
+          "bbox_points": [
+            376.793212890625,
+            529.0636291503906,
+            550.9371337890625,
+            533.2396240234375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000036",
+          "text": "audit) to classify areas according to national or regional water quality targets.",
+          "bbox_points": [
+            376.60601806640625,
+            535.3036193847656,
+            526.2364501953125,
+            539.4795989990234
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000037",
+          "text": "c. Identify the most recent classification of water quality for the area in which the farm",
+          "bbox_points": [
+            194.1511993408203,
+            554.0968017578125,
+            363.3368225097656,
+            558.2295989990234
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000038",
+          "text": "operates.",
+          "bbox_points": [
+            194.1511993408203,
+            560.8167877197266,
+            213.50961303710938,
+            564.4695892333984
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000039",
+          "text": "C. Confirm that the analysis and classification shows the farm is located in an area where the",
+          "bbox_points": [
+            376.6156005859375,
+            554.0968017578125,
+            557.2923583984375,
+            558.2295989990234
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000040",
+          "text": "water quality complies with the requirement.",
+          "bbox_points": [
+            376.5148010253906,
+            560.3559875488281,
+            464.3404235839844,
+            564.4695892333984
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000041",
+          "text": "Footnote",
+          "bbox_points": [
+            56.56319808959961,
+            572.2263946533203,
+            73.68000030517578,
+            575.2984008789062
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000042",
+          "text": "Footnote",
+          "bbox_points": [
+            56.56319808959961,
+            582.5464019775391,
+            73.68000030517578,
+            585.618408203125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000043",
+          "text": "Footnote",
+          "bbox_points": [
+            56.56319808959961,
+            592.7463989257812,
+            73.68000030517578,
+            595.8184051513672
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000044",
+          "text": "Footnote",
+          "bbox_points": [
+            56.56319808959961,
+            606.306396484375,
+            73.68000030517578,
+            609.3784027099609
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000045",
+          "text": "a. Develop, implement, and document a monitoring plan for N, NH4, NO3, total P, and ortho￾",
+          "bbox_points": [
+            194.156005859375,
+            626.6967926025391,
+            374.50152587890625,
+            630.82958984375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000046",
+          "text": "P in compliance with Appendix I-5. For first audits, farm records must cover ≥ 6 months.",
+          "bbox_points": [
+            194.34320068359375,
+            632.8887939453125,
+            364.12042236328125,
+            637.0695953369141
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000047",
+          "text": "A. Review the farm's monitoring plan and verify that the farm has collected monitoring data",
+          "bbox_points": [
+            376.47161865234375,
+            626.6967926025391,
+            555.87158203125,
+            630.82958984375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000048",
+          "text": "for N and P following the methodology in Appendix I-5.",
+          "bbox_points": [
+            376.4764099121094,
+            632.9367980957031,
+            482.95001220703125,
+            637.0695953369141
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000049",
+          "text": "b. Calibrate all equipment according to the manufacturer's recommendations.",
+          "bbox_points": [
+            194.3000030517578,
+            653.6967926025391,
+            345.5912170410156,
+            657.82958984375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000050",
+          "text": "B. Verify that client calibrates equipment as needed.",
+          "bbox_points": [
+            376.793212890625,
+            653.3367919921875,
+            477.8860168457031,
+            657.4695892333984
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000051",
+          "text": "c. Submit data on N and P to ASC as per Appendix VI at least once per year.",
+          "bbox_points": [
+            194.1511993408203,
+            672.1959991455078,
+            339.3608093261719,
+            676.3096008300781
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000052",
+          "text": "C. Confirm that client has submitted N and P data to ASC (Appendix VI).",
+          "bbox_points": [
+            376.6156005859375,
+            672.1335983276367,
+            514.1452026367188,
+            676.3096008300781
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000053",
+          "text": "Footnote",
+          "bbox_points": [
+            56.56319808959961,
+            686.0064010620117,
+            73.68000030517578,
+            689.0783996582031
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000054",
+          "text": "Criterion 2.2 Water quality in and near the site of operation [8]",
+          "bbox_points": [
+            52.228797912597656,
+            100.63677978515625,
+            175.32003784179688,
+            104.76959228515625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000055",
+          "text": "2.2.2",
+          "bbox_points": [
+            60.5088005065918,
+            464.51318359375,
+            69.6144027709961,
+            467.6044006347656
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000056",
+          "text": "Indicator: Maximum percentage of weekly samples from",
+          "bbox_points": [
+            80.27519989013672,
+            448.706787109375,
+            192.71038818359375,
+            452.839599609375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000057",
+          "text": "2.2.1 that fall under 2 mg/L DO",
+          "bbox_points": [
+            80.21279907226562,
+            454.7835998535156,
+            139.75201416015625,
+            459.0796203613281
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000058",
+          "text": "Requirement: 5%",
+          "bbox_points": [
+            80.27519989013672,
+            467.527587890625,
+            115.1240005493164,
+            471.5547790527344
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000059",
+          "text": "Applicability: All",
+          "bbox_points": [
+            79.9968032836914,
+            479.9259948730469,
+            112.84400177001953,
+            484.0347900390625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000060",
+          "text": "Instruction to Clients for Indicator 2.2.1 - Monitoring Average Weekly Percent Saturation of Dissolved Oxygen",
+          "bbox_points": [
+            194.27120971679688,
+            137.8568115234375,
+            411.47125244140625,
+            141.9896240234375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000061",
+          "text": "Appendix I-4 presents the required methodology that farms must follow for sampling the average weekly percent saturation of dissolved oxygen (DO). Key points of the method are as",
+          "bbox_points": [
+            194.0216064453125,
+            144.0535888671875,
+            550.2345581054688,
+            148.2296142578125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000062",
+          "text": "follows:",
+          "bbox_points": [
+            194.02639770507812,
+            150.3367919921875,
+            208.90159606933594,
+            153.65838623046875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000063",
+          "text": "- measurements may be taken with a handheld oxygen meter or equivalent chemical method;",
+          "bbox_points": [
+            194.1031951904297,
+            156.59600830078125,
+            376.16241455078125,
+            160.7095947265625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000064",
+          "text": "- equipment is calibrated according to manufacturer's recommendations;",
+          "bbox_points": [
+            194.1031951904297,
+            162.8167724609375,
+            336.0679931640625,
+            166.9495849609375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000065",
+          "text": "- measurements are taken at least twice daily: once in the morning (6 -9 am) and once in the afternoon (3-6 pm ) as appropriate for the location and season;",
+          "bbox_points": [
+            194.1031951904297,
+            169.01361083984375,
+            497.08880615234375,
+            173.18963623046875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000066",
+          "text": "- salinity and temperature must also be measured when DO is sampled;",
+          "bbox_points": [
+            194.1031951904297,
+            175.3160400390625,
+            332.68402099609375,
+            179.42962646484375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000067",
+          "text": "- sampling should be done at 5 meters depth in water conditions that would be experienced by fish (e.g., at the downstream edge of a net pen array):",
+          "bbox_points": [
+            194.1031951904297,
+            181.49359130859375,
+            484.3496398925781,
+            185.66961669921875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000068",
+          "text": "- each week, all DO measurements are used in the calculation of a weekly average percent saturation.",
+          "bbox_points": [
+            194.1031951904297,
+            187.77679443359375,
+            391.416748046875,
+            191.90960693359375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000069",
+          "text": "If monitoring deviates from prescribed sampling methodology, the farm shall provide the auditor with a written justification (e.g., when samples are missed due to bad weather). In",
+          "bbox_points": [
+            194.34320068359375,
+            200.21356201171875,
+            544.738525390625,
+            204.38958740234375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000070",
+          "text": "limited and well-justified situations, farms may request that the CAB approve reduction of DO monitoring frequency to one sample per day.",
+          "bbox_points": [
+            194.3000030517578,
+            206.496826171875,
+            464.7224426269531,
+            210.629638671875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000071",
+          "text": "Exception [see footnote 12] If a farm does not meet the minimum 70 percent weekly average saturation requirement, the farm must demonstrate the consistency of percent saturation",
+          "bbox_points": [
+            194.34320068359375,
+            218.976806640625,
+            552.7735595703125,
+            223.109619140625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000072",
+          "text": "with a reference site. The reference site shall be at least 500 meters from the edge of the net pen array, in a location that is understood to follow similar patterns in upwelling to the farm",
+          "bbox_points": [
+            194.06480407714844,
+            225.216796875,
+            556.1001586914062,
+            229.349609375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000073",
+          "text": "site and is not influenced by nutrient inputs from anthropogenic causes including aquaculture, agricultural runoff or nutrient releases from coastal communities. For any such exceptions,",
+          "bbox_points": [
+            194.1320037841797,
+            231.456787109375,
+            555.6585083007812,
+            235.589599609375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000074",
+          "text": "the auditor shall fully document in the audit report how the farm has demonstrated consistency with the reference site.",
+          "bbox_points": [
+            194.0167999267578,
+            237.69677734375,
+            426.682373046875,
+            241.82958984375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000075",
+          "text": "Note: Percent saturation is the amount of oxygen dissolved in the water sample compared to the maximum amount that could be present at the same temperature and salinity.",
+          "bbox_points": [
+            194.34320068359375,
+            250.17681884765625,
+            536.262939453125,
+            254.30963134765625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000076",
+          "text": "2.2.4",
+          "bbox_points": [
+            60.5088005065918,
+            648.0232086181641,
+            69.74400329589844,
+            651.1144104003906
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000077",
+          "text": "[11] An exception to this standard shall be made for farms that can demonstrate consistency with a reference site in the same water body.",
+          "bbox_points": [
+            80.3904037475586,
+            436.3468017578125,
+            348.801513671875,
+            440.4796142578125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000078",
+          "text": "[16] Farms shall monitor total N, NH4, NO3, total P and Ortho-P in the water column. Results shall be submitted to the ASC database. Methods such as a Hach kit are acceptable.",
+          "bbox_points": [
+            80.3904037475586,
+            685.2816009521484,
+            422.4576416015625,
+            689.4095993041992
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000079",
+          "text": "Indicator: For jurisdictions without national or regional",
+          "bbox_points": [
+            80.27519989013672,
+            625.9959869384766,
+            189.00001525878906,
+            630.1095886230469
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000080",
+          "text": "coastal water quality targets, evidence of monitoring of",
+          "bbox_points": [
+            80.15519714355469,
+            632.216796875,
+            188.75521850585938,
+            636.3495941162109
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000081",
+          "text": "nitrogen and phosphorous [16] levels on farm and at a",
+          "bbox_points": [
+            80.30400085449219,
+            638.4568023681641,
+            186.7296142578125,
+            642.589599609375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000082",
+          "text": "reference site, following methodology in Appendix I-5",
+          "bbox_points": [
+            80.30400085449219,
+            644.6967926025391,
+            184.18560791015625,
+            648.82958984375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000083",
+          "text": "Requirement: Consistency with reference site",
+          "bbox_points": [
+            80.27519989013672,
+            657.1768035888672,
+            170.14642333984375,
+            661.3096008300781
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000084",
+          "text": "Applicability: All farms except as noted in [16]",
+          "bbox_points": [
+            79.9968032836914,
+            669.6567993164062,
+            170.35281372070312,
+            673.7896041870117
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000085",
+          "text": "[14] Classifications of “good” and “very good” are used in the EU Water Framework Directive. Equivalent classification from other water quality monitoring systems in other jurisdictions are acceptable.",
+          "bbox_points": [
+            80.3904037475586,
+            591.9687957763672,
+            469.4305725097656,
+            596.1495971679688
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000086",
+          "text": "[15] Closed production systems that can demonstrate the collection and responsible disposal of > 75% of solid nutrients as well as > 50% of dissolved nutrients (through biofiltration, settling and/or other technologies) are exempt from standards",
+          "bbox_points": [
+            80.3904037475586,
+            602.2936096191406,
+            555.6098022460938,
+            606.589599609375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000087",
+          "text": "2.2.3 and 2.2.4.",
+          "bbox_points": [
+            80.21279907226562,
+            608.7256011962891,
+            109.48320007324219,
+            612.0184020996094
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000088",
+          "text": "2.2.1",
+          "bbox_points": [
+            60.5088005065918,
+            267.063232421875,
+            69.6240005493164,
+            270.1544189453125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000089",
+          "text": "[10] Averaged weekly from two daily measurements (proposed at 6 am and 3 pm).",
+          "bbox_points": [
+            80.3904037475586,
+            427.5436096191406,
+            240.00477600097656,
+            431.7196044921875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000090",
+          "text": "[12] Related to nutrients (e.g., N, P, chlorophyll A).",
+          "bbox_points": [
+            80.3904037475586,
+            571.4535980224609,
+            177.4991912841797,
+            575.6295928955078
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000091",
+          "text": "[13] Within the two years prior to the first audit.",
+          "bbox_points": [
+            80.3904037475586,
+            581.8168029785156,
+            173.42401123046875,
+            585.9496002197266
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000092",
+          "text": "[8] See Appendix VI for transparency requirements for 2.2.1, 2.2.2, 2.2.3 and 2.2.5.",
+          "bbox_points": [
+            80.3904037475586,
+            114.79681396484375,
+            239.77435302734375,
+            118.92962646484375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000093",
+          "text": "[9] Percent saturation: Percent saturation is the amount of oxygen dissolved in the water sample compared to the maximum amount that could be present at the same temperature and salinity.",
+          "bbox_points": [
+            80.3904037475586,
+            418.8267822265625,
+            455.0929870605469,
+            422.9595947265625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000094",
+          "text": "Indicator: Weekly average percent saturation [9] of",
+          "bbox_points": [
+            80.27519989013672,
+            248.13677978515625,
+            182.15521240234375,
+            252.26959228515625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000095",
+          "text": "dissolved oxygen (DO) [10] on farm, calculated following",
+          "bbox_points": [
+            80.16960144042969,
+            254.33355712890625,
+            190.55517578125,
+            258.50958251953125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000096",
+          "text": "methodology in Appendix I-4",
+          "bbox_points": [
+            80.30400085449219,
+            260.63604736328125,
+            137.18881225585938,
+            264.7496337890625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000097",
+          "text": "Requirement: ≥ 70% [11]",
+          "bbox_points": [
+            80.27519989013672,
+            273.08355712890625,
+            129.56240844726562,
+            277.2547607421875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000098",
+          "text": "Applicability: All farms except as noted in [11]",
+          "bbox_points": [
+            79.9968032836914,
+            285.6068115234375,
+            170.35281372070312,
+            289.7396240234375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000099",
+          "text": "2.2.3",
+          "bbox_points": [
+            60.5088005065918,
+            527.6331787109375,
+            69.59040069580078,
+            530.7483825683594
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000100",
+          "text": "Indicator: For jurisdictions that have national or regional",
+          "bbox_points": [
+            80.27519989013672,
+            502.4859924316406,
+            192.12481689453125,
+            506.599609375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000101",
+          "text": "coastal water quality targets [12], demonstration through",
+          "bbox_points": [
+            80.15519714355469,
+            508.7115783691406,
+            192.82562255859375,
+            512.839599609375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000102",
+          "text": "third-party analysis that the farm is in an area recently",
+          "bbox_points": [
+            80.02079772949219,
+            514.9468078613281,
+            186.48480224609375,
+            519.0796203613281
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000103",
+          "text": "[13] classified as having “good” or “very good” water",
+          "bbox_points": [
+            80.3904037475586,
+            521.1387939453125,
+            183.93124389648438,
+            525.3196105957031
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000104",
+          "text": "quality [14]",
+          "bbox_points": [
+            80.16960144042969,
+            527.4315795898438,
+            101.49120330810547,
+            531.5596008300781
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000105",
+          "text": "Requirement: Yes [15]",
+          "bbox_points": [
+            80.27519989013672,
+            539.9116058349609,
+            124.51760864257812,
+            544.0348052978516
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000106",
+          "text": "Applicability: All farms except as noted in [15]",
+          "bbox_points": [
+            79.9968032836914,
+            552.4167938232422,
+            170.35281372070312,
+            556.5495910644531
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        }
+      ],
+      "interpretation": "Grid inconsistency only; visible-source/table/heading correctness unverified."
+    }
+  ]
+}

@@ -1,0 +1,341 @@
+{
+  "schema": "source-initial-data/1",
+  "source_revision": 13,
+  "materials": 0,
+  "requirements": 0,
+  "interpretations": 0,
+  "files": {
+    "system1/Code/runtime/governance-migration-input.xlsx": {
+      "sha256": "8adfb864c0e8c9502fb773c4880feb9603bf395dd281215e276fbeb64670c806",
+      "bytes": 169911
+    },
+    "system1/Code/runtime/governance.sqlite": {
+      "sha256": "9350d8a30efe86f1b1b0baf4c0f0dfe93bf53d47465756496fdcfce3c5e87e04",
+      "bytes": 2084864
+    },
+    "system1/Code/runtime/logs/source-assessments.sqlite": {
+      "sha256": "f903ebd74feb4c3956ca9ecd61231a2c77261f42650f1c729e9937654ed0abf2",
+      "bytes": 28672
+    },
+    "system1/Data/00_Human_Intake/0c69ac84-3515-4e9c-8847-73165c303823.html": {
+      "sha256": "1776af6adaf23fe4e227ecdc46726e6451c3a77446c378de7128e7fb91ac4345",
+      "bytes": 28557
+    },
+    "system1/Data/00_Human_Intake/7d302e7e-fef5-4a4a-9d1a-ca71b5be4a18.html": {
+      "sha256": "d7398293a45adb417d7aa82c0fb7427edeb6f5c528a9e43e2fbbebba4ed65cce",
+      "bytes": 68047
+    },
+    "system1/Data/00_Human_Intake/README.txt": {
+      "sha256": "0d97f51f3adee6cbf3ef85996c41ab68a865dc3294c204e586cca6356cdadf0e",
+      "bytes": 629
+    },
+    "system1/Data/A_Public_Authority/PA001-001_Act_relating_to_aquaculture_Aquaculture_Act.html": {
+      "sha256": "8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967",
+      "bytes": 128891
+    },
+    "system1/Data/A_Public_Authority/PA002-001_Regulation_on_production_areas_for_sea-based_salmon_trout_and_rainbow_trout_aquaculture.html": {
+      "sha256": "19a632a343fe10fa8262a0ed8df8daa6d3e96e34ff686704da4c28e3671b2833",
+      "bytes": 129356
+    },
+    "system1/Data/A_Public_Authority/PA003-001_Regulation_on_the_operation_of_aquaculture_facilities_Aquaculture_Operations_Regulations.html": {
+      "sha256": "81650171c1177e709d49dfe6b19673e4d07f5425b3bbb5cbf8fef92e3421bbea",
+      "bytes": 371232
+    },
+    "system1/Data/A_Public_Authority/PA004-001_NYTEK23_-_Regulation_on_technical_standards_for_aquaculture_facilities_for_fish_in_sea_lakes_and_watercourses.html": {
+      "sha256": "a20988ddfe78bcf3d4ab87695f50f2c0f57f542fe77f2b1a66f94a81a993ce17",
+      "bytes": 177413
+    },
+    "system1/Data/A_Public_Authority/PA005-001_Animal_Welfare_Act.html": {
+      "sha256": "121dce4cf5263302d47a467a612b437ffb1a6c660fb7454b6698101f16ea3808",
+      "bytes": 106243
+    },
+    "system1/Data/A_Public_Authority/PA006-001_Organic_Production_and_Labelling_Regulations.html": {
+      "sha256": "18009ae503b2261b56c5c11ddde0a8a7400915f2d1b93894f3ea66085b7ec642",
+      "bytes": 212297
+    },
+    "system1/Data/A_Public_Authority/PA007-001_Pollution_Control_Act.html": {
+      "sha256": "6dbac9891bf38811447ed04c583140063ff23e0e1494e59f5ca0aa485b1e5901",
+      "bytes": 314870
+    },
+    "system1/Data/A_Public_Authority/PA008-001_Water_Framework_Regulations.html": {
+      "sha256": "bc9d9f926fe9f5ba2ee6df81938c45b7f4a20579ab7f7a149a5e9d1432169da2",
+      "bytes": 591246
+    },
+    "system1/Data/A_Public_Authority/PA009-001_Product_Control_Act.html": {
+      "sha256": "3805399145febb193e5e92fe37c364f9d2e0c87c260acc495f284639e92641a2",
+      "bytes": 111412
+    },
+    "system1/Data/A_Public_Authority/PA010-001_Regulation_EU_2016_429_on_transmissible_animal_diseases_Animal_Health_Law.html": {
+      "sha256": "3ac51613dbdfb998b2d2c68e2df564b8a19c7d398d34d52f0228e6c10c30f8ed",
+      "bytes": 2636731
+    },
+    "system1/Data/A_Public_Authority/PA011-001_Working_Environment_Act.html": {
+      "sha256": "96cec52793e643ff1daf51254216f36e1ac4b2216e80dea9f09161708d0a9170",
+      "bytes": 79180
+    },
+    "system1/Data/A_Public_Authority/PA012-001_Regulations_concerning_the_performance_of_work_psychosocial_working_environment_use_of_work_equipment_and_related_techni.html": {
+      "sha256": "15cc7d1de65ea3277121031dd0c7e4d7b44ea7950fdfbd38df7d402255860e68",
+      "bytes": 140708
+    },
+    "system1/Data/A_Public_Authority/PA013-001_Food_Act.html": {
+      "sha256": "fffe78cee31f4f34218728d0e8d8919b5fe5ccae40e8f41a067757370372d8db",
+      "bytes": 111644
+    },
+    "system1/Data/A_Public_Authority/PA014-001_Animal_Health_Personnel_Act.html": {
+      "sha256": "d1f92d2c418243c85675fe93401a76b489b88306833b3478073fa844aa83b30b",
+      "bytes": 113301
+    },
+    "system1/Data/A_Public_Authority/PA015-001_Regulation_on_control_of_salmon_lice_in_aquaculture_facilities.html": {
+      "sha256": "9334a78a021971411e5c8826a2bb16aab1db707d778f6249c9a36b0afc90a4a1",
+      "bytes": 70151
+    },
+    "system1/Data/A_Public_Authority/PA016-001_Regulation_on_internal_control_to_comply_with_aquaculture_legislation_IK-Aquaculture.html": {
+      "sha256": "a8a24e5e32dfc061868654b4e1fa2c6925b6333aa34a41c952cc66de9710977b",
+      "bytes": 54456
+    },
+    "system1/Data/A_Public_Authority/PA017-001_Internal_Control_Regulations.html": {
+      "sha256": "7f640e3626fbd2d3aa9e6f8f0fad328170f26e4a73a9f59fd20ffe74f400b546",
+      "bytes": 98217
+    },
+    "system1/Data/A_Public_Authority/PA018-001_Ship_Safety_and_Security_Act.html": {
+      "sha256": "535ce0ef3c8d36ecc15baf5c64f069fdb5f62dd72579d24e1c6157acc8cdf009",
+      "bytes": 259318
+    },
+    "system1/Data/A_Public_Authority/PA019-001_Regulation_on_transport_of_aquaculture_animals.html": {
+      "sha256": "c3a1a1d71bad6255d833abf37550f8ef1d79c996a82468a85fccbb7a474e6ded",
+      "bytes": 133146
+    },
+    "system1/Data/A_Public_Authority/PA020-001_Regulation_on_slaughterhouses_and_processing_facilities_for_aquaculture_animals.html": {
+      "sha256": "660825e1fb0f6b15f9e8501319e334d7b67de1790c34645715f5b184d3d397cc",
+      "bytes": 82566
+    },
+    "system1/Data/A_Public_Authority/PA021-001_Regulation_on_permits_for_aquaculture_of_salmon_trout_and_rainbow_trout_Salmon_Allocation_Regulations.html": {
+      "sha256": "7ad31127a98909210f86c2df281141adc3218206d348c07c01be4a00c540964d",
+      "bytes": 178917
+    },
+    "system1/Data/A_Public_Authority/PA022-001_Regulation_on_technical_standards_for_land-based_aquaculture_facilities_for_fish.html": {
+      "sha256": "2ab1905061a870af1b05ec9e1c8536e90157d00d70217305629365e4986c1918",
+      "bytes": 128035
+    },
+    "system1/Data/A_Public_Authority/PA023-001_Nature_Diversity_Act.html": {
+      "sha256": "3eb19d6be728a20e51a80ac13993de88c500c707580fa4b5eed19495d4871042",
+      "bytes": 259383
+    },
+    "system1/Data/A_Public_Authority/PA024-001_Fiskeridirektoratet_guidance_to_NYTEK23.html": {
+      "sha256": "e331c25d9cf82bf550a1e76076c3ad72ef36a37c8f04ca6b17d52d556753c375",
+      "bytes": 133998
+    },
+    "system1/Data/A_Public_Authority/PA025-001_Guidance_on_holistic_risk_management_in_aquaculture.html": {
+      "sha256": "6b02f98209cd66f8d09b279dd0ba86c8cf84324e5d65599ca0c476490d10c801",
+      "bytes": 111860
+    },
+    "system1/Data/A_Public_Authority/PA026-001_Environmental_authority_guidance_on_aquaculture_pollution_management.html": {
+      "sha256": "b21a5486fb976b28eaab6a693a453e5e39ccf551e5b0fe3dbfc376f923b028a1",
+      "bytes": 847182
+    },
+    "system1/Data/A_Public_Authority/PA027-001_Mattilsynet_fish_welfare_guidance_hub.html": {
+      "sha256": "32a13fc92400f9d3afede91b9772367087a32fcd4bb72541cf576b4f2367e4dd",
+      "bytes": 100661
+    },
+    "system1/Data/A_Public_Authority/PA028-001_Norwegian_Aquaculture_Register.html": {
+      "sha256": "e4b0fe39d80e5dff689ac77b143523e86d5c40228f73405a6c9171ee40462790",
+      "bytes": 20258
+    },
+    "system1/Data/A_Public_Authority/PA030-001_Regulation_on_special_requirements_for_aquaculture-related_activities_in_or_near_national_salmon_rivers_and_fjords.html": {
+      "sha256": "f3e632fdd118f679d3cba93120bdcaf4ab74fef6abca29992ae4b808287ec422",
+      "bytes": 99115
+    },
+    "system1/Data/A_Public_Authority/PA031-001_Regulation_on_joint_responsibility_for_removal_of_escaped_farmed_fish.html": {
+      "sha256": "e792a6f90a4e6601a323dcde19ea09b0af31c58b7a4e42c6eaff75dfa5e79e95",
+      "bytes": 48378
+    },
+    "system1/Data/A_Public_Authority/PA032-001_Regulation_on_the_Aquaculture_Register.html": {
+      "sha256": "29b6b73125d703fc809475418ceff449203a6f024d8d91709c2cd32c3aba6e37",
+      "bytes": 72621
+    },
+    "system1/Data/A_Public_Authority/PA033-001_Regulation_on_catch-based_aquaculture.html": {
+      "sha256": "8e117c5d5d5017180a13f307c48ebc4833af52f1359012d6a4f7c713c2e5ef56",
+      "bytes": 165794
+    },
+    "system1/Data/A_Public_Authority/PA034-001_Regulation_on_coordination_and_time_limits_for_processing_aquaculture_applications.html": {
+      "sha256": "70eee18edb0de84ba14e2896f95f987b4e9954af8d586f574bff4f4b255a5e15",
+      "bytes": 53023
+    },
+    "system1/Data/A_Public_Authority/PA035-001_Regulation_on_reactions_for_violations_of_the_Aquaculture_Act.html": {
+      "sha256": "9352c1d1b3caebc263c4086816b4f894e69d3aa424bbf97b364e14838ed589b6",
+      "bytes": 52956
+    },
+    "system1/Data/A_Public_Authority/PA036-001_Regulation_on_permits_for_aquaculture_of_species_other_than_salmon_trout_and_rainbow_trout.html": {
+      "sha256": "18985a26548697f2ebe542f42a5ef6469c6f9c99a8dc35dedaa8d171c4d2b027",
+      "bytes": 99779
+    },
+    "system1/Data/A_Public_Authority/PA037-001_Regulation_on_fees_and_charges_relating_to_aquaculture_activities.html": {
+      "sha256": "cf7e9767f070aa451123bb7477591661c984e767d32002ad03db21e2534d7e45",
+      "bytes": 46159
+    },
+    "system1/Data/A_Public_Authority/PA038-001_Regulation_on_sea_ranching.html": {
+      "sha256": "94210cefeb809c7317a22a0b026762a996ea8a0fa4981cd5fd9d2966e3f39ae7",
+      "bytes": 120969
+    },
+    "system1/Data/A_Public_Authority/PA039-001_Animal_Health_Regulation.html": {
+      "sha256": "9c505be3af04d8879ed1361628aaa96d5a45cacf20987849139a7636c1d97343",
+      "bytes": 159677
+    },
+    "system1/Data/A_Public_Authority/PA040-001_Aquabiosafety_Regulation.html": {
+      "sha256": "ede876a30d12f3085e1e83584a4c2c3fd16c39afd42a1722c9c6ddd4bdca5bf9",
+      "bytes": 633662
+    },
+    "system1/Data/A_Public_Authority/PA041-001_Animal_Health_Surveillance_Regulation.html": {
+      "sha256": "ac4adc7d9df4f75a93328f2fd196b1fb854fcc4696e26c150015ec3b30f6ff65",
+      "bytes": 171810
+    },
+    "system1/Data/A_Public_Authority/PA042-001_Animal_Disease_Control_Regulation.html": {
+      "sha256": "0c5693b8397db63986f66ac880a8fae1ba72a0f02771de366f103d3ee196e2e8",
+      "bytes": 115738
+    },
+    "system1/Data/A_Public_Authority/PA043-001_Mattilsynet_guidance_on_biosafety_plans_in_aquaculture_facilities.html": {
+      "sha256": "56101f0aa402aaec3c59774403a0047534b1c05a5cd4541a00e64f5fb52970ad",
+      "bytes": 6831915
+    },
+    "system1/Data/A_Public_Authority/PA044-001_Pollution_Regulations_including_Chapter_34_on_pollution_from_aquaculture.html": {
+      "sha256": "64436e3a3f3ade668fd3eaa53ce867914caf1d3a2f972c3bfd8d034b37641848",
+      "bytes": 217629
+    },
+    "system1/Data/A_Public_Authority/PA045-001_Regulations_concerning_organisation_management_and_employee_participation.html": {
+      "sha256": "e43d868a759780431d3e95d2b6e6910c66ca52fe42f12adc15e0380a3a81e1e2",
+      "bytes": 375923
+    },
+    "system1/Data/A_Public_Authority/PA046-001_Workplace_Regulations.html": {
+      "sha256": "3f3b6a9810b38e87332d03d59568a8724e83682d4ab914996dbf9b4d160dd951",
+      "bytes": 266622
+    },
+    "system1/Data/A_Public_Authority/PA047-001_Regulations_concerning_action_and_limit_values.html": {
+      "sha256": "c30790d1b5cdb2e3fc192d1e2141a7996f5e3a3d42983671189edd232c7cbd14",
+      "bytes": 876332
+    },
+    "system1/Data/A_Public_Authority/PA048-001_Regulations_concerning_administrative_arrangements_in_the_area_of_the_Working_Environment_Act.html": {
+      "sha256": "a1d40a88d0a41bd2a9b66a59e0f3e46a4769483174bae327b4ca5fc43e07b6be",
+      "bytes": 207193
+    },
+    "system1/Data/A_Public_Authority/PA049-001_Regulation_on_working_environment_safety_and_health_for_persons_working_on_board_ships.html": {
+      "sha256": "669c8fb7232983d365c22bc01253bfe1b6d121397439e31345698e43fa3fcba1",
+      "bytes": 81045
+    },
+    "system1/Data/A_Public_Authority/PA050-001_Harbours_and_Fairways_Act.html": {
+      "sha256": "b3340595ebd0e5912f032c385ccebc254cd79b719a1f625d87b4a340b66df3d7",
+      "bytes": 162646
+    },
+    "system1/Data/A_Public_Authority/PA051-001_Planning_and_Building_Act.html": {
+      "sha256": "f2cb33416ae233a0616722ffb0ebf377bf1eea2da309fbee385495f01062c5d2",
+      "bytes": 106056
+    },
+    "system1/Data/A_Public_Authority/PA052-001_Cultural_Heritage_Act.html": {
+      "sha256": "70a7268b5afd45f369ef12f9d167fc6b9b87d65af7bbc46a28e19a40563b2bcb",
+      "bytes": 137529
+    },
+    "system1/Data/A_Public_Authority/PA053-001_Water_Resources_Act.html": {
+      "sha256": "4f34d5e27c31a36b0d4578795a149e441341f41df43c89eb9aac6a5da9e075f8",
+      "bytes": 218414
+    },
+    "system1/Data/A_Public_Authority/PA054-001_Marine_Nature_Protection_Act.html": {
+      "sha256": "4dce1de2f48bf0d24398b17145c4c2286152eb61a354107445022488b2808c71",
+      "bytes": 103185
+    },
+    "system1/Data/A_Public_Authority/PA055-001_Regulation_on_fairway_signs_and_navigational_devices.html": {
+      "sha256": "c497ee186adeef3c2a97e4c9c9508a5b132a1e58eaf76ec1517408bd22fa25d9",
+      "bytes": 114887
+    },
+    "system1/Data/A_Public_Authority/PA056-001_Fiskeridirektoratet_guidance_for_land-based_aquaculture_facilities.html": {
+      "sha256": "73c197182a2280a093d6c7ec0a273ab6f46ad0e55edfddc0f31373937b21de93",
+      "bytes": 36370
+    },
+    "system1/Data/A_Public_Authority/PA057-001_Guidance_for_condition_assessment_of_land-based_aquaculture_facilities.pdf": {
+      "sha256": "f9f6bd8531c2cd8a4cc7dd49e4035aaef6ff33cb2f7dbf93f0e340ca0b454778",
+      "bytes": 1172387
+    },
+    "system1/Data/A_Public_Authority/PA058-001_Animal_By-Products_Regulations.html": {
+      "sha256": "fd75ab8dd58b68417b6da68c10c92a6952c7e7e2c8fdb7d48b02c8a46c6dee6a",
+      "bytes": 148911
+    },
+    "system1/Data/A_Public_Authority/PA059-001_Feed_Hygiene_Regulations.html": {
+      "sha256": "ed6c7697859784b170a511c1cf2959184626790cd65ed05c36bc863c6769a793",
+      "bytes": 302983
+    },
+    "system1/Data/A_Public_Authority/PA060-001_Regulation_on_veterinary_medicinal_products.html": {
+      "sha256": "744c31829906a7667ae58957380386b0baab1a1ad56b468b6a9ce452b7f0ff8b",
+      "bytes": 285493
+    },
+    "system1/Data/C_Certification_Scheme/CS001-001_ASC_Farm_Standard.html": {
+      "sha256": "a40846bb23436f8ab6c5971f8a33577660eaed1059861ee01cdb2ca3f60c062b",
+      "bytes": 6941861
+    },
+    "system1/Data/C_Certification_Scheme/CS002-001_ASC_Farm_Standard_Interpretation_Manual.html": {
+      "sha256": "44da418c7669b1b9162a153aa76389722f9d0e6415864d2618b5d381e82232ea",
+      "bytes": 1590671
+    },
+    "system1/Data/C_Certification_Scheme/CS003-001_ASC_Salmon_Audit_Manual.pdf": {
+      "sha256": "911b716d6e4f9aacc1e0c7999dbcf1e009f08c3b322269c748d867006521e76d",
+      "bytes": 651898
+    },
+    "system1/Data/C_Certification_Scheme/CS004-001_ASC_Salmon_and_Cod_Standard.pdf": {
+      "sha256": "a34e5f4fc78486136ddbf3d661d26aad85e4b8a1990b2e6eda3f3ac1df7f7b5c",
+      "bytes": 1739158
+    },
+    "system1/Data/C_Certification_Scheme/CS005-001_ASC_Farm_and_Feed_Certification_and_Accreditation_Requirements.pdf": {
+      "sha256": "77e1d87383382fda4f27dc9be79937cc3017ce350b8b1d436a74500561083838",
+      "bytes": 1846570
+    },
+    "system1/Data/C_Certification_Scheme/CS010-001_GLOBALG.A.P._General_Regulations_-_Rules_for_aquaculture_scope.pdf": {
+      "sha256": "ce5c8950c69e3b5b60b85110f5abd2c6d8637c83291c6c00ac03f28b102dac54",
+      "bytes": 520464
+    },
+    "system1/Data/C_Certification_Scheme/CS011-001_GLOBALG.A.P._GRASP_v2_-_Principles_and_criteria.pdf": {
+      "sha256": "5b5c05855c1b0c422755facc234a7d4584eb37f8671421885d7dcc62f9a0e9e8",
+      "bytes": 651263
+    },
+    "system1/Data/C_Certification_Scheme/CS013-001_GLOBALG.A.P._General_Regulations_-_Rules_for_individual_producers.pdf": {
+      "sha256": "1015d3e9d049ce63876f8e511408e9d9e61c38598caf48442dc42be26c6d2716",
+      "bytes": 743407
+    },
+    "system1/Data/C_Certification_Scheme/CS014-001_GLOBALG.A.P._General_Regulations_-_Rules_for_producer_groups_and_multisite_producers_with_QMS.pdf": {
+      "sha256": "28042ea052f0ef9fe863d94d9035ef3fe4b390ef0f51c304eeb677cf22156dcf",
+      "bytes": 837359
+    },
+    "system1/Data/C_Certification_Scheme/CS015-001_GLOBALG.A.P._trademarks_use_Policy_and_guidelines.pdf": {
+      "sha256": "7279130c3617610cebaaceb4ecae44014f8df742aa4a7ac741a4e4346a066096",
+      "bytes": 10827062
+    },
+    "system1/Data/C_Certification_Scheme/CS016-001_GLOBALG.A.P._GRASP_-_General_Rules.pdf": {
+      "sha256": "57c35d150287f8092a9af4a79842d206e1761e9428cf9201d828f9ac563a96e5",
+      "bytes": 475502
+    },
+    "system1/Data/E_Project_Engineering/PE001-001_example.html": {
+      "sha256": "eb118336d635cb1fb4eb7bb4844be3d9e5991c9dfd98cdb4c25d7240c5de71a7",
+      "bytes": 2149
+    },
+    "system1/Data/E_Project_Engineering/PE001-002_example.html": {
+      "sha256": "c08d613bd0f504b9bce7c7a01cf5801b1ebdbe6a76bfd16295a34b50e75b8ac4",
+      "bytes": 930
+    },
+    "system1/Data/E_Project_Engineering/PE001-003_example.html": {
+      "sha256": "e2d29342030fe7ce994ed91b62fffea923419d1740fbc78d5f0bcde7b81af2d2",
+      "bytes": 1076
+    },
+    "system1/Data/E_Project_Engineering/_archive/PE001/PE001-001_example.html": {
+      "sha256": "eb118336d635cb1fb4eb7bb4844be3d9e5991c9dfd98cdb4c25d7240c5de71a7",
+      "bytes": 2149
+    },
+    "system1/Data/E_Project_Engineering/_archive/PE001/PE001-002_example.html": {
+      "sha256": "c08d613bd0f504b9bce7c7a01cf5801b1ebdbe6a76bfd16295a34b50e75b8ac4",
+      "bytes": 930
+    },
+    "system1/Requirement_Source_Registry.xlsx": {
+      "sha256": "13e67c7aad9e4ba9537b25ae1b08f7e21b8418cc4f43e6ddc6bb9da429924b46",
+      "bytes": 177938
+    },
+    "workbench/runtime/workbench.sqlite": {
+      "sha256": "963ce58420a9e9b86fdf70f8899ed3801bdae52f3238c73f00db517335a5971f",
+      "bytes": 3493888
+    }
+  }
+}

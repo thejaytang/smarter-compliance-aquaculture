@@ -1,0 +1,15 @@
+{
+  "date": "2026-09-17",
+  "commit": "31c4cf95f1a35a4356d4a045696acf19d771cc67",
+  "repository": "https://github.com/thejaytang/smarter-compliance-aquaculture",
+  "visibility": "PUBLIC",
+  "branches": [
+    "main",
+    "codex/workbench-optimization-20260916"
+  ],
+  "data_package_bytes": 65565379,
+  "data_package_git_blob": "36ea4a1273e72c4cf0130959f089c616fc7a8100",
+  "remote_blob_matches": true,
+  "running_port": 62742,
+  "source_count": 88
+}

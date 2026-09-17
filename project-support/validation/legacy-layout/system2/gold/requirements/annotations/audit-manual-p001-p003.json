@@ -1,0 +1,726 @@
+{
+  "schema_version": "2.0",
+  "sample_id": "audit-manual-p001-p003",
+  "source": {
+    "file_name": "download-module-691-ASC-Salmon-Audit-Manual_v1.4.pdf",
+    "sha256": "911b716d6e4f9aacc1e0c7999dbcf1e009f08c3b322269c748d867006521e76d",
+    "language": "en",
+    "document_family": "audit_manual",
+    "page_count": 30
+  },
+  "sample": {
+    "round_id": "goal04-round1",
+    "split": "active",
+    "page_numbers": [1, 2, 3],
+    "selection_rationale": "Audit-matrix baseline covering Indicator plus short Requirement value, applicability, inherited and anomalous footnotes, associated instructions, client actions, CAB actions, and a semantic requirement whose qualifier continues onto the next PDF page."
+  },
+  "annotation": {
+    "status": "frozen",
+    "frozen_at": "2026-08-28",
+    "verification": ["visual_page", "native_text"],
+    "notes": [
+      "Gold was transcribed from the visible PDF pages and independently checked against the native text layer.",
+      "Bounding boxes use PDF points with a top-left origin. They were derived from pypdfium2 character boxes; each box covers only the corresponding row, cell, footnote, instruction, or footer region.",
+      "The audit manual is an assessment artifact. Requirement values remain separate from Required Client Actions and Required CAB Actions."
+    ]
+  },
+  "segments": [
+    {"segment_id":"seg-p001-document-metadata","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":52.08,"y0":79.55,"x1":303.34,"y1":127.01},"role":"other","object_kind":"text_block","segment_order":0,"source_text":"AUDIT MANUAL - ASC Salmon Standard\nVersion 1.4\nScope: species belonging to the genus Salmo and Oncorhynchus\nINSTRUCTION TO FARMS/AUDITORS:\nThis audit manual was developed to accompany version 1.4 of the ASC Salmon Standard.\nReferences in this Audit Manual to Appendices can be found in the ASC Salmon Standard version 1.4 document."},
+    {"segment_id":"seg-p001-principle-1","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":51.96,"y0":139.82,"x1":228.51,"y1":144.62},"role":"criterion_heading","object_kind":"table_cell","segment_order":1,"source_text":"PRINCIPLE 1: COMPLY WITH ALL APPLICABLE NATIONAL LAWS AND LOCAL REGULATIONS"},
+    {"segment_id":"seg-p001-criterion-1-1","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":51.96,"y0":146.18,"x1":242.48,"y1":150.98},"role":"criterion_heading","object_kind":"table_cell","segment_order":2,"source_text":"Criterion 1.1 Compliance with all applicable local and national legal requirements and regulations"},
+    {"segment_id":"seg-p001-r111-id","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":60.24,"y0":195.14,"x1":69.88,"y1":199.94},"role":"requirement_id","object_kind":"table_cell","segment_order":3,"source_text":"1.1.1"},
+    {"segment_id":"seg-p001-r111-metadata","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":176.42,"x1":179.77,"y1":218.66},"role":"normative_text","object_kind":"table_cell","segment_order":4,"source_text":"Indicator: Presence of documents demonstrating compliance with local and national regulations and requirements on land and water use\nRequirement: Yes\nApplicability: All"},
+    {"segment_id":"seg-p001-r111-client","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":193.94,"y0":164.42,"x1":374.60,"y1":232.34},"role":"client_action","object_kind":"table_cell","segment_order":5,"source_text":"a. Maintain digital or hard copies of applicable land and water use laws.\nb. Maintain original (or legalised copies of) lease agreements, land titles, or concession permit on file as applicable.\nc. Keep records of inspections for compliance with national and local laws and regulations (if such inspections are legally required in the country of operation).\nd. Obtain permits and maps showing that the farm does not conflict with national preservation areas."},
+    {"segment_id":"seg-p001-r111-auditor","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":376.39,"y0":164.42,"x1":556.57,"y1":232.34},"role":"auditor_action","object_kind":"table_cell","segment_order":6,"source_text":"A. Review compliance with applicable land and water use laws.\nB. Confirm client holds original (or legalised copies of) lease agreements or land titles.\nC. Review inspection records for compliance with national and local laws and regulations (as applicable).\nD. Verify facility does not conflict with national preservation areas and has required operational permits if sited in such an area (see 2.4.2)."},
+    {"segment_id":"seg-p001-r112-id","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":60.24,"y0":265.22,"x1":69.88,"y1":270.02},"role":"requirement_id","object_kind":"table_cell","segment_order":7,"source_text":"1.1.2"},
+    {"segment_id":"seg-p001-r112-metadata","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":249.62,"x1":178.07,"y1":285.65},"role":"normative_text","object_kind":"table_cell","segment_order":8,"source_text":"Indicator: Presence of documents demonstrating compliance with all tax laws\nRequirement: Yes\nApplicability: All"},
+    {"segment_id":"seg-p001-r112-client","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":193.94,"y0":243.26,"x1":373.29,"y1":293.21},"role":"client_action","object_kind":"table_cell","segment_order":9,"source_text":"a. Maintain records of tax payments to appropriate authorities (e.g., land use tax, water use tax, revenue tax). Note that CABs will not disclose confidential tax information unless client is required to or chooses to make it public.\nb. Maintain copies of tax laws for jurisdiction(s) where company operates.\nc. Register with national or local authorities as an “aquaculture activity”."},
+    {"segment_id":"seg-p001-r112-auditor","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":376.39,"y0":243.26,"x1":557.22,"y1":293.21},"role":"auditor_action","object_kind":"table_cell","segment_order":10,"source_text":"A. Verify client has records of tax payments to appropriate authorities. Do not disclose client tax information which is confidential. An independently audited company annual report may be used to confirm tax status.\nB. Confirm client has a basic knowledge of tax requirements for farm.\nC. Verify client is registered with local or national authorities."},
+    {"segment_id":"seg-p001-r113-id","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":60.24,"y0":321.05,"x1":69.88,"y1":325.85},"role":"requirement_id","object_kind":"table_cell","segment_order":11,"source_text":"1.1.3"},
+    {"segment_id":"seg-p001-r113-metadata","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":302.33,"x1":185.90,"y1":344.57},"role":"normative_text","object_kind":"table_cell","segment_order":12,"source_text":"Indicator: Presence of documents demonstrating compliance with all relevant national and local labour laws and regulations\nRequirement: Yes\nApplicability: All"},
+    {"segment_id":"seg-p001-r113-client","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":193.94,"y0":303.77,"x1":371.14,"y1":339.89},"role":"client_action","object_kind":"table_cell","segment_order":13,"source_text":"a. Maintain copies of national labour codes and laws applicable to farm (scope is restricted to the farm sites within the unit certification.)\nb. Keep records of farm inspections for compliance with national labour laws and codes (only if such inspections are legally required in the country of operation)."},
+    {"segment_id":"seg-p001-r113-auditor","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":376.39,"y0":306.89,"x1":541.45,"y1":339.89},"role":"auditor_action","object_kind":"table_cell","segment_order":14,"source_text":"A. Confirm client has specified documentation.\nB. Review inspection records for compliance with national labour laws and codes (as applicable)."},
+    {"segment_id":"seg-p001-r114-id","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":60.24,"y0":372.65,"x1":69.88,"y1":377.45},"role":"requirement_id","object_kind":"table_cell","segment_order":15,"source_text":"1.1.4"},
+    {"segment_id":"seg-p001-r114-metadata","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":353.93,"x1":183.11,"y1":396.17},"role":"normative_text","object_kind":"table_cell","segment_order":16,"source_text":"Indicator: Presence of documents demonstrating compliance with regulations and permits concerning water quality impacts\nRequirement: Yes\nApplicability: All"},
+    {"segment_id":"seg-p001-r114-client","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":193.94,"y0":354.65,"x1":368.01,"y1":397.25},"role":"client_action","object_kind":"table_cell","segment_order":17,"source_text":"a. Obtain permits for water quality impacts where applicable.\nb. Compile list of and comply with all discharge laws or regulations.\nc. Maintain records of monitoring and compliance with discharge laws and regulations as required."},
+    {"segment_id":"seg-p001-r114-auditor","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":376.39,"y0":354.65,"x1":524.29,"y1":394.13},"role":"auditor_action","object_kind":"table_cell","segment_order":18,"source_text":"A. Verify that client obtains permits as applicable.\nB. Review evidence of compliance with discharge laws or regulations.\nC. Verify that records show compliance with discharge laws and regulations."},
+    {"segment_id":"seg-p001-principle-2","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":51.96,"y0":402.65,"x1":240.40,"y1":407.45},"role":"criterion_heading","object_kind":"table_cell","segment_order":19,"source_text":"PRINCIPLE 2: CONSERVE NATURAL HABITAT, LOCAL BIODIVERSITY AND ECOSYSTEM FUNCTION"},
+    {"segment_id":"seg-p001-criterion-2-1","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":51.96,"y0":408.67,"x1":159.88,"y1":413.47},"role":"criterion_heading","object_kind":"table_cell","segment_order":20,"source_text":"Criterion 2.1 Benthic biodiversity and benthic effects [1]"},
+    {"segment_id":"seg-p001-footnote-1","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":426.55,"x1":536.80,"y1":437.59},"role":"footnote","object_kind":"footnote","segment_order":21,"source_text":"[1] Closed production systems that can demonstrate that they collect and responsibly dispose of > 75% of solid nutrients from the production system are exempt from standards under Criterion 2.1. See Appendix VI for requirements on transparency for 2.1.1, 2.1.2 and 2.1.3."},
+    {"segment_id":"seg-p001-instruction-c21-methodology","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":51.96,"y0":449.11,"x1":556.66,"y1":491.35},"role":"other","object_kind":"text_block","segment_order":22,"source_text":"Instruction to Clients and CABs on Criterion 2.1 - Modification of the Benthic Sampling Methodology\nFor farms located in a jurisdiction where specific benthic sampling locations are required under law, clients may request to modify the benthic sampling methodology prescribed in Appendix I-1 to allow for sampling at different locations and/or changes in the total number of samples. Where modifications are sought, farms shall provide a full justification to the CAB for review. Requests for modification shall be supported by mapping of differences in sampling locations. In any event, the sampling locations must at a minimum include samples from the cage edge and samples taken from inside and outside of a defined AZE.\nCABs shall evaluate client requests to modify benthic methodology based on whether there is a risk that such changes would jeopardize the intent and rigor of the ASC Salmon Standard. If the CAB determines that proposed modifications are low risk, the CAB shall ensure that details of the modified benthic sampling methodology are fully described and justified in the audit report."},
+    {"segment_id":"seg-p001-r211-option-note","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":193.94,"y0":499.39,"x1":373.08,"y1":516.67},"role":"other","object_kind":"table_cell","segment_order":23,"source_text":"Note: Under Indicator 2.1.1, farms can choose to measure redox potential (Option #1) or sulphide concentration (Option #2). Farms do not have to demonstrate that they meet both threshold values."},
+    {"segment_id":"seg-p001-r211-id","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":60.24,"y0":599.14,"x1":69.88,"y1":603.94},"role":"requirement_id","object_kind":"table_cell","segment_order":24,"source_text":"2.1.1"},
+    {"segment_id":"seg-p001-r211-metadata","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":571.06,"x1":187.31,"y1":632.02},"role":"normative_text","object_kind":"table_cell","segment_order":25,"source_text":"Indicator: Redox potential or [2] sulphide levels in sediment outside of the Allowable Zone of Effect (AZE) [3], following the sampling methodology outlined in Appendix I-1\nRequirement: Redox potential > 0 mV or Sulphide ≤ 1,500 μMol/L\nApplicability: All farms except as noted in [1]"},
+    {"segment_id":"seg-p001-r211-client","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":193.94,"y0":527.59,"x1":374.02,"y1":697.32},"role":"client_action","object_kind":"table_cell","segment_order":26,"source_text":"a. Prepare a map of the farm showing boundary of AZE and GPS locations of all sediment collections stations.\nb. If benthos throughout the full AZE is hard bottom, provide evidence to the CAB and request an exemption from 2.1.1c-f, 2.1.2 and 2.1.3.\nc. Inform the CAB whether the farm chose option #1 or option #2 to demonstrate compliance with the requirements of the Standard.\nd. Collect sediment samples in accordance with the methodology in Appendix I-1 (i.e., at the time of peak cage biomass and at all required stations).\ne. For option #1, measure and record redox potential (mV) in sediment samples using an appropriate, nationally or internationally recognized testing method.\nf. For option #2, measure and record sulphide concentration (μM) using an appropriate, nationally or internationally recognized testing method.\ng. Submit test results to ASC as per Appendix VI at least once for each production cycle. If site has hard bottom and cannot complete tests, report this to ASC."},
+    {"segment_id":"seg-p001-r211-auditor","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":376.39,"y0":530.71,"x1":557.56,"y1":693.84},"role":"auditor_action","object_kind":"table_cell","segment_order":27,"source_text":"A. Review map to verify appropriate siting of sampling stations (Appendix I-1).\nB. Review evidence of benthic type and confirm whether to proceed to 2.1.1c.\nC. Record which option the client chose.\nD. Review documentary evidence (notes, GPS coordinates) showing sampling time, stations, and frequency. Cross-check against farm maps and harvest records.\nE. Review results to verify that redox potential of sediments complies with the requirement at each sampling station outside the AZE. Confirm that the testing method used by the farm is appropriate.\nF. Review results to verify that sulphide concentration in sediments complies with the Standard at each sampling station outside the AZE. Confirm that the testing method used by the farm is appropriate.\nG. Confirm that client has submitted test results to ASC (Appendix VI)."},
+    {"segment_id":"seg-p001-footnote-2","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":707.88,"x1":306.22,"y1":712.68},"role":"footnote","object_kind":"footnote","segment_order":28,"source_text":"[2] Farm sites can choose whether to use redox or sulphide. Farms do not have to demonstrate that they meet both."},
+    {"segment_id":"seg-p001-footer","page_number":1,"page_index":0,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":53.91,"y0":757.23,"x1":556.46,"y1":768.51},"role":"footer","object_kind":"text_block","segment_order":29,"source_text":"Audit Manual - ASC Salmon Standard v1.4 Oct 2022\nCopyright (c) Aquaculture Stewardship Council. All rights reserved by Aquaculture Stewardship Council\nPage 1 of 30"},
+
+    {"segment_id":"seg-p002-footnote-3","page_number":2,"page_index":1,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":162.50,"x1":408.86,"y1":167.30},"role":"footnote","object_kind":"footnote","segment_order":0,"source_text":"[3] Allowable Zone of Effect (AZE) is defined using a robust and credible modelling system such as the SEPA AUTODEPOMOD and verified through monitoring (see 2.1.4)."},
+    {"segment_id":"seg-p002-r212-option-note","page_number":2,"page_index":1,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":193.94,"y0":179.18,"x1":553.13,"y1":202.70},"role":"other","object_kind":"table_cell","segment_order":1,"source_text":"Note:\n- Under Indicator 2.1.2, farms can choose one of four measurements to show compliance with the faunal index Requirement: AMBI (Option #1); Shannon-Wiener Index (Option #2); BQI (Option #3); or ITI (Option #4). Farms do not have to demonstrate that they meet all four threshold values.\n- If a farm is exempt due to hard bottom benthos (see 2.1.1b), then 2.1.2 does not apply and this shall be noted in the audit report."},
+    {"segment_id":"seg-p002-r212-id","page_number":2,"page_index":1,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":60.24,"y0":283.97,"x1":69.88,"y1":288.77},"role":"requirement_id","object_kind":"table_cell","segment_order":2,"source_text":"2.1.2"},
+    {"segment_id":"seg-p002-r212-metadata","page_number":2,"page_index":1,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":252.74,"x1":190.67,"y1":319.97},"role":"normative_text","object_kind":"table_cell","segment_order":3,"source_text":"Indicator: Faunal index score indicating good [4] to high ecological quality in sediment outside the AZE, following the sampling methodology outlined in Appendix I-1\nRequirement: AZTI Marine Biotic Index (AMBI [5]) score ≤ 3.3, or Shannon-Wiener Index score > 3, or Benthic Quality Index (BQI) score ≥ 15, or Infaunal Trophic Index (ITI) score ≥ 25\nApplicability: All farms except as noted in [1]"},
+    {"segment_id":"seg-p002-r212-client","page_number":2,"page_index":1,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":193.94,"y0":216.26,"x1":375.59,"y1":391.13},"role":"client_action","object_kind":"table_cell","segment_order":4,"source_text":"a. Prepare a map showing the AZE and sediment collections stations (see 2.1.1).\nb. Inform the CAB whether the farm chose option #1, #2, #3, or #4 to demonstrate compliance with the requirement.\nc. Collect sediment samples in accordance with Appendix I-1 (see 2.1.1).\nd. For option #1, measure, calculate and record AZTI Marine Biotic Index [5] score of sediment samples using the required method.\ne. For option #2, measure, calculate and record Shannon-Wiener Index score of sediment samples using the required method.\nf. For option #3, measure, calculate and record Benthic Quality Index (BQI) score of sediment samples using the required method.\ng. For option #4, measure, calculate and record Infaunal Trophic Index (ITI) score of sediment samples using the required method.\nh. Retain documentary evidence to show how scores were obtained. If samples were analyzed and index calculated by an independent laboratory, obtain copies of results.\ni. Submit faunal index scores to ASC (Appendix VI) at least once for each production cycle."},
+    {"segment_id":"seg-p002-r212-auditor","page_number":2,"page_index":1,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":376.39,"y0":216.26,"x1":557.38,"y1":390.89},"role":"auditor_action","object_kind":"table_cell","segment_order":5,"source_text":"A. Review map to verify appropriate siting of sampling stations (see 2.1.1).\nB. Record which option the client chose for scoring faunal index.\nC. Confirm sample collection followed Appendix I-1 (see 2.1.1).\nD. Review results (as applicable) to verify that AMBI score of sediments is ≤ 3.3 at each sampling station outside the AZE.\nE. Review results (as applicable) to verify that Shannon Wiener score of sediments is > 3 at each sampling station outside the AZE.\nF. Review results (as applicable) to verify that BQI score of sediments is ≥ 15 at each sampling station outside the AZE.\nG. Review results (as applicable) to verify that ITI score of sediments is ≥ 25 at each sampling station outside the AZE.\nH. Confirm that an approved method was used or that a qualified independent laboratory performed the sampling and calculation of faunal index.\nI. Confirm that client submitted faunal index scores to ASC (Appendix VI)."},
+    {"segment_id":"seg-p002-footnote-4","page_number":2,"page_index":1,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":402.29,"x1":541.57,"y1":413.35},"role":"footnote","object_kind":"footnote","segment_order":6,"source_text":"[4] “Good” Ecological Quality Classification: The level of diversity and abundance of invertebrate taxa is slightly outside the range associated with the type-specific conditions. Most of the sensitive taxa of the type-specific communities are present."},
+    {"segment_id":"seg-p002-footnote-5","page_number":2,"page_index":1,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":418.87,"x1":126.42,"y1":423.67},"role":"footnote","object_kind":"footnote","segment_order":7,"source_text":"[5] https://ambi.azti.es/"},
+    {"segment_id":"seg-p002-r213-id","page_number":2,"page_index":1,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":60.24,"y0":479.47,"x1":69.88,"y1":484.27},"role":"requirement_id","object_kind":"table_cell","segment_order":8,"source_text":"2.1.3"},
+    {"segment_id":"seg-p002-r213-metadata","page_number":2,"page_index":1,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":457.63,"x1":189.97,"y1":506.11},"role":"normative_text","object_kind":"table_cell","segment_order":9,"source_text":"Indicator: Number of macrofaunal taxa in the sediment within the AZE, following the sampling methodology outlined in Appendix I-1\nRequirement: ≥ 2 highly abundant [6] taxa that are not pollution indicator species\nApplicability: All farms except as noted in [1]"},
+    {"segment_id":"seg-p002-r213-client","page_number":2,"page_index":1,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":193.94,"y0":430.99,"x1":373.82,"y1":533.59},"role":"client_action","object_kind":"table_cell","segment_order":10,"source_text":"a. Document appropriate sediment sample collection as for 2.1.1a and 2.1.1c, or exemption as per 2.1.1b.\nb. For sediment samples taken within the AZE, determine abundance and taxonomic composition of macrofauna using an appropriate testing method.\nc. Identify all highly abundant taxa [6] and specify which ones (if any) are pollution indicator species.\nd. Retain documentary evidence to show how taxa were identified and how counts were obtained. If samples were analyzed by an independent lab, obtain copies of results.\ne. Submit counts of macrofaunal taxa to ASC (Appendix VI) at least once for each production cycle."},
+    {"segment_id":"seg-p002-r213-auditor","page_number":2,"page_index":1,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":376.39,"y0":430.99,"x1":555.17,"y1":530.23},"role":"auditor_action","object_kind":"table_cell","segment_order":11,"source_text":"A. Confirm appropriate sediment sample collection as for 2.1.1a and 2.1.1c or exemption as per 2.1.1b.\nB. Confirm that an appropriate method was used or that a suitably qualified independent laboratory performed the analysis.\nC. Confirm that all samples from within the AZE have ≥ 2 highly abundant [6] taxa (exclusive of pollution indicator species).\nD. Confirm that a suitable method was used or that a suitability qualified independent laboratory performed the scoring of faunal index.\nE. Confirm that client has submitted scores to ASC (Appendix VI)."},
+    {"segment_id":"seg-p002-footnote-6","page_number":2,"page_index":1,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":539.95,"x1":367.85,"y1":544.75},"role":"footnote","object_kind":"footnote","segment_order":12,"source_text":"[6] Highly abundant: Greater than 100 organisms per square metre (or equally high to reference site(s) if natural abundance is lower than this level)."},
+    {"segment_id":"seg-p002-r214-id","page_number":2,"page_index":1,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":60.24,"y0":579.82,"x1":69.88,"y1":584.62},"role":"requirement_id","object_kind":"table_cell","segment_order":13,"source_text":"2.1.4"},
+    {"segment_id":"seg-p002-r214-metadata","page_number":2,"page_index":1,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":564.22,"x1":184.79,"y1":600.22},"role":"normative_text","object_kind":"table_cell","segment_order":14,"source_text":"Indicator: Definition of a site-specific AZE based on a robust and credible [7] modelling system\nRequirement: Yes\nApplicability: All farms except as noted in [1]"},
+    {"segment_id":"seg-p002-r214-client","page_number":2,"page_index":1,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":193.94,"y0":559.54,"x1":365.62,"y1":613.18},"role":"client_action","object_kind":"table_cell","segment_order":15,"source_text":"a. Undertake an analysis to determine the site-specific AZE and depositional pattern.\nb. Maintain records to show how the analysis (in 2.1.4a) is robust and credible based on modeling using a multi-parameter approach [7].\nc. Maintain records to show that modeling results for the site-specific AZE have been verified with > 6 months of monitoring data."},
+    {"segment_id":"seg-p002-r214-auditor","page_number":2,"page_index":1,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":376.39,"y0":556.42,"x1":552.63,"y1":613.18},"role":"auditor_action","object_kind":"table_cell","segment_order":16,"source_text":"A. Review documentation to confirm that the farm has undertaken an analysis before the required date.\nB. Confirm that the farm used a robust and credible modeling system to define the site-specific AZE.\nC. Confirm that farms have validated the general applicability of the site-specific AZE using monitoring data (i.e., 'ground truthing')."},
+    {"segment_id":"seg-p002-footnote-7","page_number":2,"page_index":1,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":621.22,"x1":543.84,"y1":632.26},"role":"footnote","object_kind":"footnote","segment_order":17,"source_text":"[7] Robust and credible: The SEPA AUTODEPOMOD modelling system is considered to be an example of a credible and robust system. The model must include a multi-parameter approach. Monitoring must be used to ground-truth the AZE proposed through the model."},
+    {"segment_id":"seg-p002-footer","page_number":2,"page_index":1,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":53.91,"y0":757.23,"x1":556.46,"y1":768.51},"role":"footer","object_kind":"text_block","segment_order":18,"source_text":"Audit Manual - ASC Salmon Standard v1.4 Oct 2022\nCopyright (c) Aquaculture Stewardship Council. All rights reserved by Aquaculture Stewardship Council\nPage 2 of 30"},
+
+    {"segment_id":"seg-p003-criterion-2-2","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":51.96,"y0":100.32,"x1":174.27,"y1":105.12},"role":"criterion_heading","object_kind":"table_cell","segment_order":0,"source_text":"Criterion 2.2 Water quality in and near the site of operation [8]"},
+    {"segment_id":"seg-p003-footnote-8","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":114.48,"x1":240.12,"y1":119.28},"role":"footnote","object_kind":"footnote","segment_order":1,"source_text":"[8] See Appendix VI for transparency requirements for 2.2.1, 2.2.2, 2.2.3 and 2.2.5."},
+    {"segment_id":"seg-p003-r221-instruction-method","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":193.94,"y0":137.54,"x1":550.23,"y1":210.98},"role":"other","object_kind":"table_cell","segment_order":2,"source_text":"Instruction to Clients for Indicator 2.2.1 - Monitoring Average Weekly Percent Saturation of Dissolved Oxygen\nAppendix I-4 presents the required methodology that farms must follow for sampling the average weekly percent saturation of dissolved oxygen (DO). Key points of the method are as follows:\n- measurements may be taken with a handheld oxygen meter or equivalent chemical method;\n- equipment is calibrated according to manufacturer's recommendations;\n- measurements are taken at least twice daily: once in the morning (6 -9 am) and once in the afternoon (3-6 pm ) as appropriate for the location and season;\n- salinity and temperature must also be measured when DO is sampled;\n- sampling should be done at 5 meters depth in water conditions that would be experienced by fish (e.g., at the downstream edge of a net pen array):\n- each week, all DO measurements are used in the calculation of a weekly average percent saturation.\nIf monitoring deviates from prescribed sampling methodology, the farm shall provide the auditor with a written justification (e.g., when samples are missed due to bad weather). In limited and well-justified situations, farms may request that the CAB approve reduction of DO monitoring frequency to one sample per day."},
+    {"segment_id":"seg-p003-r221-instruction-exception","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":193.94,"y0":218.66,"x1":556.10,"y1":242.18},"role":"other","object_kind":"table_cell","segment_order":3,"source_text":"Exception [see footnote 12] If a farm does not meet the minimum 70 percent weekly average saturation requirement, the farm must demonstrate the consistency of percent saturation with a reference site. The reference site shall be at least 500 meters from the edge of the net pen array, in a location that is understood to follow similar patterns in upwelling to the farm site and is not influenced by nutrient inputs from anthropogenic causes including aquaculture, agricultural runoff or nutrient releases from coastal communities. For any such exceptions, the auditor shall fully document in the audit report how the farm has demonstrated consistency with the reference site."},
+    {"segment_id":"seg-p003-r221-note-definition","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":193.94,"y0":249.86,"x1":536.61,"y1":254.66},"role":"other","object_kind":"table_cell","segment_order":4,"source_text":"Note: Percent saturation is the amount of oxygen dissolved in the water sample compared to the maximum amount that could be present at the same temperature and salinity."},
+    {"segment_id":"seg-p003-r221-id","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":60.24,"y0":266.54,"x1":69.88,"y1":271.34},"role":"requirement_id","object_kind":"table_cell","segment_order":5,"source_text":"2.2.1"},
+    {"segment_id":"seg-p003-r221-metadata","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":247.82,"x1":190.56,"y1":290.09},"role":"normative_text","object_kind":"table_cell","segment_order":6,"source_text":"Indicator: Weekly average percent saturation [9] of dissolved oxygen (DO) [10] on farm, calculated following methodology in Appendix I-4\nRequirement: ≥ 70% [11]\nApplicability: All farms except as noted in [11]"},
+    {"segment_id":"seg-p003-r221-client","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":193.94,"y0":277.49,"x1":374.09,"y1":412.15},"role":"client_action","object_kind":"table_cell","segment_order":7,"source_text":"a. Monitor and record on-farm percent saturation of DO at a minimum of twice daily using a calibrated oxygen meter or equivalent method. For first audits, farm records must cover ≥ 6 months.\nb. Provide a written justification for any missed samples or deviations in sampling time.\nc. Calculate weekly average percent saturation based on data.\nd. If any weekly average DO values are < 70%, or approaching that level, monitor and record DO at a reference site and compare to on-farm levels (see Instructions).\ne. Arrange for auditor to witness DO monitoring and calibration while on site.\nf. Submit results from monitoring of average weekly DO as per Appendix VI to ASC at least once per year."},
+    {"segment_id":"seg-p003-r221-auditor","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":376.39,"y0":283.73,"x1":549.62,"y1":408.77},"role":"auditor_action","object_kind":"table_cell","segment_order":8,"source_text":"A. Do not schedule audit until client provides a minimum of 6 months of DO data.\nB. Review records for completeness and conformity with methodology in Appendix 1-4.\nC. Review calculation and confirm all weekly averages ≥ 70%.\nD. As needed, review DO data from reference site and document in the audit report (see instruction).\nE. Witness DO monitoring and verify calibration while on site. On-site values should fall within range of farm data for DO. If an out of range measurement is observed, raise a nonconformity.\nF. Confirm that client has submitted DO results to ASC (Appendix VI)."},
+    {"segment_id":"seg-p003-footnote-9","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":418.51,"x1":455.44,"y1":423.31},"role":"footnote","object_kind":"footnote","segment_order":9,"source_text":"[9] Percent saturation: Percent saturation is the amount of oxygen dissolved in the water sample compared to the maximum amount that could be present at the same temperature and salinity."},
+    {"segment_id":"seg-p003-footnote-10","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":427.27,"x1":240.36,"y1":432.07},"role":"footnote","object_kind":"footnote","segment_order":10,"source_text":"[10] Averaged weekly from two daily measurements (proposed at 6 am and 3 pm)."},
+    {"segment_id":"seg-p003-footnote-11","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":436.03,"x1":349.15,"y1":440.83},"role":"footnote","object_kind":"footnote","segment_order":11,"source_text":"[11] An exception to this standard shall be made for farms that can demonstrate consistency with a reference site in the same water body."},
+    {"segment_id":"seg-p003-r222-id","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":60.24,"y0":463.99,"x1":69.88,"y1":468.79},"role":"requirement_id","object_kind":"table_cell","segment_order":12,"source_text":"2.2.2"},
+    {"segment_id":"seg-p003-r222-metadata","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":448.39,"x1":192.71,"y1":484.39},"role":"normative_text","object_kind":"table_cell","segment_order":13,"source_text":"Indicator: Maximum percentage of weekly samples from 2.2.1 that fall under 2 mg/L DO\nRequirement: 5%\nApplicability: All"},
+    {"segment_id":"seg-p003-r222-client","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":193.94,"y0":453.55,"x1":369.11,"y1":481.87},"role":"client_action","object_kind":"table_cell","segment_order":14,"source_text":"a. Calculate the percentage of on-farm samples taken for 2.2.1a that fall under 2 mg/L DO.\nb. Submit results from 2.2.2a as per Appendix VI to ASC at least once per year."},
+    {"segment_id":"seg-p003-r222-auditor","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":376.39,"y0":450.43,"x1":554.66,"y1":481.63},"role":"auditor_action","object_kind":"table_cell","segment_order":15,"source_text":"A. Review the farm's calculation and confirm that ≤ 5% of weekly samples fall under 2 mg/L DO.\nB. Confirm that client has submitted results to ASC (Appendix VI)."},
+    {"segment_id":"seg-p003-r223-id","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":60.24,"y0":527.11,"x1":69.88,"y1":531.91},"role":"requirement_id","object_kind":"table_cell","segment_order":16,"source_text":"2.2.3"},
+    {"segment_id":"seg-p003-r223-metadata","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":502.15,"x1":192.83,"y1":556.90},"role":"normative_text","object_kind":"table_cell","segment_order":17,"source_text":"Indicator: For jurisdictions that have national or regional coastal water quality targets [12], demonstration through third-party analysis that the farm is in an area recently [13] classified as having “good” or “very good” water quality [14]\nRequirement: Yes [15]\nApplicability: All farms except as noted in [15]"},
+    {"segment_id":"seg-p003-r223-client","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":193.84,"y0":496.39,"x1":370.52,"y1":564.82},"role":"client_action","object_kind":"table_cell","segment_order":18,"source_text":"a. Inform the CAB whether relevant targets and classification systems are applicable in the jurisdiction. If applicable, proceed to \"2.2.3.b\". If not applicable, take action as required under 2.2.4.\nb. Compile a summary of relevant national or regional water quality targets and classifications, identifying the third-party responsible for the analysis and classification.\nc. Identify the most recent classification of water quality for the area in which the farm operates."},
+    {"segment_id":"seg-p003-r223-auditor","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":376.39,"y0":502.63,"x1":557.29,"y1":564.82},"role":"auditor_action","object_kind":"table_cell","segment_order":19,"source_text":"A. Record whether indicator is applicable.\nB. Confirm that there has been a recent third-party analysis (within two years prior to the audit) to classify areas according to national or regional water quality targets.\nC. Confirm that the analysis and classification shows the farm is located in an area where the water quality complies with the requirement."},
+    {"segment_id":"seg-p003-footnote-12","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":571.18,"x1":177.85,"y1":575.98},"role":"footnote","object_kind":"footnote","segment_order":20,"source_text":"[12] Related to nutrients (e.g., N, P, chlorophyll A)."},
+    {"segment_id":"seg-p003-footnote-13","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":581.50,"x1":173.77,"y1":586.30},"role":"footnote","object_kind":"footnote","segment_order":21,"source_text":"[13] Within the two years prior to the first audit."},
+    {"segment_id":"seg-p003-footnote-14","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":591.70,"x1":469.78,"y1":596.50},"role":"footnote","object_kind":"footnote","segment_order":22,"source_text":"[14] Classifications of “good” and “very good” are used in the EU Water Framework Directive. Equivalent classification from other water quality monitoring systems in other jurisdictions are acceptable."},
+    {"segment_id":"seg-p003-footnote-15","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":602.14,"x1":555.61,"y1":613.18},"role":"footnote","object_kind":"footnote","segment_order":23,"source_text":"[15] Closed production systems that can demonstrate the collection and responsible disposal of > 75% of solid nutrients as well as > 50% of dissolved nutrients (through biofiltration, settling and/or other technologies) are exempt from standards 2.2.3 and 2.2.4."},
+    {"segment_id":"seg-p003-r224-id","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":60.24,"y0":647.50,"x1":69.88,"y1":652.30},"role":"requirement_id","object_kind":"table_cell","segment_order":24,"source_text":"2.2.4"},
+    {"segment_id":"seg-p003-r224-metadata","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":625.66,"x1":189.00,"y1":674.14},"role":"normative_text","object_kind":"table_cell","segment_order":25,"source_text":"Indicator: For jurisdictions without national or regional coastal water quality targets, evidence of monitoring of nitrogen and phosphorous [16] levels on farm and at a reference site, following methodology in Appendix I-5\nRequirement: Consistency with reference site\nApplicability: All farms except as noted in [16]"},
+    {"segment_id":"seg-p003-r224-client","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":193.94,"y0":626.38,"x1":374.00,"y1":676.66},"role":"client_action","object_kind":"table_cell","segment_order":26,"source_text":"a. Develop, implement, and document a monitoring plan for N, NH4, NO3, total P, and ortho-P in compliance with Appendix I-5. For first audits, farm records must cover ≥ 6 months.\nb. Calibrate all equipment according to the manufacturer's recommendations.\nc. Submit data on N and P to ASC as per Appendix VI at least once per year."},
+    {"segment_id":"seg-p003-r224-auditor","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":376.39,"y0":626.38,"x1":555.87,"y1":676.66},"role":"auditor_action","object_kind":"table_cell","segment_order":27,"source_text":"A. Review the farm's monitoring plan and verify that the farm has collected monitoring data for N and P following the methodology in Appendix I-5.\nB. Verify that client calibrates equipment as needed.\nC. Confirm that client has submitted N and P data to ASC (Appendix VI)."},
+    {"segment_id":"seg-p003-footnote-16","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":79.94,"y0":684.96,"x1":422.81,"y1":689.76},"role":"footnote","object_kind":"footnote","segment_order":28,"source_text":"[16] Farms shall monitor total N, NH4, NO3, total P and Ortho-P in the water column. Results shall be submitted to the ASC database. Methods such as a Hach kit are acceptable."},
+    {"segment_id":"seg-p003-footer","page_number":3,"page_index":2,"page_size":{"width":612,"height":792,"unit":"pdf_point","origin":"top_left"},"bbox":{"x0":53.91,"y0":757.23,"x1":556.46,"y1":768.51},"role":"footer","object_kind":"text_block","segment_order":29,"source_text":"Audit Manual - ASC Salmon Standard v1.4 Oct 2022\nCopyright (c) Aquaculture Stewardship Council. All rights reserved by Aquaculture Stewardship Council\nPage 3 of 30"}
+  ],
+  "requirements": [
+    {
+      "requirement_id": "1.1.1",
+      "requirement_form": "audit_matrix",
+      "criterion_path": ["PRINCIPLE 1: COMPLY WITH ALL APPLICABLE NATIONAL LAWS AND LOCAL REGULATIONS", "Criterion 1.1 Compliance with all applicable local and national legal requirements and regulations"],
+      "language": "en",
+      "indicator_text": "Presence of documents demonstrating compliance with local and national regulations and requirements on land and water use",
+      "requirement_value": "Yes",
+      "normative_text": "Indicator: Presence of documents demonstrating compliance with local and national regulations and requirements on land and water use\nRequirement: Yes",
+      "normative_subjects": ["farm"],
+      "applicability": ["All"],
+      "modalities": [{"token":"Requirement","type":"obligation","scope":"The indicator condition and the value Yes jointly define compliance."}],
+      "negations": [],
+      "clauses": [{"clause_id":"1.1.1-c1","parent_clause_id":null,"marker":null,"text":"Presence of documents demonstrating compliance with local and national regulations and requirements on land and water use; Requirement: Yes","joins_next":null}],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [{"text":"see 2.4.2","target":"2.4.2","type":"internal_exact"}],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [
+        {"marker":"a","text":"Maintain digital or hard copies of applicable land and water use laws.","source_segment_ids":["seg-p001-r111-client"]},
+        {"marker":"b","text":"Maintain original (or legalised copies of) lease agreements, land titles, or concession permit on file as applicable.","source_segment_ids":["seg-p001-r111-client"]},
+        {"marker":"c","text":"Keep records of inspections for compliance with national and local laws and regulations (if such inspections are legally required in the country of operation).","source_segment_ids":["seg-p001-r111-client"]},
+        {"marker":"d","text":"Obtain permits and maps showing that the farm does not conflict with national preservation areas.","source_segment_ids":["seg-p001-r111-client"]}
+      ],
+      "auditor_actions": [
+        {"marker":"A","text":"Review compliance with applicable land and water use laws.","source_segment_ids":["seg-p001-r111-auditor"]},
+        {"marker":"B","text":"Confirm client holds original (or legalised copies of) lease agreements or land titles.","source_segment_ids":["seg-p001-r111-auditor"]},
+        {"marker":"C","text":"Review inspection records for compliance with national and local laws and regulations (as applicable).","source_segment_ids":["seg-p001-r111-auditor"]},
+        {"marker":"D","text":"Verify facility does not conflict with national preservation areas and has required operational permits if sited in such an area (see 2.4.2).","source_segment_ids":["seg-p001-r111-auditor"]}
+      ],
+      "related_context_ids": ["seg-p001-principle-1","seg-p001-criterion-1-1"],
+      "source_segment_ids": ["seg-p001-r111-id","seg-p001-r111-metadata"],
+      "source_anomalies": ["The source phrase 'original (or legalised copies of)' has unusual parenthesis structure and is retained verbatim."],
+      "gold_notes": ["The Required Client Actions and Required CAB Actions are linked fields, not part of normative_text."]
+    },
+    {
+      "requirement_id": "1.1.2",
+      "requirement_form": "audit_matrix",
+      "criterion_path": ["PRINCIPLE 1: COMPLY WITH ALL APPLICABLE NATIONAL LAWS AND LOCAL REGULATIONS", "Criterion 1.1 Compliance with all applicable local and national legal requirements and regulations"],
+      "language": "en",
+      "indicator_text": "Presence of documents demonstrating compliance with all tax laws",
+      "requirement_value": "Yes",
+      "normative_text": "Indicator: Presence of documents demonstrating compliance with all tax laws\nRequirement: Yes",
+      "normative_subjects": ["farm"],
+      "applicability": ["All"],
+      "modalities": [{"token":"Requirement","type":"obligation","scope":"The indicator condition and the value Yes jointly define compliance."}],
+      "negations": [],
+      "clauses": [{"clause_id":"1.1.2-c1","parent_clause_id":null,"marker":null,"text":"Presence of documents demonstrating compliance with all tax laws; Requirement: Yes","joins_next":null}],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [
+        {"marker":"a","text":"Maintain records of tax payments to appropriate authorities (e.g., land use tax, water use tax, revenue tax). Note that CABs will not disclose confidential tax information unless client is required to or chooses to make it public.","source_segment_ids":["seg-p001-r112-client"]},
+        {"marker":"b","text":"Maintain copies of tax laws for jurisdiction(s) where company operates.","source_segment_ids":["seg-p001-r112-client"]},
+        {"marker":"c","text":"Register with national or local authorities as an “aquaculture activity”.","source_segment_ids":["seg-p001-r112-client"]}
+      ],
+      "auditor_actions": [
+        {"marker":"A","text":"Verify client has records of tax payments to appropriate authorities. Do not disclose client tax information which is confidential. An independently audited company annual report may be used to confirm tax status.","source_segment_ids":["seg-p001-r112-auditor"]},
+        {"marker":"B","text":"Confirm client has a basic knowledge of tax requirements for farm.","source_segment_ids":["seg-p001-r112-auditor"]},
+        {"marker":"C","text":"Verify client is registered with local or national authorities.","source_segment_ids":["seg-p001-r112-auditor"]}
+      ],
+      "related_context_ids": ["seg-p001-principle-1","seg-p001-criterion-1-1"],
+      "source_segment_ids": ["seg-p001-r112-id","seg-p001-r112-metadata"],
+      "source_anomalies": [],
+      "gold_notes": ["The disclosure note is physically inside client action a and is retained in that linked action rather than normative_text."]
+    },
+    {
+      "requirement_id": "1.1.3",
+      "requirement_form": "audit_matrix",
+      "criterion_path": ["PRINCIPLE 1: COMPLY WITH ALL APPLICABLE NATIONAL LAWS AND LOCAL REGULATIONS", "Criterion 1.1 Compliance with all applicable local and national legal requirements and regulations"],
+      "language": "en",
+      "indicator_text": "Presence of documents demonstrating compliance with all relevant national and local labour laws and regulations",
+      "requirement_value": "Yes",
+      "normative_text": "Indicator: Presence of documents demonstrating compliance with all relevant national and local labour laws and regulations\nRequirement: Yes",
+      "normative_subjects": ["farm"],
+      "applicability": ["All"],
+      "modalities": [{"token":"Requirement","type":"obligation","scope":"The indicator condition and the value Yes jointly define compliance."}],
+      "negations": [],
+      "clauses": [{"clause_id":"1.1.3-c1","parent_clause_id":null,"marker":null,"text":"Presence of documents demonstrating compliance with all relevant national and local labour laws and regulations; Requirement: Yes","joins_next":null}],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [
+        {"marker":"a","text":"Maintain copies of national labour codes and laws applicable to farm (scope is restricted to the farm sites within the unit certification.)","source_segment_ids":["seg-p001-r113-client"]},
+        {"marker":"b","text":"Keep records of farm inspections for compliance with national labour laws and codes (only if such inspections are legally required in the country of operation).","source_segment_ids":["seg-p001-r113-client"]}
+      ],
+      "auditor_actions": [
+        {"marker":"A","text":"Confirm client has specified documentation.","source_segment_ids":["seg-p001-r113-auditor"]},
+        {"marker":"B","text":"Review inspection records for compliance with national labour laws and codes (as applicable).","source_segment_ids":["seg-p001-r113-auditor"]}
+      ],
+      "related_context_ids": ["seg-p001-principle-1","seg-p001-criterion-1-1"],
+      "source_segment_ids": ["seg-p001-r113-id","seg-p001-r113-metadata"],
+      "source_anomalies": ["Client action a places a period before the closing parenthesis; punctuation is retained."],
+      "gold_notes": []
+    },
+    {
+      "requirement_id": "1.1.4",
+      "requirement_form": "audit_matrix",
+      "criterion_path": ["PRINCIPLE 1: COMPLY WITH ALL APPLICABLE NATIONAL LAWS AND LOCAL REGULATIONS", "Criterion 1.1 Compliance with all applicable local and national legal requirements and regulations"],
+      "language": "en",
+      "indicator_text": "Presence of documents demonstrating compliance with regulations and permits concerning water quality impacts",
+      "requirement_value": "Yes",
+      "normative_text": "Indicator: Presence of documents demonstrating compliance with regulations and permits concerning water quality impacts\nRequirement: Yes",
+      "normative_subjects": ["farm"],
+      "applicability": ["All"],
+      "modalities": [{"token":"Requirement","type":"obligation","scope":"The indicator condition and the value Yes jointly define compliance."}],
+      "negations": [],
+      "clauses": [{"clause_id":"1.1.4-c1","parent_clause_id":null,"marker":null,"text":"Presence of documents demonstrating compliance with regulations and permits concerning water quality impacts; Requirement: Yes","joins_next":null}],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [
+        {"marker":"a","text":"Obtain permits for water quality impacts where applicable.","source_segment_ids":["seg-p001-r114-client"]},
+        {"marker":"b","text":"Compile list of and comply with all discharge laws or regulations.","source_segment_ids":["seg-p001-r114-client"]},
+        {"marker":"c","text":"Maintain records of monitoring and compliance with discharge laws and regulations as required.","source_segment_ids":["seg-p001-r114-client"]}
+      ],
+      "auditor_actions": [
+        {"marker":"A","text":"Verify that client obtains permits as applicable.","source_segment_ids":["seg-p001-r114-auditor"]},
+        {"marker":"B","text":"Review evidence of compliance with discharge laws or regulations.","source_segment_ids":["seg-p001-r114-auditor"]},
+        {"marker":"C","text":"Verify that records show compliance with discharge laws and regulations.","source_segment_ids":["seg-p001-r114-auditor"]}
+      ],
+      "related_context_ids": ["seg-p001-principle-1","seg-p001-criterion-1-1"],
+      "source_segment_ids": ["seg-p001-r114-id","seg-p001-r114-metadata"],
+      "source_anomalies": [],
+      "gold_notes": []
+    },
+    {
+      "requirement_id": "2.1.1",
+      "requirement_form": "audit_matrix",
+      "criterion_path": ["PRINCIPLE 2: CONSERVE NATURAL HABITAT, LOCAL BIODIVERSITY AND ECOSYSTEM FUNCTION", "Criterion 2.1 Benthic biodiversity and benthic effects [1]"],
+      "language": "en",
+      "indicator_text": "Redox potential or [2] sulphide levels in sediment outside of the Allowable Zone of Effect (AZE) [3], following the sampling methodology outlined in Appendix I-1",
+      "requirement_value": "Redox potential > 0 mV or Sulphide ≤ 1,500 μMol/L",
+      "normative_text": "Indicator: Redox potential or [2] sulphide levels in sediment outside of the Allowable Zone of Effect (AZE) [3], following the sampling methodology outlined in Appendix I-1\nRequirement: Redox potential > 0 mV or Sulphide ≤ 1,500 μMol/L",
+      "normative_subjects": ["farm"],
+      "applicability": ["All farms except as noted in [1]"],
+      "modalities": [{"token":"Requirement","type":"obligation","scope":"The two alternative threshold clauses define compliance."}],
+      "negations": [],
+      "clauses": [
+        {"clause_id":"2.1.1-c1","parent_clause_id":null,"marker":"option #1","text":"Redox potential > 0 mV","joins_next":"or"},
+        {"clause_id":"2.1.1-c2","parent_clause_id":null,"marker":"option #2","text":"Sulphide ≤ 1,500 μMol/L","joins_next":null}
+      ],
+      "conditions": [
+        {"text":"Sediment is sampled outside of the Allowable Zone of Effect (AZE), following Appendix I-1.","applies_to":"2.1.1"},
+        {"text":"Farms can choose to measure redox potential (Option #1) or sulphide concentration (Option #2).","applies_to":"the alternative threshold clauses"}
+      ],
+      "exceptions": [],
+      "exemptions": [
+        {"text":"Closed production systems that can demonstrate that they collect and responsibly dispose of > 75% of solid nutrients from the production system are exempt from standards under Criterion 2.1.","applies_to":"2.1.1 through inherited Criterion 2.1 footnote [1]"},
+        {"text":"If benthos throughout the full AZE is hard bottom, provide evidence to the CAB and request an exemption from 2.1.1c-f, 2.1.2 and 2.1.3.","applies_to":"client actions 2.1.1c-f and the referenced requirements"}
+      ],
+      "thresholds": [
+        {"raw_text":"> 0 mV","operator":"gt","normalized_value":0,"unit":"mV","applies_to":"redox potential outside the AZE","basis":"explicit","source_segment_ids":["seg-p001-r211-metadata"]},
+        {"raw_text":"≤ 1,500 μMol/L","operator":"lte","normalized_value":1500,"unit":"μMol/L","applies_to":"sulphide concentration outside the AZE","basis":"explicit","source_segment_ids":["seg-p001-r211-metadata"]},
+        {"raw_text":"> 75% of solid nutrients","operator":"gt","normalized_value":75,"unit":"percent","applies_to":"closed-production-system exemption under Criterion 2.1","basis":"explicit","source_segment_ids":["seg-p001-footnote-1"]}
+      ],
+      "dates": [],
+      "cross_references": [
+        {"text":"Appendix I-1","target":"ASC Salmon Standard v1.4 Appendix I-1","type":"external_document"},
+        {"text":"Appendix VI","target":"ASC Salmon Standard v1.4 Appendix VI","type":"external_document"},
+        {"text":"2.1.1c-f","target":"2.1.1c-f","type":"internal_exact"},
+        {"text":"2.1.2","target":"2.1.2","type":"internal_exact"},
+        {"text":"2.1.3","target":"2.1.3","type":"internal_exact"},
+        {"text":"see 2.1.4","target":"2.1.4","type":"internal_exact"}
+      ],
+      "footnote_refs": [
+        {"marker":"[1]","text":"Closed production systems that can demonstrate that they collect and responsibly dispose of > 75% of solid nutrients from the production system are exempt from standards under Criterion 2.1. See Appendix VI for requirements on transparency for 2.1.1, 2.1.2 and 2.1.3.","link_type":"inherited","source_segment_ids":["seg-p001-footnote-1"]},
+        {"marker":"[2]","text":"Farm sites can choose whether to use redox or sulphide. Farms do not have to demonstrate that they meet both.","link_type":"direct","source_segment_ids":["seg-p001-footnote-2"]},
+        {"marker":"[3]","text":"Allowable Zone of Effect (AZE) is defined using a robust and credible modelling system such as the SEPA AUTODEPOMOD and verified through monitoring (see 2.1.4).","link_type":"direct","source_segment_ids":["seg-p002-footnote-3"]}
+      ],
+      "associated_instructions": [
+        {"marker":null,"text":"Instruction to Clients and CABs on Criterion 2.1 - Modification of the Benthic Sampling Methodology","effect":"procedure","source_segment_ids":["seg-p001-instruction-c21-methodology"]},
+        {"marker":"Note","text":"Under Indicator 2.1.1, farms can choose to measure redox potential (Option #1) or sulphide concentration (Option #2). Farms do not have to demonstrate that they meet both threshold values.","effect":"condition","source_segment_ids":["seg-p001-r211-option-note"]}
+      ],
+      "client_actions": [
+        {"marker":"a","text":"Prepare a map of the farm showing boundary of AZE and GPS locations of all sediment collections stations.","source_segment_ids":["seg-p001-r211-client"]},
+        {"marker":"b","text":"If benthos throughout the full AZE is hard bottom, provide evidence to the CAB and request an exemption from 2.1.1c-f, 2.1.2 and 2.1.3.","source_segment_ids":["seg-p001-r211-client"]},
+        {"marker":"c","text":"Inform the CAB whether the farm chose option #1 or option #2 to demonstrate compliance with the requirements of the Standard.","source_segment_ids":["seg-p001-r211-client"]},
+        {"marker":"d","text":"Collect sediment samples in accordance with the methodology in Appendix I-1 (i.e., at the time of peak cage biomass and at all required stations).","source_segment_ids":["seg-p001-r211-client"]},
+        {"marker":"e","text":"For option #1, measure and record redox potential (mV) in sediment samples using an appropriate, nationally or internationally recognized testing method.","source_segment_ids":["seg-p001-r211-client"]},
+        {"marker":"f","text":"For option #2, measure and record sulphide concentration (μM) using an appropriate, nationally or internationally recognized testing method.","source_segment_ids":["seg-p001-r211-client"]},
+        {"marker":"g","text":"Submit test results to ASC as per Appendix VI at least once for each production cycle. If site has hard bottom and cannot complete tests, report this to ASC.","source_segment_ids":["seg-p001-r211-client"]}
+      ],
+      "auditor_actions": [
+        {"marker":"A","text":"Review map to verify appropriate siting of sampling stations (Appendix I-1).","source_segment_ids":["seg-p001-r211-auditor"]},
+        {"marker":"B","text":"Review evidence of benthic type and confirm whether to proceed to 2.1.1c.","source_segment_ids":["seg-p001-r211-auditor"]},
+        {"marker":"C","text":"Record which option the client chose.","source_segment_ids":["seg-p001-r211-auditor"]},
+        {"marker":"D","text":"Review documentary evidence (notes, GPS coordinates) showing sampling time, stations, and frequency. Cross-check against farm maps and harvest records.","source_segment_ids":["seg-p001-r211-auditor"]},
+        {"marker":"E","text":"Review results to verify that redox potential of sediments complies with the requirement at each sampling station outside the AZE. Confirm that the testing method used by the farm is appropriate.","source_segment_ids":["seg-p001-r211-auditor"]},
+        {"marker":"F","text":"Review results to verify that sulphide concentration in sediments complies with the Standard at each sampling station outside the AZE. Confirm that the testing method used by the farm is appropriate.","source_segment_ids":["seg-p001-r211-auditor"]},
+        {"marker":"G","text":"Confirm that client has submitted test results to ASC (Appendix VI).","source_segment_ids":["seg-p001-r211-auditor"]}
+      ],
+      "related_context_ids": ["seg-p001-principle-2","seg-p001-criterion-2-1","seg-p001-instruction-c21-methodology","seg-p001-r211-option-note"],
+      "source_segment_ids": ["seg-p001-r211-id","seg-p001-r211-metadata","seg-p001-footnote-1","seg-p001-footnote-2","seg-p002-footnote-3"],
+      "source_anomalies": ["The unit is printed as μMol/L in the Requirement value and as μM in client action f; both forms are retained in their source fields."],
+      "gold_notes": ["Footnote [3] is printed on PDF page 2, so the complete semantic Requirement has evidence on pages 1 and 2."]
+    },
+    {
+      "requirement_id": "2.1.2",
+      "requirement_form": "audit_matrix",
+      "criterion_path": ["PRINCIPLE 2: CONSERVE NATURAL HABITAT, LOCAL BIODIVERSITY AND ECOSYSTEM FUNCTION", "Criterion 2.1 Benthic biodiversity and benthic effects [1]"],
+      "language": "en",
+      "indicator_text": "Faunal index score indicating good [4] to high ecological quality in sediment outside the AZE, following the sampling methodology outlined in Appendix I-1",
+      "requirement_value": "AZTI Marine Biotic Index (AMBI [5]) score ≤ 3.3, or Shannon-Wiener Index score > 3, or Benthic Quality Index (BQI) score ≥ 15, or Infaunal Trophic Index (ITI) score ≥ 25",
+      "normative_text": "Indicator: Faunal index score indicating good [4] to high ecological quality in sediment outside the AZE, following the sampling methodology outlined in Appendix I-1\nRequirement: AZTI Marine Biotic Index (AMBI [5]) score ≤ 3.3, or Shannon-Wiener Index score > 3, or Benthic Quality Index (BQI) score ≥ 15, or Infaunal Trophic Index (ITI) score ≥ 25",
+      "normative_subjects": ["farm"],
+      "applicability": ["All farms except as noted in [1]"],
+      "modalities": [{"token":"Requirement","type":"obligation","scope":"One of four alternative faunal-index thresholds defines compliance."}],
+      "negations": [],
+      "clauses": [
+        {"clause_id":"2.1.2-c1","parent_clause_id":null,"marker":"option #1","text":"AZTI Marine Biotic Index (AMBI [5]) score ≤ 3.3","joins_next":"or"},
+        {"clause_id":"2.1.2-c2","parent_clause_id":null,"marker":"option #2","text":"Shannon-Wiener Index score > 3","joins_next":"or"},
+        {"clause_id":"2.1.2-c3","parent_clause_id":null,"marker":"option #3","text":"Benthic Quality Index (BQI) score ≥ 15","joins_next":"or"},
+        {"clause_id":"2.1.2-c4","parent_clause_id":null,"marker":"option #4","text":"Infaunal Trophic Index (ITI) score ≥ 25","joins_next":null}
+      ],
+      "conditions": [
+        {"text":"The faunal index is measured in sediment outside the AZE following Appendix I-1.","applies_to":"2.1.2"},
+        {"text":"Farms can choose one of four measurements and do not have to meet all four threshold values.","applies_to":"the four alternative threshold clauses"}
+      ],
+      "exceptions": [],
+      "exemptions": [
+        {"text":"Closed production systems that can demonstrate that they collect and responsibly dispose of > 75% of solid nutrients from the production system are exempt from standards under Criterion 2.1.","applies_to":"2.1.2 through inherited Criterion 2.1 footnote [1]"},
+        {"text":"If a farm is exempt due to hard bottom benthos (see 2.1.1b), then 2.1.2 does not apply and this shall be noted in the audit report.","applies_to":"2.1.2"}
+      ],
+      "thresholds": [
+        {"raw_text":"≤ 3.3","operator":"lte","normalized_value":3.3,"unit":null,"applies_to":"AZTI Marine Biotic Index (AMBI) score","basis":"explicit","source_segment_ids":["seg-p002-r212-metadata"]},
+        {"raw_text":"> 3","operator":"gt","normalized_value":3,"unit":null,"applies_to":"Shannon-Wiener Index score","basis":"explicit","source_segment_ids":["seg-p002-r212-metadata"]},
+        {"raw_text":"≥ 15","operator":"gte","normalized_value":15,"unit":null,"applies_to":"Benthic Quality Index (BQI) score","basis":"explicit","source_segment_ids":["seg-p002-r212-metadata"]},
+        {"raw_text":"≥ 25","operator":"gte","normalized_value":25,"unit":null,"applies_to":"Infaunal Trophic Index (ITI) score","basis":"explicit","source_segment_ids":["seg-p002-r212-metadata"]},
+        {"raw_text":"> 75% of solid nutrients","operator":"gt","normalized_value":75,"unit":"percent","applies_to":"closed-production-system exemption under Criterion 2.1","basis":"explicit","source_segment_ids":["seg-p001-footnote-1"]}
+      ],
+      "dates": [],
+      "cross_references": [
+        {"text":"Appendix I-1","target":"ASC Salmon Standard v1.4 Appendix I-1","type":"external_document"},
+        {"text":"Appendix VI","target":"ASC Salmon Standard v1.4 Appendix VI","type":"external_document"},
+        {"text":"see 2.1.1","target":"2.1.1","type":"internal_exact"},
+        {"text":"see 2.1.1b","target":"2.1.1b","type":"internal_exact"}
+      ],
+      "footnote_refs": [
+        {"marker":"[1]","text":"Closed production systems that can demonstrate that they collect and responsibly dispose of > 75% of solid nutrients from the production system are exempt from standards under Criterion 2.1. See Appendix VI for requirements on transparency for 2.1.1, 2.1.2 and 2.1.3.","link_type":"inherited","source_segment_ids":["seg-p001-footnote-1"]},
+        {"marker":"[4]","text":"“Good” Ecological Quality Classification: The level of diversity and abundance of invertebrate taxa is slightly outside the range associated with the type-specific conditions. Most of the sensitive taxa of the type-specific communities are present.","link_type":"direct","source_segment_ids":["seg-p002-footnote-4"]},
+        {"marker":"[5]","text":"https://ambi.azti.es/","link_type":"direct","source_segment_ids":["seg-p002-footnote-5"]}
+      ],
+      "associated_instructions": [
+        {"marker":null,"text":"Instruction to Clients and CABs on Criterion 2.1 - Modification of the Benthic Sampling Methodology","effect":"procedure","source_segment_ids":["seg-p001-instruction-c21-methodology"]},
+        {"marker":"Note 1","text":"Under Indicator 2.1.2, farms can choose one of four measurements to show compliance with the faunal index Requirement: AMBI (Option #1); Shannon-Wiener Index (Option #2); BQI (Option #3); or ITI (Option #4). Farms do not have to demonstrate that they meet all four threshold values.","effect":"condition","source_segment_ids":["seg-p002-r212-option-note"]},
+        {"marker":"Note 2","text":"If a farm is exempt due to hard bottom benthos (see 2.1.1b), then 2.1.2 does not apply and this shall be noted in the audit report.","effect":"exemption","source_segment_ids":["seg-p002-r212-option-note"]}
+      ],
+      "client_actions": [
+        {"marker":"a","text":"Prepare a map showing the AZE and sediment collections stations (see 2.1.1).","source_segment_ids":["seg-p002-r212-client"]},
+        {"marker":"b","text":"Inform the CAB whether the farm chose option #1, #2, #3, or #4 to demonstrate compliance with the requirement.","source_segment_ids":["seg-p002-r212-client"]},
+        {"marker":"c","text":"Collect sediment samples in accordance with Appendix I-1 (see 2.1.1).","source_segment_ids":["seg-p002-r212-client"]},
+        {"marker":"d","text":"For option #1, measure, calculate and record AZTI Marine Biotic Index [5] score of sediment samples using the required method.","source_segment_ids":["seg-p002-r212-client"]},
+        {"marker":"e","text":"For option #2, measure, calculate and record Shannon-Wiener Index score of sediment samples using the required method.","source_segment_ids":["seg-p002-r212-client"]},
+        {"marker":"f","text":"For option #3, measure, calculate and record Benthic Quality Index (BQI) score of sediment samples using the required method.","source_segment_ids":["seg-p002-r212-client"]},
+        {"marker":"g","text":"For option #4, measure, calculate and record Infaunal Trophic Index (ITI) score of sediment samples using the required method.","source_segment_ids":["seg-p002-r212-client"]},
+        {"marker":"h","text":"Retain documentary evidence to show how scores were obtained. If samples were analyzed and index calculated by an independent laboratory, obtain copies of results.","source_segment_ids":["seg-p002-r212-client"]},
+        {"marker":"i","text":"Submit faunal index scores to ASC (Appendix VI) at least once for each production cycle.","source_segment_ids":["seg-p002-r212-client"]}
+      ],
+      "auditor_actions": [
+        {"marker":"A","text":"Review map to verify appropriate siting of sampling stations (see 2.1.1).","source_segment_ids":["seg-p002-r212-auditor"]},
+        {"marker":"B","text":"Record which option the client chose for scoring faunal index.","source_segment_ids":["seg-p002-r212-auditor"]},
+        {"marker":"C","text":"Confirm sample collection followed Appendix I-1 (see 2.1.1).","source_segment_ids":["seg-p002-r212-auditor"]},
+        {"marker":"D","text":"Review results (as applicable) to verify that AMBI score of sediments is ≤ 3.3 at each sampling station outside the AZE.","source_segment_ids":["seg-p002-r212-auditor"]},
+        {"marker":"E","text":"Review results (as applicable) to verify that Shannon Wiener score of sediments is > 3 at each sampling station outside the AZE.","source_segment_ids":["seg-p002-r212-auditor"]},
+        {"marker":"F","text":"Review results (as applicable) to verify that BQI score of sediments is ≥ 15 at each sampling station outside the AZE.","source_segment_ids":["seg-p002-r212-auditor"]},
+        {"marker":"G","text":"Review results (as applicable) to verify that ITI score of sediments is ≥ 25 at each sampling station outside the AZE.","source_segment_ids":["seg-p002-r212-auditor"]},
+        {"marker":"H","text":"Confirm that an approved method was used or that a qualified independent laboratory performed the sampling and calculation of faunal index.","source_segment_ids":["seg-p002-r212-auditor"]},
+        {"marker":"I","text":"Confirm that client submitted faunal index scores to ASC (Appendix VI).","source_segment_ids":["seg-p002-r212-auditor"]}
+      ],
+      "related_context_ids": ["seg-p001-principle-2","seg-p001-criterion-2-1","seg-p001-instruction-c21-methodology","seg-p002-r212-option-note"],
+      "source_segment_ids": ["seg-p002-r212-id","seg-p002-r212-metadata","seg-p001-footnote-1","seg-p002-footnote-4","seg-p002-footnote-5"],
+      "source_anomalies": ["The PDF uses Shannon-Wiener in the Requirement value but Shannon Wiener without a hyphen in CAB action E."],
+      "gold_notes": ["The four alternatives and their or logic are explicit and must not be flattened into simultaneous requirements."]
+    },
+    {
+      "requirement_id": "2.1.3",
+      "requirement_form": "audit_matrix",
+      "criterion_path": ["PRINCIPLE 2: CONSERVE NATURAL HABITAT, LOCAL BIODIVERSITY AND ECOSYSTEM FUNCTION", "Criterion 2.1 Benthic biodiversity and benthic effects [1]"],
+      "language": "en",
+      "indicator_text": "Number of macrofaunal taxa in the sediment within the AZE, following the sampling methodology outlined in Appendix I-1",
+      "requirement_value": "≥ 2 highly abundant [6] taxa that are not pollution indicator species",
+      "normative_text": "Indicator: Number of macrofaunal taxa in the sediment within the AZE, following the sampling methodology outlined in Appendix I-1\nRequirement: ≥ 2 highly abundant [6] taxa that are not pollution indicator species",
+      "normative_subjects": ["farm"],
+      "applicability": ["All farms except as noted in [1]"],
+      "modalities": [{"token":"Requirement","type":"obligation","scope":"The threshold and exclusion of pollution indicator species jointly define compliance."}],
+      "negations": [{"text":"not pollution indicator species","applies_to":"the ≥ 2 highly abundant taxa counted toward the Requirement"}],
+      "clauses": [{"clause_id":"2.1.3-c1","parent_clause_id":null,"marker":null,"text":"≥ 2 highly abundant [6] taxa that are not pollution indicator species","joins_next":null}],
+      "conditions": [{"text":"The taxa are counted in sediment within the AZE following Appendix I-1.","applies_to":"2.1.3"}],
+      "exceptions": [],
+      "exemptions": [{"text":"Closed production systems that can demonstrate that they collect and responsibly dispose of > 75% of solid nutrients from the production system are exempt from standards under Criterion 2.1.","applies_to":"2.1.3 through inherited Criterion 2.1 footnote [1]"}],
+      "thresholds": [
+        {"raw_text":"≥ 2","operator":"gte","normalized_value":2,"unit":"taxa","applies_to":"highly abundant taxa that are not pollution indicator species","basis":"explicit","source_segment_ids":["seg-p002-r213-metadata"]},
+        {"raw_text":"Greater than 100 organisms per square metre","operator":"gt","normalized_value":100,"unit":"organisms/m²","applies_to":"definition of highly abundant","basis":"explicit","source_segment_ids":["seg-p002-footnote-6"]},
+        {"raw_text":"> 75% of solid nutrients","operator":"gt","normalized_value":75,"unit":"percent","applies_to":"closed-production-system exemption under Criterion 2.1","basis":"explicit","source_segment_ids":["seg-p001-footnote-1"]}
+      ],
+      "dates": [],
+      "cross_references": [
+        {"text":"Appendix I-1","target":"ASC Salmon Standard v1.4 Appendix I-1","type":"external_document"},
+        {"text":"Appendix VI","target":"ASC Salmon Standard v1.4 Appendix VI","type":"external_document"},
+        {"text":"2.1.1a","target":"2.1.1a","type":"internal_exact"},
+        {"text":"2.1.1b","target":"2.1.1b","type":"internal_exact"},
+        {"text":"2.1.1c","target":"2.1.1c","type":"internal_exact"}
+      ],
+      "footnote_refs": [
+        {"marker":"[1]","text":"Closed production systems that can demonstrate that they collect and responsibly dispose of > 75% of solid nutrients from the production system are exempt from standards under Criterion 2.1. See Appendix VI for requirements on transparency for 2.1.1, 2.1.2 and 2.1.3.","link_type":"inherited","source_segment_ids":["seg-p001-footnote-1"]},
+        {"marker":"[6]","text":"Highly abundant: Greater than 100 organisms per square metre (or equally high to reference site(s) if natural abundance is lower than this level).","link_type":"direct","source_segment_ids":["seg-p002-footnote-6"]}
+      ],
+      "associated_instructions": [{"marker":null,"text":"Instruction to Clients and CABs on Criterion 2.1 - Modification of the Benthic Sampling Methodology","effect":"procedure","source_segment_ids":["seg-p001-instruction-c21-methodology"]}],
+      "client_actions": [
+        {"marker":"a","text":"Document appropriate sediment sample collection as for 2.1.1a and 2.1.1c, or exemption as per 2.1.1b.","source_segment_ids":["seg-p002-r213-client"]},
+        {"marker":"b","text":"For sediment samples taken within the AZE, determine abundance and taxonomic composition of macrofauna using an appropriate testing method.","source_segment_ids":["seg-p002-r213-client"]},
+        {"marker":"c","text":"Identify all highly abundant taxa [6] and specify which ones (if any) are pollution indicator species.","source_segment_ids":["seg-p002-r213-client"]},
+        {"marker":"d","text":"Retain documentary evidence to show how taxa were identified and how counts were obtained. If samples were analyzed by an independent lab, obtain copies of results.","source_segment_ids":["seg-p002-r213-client"]},
+        {"marker":"e","text":"Submit counts of macrofaunal taxa to ASC (Appendix VI) at least once for each production cycle.","source_segment_ids":["seg-p002-r213-client"]}
+      ],
+      "auditor_actions": [
+        {"marker":"A","text":"Confirm appropriate sediment sample collection as for 2.1.1a and 2.1.1c or exemption as per 2.1.1b.","source_segment_ids":["seg-p002-r213-auditor"]},
+        {"marker":"B","text":"Confirm that an appropriate method was used or that a suitably qualified independent laboratory performed the analysis.","source_segment_ids":["seg-p002-r213-auditor"]},
+        {"marker":"C","text":"Confirm that all samples from within the AZE have ≥ 2 highly abundant [6] taxa (exclusive of pollution indicator species).","source_segment_ids":["seg-p002-r213-auditor"]},
+        {"marker":"D","text":"Confirm that a suitable method was used or that a suitability qualified independent laboratory performed the scoring of faunal index.","source_segment_ids":["seg-p002-r213-auditor"]},
+        {"marker":"E","text":"Confirm that client has submitted scores to ASC (Appendix VI).","source_segment_ids":["seg-p002-r213-auditor"]}
+      ],
+      "related_context_ids": ["seg-p001-principle-2","seg-p001-criterion-2-1","seg-p001-instruction-c21-methodology"],
+      "source_segment_ids": ["seg-p002-r213-id","seg-p002-r213-metadata","seg-p001-footnote-1","seg-p002-footnote-6"],
+      "source_anomalies": ["Client action e requires submission of macrofaunal taxa counts, while CAB action E says scores.","CAB action D says 'suitability qualified' and 'scoring of faunal index' although the row concerns macrofaunal taxa; source wording is retained."],
+      "gold_notes": ["The negation is semantically critical: pollution indicator species cannot count toward the ≥ 2 threshold."]
+    },
+    {
+      "requirement_id": "2.1.4",
+      "requirement_form": "audit_matrix",
+      "criterion_path": ["PRINCIPLE 2: CONSERVE NATURAL HABITAT, LOCAL BIODIVERSITY AND ECOSYSTEM FUNCTION", "Criterion 2.1 Benthic biodiversity and benthic effects [1]"],
+      "language": "en",
+      "indicator_text": "Definition of a site-specific AZE based on a robust and credible [7] modelling system",
+      "requirement_value": "Yes",
+      "normative_text": "Indicator: Definition of a site-specific AZE based on a robust and credible [7] modelling system\nRequirement: Yes",
+      "normative_subjects": ["farm"],
+      "applicability": ["All farms except as noted in [1]"],
+      "modalities": [{"token":"Requirement","type":"obligation","scope":"The indicator condition and the value Yes jointly define compliance."}],
+      "negations": [],
+      "clauses": [{"clause_id":"2.1.4-c1","parent_clause_id":null,"marker":null,"text":"Definition of a site-specific AZE based on a robust and credible [7] modelling system; Requirement: Yes","joins_next":null}],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [{"text":"Closed production systems that can demonstrate that they collect and responsibly dispose of > 75% of solid nutrients from the production system are exempt from standards under Criterion 2.1.","applies_to":"2.1.4 through inherited Criterion 2.1 footnote [1]"}],
+      "thresholds": [{"raw_text":"> 75% of solid nutrients","operator":"gt","normalized_value":75,"unit":"percent","applies_to":"closed-production-system exemption under Criterion 2.1","basis":"explicit","source_segment_ids":["seg-p001-footnote-1"]}],
+      "dates": [{"text":"verified with > 6 months of monitoring data","applies_to":"client action c validating site-specific AZE modelling results"}],
+      "cross_references": [{"text":"2.1.4a","target":"2.1.4a","type":"internal_exact"}],
+      "footnote_refs": [
+        {"marker":"[1]","text":"Closed production systems that can demonstrate that they collect and responsibly dispose of > 75% of solid nutrients from the production system are exempt from standards under Criterion 2.1. See Appendix VI for requirements on transparency for 2.1.1, 2.1.2 and 2.1.3.","link_type":"inherited","source_segment_ids":["seg-p001-footnote-1"]},
+        {"marker":"[7]","text":"Robust and credible: The SEPA AUTODEPOMOD modelling system is considered to be an example of a credible and robust system. The model must include a multi-parameter approach. Monitoring must be used to ground-truth the AZE proposed through the model.","link_type":"direct","source_segment_ids":["seg-p002-footnote-7"]}
+      ],
+      "associated_instructions": [{"marker":null,"text":"Instruction to Clients and CABs on Criterion 2.1 - Modification of the Benthic Sampling Methodology","effect":"procedure","source_segment_ids":["seg-p001-instruction-c21-methodology"]}],
+      "client_actions": [
+        {"marker":"a","text":"Undertake an analysis to determine the site-specific AZE and depositional pattern.","source_segment_ids":["seg-p002-r214-client"]},
+        {"marker":"b","text":"Maintain records to show how the analysis (in 2.1.4a) is robust and credible based on modeling using a multi-parameter approach [7].","source_segment_ids":["seg-p002-r214-client"]},
+        {"marker":"c","text":"Maintain records to show that modeling results for the site-specific AZE have been verified with > 6 months of monitoring data.","source_segment_ids":["seg-p002-r214-client"]}
+      ],
+      "auditor_actions": [
+        {"marker":"A","text":"Review documentation to confirm that the farm has undertaken an analysis before the required date.","source_segment_ids":["seg-p002-r214-auditor"]},
+        {"marker":"B","text":"Confirm that the farm used a robust and credible modeling system to define the site-specific AZE.","source_segment_ids":["seg-p002-r214-auditor"]},
+        {"marker":"C","text":"Confirm that farms have validated the general applicability of the site-specific AZE using monitoring data (i.e., 'ground truthing').","source_segment_ids":["seg-p002-r214-auditor"]}
+      ],
+      "related_context_ids": ["seg-p001-principle-2","seg-p001-criterion-2-1","seg-p001-instruction-c21-methodology"],
+      "source_segment_ids": ["seg-p002-r214-id","seg-p002-r214-metadata","seg-p001-footnote-1","seg-p002-footnote-7"],
+      "source_anomalies": ["The PDF text layer inserts a non-text control character at the visual hyphen in site-specific; Gold follows the visible text 'site-specific'.","The row alternates British 'modelling' in the indicator and footnote with American 'modeling' in the action columns; each is retained."],
+      "gold_notes": ["Footnote [1] is inherited from PDF page 1, while the 2.1.4 row and direct footnote [7] are on page 2."]
+    },
+    {
+      "requirement_id": "2.2.1",
+      "requirement_form": "audit_matrix",
+      "criterion_path": ["PRINCIPLE 2: CONSERVE NATURAL HABITAT, LOCAL BIODIVERSITY AND ECOSYSTEM FUNCTION", "Criterion 2.2 Water quality in and near the site of operation [8]"],
+      "language": "en",
+      "indicator_text": "Weekly average percent saturation [9] of dissolved oxygen (DO) [10] on farm, calculated following methodology in Appendix I-4",
+      "requirement_value": "≥ 70% [11]",
+      "normative_text": "Indicator: Weekly average percent saturation [9] of dissolved oxygen (DO) [10] on farm, calculated following methodology in Appendix I-4\nRequirement: ≥ 70% [11]",
+      "normative_subjects": ["farm"],
+      "applicability": ["All farms except as noted in [11]"],
+      "modalities": [{"token":"Requirement","type":"obligation","scope":"The weekly average dissolved-oxygen saturation threshold defines compliance."}],
+      "negations": [{"text":"is not influenced by nutrient inputs from anthropogenic causes","applies_to":"the exception reference site"}],
+      "clauses": [{"clause_id":"2.2.1-c1","parent_clause_id":null,"marker":null,"text":"Weekly average percent saturation of dissolved oxygen on farm is ≥ 70% following Appendix I-4.","joins_next":null}],
+      "conditions": [
+        {"text":"The weekly average is calculated from on-farm dissolved-oxygen measurements following Appendix I-4.","applies_to":"2.2.1"},
+        {"text":"In limited and well-justified situations, farms may request that the CAB approve reduction of DO monitoring frequency to one sample per day.","applies_to":"monitoring frequency"}
+      ],
+      "exceptions": [
+        {"text":"An exception to this standard shall be made for farms that can demonstrate consistency with a reference site in the same water body.","applies_to":"the ≥ 70% weekly average requirement"},
+        {"text":"If a farm does not meet the minimum 70 percent weekly average saturation requirement, the farm must demonstrate the consistency of percent saturation with a reference site.","applies_to":"farms below the core threshold"}
+      ],
+      "exemptions": [],
+      "thresholds": [
+        {"raw_text":"≥ 70%","operator":"gte","normalized_value":70,"unit":"percent saturation","applies_to":"weekly average dissolved oxygen on farm","basis":"explicit","source_segment_ids":["seg-p003-r221-metadata"]},
+        {"raw_text":"at least twice daily","operator":"gte","normalized_value":2,"unit":"measurements/day","applies_to":"normal monitoring frequency","basis":"explicit","source_segment_ids":["seg-p003-r221-instruction-method"]},
+        {"raw_text":"5 meters depth","operator":"eq","normalized_value":5,"unit":"m","applies_to":"normal DO sampling depth","basis":"explicit","source_segment_ids":["seg-p003-r221-instruction-method"]},
+        {"raw_text":"one sample per day","operator":"eq","normalized_value":1,"unit":"sample/day","applies_to":"CAB-approved reduced monitoring frequency","basis":"explicit","source_segment_ids":["seg-p003-r221-instruction-method"]},
+        {"raw_text":"at least 500 meters","operator":"gte","normalized_value":500,"unit":"m","applies_to":"distance of an exception reference site from the net pen array","basis":"explicit","source_segment_ids":["seg-p003-r221-instruction-exception"]}
+      ],
+      "dates": [{"text":"For first audits, farm records must cover ≥ 6 months.","applies_to":"client action a"}],
+      "cross_references": [
+        {"text":"Appendix I-4","target":"ASC Salmon Standard v1.4 Appendix I-4","type":"external_document"},
+        {"text":"Appendix 1-4","target":"ASC Salmon Standard v1.4 Appendix I-4","type":"external_document"},
+        {"text":"Appendix VI","target":"ASC Salmon Standard v1.4 Appendix VI","type":"external_document"},
+        {"text":"see Instructions","target":"seg-p003-r221-instruction-method","type":"internal_generic"}
+      ],
+      "footnote_refs": [
+        {"marker":"[8]","text":"See Appendix VI for transparency requirements for 2.2.1, 2.2.2, 2.2.3 and 2.2.5.","link_type":"inherited","source_segment_ids":["seg-p003-footnote-8"]},
+        {"marker":"[9]","text":"Percent saturation: Percent saturation is the amount of oxygen dissolved in the water sample compared to the maximum amount that could be present at the same temperature and salinity.","link_type":"direct","source_segment_ids":["seg-p003-footnote-9"]},
+        {"marker":"[10]","text":"Averaged weekly from two daily measurements (proposed at 6 am and 3 pm).","link_type":"direct","source_segment_ids":["seg-p003-footnote-10"]},
+        {"marker":"[11]","text":"An exception to this standard shall be made for farms that can demonstrate consistency with a reference site in the same water body.","link_type":"direct","source_segment_ids":["seg-p003-footnote-11"]},
+        {"marker":"[12]","text":"Related to nutrients (e.g., N, P, chlorophyll A).","link_type":"anomalous","source_segment_ids":["seg-p003-footnote-12"]}
+      ],
+      "associated_instructions": [
+        {"marker":"Instruction","text":"Instruction to Clients for Indicator 2.2.1 - Monitoring Average Weekly Percent Saturation of Dissolved Oxygen","effect":"method","source_segment_ids":["seg-p003-r221-instruction-method"]},
+        {"marker":"Exception [see footnote 12]","text":"If a farm does not meet the minimum 70 percent weekly average saturation requirement, the farm must demonstrate the consistency of percent saturation with a reference site. The reference site shall be at least 500 meters from the edge of the net pen array, in a location that is understood to follow similar patterns in upwelling to the farm site and is not influenced by nutrient inputs from anthropogenic causes including aquaculture, agricultural runoff or nutrient releases from coastal communities. For any such exceptions, the auditor shall fully document in the audit report how the farm has demonstrated consistency with the reference site.","effect":"exception","source_segment_ids":["seg-p003-r221-instruction-exception"]},
+        {"marker":"Note","text":"Percent saturation is the amount of oxygen dissolved in the water sample compared to the maximum amount that could be present at the same temperature and salinity.","effect":"other","source_segment_ids":["seg-p003-r221-note-definition"]}
+      ],
+      "client_actions": [
+        {"marker":"a","text":"Monitor and record on-farm percent saturation of DO at a minimum of twice daily using a calibrated oxygen meter or equivalent method. For first audits, farm records must cover ≥ 6 months.","source_segment_ids":["seg-p003-r221-client"]},
+        {"marker":"b","text":"Provide a written justification for any missed samples or deviations in sampling time.","source_segment_ids":["seg-p003-r221-client"]},
+        {"marker":"c","text":"Calculate weekly average percent saturation based on data.","source_segment_ids":["seg-p003-r221-client"]},
+        {"marker":"d","text":"If any weekly average DO values are < 70%, or approaching that level, monitor and record DO at a reference site and compare to on-farm levels (see Instructions).","source_segment_ids":["seg-p003-r221-client"]},
+        {"marker":"e","text":"Arrange for auditor to witness DO monitoring and calibration while on site.","source_segment_ids":["seg-p003-r221-client"]},
+        {"marker":"f","text":"Submit results from monitoring of average weekly DO as per Appendix VI to ASC at least once per year.","source_segment_ids":["seg-p003-r221-client"]}
+      ],
+      "auditor_actions": [
+        {"marker":"A","text":"Do not schedule audit until client provides a minimum of 6 months of DO data.","source_segment_ids":["seg-p003-r221-auditor"]},
+        {"marker":"B","text":"Review records for completeness and conformity with methodology in Appendix 1-4.","source_segment_ids":["seg-p003-r221-auditor"]},
+        {"marker":"C","text":"Review calculation and confirm all weekly averages ≥ 70%.","source_segment_ids":["seg-p003-r221-auditor"]},
+        {"marker":"D","text":"As needed, review DO data from reference site and document in the audit report (see instruction).","source_segment_ids":["seg-p003-r221-auditor"]},
+        {"marker":"E","text":"Witness DO monitoring and verify calibration while on site. On-site values should fall within range of farm data for DO. If an out of range measurement is observed, raise a nonconformity.","source_segment_ids":["seg-p003-r221-auditor"]},
+        {"marker":"F","text":"Confirm that client has submitted DO results to ASC (Appendix VI).","source_segment_ids":["seg-p003-r221-auditor"]}
+      ],
+      "related_context_ids": ["seg-p001-principle-2","seg-p003-criterion-2-2","seg-p003-r221-instruction-method","seg-p003-r221-instruction-exception","seg-p003-r221-note-definition"],
+      "source_segment_ids": ["seg-p003-r221-id","seg-p003-r221-metadata","seg-p003-footnote-8","seg-p003-footnote-9","seg-p003-footnote-10","seg-p003-footnote-11"],
+      "source_anomalies": ["The exception heading cites footnote [12], but footnote [12] defines nutrients; footnote [11] contains the relevant reference-site exception.","The indicator and instruction use Appendix I-4, while CAB action B prints Appendix 1-4."],
+      "gold_notes": ["The instruction block is normative associated context and cannot be reduced to the six lettered client actions."]
+    },
+    {
+      "requirement_id": "2.2.2",
+      "requirement_form": "audit_matrix",
+      "criterion_path": ["PRINCIPLE 2: CONSERVE NATURAL HABITAT, LOCAL BIODIVERSITY AND ECOSYSTEM FUNCTION", "Criterion 2.2 Water quality in and near the site of operation [8]"],
+      "language": "en",
+      "indicator_text": "Maximum percentage of weekly samples from 2.2.1 that fall under 2 mg/L DO",
+      "requirement_value": "5%",
+      "normative_text": "Indicator: Maximum percentage of weekly samples from 2.2.1 that fall under 2 mg/L DO\nRequirement: 5%",
+      "normative_subjects": ["farm"],
+      "applicability": ["All"],
+      "modalities": [{"token":"Requirement","type":"obligation","scope":"The maximum-percentage indicator and the short value jointly define compliance."}],
+      "negations": [],
+      "clauses": [{"clause_id":"2.2.2-c1","parent_clause_id":null,"marker":null,"text":"Maximum percentage of weekly samples from 2.2.1 that fall under 2 mg/L DO; Requirement: 5%","joins_next":null}],
+      "conditions": [{"text":"The denominator is weekly samples from 2.2.1 and the counted samples fall under 2 mg/L DO.","applies_to":"the maximum percentage"}],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [
+        {"raw_text":"5%","operator":"lte","normalized_value":5,"unit":"percent of weekly samples","applies_to":"weekly samples from 2.2.1 that fall under 2 mg/L DO","basis":"inferred_from_source_structure","source_segment_ids":["seg-p003-r222-metadata","seg-p003-r222-auditor"]},
+        {"raw_text":"under 2 mg/L DO","operator":"lt","normalized_value":2,"unit":"mg/L DO","applies_to":"individual weekly samples counted in the percentage","basis":"explicit","source_segment_ids":["seg-p003-r222-metadata"]}
+      ],
+      "dates": [],
+      "cross_references": [
+        {"text":"2.2.1","target":"2.2.1","type":"internal_exact"},
+        {"text":"2.2.1a","target":"2.2.1a","type":"internal_exact"},
+        {"text":"2.2.2a","target":"2.2.2a","type":"internal_exact"},
+        {"text":"Appendix VI","target":"ASC Salmon Standard v1.4 Appendix VI","type":"external_document"}
+      ],
+      "footnote_refs": [{"marker":"[8]","text":"See Appendix VI for transparency requirements for 2.2.1, 2.2.2, 2.2.3 and 2.2.5.","link_type":"inherited","source_segment_ids":["seg-p003-footnote-8"]}],
+      "associated_instructions": [],
+      "client_actions": [
+        {"marker":"a","text":"Calculate the percentage of on-farm samples taken for 2.2.1a that fall under 2 mg/L DO.","source_segment_ids":["seg-p003-r222-client"]},
+        {"marker":"b","text":"Submit results from 2.2.2a as per Appendix VI to ASC at least once per year.","source_segment_ids":["seg-p003-r222-client"]}
+      ],
+      "auditor_actions": [
+        {"marker":"A","text":"Review the farm's calculation and confirm that ≤ 5% of weekly samples fall under 2 mg/L DO.","source_segment_ids":["seg-p003-r222-auditor"]},
+        {"marker":"B","text":"Confirm that client has submitted results to ASC (Appendix VI).","source_segment_ids":["seg-p003-r222-auditor"]}
+      ],
+      "related_context_ids": ["seg-p001-principle-2","seg-p003-criterion-2-2"],
+      "source_segment_ids": ["seg-p003-r222-id","seg-p003-r222-metadata","seg-p003-footnote-8"],
+      "source_anomalies": ["The literal Requirement value is only '5%' and contains no comparison operator. The ≤ operator is inferred from 'Maximum percentage' and independently confirmed by CAB action A."],
+      "gold_notes": ["The literal requirement_value must remain 5%; the normalized lte comparator belongs only in thresholds with inferred_from_source_structure basis."]
+    },
+    {
+      "requirement_id": "2.2.3",
+      "requirement_form": "audit_matrix",
+      "criterion_path": ["PRINCIPLE 2: CONSERVE NATURAL HABITAT, LOCAL BIODIVERSITY AND ECOSYSTEM FUNCTION", "Criterion 2.2 Water quality in and near the site of operation [8]"],
+      "language": "en",
+      "indicator_text": "For jurisdictions that have national or regional coastal water quality targets [12], demonstration through third-party analysis that the farm is in an area recently [13] classified as having “good” or “very good” water quality [14]",
+      "requirement_value": "Yes [15]",
+      "normative_text": "Indicator: For jurisdictions that have national or regional coastal water quality targets [12], demonstration through third-party analysis that the farm is in an area recently [13] classified as having “good” or “very good” water quality [14]\nRequirement: Yes [15]",
+      "normative_subjects": ["farm"],
+      "applicability": ["All farms except as noted in [15]"],
+      "modalities": [{"token":"Requirement","type":"obligation","scope":"The jurisdictional indicator condition and the value Yes jointly define compliance."}],
+      "negations": [],
+      "clauses": [{"clause_id":"2.2.3-c1","parent_clause_id":null,"marker":null,"text":"Demonstration through third-party analysis that the farm is in an area recently classified as having “good” or “very good” water quality; Requirement: Yes","joins_next":null}],
+      "conditions": [
+        {"text":"For jurisdictions that have national or regional coastal water quality targets.","applies_to":"2.2.3"},
+        {"text":"The classification is based on third-party analysis and is recent as defined in [13].","applies_to":"the water-quality classification"}
+      ],
+      "exceptions": [],
+      "exemptions": [{"text":"Closed production systems that can demonstrate the collection and responsible disposal of > 75% of solid nutrients as well as > 50% of dissolved nutrients (through biofiltration, settling and/or other technologies) are exempt from standards 2.2.3 and 2.2.4.","applies_to":"2.2.3"}],
+      "thresholds": [
+        {"raw_text":"Within the two years prior to the first audit","operator":"lte","normalized_value":2,"unit":"years before first audit","applies_to":"recency of the third-party analysis","basis":"explicit","source_segment_ids":["seg-p003-footnote-13"]},
+        {"raw_text":"> 75% of solid nutrients","operator":"gt","normalized_value":75,"unit":"percent","applies_to":"closed-production-system exemption","basis":"explicit","source_segment_ids":["seg-p003-footnote-15"]},
+        {"raw_text":"> 50% of dissolved nutrients","operator":"gt","normalized_value":50,"unit":"percent","applies_to":"closed-production-system exemption","basis":"explicit","source_segment_ids":["seg-p003-footnote-15"]}
+      ],
+      "dates": [{"text":"Within the two years prior to the first audit.","applies_to":"recent classification under footnote [13]"}],
+      "cross_references": [
+        {"text":"2.2.3.b","target":"2.2.3b","type":"internal_exact"},
+        {"text":"2.2.4","target":"2.2.4","type":"internal_exact"},
+        {"text":"Appendix VI","target":"ASC Salmon Standard v1.4 Appendix VI","type":"external_document"},
+        {"text":"EU Water Framework Directive","target":"EU Water Framework Directive","type":"external_document"}
+      ],
+      "footnote_refs": [
+        {"marker":"[8]","text":"See Appendix VI for transparency requirements for 2.2.1, 2.2.2, 2.2.3 and 2.2.5.","link_type":"inherited","source_segment_ids":["seg-p003-footnote-8"]},
+        {"marker":"[12]","text":"Related to nutrients (e.g., N, P, chlorophyll A).","link_type":"direct","source_segment_ids":["seg-p003-footnote-12"]},
+        {"marker":"[13]","text":"Within the two years prior to the first audit.","link_type":"direct","source_segment_ids":["seg-p003-footnote-13"]},
+        {"marker":"[14]","text":"Classifications of “good” and “very good” are used in the EU Water Framework Directive. Equivalent classification from other water quality monitoring systems in other jurisdictions are acceptable.","link_type":"direct","source_segment_ids":["seg-p003-footnote-14"]},
+        {"marker":"[15]","text":"Closed production systems that can demonstrate the collection and responsible disposal of > 75% of solid nutrients as well as > 50% of dissolved nutrients (through biofiltration, settling and/or other technologies) are exempt from standards 2.2.3 and 2.2.4.","link_type":"direct","source_segment_ids":["seg-p003-footnote-15"]}
+      ],
+      "associated_instructions": [],
+      "client_actions": [
+        {"marker":"a","text":"Inform the CAB whether relevant targets and classification systems are applicable in the jurisdiction. If applicable, proceed to \"2.2.3.b\". If not applicable, take action as required under 2.2.4.","source_segment_ids":["seg-p003-r223-client"]},
+        {"marker":"b","text":"Compile a summary of relevant national or regional water quality targets and classifications, identifying the third-party responsible for the analysis and classification.","source_segment_ids":["seg-p003-r223-client"]},
+        {"marker":"c","text":"Identify the most recent classification of water quality for the area in which the farm operates.","source_segment_ids":["seg-p003-r223-client"]}
+      ],
+      "auditor_actions": [
+        {"marker":"A","text":"Record whether indicator is applicable.","source_segment_ids":["seg-p003-r223-auditor"]},
+        {"marker":"B","text":"Confirm that there has been a recent third-party analysis (within two years prior to the audit) to classify areas according to national or regional water quality targets.","source_segment_ids":["seg-p003-r223-auditor"]},
+        {"marker":"C","text":"Confirm that the analysis and classification shows the farm is located in an area where the water quality complies with the requirement.","source_segment_ids":["seg-p003-r223-auditor"]}
+      ],
+      "related_context_ids": ["seg-p001-principle-2","seg-p003-criterion-2-2"],
+      "source_segment_ids": ["seg-p003-r223-id","seg-p003-r223-metadata","seg-p003-footnote-8","seg-p003-footnote-12","seg-p003-footnote-13","seg-p003-footnote-14","seg-p003-footnote-15"],
+      "source_anomalies": ["Footnote [13] defines recent as within two years prior to the first audit, while CAB action B says within two years prior to the audit."],
+      "gold_notes": ["The short value Yes is not a complete Requirement without its long jurisdictional indicator and direct footnotes."]
+    },
+    {
+      "requirement_id": "2.2.4",
+      "requirement_form": "audit_matrix",
+      "criterion_path": ["PRINCIPLE 2: CONSERVE NATURAL HABITAT, LOCAL BIODIVERSITY AND ECOSYSTEM FUNCTION", "Criterion 2.2 Water quality in and near the site of operation [8]"],
+      "language": "en",
+      "indicator_text": "For jurisdictions without national or regional coastal water quality targets, evidence of monitoring of nitrogen and phosphorous [16] levels on farm and at a reference site, following methodology in Appendix I-5",
+      "requirement_value": "Consistency with reference site",
+      "normative_text": "Indicator: For jurisdictions without national or regional coastal water quality targets, evidence of monitoring of nitrogen and phosphorous [16] levels on farm and at a reference site, following methodology in Appendix I-5\nRequirement: Consistency with reference site",
+      "normative_subjects": ["farm"],
+      "applicability": ["All farms except as noted in [16]"],
+      "modalities": [{"token":"Requirement","type":"obligation","scope":"The monitoring indicator and the required consistency with a reference site jointly define compliance."}],
+      "negations": [{"text":"without national or regional coastal water quality targets","applies_to":"jurisdictions in scope for 2.2.4"}],
+      "clauses": [{"clause_id":"2.2.4-c1","parent_clause_id":null,"marker":null,"text":"Evidence of monitoring of nitrogen and phosphorous levels on farm and at a reference site following Appendix I-5; Requirement: Consistency with reference site","joins_next":null}],
+      "conditions": [{"text":"For jurisdictions without national or regional coastal water quality targets.","applies_to":"2.2.4"}],
+      "exceptions": [],
+      "exemptions": [{"text":"Closed production systems that can demonstrate the collection and responsible disposal of > 75% of solid nutrients as well as > 50% of dissolved nutrients (through biofiltration, settling and/or other technologies) are exempt from standards 2.2.3 and 2.2.4.","applies_to":"2.2.4 through semantic footnote [15]"}],
+      "thresholds": [
+        {"raw_text":"> 75% of solid nutrients","operator":"gt","normalized_value":75,"unit":"percent","applies_to":"closed-production-system exemption","basis":"explicit","source_segment_ids":["seg-p003-footnote-15"]},
+        {"raw_text":"> 50% of dissolved nutrients","operator":"gt","normalized_value":50,"unit":"percent","applies_to":"closed-production-system exemption","basis":"explicit","source_segment_ids":["seg-p003-footnote-15"]}
+      ],
+      "dates": [{"text":"For first audits, farm records must cover ≥ 6 months.","applies_to":"client action a"}],
+      "cross_references": [
+        {"text":"Appendix I-5","target":"ASC Salmon Standard v1.4 Appendix I-5","type":"external_document"},
+        {"text":"Appendix VI","target":"ASC Salmon Standard v1.4 Appendix VI","type":"external_document"},
+        {"text":"2.2.3","target":"2.2.3","type":"internal_exact"}
+      ],
+      "footnote_refs": [
+        {"marker":"[16]","text":"Farms shall monitor total N, NH4, NO3, total P and Ortho-P in the water column. Results shall be submitted to the ASC database. Methods such as a Hach kit are acceptable.","link_type":"direct","source_segment_ids":["seg-p003-footnote-16"]},
+        {"marker":"[15]","text":"Closed production systems that can demonstrate the collection and responsible disposal of > 75% of solid nutrients as well as > 50% of dissolved nutrients (through biofiltration, settling and/or other technologies) are exempt from standards 2.2.3 and 2.2.4.","link_type":"semantic","source_segment_ids":["seg-p003-footnote-15"]}
+      ],
+      "associated_instructions": [],
+      "client_actions": [
+        {"marker":"a","text":"Develop, implement, and document a monitoring plan for N, NH4, NO3, total P, and ortho-P in compliance with Appendix I-5. For first audits, farm records must cover ≥ 6 months.","source_segment_ids":["seg-p003-r224-client"]},
+        {"marker":"b","text":"Calibrate all equipment according to the manufacturer's recommendations.","source_segment_ids":["seg-p003-r224-client"]},
+        {"marker":"c","text":"Submit data on N and P to ASC as per Appendix VI at least once per year.","source_segment_ids":["seg-p003-r224-client"]}
+      ],
+      "auditor_actions": [
+        {"marker":"A","text":"Review the farm's monitoring plan and verify that the farm has collected monitoring data for N and P following the methodology in Appendix I-5.","source_segment_ids":["seg-p003-r224-auditor"]},
+        {"marker":"B","text":"Verify that client calibrates equipment as needed.","source_segment_ids":["seg-p003-r224-auditor"]},
+        {"marker":"C","text":"Confirm that client has submitted N and P data to ASC (Appendix VI).","source_segment_ids":["seg-p003-r224-auditor"]}
+      ],
+      "related_context_ids": ["seg-p001-principle-2","seg-p003-criterion-2-2"],
+      "source_segment_ids": ["seg-p003-r224-id","seg-p003-r224-metadata","seg-p003-footnote-15","seg-p003-footnote-16"],
+      "source_anomalies": ["The Applicability line cites footnote [16], but [16] is a monitoring-method footnote and contains no exemption. Footnote [15] explicitly exempts 2.2.4 and is therefore linked semantically without changing the printed citation.","The PDF text layer inserts a non-text control character at the visual hyphen in ortho-P; Gold follows the visible text 'ortho-P'."],
+      "gold_notes": ["The explicit [16] link and semantic [15] link must both survive extraction; silently replacing one with the other would alter source evidence."]
+    }
+  ],
+  "excluded_regions": [
+    {"source_segment_ids":["seg-p001-document-metadata"],"classification":"other_non_requirement","reason":"Document title, scope, and document-level usage instruction are source metadata, not a numbered Requirement."},
+    {"source_segment_ids":["seg-p001-footer"],"classification":"header_footer","reason":"Repeated document footer and page number."},
+    {"source_segment_ids":["seg-p002-footer"],"classification":"header_footer","reason":"Repeated document footer and page number."},
+    {"source_segment_ids":["seg-p003-footer"],"classification":"header_footer","reason":"Repeated document footer and page number."}
+  ],
+  "summary": {
+    "requirement_count": 12,
+    "cross_page_requirement_count": 4,
+    "client_action_count": 50,
+    "auditor_action_count": 50,
+    "critical_gold_ambiguities": [
+      "2.2.2 prints Requirement: 5%, while Maximum percentage and CAB action A jointly support an inferred ≤ comparator.",
+      "2.2.4 explicitly cites footnote [16] for applicability, but footnote [15] is the text that actually exempts 2.2.4.",
+      "The 2.2.1 exception cites footnote [12], although footnote [12] defines nutrients and footnote [11] contains the relevant reference-site exception.",
+      "The 2.1.3 CAB text says scores and scoring of faunal index although the client action requires macrofaunal taxa counts."
+    ]
+  }
+}

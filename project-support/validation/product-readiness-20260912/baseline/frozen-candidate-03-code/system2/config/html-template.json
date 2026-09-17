@@ -1,0 +1,6 @@
+{
+  "template": "lovdata-document-v1",
+  "encoding": "utf-8-sig",
+  "metadata": "#documentMeta",
+  "body": "#documentBody"
+}

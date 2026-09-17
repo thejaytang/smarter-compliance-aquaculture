@@ -1,0 +1,11 @@
+# Checkpoint 14: requirement-by-requirement completion audit
+
+Decision: **CONTINUE only outstanding final delivery and input-dependent actions; overall goal incomplete.** The previous checkpoint was substantive progress: a fresh current-version full-load retest and six-page Canva recovery/visual repair. This checkpoint audits completion against the full objective rather than treating those local successes as completion.
+
+The [completion audit](completion-audit.md) and its [hashed snapshot](completion-audit.json) cover all twelve objective sections, sixteen functional scenarios, 38 metric rows and five named deliverables. It rechecks the candidate-08 source hashes, frozen metric hash, reference-region count, document inventory and the current preservation/performance/Canva evidence. No new product code or quality measurement is introduced.
+
+The audit found one stale current statement in `stage-applicability.md`: it still grouped cell-text accuracy with failed targets. Parser 04 actually achieves 123/125, 98.4%, PASS. That statement is corrected without changing metrics, thresholds, reference labels or the remaining failures. Seven reference table fragments belong to three evaluated logical tables; the 32 reference relations comprise 20 reading-order pairs and twelve title/note/continuation relations. These are not silently enlarged quality denominators.
+
+The evidence remains insufficient for overall completion on actual stage requirements: normal entry unavailable, full source structure/relationships inadequate, natural verifier recall/precision inadequate, B decisiveness below 90%, no safe automatic releases, absent native Office visual evidence and no final Canva correction commit. The audit explicitly separates these from future independent qualification, optional model comparison and peer permanent-policy input.
+
+The original clock and final-three-hour reserve remain in force. The already-prepared normal-load, Mac-unlock and Canva-save inputs remain pending; this checkpoint does not issue another duplicate confirmation request. Retain the runnable restricted candidate and the complete evidence. Do not mark the goal complete or restart stopped optimization merely because delivery preparation is finished.

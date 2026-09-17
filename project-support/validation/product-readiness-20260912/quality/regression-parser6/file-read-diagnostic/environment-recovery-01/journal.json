@@ -1,0 +1,76 @@
+[
+  {
+    "package": "numba",
+    "version": "0.67.0",
+    "source": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.cache/uv/archive-v0/MrQ8NgSexFT7SKibQc9qm/numba/experimental/jitclass/base.py",
+    "expected_installed_record": "sha256=hBZsyLuCphoM8NCyYSVXy0hxYRGU1LHt1rBHQe9G6mg",
+    "sha256": "84166cc8bb82a61a0cf0d0b2612557cb4871611194d4b1edd6b04741ef46ea68",
+    "target_before": {
+      "path": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/lib/python3.12/site-packages/numba/experimental/jitclass/base.py",
+      "mode": 420,
+      "size": 21359,
+      "flags": 1073774688,
+      "device": 16777231,
+      "inode": 160759676,
+      "mtime_ns": 1788268992372331153
+    },
+    "backup": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/quality/regression-parser6/file-read-diagnostic/environment-recovery-01/placeholders/numba/experimental/jitclass/base.py",
+    "state": "restored_and_verified",
+    "at": "2026-09-13T12:30:48.967230+00:00",
+    "target_after": {
+      "path": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/lib/python3.12/site-packages/numba/experimental/jitclass/base.py",
+      "mode": 420,
+      "size": 21359,
+      "flags": 64,
+      "device": 16777231,
+      "inode": 173179486,
+      "mtime_ns": 1789302648967499902
+    },
+    "backup_after": {
+      "path": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/quality/regression-parser6/file-read-diagnostic/environment-recovery-01/placeholders/numba/experimental/jitclass/base.py",
+      "mode": 420,
+      "size": 21359,
+      "flags": 1073774624,
+      "device": 16777231,
+      "inode": 160759676,
+      "mtime_ns": 1788268992372331153
+    }
+  },
+  {
+    "package": "anyio",
+    "version": "4.14.2",
+    "source": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.cache/uv/archive-v0/wUoq0ukKkZOYXHqL9xX7h/anyio/streams/memory.py",
+    "expected_installed_record": "sha256=ZmKWCLpyItOCXmvCQT-L8IyJHNFaB-OVJbrn88CaMo0",
+    "sha256": "66629608ba7222d3825e6bc2413f8bf08c891cd15a07e39525bae7f3c09a328d",
+    "target_before": {
+      "path": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/lib/python3.12/site-packages/anyio/streams/memory.py",
+      "mode": 420,
+      "size": 10776,
+      "flags": 1073774688,
+      "device": 16777231,
+      "inode": 160684893,
+      "mtime_ns": 1788268018931109454
+    },
+    "backup": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/quality/regression-parser6/file-read-diagnostic/environment-recovery-01/placeholders/anyio/streams/memory.py",
+    "state": "restored_and_verified",
+    "at": "2026-09-13T12:30:48.968791+00:00",
+    "target_after": {
+      "path": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/lib/python3.12/site-packages/anyio/streams/memory.py",
+      "mode": 420,
+      "size": 10776,
+      "flags": 64,
+      "device": 16777231,
+      "inode": 173179489,
+      "mtime_ns": 1789302648969017297
+    },
+    "backup_after": {
+      "path": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/quality/regression-parser6/file-read-diagnostic/environment-recovery-01/placeholders/anyio/streams/memory.py",
+      "mode": 420,
+      "size": 10776,
+      "flags": 1073774624,
+      "device": 16777231,
+      "inode": 160684893,
+      "mtime_ns": 1788268018931109454
+    }
+  }
+]

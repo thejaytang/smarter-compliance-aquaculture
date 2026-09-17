@@ -1,0 +1,4651 @@
+{
+  "source_sha256": "804ead3d1d1a53019869b5385dabfb86356b8276b990538c0d782e750167777e",
+  "config_hash": "0a86dae0ddc7110290fbf0ec1c2e8302563e084ecbb008783275adbaacd0ab97",
+  "adapter_config_hash": "7803c0e0a77352a7206a8dd459abf30b1dad68ee77b6646cf99bc41ba9d75e9b",
+  "material_backend_policy": "pdfium",
+  "legacy_config_backend": "docling-parse",
+  "original_page_indices": [
+    18,
+    19,
+    20
+  ],
+  "backend": "pypdfium2",
+  "version": "5.13.0",
+  "pages": [
+    {
+      "page_index": 0,
+      "width_points": 595.3200073242188,
+      "height_points": 841.9199829101562,
+      "words": [
+        {
+          "id": "native_p0000_fw000000",
+          "text": "Aquaculture Stewardship Council",
+          "bbox_points": [
+            394.3900146484375,
+            36.8770751953125,
+            542.679443359375,
+            44.05908203125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000001",
+          "text": "Document Name",
+          "bbox_points": [
+            59.522159576416016,
+            778.4159851074219,
+            108.19752502441406,
+            782.3186225891113
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000002",
+          "text": "ASC Farm Standard -",
+          "bbox_points": [
+            121.7110366821289,
+            773.5041427612305,
+            179.30743408203125,
+            777.6275863647461
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000003",
+          "text": "Interpretation Manual",
+          "bbox_points": [
+            122.32927703857422,
+            782.864143371582,
+            184.0704803466797,
+            788.0253448486328
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000004",
+          "text": "Document ID",
+          "bbox_points": [
+            248.30816650390625,
+            778.4159851074219,
+            286.489990234375,
+            782.3186225891113
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000005",
+          "text": "ASC-INT-001",
+          "bbox_points": [
+            297.321044921875,
+            778.3828620910645,
+            331.3427734375,
+            782.3075828552246
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000006",
+          "text": "Version",
+          "bbox_points": [
+            367.8258361816406,
+            777.9357452392578,
+            389.8064880371094,
+            782.3186225891113
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000007",
+          "text": "1.0",
+          "bbox_points": [
+            410.7896728515625,
+            778.3828620910645,
+            417.6234130859375,
+            782.3075828552246
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000008",
+          "text": "Page 19 of 511",
+          "bbox_points": [
+            502.68927001953125,
+            778.1565437316895,
+            537.8721313476562,
+            783.3729438781738
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000009",
+          "text": "Criterion 1.4 – Traceability and Disclosure",
+          "bbox_points": [
+            51.40800094604492,
+            70.052001953125,
+            313.82000732421875,
+            82.1240234375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000010",
+          "text": "How do I interpret this requirement?",
+          "bbox_points": [
+            54.73067855834961,
+            511.3514404296875,
+            249.70761108398438,
+            521.1122436523438
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000011",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            539.9075012207031,
+            59.87999725341797,
+            544.4194030761719
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000012",
+          "text": "The UoC is responsible for ensuring it mitigates risks of substitution and mixing of certified",
+          "bbox_points": [
+            71.94384002685547,
+            536.8298645019531,
+            527.0532836914062,
+            546.2420654296875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000013",
+          "text": "and non-certified products.",
+          "bbox_points": [
+            72.45179748535156,
+            553.8998718261719,
+            211.45269775390625,
+            563.2622680664062
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000014",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            582.0574951171875,
+            59.87999725341797,
+            586.5693817138672
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000015",
+          "text": "The UoC may use the Risk Assessment Method outlined in Appendix 3 of the ASC Farm",
+          "bbox_points": [
+            71.94384002685547,
+            578.9798583984375,
+            509.5365905761719,
+            588.3920593261719
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000016",
+          "text": "Standard, Section 3.2, to identify, evaluate and mitigate risks of mixing and substituting ASC",
+          "bbox_points": [
+            72.37211608886719,
+            596.0198516845703,
+            533.2512817382812,
+            605.4320526123047
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000017",
+          "text": "certified products with non-certified products at all sites (Indicator 1.4.1).",
+          "bbox_points": [
+            72.3621597290039,
+            613.0598602294922,
+            429.21795654296875,
+            622.4222717285156
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000018",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            641.2174987792969,
+            59.87999725341797,
+            645.7293853759766
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000019",
+          "text": "Certified and non-certified products shall be identifiable and segregated at all sites and at all",
+          "bbox_points": [
+            72.42192077636719,
+            638.1398620605469,
+            536.6494750976562,
+            647.5520629882812
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000020",
+          "text": "times within the UoC (Indicator 1.4.2(c)).",
+          "bbox_points": [
+            72.07331848144531,
+            655.3496704101562,
+            271.7414245605469,
+            664.6622772216797
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000021",
+          "text": "•",
+          "bbox_points": [
+            72.42192077636719,
+            683.4086608886719,
+            76.485595703125,
+            688.0599822998047
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000022",
+          "text": "This includes during production while fish are alive.",
+          "bbox_points": [
+            89.94384002685547,
+            680.6198577880859,
+            345.03936767578125,
+            690.0320587158203
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000023",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            708.7774963378906,
+            59.87999725341797,
+            713.2893829345703
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000024",
+          "text": "Certified products shall be traceable at all sites and at all times within the UoC (Indicator",
+          "bbox_points": [
+            72.42192077636719,
+            705.6998596191406,
+            515.2437133789062,
+            715.0622634887695
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000025",
+          "text": "1.4.2(d)).",
+          "bbox_points": [
+            71.99363708496094,
+            722.9296646118164,
+            110.18028259277344,
+            732.2422637939453
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000026",
+          "text": "Indicator:",
+          "bbox_points": [
+            54.73067855834961,
+            118.781494140625,
+            103.74383544921875,
+            126.689697265625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000027",
+          "text": "Requirement:",
+          "bbox_points": [
+            118.56668090820312,
+            118.781494140625,
+            189.04087829589844,
+            128.54229736328125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000028",
+          "text": "1.4.1",
+          "bbox_points": [
+            54.002281188964844,
+            161.4320068359375,
+            81.92951965332031,
+            171.3582763671875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000029",
+          "text": "The UoC shall identify, evaluate and mitigate risks of mixing and substituting ASC",
+          "bbox_points": [
+            117.77791595458984,
+            159.85845947265625,
+            507.0802001953125,
+            168.8170166015625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000030",
+          "text": "certified products with non-certified products at all sites.",
+          "bbox_points": [
+            118.17607879638672,
+            176.05841064453125,
+            386.16424560546875,
+            184.9696044921875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000031",
+          "text": "1.4.2",
+          "bbox_points": [
+            54.002281188964844,
+            217.54351806640625,
+            84.69371795654297,
+            227.63824462890625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000032",
+          "text": "The UoC shall develop, implement and maintain a traceability system, covering all sites,",
+          "bbox_points": [
+            117.77791595458984,
+            216.185791015625,
+            534.9737548828125,
+            225.09698486328125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000033",
+          "text": "to ensure that the following conditions are met:",
+          "bbox_points": [
+            117.90116119384766,
+            232.36846923828125,
+            343.98016357421875,
+            241.3270263671875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000034",
+          "text": "a.",
+          "bbox_points": [
+            118.26139831542969,
+            256.62554931640625,
+            125.38975524902344,
+            261.6878662109375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000035",
+          "text": "only larvae/juveniles that conform with the requirements in Criterion 1.5 are used to",
+          "bbox_points": [
+            136.17608642578125,
+            253.66778564453125,
+            533.890625,
+            263.5269775390625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000036",
+          "text": "produce certified product; and",
+          "bbox_points": [
+            136.67852783203125,
+            270.7684326171875,
+            280.291015625,
+            279.67962646484375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000037",
+          "text": "b.",
+          "bbox_points": [
+            118.67852020263672,
+            293.01580810546875,
+            126.22979736328125,
+            300.087890625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000038",
+          "text": "all stocked animals are traceable back to the supplier; and",
+          "bbox_points": [
+            136.2613983154297,
+            293.01580810546875,
+            410.70745849609375,
+            301.879638671875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000039",
+          "text": "c.",
+          "bbox_points": [
+            118.17607879638672,
+            317.2255859375,
+            125.14979553222656,
+            322.28790283203125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000040",
+          "text": "all batches of ASC certified and non-certified product are identifiable and segregated",
+          "bbox_points": [
+            136.2613983154297,
+            315.16845703125,
+            542.6103515625,
+            324.12701416015625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000041",
+          "text": "at all sites and at all times; and",
+          "bbox_points": [
+            136.2613983154297,
+            331.41583251953125,
+            279.7127380371094,
+            339.8245849609375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000042",
+          "text": "d.",
+          "bbox_points": [
+            118.17607879638672,
+            353.6158447265625,
+            126.22979736328125,
+            360.68792724609375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000043",
+          "text": "all batches of ASC certified product are traceable at all times to:",
+          "bbox_points": [
+            136.2613983154297,
+            353.56842041015625,
+            439.15692138671875,
+            362.4796447753906
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000044",
+          "text": "o",
+          "bbox_points": [
+            136.4130859375,
+            378.8177185058594,
+            141.42800903320312,
+            383.1121826171875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000045",
+          "text": "the site(s) used ; and",
+          "bbox_points": [
+            153.9011688232422,
+            375.9358215332031,
+            250.10418701171875,
+            384.79962158203125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000046",
+          "text": "o",
+          "bbox_points": [
+            136.4130859375,
+            401.0377197265625,
+            141.42800903320312,
+            405.3321838378906
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000047",
+          "text": "the production unit(s) used; and",
+          "bbox_points": [
+            153.9011688232422,
+            398.15582275390625,
+            309.22149658203125,
+            407.0196228027344
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000048",
+          "text": "e.",
+          "bbox_points": [
+            118.17607879638672,
+            422.3655700683594,
+            125.50977325439453,
+            427.42791748046875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000049",
+          "text": "corrective actions are taken if non-conforming product is identified, sold or",
+          "bbox_points": [
+            136.17608642578125,
+            420.30841064453125,
+            494.15057373046875,
+            429.26702880859375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000050",
+          "text": "dispatched; and",
+          "bbox_points": [
+            136.17608642578125,
+            436.55584716796875,
+            211.25767517089844,
+            445.4196472167969
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000051",
+          "text": "f.",
+          "bbox_points": [
+            117.90116119384766,
+            458.7084045410156,
+            122.98977661132812,
+            465.8279113769531
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000052",
+          "text": "accompanying documentation shall identify product sold or dispatched as ASC",
+          "bbox_points": [
+            136.2613983154297,
+            458.7084045410156,
+            515.07275390625,
+            467.6670227050781
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_fw000053",
+          "text": "certified or non-certified.",
+          "bbox_points": [
+            136.17608642578125,
+            474.9084167480469,
+            253.04037475585938,
+            482.0279235839844
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        }
+      ],
+      "bitmap_boxes_points": [],
+      "characters": [],
+      "text_lines": [
+        {
+          "id": "native_p0000_ft000000",
+          "text": "Aquaculture Stewardship Council",
+          "bbox_points": [
+            394.3900146484375,
+            36.8770751953125,
+            542.679443359375,
+            44.05908203125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000001",
+          "text": "Document Name",
+          "bbox_points": [
+            59.522159576416016,
+            778.4159851074219,
+            108.19752502441406,
+            782.3186225891113
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000002",
+          "text": "ASC Farm Standard -",
+          "bbox_points": [
+            121.7110366821289,
+            773.5041427612305,
+            179.30743408203125,
+            777.6275863647461
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000003",
+          "text": "Interpretation Manual",
+          "bbox_points": [
+            122.32927703857422,
+            782.864143371582,
+            184.0704803466797,
+            788.0253448486328
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000004",
+          "text": "Document ID",
+          "bbox_points": [
+            248.30816650390625,
+            778.4159851074219,
+            286.489990234375,
+            782.3186225891113
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000005",
+          "text": "ASC-INT-001",
+          "bbox_points": [
+            297.321044921875,
+            778.3828620910645,
+            331.3427734375,
+            782.3075828552246
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000006",
+          "text": "Version",
+          "bbox_points": [
+            367.8258361816406,
+            777.9357452392578,
+            389.8064880371094,
+            782.3186225891113
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000007",
+          "text": "1.0",
+          "bbox_points": [
+            410.7896728515625,
+            778.3828620910645,
+            417.6234130859375,
+            782.3075828552246
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000008",
+          "text": "Page 19 of 511",
+          "bbox_points": [
+            502.68927001953125,
+            778.1565437316895,
+            537.8721313476562,
+            783.3729438781738
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000009",
+          "text": "Criterion 1.4 – Traceability and Disclosure",
+          "bbox_points": [
+            51.40800094604492,
+            70.052001953125,
+            313.82000732421875,
+            82.1240234375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000010",
+          "text": "How do I interpret this requirement?",
+          "bbox_points": [
+            54.73067855834961,
+            511.3514404296875,
+            249.70761108398438,
+            521.1122436523438
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000011",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            539.9075012207031,
+            59.87999725341797,
+            544.4194030761719
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000012",
+          "text": "The UoC is responsible for ensuring it mitigates risks of substitution and mixing of certified",
+          "bbox_points": [
+            71.94384002685547,
+            536.8298645019531,
+            527.0532836914062,
+            546.2420654296875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000013",
+          "text": "and non-certified products.",
+          "bbox_points": [
+            72.45179748535156,
+            553.8998718261719,
+            211.45269775390625,
+            563.2622680664062
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000014",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            582.0574951171875,
+            59.87999725341797,
+            586.5693817138672
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000015",
+          "text": "The UoC may use the Risk Assessment Method outlined in Appendix 3 of the ASC Farm",
+          "bbox_points": [
+            71.94384002685547,
+            578.9798583984375,
+            509.5365905761719,
+            588.3920593261719
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000016",
+          "text": "Standard, Section 3.2, to identify, evaluate and mitigate risks of mixing and substituting ASC",
+          "bbox_points": [
+            72.37211608886719,
+            596.0198516845703,
+            533.2512817382812,
+            605.4320526123047
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000017",
+          "text": "certified products with non-certified products at all sites (Indicator 1.4.1).",
+          "bbox_points": [
+            72.3621597290039,
+            613.0598602294922,
+            429.21795654296875,
+            622.4222717285156
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000018",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            641.2174987792969,
+            59.87999725341797,
+            645.7293853759766
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000019",
+          "text": "Certified and non-certified products shall be identifiable and segregated at all sites and at all",
+          "bbox_points": [
+            72.42192077636719,
+            638.1398620605469,
+            536.6494750976562,
+            647.5520629882812
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000020",
+          "text": "times within the UoC (Indicator 1.4.2(c)).",
+          "bbox_points": [
+            72.07331848144531,
+            655.3496704101562,
+            271.7414245605469,
+            664.6622772216797
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000021",
+          "text": "•",
+          "bbox_points": [
+            72.42192077636719,
+            683.4086608886719,
+            76.485595703125,
+            688.0599822998047
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000022",
+          "text": "This includes during production while fish are alive.",
+          "bbox_points": [
+            89.94384002685547,
+            680.6198577880859,
+            345.03936767578125,
+            690.0320587158203
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000023",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            708.7774963378906,
+            59.87999725341797,
+            713.2893829345703
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000024",
+          "text": "Certified products shall be traceable at all sites and at all times within the UoC (Indicator",
+          "bbox_points": [
+            72.42192077636719,
+            705.6998596191406,
+            515.2437133789062,
+            715.0622634887695
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000025",
+          "text": "1.4.2(d)).",
+          "bbox_points": [
+            71.99363708496094,
+            722.9296646118164,
+            110.18028259277344,
+            732.2422637939453
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000026",
+          "text": "Indicator:",
+          "bbox_points": [
+            54.73067855834961,
+            118.781494140625,
+            103.74383544921875,
+            126.689697265625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000027",
+          "text": "Requirement:",
+          "bbox_points": [
+            118.56668090820312,
+            118.781494140625,
+            189.04087829589844,
+            128.54229736328125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000028",
+          "text": "1.4.1",
+          "bbox_points": [
+            54.002281188964844,
+            161.4320068359375,
+            81.92951965332031,
+            171.3582763671875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000029",
+          "text": "The UoC shall identify, evaluate and mitigate risks of mixing and substituting ASC",
+          "bbox_points": [
+            117.77791595458984,
+            159.85845947265625,
+            507.0802001953125,
+            168.8170166015625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000030",
+          "text": "certified products with non-certified products at all sites.",
+          "bbox_points": [
+            118.17607879638672,
+            176.05841064453125,
+            386.16424560546875,
+            184.9696044921875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000031",
+          "text": "1.4.2",
+          "bbox_points": [
+            54.002281188964844,
+            217.54351806640625,
+            84.69371795654297,
+            227.63824462890625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000032",
+          "text": "The UoC shall develop, implement and maintain a traceability system, covering all sites,",
+          "bbox_points": [
+            117.77791595458984,
+            216.185791015625,
+            534.9737548828125,
+            225.09698486328125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000033",
+          "text": "to ensure that the following conditions are met:",
+          "bbox_points": [
+            117.90116119384766,
+            232.36846923828125,
+            343.98016357421875,
+            241.3270263671875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000034",
+          "text": "a.",
+          "bbox_points": [
+            118.26139831542969,
+            256.62554931640625,
+            125.38975524902344,
+            261.6878662109375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000035",
+          "text": "only larvae/juveniles that conform with the requirements in Criterion 1.5 are used to",
+          "bbox_points": [
+            136.17608642578125,
+            253.66778564453125,
+            533.890625,
+            263.5269775390625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000036",
+          "text": "produce certified product; and",
+          "bbox_points": [
+            136.67852783203125,
+            270.7684326171875,
+            280.291015625,
+            279.67962646484375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000037",
+          "text": "b.",
+          "bbox_points": [
+            118.67852020263672,
+            293.01580810546875,
+            126.22979736328125,
+            300.087890625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000038",
+          "text": "all stocked animals are traceable back to the supplier; and",
+          "bbox_points": [
+            136.2613983154297,
+            293.01580810546875,
+            410.70745849609375,
+            301.879638671875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000039",
+          "text": "c.",
+          "bbox_points": [
+            118.17607879638672,
+            317.2255859375,
+            125.14979553222656,
+            322.28790283203125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000040",
+          "text": "all batches of ASC certified and non-certified product are identifiable and segregated",
+          "bbox_points": [
+            136.2613983154297,
+            315.16845703125,
+            542.6103515625,
+            324.12701416015625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000041",
+          "text": "at all sites and at all times; and",
+          "bbox_points": [
+            136.2613983154297,
+            331.41583251953125,
+            279.7127380371094,
+            339.8245849609375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000042",
+          "text": "d.",
+          "bbox_points": [
+            118.17607879638672,
+            353.6158447265625,
+            126.22979736328125,
+            360.68792724609375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000043",
+          "text": "all batches of ASC certified product are traceable at all times to:",
+          "bbox_points": [
+            136.2613983154297,
+            353.56842041015625,
+            439.15692138671875,
+            362.4796447753906
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000044",
+          "text": "o",
+          "bbox_points": [
+            136.4130859375,
+            378.8177185058594,
+            141.42800903320312,
+            383.1121826171875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000045",
+          "text": "the site(s) used ; and",
+          "bbox_points": [
+            153.9011688232422,
+            375.9358215332031,
+            250.10418701171875,
+            384.79962158203125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000046",
+          "text": "o",
+          "bbox_points": [
+            136.4130859375,
+            401.0377197265625,
+            141.42800903320312,
+            405.3321838378906
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000047",
+          "text": "the production unit(s) used; and",
+          "bbox_points": [
+            153.9011688232422,
+            398.15582275390625,
+            309.22149658203125,
+            407.0196228027344
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000048",
+          "text": "e.",
+          "bbox_points": [
+            118.17607879638672,
+            422.3655700683594,
+            125.50977325439453,
+            427.42791748046875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000049",
+          "text": "corrective actions are taken if non-conforming product is identified, sold or",
+          "bbox_points": [
+            136.17608642578125,
+            420.30841064453125,
+            494.15057373046875,
+            429.26702880859375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000050",
+          "text": "dispatched; and",
+          "bbox_points": [
+            136.17608642578125,
+            436.55584716796875,
+            211.25767517089844,
+            445.4196472167969
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000051",
+          "text": "f.",
+          "bbox_points": [
+            117.90116119384766,
+            458.7084045410156,
+            122.98977661132812,
+            465.8279113769531
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000052",
+          "text": "accompanying documentation shall identify product sold or dispatched as ASC",
+          "bbox_points": [
+            136.2613983154297,
+            458.7084045410156,
+            515.07275390625,
+            467.6670227050781
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000053",
+          "text": "certified or non-certified.",
+          "bbox_points": [
+            136.17608642578125,
+            474.9084167480469,
+            253.04037475585938,
+            482.0279235839844
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        }
+      ],
+      "shapes": [],
+      "bitmap_resources": [],
+      "backend": "pypdfium2",
+      "fallback_reason": null
+    },
+    {
+      "page_index": 1,
+      "width_points": 595.3200073242188,
+      "height_points": 841.9199829101562,
+      "words": [
+        {
+          "id": "native_p0001_fw000000",
+          "text": "Aquaculture Stewardship Council",
+          "bbox_points": [
+            394.3900146484375,
+            36.8770751953125,
+            542.679443359375,
+            44.05908203125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000001",
+          "text": "Document Name",
+          "bbox_points": [
+            59.522159576416016,
+            778.4159851074219,
+            108.19752502441406,
+            782.3186225891113
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000002",
+          "text": "ASC Farm Standard -",
+          "bbox_points": [
+            121.7110366821289,
+            773.5041427612305,
+            179.30743408203125,
+            777.6275863647461
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000003",
+          "text": "Interpretation Manual",
+          "bbox_points": [
+            122.32927703857422,
+            782.864143371582,
+            184.0704803466797,
+            788.0253448486328
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000004",
+          "text": "Document ID",
+          "bbox_points": [
+            248.30816650390625,
+            778.4159851074219,
+            286.489990234375,
+            782.3186225891113
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000005",
+          "text": "ASC-INT-001",
+          "bbox_points": [
+            297.321044921875,
+            778.3828620910645,
+            331.3427734375,
+            782.3075828552246
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000006",
+          "text": "Version",
+          "bbox_points": [
+            367.8258361816406,
+            777.9357452392578,
+            389.8064880371094,
+            782.3186225891113
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000007",
+          "text": "1.0",
+          "bbox_points": [
+            410.7896728515625,
+            778.3828620910645,
+            417.6234130859375,
+            782.3075828552246
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000008",
+          "text": "Page 20 of 511",
+          "bbox_points": [
+            501.249267578125,
+            778.1565437316895,
+            537.8721313476562,
+            783.3729438781738
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000009",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            76.2974853515625,
+            59.87999725341797,
+            80.80938720703125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000010",
+          "text": "The UoC may decide to sell products from the UoC as non-certified (Indicator 1.4.2(f)).",
+          "bbox_points": [
+            71.94384002685547,
+            73.2198486328125,
+            495.05859375,
+            82.632080078125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000011",
+          "text": "•",
+          "bbox_points": [
+            72.42192077636719,
+            101.44866943359375,
+            76.485595703125,
+            106.0999755859375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000012",
+          "text": "In this case, the products shall be identified as non-certified when sold or dispatched.",
+          "bbox_points": [
+            91.03943634033203,
+            98.65985107421875,
+            514.9923706054688,
+            108.02227783203125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000013",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            126.8175048828125,
+            59.87999725341797,
+            131.32940673828125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000014",
+          "text": "The requirements of these indicators establish a consistent, streamlined approach for",
+          "bbox_points": [
+            71.94384002685547,
+            123.7398681640625,
+            501.5087585449219,
+            133.102294921875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000015",
+          "text": "traceability, identification and segregation at all ASC certified sites.",
+          "bbox_points": [
+            72.07331848144531,
+            140.77984619140625,
+            406.9683532714844,
+            150.19207763671875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000016",
+          "text": "•",
+          "bbox_points": [
+            72.42192077636719,
+            169.0086669921875,
+            76.485595703125,
+            173.65997314453125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000017",
+          "text": "They relieve the need for separate Chain of Custody certification to cover farming activities.",
+          "bbox_points": [
+            89.94384002685547,
+            166.2198486328125,
+            543.9008178710938,
+            175.632080078125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000018",
+          "text": "Evidence of implementation should be maintained, e.g.:",
+          "bbox_points": [
+            54.73067855834961,
+            205.06146240234375,
+            349.4471435546875,
+            214.90191650390625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000019",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            233.64752197265625,
+            59.87999725341797,
+            238.159423828125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000020",
+          "text": "Records:",
+          "bbox_points": [
+            73.03943634033203,
+            230.61968994140625,
+            114.27384185791016,
+            238.04986572265625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000021",
+          "text": "•",
+          "bbox_points": [
+            72.42192077636719,
+            256.7586669921875,
+            76.485595703125,
+            261.40997314453125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000022",
+          "text": "risk assessment and any resulting actions.",
+          "bbox_points": [
+            90.8900375366211,
+            254.0196533203125,
+            299.2831115722656,
+            263.382080078125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000023",
+          "text": "•",
+          "bbox_points": [
+            72.42192077636719,
+            280.2786865234375,
+            76.485595703125,
+            284.92999267578125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000024",
+          "text": "use or verification of the effectiveness of the traceability system, for example:",
+          "bbox_points": [
+            90.84024047851562,
+            277.4898681640625,
+            472.906005859375,
+            286.902099609375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000025",
+          "text": "-",
+          "bbox_points": [
+            96.72264099121094,
+            305.18115234375,
+            99.4317626953125,
+            307.969970703125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000026",
+          "text": "outcome of input-output exercises and traceability tests.",
+          "bbox_points": [
+            114.8381576538086,
+            300.52984619140625,
+            397.11090087890625,
+            309.94207763671875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000027",
+          "text": "Auditors should confirm:",
+          "bbox_points": [
+            53.824317932128906,
+            335.41143798828125,
+            183.31427001953125,
+            343.3197021484375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000028",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            361.927490234375,
+            59.87999725341797,
+            366.43939208984375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000029",
+          "text": "Risks have been adequately assessed and mitigated.",
+          "bbox_points": [
+            73.03943634033203,
+            358.899658203125,
+            334.1607666015625,
+            368.2620544433594
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000030",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            384.9674987792969,
+            59.87999725341797,
+            389.4794006347656
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000031",
+          "text": "Effective traceability and segregation systems are in place.",
+          "bbox_points": [
+            73.03943634033203,
+            381.8898620605469,
+            363.83160400390625,
+            391.30206298828125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000032",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            408.0274963378906,
+            59.87999725341797,
+            412.5393981933594
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000033",
+          "text": "Outcome of any input-output exercises and traceability tests.",
+          "bbox_points": [
+            72.42192077636719,
+            404.9498596191406,
+            377.41143798828125,
+            414.362060546875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000034",
+          "text": "Useful Resources",
+          "bbox_points": [
+            54.67091751098633,
+            442.239990234375,
+            143.8726806640625,
+            449.8195495605469
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000035",
+          "text": "N/A",
+          "bbox_points": [
+            55.0394401550293,
+            466.4036560058594,
+            72.50927734375,
+            475.7760314941406
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000036",
+          "text": "Indicator:",
+          "bbox_points": [
+            54.73067855834961,
+            543.2714538574219,
+            103.74383544921875,
+            551.1797180175781
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000037",
+          "text": "Requirement:",
+          "bbox_points": [
+            118.56668090820312,
+            543.2714538574219,
+            189.04087829589844,
+            553.0322570800781
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000038",
+          "text": "1.4.3",
+          "bbox_points": [
+            54.002281188964844,
+            586.0719757080078,
+            84.27023315429688,
+            596.0544128417969
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000039",
+          "text": "Indicator applicability: every UoC using compound feed",
+          "bbox_points": [
+            118.50788116455078,
+            584.5173950195312,
+            384.02362060546875,
+            593.4380645751953
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000040",
+          "text": "The UoC shall demonstrate that feed products, subject to conformance with Indicator",
+          "bbox_points": [
+            117.77791595458984,
+            606.6984252929688,
+            527.8035278320312,
+            615.6570281982422
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000041",
+          "text": "2.12.1, are accompanied by the following information:",
+          "bbox_points": [
+            117.91063690185547,
+            622.8984222412109,
+            369.4908752441406,
+            631.8570251464844
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000042",
+          "text": "a.",
+          "bbox_points": [
+            118.26139831542969,
+            647.1555786132812,
+            125.38975524902344,
+            652.2178955078125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000043",
+          "text": "the originating feed mill holds valid certification against the ASC Feed Standard with",
+          "bbox_points": [
+            135.9011688232422,
+            645.0984191894531,
+            540.3843383789062,
+            654.0570220947266
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000044",
+          "text": "the appropriate scope of certification in relation to the ASC Production Model (i.e.",
+          "bbox_points": [
+            135.9011688232422,
+            661.2984313964844,
+            523.8109741210938,
+            670.2096252441406
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000045",
+          "text": "Mass Balance Production Model or Segregation Production Model product); and",
+          "bbox_points": [
+            136.8207244873047,
+            677.5458221435547,
+            516.134521484375,
+            686.45703125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000046",
+          "text": "b.",
+          "bbox_points": [
+            118.67852020263672,
+            699.7458190917969,
+            126.22979736328125,
+            706.8179016113281
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000047",
+          "text": "feed is traceable as ASC-conforming throughout all steps between the feed mill and",
+          "bbox_points": [
+            135.9011688232422,
+            699.6984252929688,
+            537.77392578125,
+            708.6570281982422
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_fw000048",
+          "text": "site; and",
+          "bbox_points": [
+            135.98648071289062,
+            715.9458236694336,
+            174.56060791015625,
+            724.3545837402344
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        }
+      ],
+      "bitmap_boxes_points": [],
+      "characters": [],
+      "text_lines": [
+        {
+          "id": "native_p0001_ft000000",
+          "text": "Aquaculture Stewardship Council",
+          "bbox_points": [
+            394.3900146484375,
+            36.8770751953125,
+            542.679443359375,
+            44.05908203125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000001",
+          "text": "Document Name",
+          "bbox_points": [
+            59.522159576416016,
+            778.4159851074219,
+            108.19752502441406,
+            782.3186225891113
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000002",
+          "text": "ASC Farm Standard -",
+          "bbox_points": [
+            121.7110366821289,
+            773.5041427612305,
+            179.30743408203125,
+            777.6275863647461
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000003",
+          "text": "Interpretation Manual",
+          "bbox_points": [
+            122.32927703857422,
+            782.864143371582,
+            184.0704803466797,
+            788.0253448486328
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000004",
+          "text": "Document ID",
+          "bbox_points": [
+            248.30816650390625,
+            778.4159851074219,
+            286.489990234375,
+            782.3186225891113
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000005",
+          "text": "ASC-INT-001",
+          "bbox_points": [
+            297.321044921875,
+            778.3828620910645,
+            331.3427734375,
+            782.3075828552246
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000006",
+          "text": "Version",
+          "bbox_points": [
+            367.8258361816406,
+            777.9357452392578,
+            389.8064880371094,
+            782.3186225891113
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000007",
+          "text": "1.0",
+          "bbox_points": [
+            410.7896728515625,
+            778.3828620910645,
+            417.6234130859375,
+            782.3075828552246
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000008",
+          "text": "Page 20 of 511",
+          "bbox_points": [
+            501.249267578125,
+            778.1565437316895,
+            537.8721313476562,
+            783.3729438781738
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000009",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            76.2974853515625,
+            59.87999725341797,
+            80.80938720703125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000010",
+          "text": "The UoC may decide to sell products from the UoC as non-certified (Indicator 1.4.2(f)).",
+          "bbox_points": [
+            71.94384002685547,
+            73.2198486328125,
+            495.05859375,
+            82.632080078125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000011",
+          "text": "•",
+          "bbox_points": [
+            72.42192077636719,
+            101.44866943359375,
+            76.485595703125,
+            106.0999755859375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000012",
+          "text": "In this case, the products shall be identified as non-certified when sold or dispatched.",
+          "bbox_points": [
+            91.03943634033203,
+            98.65985107421875,
+            514.9923706054688,
+            108.02227783203125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000013",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            126.8175048828125,
+            59.87999725341797,
+            131.32940673828125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000014",
+          "text": "The requirements of these indicators establish a consistent, streamlined approach for",
+          "bbox_points": [
+            71.94384002685547,
+            123.7398681640625,
+            501.5087585449219,
+            133.102294921875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000015",
+          "text": "traceability, identification and segregation at all ASC certified sites.",
+          "bbox_points": [
+            72.07331848144531,
+            140.77984619140625,
+            406.9683532714844,
+            150.19207763671875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000016",
+          "text": "•",
+          "bbox_points": [
+            72.42192077636719,
+            169.0086669921875,
+            76.485595703125,
+            173.65997314453125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000017",
+          "text": "They relieve the need for separate Chain of Custody certification to cover farming activities.",
+          "bbox_points": [
+            89.94384002685547,
+            166.2198486328125,
+            543.9008178710938,
+            175.632080078125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000018",
+          "text": "Evidence of implementation should be maintained, e.g.:",
+          "bbox_points": [
+            54.73067855834961,
+            205.06146240234375,
+            349.4471435546875,
+            214.90191650390625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000019",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            233.64752197265625,
+            59.87999725341797,
+            238.159423828125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000020",
+          "text": "Records:",
+          "bbox_points": [
+            73.03943634033203,
+            230.61968994140625,
+            114.27384185791016,
+            238.04986572265625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000021",
+          "text": "•",
+          "bbox_points": [
+            72.42192077636719,
+            256.7586669921875,
+            76.485595703125,
+            261.40997314453125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000022",
+          "text": "risk assessment and any resulting actions.",
+          "bbox_points": [
+            90.8900375366211,
+            254.0196533203125,
+            299.2831115722656,
+            263.382080078125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000023",
+          "text": "•",
+          "bbox_points": [
+            72.42192077636719,
+            280.2786865234375,
+            76.485595703125,
+            284.92999267578125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000024",
+          "text": "use or verification of the effectiveness of the traceability system, for example:",
+          "bbox_points": [
+            90.84024047851562,
+            277.4898681640625,
+            472.906005859375,
+            286.902099609375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000025",
+          "text": "-",
+          "bbox_points": [
+            96.72264099121094,
+            305.18115234375,
+            99.4317626953125,
+            307.969970703125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000026",
+          "text": "outcome of input-output exercises and traceability tests.",
+          "bbox_points": [
+            114.8381576538086,
+            300.52984619140625,
+            397.11090087890625,
+            309.94207763671875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000027",
+          "text": "Auditors should confirm:",
+          "bbox_points": [
+            53.824317932128906,
+            335.41143798828125,
+            183.31427001953125,
+            343.3197021484375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000028",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            361.927490234375,
+            59.87999725341797,
+            366.43939208984375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000029",
+          "text": "Risks have been adequately assessed and mitigated.",
+          "bbox_points": [
+            73.03943634033203,
+            358.899658203125,
+            334.1607666015625,
+            368.2620544433594
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000030",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            384.9674987792969,
+            59.87999725341797,
+            389.4794006347656
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000031",
+          "text": "Effective traceability and segregation systems are in place.",
+          "bbox_points": [
+            73.03943634033203,
+            381.8898620605469,
+            363.83160400390625,
+            391.30206298828125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000032",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            408.0274963378906,
+            59.87999725341797,
+            412.5393981933594
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000033",
+          "text": "Outcome of any input-output exercises and traceability tests.",
+          "bbox_points": [
+            72.42192077636719,
+            404.9498596191406,
+            377.41143798828125,
+            414.362060546875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000034",
+          "text": "Useful Resources",
+          "bbox_points": [
+            54.67091751098633,
+            442.239990234375,
+            143.8726806640625,
+            449.8195495605469
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000035",
+          "text": "N/A",
+          "bbox_points": [
+            55.0394401550293,
+            466.4036560058594,
+            72.50927734375,
+            475.7760314941406
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000036",
+          "text": "Indicator:",
+          "bbox_points": [
+            54.73067855834961,
+            543.2714538574219,
+            103.74383544921875,
+            551.1797180175781
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000037",
+          "text": "Requirement:",
+          "bbox_points": [
+            118.56668090820312,
+            543.2714538574219,
+            189.04087829589844,
+            553.0322570800781
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000038",
+          "text": "1.4.3",
+          "bbox_points": [
+            54.002281188964844,
+            586.0719757080078,
+            84.27023315429688,
+            596.0544128417969
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000039",
+          "text": "Indicator applicability: every UoC using compound feed",
+          "bbox_points": [
+            118.50788116455078,
+            584.5173950195312,
+            384.02362060546875,
+            593.4380645751953
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000040",
+          "text": "The UoC shall demonstrate that feed products, subject to conformance with Indicator",
+          "bbox_points": [
+            117.77791595458984,
+            606.6984252929688,
+            527.8035278320312,
+            615.6570281982422
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000041",
+          "text": "2.12.1, are accompanied by the following information:",
+          "bbox_points": [
+            117.91063690185547,
+            622.8984222412109,
+            369.4908752441406,
+            631.8570251464844
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000042",
+          "text": "a.",
+          "bbox_points": [
+            118.26139831542969,
+            647.1555786132812,
+            125.38975524902344,
+            652.2178955078125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000043",
+          "text": "the originating feed mill holds valid certification against the ASC Feed Standard with",
+          "bbox_points": [
+            135.9011688232422,
+            645.0984191894531,
+            540.3843383789062,
+            654.0570220947266
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000044",
+          "text": "the appropriate scope of certification in relation to the ASC Production Model (i.e.",
+          "bbox_points": [
+            135.9011688232422,
+            661.2984313964844,
+            523.8109741210938,
+            670.2096252441406
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000045",
+          "text": "Mass Balance Production Model or Segregation Production Model product); and",
+          "bbox_points": [
+            136.8207244873047,
+            677.5458221435547,
+            516.134521484375,
+            686.45703125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000046",
+          "text": "b.",
+          "bbox_points": [
+            118.67852020263672,
+            699.7458190917969,
+            126.22979736328125,
+            706.8179016113281
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000047",
+          "text": "feed is traceable as ASC-conforming throughout all steps between the feed mill and",
+          "bbox_points": [
+            135.9011688232422,
+            699.6984252929688,
+            537.77392578125,
+            708.6570281982422
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0001_ft000048",
+          "text": "site; and",
+          "bbox_points": [
+            135.98648071289062,
+            715.9458236694336,
+            174.56060791015625,
+            724.3545837402344
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        }
+      ],
+      "shapes": [],
+      "bitmap_resources": [],
+      "backend": "pypdfium2",
+      "fallback_reason": null
+    },
+    {
+      "page_index": 2,
+      "width_points": 595.3200073242188,
+      "height_points": 841.9199829101562,
+      "words": [
+        {
+          "id": "native_p0002_fw000000",
+          "text": "Aquaculture Stewardship Council",
+          "bbox_points": [
+            394.3900146484375,
+            36.8770751953125,
+            542.679443359375,
+            44.05908203125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000001",
+          "text": "Document Name",
+          "bbox_points": [
+            59.522159576416016,
+            778.4159851074219,
+            108.19752502441406,
+            782.3186225891113
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000002",
+          "text": "ASC Farm Standard -",
+          "bbox_points": [
+            121.7110366821289,
+            773.5041427612305,
+            179.30743408203125,
+            777.6275863647461
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000003",
+          "text": "Interpretation Manual",
+          "bbox_points": [
+            122.32927703857422,
+            782.864143371582,
+            184.0704803466797,
+            788.0253448486328
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000004",
+          "text": "Document ID",
+          "bbox_points": [
+            248.30816650390625,
+            778.4159851074219,
+            286.489990234375,
+            782.3186225891113
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000005",
+          "text": "ASC-INT-001",
+          "bbox_points": [
+            297.321044921875,
+            778.3828620910645,
+            331.3427734375,
+            782.3075828552246
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000006",
+          "text": "Version",
+          "bbox_points": [
+            367.8258361816406,
+            777.9357452392578,
+            389.8064880371094,
+            782.3186225891113
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000007",
+          "text": "1.0",
+          "bbox_points": [
+            410.7896728515625,
+            778.3828620910645,
+            417.6234130859375,
+            782.3075828552246
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000008",
+          "text": "Page 21 of 511",
+          "bbox_points": [
+            502.92926025390625,
+            778.1565437316895,
+            537.8721313476562,
+            783.3729438781738
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000009",
+          "text": "How do I interpret this requirement?",
+          "bbox_points": [
+            54.73067855834961,
+            205.4215087890625,
+            249.70761108398438,
+            215.18231201171875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000010",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            234.00750732421875,
+            59.87999725341797,
+            238.5194091796875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000011",
+          "text": "Indicator 2.12.1 requires the UoC to only use ASC-conforming compound feed.",
+          "bbox_points": [
+            73.03943634033203,
+            230.92987060546875,
+            460.879150390625,
+            240.34210205078125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000012",
+          "text": "•",
+          "bbox_points": [
+            72.42192077636719,
+            259.0386962890625,
+            76.485595703125,
+            263.69000244140625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000013",
+          "text": "Use of non-conforming feed will be treated as a non-conformity against Indicator 2.12.1.",
+          "bbox_points": [
+            90.97968292236328,
+            256.2498779296875,
+            523.27001953125,
+            265.662109375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000014",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            284.407470703125,
+            59.87999725341797,
+            288.91937255859375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000015",
+          "text": "For product which is sold under the segregation model, identifying the feed production model",
+          "bbox_points": [
+            73.03943634033203,
+            281.329833984375,
+            547.4541625976562,
+            290.7420654296875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000016",
+          "text": "and distinct feed name is required by the ASC Feed Standard, Indicator 3.3.2.",
+          "bbox_points": [
+            72.45179748535156,
+            298.4898681640625,
+            453.4815368652344,
+            307.902099609375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000017",
+          "text": "Evidence of implementation should be maintained, e.g.:",
+          "bbox_points": [
+            54.73067855834961,
+            337.3314514160156,
+            349.4471435546875,
+            347.17193603515625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000018",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            365.8874816894531,
+            59.87999725341797,
+            370.3993835449219
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000019",
+          "text": "Process to confirm the originating feed mill holds valid certification against the ASC Feed",
+          "bbox_points": [
+            73.03943634033203,
+            362.8098449707031,
+            548.052001953125,
+            372.2220458984375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000020",
+          "text": "Standard.",
+          "bbox_points": [
+            72.37211608886719,
+            379.899658203125,
+            122.84939575195312,
+            387.33978271484375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000021",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            405.98748779296875,
+            59.87999725341797,
+            410.4993896484375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000022",
+          "text": "Records:",
+          "bbox_points": [
+            73.03943634033203,
+            402.95965576171875,
+            114.27384185791016,
+            410.3898010253906
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000023",
+          "text": "•",
+          "bbox_points": [
+            72.42192077636719,
+            429.0986633300781,
+            76.485595703125,
+            433.7499694824219
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000024",
+          "text": "traceability system and its verification, for example:",
+          "bbox_points": [
+            90.07331848144531,
+            426.3098449707031,
+            344.49151611328125,
+            435.7220458984375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000025",
+          "text": "-",
+          "bbox_points": [
+            89.90160369873047,
+            453.90203857421875,
+            93.10871887207031,
+            456.90997314453125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000026",
+          "text": "use of a digital traceability system",
+          "bbox_points": [
+            108.23624420166016,
+            449.4698486328125,
+            275.95263671875,
+            458.8820495605469
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000027",
+          "text": "-",
+          "bbox_points": [
+            89.90160369873047,
+            476.9420471191406,
+            93.10871887207031,
+            479.9499816894531
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000028",
+          "text": "outcome of any input-output exercises and traceability tests.",
+          "bbox_points": [
+            107.75816345214844,
+            472.5098571777344,
+            410.65142822265625,
+            481.92205810546875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000029",
+          "text": "•",
+          "bbox_points": [
+            72.42192077636719,
+            498.69866943359375,
+            76.485595703125,
+            503.3499755859375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000030",
+          "text": "accompanying documents incorporating information required by 1.4.3(c), (d) and (e).",
+          "bbox_points": [
+            90.45179748535156,
+            495.90985107421875,
+            510.84332275390625,
+            505.3220520019531
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000031",
+          "text": "Auditors should confirm:",
+          "bbox_points": [
+            53.824317932128906,
+            530.7914428710938,
+            183.31427001953125,
+            538.69970703125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000032",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            559.3775024414062,
+            59.87999725341797,
+            563.889404296875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000033",
+          "text": "Process to confirm the originating feed mill holds valid certification against the ASC Feed",
+          "bbox_points": [
+            73.03943634033203,
+            556.2998657226562,
+            520.3331909179688,
+            565.7120666503906
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000034",
+          "text": "Standard.",
+          "bbox_points": [
+            72.37211608886719,
+            573.3896484375,
+            122.84939575195312,
+            580.8297729492188
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000035",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            601.4974975585938,
+            59.87999725341797,
+            606.0093841552734
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000036",
+          "text": "Effective traceability and segregation systems are in place.",
+          "bbox_points": [
+            73.03943634033203,
+            598.4198608398438,
+            363.83160400390625,
+            607.8320617675781
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000037",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            624.5375061035156,
+            59.87999725341797,
+            629.0493774414062
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000038",
+          "text": "Outcome of any input-output exercises and traceability tests.",
+          "bbox_points": [
+            72.42192077636719,
+            621.4598541259766,
+            377.41143798828125,
+            630.8720550537109
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000039",
+          "text": "Useful Resources",
+          "bbox_points": [
+            54.67091751098633,
+            658.7499847412109,
+            143.8726806640625,
+            666.3295440673828
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000040",
+          "text": "N/A",
+          "bbox_points": [
+            55.0394401550293,
+            682.9136657714844,
+            72.50927734375,
+            692.2860260009766
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000041",
+          "text": "c.",
+          "bbox_points": [
+            118.17607879638672,
+            77.91558837890625,
+            125.14979553222656,
+            82.9779052734375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000042",
+          "text": "documentation accompanying the feed identifies the feed as ASC-conforming; and",
+          "bbox_points": [
+            136.17608642578125,
+            75.85845947265625,
+            531.5025634765625,
+            84.8170166015625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000043",
+          "text": "d.",
+          "bbox_points": [
+            118.17607879638672,
+            98.10577392578125,
+            126.22979736328125,
+            105.1778564453125
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000044",
+          "text": "documentation accompanying the feed identifies the production model applied (i.e.",
+          "bbox_points": [
+            136.17608642578125,
+            98.05841064453125,
+            538.6115112304688,
+            107.0169677734375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000045",
+          "text": "Mass Balance Production Model or Segregation Production Model); and",
+          "bbox_points": [
+            136.8207244873047,
+            114.3057861328125,
+            478.9444580078125,
+            123.21697998046875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000046",
+          "text": "e.",
+          "bbox_points": [
+            118.17607879638672,
+            138.51556396484375,
+            125.50977325439453,
+            143.577880859375
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000047",
+          "text": "for ASC-conforming Segregation Production Model feed, the product is identifiable",
+          "bbox_points": [
+            135.9011688232422,
+            136.45843505859375,
+            532.8961181640625,
+            145.4169921875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000048",
+          "text": "by a distinct feed name in formal documentation accompanying the product and is",
+          "bbox_points": [
+            136.67852783203125,
+            152.7784423828125,
+            535.966552734375,
+            161.73699951171875
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_fw000049",
+          "text": "listed on the schedule to the feed mill certificate.",
+          "bbox_points": [
+            136.67852783203125,
+            168.97845458984375,
+            366.8624267578125,
+            176.097900390625
+          ],
+          "confidence": 0.95,
+          "object_type": "word",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        }
+      ],
+      "bitmap_boxes_points": [],
+      "characters": [],
+      "text_lines": [
+        {
+          "id": "native_p0002_ft000000",
+          "text": "Aquaculture Stewardship Council",
+          "bbox_points": [
+            394.3900146484375,
+            36.8770751953125,
+            542.679443359375,
+            44.05908203125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000001",
+          "text": "Document Name",
+          "bbox_points": [
+            59.522159576416016,
+            778.4159851074219,
+            108.19752502441406,
+            782.3186225891113
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000002",
+          "text": "ASC Farm Standard -",
+          "bbox_points": [
+            121.7110366821289,
+            773.5041427612305,
+            179.30743408203125,
+            777.6275863647461
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000003",
+          "text": "Interpretation Manual",
+          "bbox_points": [
+            122.32927703857422,
+            782.864143371582,
+            184.0704803466797,
+            788.0253448486328
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000004",
+          "text": "Document ID",
+          "bbox_points": [
+            248.30816650390625,
+            778.4159851074219,
+            286.489990234375,
+            782.3186225891113
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000005",
+          "text": "ASC-INT-001",
+          "bbox_points": [
+            297.321044921875,
+            778.3828620910645,
+            331.3427734375,
+            782.3075828552246
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000006",
+          "text": "Version",
+          "bbox_points": [
+            367.8258361816406,
+            777.9357452392578,
+            389.8064880371094,
+            782.3186225891113
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000007",
+          "text": "1.0",
+          "bbox_points": [
+            410.7896728515625,
+            778.3828620910645,
+            417.6234130859375,
+            782.3075828552246
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000008",
+          "text": "Page 21 of 511",
+          "bbox_points": [
+            502.92926025390625,
+            778.1565437316895,
+            537.8721313476562,
+            783.3729438781738
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000009",
+          "text": "How do I interpret this requirement?",
+          "bbox_points": [
+            54.73067855834961,
+            205.4215087890625,
+            249.70761108398438,
+            215.18231201171875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000010",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            234.00750732421875,
+            59.87999725341797,
+            238.5194091796875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000011",
+          "text": "Indicator 2.12.1 requires the UoC to only use ASC-conforming compound feed.",
+          "bbox_points": [
+            73.03943634033203,
+            230.92987060546875,
+            460.879150390625,
+            240.34210205078125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000012",
+          "text": "•",
+          "bbox_points": [
+            72.42192077636719,
+            259.0386962890625,
+            76.485595703125,
+            263.69000244140625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000013",
+          "text": "Use of non-conforming feed will be treated as a non-conformity against Indicator 2.12.1.",
+          "bbox_points": [
+            90.97968292236328,
+            256.2498779296875,
+            523.27001953125,
+            265.662109375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000014",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            284.407470703125,
+            59.87999725341797,
+            288.91937255859375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000015",
+          "text": "For product which is sold under the segregation model, identifying the feed production model",
+          "bbox_points": [
+            73.03943634033203,
+            281.329833984375,
+            547.4541625976562,
+            290.7420654296875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000016",
+          "text": "and distinct feed name is required by the ASC Feed Standard, Indicator 3.3.2.",
+          "bbox_points": [
+            72.45179748535156,
+            298.4898681640625,
+            453.4815368652344,
+            307.902099609375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000017",
+          "text": "Evidence of implementation should be maintained, e.g.:",
+          "bbox_points": [
+            54.73067855834961,
+            337.3314514160156,
+            349.4471435546875,
+            347.17193603515625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000018",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            365.8874816894531,
+            59.87999725341797,
+            370.3993835449219
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000019",
+          "text": "Process to confirm the originating feed mill holds valid certification against the ASC Feed",
+          "bbox_points": [
+            73.03943634033203,
+            362.8098449707031,
+            548.052001953125,
+            372.2220458984375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000020",
+          "text": "Standard.",
+          "bbox_points": [
+            72.37211608886719,
+            379.899658203125,
+            122.84939575195312,
+            387.33978271484375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000021",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            405.98748779296875,
+            59.87999725341797,
+            410.4993896484375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000022",
+          "text": "Records:",
+          "bbox_points": [
+            73.03943634033203,
+            402.95965576171875,
+            114.27384185791016,
+            410.3898010253906
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000023",
+          "text": "•",
+          "bbox_points": [
+            72.42192077636719,
+            429.0986633300781,
+            76.485595703125,
+            433.7499694824219
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000024",
+          "text": "traceability system and its verification, for example:",
+          "bbox_points": [
+            90.07331848144531,
+            426.3098449707031,
+            344.49151611328125,
+            435.7220458984375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000025",
+          "text": "-",
+          "bbox_points": [
+            89.90160369873047,
+            453.90203857421875,
+            93.10871887207031,
+            456.90997314453125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000026",
+          "text": "use of a digital traceability system",
+          "bbox_points": [
+            108.23624420166016,
+            449.4698486328125,
+            275.95263671875,
+            458.8820495605469
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000027",
+          "text": "-",
+          "bbox_points": [
+            89.90160369873047,
+            476.9420471191406,
+            93.10871887207031,
+            479.9499816894531
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000028",
+          "text": "outcome of any input-output exercises and traceability tests.",
+          "bbox_points": [
+            107.75816345214844,
+            472.5098571777344,
+            410.65142822265625,
+            481.92205810546875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000029",
+          "text": "•",
+          "bbox_points": [
+            72.42192077636719,
+            498.69866943359375,
+            76.485595703125,
+            503.3499755859375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000030",
+          "text": "accompanying documents incorporating information required by 1.4.3(c), (d) and (e).",
+          "bbox_points": [
+            90.45179748535156,
+            495.90985107421875,
+            510.84332275390625,
+            505.3220520019531
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000031",
+          "text": "Auditors should confirm:",
+          "bbox_points": [
+            53.824317932128906,
+            530.7914428710938,
+            183.31427001953125,
+            538.69970703125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000032",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            559.3775024414062,
+            59.87999725341797,
+            563.889404296875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000033",
+          "text": "Process to confirm the originating feed mill holds valid certification against the ASC Feed",
+          "bbox_points": [
+            73.03943634033203,
+            556.2998657226562,
+            520.3331909179688,
+            565.7120666503906
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000034",
+          "text": "Standard.",
+          "bbox_points": [
+            72.37211608886719,
+            573.3896484375,
+            122.84939575195312,
+            580.8297729492188
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000035",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            601.4974975585938,
+            59.87999725341797,
+            606.0093841552734
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000036",
+          "text": "Effective traceability and segregation systems are in place.",
+          "bbox_points": [
+            73.03943634033203,
+            598.4198608398438,
+            363.83160400390625,
+            607.8320617675781
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000037",
+          "text": "o",
+          "bbox_points": [
+            54.61116027832031,
+            624.5375061035156,
+            59.87999725341797,
+            629.0493774414062
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000038",
+          "text": "Outcome of any input-output exercises and traceability tests.",
+          "bbox_points": [
+            72.42192077636719,
+            621.4598541259766,
+            377.41143798828125,
+            630.8720550537109
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000039",
+          "text": "Useful Resources",
+          "bbox_points": [
+            54.67091751098633,
+            658.7499847412109,
+            143.8726806640625,
+            666.3295440673828
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000040",
+          "text": "N/A",
+          "bbox_points": [
+            55.0394401550293,
+            682.9136657714844,
+            72.50927734375,
+            692.2860260009766
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000041",
+          "text": "c.",
+          "bbox_points": [
+            118.17607879638672,
+            77.91558837890625,
+            125.14979553222656,
+            82.9779052734375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000042",
+          "text": "documentation accompanying the feed identifies the feed as ASC-conforming; and",
+          "bbox_points": [
+            136.17608642578125,
+            75.85845947265625,
+            531.5025634765625,
+            84.8170166015625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000043",
+          "text": "d.",
+          "bbox_points": [
+            118.17607879638672,
+            98.10577392578125,
+            126.22979736328125,
+            105.1778564453125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000044",
+          "text": "documentation accompanying the feed identifies the production model applied (i.e.",
+          "bbox_points": [
+            136.17608642578125,
+            98.05841064453125,
+            538.6115112304688,
+            107.0169677734375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000045",
+          "text": "Mass Balance Production Model or Segregation Production Model); and",
+          "bbox_points": [
+            136.8207244873047,
+            114.3057861328125,
+            478.9444580078125,
+            123.21697998046875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000046",
+          "text": "e.",
+          "bbox_points": [
+            118.17607879638672,
+            138.51556396484375,
+            125.50977325439453,
+            143.577880859375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000047",
+          "text": "for ASC-conforming Segregation Production Model feed, the product is identifiable",
+          "bbox_points": [
+            135.9011688232422,
+            136.45843505859375,
+            532.8961181640625,
+            145.4169921875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000048",
+          "text": "by a distinct feed name in formal documentation accompanying the product and is",
+          "bbox_points": [
+            136.67852783203125,
+            152.7784423828125,
+            535.966552734375,
+            161.73699951171875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0002_ft000049",
+          "text": "listed on the schedule to the feed mill certificate.",
+          "bbox_points": [
+            136.67852783203125,
+            168.97845458984375,
+            366.8624267578125,
+            176.097900390625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        }
+      ],
+      "shapes": [],
+      "bitmap_resources": [],
+      "backend": "pypdfium2",
+      "fallback_reason": null
+    }
+  ]
+}

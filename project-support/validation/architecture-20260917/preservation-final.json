@@ -1,0 +1,112 @@
+{
+  "status": "passed",
+  "checks": {
+    "sources": {
+      "count": 88,
+      "exact_rows_preserved": true
+    },
+    "operations": {
+      "count": 137,
+      "exact_rows_preserved": true
+    },
+    "history": {
+      "count": 240,
+      "exact_rows_preserved": true
+    },
+    "source_versions": {
+      "count": 73,
+      "exact_rows_preserved": true
+    },
+    "artifacts": {
+      "count": 76,
+      "exact_rows_preserved": true
+    },
+    "assessment_holds": {
+      "count": 4,
+      "exact_rows_preserved": true
+    }
+  },
+  "original_versions_verified": 73,
+  "business_databases": {
+    "system1": {
+      "schema_version": 1,
+      "schema_sha256": "14bfe3f837f064d55f237a36a3a1a5dcd43a764febf689061b213576d953f925",
+      "tables": {
+        "artifacts": 76,
+        "assessment_events": 0,
+        "assessment_holds": 4,
+        "assessment_policy": 1,
+        "assessments": 0,
+        "history": 240,
+        "operations": 137,
+        "source_versions": 73,
+        "source_workspace_objects": 20,
+        "sources": 88,
+        "state": 1
+      }
+    },
+    "system2": {
+      "schema_version": 1,
+      "schema_sha256": "c3c7847d322bc75c857a8b3485049faa3bc14c9e3537dc09e24f4bf3a618bf54",
+      "tables": {
+        "collaboration_objects": 524,
+        "deliveries": 0,
+        "documents": 0,
+        "events": 0,
+        "material_candidate_index": 0,
+        "material_candidates": 0,
+        "material_conflicts": 0,
+        "material_documents": 0,
+        "material_read_index": 0,
+        "material_read_schema": 1,
+        "material_receipts": 0,
+        "material_revision_index": 0,
+        "material_revisions": 0,
+        "policies": 1,
+        "receipts": 0,
+        "review_dependencies": 0,
+        "review_history": 0,
+        "review_units": 0,
+        "storage_version": 1,
+        "weekly_qa": 1
+      }
+    },
+    "system3_requirements": {
+      "schema_version": 1,
+      "schema_sha256": "d275de3a588b84d29aad9639d35288170785a651b0eae6610c9b1fe1dd7cac11",
+      "tables": {
+        "requirement_delivery_archives": 0,
+        "requirement_delivery_receipts": 0,
+        "requirement_group_relationships": 0,
+        "requirement_relationship_versions": 0,
+        "requirement_relationships": 0,
+        "requirement_requests": 0,
+        "requirement_sessions": 0,
+        "requirement_steps": 0,
+        "requirement_structure_nodes": 0,
+        "requirement_units": 0
+      }
+    },
+    "system3_scd": {
+      "schema_version": 1,
+      "schema_sha256": "64d5cab32b61f45a3caefe0da4b3834704fd7f69b3e84eacf12685b5cbfc4686",
+      "tables": {
+        "interpretation_citations": 0,
+        "interpretation_draft_requests": 0,
+        "interpretation_drafts": 0,
+        "interpretation_fields": 0,
+        "interpretation_history": 0,
+        "interpretation_migrations": 1,
+        "interpretation_origin_parts": 0,
+        "interpretation_origins": 0,
+        "interpretation_requests": 0,
+        "interpretation_rule_nodes": 0,
+        "interpretation_run_index": 0,
+        "interpretation_runs": 0,
+        "requirement_interpretations": 0,
+        "site_field_catalog": 0
+      }
+    }
+  },
+  "bindings": []
+}

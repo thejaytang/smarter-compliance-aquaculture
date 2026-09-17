@@ -1,0 +1,42 @@
+{
+  "scope": "isolated_engineering_only",
+  "sources": [
+    {
+      "source_id": "PA001",
+      "path": "A_Public_Authority/PA001-001_material.html",
+      "sha256": "8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967",
+      "kind": "public_original"
+    },
+    {
+      "source_id": "CS010",
+      "path": "A_Public_Authority/CS010-001_material.pdf",
+      "sha256": "ce5c8950c69e3b5b60b85110f5abd2c6d8637c83291c6c00ac03f28b102dac54",
+      "kind": "public_original"
+    },
+    {
+      "source_id": "TS001",
+      "path": "A_Public_Authority/TS001-001_material.html",
+      "sha256": "b9b88ca01572da304cf651b63825aa87cacaeb6681c81352a14a4df5adcffa9a",
+      "kind": "synthetic"
+    },
+    {
+      "source_id": "TS002",
+      "path": "A_Public_Authority/TS002-001_material.xlsx",
+      "sha256": "4649aff48b0766b6bc7010c3681ad845e0116187500fb65b23648ac6a9bce106",
+      "kind": "synthetic"
+    },
+    {
+      "source_id": "TS003",
+      "path": "A_Public_Authority/TS003-001_material.pdf",
+      "sha256": "b44cd5749f514a97bd19989d53adc7492dd838cfa4f8be5f0afb29ad31ef2526",
+      "kind": "synthetic"
+    },
+    {
+      "source_id": "TS007",
+      "path": "A_Public_Authority/TS007-001_material.html",
+      "sha256": "7eb313ef712c9ac8f5c1a49390d88c9cb2f3a64450527f83b810dd15384a494c",
+      "kind": "synthetic"
+    }
+  ],
+  "config": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/workbench-continuity-20260916/fixture/config/config.json"
+}

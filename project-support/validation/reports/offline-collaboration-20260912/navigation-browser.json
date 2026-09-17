@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "entry": "http://127.0.0.1:62742/",
+  "desktop_viewport": [
+    1440,
+    1000
+  ],
+  "narrow_viewport": [
+    600,
+    1000
+  ],
+  "standalone_system3_navigation": false,
+  "overview_work_areas": [
+    "Source management",
+    "Material content review"
+  ],
+  "material_headings": [
+    "Original document",
+    "Extracted original text",
+    "Structured requirements"
+  ],
+  "process_disabled": true,
+  "narrow_horizontal_overflow": false,
+  "normal_business_material_opened": false,
+  "writes": "Existing coordinator identity selected in browser session only; no business decision or material write.",
+  "console_note": "Browser requested favicon.ico, which returned 404. No application notice error observed.",
+  "screenshots": [
+    "output/playwright/offline-collaboration/navigation-desktop.png",
+    "output/playwright/offline-collaboration/navigation-narrow.png"
+  ]
+}

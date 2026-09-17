@@ -1,0 +1,311 @@
+{
+  "version": "product-readiness-quality/1",
+  "frozen_at": "2026-09-12T21:00:40Z",
+  "samples": [
+    {
+      "id": "asc-farm",
+      "path": "system2/data/inputs/ASC-STD-001-ASC-Farm-Standard-V1.0.1-Aug-2025.pdf",
+      "page_indices": [
+        27,
+        28
+      ],
+      "split": "development",
+      "family": "ASC_PDF",
+      "annotation": {
+        "path": "system2/gold/requirements/annotations/farm-standard-p028-p029.json",
+        "sha256": "97e70763c7ac03221e0f3ea47437817c6c4859308d2282939988ce2f306dd35e",
+        "trust": "existing source-backed engineering annotation; not business expert Gold",
+        "counts": {
+          "segments": 25,
+          "requirements": 6,
+          "excluded_regions": 4
+        },
+        "denominator_status": "UNMEASURED: complete content-unit and binary positive/negative denominator not yet validated"
+      },
+      "sha256": "3b0cdf01f72b518710d5af9c1d8ccaa653c381f45053c7b20a102e06c1de4b20",
+      "bytes": 7007852,
+      "engineering_source_id": "QS001",
+      "pdf_page_numbers": [
+        28,
+        29
+      ]
+    },
+    {
+      "id": "asc-interpretation",
+      "path": "system2/data/inputs/ASC-INT-001-ASC-Farm-Standard-Interpretation-Manual-V1.0-May-2025.pdf",
+      "page_indices": [
+        18,
+        19,
+        20
+      ],
+      "split": "development",
+      "family": "ASC_PDF",
+      "annotation": {
+        "path": "system2/gold/requirements/annotations/interpretation-manual-p019-p021.json",
+        "sha256": "ce4c1e9a6b2f9814a5b407414462d01c6d6cba57b0c55f10cc7ab76f0872f6fa",
+        "trust": "existing source-backed engineering annotation; not business expert Gold",
+        "counts": {
+          "segments": 12,
+          "requirements": 3,
+          "excluded_regions": 2
+        },
+        "denominator_status": "UNMEASURED: complete content-unit and binary positive/negative denominator not yet validated"
+      },
+      "sha256": "804ead3d1d1a53019869b5385dabfb86356b8276b990538c0d782e750167777e",
+      "bytes": 8351485,
+      "engineering_source_id": "QS002",
+      "pdf_page_numbers": [
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "id": "asc-audit",
+      "path": "system2/data/inputs/download-module-691-ASC-Salmon-Audit-Manual_v1.4.pdf",
+      "page_indices": [
+        0,
+        1,
+        2
+      ],
+      "split": "development",
+      "family": "ASC_PDF",
+      "annotation": {
+        "path": "system2/gold/requirements/annotations/audit-manual-p001-p003.json",
+        "sha256": "5eb981d4022e5380132a6a72dc5e88a8bbbf41a2f42ee89cbe95c2efbf93dd69",
+        "trust": "existing source-backed engineering annotation; not business expert Gold",
+        "counts": {
+          "segments": 79,
+          "requirements": 12,
+          "excluded_regions": 4
+        },
+        "denominator_status": "UNMEASURED: complete content-unit and binary positive/negative denominator not yet validated"
+      },
+      "sha256": "911b716d6e4f9aacc1e0c7999dbcf1e009f08c3b322269c748d867006521e76d",
+      "bytes": 651898,
+      "engineering_source_id": "QS003",
+      "pdf_page_numbers": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "asc-salmon-cod",
+      "path": "system2/data/inputs/ASC-STD-010-ASC-Salmon-and-Cod-Standard-V1.5-Oct-2025-1.pdf",
+      "page_indices": [
+        17
+      ],
+      "split": "development",
+      "family": "ASC_PDF",
+      "annotation": {
+        "path": "system2/gold/requirements/annotations/salmon-cod-standard-p018-v2.json",
+        "sha256": "2387bedc12a12ca9374c63207e9f2b61580e176d48615746c72614c1b1bf7ecb",
+        "trust": "existing source-backed engineering annotation; not business expert Gold",
+        "counts": {
+          "segments": 21,
+          "requirements": 4,
+          "excluded_regions": 5
+        },
+        "denominator_status": "UNMEASURED: complete content-unit and binary positive/negative denominator not yet validated"
+      },
+      "sha256": "a34e5f4fc78486136ddbf3d661d26aad85e4b8a1990b2e6eda3f3ac1df7f7b5c",
+      "bytes": 1739158,
+      "engineering_source_id": "QS004",
+      "pdf_page_numbers": [
+        18
+      ]
+    },
+    {
+      "id": "borderless-merged-figure",
+      "path": "system2/gold/pdfs/borderless-merged-figure.pdf",
+      "page_indices": [
+        0
+      ],
+      "split": "mechanism_regression",
+      "family": "synthetic_PDF",
+      "annotation": {
+        "path": "system2/gold/annotations/borderless-merged-figure.json",
+        "sha256": "138b24b0ec8b0a201ccb5463a86c84d0062afc7a5ac6f96964d543ffcd6a4e8d",
+        "trust": "synthetic authored visible-content expectations; not real-format acceptance",
+        "denominator_status": "UNMEASURED for real-material quality; expected fields can diagnose mechanisms"
+      },
+      "sha256": "966ec5d7eb8af5ea97cd478b6560e3f2e836202a1a0f3f7138f9b016349a0138",
+      "bytes": 1968,
+      "engineering_source_id": "QS005",
+      "pdf_page_numbers": [
+        1
+      ]
+    },
+    {
+      "id": "born-digital-multicolumn",
+      "path": "system2/gold/pdfs/born-digital-multicolumn.pdf",
+      "page_indices": [
+        0
+      ],
+      "split": "mechanism_regression",
+      "family": "synthetic_PDF",
+      "annotation": {
+        "path": "system2/gold/annotations/born-digital-multicolumn.json",
+        "sha256": "987d352aa0aa32f048d43681b05a2ac5af0d735db202dea977a7a7d5ad094c1e",
+        "trust": "synthetic authored visible-content expectations; not real-format acceptance",
+        "denominator_status": "UNMEASURED for real-material quality; expected fields can diagnose mechanisms"
+      },
+      "sha256": "c2d87f054ce7e88fca96557cdc85f52fb579a472eb301d62e6f70618775811a3",
+      "bytes": 1824,
+      "engineering_source_id": "QS006",
+      "pdf_page_numbers": [
+        1
+      ]
+    },
+    {
+      "id": "cross-page-content",
+      "path": "system2/gold/pdfs/cross-page-content.pdf",
+      "page_indices": [
+        0,
+        1
+      ],
+      "split": "mechanism_regression",
+      "family": "synthetic_PDF",
+      "annotation": {
+        "path": "system2/gold/annotations/cross-page-content.json",
+        "sha256": "09ef87c8f0847e70795da1abcd5453d70a9a08711aa6bc8da30e1d3f5836111f",
+        "trust": "synthetic authored visible-content expectations; not real-format acceptance",
+        "denominator_status": "UNMEASURED for real-material quality; expected fields can diagnose mechanisms"
+      },
+      "sha256": "a01ea98a16cc107450e54cabf9f4e577b9c83652a6145bac4a94e352f617a981",
+      "bytes": 2437,
+      "engineering_source_id": "QS007",
+      "pdf_page_numbers": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "scanned-critical",
+      "path": "system2/gold/pdfs/scanned-critical.pdf",
+      "page_indices": [
+        0
+      ],
+      "split": "mechanism_regression",
+      "family": "synthetic_PDF",
+      "annotation": {
+        "path": "system2/gold/annotations/scanned-critical.json",
+        "sha256": "beeab0f0a1d14f330f213fd6189ff6324e9386f1a32e90447c66c2d1c0ba2306",
+        "trust": "synthetic authored visible-content expectations; not real-format acceptance",
+        "denominator_status": "UNMEASURED for real-material quality; expected fields can diagnose mechanisms"
+      },
+      "sha256": "1d2fdae4d0289238e3b6a3f9fb424a096e33deb10df9383e68bbf7f0c43b28b1",
+      "bytes": 18236,
+      "engineering_source_id": "QS008",
+      "pdf_page_numbers": [
+        1
+      ]
+    },
+    {
+      "id": "pa002-html",
+      "path": "system1/Data/A_Public_Authority/PA002-001_Regulation_on_production_areas_for_sea-based_salmon_trout_and_rainbow_trout_aquaculture.html",
+      "split": "development",
+      "family": "Lovdata_HTML",
+      "annotation": {
+        "path": "system2/tests/fixtures/html/source-windows-20260907.json",
+        "sha256": "0f351d5e806a7104ee22a99046887dd3c0a85c28ea544c20026a772df3351f6c",
+        "trust": "previous manually selected source windows only; no complete unit denominator",
+        "denominator_status": "UNMEASURED"
+      },
+      "sha256": "19a632a343fe10fa8262a0ed8df8daa6d3e96e34ff686704da4c28e3671b2833",
+      "bytes": 129356,
+      "engineering_source_id": "QS009"
+    },
+    {
+      "id": "cs001-html",
+      "path": "system1/Data/C_Certification_Scheme/CS001-001_ASC_Farm_Standard.html",
+      "split": "development",
+      "family": "ASC_HTML",
+      "annotation": {
+        "path": "system2/tests/fixtures/html/source-windows-20260907.json",
+        "sha256": "0f351d5e806a7104ee22a99046887dd3c0a85c28ea544c20026a772df3351f6c",
+        "trust": "previous manually selected source windows only; no complete unit denominator",
+        "denominator_status": "UNMEASURED"
+      },
+      "sha256": "a40846bb23436f8ab6c5971f8a33577660eaed1059861ee01cdb2ca3f60c062b",
+      "bytes": 6941861,
+      "engineering_source_id": "QS010"
+    },
+    {
+      "id": "globalgap-xlsx",
+      "path": "../03_GLOBALGAP_Standards/IFA v6 Smart _ AQ_en_20240827 - Prefilled_00.xlsx",
+      "split": "development",
+      "family": "GLOBALGAP_XLSX",
+      "annotation": {
+        "path": "project-support/product-readiness-20260912/quality/xlsx-source-window.json",
+        "sha256": "edae5f60a7cd33415aa0695ffc677f553d268235b6f7827c58df655caafbc272",
+        "trust": "independent openpyxl source inventory; engineering cell correspondence only",
+        "frozen_scope": "'CL - IFA v6 Smart - AQ'!A9:H24",
+        "nonempty_cell_denominator": 113,
+        "all_cell_denominator": 128,
+        "denominator_status": "cell equality measurable; semantic and global structure quality UNMEASURED"
+      },
+      "parse_scope": "entire bounded 174604-byte workbook; score only frozen cell window",
+      "sha256": "ba3ff6d7f9b5141dc90cb7447c61792c08b1ee82af5705330ffcfca5688077f3",
+      "bytes": 174604,
+      "engineering_source_id": "QS011"
+    },
+    {
+      "id": "pa057-reserved",
+      "path": "system1/Data/A_Public_Authority/PA057-001_Guidance_for_condition_assessment_of_land-based_aquaculture_facilities.pdf",
+      "page_indices": [
+        4,
+        5
+      ],
+      "split": "reserved_do_not_parse",
+      "family": "Norwegian_guidance_PDF",
+      "annotation": {
+        "trust": "source-only selection; not annotated",
+        "denominator_status": "UNMEASURED"
+      },
+      "holdout_status": "HISTORICALLY_EXPOSED_NOT_INDEPENDENT",
+      "exposure": "Prior diagnosis pp8-11 in convergence ledger; same document exposed.",
+      "eligibility": "Engineering reference only; live System1 eligibility not established",
+      "sha256": "f9f6bd8531c2cd8a4cc7dd49e4035aaef6ff33cb2f7dbf93f0e340ca0b454778",
+      "bytes": 1172387,
+      "engineering_source_id": "QS012",
+      "pdf_page_numbers": [
+        5,
+        6
+      ]
+    },
+    {
+      "id": "cs010-reserved",
+      "path": "system1/Data/C_Certification_Scheme/CS010-001_GLOBALG.A.P._General_Regulations_-_Rules_for_aquaculture_scope.pdf",
+      "page_indices": [
+        2,
+        3
+      ],
+      "split": "reserved_do_not_parse",
+      "family": "GLOBALGAP_PDF",
+      "annotation": {
+        "trust": "source-only selection; not annotated",
+        "denominator_status": "UNMEASURED"
+      },
+      "holdout_status": "HISTORICALLY_EXPOSED_NOT_INDEPENDENT",
+      "exposure": "Entire 4-page document parsed in prior material acceptance; not independent.",
+      "eligibility": "Engineering reference only; live System1 eligibility not established",
+      "sha256": "ce5c8950c69e3b5b60b85110f5abd2c6d8637c83291c6c00ac03f28b102dac54",
+      "bytes": 520464,
+      "engineering_source_id": "QS013",
+      "pdf_page_numbers": [
+        3,
+        4
+      ]
+    }
+  ],
+  "rules": [
+    "Never treat these fixture identities as human INCLUDE decisions.",
+    "Never parse reserved samples in baseline.",
+    "No external models, OCR, downloads or full large-PDF run.",
+    "No untouched independent holdout currently established.",
+    "Existing Gold/history is read-only.",
+    "Exact-text diagnostics are not content recall or precision/recall acceptance."
+  ]
+}

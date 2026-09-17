@@ -1,0 +1,11 @@
+{
+  "retained_rows_match_backup": true,
+  "counts": {
+    "sources": 88,
+    "operations": 137,
+    "history": 240,
+    "source_versions": 73,
+    "artifacts": 76,
+    "assessment_holds": 4
+  }
+}

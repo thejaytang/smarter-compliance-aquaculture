@@ -1,0 +1,49 @@
+{
+  "command": [
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/bin/python",
+    "-m",
+    "pytest",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/tests/test_material_collaboration.py",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/tests/test_material_impact.py",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/tests/test_material_legacy.py",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/tests/test_material_parser_grid.py",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/tests/test_material_parser_quality.py",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/tests/test_material_processor.py",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/tests/test_material_provenance.py",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/tests/test_material_read_performance.py",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/tests/test_material_reader_navigation.py",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/tests/test_material_reader_parser.py",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/tests/test_material_service.py",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/tests/test_materials.py",
+    "-q",
+    "--basetemp=/private/tmp/smarter-parser-v6-tests-f4dzwb97/pytest",
+    "--junitxml=/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/quality/structure-diagnostic/grid-consistency/product-v6/targeted-junit.xml",
+    "-o",
+    "cache_dir=/private/tmp/smarter-parser-v6-tests-f4dzwb97/cache"
+  ],
+  "cwd": "/private/tmp/smarter-parser-v6-tests-f4dzwb97",
+  "code_sha256": "ae3745c920366edfb70934e540f2fbe745835ff772a16aa540b751713123388e",
+  "test_sha256": {
+    "system2/tests/test_material_collaboration.py": "abd5b853d89f8c51541dbe53fd1c6ecc3e7aaf6bf977a40cd3994e742b9b293f",
+    "system2/tests/test_material_impact.py": "1b6a0a5f15d8f0a96eba54da50cccae93b055caea9e683bb68210655ed0ad7fd",
+    "system2/tests/test_material_legacy.py": "5b7e9e3f16cdab13c2ed9500e00b5ff541372ec56d16f57304170680ea27f44c",
+    "system2/tests/test_material_parser_grid.py": "a612cb76d4ec5ff3533d35e1eb3556dc7b2190b193c546e30a716335ea46ba17",
+    "system2/tests/test_material_parser_quality.py": "f0a02077997d21bf283cb2f61ea2f6e5886c21da7fa6ae6a0ac723db6c172a0c",
+    "system2/tests/test_material_processor.py": "8c04b83b23e3067b0a5fc754c06e37abedf256ca0e3d566548d8fcfabadad3c5",
+    "system2/tests/test_material_provenance.py": "799f497c0475e9d771e79119711bac42e54d2fb3b68bf46f7ad28a7e74ca686a",
+    "system2/tests/test_material_read_performance.py": "08a5b04a080f108287a879efd1c1c2d7a604e8c830451ad13f64dcee5de555f5",
+    "system2/tests/test_material_reader_navigation.py": "e92bffddde7f7da5e0f42f6480c626194e29f6763f920c31064bc810732d8061",
+    "system2/tests/test_material_reader_parser.py": "6f153b097eee3af37f82c5173e1c10a4b8522c62780df83a1cda7ab7f6ee6360",
+    "system2/tests/test_material_service.py": "e74f08649d0e9bdce29275ed60255fa5f7aaa62f3d120d89760111c144c5671c",
+    "system2/tests/test_materials.py": "1902e1dca175e148d2214adfc7d3e778b47a720b95d751a3f6b4baed9da4763c"
+  },
+  "environment": {
+    "PYTHONPATH": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/src",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "TMPDIR": "/private/tmp/smarter-parser-v6-tests-f4dzwb97",
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "HF_HOME": "/private/tmp/smarter-parser-v6-tests-f4dzwb97/hf",
+    "XDG_CACHE_HOME": "/private/tmp/smarter-parser-v6-tests-f4dzwb97/xdg"
+  }
+}

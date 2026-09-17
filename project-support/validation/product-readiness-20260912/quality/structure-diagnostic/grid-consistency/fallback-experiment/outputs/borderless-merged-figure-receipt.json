@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/bin/python",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/quality/structure-diagnostic/grid-consistency/fallback-experiment/run.py",
+    "borderless-merged-figure"
+  ],
+  "cwd": "/private/tmp/smarter-grid-fallback-803y2m78",
+  "status": "completed",
+  "guard_stage": null,
+  "exit_code": 0,
+  "elapsed_seconds": 0.7169125000364147,
+  "readiness": {
+    "stage": "ready",
+    "readiness_seconds": 0.4273774580215104,
+    "ready_monotonic": 497032.936791041
+  },
+  "stdout": "borderless-merged-figure-stdout.log",
+  "stderr": "borderless-merged-figure-stderr.log"
+}

@@ -1,0 +1,42 @@
+{
+  "checks": [
+    {
+      "label": "R1",
+      "unit_id": "0a40a0e6-94b6-5e6f-b13d-963462c5eab5",
+      "interpretation_revision": 1,
+      "source_snapshot": "PE001-002",
+      "source_segments": 1,
+      "stale": false,
+      "reviewed": false
+    },
+    {
+      "label": "R2",
+      "unit_id": "dd9491c6-5887-53b2-8d02-a0b7df1dbdb8",
+      "interpretation_revision": 1,
+      "source_snapshot": "PE001-002",
+      "source_segments": 2,
+      "stale": false,
+      "reviewed": false
+    },
+    {
+      "label": "R3",
+      "unit_id": "4198ee3c-b3d3-5e6f-9756-d872989b1927",
+      "interpretation_revision": 1,
+      "source_snapshot": "PE001-002",
+      "source_segments": 2,
+      "stale": false,
+      "reviewed": false
+    },
+    {
+      "label": "R4",
+      "unit_id": "e20b355f-3bb8-5436-988b-c06c23d39b05",
+      "interpretation_revision": 1,
+      "source_snapshot": "PE001-002",
+      "source_segments": 2,
+      "stale": false,
+      "reviewed": false
+    }
+  ],
+  "exact_provided_json": true,
+  "sessions": 4
+}

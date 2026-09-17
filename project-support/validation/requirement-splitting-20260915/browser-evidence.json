@@ -1,0 +1,34 @@
+{
+  "sessions": [
+    {
+      "id": "e670ca2e-49f2-4926-a2d0-d91ace24792a",
+      "revision": 22,
+      "phase": "complete",
+      "chapter": "Chapter 2",
+      "material_revision": 1,
+      "labels": {
+        "2478ab2d-4c48-4d12-be94-66c179c4b573": "C2",
+        "3929a888-2378-4d27-9c03-79eee68f53a0": "C3",
+        "6ad24266-8e1a-46c7-b711-22b2ef289a1e": "R2",
+        "8faec6c3-71f5-4a5f-92d5-7ccfc08afca0": "R1",
+        "a1f09dad-29bb-4741-a953-9241b355732b": "C1"
+      }
+    },
+    {
+      "id": "5f5f21b2-888e-444a-8e30-a7fc559658bc",
+      "revision": 9,
+      "phase": "fields",
+      "chapter": "Chapter 3",
+      "material_revision": 1,
+      "labels": {
+        "bd987f13-0b84-4546-9163-3eee632c10fd": "R1"
+      }
+    }
+  ],
+  "steps": 31,
+  "units": 6,
+  "source_bound": true,
+  "linked_requirement_ids": [
+    "bd987f13-0b84-4546-9163-3eee632c10fd"
+  ]
+}

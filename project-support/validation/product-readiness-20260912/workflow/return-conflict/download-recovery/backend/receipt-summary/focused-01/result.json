@@ -1,0 +1,12 @@
+{
+  "returncode": 0,
+  "elapsed_seconds": 4.726305833959486,
+  "code_after": {
+    "workbench/src/local_workbench/collaboration_collection.py": "1e7aeb8c70fdbf028d9c5bc8326f99f55358773610ebfe631b42e8b1507b48b2",
+    "workbench/tests/test_collection_download_http.py": "75dbd02206ae5f9569fc9c7398946103a9e16f17fdfa07a2464da9a3e7543ad1",
+    "workbench/src/local_workbench/server.py": "fabaf8713318fa6c7619a60b025bdb35ac56911d7fdf2502d4c90772a3c7b599"
+  },
+  "code_unchanged": true,
+  "status": "PASS",
+  "tests": 9
+}

@@ -1,0 +1,9 @@
+{
+  "scope": "isolated TS003 draft only; lock transaction writes no rows",
+  "database": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/runtime/product-readiness-20260912/fixture/workbench/runtime/collaboration/personal/1436f495-a248-4240-a129-8f76dd65aa6d/workflow.sqlite",
+  "material_id": "608f102a55d299a37f44f6873a427407",
+  "before_revision": 5,
+  "backup_sha256": "7d0c3ffd0d757d3e352ef54a4474d4e3b26ccb958dcc4b593d1091e64854d8e0",
+  "acquired_at": "2026-09-13T12:02:17.000284+00:00",
+  "released_at": "2026-09-13T12:02:17.000487+00:00"
+}

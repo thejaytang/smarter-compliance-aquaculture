@@ -1,0 +1,17 @@
+{
+  "returncode": 0,
+  "elapsed_seconds": 3.743150957976468,
+  "code_after": {
+    "workbench/src/local_workbench/server.py": "fabaf8713318fa6c7619a60b025bdb35ac56911d7fdf2502d4c90772a3c7b599",
+    "workbench/tests/test_collection_download_http.py": "d10006de420ef8e519fb80126c76cba2a02bb60ff1b2dcffc42e5b79cc0e4fe3",
+    "workbench/tests/test_frontend_module_routes.py": "0e7ab4f87b64ed8ab997310541aa867f2fa21bde12e07e8675bb1a76f25e6343",
+    "workbench/ui/app.js": "657781cfb5003987f436fb69ff9bfb43a96c307a42489933be4c769c4a41b06f",
+    "workbench/ui/package-download.js": "a97e5e79f59d34fe50f39c7a764c226d9312ac1966ccb8322a8206d61b8511a1"
+  },
+  "code_unchanged": true,
+  "tests": 7,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "status": "PASS"
+}

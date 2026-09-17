@@ -1,0 +1,49 @@
+{
+  "id": "ADF-10",
+  "text": "For aquaculture establishments that are not subject to specific record-keeping provisions in Chapters 4, 5 and 6, the operational journal shall at a minimum contain updated information on:",
+  "Subject": "the operational journal",
+  "Modal Verb": "shall",
+  "Main Verb": "contain",
+  "Object": "updated information",
+  "conditions": [
+    "For aquaculture establishments that are not subject to specific record-keeping provisions in Chapters 4, 5 and 6"
+  ],
+  "exceptions": [],
+  "subrequirements": [
+    {
+      "text": "aquaculture animals and aquaculture animal products brought into and removed from the aquaculture establishment",
+      "conditions": [],
+      "exceptions": [],
+      "subrequirements": [
+        [
+          [2,2],
+          "place of origin",
+          "place of destination"
+        ]
+      ]
+    },
+    {
+      "text": "mortality per production unit",
+      "conditions": [
+        "relevant to the production method"
+      ],
+      "exceptions": [],
+      "subrequirements": []
+    },
+    {
+      "text": "results of completed health inspections",
+      "conditions": [],
+      "exceptions": [],
+      "subrequirements": [
+        [
+          [5,5],
+          "number of completed health inspections",
+          "sampling",
+          "examinations performed",
+          "diagnoses",
+          "treatments carried out"
+        ]
+      ]
+    }
+  ]
+}

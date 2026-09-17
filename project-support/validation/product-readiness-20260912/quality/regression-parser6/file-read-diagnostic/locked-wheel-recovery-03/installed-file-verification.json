@@ -1,0 +1,29 @@
+{
+  "scope": "All installed RECORD-listed package files in only numba, anyio, img2table, excludes dist-info and pyc not present in RECORD",
+  "packages": [
+    {
+      "name": "numba",
+      "version": "0.67.0",
+      "total": 808,
+      "verified": 808,
+      "errors": []
+    },
+    {
+      "name": "anyio",
+      "version": "4.14.2",
+      "total": 44,
+      "verified": 44,
+      "errors": []
+    },
+    {
+      "name": "img2table",
+      "version": "1.4.0",
+      "total": 55,
+      "verified": 55,
+      "errors": []
+    }
+  ],
+  "elapsed_seconds": 0.19016166700748727,
+  "status": "PASS",
+  "whole_environment_health": "NOT_ESTABLISHED"
+}

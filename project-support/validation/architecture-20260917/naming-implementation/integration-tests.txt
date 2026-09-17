@@ -1,0 +1,24 @@
+Checking integration
+{
+  "status": "passed",
+  "populated_migration": true,
+  "interrupted_promotion_recovered": true,
+  "row_json_author_time_preserved": true,
+  "old_scd_binding_preserved": true,
+  "four_databases": true,
+  "bindings": 5,
+  "delivery_validated": true
+}
+Real source/material/Requirement/interpretation round trip passed.
+{
+  "status": "passed",
+  "platform": "darwin",
+  "peers": 2,
+  "source_count": 2,
+  "real_component_adapters": true,
+  "initial_restore": true,
+  "native_windows_cmd": false,
+  "collaboration_round_trip": true,
+  "git_pull_preserved_local_files": true,
+  "restart_readback": true
+}

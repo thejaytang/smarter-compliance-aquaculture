@@ -1,0 +1,176 @@
+{
+  "schema_version": "material-reader/12",
+  "source_sha256": "eb118336d635cb1fb4eb7bb4844be3d9e5991c9dfd98cdb4c25d7240c5de71a7",
+  "kind": "html",
+  "scope": [
+    {
+      "id": "html:document",
+      "kind": "html",
+      "label": "Complete saved HTML document",
+      "location": {
+        "anchor": "original-document"
+      }
+    }
+  ],
+  "warnings": [
+    "Isolated complete saved markup with selectable text. Source scripts, styles and external assets are disabled; all static disclosure content is opened. This reading view does not claim native website styling fidelity."
+  ],
+  "html": "<!doctype html><html><head><meta charset=\"utf-8\"><meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'none'; img-src data:; style-src 'unsafe-inline'; script-src 'none'; connect-src 'none'; form-action 'none'; base-uri 'none'\"><style>body{font:16px/1.6 system-ui,sans-serif;color:#1e293b;padding:20px;overflow-wrap:anywhere}table{border-collapse:collapse;max-width:100%}td,th{border:1px solid #9ca3af;padding:7px;vertical-align:top}img{max-width:100%}pre{white-space:pre-wrap}:target{outline:3px solid #3977bd;scroll-margin-top:12px}</style></head><body><span id=\"original-document\"></span><title id=\"original-d09663870ec952ee\">example</title><main id=\"original-695d64463f3a2d2a\"><h1 id=\"original-50b64e4a372c9bb4\">example</h1><p id=\"original-ba8bfb5569299e4e\">Workshop demonstration only. Case 1 is the meeting example with its original spelling; case 2 is fictional; case 3 is the user-provided English translation used in the explanatory figures, not an authenticated or current official English legal text. This material contains check designs, not compliance findings.</p>\n<section id=\"original-d612209d56929f15\"><h2 id=\"original-6137062c739696d1\">1. Anchoring line: scope, conditions, alternative demands and exception</h2>\n<p id=\"original-8cfee12b17715ab8\">\"Everything that is installed as part of an anchor line\" and \"deliverd by company 1, and installed by company b, but not installed in the North of norway\",\" incase of a earthquake of maginute 4\", \"it should be checked for integrity or replaced\", \"except when the component was secured by rope of diameter 1 m\"</p>\n</section>\n<section id=\"original-378de0b16fda81b4\"><h2 id=\"original-64db7926573dc818\">2. Fictional fish-removal example: nesting and quantity constraints</h2>\n<p id=\"original-aebe7e5b5c113a35\">The human shall remove the fish if either the tank is red or all of the following are true: the water is hot, the fish is sick, and the pump is off.</p>\n<p id=\"original-1a2e4f337d55a36f\">Small fish are exempt from the removal requirement when the water is cold.</p>\n<p id=\"original-f4dee5ed8ed41ad5\">This exemption does not apply when the fish is sick.</p>\n<p id=\"original-63d4dc888ab46da1\">When removing the fish, the human shall do at least two and no more than three of the following: use a net; wear gloves; close the door; call for help.</p>\n</section>\n<section id=\"original-3e7e921bc4818f7b\"><h2 id=\"original-fcd4b52b242747ff\">3. Sea-lice clause: user-provided translation from the explanatory figures</h2>\n<p id=\"original-f96d1b6b0032ede1\">Seawater temperature at a depth of three metres shall be measured at least once every week.</p>\n<p id=\"original-b9e49529aa46c8e8\">The number of sea lice shall be counted at least every 7 days at temperatures equal to or above 4°C, and at least every 14 days at temperatures below 4°C. Broodstock are exempt from the counting requirement at temperatures below 4°C. Sea lice counting shall be carried out in accordance with the requirements of Annex 1.</p>\n</section>\n</main></body></html>",
+  "anchors": [
+    {
+      "id": "original-f6804fb8bbd7574c",
+      "locator": "html:nth-of-type(1)",
+      "label": "example example Workshop demonstration only. Case 1 is the meeting example with its original spellin"
+    },
+    {
+      "id": "original-bd7720f19ee07df5",
+      "locator": "html:nth-of-type(1) > head:nth-of-type(1) > meta:nth-of-type(1)",
+      "label": "meta"
+    },
+    {
+      "id": "original-d09663870ec952ee",
+      "locator": "html:nth-of-type(1) > head:nth-of-type(1) > title:nth-of-type(1)",
+      "label": "example"
+    },
+    {
+      "id": "original-38c092570ebf2d1f",
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1)",
+      "label": "example Workshop demonstration only. Case 1 is the meeting example with its original spelling; case "
+    },
+    {
+      "id": "original-695d64463f3a2d2a",
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1)",
+      "label": "example Workshop demonstration only. Case 1 is the meeting example with its original spelling; case "
+    },
+    {
+      "id": "original-50b64e4a372c9bb4",
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > h1:nth-of-type(1)",
+      "label": "example"
+    },
+    {
+      "id": "original-ba8bfb5569299e4e",
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > p:nth-of-type(1)",
+      "label": "Workshop demonstration only. Case 1 is the meeting example with its original spelling; case 2 is fic"
+    },
+    {
+      "id": "original-d612209d56929f15",
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1)",
+      "label": "1. Anchoring line: scope, conditions, alternative demands and exception \"Everything that is installe"
+    },
+    {
+      "id": "original-6137062c739696d1",
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > h2:nth-of-type(1)",
+      "label": "1. Anchoring line: scope, conditions, alternative demands and exception"
+    },
+    {
+      "id": "original-8cfee12b17715ab8",
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > p:nth-of-type(1)",
+      "label": "\"Everything that is installed as part of an anchor line\" and \"deliverd by company 1, and installed b"
+    },
+    {
+      "id": "original-378de0b16fda81b4",
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2)",
+      "label": "2. Fictional fish-removal example: nesting and quantity constraints The human shall remove the fish "
+    },
+    {
+      "id": "original-64db7926573dc818",
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > h2:nth-of-type(1)",
+      "label": "2. Fictional fish-removal example: nesting and quantity constraints"
+    },
+    {
+      "id": "original-aebe7e5b5c113a35",
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > p:nth-of-type(1)",
+      "label": "The human shall remove the fish if either the tank is red or all of the following are true: the wate"
+    },
+    {
+      "id": "original-1a2e4f337d55a36f",
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > p:nth-of-type(2)",
+      "label": "Small fish are exempt from the removal requirement when the water is cold."
+    },
+    {
+      "id": "original-f4dee5ed8ed41ad5",
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > p:nth-of-type(3)",
+      "label": "This exemption does not apply when the fish is sick."
+    },
+    {
+      "id": "original-63d4dc888ab46da1",
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > p:nth-of-type(4)",
+      "label": "When removing the fish, the human shall do at least two and no more than three of the following: use"
+    },
+    {
+      "id": "original-3e7e921bc4818f7b",
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3)",
+      "label": "3. Sea-lice clause: user-provided translation from the explanatory figures Seawater temperature at a"
+    },
+    {
+      "id": "original-fcd4b52b242747ff",
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > h2:nth-of-type(1)",
+      "label": "3. Sea-lice clause: user-provided translation from the explanatory figures"
+    },
+    {
+      "id": "original-f96d1b6b0032ede1",
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > p:nth-of-type(1)",
+      "label": "Seawater temperature at a depth of three metres shall be measured at least once every week."
+    },
+    {
+      "id": "original-b9e49529aa46c8e8",
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > p:nth-of-type(2)",
+      "label": "The number of sea lice shall be counted at least every 7 days at temperatures equal to or above 4°C,"
+    }
+  ],
+  "navigation_anchors": [
+    {
+      "id": "original-50b64e4a372c9bb4",
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > h1:nth-of-type(1)",
+      "label": "example",
+      "kind": "heading",
+      "level": 1
+    },
+    {
+      "id": "original-6137062c739696d1",
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > h2:nth-of-type(1)",
+      "label": "1. Anchoring line: scope, conditions, alternative demands and exception",
+      "kind": "heading",
+      "level": 2
+    },
+    {
+      "id": "original-64db7926573dc818",
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > h2:nth-of-type(1)",
+      "label": "2. Fictional fish-removal example: nesting and quantity constraints",
+      "kind": "heading",
+      "level": 2
+    },
+    {
+      "id": "original-fcd4b52b242747ff",
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > h2:nth-of-type(1)",
+      "label": "3. Sea-lice clause: user-provided translation from the explanatory figures",
+      "kind": "heading",
+      "level": 2
+    }
+  ],
+  "document_information": {
+    "title": {
+      "label": "Title",
+      "value": "example",
+      "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > h1:nth-of-type(1)",
+      "anchor": "original-50b64e4a372c9bb4"
+    },
+    "fields": [],
+    "origin": "saved-original"
+  },
+  "display_fidelity": {
+    "mode": "reflowed_reading_view",
+    "original_layout_preserved": false,
+    "resources": {
+      "external_stylesheets": 0,
+      "embedded_styles_removed": 0,
+      "inline_styles_removed": 0,
+      "unavailable_images": 0
+    },
+    "omissions": [],
+    "warnings": []
+  },
+  "default_anchor": "original-50b64e4a372c9bb4",
+  "label": "Complete bound HTML snapshot · offline reading view",
+  "original_url": "/api/material/original?id=fb2ab88857c490664724dbad418d2943"
+}

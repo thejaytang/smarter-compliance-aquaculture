@@ -1,0 +1,1285 @@
+{
+  "method": "native-line-grid-consistency/experiment-1",
+  "source_sha256": "3b0cdf01f72b518710d5af9c1d8ccaa653c381f45053c7b20a102e06c1de4b20",
+  "page_reference": {
+    "scope_id": "page:28",
+    "page_index": 27,
+    "page": 28
+  },
+  "rejected": [
+    {
+      "candidate": {
+        "id": "block-4759623c2382f78bab8d39d3",
+        "type": "table",
+        "text": "",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:28",
+            "page_index": 27,
+            "page": 28,
+            "bbox": [
+              46.666666666666664,
+              61.333333333333336,
+              541.3333333333334,
+              101.33333333333333
+            ]
+          }
+        ],
+        "table": {
+          "rows": [
+            [
+              "1 .1",
+              "",
+              "Criterion 1.1 – Legal Compliance",
+              "",
+              "",
+              "Legal Compliance",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "merges": [],
+          "notes": []
+        }
+      },
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            46.666666666666664,
+            61.333333333333336,
+            541.3333333333334,
+            101.33333333333333
+          ]
+        }
+      ],
+      "method": "native-line-grid-consistency/experiment-1",
+      "tolerance_points": 1.0,
+      "reject_ratio": 0.25,
+      "captured_line_denominator": 4,
+      "crossing_line_numerator": 2,
+      "crossing_ratio": 0.5,
+      "reject": true,
+      "cells": [
+        {
+          "row": 0,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            46.666666666666664,
+            61.333333333333336,
+            108.66666666666667,
+            101.33333333333333
+          ]
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            108.66666666666667,
+            61.333333333333336,
+            119.33333333333333,
+            101.33333333333333
+          ]
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            119.33333333333333,
+            61.333333333333336,
+            143.33333333333334,
+            101.33333333333333
+          ]
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            143.33333333333334,
+            61.333333333333336,
+            156.0,
+            101.33333333333333
+          ]
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            156.0,
+            61.333333333333336,
+            175.33333333333334,
+            101.33333333333333
+          ]
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            175.33333333333334,
+            61.333333333333336,
+            187.33333333333334,
+            101.33333333333333
+          ]
+        },
+        {
+          "row": 0,
+          "col": 6,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            187.33333333333334,
+            61.333333333333336,
+            196.0,
+            101.33333333333333
+          ]
+        },
+        {
+          "row": 0,
+          "col": 7,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            196.0,
+            61.333333333333336,
+            210.66666666666666,
+            101.33333333333333
+          ]
+        },
+        {
+          "row": 0,
+          "col": 8,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            210.66666666666666,
+            61.333333333333336,
+            219.33333333333334,
+            101.33333333333333
+          ]
+        },
+        {
+          "row": 0,
+          "col": 9,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            219.33333333333334,
+            61.333333333333336,
+            234.66666666666666,
+            101.33333333333333
+          ]
+        },
+        {
+          "row": 0,
+          "col": 10,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            234.66666666666666,
+            61.333333333333336,
+            511.3333333333333,
+            101.33333333333333
+          ]
+        },
+        {
+          "row": 0,
+          "col": 11,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            511.3333333333333,
+            61.333333333333336,
+            520.0,
+            101.33333333333333
+          ]
+        },
+        {
+          "row": 0,
+          "col": 12,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            520.0,
+            61.333333333333336,
+            526.6666666666666,
+            101.33333333333333
+          ]
+        },
+        {
+          "row": 0,
+          "col": 13,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            526.6666666666666,
+            61.333333333333336,
+            541.3333333333334,
+            101.33333333333333
+          ]
+        }
+      ],
+      "captured_lines": [
+        {
+          "line": {
+            "id": "native_p0000_ft000008",
+            "text": "Criterion 1.1 – Legal Compliance",
+            "bbox_points": [
+              51.41183853149414,
+              69.92926025390625,
+              222.90798950195312,
+              80.362548828125
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 0,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              119.33333333333333,
+              61.333333333333336,
+              143.33333333333334,
+              101.33333333333333
+            ]
+          },
+          "internal_overflow_points": [
+            67.92149480183919,
+            79.57465616861978,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": true,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0000_ft000027",
+            "text": "1",
+            "bbox_points": [
+              66.26423645019531,
+              75.8719482421875,
+              74.26020050048828,
+              89.89996337890625
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 0,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              46.666666666666664,
+              61.333333333333336,
+              108.66666666666667,
+              101.33333333333333
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0000_ft000028",
+            "text": "Legal Compliance",
+            "bbox_points": [
+              121.0999984741211,
+              76.6519775390625,
+              238.14199829101562,
+              88.7239990234375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 0,
+            "col": 5,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              175.33333333333334,
+              61.333333333333336,
+              187.33333333333334,
+              101.33333333333333
+            ]
+          },
+          "internal_overflow_points": [
+            54.23333485921225,
+            50.80866495768228,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": true,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0000_ft000029",
+            "text": ".1",
+            "bbox_points": [
+              74.84507751464844,
+              75.8719482421875,
+              93.81564331054688,
+              90.060302734375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 0,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              46.666666666666664,
+              61.333333333333336,
+              108.66666666666667,
+              101.33333333333333
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "original_positioned_line_fallback": [
+        {
+          "id": "native_p0000_ft000008",
+          "text": "Criterion 1.1 – Legal Compliance",
+          "bbox_points": [
+            51.41183853149414,
+            69.92926025390625,
+            222.90798950195312,
+            80.362548828125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000027",
+          "text": "1",
+          "bbox_points": [
+            66.26423645019531,
+            75.8719482421875,
+            74.26020050048828,
+            89.89996337890625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000028",
+          "text": "Legal Compliance",
+          "bbox_points": [
+            121.0999984741211,
+            76.6519775390625,
+            238.14199829101562,
+            88.7239990234375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000029",
+          "text": ".1",
+          "bbox_points": [
+            74.84507751464844,
+            75.8719482421875,
+            93.81564331054688,
+            90.060302734375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        }
+      ],
+      "interpretation": "Grid inconsistency only; visible-source/table/heading correctness unverified."
+    },
+    {
+      "candidate": {
+        "id": "block-0031678dbbee5f7883675be2",
+        "type": "table",
+        "text": "",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:28",
+            "page_index": 27,
+            "page": 28,
+            "bbox": [
+              54.0,
+              334.0,
+              542.0,
+              368.6666666666667
+            ]
+          }
+        ],
+        "table": {
+          "rows": [
+            [
+              "",
+              "",
+              "",
+              "",
+              "Indicators:",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "merges": [],
+          "notes": []
+        }
+      },
+      "source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            54.0,
+            334.0,
+            542.0,
+            368.6666666666667
+          ]
+        }
+      ],
+      "method": "native-line-grid-consistency/experiment-1",
+      "tolerance_points": 1.0,
+      "reject_ratio": 0.25,
+      "captured_line_denominator": 1,
+      "crossing_line_numerator": 1,
+      "crossing_ratio": 1.0,
+      "reject": true,
+      "cells": [
+        {
+          "row": 0,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            54.0,
+            334.0,
+            63.333333333333336,
+            368.6666666666667
+          ]
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            63.333333333333336,
+            334.0,
+            70.66666666666667,
+            368.6666666666667
+          ]
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            70.66666666666667,
+            334.0,
+            73.33333333333333,
+            368.6666666666667
+          ]
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            73.33333333333333,
+            334.0,
+            79.33333333333333,
+            368.6666666666667
+          ]
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            79.33333333333333,
+            334.0,
+            85.33333333333333,
+            368.6666666666667
+          ]
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            85.33333333333333,
+            334.0,
+            96.66666666666667,
+            368.6666666666667
+          ]
+        },
+        {
+          "row": 0,
+          "col": 6,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            96.66666666666667,
+            334.0,
+            100.66666666666667,
+            368.6666666666667
+          ]
+        },
+        {
+          "row": 0,
+          "col": 7,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            100.66666666666667,
+            334.0,
+            542.0,
+            368.6666666666667
+          ]
+        }
+      ],
+      "captured_lines": [
+        {
+          "line": {
+            "id": "native_p0000_ft000019",
+            "text": "Indicators:",
+            "bbox_points": [
+              54.70668029785156,
+              343.93145751953125,
+              108.73088073730469,
+              351.8397216796875
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 0,
+            "col": 4,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              79.33333333333333,
+              334.0,
+              85.33333333333333,
+              368.6666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            24.626653035481766,
+            23.39754740397136,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": true,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "original_positioned_line_fallback": [
+        {
+          "id": "native_p0000_ft000019",
+          "text": "Indicators:",
+          "bbox_points": [
+            54.70668029785156,
+            343.93145751953125,
+            108.73088073730469,
+            351.8397216796875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        }
+      ],
+      "interpretation": "Grid inconsistency only; visible-source/table/heading correctness unverified."
+    }
+  ],
+  "inspected": [
+    {
+      "candidate_id": "block-4759623c2382f78bab8d39d3",
+      "method": "native-line-grid-consistency/experiment-1",
+      "tolerance_points": 1.0,
+      "reject_ratio": 0.25,
+      "captured_line_denominator": 4,
+      "crossing_line_numerator": 2,
+      "crossing_ratio": 0.5,
+      "reject": true,
+      "cells": [
+        {
+          "row": 0,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            46.666666666666664,
+            61.333333333333336,
+            108.66666666666667,
+            101.33333333333333
+          ]
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            108.66666666666667,
+            61.333333333333336,
+            119.33333333333333,
+            101.33333333333333
+          ]
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            119.33333333333333,
+            61.333333333333336,
+            143.33333333333334,
+            101.33333333333333
+          ]
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            143.33333333333334,
+            61.333333333333336,
+            156.0,
+            101.33333333333333
+          ]
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            156.0,
+            61.333333333333336,
+            175.33333333333334,
+            101.33333333333333
+          ]
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            175.33333333333334,
+            61.333333333333336,
+            187.33333333333334,
+            101.33333333333333
+          ]
+        },
+        {
+          "row": 0,
+          "col": 6,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            187.33333333333334,
+            61.333333333333336,
+            196.0,
+            101.33333333333333
+          ]
+        },
+        {
+          "row": 0,
+          "col": 7,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            196.0,
+            61.333333333333336,
+            210.66666666666666,
+            101.33333333333333
+          ]
+        },
+        {
+          "row": 0,
+          "col": 8,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            210.66666666666666,
+            61.333333333333336,
+            219.33333333333334,
+            101.33333333333333
+          ]
+        },
+        {
+          "row": 0,
+          "col": 9,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            219.33333333333334,
+            61.333333333333336,
+            234.66666666666666,
+            101.33333333333333
+          ]
+        },
+        {
+          "row": 0,
+          "col": 10,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            234.66666666666666,
+            61.333333333333336,
+            511.3333333333333,
+            101.33333333333333
+          ]
+        },
+        {
+          "row": 0,
+          "col": 11,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            511.3333333333333,
+            61.333333333333336,
+            520.0,
+            101.33333333333333
+          ]
+        },
+        {
+          "row": 0,
+          "col": 12,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            520.0,
+            61.333333333333336,
+            526.6666666666666,
+            101.33333333333333
+          ]
+        },
+        {
+          "row": 0,
+          "col": 13,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            526.6666666666666,
+            61.333333333333336,
+            541.3333333333334,
+            101.33333333333333
+          ]
+        }
+      ],
+      "captured_lines": [
+        {
+          "line": {
+            "id": "native_p0000_ft000008",
+            "text": "Criterion 1.1 – Legal Compliance",
+            "bbox_points": [
+              51.41183853149414,
+              69.92926025390625,
+              222.90798950195312,
+              80.362548828125
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 0,
+            "col": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              119.33333333333333,
+              61.333333333333336,
+              143.33333333333334,
+              101.33333333333333
+            ]
+          },
+          "internal_overflow_points": [
+            67.92149480183919,
+            79.57465616861978,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": true,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0000_ft000027",
+            "text": "1",
+            "bbox_points": [
+              66.26423645019531,
+              75.8719482421875,
+              74.26020050048828,
+              89.89996337890625
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 0,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              46.666666666666664,
+              61.333333333333336,
+              108.66666666666667,
+              101.33333333333333
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0000_ft000028",
+            "text": "Legal Compliance",
+            "bbox_points": [
+              121.0999984741211,
+              76.6519775390625,
+              238.14199829101562,
+              88.7239990234375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 0,
+            "col": 5,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              175.33333333333334,
+              61.333333333333336,
+              187.33333333333334,
+              101.33333333333333
+            ]
+          },
+          "internal_overflow_points": [
+            54.23333485921225,
+            50.80866495768228,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": true,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "line": {
+            "id": "native_p0000_ft000029",
+            "text": ".1",
+            "bbox_points": [
+              74.84507751464844,
+              75.8719482421875,
+              93.81564331054688,
+              90.060302734375
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 0,
+            "col": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              46.666666666666664,
+              61.333333333333336,
+              108.66666666666667,
+              101.33333333333333
+            ]
+          },
+          "internal_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": false,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "original_positioned_line_fallback": [
+        {
+          "id": "native_p0000_ft000008",
+          "text": "Criterion 1.1 – Legal Compliance",
+          "bbox_points": [
+            51.41183853149414,
+            69.92926025390625,
+            222.90798950195312,
+            80.362548828125
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000027",
+          "text": "1",
+          "bbox_points": [
+            66.26423645019531,
+            75.8719482421875,
+            74.26020050048828,
+            89.89996337890625
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000028",
+          "text": "Legal Compliance",
+          "bbox_points": [
+            121.0999984741211,
+            76.6519775390625,
+            238.14199829101562,
+            88.7239990234375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        },
+        {
+          "id": "native_p0000_ft000029",
+          "text": ".1",
+          "bbox_points": [
+            74.84507751464844,
+            75.8719482421875,
+            93.81564331054688,
+            90.060302734375
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        }
+      ],
+      "interpretation": "Grid inconsistency only; visible-source/table/heading correctness unverified."
+    },
+    {
+      "candidate_id": "block-0031678dbbee5f7883675be2",
+      "method": "native-line-grid-consistency/experiment-1",
+      "tolerance_points": 1.0,
+      "reject_ratio": 0.25,
+      "captured_line_denominator": 1,
+      "crossing_line_numerator": 1,
+      "crossing_ratio": 1.0,
+      "reject": true,
+      "cells": [
+        {
+          "row": 0,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            54.0,
+            334.0,
+            63.333333333333336,
+            368.6666666666667
+          ]
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            63.333333333333336,
+            334.0,
+            70.66666666666667,
+            368.6666666666667
+          ]
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            70.66666666666667,
+            334.0,
+            73.33333333333333,
+            368.6666666666667
+          ]
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            73.33333333333333,
+            334.0,
+            79.33333333333333,
+            368.6666666666667
+          ]
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            79.33333333333333,
+            334.0,
+            85.33333333333333,
+            368.6666666666667
+          ]
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            85.33333333333333,
+            334.0,
+            96.66666666666667,
+            368.6666666666667
+          ]
+        },
+        {
+          "row": 0,
+          "col": 6,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            96.66666666666667,
+            334.0,
+            100.66666666666667,
+            368.6666666666667
+          ]
+        },
+        {
+          "row": 0,
+          "col": 7,
+          "rowspan": 1,
+          "colspan": 1,
+          "bbox": [
+            100.66666666666667,
+            334.0,
+            542.0,
+            368.6666666666667
+          ]
+        }
+      ],
+      "captured_lines": [
+        {
+          "line": {
+            "id": "native_p0000_ft000019",
+            "text": "Indicators:",
+            "bbox_points": [
+              54.70668029785156,
+              343.93145751953125,
+              108.73088073730469,
+              351.8397216796875
+            ],
+            "confidence": 0.95,
+            "object_type": "text_line",
+            "font_name": null,
+            "font_key": null,
+            "from_ocr": null
+          },
+          "owner": {
+            "row": 0,
+            "col": 4,
+            "rowspan": 1,
+            "colspan": 1,
+            "bbox": [
+              79.33333333333333,
+              334.0,
+              85.33333333333333,
+              368.6666666666667
+            ]
+          },
+          "internal_overflow_points": [
+            24.626653035481766,
+            23.39754740397136,
+            0.0,
+            0.0
+          ],
+          "crosses_internal_boundary": true,
+          "external_overflow_points": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "original_positioned_line_fallback": [
+        {
+          "id": "native_p0000_ft000019",
+          "text": "Indicators:",
+          "bbox_points": [
+            54.70668029785156,
+            343.93145751953125,
+            108.73088073730469,
+            351.8397216796875
+          ],
+          "confidence": 0.95,
+          "object_type": "text_line",
+          "font_name": null,
+          "font_key": null,
+          "from_ocr": null
+        }
+      ],
+      "interpretation": "Grid inconsistency only; visible-source/table/heading correctness unverified."
+    }
+  ]
+}

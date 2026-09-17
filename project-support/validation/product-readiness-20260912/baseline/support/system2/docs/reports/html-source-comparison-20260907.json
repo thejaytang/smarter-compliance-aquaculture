@@ -1,0 +1,50 @@
+{
+  "legacy_sha256": "83054a2b4bed425c4a8fc929ec93314926f21ff5db5d0ec0ee5189437c7d04eb",
+  "samples": [
+    {
+      "snapshot_id": "PA001-001",
+      "source_sha256": "8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967",
+      "paragraphs": 42,
+      "chapters": 8,
+      "legacy_differences": [],
+      "dom_text_checks": 42,
+      "issues": [
+        "paragraph_without_p_text:html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(8) > div:nth-of-type(4)"
+      ],
+      "source_unchanged": true,
+      "spot_checks": [
+        {
+          "paragraph_id": "PARAGRAF_1",
+          "text": "Loven skal fremme akvakulturnæringens lønnsomhet og konkurransekraft innenfor rammene av en bærekraftig utvikling, og bidra til verdiskaping på kysten."
+        },
+        {
+          "paragraph_id": "PARAGRAF_2",
+          "text": "Loven gjelder produksjon av akvatiske organismer (akvakultur). Med akvatiske organismer forstås vannlevende dyr og planter. Som produksjon regnes ethvert tiltak for å påvirke levende akvatiske organismers vekt, størrelse, antall, egenskaper eller kvalitet. I tvilstilfeller kan departementet i enkeltvedtak eller forskrift bestemme hva som anses som akvakultur.\nLoven gjelder også anlegg ment for akvakultur, herunder anlegg uten akvatiske organismer.\nLovens § 12 og kapittel VI til VIII gjelder også"
+        }
+      ]
+    },
+    {
+      "snapshot_id": "PA002-001",
+      "source_sha256": "19a632a343fe10fa8262a0ed8df8daa6d3e96e34ff686704da4c28e3671b2833",
+      "paragraphs": 20,
+      "chapters": 19,
+      "legacy_differences": [],
+      "dom_text_checks": 20,
+      "issues": [],
+      "source_unchanged": true,
+      "spot_checks": [
+        {
+          "paragraph_id": "PARAGRAF_1",
+          "text": "Forskriften skal fremme akvakulturnæringens lønnsomhet og konkurransekraft innenfor rammene av en miljømessig bærekraftig utvikling og bidra til verdiskaping på kysten, ved opprettelse av produksjonsområder og regulering av produksjonskapasitet for akvakultur med laks, ørret og regnbueørret."
+        },
+        {
+          "paragraph_id": "PARAGRAF_2",
+          "text": "Forskriften gjelder for norsk landterritorium og territorialfarvann, på kontinentalsokkelen og i Norges økonomiske sone.\nForskriften gjelder opprettelse av produksjonsområder for kommersielle tillatelser til akvakultur av matfisk med laks, ørret og regnbueørret i sjø, og regulering av produksjonskapasiteten innenfor disse. Forskriften gjelder ikke regulering av produksjonskapasitet på lokaliteter.\nForskriften gjelder ikke tillatelser til særlige formål etter forskrift 7. november 2022 nr. 1929 o"
+        }
+      ]
+    }
+  ],
+  "negative_control": [
+    "HtmlError:html_template_mismatch"
+  ]
+}

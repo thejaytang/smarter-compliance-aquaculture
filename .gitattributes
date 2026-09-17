@@ -11,3 +11,7 @@ workbench/frontend/assets/vendor/** -text
 
 # Preserve PDF byte offsets and treat PDF assets as binary.
 *.pdf binary
+
+# Preserve historical evidence and original test-fixture bytes on this branch.
+project-support/** -text
+workbench/tests/**/fixtures/** -text

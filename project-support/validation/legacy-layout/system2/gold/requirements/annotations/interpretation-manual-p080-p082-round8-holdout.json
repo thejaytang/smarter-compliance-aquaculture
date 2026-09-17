@@ -1,0 +1,381 @@
+{
+  "schema_version": "4.0",
+  "gold_revision": 1,
+  "supersedes": null,
+  "supersedes_sha256": null,
+  "revision_reason": "Initial source-only Gold annotation for the Round 8 frozen holdout, created before parser prediction.",
+  "sample_id": "interpretation-manual-p080-p082-round8-holdout",
+  "source": {
+    "file_name": "ASC-INT-001-ASC-Farm-Standard-Interpretation-Manual-V1.0-May-2025.pdf",
+    "sha256": "804ead3d1d1a53019869b5385dabfb86356b8276b990538c0d782e750167777e",
+    "language": "en",
+    "document_family": "interpretation_manual",
+    "page_count": 511
+  },
+  "sample": {
+    "round_id": "goal04-round8",
+    "split": "holdout",
+    "page_numbers": [80, 81, 82],
+    "selection_rationale": "Untouched three-page Interpretation Manual window testing repeated Requirement rows, directly linked exemptions, applicability, internal references, and modal-bearing interpretation text continuing across pages."
+  },
+  "supporting_page_numbers": [],
+  "supporting_segment_ids": [],
+  "annotation": {
+    "status": "frozen",
+    "frozen_at": "2026-08-28",
+    "verification": ["visual_page", "native_text"],
+    "notes": [
+      "Frozen before any parser prediction or current output for pages 80-82 was generated or inspected.",
+      "Pass 1 reconciled the rendered pages with docling-parse native lines; pass 2 independently checked the three-ID sequence and exact wording with Poppler layout text.",
+      "Pages 81-82 contain interpretation continuing from page 80 and no additional formal Requirement row.",
+      "The modal-bearing interpretation statements on pages 81-82 are contextual guidance and must not be promoted to standalone Requirements.",
+      "Footnotes 10 and 11 are directly linked exemptions and therefore belong to Requirements 2.5.1 and 2.5.2 respectively."
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "p80-criterion-2.5",
+      "page_number": 80,
+      "page_index": 79,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 51.0, "y0": 68.084, "x1": 243.902, "y1": 82.712},
+      "role": "criterion_heading",
+      "object_kind": "text_block",
+      "segment_order": 0,
+      "source_text": "Criterion 2.5 - Benthic Impact"
+    },
+    {
+      "segment_id": "p80-r2.5.1-id",
+      "page_number": 80,
+      "page_index": 79,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.904, "y0": 157.66928, "x1": 85.98684, "y1": 174.78404},
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 1,
+      "source_text": "2.5.1"
+    },
+    {
+      "segment_id": "p80-r2.5.1-applicability",
+      "page_number": 80,
+      "page_index": 79,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 157.76336, "x1": 486.90376, "y1": 169.31948},
+      "role": "applicability",
+      "object_kind": "table_cell",
+      "segment_order": 2,
+      "source_text": "cage culture and suspended marine mollusc systems"
+    },
+    {
+      "segment_id": "p80-r2.5.1-normative",
+      "page_number": 80,
+      "page_index": 79,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 179.96336, "x1": 535.42168, "y1": 207.71948},
+      "role": "normative_text",
+      "object_kind": "table_cell",
+      "segment_order": 3,
+      "source_text": "The UoC shall determine benthic status, following the method outlined in Appendix 7 (7.2.1, 7.3.1, 7.4.1, 7.7)."
+    },
+    {
+      "segment_id": "p80-r2.5.2-id",
+      "page_number": 80,
+      "page_index": 79,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.904, "y0": 236.17928, "x1": 90.03732, "y1": 253.29404},
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 4,
+      "source_text": "2.5.2"
+    },
+    {
+      "segment_id": "p80-r2.5.2-applicability",
+      "page_number": 80,
+      "page_index": 79,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 236.27336, "x1": 486.90376, "y1": 247.82948},
+      "role": "applicability",
+      "object_kind": "table_cell",
+      "segment_order": 5,
+      "source_text": "cage culture and suspended marine mollusc systems"
+    },
+    {
+      "segment_id": "p80-r2.5.2-normative",
+      "page_number": 80,
+      "page_index": 79,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 258.47336, "x1": 507.35356, "y1": 286.22948},
+      "role": "normative_text",
+      "object_kind": "table_cell",
+      "segment_order": 6,
+      "source_text": "The UoC shall demonstrate an 'Acceptable' benthic status, following the method outlined in Appendix 7 (7.2.2, 7.3.2, 7.4.2)."
+    },
+    {
+      "segment_id": "p80-r2.5.3-id",
+      "page_number": 80,
+      "page_index": 79,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.904, "y0": 314.53928, "x1": 90.03732, "y1": 331.65404},
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 7,
+      "source_text": "2.5.3"
+    },
+    {
+      "segment_id": "p80-r2.5.3-applicability",
+      "page_number": 80,
+      "page_index": 79,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 311.63336, "x1": 484.2358, "y1": 323.18948},
+      "role": "applicability",
+      "object_kind": "table_cell",
+      "segment_order": 8,
+      "source_text": "cage culture and suspended marine mollusc systems"
+    },
+    {
+      "segment_id": "p80-r2.5.3-normative",
+      "page_number": 80,
+      "page_index": 79,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 330.95336, "x1": 533.65604, "y1": 391.22948},
+      "role": "normative_text",
+      "object_kind": "table_cell",
+      "segment_order": 9,
+      "source_text": "The UoC shall ensure that the person conducting sediment sampling and analysis (see Indicator 2.5.1) is independent and has the necessary competencies, experience and training. In cases where regulatory requirements are defined, the UoC shall ensure that the person conducting the sampling and analysis complies with these requirements."
+    },
+    {
+      "segment_id": "p80-footnote-10",
+      "page_number": 80,
+      "page_index": 79,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 51.0, "y0": 696.26128, "x1": 534.06132, "y1": 715.87804},
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 10,
+      "source_text": "An exemption applies to sites situated in areas classified as having a 'hard bottom'. Evidence is required to support the classification 'hard bottom'."
+    },
+    {
+      "segment_id": "p80-footnote-11",
+      "page_number": 80,
+      "page_index": 79,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 51.0, "y0": 715.70128, "x1": 546.28792, "y1": 745.17804},
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 11,
+      "source_text": "An exemption applies to cage sites situated in lakes and reservoirs, where determination of benthic status is required (Indicator 2.5.1) but demonstration that the status is 'Acceptable' is not required for the first three years of the ASC Farm Standard being effective."
+    },
+    {
+      "segment_id": "p80-interpretation-heading",
+      "page_number": 80,
+      "page_index": 79,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.904, "y0": 416.42872, "x1": 252.70868, "y1": 428.56996},
+      "role": "interpretation",
+      "object_kind": "text_block",
+      "segment_order": 12,
+      "source_text": "How do I interpret this requirement?"
+    },
+    {
+      "segment_id": "p81-modal-guidance",
+      "page_number": 81,
+      "page_index": 80,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 128.54, "y0": 248.64872, "x1": 548.04692, "y1": 335.06996},
+      "role": "interpretation",
+      "object_kind": "list",
+      "segment_order": 13,
+      "source_text": "Sites should select biotic indicators that are more appropriate based on their location or based on regulatory requirements. In Scotland, sites should select AZTI's Marine Biotic Index (AMBI) as one of the biotic indicators since it is a component of the Infaunal Quality Index (IQI) required by the regulation in that country."
+    },
+    {
+      "segment_id": "p82-sampling-guidance",
+      "page_number": 82,
+      "page_index": 81,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 71.904, "y0": 425.18872, "x1": 544.83468, "y1": 454.48996},
+      "role": "interpretation",
+      "object_kind": "list",
+      "segment_order": 14,
+      "source_text": "Sampling is required to be conducted during the period when the benthic impact is expected to be highest, i.e. at peak impact, and uses proxies for determining peak impact."
+    },
+    {
+      "segment_id": "p82-shall-guidance",
+      "page_number": 82,
+      "page_index": 81,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 107.3, "y0": 560.81872, "x1": 532.88952, "y1": 640.15996},
+      "role": "interpretation",
+      "object_kind": "list",
+      "segment_order": 15,
+      "source_text": "By considering these proxies, cage culture sites shall (see Appendix 7 (7.2.1 and 7.3.1)): Provide the CAB with information on when the highest impact on the benthos is predicted to occur. Determine the timing sampling that applies."
+    }
+  ],
+  "requirements": [
+    {
+      "requirement_id": "2.5.1",
+      "requirement_form": "requirement_table",
+      "criterion_path": ["Principle 2", "Criterion 2.5 - Benthic Impact"],
+      "language": "en",
+      "indicator_text": null,
+      "requirement_value": null,
+      "normative_text": "The UoC shall determine benthic status, following the method outlined in Appendix 7 (7.2.1, 7.3.1, 7.4.1, 7.7).",
+      "normative_subjects": ["The UoC"],
+      "applicability": ["cage culture and suspended marine mollusc systems"],
+      "modalities": [
+        {
+          "token": "shall",
+          "type": "obligation",
+          "scope": "determine benthic status, following the method outlined in Appendix 7 (7.2.1, 7.3.1, 7.4.1, 7.7)",
+          "scope_ref": {"kind": "field", "target": "normative_text", "anchors": [{"source_segment_id": "p80-r2.5.1-normative", "start_char": 0, "end_char": 111, "text": "The UoC shall determine benthic status, following the method outlined in Appendix 7 (7.2.1, 7.3.1, 7.4.1, 7.7)."}]}
+        }
+      ],
+      "negations": [],
+      "clauses": [{"clause_id": "2.5.1-main", "parent_clause_id": null, "marker": null, "text": "The UoC shall determine benthic status, following the method outlined in Appendix 7 (7.2.1, 7.3.1, 7.4.1, 7.7).", "joins_next": null}],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [
+        {
+          "text": "An exemption applies to sites situated in areas classified as having a 'hard bottom'.",
+          "applies_to": "Requirement 2.5.1",
+          "scope_ref": {"kind": "requirement", "target": "requirement:2.5.1", "anchors": [{"source_segment_id": "p80-r2.5.1-normative", "start_char": 0, "end_char": 111, "text": "The UoC shall determine benthic status, following the method outlined in Appendix 7 (7.2.1, 7.3.1, 7.4.1, 7.7)."}]}
+        }
+      ],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [{"text": "Appendix 7 (7.2.1, 7.3.1, 7.4.1, 7.7)", "target": "Appendix 7 (7.2.1, 7.3.1, 7.4.1, 7.7)", "type": "internal_exact"}],
+      "footnote_refs": [{"marker": "10", "text": "An exemption applies to sites situated in areas classified as having a 'hard bottom'. Evidence is required to support the classification 'hard bottom'.", "link_type": "direct", "source_segment_ids": ["p80-footnote-10"]}],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["p80-criterion-2.5", "p80-interpretation-heading", "p81-modal-guidance", "p82-sampling-guidance", "p82-shall-guidance"],
+      "source_segment_ids": ["p80-r2.5.1-id", "p80-r2.5.1-applicability", "p80-r2.5.1-normative", "p80-footnote-10"],
+      "source_anomalies": [],
+      "gold_notes": ["Footnote 10 is part of the formal Requirement semantics; the later modal-bearing interpretation remains context only."],
+      "normative_subject_evidence": [{"text": "The UoC", "basis": "explicit", "source_segment_ids": ["p80-r2.5.1-normative"], "anchors": [{"source_segment_id": "p80-r2.5.1-normative", "start_char": 0, "end_char": 7, "text": "The UoC"}]}],
+      "applicability_evidence": [{"text": "cage culture and suspended marine mollusc systems", "basis": "explicit", "source_segment_ids": ["p80-r2.5.1-applicability"], "anchors": [{"source_segment_id": "p80-r2.5.1-applicability", "start_char": 0, "end_char": 49, "text": "cage culture and suspended marine mollusc systems"}]}]
+    },
+    {
+      "requirement_id": "2.5.2",
+      "requirement_form": "requirement_table",
+      "criterion_path": ["Principle 2", "Criterion 2.5 - Benthic Impact"],
+      "language": "en",
+      "indicator_text": null,
+      "requirement_value": null,
+      "normative_text": "The UoC shall demonstrate an 'Acceptable' benthic status, following the method outlined in Appendix 7 (7.2.2, 7.3.2, 7.4.2).",
+      "normative_subjects": ["The UoC"],
+      "applicability": ["cage culture and suspended marine mollusc systems"],
+      "modalities": [
+        {
+          "token": "shall",
+          "type": "obligation",
+          "scope": "demonstrate an 'Acceptable' benthic status, following the method outlined in Appendix 7 (7.2.2, 7.3.2, 7.4.2)",
+          "scope_ref": {"kind": "field", "target": "normative_text", "anchors": [{"source_segment_id": "p80-r2.5.2-normative", "start_char": 0, "end_char": 124, "text": "The UoC shall demonstrate an 'Acceptable' benthic status, following the method outlined in Appendix 7 (7.2.2, 7.3.2, 7.4.2)."}]}
+        }
+      ],
+      "negations": [],
+      "clauses": [{"clause_id": "2.5.2-main", "parent_clause_id": null, "marker": null, "text": "The UoC shall demonstrate an 'Acceptable' benthic status, following the method outlined in Appendix 7 (7.2.2, 7.3.2, 7.4.2).", "joins_next": null}],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [
+        {
+          "text": "An exemption applies to cage sites situated in lakes and reservoirs, where determination of benthic status is required (Indicator 2.5.1) but demonstration that the status is 'Acceptable' is not required for the first three years of the ASC Farm Standard being effective.",
+          "applies_to": "Requirement 2.5.2",
+          "scope_ref": {"kind": "requirement", "target": "requirement:2.5.2", "anchors": [{"source_segment_id": "p80-r2.5.2-normative", "start_char": 0, "end_char": 124, "text": "The UoC shall demonstrate an 'Acceptable' benthic status, following the method outlined in Appendix 7 (7.2.2, 7.3.2, 7.4.2)."}]}
+        }
+      ],
+      "thresholds": [],
+      "dates": [
+        {
+          "text": "the first three years of the ASC Farm Standard being effective",
+          "applies_to": "the exemption from demonstrating an 'Acceptable' benthic status",
+          "scope_ref": {"kind": "footnote", "target": "footnote:11", "anchors": [{"source_segment_id": "p80-footnote-11", "start_char": 207, "end_char": 269, "text": "the first three years of the ASC Farm Standard being effective"}]}
+        }
+      ],
+      "cross_references": [
+        {"text": "Appendix 7 (7.2.2, 7.3.2, 7.4.2)", "target": "Appendix 7 (7.2.2, 7.3.2, 7.4.2)", "type": "internal_exact"},
+        {"text": "Indicator 2.5.1", "target": "2.5.1", "type": "internal_exact"}
+      ],
+      "footnote_refs": [{"marker": "11", "text": "An exemption applies to cage sites situated in lakes and reservoirs, where determination of benthic status is required (Indicator 2.5.1) but demonstration that the status is 'Acceptable' is not required for the first three years of the ASC Farm Standard being effective.", "link_type": "direct", "source_segment_ids": ["p80-footnote-11"]}],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["p80-criterion-2.5", "p80-interpretation-heading", "p81-modal-guidance", "p82-sampling-guidance", "p82-shall-guidance"],
+      "source_segment_ids": ["p80-r2.5.2-id", "p80-r2.5.2-applicability", "p80-r2.5.2-normative", "p80-footnote-11"],
+      "source_anomalies": [],
+      "gold_notes": ["Footnote 11 provides a time-bounded exemption and directly cross-references Indicator 2.5.1."],
+      "normative_subject_evidence": [{"text": "The UoC", "basis": "explicit", "source_segment_ids": ["p80-r2.5.2-normative"], "anchors": [{"source_segment_id": "p80-r2.5.2-normative", "start_char": 0, "end_char": 7, "text": "The UoC"}]}],
+      "applicability_evidence": [{"text": "cage culture and suspended marine mollusc systems", "basis": "explicit", "source_segment_ids": ["p80-r2.5.2-applicability"], "anchors": [{"source_segment_id": "p80-r2.5.2-applicability", "start_char": 0, "end_char": 49, "text": "cage culture and suspended marine mollusc systems"}]}]
+    },
+    {
+      "requirement_id": "2.5.3",
+      "requirement_form": "requirement_table",
+      "criterion_path": ["Principle 2", "Criterion 2.5 - Benthic Impact"],
+      "language": "en",
+      "indicator_text": null,
+      "requirement_value": null,
+      "normative_text": "The UoC shall ensure that the person conducting sediment sampling and analysis (see Indicator 2.5.1) is independent and has the necessary competencies, experience and training. In cases where regulatory requirements are defined, the UoC shall ensure that the person conducting the sampling and analysis complies with these requirements.",
+      "normative_subjects": ["The UoC"],
+      "applicability": ["cage culture and suspended marine mollusc systems"],
+      "modalities": [
+        {
+          "token": "shall",
+          "type": "obligation",
+          "scope": "ensure that the person conducting sediment sampling and analysis is independent and has the necessary competencies, experience and training",
+          "scope_ref": {"kind": "clause", "target": "clause:2.5.3-a", "anchors": [{"source_segment_id": "p80-r2.5.3-normative", "start_char": 0, "end_char": 176, "text": "The UoC shall ensure that the person conducting sediment sampling and analysis (see Indicator 2.5.1) is independent and has the necessary competencies, experience and training."}]}
+        },
+        {
+          "token": "shall",
+          "type": "obligation",
+          "scope": "ensure that the person conducting the sampling and analysis complies with defined regulatory requirements",
+          "scope_ref": {"kind": "clause", "target": "clause:2.5.3-b", "anchors": [{"source_segment_id": "p80-r2.5.3-normative", "start_char": 177, "end_char": 336, "text": "In cases where regulatory requirements are defined, the UoC shall ensure that the person conducting the sampling and analysis complies with these requirements."}]}
+        }
+      ],
+      "negations": [],
+      "clauses": [
+        {"clause_id": "2.5.3-a", "parent_clause_id": null, "marker": null, "text": "The UoC shall ensure that the person conducting sediment sampling and analysis (see Indicator 2.5.1) is independent and has the necessary competencies, experience and training.", "joins_next": null},
+        {"clause_id": "2.5.3-b", "parent_clause_id": null, "marker": null, "text": "In cases where regulatory requirements are defined, the UoC shall ensure that the person conducting the sampling and analysis complies with these requirements.", "joins_next": null}
+      ],
+      "conditions": [
+        {
+          "text": "In cases where regulatory requirements are defined",
+          "applies_to": "the UoC ensures that the person conducting sampling and analysis complies with those requirements",
+          "scope_ref": {"kind": "clause", "target": "clause:2.5.3-b", "anchors": [{"source_segment_id": "p80-r2.5.3-normative", "start_char": 177, "end_char": 227, "text": "In cases where regulatory requirements are defined"}]}
+        }
+      ],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [{"text": "Indicator 2.5.1", "target": "2.5.1", "type": "internal_exact"}],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["p80-criterion-2.5", "p80-interpretation-heading", "p81-modal-guidance", "p82-sampling-guidance", "p82-shall-guidance"],
+      "source_segment_ids": ["p80-r2.5.3-id", "p80-r2.5.3-applicability", "p80-r2.5.3-normative"],
+      "source_anomalies": [],
+      "gold_notes": ["The two shall clauses are separate obligations; the second is conditional on defined regulatory requirements."],
+      "normative_subject_evidence": [{"text": "The UoC", "basis": "explicit", "source_segment_ids": ["p80-r2.5.3-normative"], "anchors": [{"source_segment_id": "p80-r2.5.3-normative", "start_char": 0, "end_char": 7, "text": "The UoC"}]}],
+      "applicability_evidence": [{"text": "cage culture and suspended marine mollusc systems", "basis": "explicit", "source_segment_ids": ["p80-r2.5.3-applicability"], "anchors": [{"source_segment_id": "p80-r2.5.3-applicability", "start_char": 0, "end_char": 49, "text": "cage culture and suspended marine mollusc systems"}]}]
+    }
+  ],
+  "excluded_regions": [
+    {
+      "source_segment_ids": ["p80-criterion-2.5"],
+      "classification": "other_non_requirement",
+      "reason": "The criterion heading supplies hierarchy but is not a formal Requirement row."
+    },
+    {
+      "source_segment_ids": ["p80-interpretation-heading", "p81-modal-guidance", "p82-sampling-guidance", "p82-shall-guidance"],
+      "classification": "interpretation",
+      "reason": "Interpretation content is linked context; modal words inside it do not create additional formal Requirements."
+    }
+  ],
+  "summary": {
+    "requirement_count": 3,
+    "cross_page_requirement_count": 0,
+    "client_action_count": 0,
+    "auditor_action_count": 0,
+    "critical_gold_ambiguities": []
+  }
+}

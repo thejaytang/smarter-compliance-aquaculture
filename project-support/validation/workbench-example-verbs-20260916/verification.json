@@ -1,0 +1,42 @@
+[
+  {
+    "entry": "R1",
+    "id": "b2fe01c6-f419-56ec-bdb6-cd2ff4b0b40b",
+    "session": "88d0787c-f24f-5fbd-83a2-f3a9450b7e13",
+    "revision": 4,
+    "verbs": [
+      "contain"
+    ],
+    "interpretation_revision": 4
+  },
+  {
+    "entry": "R2",
+    "id": "5da78515-910b-5fb7-ae14-30bb924ff5f8",
+    "session": "0abd542e-a868-59a0-89c8-43b997d404df",
+    "revision": 2,
+    "verbs": [
+      "brought into",
+      "removed from"
+    ],
+    "interpretation_revision": 2
+  },
+  {
+    "entry": "R3",
+    "id": "6c308b1f-a205-5639-9b0d-f88d233e16d8",
+    "session": "d8c05693-8f2a-5ccd-aa33-0e2ae80eef67",
+    "revision": 1,
+    "verbs": [],
+    "interpretation_revision": 1
+  },
+  {
+    "entry": "R4",
+    "id": "9397c424-929b-50c5-b1e5-b3f98b651e17",
+    "session": "027e918c-f220-5c1d-87fc-0c067ba81aaa",
+    "revision": 2,
+    "verbs": [
+      "performed",
+      "carried out"
+    ],
+    "interpretation_revision": 2
+  }
+]

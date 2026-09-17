@@ -1,0 +1,8 @@
+{
+  "id": "asc-salmon-cod",
+  "exit_code": 0,
+  "stdout": "{\"id\": \"asc-salmon-cod\", \"status\": \"partial\", \"block_count\": 16, \"block_types\": {\"text\": 14, \"table\": 2}, \"covered_scope\": [\"page:18\"], \"total_scope_count\": 134, \"warnings\": [\"Native text can differ from visible page marks. Compare it with the original page image. Scanned pages may require manual transcription; no OCR is run when viewing.\", \"Adjacent same-page text fragments were grouped for editing. Original text, numbering and every source fragment remain in extraction evidence; check paragraph boundaries against the original.\", \"PDF candidate uses the existing positioned PDFium parser in mapped three-page windows. Ruled-table grids use existing local geometry assembly. Reading order, headings and unruled tables may need manual correction; source page images and complete native evidence are retained. No Requirement classifier, semantic processor, OCR model or external service runs.\"], \"unresolved\": [], \"requirement_status\": \"not_connected\", \"candidate_path\": \"after-v4-pdf/asc-salmon-cod/candidate.json\", \"mode\": \"after-v4-pdf\", \"baseline_equivalent\": true}\n",
+  "stderr": "",
+  "status": "returned",
+  "elapsed_seconds": 0.886
+}

@@ -1,0 +1,166 @@
+{
+  "status": "copied",
+  "version": "ui-redesign-20260914",
+  "files": [
+    {
+      "path": "workbench/ui/materials.js",
+      "before": "43b82d6910623b475e0c320818125552818fad6f127ed28e2b986a740a8dacc8",
+      "after": "fb06843969b10df8ce2f7b4a6829aec177942abc87cd65e09a65c05784d54332"
+    },
+    {
+      "path": "workbench/ui/index.html",
+      "before": "8fd8861feae256931b0e15561db2061df34b4fefd20b37988288538669da8453",
+      "after": "26d831970096052193f5f6e681b6a0e125afd4a6f44865db3f6812056f21f111"
+    },
+    {
+      "path": "workbench/ui/evidence-viewer.js",
+      "before": "34a64e4e974678f94b10a6c6138960a41abf05247a05e4ff69d9f3c13ed52d39",
+      "after": "69276c80e3681714dad34b7a2393909d2a25541e6362973acbbb7fb1f615e200"
+    },
+    {
+      "path": "workbench/ui/shell-navigation.js",
+      "before": null,
+      "after": "8517d94d460886b7652aa6a2ec56f57cf26772b9cc0fc3b6e724ce2032ccb6c9"
+    },
+    {
+      "path": "workbench/ui/source-workspace.css",
+      "before": "e018e093931da636205b6b0c85672e2f8eef78e77b1c8d91909b0a46dc5c3e88",
+      "after": "974547caa7c0cc2d845fe201b4fdf77ed3b564002e2dfe0e2212c75df6c3fb68"
+    },
+    {
+      "path": "workbench/ui/pdf-reader.js",
+      "before": "496233a197338451371cc65cd024c5bec32751611b98e132ac33417bd68ae609",
+      "after": "53109003955fb25eb066cbfce751ed4318e982fb4f93bffe2175c311aac6beb7"
+    },
+    {
+      "path": "workbench/ui/materials.css",
+      "before": "9166656ad75c34f370654e75df0031031b37efca8583ccce348d598a53f91468",
+      "after": "38eae09e8cabccde9118745194c4c441172f7faccd8cfcf4813c29e0adc1ab44"
+    },
+    {
+      "path": "workbench/ui/collaboration.css",
+      "before": "bffec82cb9d4c07f3fe9f9156c3512268400d8698c578012f81c48ccaa6735e8",
+      "after": "615d43b534906d1a90d061f7b12f151def04642c12e64b7a0f8388017cc92051"
+    },
+    {
+      "path": "workbench/ui/source-workspace.js",
+      "before": "ee464d44de1b691aee045c2f68dc119cb6fa731f998d03ee0ca712fc8f2b4378",
+      "after": "dad9462656d0b69665db820f15ef77c0fbd4143c6d0e25c0a57a13948f610c07",
+      "prior_promoted_hashes": [
+        "eeb4f29074038e06f8439aff0a4bb97d866f84911e41a2dcedfdeacd5e610d8a"
+      ]
+    },
+    {
+      "path": "workbench/ui/style.css",
+      "before": "13122ec79cd52c433ae6d52a5eaa32236fb320e0fa11bc03a94532cd4135ee2c",
+      "after": "a0d9a60c70d645fd6cd4b878a2dba55ca4844d714c8d14f0d3e1e0edfb7b0b4a"
+    },
+    {
+      "path": "workbench/ui/material-inspection.js",
+      "before": "012722119e1402b4101d9793c627653f0e37a91b1b3772b473d3d9933b5e3db0",
+      "after": "69bca69cc444ddacaefb257f501b7e9835ae2b18380b35c203123a30464fe657"
+    },
+    {
+      "path": "workbench/ui/app.js",
+      "before": "56cae9dcf192c82bc39a81c24faaa56ccadc0aaa6d4be301a146bbd9eb3fa5f5",
+      "after": "aba6153dd8424bd4a3b127e19953042528eb37bf8f2faa9d1d056e0e483a1449"
+    },
+    {
+      "path": "workbench/ui/collaboration.js",
+      "before": "3fa6c8ce420ba4adc023140628bb190625ffd3bd59aacc2e2eb2c87f3dd8291d",
+      "after": "5ede18a74bc19ea52d21b0f870b3506aebb438f97490fd1b022f5c26ee86eb9a"
+    },
+    {
+      "path": "workbench/src/local_workbench/server.py",
+      "before": "584fa4cbdf4a8e274fe239446a9c3bb6f3f294afdf2c3abd6fa68d511f258976",
+      "after": "1c868730fab4ab39f654be1c0092cfcea63bc36a001bffaea738435784c3b7c8"
+    },
+    {
+      "path": "workbench/src/local_workbench/recovery.py",
+      "before": "248cb62e91ac0260af9f135f33910ee26e8065614c76d39890e113d5be9c5e45",
+      "after": "19553e842a26b32f336028737a98e7873e9bd18278c29186ba88cc1022889a5a"
+    },
+    {
+      "path": "workbench/src/local_workbench/source_workflow.py",
+      "before": "2e17380590b91430c3de0ea657d9ed5f9c1d93799f748c4397e71f2b78249175",
+      "after": "3941502aca5fdd000a8be5c1584cc5aadd85d2e2ae9cca2aeb7e56431e6b89a0"
+    },
+    {
+      "path": "workbench/src/local_workbench/material_inspection_schedule.py",
+      "before": null,
+      "after": "ba42ac138a3ff19ef6530f7eab8371095eaaaba933f62286a4b188a8d872c3f5"
+    },
+    {
+      "path": "workbench/src/local_workbench/material_queue.py",
+      "before": "9b91a07fb9ad8a61f28f145f7df5803061dd95c367ed7ad86c5786a3d8e1ee3e",
+      "after": "ec7ee1d76e9c3050bf4232e0e2a5c6d07596c2ca87bed8f35de9daf247916bde"
+    },
+    {
+      "path": "workbench/tests/test_material_queue.py",
+      "before": "cd4ac464fa75443b2fb9da31b2c9478c75c340b90372bb76aa414ce908563767",
+      "after": "95f52aeea483d82a4a2a21b6246313e2d97a05cc61f655bae59e1af94e9dfe5c"
+    },
+    {
+      "path": "workbench/tests/shell-navigation.test.mjs",
+      "before": null,
+      "after": "570500694e839d0fa0517f6b1cbbc0bb7ada551745404ded6c18a5657b9274f0"
+    },
+    {
+      "path": "workbench/tests/pdf-reader-recovery.test.mjs",
+      "before": "04435d25588be73f4c288422e424078661bdf11b4eb923259c27e7a39ecce470",
+      "after": "7d53a739639761e39fbfb752c64fbb3fc12e10e9c4dd71ec11e346a80d562d1a"
+    },
+    {
+      "path": "workbench/tests/test_source_intake_http.py",
+      "before": null,
+      "after": "ff28a528c4769156dfa07b7872cf4dd920123eb19633b732a0dcb25b6a7ac4ec"
+    },
+    {
+      "path": "workbench/tests/test_recovery.py",
+      "before": "b6dd56257a4be4933457539aa55db986d29e832a6ec3bb6fe95a7d682c687679",
+      "after": "f1ec31c56d81ba9298fb5cefc9f8e287febf113963767d91b12837ba0039007d"
+    },
+    {
+      "path": "workbench/tests/source-ui.test.mjs",
+      "before": null,
+      "after": "304e113d8937de64e01e942a2ccfafd1d2322808f2cdadddc18b47d7a9730e68"
+    },
+    {
+      "path": "workbench/tests/material-redesign.test.mjs",
+      "before": null,
+      "after": "0a5fd8dc425874256481fb7072c3bce3ec317c3e0110f3f389f5954bac69501e"
+    },
+    {
+      "path": "workbench/tests/test_material_inspection_schedule.py",
+      "before": null,
+      "after": "6370257517168f045abb4230541820574a98e6eb5a0cc9aac72aa4124ab37513"
+    },
+    {
+      "path": "workbench/tests/test_source_workflow.py",
+      "before": "adb1545f5f2d9aeb218508b490e5f4c8308e34a96dba0f8af12742af35d3c8fc",
+      "after": "4805d7804c3a1156279292538748e3235eee60db94d1f4ddd6daa8dad93c4356"
+    },
+    {
+      "path": "workbench/tests/materials-ui.test.mjs",
+      "before": "7ac6a421a746a298fd9201b1d5a555fbbafca507dd006b4d0b04c859d1ebb1c4",
+      "after": "a59e367a9e8bacc3c49c410519ac4173f2e6a55a26b28eca3924735b84e97dd9"
+    },
+    {
+      "path": "system1/Code/src/system1/workbench_bridge.py",
+      "before": "c7aead59e277f976cd904da087993c7b6fa0b443d9d0b54130d72d617716c8b8",
+      "after": "9ec73581a41348c7ec73bf922e7a77c1957cf33c0df50eee9d6e1721a57e4bd3"
+    },
+    {
+      "path": "system1/Code/src/system1/source_workflow.py",
+      "before": "14c7b3ce2144cfd7a743392e07394f60c792316d31d07dcaad48b237bab5bfab",
+      "after": "71268106a2deb32a1ddf1f6be2c47b5d91ccdee8fe3714c175e70d222dc339c7"
+    },
+    {
+      "path": "system1/Code/tests/test_source_workflow.py",
+      "before": "68b5b522ae56898eec023d4b1f8cdb3b6bde9bc3e39b55c7b082637e91e1331c",
+      "after": "f995b22066c9b702498d6082f61d58d8d3e9703f39af57151cb98ce5942e3202"
+    }
+  ],
+  "recovery": "activation-checkpoint; code rollback and stores only, not full historical assets",
+  "business_mutations": "none; code/tests only"
+}

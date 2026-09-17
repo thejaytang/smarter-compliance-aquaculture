@@ -1,0 +1,25 @@
+{
+  "status": "STOPPED_DEPENDENCY_IMPORT_TIMEOUT",
+  "comparison_quality_status": "UNMEASURED",
+  "readiness_decision": "Do not adapt the product backend based on this incomplete comparison. Resume the same frozen experiment only after stable installed-backend import is established; no install or resource edits performed here.",
+  "completed_conditions": [
+    "asc-farm-pdfium"
+  ],
+  "incomplete_condition": "asc-farm-docling",
+  "not_started_conditions": [
+    "asc-interpretation-pdfium",
+    "asc-interpretation-docling"
+  ],
+  "pdfium_control_identical_to_frozen_v4_blocks": true,
+  "pdfium_control_group_invariants": true,
+  "actual_control_backend": [
+    "pypdfium2"
+  ],
+  "docling_candidate_present": false,
+  "docling_native_present": false,
+  "product_hash_unchanged": true,
+  "input_hashes_unchanged": true,
+  "annotation_hashes_unchanged": true,
+  "trace_interpretation": "Farm PDFium 25-second trace was in cv2 extension import and it completed at40.8seconds. Farm Docling 25-second trace was in numpy.random extension import via pandas/docling_core; the subprocess exceeded60seconds and was stopped. These show library import stalls, not AFM parsing failure or measured source-quality failure. Exact OS cause is not established.",
+  "preserved_previous_boundary": "docling-parse is a native cell extractor, not the full learned Docling layout. Previous confidence0.99 profiles selected occluded native Criterion labels; no heading acceptance claimed."
+}

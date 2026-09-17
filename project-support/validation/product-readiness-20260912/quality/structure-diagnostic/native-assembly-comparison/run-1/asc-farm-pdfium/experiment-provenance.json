@@ -1,0 +1,23 @@
+{
+  "actual_native_backends": [
+    "pypdfium2"
+  ],
+  "module_policy": {
+    "adapter": "material-structural-parser/4",
+    "semantic_processing": false,
+    "external_models": false,
+    "ocr": false,
+    "pdf_window_pages": 3,
+    "pdf_backend": "pdfium",
+    "pdf_marker_order": "same-row-before-body/1",
+    "pdf_paragraph_grouping": "same-page-source-preserving/1",
+    "human_adoption_required": true
+  },
+  "config_hash": "8ea2433849e058d0ba409fbc5eeaea9dbe0b6f700f49a4c22eb8f968f9a702b9",
+  "parser_version": "material-structural-parser/4",
+  "production_parser_hash": "3696f3aab5aff829e7247418bd0b22cec1b5f3008c6419ac842f67ff7c38bce2",
+  "experimental_source_hash": null,
+  "installed_docling_package_used": false,
+  "business_adoption": false,
+  "all_group_invariants": true
+}

@@ -1,0 +1,7 @@
+{
+  "schema": "weekly-original-and-classification/1",
+  "enabled": false,
+  "timezone": "Europe/Oslo",
+  "targets": {"A": 20, "B": 5},
+  "activation": "Pending explicit authorization after isolated verification."
+}

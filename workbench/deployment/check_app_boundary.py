@@ -1,5 +1,6 @@
 """Check the current Git index, not old history; never delete local files."""
 from pathlib import PurePosixPath
+import argparse
 import re
 import unicodedata
 import subprocess
@@ -24,7 +25,17 @@ def business_file(path):
     if p.name in ('ai-provider.json','model-provider.local.json','machine-assessment-rules.local.json','scoring-rules.local.json'):return True
     return p.suffix.lower() in {'.sqlite','.sqlite3','.db','.zip','.xlsx','.key','.pem','.pyc','.log'}
 
-def naming_issues(paths):
+def development_file(path):
+    p=PurePosixPath(path)
+    if path=='PROJECT_STATE.md':return True
+    if not path.startswith(('project-support/','workbench/tests/','workbench/examples/','workbench/scripts/')):return False
+    if any(x in p.parts for x in ('.git','.venv','node_modules','__pycache__','.cache','cache','runtime','tmp')):return False
+    if p.name.startswith('.env') and p.name!='.env.example':return False
+    if p.name in {'ai-provider.json','model-provider.local.json','server.json','service.lock','.DS_Store'}:return False
+    return p.suffix.lower() not in {'.sqlite','.sqlite3','.db','.key','.pem','.pyc','.ses'} and not p.name.endswith(('-wal','-shm','-journal'))
+
+
+def naming_issues(paths, *, style=True):
     issues=[];seen={}
     for path in paths:
         p=PurePosixPath(path)
@@ -36,7 +47,7 @@ def naming_issues(paths):
             spelling=str(part);key=unicodedata.normalize('NFC',spelling).casefold()
             if key in seen and seen[key]!=spelling:issues.append('Case/Unicode collision: '+spelling+' / '+seen[key])
             seen[key]=spelling
-        if '/vendor/' in path:continue
+        if not style or '/vendor/' in path:continue
         if p.suffix=='.py' and not re.fullmatch(r'[a-z_][a-z0-9_]*',p.stem):
             issues.append('Python module must use snake_case: '+path)
         if any(any(c.isupper() for c in part) for part in p.parts[:-1]):
@@ -45,14 +56,17 @@ def naming_issues(paths):
 
 
 def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--development',action='store_true',help='Allow Jay development documents and tests; retain credential/runtime exclusions.')
+    development=parser.parse_args().development
     paths=subprocess.check_output(['git','ls-files','-z']).decode('utf-8').split('\0')
     paths=[p for p in paths if p]
-    bad=[p for p in paths if business_file(p)]
+    bad=[p for p in paths if business_file(p) and not (development and development_file(p))]
     if bad:
         print('Excluded local/development data remains in the product index:\n'+'\n'.join(bad));return 1
-    issues=naming_issues(paths)
+    issues=naming_issues(paths,style=False)+naming_issues([p for p in paths if not development_file(p)])
     if issues:
         print('\n'.join(issues));return 1
-    print('Product index boundary and naming checks passed.');return 0
+    print(('Development' if development else 'Product')+' index boundary and naming checks passed.');return 0
 
 if __name__=='__main__':sys.exit(main())

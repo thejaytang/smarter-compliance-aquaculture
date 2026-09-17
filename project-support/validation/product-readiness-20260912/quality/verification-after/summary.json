@@ -1,0 +1,115 @@
+{
+  "samples": [
+    {
+      "sample_id": "pa057-reserved",
+      "parser_version": "material-structural-parser/2",
+      "candidate_status": "partial",
+      "blocks": 55,
+      "block_types": {
+        "text": 52,
+        "table": 1,
+        "image": 2
+      },
+      "content_strata": {
+        "all": {
+          "denominator": 33,
+          "strict_full": 17,
+          "whitespace_normalized_full": 29,
+          "all_source_fragments_present": 30
+        },
+        "native_assisted": {
+          "denominator": 31,
+          "strict_full": 17,
+          "whitespace_normalized_full": 29,
+          "all_source_fragments_present": 30
+        },
+        "visual_only": {
+          "denominator": 2,
+          "strict_full": 0,
+          "whitespace_normalized_full": 0,
+          "all_source_fragments_present": 0
+        }
+      },
+      "critical_summary": {
+        "matched": 18,
+        "denominator": 18,
+        "association_accuracy": "UNMEASURED"
+      },
+      "structure_by_type": {
+        "column_header": {
+          "PASS": 6
+        },
+        "note_attached_to_definition": {
+          "FAIL": 1
+        },
+        "precedes": {
+          "PASS": 20,
+          "UNMEASURED": 2,
+          "FAIL": 3
+        },
+        "table_cell_position": {
+          "PASS": 8
+        },
+        "under_heading": {
+          "FAIL": 17
+        }
+      }
+    },
+    {
+      "sample_id": "cs010-reserved",
+      "parser_version": "material-structural-parser/2",
+      "candidate_status": "partial",
+      "blocks": 162,
+      "block_types": {
+        "text": 158,
+        "image": 4
+      },
+      "content_strata": {
+        "all": {
+          "denominator": 45,
+          "strict_full": 9,
+          "whitespace_normalized_full": 19,
+          "all_source_fragments_present": 22
+        },
+        "native_assisted": {
+          "denominator": 37,
+          "strict_full": 7,
+          "whitespace_normalized_full": 17,
+          "all_source_fragments_present": 20
+        },
+        "visual_only": {
+          "denominator": 8,
+          "strict_full": 2,
+          "whitespace_normalized_full": 2,
+          "all_source_fragments_present": 2
+        }
+      },
+      "critical_summary": {
+        "matched": 46,
+        "denominator": 54,
+        "association_accuracy": "UNMEASURED"
+      },
+      "structure_by_type": {
+        "heading_parent": {
+          "FAIL": 4
+        },
+        "list_member": {
+          "FAIL": 4
+        },
+        "precedes": {
+          "FAIL": 22,
+          "PASS": 3,
+          "UNMEASURED": 2
+        },
+        "under_heading": {
+          "FAIL": 20
+        }
+      }
+    }
+  ],
+  "finished_at": "2026-09-12T21:20:42.076005+00:00",
+  "parser_file_unchanged": true,
+  "classifier_file_unchanged": true,
+  "source_inputs_unchanged": true,
+  "annotation_freeze_unchanged": true
+}

@@ -1,0 +1,31 @@
+{
+  "scope": "read-only metadata projection of exact backup inventory; no hash bypass used for a backup",
+  "files": 8390,
+  "business_bytes": 2489303045,
+  "code_bytes": 11190791,
+  "total_bytes": 2500493836,
+  "free_bytes": 13993725952,
+  "free_after_copy_bytes": 11493232116,
+  "largest_files": [
+    {
+      "path": "system2/runtime/workflow/workflow-before-v2-20260909T144912498039Z.sqlite",
+      "bytes": 588713984
+    },
+    {
+      "path": "system2/runtime/workflow/workflow-before-hierarchy-20260909T225337791197Z.sqlite",
+      "bytes": 350969856
+    },
+    {
+      "path": "system2/runtime/workflow/workflow.sqlite",
+      "bytes": 350969856
+    },
+    {
+      "path": "system2/runtime/workflow/workflow-before-pdf-scope-20260909T222138430739Z.sqlite",
+      "bytes": 343924736
+    },
+    {
+      "path": "system2/runtime/workflow/artifacts/5144878b294f909f7ff813ea535672d4/attempt-1/source-records.json",
+      "bytes": 77776770
+    }
+  ]
+}

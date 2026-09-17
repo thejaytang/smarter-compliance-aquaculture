@@ -1,0 +1,30 @@
+[
+  {
+    "file": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/lib/python3.12/site-packages/numba/experimental/jitclass/base.py",
+    "command": [
+      "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/bin/python",
+      "-c",
+      "from pathlib import Path;import sys,hashlib; b=Path(sys.argv[1]).read_bytes(); print(len(b),hashlib.sha256(b).hexdigest())",
+      "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/lib/python3.12/site-packages/numba/experimental/jitclass/base.py"
+    ],
+    "metadata_before": "-rw-r--r--@ 1 tang  staff  hidden,compressed,dataless 21359 Sep  1 15:23 /Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/lib/python3.12/site-packages/numba/experimental/jitclass/base.py\n",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/tang/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/pathlib.py\", line 1020, in read_bytes\n    return f.read()\n           ^^^^^^^^\nTimeoutError: [Errno 60] Operation timed out\n",
+    "elapsed_seconds": 0.14656804205151275
+  },
+  {
+    "file": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/ui/review.html",
+    "command": [
+      "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/bin/python",
+      "-c",
+      "from pathlib import Path;import sys,hashlib; b=Path(sys.argv[1]).read_bytes(); print(len(b),hashlib.sha256(b).hexdigest())",
+      "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/ui/review.html"
+    ],
+    "metadata_before": "-rw-r--r--  1 tang  staff  compressed,dataless 1711 Sep  7 13:36 /Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/ui/review.html\n",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/tang/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/pathlib.py\", line 1020, in read_bytes\n    return f.read()\n           ^^^^^^^^\nTimeoutError: [Errno 60] Operation timed out\n",
+    "elapsed_seconds": 0.14659604197368026
+  }
+]

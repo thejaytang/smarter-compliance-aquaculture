@@ -1,0 +1,5 @@
+{
+  "reason": "Retain failure and stop this comparison; no resource repair or product edit.",
+  "sample": "asc-farm",
+  "backend": "docling"
+}

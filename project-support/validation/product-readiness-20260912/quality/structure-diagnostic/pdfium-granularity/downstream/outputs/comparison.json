@@ -1,0 +1,420 @@
+{
+  "checks": [
+    {
+      "sample": "asc-farm",
+      "before_blocks": 44,
+      "after_blocks": 44,
+      "block_ids_order_equal": true,
+      "added_ids": [],
+      "removed_ids": [],
+      "common_source_refs_equal": true,
+      "scope_status_unchanged": true,
+      "changed_blocks": [
+        {
+          "id": "block-4759623c2382f78bab8d39d3",
+          "type": "table",
+          "changed_fields": [
+            "table"
+          ],
+          "before": {
+            "id": "block-4759623c2382f78bab8d39d3",
+            "type": "table",
+            "text": "",
+            "level": 1,
+            "parent_id": null,
+            "numbering": "",
+            "dependencies": [],
+            "source_refs": [
+              {
+                "scope_id": "page:28",
+                "page_index": 27,
+                "page": 28,
+                "bbox": [
+                  46.666666666666664,
+                  61.333333333333336,
+                  541.3333333333334,
+                  101.33333333333333
+                ]
+              }
+            ],
+            "table": {
+              "rows": [
+                [
+                  "1 .1",
+                  "",
+                  "Criterion 1.1 \u2013 Legal Compliance",
+                  "",
+                  "",
+                  "Legal Compliance",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ]
+              ],
+              "merges": [],
+              "notes": []
+            }
+          },
+          "after": {
+            "id": "block-4759623c2382f78bab8d39d3",
+            "type": "table",
+            "text": "",
+            "level": 1,
+            "parent_id": null,
+            "numbering": "",
+            "dependencies": [],
+            "source_refs": [
+              {
+                "scope_id": "page:28",
+                "page_index": 27,
+                "page": 28,
+                "bbox": [
+                  46.666666666666664,
+                  61.333333333333336,
+                  541.3333333333334,
+                  101.33333333333333
+                ]
+              }
+            ],
+            "table": {
+              "rows": [
+                [
+                  "Criterion 1.1 1 .1",
+                  "\u2013",
+                  "Legal Legal",
+                  "",
+                  "",
+                  "",
+                  "Compliance",
+                  "Compliance",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ]
+              ],
+              "merges": [],
+              "notes": []
+            }
+          }
+        },
+        {
+          "id": "block-e51332517c8a3a4a4190df4c",
+          "type": "table",
+          "changed_fields": [
+            "table"
+          ],
+          "before": {
+            "id": "block-e51332517c8a3a4a4190df4c",
+            "type": "table",
+            "text": "",
+            "level": 1,
+            "parent_id": null,
+            "numbering": "",
+            "dependencies": [],
+            "source_refs": [
+              {
+                "scope_id": "page:29",
+                "page_index": 28,
+                "page": 29,
+                "bbox": [
+                  51.333333333333336,
+                  62.666666666666664,
+                  552.0,
+                  102.66666666666667
+                ]
+              }
+            ],
+            "table": {
+              "rows": [
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "Criterion 1.2 \u2013 Management Systems",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "1 .2",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "Management Systems",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ]
+              ],
+              "merges": [
+                {
+                  "row": 0,
+                  "col": 15,
+                  "rowspan": 3,
+                  "colspan": 1
+                },
+                {
+                  "row": 1,
+                  "col": 16,
+                  "rowspan": 2,
+                  "colspan": 1
+                }
+              ],
+              "notes": []
+            }
+          },
+          "after": {
+            "id": "block-e51332517c8a3a4a4190df4c",
+            "type": "table",
+            "text": "",
+            "level": 1,
+            "parent_id": null,
+            "numbering": "",
+            "dependencies": [],
+            "source_refs": [
+              {
+                "scope_id": "page:29",
+                "page_index": 28,
+                "page": 29,
+                "bbox": [
+                  51.333333333333336,
+                  62.666666666666664,
+                  552.0,
+                  102.66666666666667
+                ]
+              }
+            ],
+            "table": {
+              "rows": [
+                [
+                  "",
+                  "Criterion",
+                  "1.2",
+                  "\u2013",
+                  "",
+                  "",
+                  "Management",
+                  "",
+                  "",
+                  "Systems",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "1",
+                  ".2",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "Management",
+                  "",
+                  "",
+                  "Systems",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ]
+              ],
+              "merges": [
+                {
+                  "row": 0,
+                  "col": 15,
+                  "rowspan": 3,
+                  "colspan": 1
+                },
+                {
+                  "row": 1,
+                  "col": 16,
+                  "rowspan": 2,
+                  "colspan": 1
+                }
+              ],
+              "notes": []
+            }
+          }
+        }
+      ],
+      "native_granularity": [
+        {
+          "local_page_index": 0,
+          "original_page_index": 27,
+          "original_native_page_payload_equal_baseline": true,
+          "retained_text_lines_equal_baseline": true,
+          "word_count": 173,
+          "character_count": 1269,
+          "invariants": {
+            "all_character_indices_accounted_for": true,
+            "per_char_text_equals_full_text": true,
+            "token_separator_reconstruction": true,
+            "word_nonwhitespace_reconstruction": true,
+            "line_texts_equal": true,
+            "line_bboxes_equal": true
+          },
+          "all_source_native_ids_unique": true
+        },
+        {
+          "local_page_index": 1,
+          "original_page_index": 28,
+          "original_native_page_payload_equal_baseline": true,
+          "retained_text_lines_equal_baseline": true,
+          "word_count": 216,
+          "character_count": 1536,
+          "invariants": {
+            "all_character_indices_accounted_for": true,
+            "per_char_text_equals_full_text": true,
+            "token_separator_reconstruction": true,
+            "word_nonwhitespace_reconstruction": true,
+            "line_texts_equal": true,
+            "line_bboxes_equal": true
+          },
+          "all_source_native_ids_unique": true
+        }
+      ]
+    },
+    {
+      "sample": "asc-interpretation",
+      "before_blocks": 115,
+      "after_blocks": 115,
+      "block_ids_order_equal": true,
+      "added_ids": [],
+      "removed_ids": [],
+      "common_source_refs_equal": true,
+      "scope_status_unchanged": true,
+      "changed_blocks": [],
+      "native_granularity": [
+        {
+          "local_page_index": 0,
+          "original_page_index": 18,
+          "original_native_page_payload_equal_baseline": true,
+          "retained_text_lines_equal_baseline": true,
+          "word_count": 290,
+          "character_count": 1919,
+          "invariants": {
+            "all_character_indices_accounted_for": true,
+            "per_char_text_equals_full_text": true,
+            "token_separator_reconstruction": true,
+            "word_nonwhitespace_reconstruction": true,
+            "line_texts_equal": true,
+            "line_bboxes_equal": true
+          },
+          "all_source_native_ids_unique": true
+        },
+        {
+          "local_page_index": 1,
+          "original_page_index": 19,
+          "original_native_page_payload_equal_baseline": true,
+          "retained_text_lines_equal_baseline": true,
+          "word_count": 237,
+          "character_count": 1667,
+          "invariants": {
+            "all_character_indices_accounted_for": true,
+            "per_char_text_equals_full_text": true,
+            "token_separator_reconstruction": true,
+            "word_nonwhitespace_reconstruction": true,
+            "line_texts_equal": true,
+            "line_bboxes_equal": true
+          },
+          "all_source_native_ids_unique": true
+        },
+        {
+          "local_page_index": 2,
+          "original_page_index": 20,
+          "original_native_page_payload_equal_baseline": true,
+          "retained_text_lines_equal_baseline": true,
+          "word_count": 244,
+          "character_count": 1706,
+          "invariants": {
+            "all_character_indices_accounted_for": true,
+            "per_char_text_equals_full_text": true,
+            "token_separator_reconstruction": true,
+            "word_nonwhitespace_reconstruction": true,
+            "line_texts_equal": true,
+            "line_bboxes_equal": true
+          },
+          "all_source_native_ids_unique": true
+        }
+      ]
+    }
+  ]
+}

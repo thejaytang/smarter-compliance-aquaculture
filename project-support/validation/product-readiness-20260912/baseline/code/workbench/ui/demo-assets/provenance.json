@@ -1,0 +1,117 @@
+{
+  "sourceHash": "77e1d87383382fda4f27dc9be79937cc3017ce350b8b1d436a74500561083838",
+  "filename": "CS005-001_ASC_Farm_and_Feed_Certification_and_Accreditation_Requirements.pdf",
+  "canonicalRevision": 0,
+  "historicalRun": "2026-08-31",
+  "sourcePages": 89,
+  "scope": {
+    "id": "p0019_paragraph_0002",
+    "text": "Part B outlines the operational certification requirements for CABs to follow when auditing Clients and their Unit of Certification (UoC) against ASC Requirements; from the application phase until the certification decision and throughout the certificate lifetime. It also covers additional procedures such as transfer of certificates.",
+    "page": 19,
+    "boxes": [
+      [
+        56.50861012690589,
+        151.53839795005376,
+        507.4977087830402,
+        164.85649943260006
+      ],
+      [
+        56.50861012690589,
+        167.7360889423398,
+        525.1341539818834,
+        181.0541904248861
+      ],
+      [
+        56.50861012690589,
+        183.57383124590837,
+        514.3363303907549,
+        197.25188141717211
+      ],
+      [
+        56.50861012690589,
+        199.7715222381944,
+        467.9056889489023,
+        213.44957240945817
+      ]
+    ]
+  },
+  "join": {
+    "id": [
+      "p0020_paragraph_0010",
+      "p0020_paragraph_0012"
+    ],
+    "text": "The Client (Certificate Holder[^6] ) shall be capable of signing a binding contract\nthat is legally enforceable.",
+    "pieces": [
+      "The Client (Certificate Holder[^6] ) shall be capable of signing a binding contract",
+      "that is legally enforceable."
+    ],
+    "page": 20,
+    "boxes": [
+      [
+        102.93925156875851,
+        310.9956670518918,
+        485.90206160078316,
+        323.2339224682857
+      ],
+      [
+        102.93925156875851,
+        322.87397377956825,
+        233.2329895683759,
+        335.11222919596213
+      ]
+    ],
+    "footnote": {
+      "id": "p0020_paragraph_0032",
+      "text": "6 Client granted ASC certification for a specific UoC.",
+      "page": 20,
+      "boxes": [
+        [
+          56.50861012690589,
+          743.6539908902876,
+          286.50225261794327,
+          754.4524515518116
+        ]
+      ]
+    }
+  },
+  "page": {
+    "id": "page:20",
+    "text": "",
+    "page": 20,
+    "boxes": [
+      [
+        50.5,
+        160,
+        504.5,
+        628
+      ]
+    ],
+    "boxOrigin": "manually_located_for_review_demo",
+    "cells": [
+      [
+        "Po",
+        "Certification Type",
+        "cc ———is——"
+      ],
+      [
+        "Single",
+        "Single Site",
+        "Multi-site"
+      ]
+    ]
+  },
+  "canonical": "05_Working area of requirements side/system2/outputs/runs/smarter-compliance-requirement-sample-20260831/cs005-certification-requirements-p020-p022-runtime-restored/canonical.json",
+  "pageLabelNote": "Printed labels 20 and 21 verified visually against PDF; historical inferred printed_page_label is not used.",
+  "pages": {
+    "19": {
+      "width": 595.3200073242188,
+      "height": 841.9199829101562,
+      "printedLabel": "20"
+    },
+    "20": {
+      "width": 595.3200073242188,
+      "height": 841.9199829101562,
+      "printedLabel": "21"
+    }
+  }
+}

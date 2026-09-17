@@ -1,0 +1,106 @@
+{
+  "scope": "Pre-reader immutable history rows retained, plus original bytes match their recorded content-addressed identities; live current rows and runtime events may advance",
+  "tables": [
+    {
+      "store": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/governance/governance.sqlite",
+      "table": "history",
+      "previous_rows": 0,
+      "missing_or_changed": 0
+    },
+    {
+      "store": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/collaboration/personal/1a715554-77c6-4eae-a4bf-5f5bb14f0844/workflow.sqlite",
+      "table": "material_receipts",
+      "previous_rows": 0,
+      "missing_or_changed": 0
+    },
+    {
+      "store": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/collaboration/personal/1a715554-77c6-4eae-a4bf-5f5bb14f0844/workflow.sqlite",
+      "table": "material_revisions",
+      "previous_rows": 1,
+      "missing_or_changed": 0
+    },
+    {
+      "store": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/collaboration/personal/c296762c-879e-452f-a827-0f32fb54b4cf/workflow.sqlite",
+      "table": "material_receipts",
+      "previous_rows": 0,
+      "missing_or_changed": 0
+    },
+    {
+      "store": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/collaboration/personal/c296762c-879e-452f-a827-0f32fb54b4cf/workflow.sqlite",
+      "table": "material_revisions",
+      "previous_rows": 1,
+      "missing_or_changed": 0
+    },
+    {
+      "store": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/collaboration/personal/f9daf58e-521e-4c80-9fbd-93db1dd3b9ec/workflow.sqlite",
+      "table": "material_receipts",
+      "previous_rows": 2,
+      "missing_or_changed": 0
+    },
+    {
+      "store": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/collaboration/personal/f9daf58e-521e-4c80-9fbd-93db1dd3b9ec/workflow.sqlite",
+      "table": "material_revisions",
+      "previous_rows": 5,
+      "missing_or_changed": 0
+    },
+    {
+      "store": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/system2-workflow/workflow.sqlite",
+      "table": "material_receipts",
+      "previous_rows": 3,
+      "missing_or_changed": 0
+    },
+    {
+      "store": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/system2-workflow/workflow.sqlite",
+      "table": "material_revisions",
+      "previous_rows": 3,
+      "missing_or_changed": 0
+    }
+  ],
+  "originals": [
+    {
+      "file": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/system2-workflow/material-originals/3174192e87ed8c0dd31d77e6b5c330d458496bb24a3b3cf53819714cb4aa6029.pdf",
+      "sha256": "3174192e87ed8c0dd31d77e6b5c330d458496bb24a3b3cf53819714cb4aa6029",
+      "matches_bound_name": true
+    },
+    {
+      "file": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/system2-workflow/material-originals/ce5c8950c69e3b5b60b85110f5abd2c6d8637c83291c6c00ac03f28b102dac54.pdf",
+      "sha256": "ce5c8950c69e3b5b60b85110f5abd2c6d8637c83291c6c00ac03f28b102dac54",
+      "matches_bound_name": true
+    },
+    {
+      "file": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/system2-workflow/material-originals/4156dd8844430fb21f40b92cf67d70c1b539f29bc6e5306aec17be95903752fe.html",
+      "sha256": "4156dd8844430fb21f40b92cf67d70c1b539f29bc6e5306aec17be95903752fe",
+      "matches_bound_name": true
+    },
+    {
+      "file": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/system2-workflow/material-originals/8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967.html",
+      "sha256": "8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967",
+      "matches_bound_name": true
+    },
+    {
+      "file": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/system2-workflow/material-originals/cbb226afd29f1fa2420d5423dc6f6fd8b9e61d479bf6c04bcc91d41873053062.pdf",
+      "sha256": "cbb226afd29f1fa2420d5423dc6f6fd8b9e61d479bf6c04bcc91d41873053062",
+      "matches_bound_name": true
+    },
+    {
+      "file": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/collaboration/personal/1a715554-77c6-4eae-a4bf-5f5bb14f0844/material-originals/8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967.html",
+      "sha256": "8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967",
+      "matches_bound_name": true
+    },
+    {
+      "file": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/collaboration/personal/f9daf58e-521e-4c80-9fbd-93db1dd3b9ec/material-originals/4156dd8844430fb21f40b92cf67d70c1b539f29bc6e5306aec17be95903752fe.html",
+      "sha256": "4156dd8844430fb21f40b92cf67d70c1b539f29bc6e5306aec17be95903752fe",
+      "matches_bound_name": true
+    },
+    {
+      "file": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/collaboration/personal/c296762c-879e-452f-a827-0f32fb54b4cf/material-originals/ce5c8950c69e3b5b60b85110f5abd2c6d8637c83291c6c00ac03f28b102dac54.pdf",
+      "sha256": "ce5c8950c69e3b5b60b85110f5abd2c6d8637c83291c6c00ac03f28b102dac54",
+      "matches_bound_name": true
+    },
+    {
+      "file": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/collaboration/personal/8225f6fc-a6d1-49fe-814c-7067cd16fd80/material-originals/cbb226afd29f1fa2420d5423dc6f6fd8b9e61d479bf6c04bcc91d41873053062.pdf",
+      "sha256": "cbb226afd29f1fa2420d5423dc6f6fd8b9e61d479bf6c04bcc91d41873053062",
+      "matches_bound_name": true
+    }
+  ]
+}

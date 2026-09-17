@@ -1,0 +1,18 @@
+{
+  "files": {
+    "workbench/src/local_workbench/collaboration.py": "cc50edeb371074ea8244b6fe428f310a947d59686bc03adbb3a1149f83aea100",
+    "workbench/src/local_workbench/collaboration_relationships.py": "7dde9527cdb4aace66a30f84974202b3242726ec599a62304b52784338636ca7",
+    "workbench/ui/collaboration.js": "70912356393ff749bbde4324665cd99b0369ef9a17b0485f165bae3d1db48a6f",
+    "workbench/ui/collaboration-relationships.js": "041f5d71507a54fb443cee80150a81805c309a9578f6e188f8e8c50617f02ebd",
+    "workbench/tests/test_collaboration_relationships.py": "25d168f831b8426feabcd8475c74afbace9107f8256f4c4439d0e0a5d2abb9c2",
+    "workbench/tests/collaboration-relationships.test.mjs": "53f19a663fe6778d239aa75a6a0b60486c0c3ec059dff65a9f0c509420bd1f6b",
+    "workbench/src/local_workbench/server.py": "19e115f9b73eecd66110d080db6ce6a60c2bfb512f109ba5329d018fb54810b7",
+    "workbench/tests/test_frontend_module_routes.py": "3887c17ff6e08ef71a629da721fe786d6f5a8647cf1fc431ff0f173e4f5c98e0"
+  },
+  "existing_test_unchanged": true,
+  "data_writes": "TemporaryDirectory fixtures only; no business data changed",
+  "loaded_runtime": "No server restart or browser use by this subtask",
+  "http_module_regression": "Missing module route reproduced as HTTP 404 before one-line route fix; complete local import graph passes after fix.",
+  "compatibility": "Relationship implementation is in existing collaboration.js; old new-path file only reexports. Main HTTP import graph does not require new route; 97 frontend tests and HTTP graph test pass.",
+  "merge_algorithm": "identity_list unchanged; whole-list structural comparison remains a separate usability gap."
+}

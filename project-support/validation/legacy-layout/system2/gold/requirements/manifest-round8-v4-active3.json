@@ -1,0 +1,23 @@
+{
+  "schema_version": "2.1",
+  "round_id": "goal04-round8-active3-footnote-qualifiers",
+  "evaluation_mode": "active_diagnostic",
+  "schema": "schema-v4.json",
+  "sample_history": "sample-history.json",
+  "parser_state_artifact": "../../outputs/runs/goal04-round7/parser-state-v4-active22-final.json",
+  "parser_state_sha256": "4fac186326485792e2c2e51b4059252099c5e3ceb79ded1f945d2a6276cf4dce",
+  "documents": [
+    {
+      "id": "interpretation-manual-p080-p082-round8-holdout",
+      "split": "active",
+      "gold_split": "holdout",
+      "gold_round_id": "goal04-round8",
+      "schema": "schema-v4.json",
+      "pdf": "../../data/inputs/ASC-INT-001-ASC-Farm-Standard-Interpretation-Manual-V1.0-May-2025.pdf",
+      "pages": [80, 81, 82],
+      "gold": "annotations/interpretation-manual-p080-p082-round8-holdout-v2.json",
+      "prediction": "../../outputs/runs/goal04-round8/interpretation-manual-p080-p082-active3-footnote-qualifiers/regulatory-ir.json",
+      "prediction_sha256": "323d52bde109b714fb3d41106a33bda6be4011e4ef3eeeea3b57cd207271f0c8"
+    }
+  ]
+}

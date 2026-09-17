@@ -1,0 +1,33 @@
+{
+  "comparison_status": "NOT_RUN",
+  "quality_status": "UNMEASURED",
+  "scope": "Planned isolated PDFium versus installed Docling native comparison on existing development Farm pages 28-29 and Interpretation pages 19-21 only",
+  "product_parser_sha256_observed_before_preparation": "3696f3aab5aff829e7247418bd0b22cec1b5f3008c6419ac842f67ff7c38bce2",
+  "product_changes": false,
+  "parser_invocations_this_comparison": 0,
+  "new_models_or_dependencies": false,
+  "reserved_samples_used": false,
+  "preparation": {
+    "command": "System2 .venv Python read existing farm-standard-p028-p029.json, interpretation-manual-p019-p021.json and structure-diagnostic/relation-subset-before.json; print current labelled critical fields and frozen relation subset",
+    "owned_exec_session": 29766,
+    "observation": "No output across initial 10-second yield and later polling; appeared delayed for more than 30 seconds. A subsequent Ctrl-C request returned normal completed output with exit code 0.",
+    "final_exit_code": 0,
+    "keyboard_interrupt_observed": false,
+    "specific_read_stack_observed": false,
+    "zero_byte_or_corrupt_annotation_observed": false,
+    "interpretation": "Observed delay, not proof of this command's exact blocking operation or file damage. The coordinator instructed stopping new comparisons on another resource-read stall or empty read; the comparison was not started."
+  },
+  "frozen_references_not_changed": {
+    "farm_segment_denominator": 25,
+    "interpretation_segment_denominator": 12,
+    "farm_formal_text_denominator": 6,
+    "farm_clause_body_denominator": 7,
+    "interpretation_formal_text_denominator": 3,
+    "interpretation_clause_body_denominator": 13,
+    "existing_marker_relation_positives": 8,
+    "existing_marker_relation_negatives": 1,
+    "trust": "Previously exposed source-backed development annotations and existing diagnostic subset, not business Gold or an independent holdout. Overlapping denominators must not be pooled."
+  },
+  "resume_boundary": "Only after the coordinator resumes this experiment: use original installed NativeExtractor('docling-parse'), preserve current source/config hashes and actual backend provenance, and stop on resource errors. A /4 assembly comparison must also change the experiment's hard-coded PDFium warning so it never reports PDFium while using Docling. No such comparison implementation was executed here.",
+  "unchanged_conclusion": "The preceding resource A/B/A experiment remains valid with its explicit incomplete-copy limitation. No new claim of word/paragraph/marker/critical-phrase improvement is made."
+}

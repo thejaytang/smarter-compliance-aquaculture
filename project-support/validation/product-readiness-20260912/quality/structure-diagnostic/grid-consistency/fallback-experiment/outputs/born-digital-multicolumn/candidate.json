@@ -1,0 +1,269 @@
+{
+  "schema_version": "material-structural-parser/4+dev-grid-consistency",
+  "parser_version": "material-structural-parser/4+dev-grid-consistency",
+  "source_sha256": "c2d87f054ce7e88fca96557cdc85f52fb579a472eb301d62e6f70618775811a3",
+  "snapshot_id": "QS006-001",
+  "config_hash": "1ab4bc5e976bcd128cd37d47c95e068275d9b8ed426f5d30fbf832adadfc4b2c",
+  "blocks": [
+    {
+      "id": "block-87537f9bc041466dabe1b281",
+      "type": "text",
+      "text": "Section 1 - Digital Evidence",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:1",
+          "page_index": 0,
+          "page": 1,
+          "bbox": [
+            54.57600021362305,
+            38.35198974609375,
+            262.36798095703125,
+            53.343994140625
+          ],
+          "native_id": "native_p0000_ft000000"
+        }
+      ]
+    },
+    {
+      "id": "block-b95f49661735f99399abd940",
+      "type": "text",
+      "text": "Effective date: 2026-08-25.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:1",
+          "page_index": 0,
+          "page": 1,
+          "bbox": [
+            320.7900085449219,
+            84.719970703125,
+            439.1999816894531,
+            92.1099853515625
+          ],
+          "native_id": "native_p0000_ft000004"
+        }
+      ]
+    },
+    {
+      "id": "block-b87c7c0005c3a1d9c5b6dda8",
+      "type": "text",
+      "text": "The limit is 5 mg.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:1",
+          "page_index": 0,
+          "page": 1,
+          "bbox": [
+            54.22999954223633,
+            84.84002685546875,
+            128.6999969482422,
+            94.09002685546875
+          ],
+          "native_id": "native_p0000_ft000001"
+        }
+      ]
+    },
+    {
+      "id": "block-b58dd0dddb89bb23a81107c5",
+      "type": "text",
+      "text": "It shall remain below 10 mg.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:1",
+          "page_index": 0,
+          "page": 1,
+          "bbox": [
+            54.93000030517578,
+            106.80999755859375,
+            177.6199951171875,
+            116.09002685546875
+          ],
+          "native_id": "native_p0000_ft000002"
+        }
+      ]
+    },
+    {
+      "id": "block-d36f9cc76f8670955b401949",
+      "type": "text",
+      "text": "The value must not exceed 7 mg.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:1",
+          "page_index": 0,
+          "page": 1,
+          "bbox": [
+            320.2300109863281,
+            106.84002685546875,
+            466.97998046875,
+            116.09002685546875
+          ],
+          "native_id": "native_p0000_ft000005"
+        }
+      ]
+    },
+    {
+      "id": "block-f382d3e9582e26cf1e79b963",
+      "type": "text",
+      "text": "See Table 1.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:1",
+          "page_index": 0,
+          "page": 1,
+          "bbox": [
+            54.45000076293945,
+            128.719970703125,
+            109.83000183105469,
+            136.1099853515625
+          ],
+          "native_id": "native_p0000_ft000003"
+        }
+      ]
+    },
+    {
+      "id": "block-cd439e48891ced128a03beee",
+      "type": "text",
+      "text": "Annex 2 applies.",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:1",
+          "page_index": 0,
+          "page": 1,
+          "bbox": [
+            320.0,
+            128.80999755859375,
+            393.05999755859375,
+            137.97998046875
+          ],
+          "native_id": "native_p0000_ft000006"
+        }
+      ]
+    },
+    {
+      "id": "block-9e6af077155852aac4cb44de",
+      "type": "text",
+      "text": "Table 1: Limits",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:1",
+          "page_index": 0,
+          "page": 1,
+          "bbox": [
+            54.209999084472656,
+            194.80999755859375,
+            123.54000091552734,
+            202.1099853515625
+          ],
+          "native_id": "native_p0000_ft000007"
+        }
+      ]
+    },
+    {
+      "id": "block-a8c8fdcb204f10dca8dd5827",
+      "type": "table",
+      "text": "",
+      "level": 1,
+      "parent_id": null,
+      "numbering": "",
+      "dependencies": [],
+      "source_refs": [
+        {
+          "scope_id": "page:1",
+          "page_index": 0,
+          "page": 1,
+          "bbox": [
+            54.0,
+            222.0,
+            299.3333333333333,
+            287.3333333333333
+          ]
+        }
+      ],
+      "table": {
+        "rows": [
+          [
+            "Item",
+            "Limit"
+          ],
+          [
+            "A",
+            "5 mg"
+          ],
+          [
+            "B",
+            "7 mg"
+          ]
+        ],
+        "merges": [],
+        "notes": []
+      }
+    }
+  ],
+  "scope": [
+    {
+      "id": "page:1",
+      "kind": "page",
+      "label": "Page 1",
+      "location": {
+        "page": 1
+      }
+    }
+  ],
+  "covered_scope": [
+    "page:1"
+  ],
+  "processed_scope": [
+    "page:1"
+  ],
+  "usable_scope": [
+    "page:1"
+  ],
+  "unprocessed_scope": [],
+  "warnings": [
+    "Native text can differ from visible page marks. Compare it with the original page image. Scanned pages may require manual transcription; no OCR is run when viewing.",
+    "PDF candidate uses the existing positioned PDFium parser in mapped three-page windows. Ruled-table grids use existing local geometry assembly. Reading order, headings and unruled tables may need manual correction; source page images and complete native evidence are retained. No Requirement classifier, semantic processor, OCR model or external service runs."
+  ],
+  "unresolved": [],
+  "canonical_artifacts": [
+    "pdf-window-0001.pdf",
+    "pdf-native-0001.json",
+    "pdf-page-0001.png",
+    "pdf-table-grid-review-0001.json",
+    "pdf-order-repairs.json",
+    "pdf-paragraph-groups.json"
+  ],
+  "status": "candidate_available",
+  "review_policy": "human_material_confirmation_required",
+  "requirement_status": "not_connected"
+}

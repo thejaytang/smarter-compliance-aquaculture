@@ -1,0 +1,9 @@
+{
+  "status": "VERIFIED_LOCAL_PACKAGE",
+  "zip_file": "windows-reviewer-code.zip",
+  "sha256": "fba105d5711a7106889b0c73287a85f083582f9bef28c799bd3510d1fd8ef422",
+  "members": 369,
+  "matching_repository_files": 367,
+  "generated_files": 2,
+  "windows_acceptance": "PENDING_ACTUAL_WINDOWS"
+}

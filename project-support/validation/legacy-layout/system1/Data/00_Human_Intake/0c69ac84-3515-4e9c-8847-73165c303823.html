@@ -1,0 +1,603 @@
+
+<!DOCTYPE html
+>
+<html lang="no" class="no-js">
+
+<head>
+	
+	<!-- Le styles -->
+	<link href="/resources/css/bootstrap.css?26-09-04-1449" rel="stylesheet">
+	<link href="/resources/fonts/ss-symbolicons-block/ss-symbolicons-block.css?26-09-04-1449" rel="stylesheet">
+	<link href="/resources/fonts/ss-symbolicons-line/ss-symbolicons-line.css?26-09-04-1449" rel="stylesheet">
+	<link href="/resources/fonts/feed/ss-feed-icons.css?26-09-04-1449" rel="stylesheet">
+	<link href="/resources/fonts/ss-standard/ss-standard.css?26-09-04-1449" rel="stylesheet">
+	<link href="/resources/fonts/ss-social-regular/ss-social.css?26-09-04-1449" rel="stylesheet">
+	<link href="/resources/select2/select2.css?26-09-04-1449" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat">
+	<!-- Modaal -->
+	<link rel="stylesheet" href="/resources/css/modaal.min.css">
+
+		<link href="/resources/css/app.css?26-09-04-1449" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<link href="/resources/css/ld-ie.css?26-09-04-1449" rel="stylesheet">
+	<![endif]-->
+
+	<!-- Le scripts -->
+	<script src="/resources/js/jquery-3.7.1.min.js?26-09-04-1449"></script>
+	<script src="/resources/js/mathjax/tex-mml-chtml.js?26-09-04-1449"></script>
+		<script>
+			var dev = false;
+		</script>
+		<!-- Plausible -->
+		<script defer data-domain="lovdata.no" src="https://plausible.io/js/plausible.js"></script>
+		<!-- End Plausible -->
+
+	<script src="/resources/js/modernizr.min.js?26-09-04-1449"></script>
+	<script src="/resources/js/bootstrap.min.js?26-09-04-1449"></script>
+	<script src="/resources/js/jquery.throttle.js?26-09-04-1449"></script>
+	<script src="/resources/js/jquery.form.min.js?26-09-04-1449"></script>
+	<script src="/resources/js/json2.js?26-09-04-1449"></script>
+	<script src="/resources/js/jstorage.js?26-09-04-1449"></script>
+	<script src="/resources/select2/select2.min.js?26-09-04-1449"></script>
+	<script src="/resources/js/app.js?26-09-04-1449"></script>
+		<script src="/resources/js/app-lovdata.js?26-09-04-1449"></script>
+	<script src="/resources/js/highlighter.js?26-09-04-1449"></script>
+	<!-- Modaal -->
+	<script src="/resources/js/modaal.min.js"></script>
+
+	<link rel="icon" href="/resources/img/logo/new/lovdata-logosymbol-stortingsrod.svg" type="image/svg+xml" sizes="16x16 32x32 48x48 64x64">
+	<link rel="apple-touch-icon-precomposed" href="/resources/img/logo/new/lovdata-logosymbol-stortingsrod.svg" type="image/svg+xml" sizes="152x152">
+
+	<meta charset="utf-8">
+	<title>Forsiden - Lovdata</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+	<meta name="google-site-verification" content="ENJVlOsNC5zBiaC_PChgiRbBrUBjN6P-Owo6nwS9--Q"/>
+	<meta name="application-name" content="Lovdata"/>
+	<meta property="fb:admins" content="711945576, 714678011"/>
+		<meta name="robots" content="noodp">
+		<meta name="description" content="Offisiell kunngjøring av endringer i norske lover og forskrifter. Gratis tilgang til gjeldende lover og forskrifter, traktater og nye dommer.">
+		<meta name="twitter:card" content="summary"/>
+		<meta name="twitter:description" content="Offisiell kunngjøring av endringer i norske lover og forskrifter. Gratis tilgang til gjeldende lover og forskrifter, traktater og nye dommer.">
+		<meta name="twitter:site" content="@lovdata"/>
+		<meta name="twitter:title" content="Forsiden"/>
+</head>
+
+	<body class="template-frontpage">
+
+	<div aria-hidden="true" class="print-logo">
+		<img src="/resources/img/logo/new/lovdata-logo-primaer.svg" alt="Lovdata-logo"/>
+	</div>
+
+	<div id="skiplinks">
+		<a href="#main-content">Til hovedinnhold</a>
+	</div>
+
+<header>
+	<div class="ld-navbar" id="ld-navbar">
+
+		<a class="logo" href="/" aria-label="Til forsiden"></a>
+
+				<button class="open-search" aria-label="Åpne søk">
+			<i class="ss-icon ss-symbolicons-block" aria-hidden="true">&#x1F50D;</i>
+		</button>
+
+		<div class="middleContainer">
+			<a tabindex="0" role="button" aria-label="Åpne/lukk meny" class="menu_toggler" aria-expanded="false">
+				<span></span>
+			</a>
+
+			<form class="mainSearch" role="search" id="sok" action="/sok" METHOD="get">
+
+
+				<script>
+					document.addEventListener("DOMContentLoaded", function () {
+						const searchInput = document.getElementById("globSearch");
+						const form = document.querySelector("form");
+
+						form.addEventListener("submit", function () {
+							searchInput.classList.add("loading");
+						});
+
+						searchInput.addEventListener('keydown', event => { //Turn textarea into input.
+							if (event.code === 'Enter') {
+								event.preventDefault();
+								form.submit();
+								searchInput.classList.add("loading");
+							}
+						});
+					});
+
+					var searchInDocumentPlaceholder = '';
+					var searchInDocument = '';
+
+					// JavaScript function to monitor input and apply changes
+					document.addEventListener("DOMContentLoaded", function () {
+						const searchInput = document.getElementById("globSearch");
+						const form = document.getElementById("sok");
+						const wordCounter = document.getElementById("word-counter");
+						const freeSearchHelpText = document.getElementById("freesearch-help-text");
+						const bottomInfo = document.getElementById("search-bottom-info");
+
+						searchInput.placeholder = 'Søk med opp til fem søkeord eller skriv lengre for å gjøre et frisøk'
+
+						// Handle changes to the form class and action
+						searchInput.addEventListener("input", function () {
+							var startsWithQuote = (searchInput.value.startsWith("\"") || searchInput.value.startsWith("\'") || searchInput.value.startsWith("«"));
+							var blankSpaceCount = (searchInput.value.match(/ ./g) || []).length;
+							if (blankSpaceCount !== 0) {
+								blankSpaceCount += 1;
+							}
+
+							if (blankSpaceCount > 5 && !startsWithQuote) {
+								wordCounter.style.visibility = "visible"
+								searchInput.classList.add("expanded");
+
+								// Change the form action to "/frisok"
+								form.setAttribute("action", "/frisok");
+								form.setAttribute("method", "POST");
+								wordCounter.innerHTML = searchInput.value.length + "/500";
+								freeSearchHelpText.innerHTML = 'Nå gjør du et frisøk. Du kan stille et spørsmål, forklare en situasjon eller beskrive hva du leter etter.'
+								searchInput.classList.add("frisok-icon")
+							} else {
+								if (blankSpaceCount === 0) {
+									bottomInfo.style.display = "none"
+								} else {
+									bottomInfo.style.display = "flex"
+									wordCounter.innerHTML = blankSpaceCount + "/5";
+									freeSearchHelpText.innerHTML = 'Bruk mer enn fem søkeord for å gjøre et frisøk.'
+								}
+
+								searchInput.classList.remove("expanded");
+								searchInput.classList.remove("frisok-icon")
+
+								form.setAttribute("action", "/sok"); // Set the form action back to "/sok"
+								form.setAttribute("method", "GET");
+							}
+						});
+
+						const updateHeightOfSearchBox = () => {
+							var expandedSearchField = 0
+							searchInput.style.height = 'auto';
+							const newHeightOfInput = expandedSearchField + searchInput.scrollHeight;
+							searchInput.style.height = newHeightOfInput + 'px';
+						};
+						searchInput.addEventListener('input', updateHeightOfSearchBox);
+					});
+				</script>
+
+				<div class="search">
+					<label class="sr-only" for="globSearch">Søketekst</label>
+					<span class="search-box-container">
+						<div class="search-box-container-absolute">
+							<textarea class="search-input" type="text" id="globSearch" name="q"
+							
+							placeholder="Søk med opp til fem søkeord eller skriv lengre for å gjøre et frisøk"></textarea>
+							<div class="search-bottom-info" id="search-bottom-info">
+								<div class="freesearch-help-text" id="freesearch-help-text"></div>
+								<div class="word-counter" id="word-counter" title="Dersom du bruker mer enn fem søkeord vil du utføre et frisøk"></div>
+							</div>
+						</div>
+					</span>
+					<input type="submit" class="submit" value="Søk">
+					<div class="close-mobile-search">Avbryt</div>
+				</div>
+			</form>
+		</div>
+		<a class="pro-login" href="/pro" title="Logg inn"><span>Logg inn</span><i class="ss-icon ss-symbolicons-block">&#x1F512;</i></a>
+	</div>
+</header>
+	<nav aria-labelledby="menuHeader">
+		<h1 class="sr-only" id="menuHeader">Hovedmeny</h1>
+		<!-- Menu content -->
+		<div class="leftPanel">
+		<div class="left-menu" aria-hidden="true">
+			<div class="menu-item-container hidden">
+				<ul class="top-level-menu">
+					<li class="resIcon top-level">
+						<div class="gmi-container leftIcon">
+							<button class="gliding-menu-item menuTgl" aria-expanded="false">Rettskilder</button>
+						</div>
+						<ul class="second-level-menu hiddenSubMenu" aria-hidden="true">
+							<li class="lovIcon second-level-icon resources">
+								<div class="gmi-container leftIcon">
+									<a class="gliding-menu-item" href="/register/lover">Lover</a>
+								</div>
+							</li>
+							<li class="sntForIcon second-level-icon resources">
+								<div class="gmi-container leftIcon"><a class="gliding-menu-item" href="/register/forskrifter">Sentrale forskrifter mv.</a></div>
+							</li>
+							<li class="lokForIcon second-level-icon resources">
+								<div class="gmi-container leftIcon"><a class="gliding-menu-item" href="/register/lokaleForskrifter">Lokale forskrifter</a></div>
+							</li>
+							<li class="ltIcon second-level-icon resources">
+								<div class="gmi-container leftIcon"><a class="gliding-menu-item" href="/register/lovtidend">Norsk Lovtidend</a></div>
+							</li>
+							<li class="storVedIcon second-level-icon resources">
+								<div class="gmi-container leftIcon"><a class="gliding-menu-item" href="/register/stortingsvedtak">Stortingsvedtak</a></div>
+							</li>
+							<li class="eosIcon second-level-icon resources">
+								<div class="gmi-container leftIcon"><a class="gliding-menu-item" href="/register/eosAvtalen">EØS-avtalen</a></div>
+							</li>
+							<li class="traIcon second-level-icon resources">
+								<div class="gmi-container leftIcon"><a class="gliding-menu-item" href="/register/traktater">Norges traktater</a></div>
+							</li>
+							<li class="decIcon second-level-icon resources">
+								<div class="gmi-container leftIcon"><a class="gliding-menu-item" href="/register/avgjørelser">Rettsavgjørelser</a></div>
+							</li>
+							<li class="trrIcon second-level-icon resources">
+								<div class="gmi-container leftIcon"><a class="gliding-menu-item" href="/register/trygderetten">Trygderettssaker</a></div>
+							</li>
+							<li class="tarIcon second-level-icon resources">
+								<div class="gmi-container leftIcon"><a class="gliding-menu-item" href="/register/tariffavtaler">Tariffavtaler</a></div>
+							</li>
+							<li class="forarbeidIcon second-level-icon resources">
+								<div class="gmi-container leftIcon"><a class="gliding-menu-item" href="/register/husleietvistutvalget">Husleietvistutvalget</a></div>
+							</li>
+							<li class="forarbeidIcon second-level-icon resources">
+								<div class="gmi-container leftIcon"><a class="gliding-menu-item" href="/register/personvernnemnda">Personvernnemnda</a></div>
+							</li>
+							<li class="sphIcon second-level-icon resources">
+								<div class="gmi-container leftIcon"><a class="gliding-menu-item" href="/sph">Statens Personalhåndbok</a></div>
+							</li>
+							<li class="lovIcon second-level-icon resources">
+								<div class="gmi-container leftIcon"><a class="gliding-menu-item" href="/register/loverEngelsk">Translated acts</a></div>
+							</li>
+							<li class="sntForIcon second-level-icon resources">
+								<div class="gmi-container leftIcon"><a class="gliding-menu-item" href="/register/forskrifterEngelsk">Translated regulations</a></div>
+							</li>
+							<li class="decIcon second-level-icon resources">
+								<div class="gmi-container leftIcon"><a class="gliding-menu-item" href="/register/avgjørelserEngelsk">Translated decisions</a></div>
+							</li>
+						</ul>
+					</li>
+					<li class="servIcon top-level">
+						<div class="gmi-container leftIcon">
+							<button class="gliding-menu-item menuTgl">Tjenester</button>
+						</div>
+						<ul class="second-level-menu hiddenSubMenu" aria-hidden="true">
+							<li class="proIcon second-level-icon">
+								<div class="gmi-container leftIcon"><a class="gliding-menu-item" href="https://pro.lovdata.no">Lovdata Pro</a></div>
+							</li>
+							<li class="extLink">
+								<div class="gmi-container">
+									<a class="gliding-menu-item" href="https://www.europalov.no">Europalov.no</a>
+								</div>
+							</li>
+							<li class="extLink">
+								<div class="gmi-container">
+									<a class="gliding-menu-item" href="/info/api">API</a>
+								</div>
+							</li>
+							<li class="extLink">
+								<div class="gmi-container">
+									<a class="gliding-menu-item" href="/info/rss">RSS-feed</a>
+								</div>
+							</li>
+							<li class="extLink">
+								<div class="gmi-container">
+									<a class="gliding-menu-item" href="/eli">ELI (beta)</a>
+								</div>
+							</li>
+							<li class="extLink">
+								<div class="gmi-container">
+									<a class="gliding-menu-item" href="/publikasjoner">E-publikasjoner</a>
+								</div>
+							</li>
+							<li class="extLink">
+								<div class="gmi-container">
+									<a class="gliding-menu-item" href="/tjenester/tidsskrift">Tidsskrifter</a>
+								</div>
+							</li>
+							<li class="extLink">
+								<div class="gmi-container">
+									<a class="gliding-menu-item" href="https://hjelp.lovdata.no/article/170-sokeoppdrag-og-utskrifter">Søkeoppdrag</a>
+								</div>
+							</li>
+							<li class="extLink">
+								<div class="gmi-container">
+									<a class="gliding-menu-item" href="http://hjelp.lovdata.no/article/97-kursinformasjon">Kurs</a>
+								</div>
+							</li>
+							<li class="extLink">
+								<div class="gmi-container">
+									<a class="gliding-menu-item" href="/info/eksamen">Eksamen</a>
+								</div>
+							</li>
+							<li class="extLink">
+								<div class="gmi-container">
+									<a class="gliding-menu-item" href="/info/landslov">Landsloven</a>
+								</div>
+							</li>
+							<li class="extLink">
+								<div class="gmi-container">
+									<a class="gliding-menu-item" href="/info/22juli">22. juli-saken</a>
+								</div>
+							</li>
+							<li class="extLink">
+								<div class="gmi-container">
+									<a class="gliding-menu-item" href="/advokater">Advokatoversikt</a>
+								</div>
+							</li>
+							<li class="extLink">
+								<div class="gmi-container">
+									<a class="gliding-menu-item" href="/info/lenker">Lenker</a>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li class="infIcon top-level">
+						<div class="gmi-container leftIcon">
+							<button class="gliding-menu-item menuTgl">Om Lovdata</button>
+						</div>
+						<ul class="second-level-menu hiddenSubMenu" aria-hidden="true">
+							<li class="extLink">
+								<div class="gmi-container"><a class="gliding-menu-item" href="/info/om_lovdata">Generell informasjon</a></div>
+							</li>
+							<li>
+								<div class="gmi-container"><a class="gliding-menu-item" href="/info/brukeravtale">Brukeravtale</a></div>
+							</li>
+							<li class="extLink">
+								<div class="gmi-container"><a class="gliding-menu-item" href="/info/redaktoransvar">Redaktøransvar</a></div>
+							</li>
+							<li class="extLink">
+								<div class="gmi-container"><a class="gliding-menu-item" href="/info/kontakt">Kontakt oss</a></div>
+							</li>
+							<li class="extLink">
+								<div class="gmi-container"><a class="gliding-menu-item" href="/info/milopolicy">Miljøpolicy</a></div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+
+				<ul class="top-level-menu">
+					<li class="menuItm grlIcon top-level btmIcon">
+						<div class="gmi-container leftIcon"><a class="gliding-menu-item grl" href="https://grunnloven.lovdata.no">Grunnloven</a></div>
+					</li>
+					<li class="menuItm cookIcon top-level btmIcon">
+						<div class="gmi-container leftIcon"><a class="gliding-menu-item" href="/info/personvern">Personvern</a></div>
+					</li>
+					<li class="menuItm linkedinIcon top-level btmIcon">
+						<div class="gmi-container leftIcon"><a class="gliding-menu-item" href="https://www.linkedin.com/company/lovdata/">Linkedin</a></div>
+					</li>
+					<li class="menuItm twitIcon top-level btmIcon">
+						<div class="gmi-container leftIcon"><a class="gliding-menu-item" href="https://www.twitter.com/lovdata">Twitter</a></div>
+					</li>
+					<li class="menuItm faceIcon top-level btmIcon">
+						<div class="gmi-container leftIcon"><a class="gliding-menu-item" href="https://www.facebook.com/lovdata">Facebook</a></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		</div>
+	</nav>
+
+
+<main id="main-content">
+	<h1 class="sr-only">Forsiden, Lovdata</h1>
+
+	<section class="articleFlex" aria-labelledby="articleHeader">
+		<h2 id="articleHeader" class="sr-only">Nyhetsartikler</h2>
+
+			<article aria-labelledby="sticky1Title">
+				<a href="/artikkel/ny_samling_med_korrupsjonsdommer/5590" >
+					<div class="squareWrapper">
+						<img src="/static/image/2125/no._24_handel.jpg?width=1000" alt="Stort paragraftegn som utgjør rulletrapper med personer som fraktes opp og ned. På bakkenivå flere personer på vei et sted" title="Stort paragraftegn som utgjør rulletrapper med personer som fraktes opp og ned. På bakkenivå flere personer på vei et sted" />
+					</div>
+					<p class="category">Artikkel</p>
+					<div class="ingressWrapper">
+						<h3 id="sticky1Title">Ny samling med korrupsjonsdommer</h3>
+						<p class="ingress">Korrupsjon forekommer både i privat og offentlig sektor, og ofte i møtet mellom de to. Les de nyeste korrupsjonssakene fra Norge i den oppdaterte domssamlingen.</p>
+					</div>
+				</a>
+			</article>
+
+			<article aria-labelledby="sticky2Title">
+				<a href="/artikkel/gravejournalistikk_om_mulig_justismord_far_rettssikkerhetspris/5597" >
+					<div class="squareWrapper">
+						<img src="/static/image/5086/rettsikkerhetskonferansen26.jpg?width=1000" alt="Universitetet i Oslo, Domus Media, Karl Johans gate 47. Foto" title="Universitetet i Oslo, Domus Media, Karl Johans gate 47. Foto" />
+					</div>
+					<p class="category">Artikkel</p>
+					<div class="ingressWrapper">
+						<h3 id="sticky2Title">Gravejournalistikk om mulig justismord får rettssikkerhetspris</h3>
+						<p class="ingress">Simen Sætre får rettssikkerhetsprisen for arbeidet med saken til det som har blitt omtalt som Norges verste seriemorder. En grundig gjennomgang stiller spørsmål ved riktigheten av dommen i en av Norges største straffesaker.</p>
+					</div>
+				</a>
+			</article>
+
+			<article aria-labelledby="sticky3Title">
+				<a href="/artikkel/er_du_forebudd_til_jaktsesongen /5603" >
+					<div class="squareWrapper">
+						<img src="/static/image/5095/fjellrype_1.jpg?width=1000" alt="Fjellrype i naturen. Foto." title="Fjellrype i naturen. Foto." />
+					</div>
+					<p class="category">Artikkel</p>
+					<div class="ingressWrapper">
+						<h3 id="sticky3Title">Er du førebudd til jaktsesongen? </h3>
+						<p class="ingress">Jaktsesongen er i gong, og no med flunkande nytt lovverk! Som jeger har ein sjølv ansvar for å ha kunnskap om dei gjeldande reglane for jaktutøvinga.</p>
+					</div>
+				</a>
+			</article>
+
+			<article aria-labelledby="sticky4Title">
+				<a href="/artikkel/jusspodden_bor_vi_forby_ki-briller_og_kriminalisere_flere_hatefulle_ytringer/5601" >
+					<div class="squareWrapper">
+						<img src="/static/image/5092/260903_podkast.jpg?width=1000" alt="Marianne Reinertsen, Hans Petter Graver, Merete Smith og Sindre Granly Meldalen i studio. Foto" title="Marianne Reinertsen, Hans Petter Graver, Merete Smith og Sindre Granly Meldalen i studio. Foto" />
+					</div>
+					<p class="category">Podcast</p>
+					<div class="ingressWrapper">
+						<h3 id="sticky4Title">Jusspodden: Bør vi forby KI-briller og kriminalisere flere hatefulle ytringer?</h3>
+						<p class="ingress">Bør KI-briller, som kan ta skjulte videoopptak og brukes til ansiktsgjenkjenning, forbys? Og bør hatparagrafen omfatte alle hatefulle ytringer? Dette er tema i ukens episode av Jusspodden.</p>
+					</div>
+				</a>
+			</article>
+
+		<div class="articleLink">
+			<a href="/artikler">Flere artikler</a>
+		</div>
+		<div class="frontpageSeparator">
+			<hr>
+		</div>
+
+	</section>
+	<div class="fpSlider">
+		<div class="midSectionFlex">
+			<nav aria-labelledby="rettskildeHeader">
+				<h2 id="rettskildeHeader">Utforsk rettskildene</h2>
+				<ul>
+					<li><a href="/register/lover">Lover</a></li>
+					<li><a href="/register/forskrifter">Sentrale forskrifter mv.</a></li>
+					<li><a href="/register/lokaleForskrifter">Lokale forskrifter</a></li>
+					<li><a href="/register/stortingsvedtak">Stortingsvedtak</a></li>
+					<li><a href="/register/eosAvtalen">EØS-avtalen</a></li>
+					<li><a href="/register/traktater">Norges traktater</a></li>
+					<li><a href="/register/avgjørelser">Rettsavgjørelser</a></li>
+					<li><a href="/register/trygderetten">Trygderettskjennelser</a></li>
+					<li><a href="/register/tariffavtaler">Tariffavtaler</a></li>
+					<li><a href="/register/husleietvistutvalget">Husleietvistutvalget</a></li>
+					<li><a href="/register/personvernnemnda">Personvernnemnda</a></li>
+					<li><a href="/sph">Statens Personalhåndbok</a></li>
+					<li><a href="/register/loverEngelsk" lang="en">Translated acts</a></li>
+					<li><a href="/register/forskrifterEngelsk" lang="en">Translated regulations</a></li>
+					<li><a href="/register/avgjørelserEngelsk" lang="en">Translated decisions</a></li>
+					<li><a class="pro-link" href="https://pro.lovdata.no">Mer i Lovdata Pro</a></li>
+				</ul>
+			</nav>
+
+			<section aria-labelledby="ltHeader" class="lovtidend">
+				<h2 id="ltHeader">Det siste fra Norsk Lovtidend</h2>
+
+					<article aria-labelledby="sticky5Title" class="ltArticle">
+						<a href="/artikkel/lover_i_kraft_1__juli_2026/5554" ">
+						<div class="ltSquareFlexWrapper">
+							<div class="ltSquareWrapper">
+								<img src="/static/image/2056/no._1_lovgivning.jpg" alt="Gressplen med fordypninger formet som paragraftegn som ligner fotspor innover mot høyre. Illustrasjon" title="Gressplen med fordypninger formet som paragraftegn som ligner fotspor innover mot høyre. Illustrasjon" />
+							</div>
+						</div>
+
+						<div class="ltInfoWrapper">
+							<h3 id="sticky5Title">Lover i kraft 1. juli 2026</h3>
+							<p>Onsdag 1. juli 2026 trer 39 lover helt eller delvis i kraft, deriblant ny viltressurslov, ny besøksbidragslov, ny romlov og ny minerallov, mens 2 lover oppheves.</p>
+						</div>
+						<div class="ltChevron"></div>
+						</a>
+					</article>
+
+				<div class="ltSeparator">
+					<div></div>
+				</div>
+
+				<div class="ltLatest">
+						<article aria-labelledby="LTI/forskrift/2026-09-11-1775">
+							<a href="/dokument/LTI/forskrift/2026-09-11-1775">
+								<h3 id="LTI/forskrift/2026-09-11-1775">Delt ikraftsetting av lov 20. juni 2025 nr. 82 om endringer i rettshjelpsloven mv. (prioriterte sakstyper for rettshjelp mv.)</h3>
+								<div class="ltMeta">
+									<div class="squareWrapper">
+										<p class="ltMetaText">
+											<span class="ltAvd" aria-label="Publisert i">Avd.<br/> I</span>
+											<span class="date" aria-label="Kunngjøringsdato">14. sep.</span>
+										</p>
+									</div>
+								</div>
+							</a>
+						</article>
+						<article aria-labelledby="LTII/forskrift/2026-09-10-1774">
+							<a href="/dokument/LTII/forskrift/2026-09-10-1774">
+								<h3 id="LTII/forskrift/2026-09-10-1774">Forskrift om opning av jakt og fastsetting av minsteareal for hjort og fastsetting av fellingsavgift for hjort, Høyanger kommune, Vestland</h3>
+								<div class="ltMeta">
+									<div class="squareWrapper">
+										<p class="ltMetaText">
+											<span class="ltAvd" aria-label="Publisert i">Avd.<br/> II</span>
+											<span class="date" aria-label="Kunngjøringsdato">11. sep.</span>
+										</p>
+									</div>
+								</div>
+							</a>
+						</article>
+						<article aria-labelledby="LTII/forskrift/2026-06-18-1773">
+							<a href="/dokument/LTII/forskrift/2026-06-18-1773">
+								<h3 id="LTII/forskrift/2026-06-18-1773">Forskrift om endring i forskrift om folkevalgtes rett til godtgjøring og velferdsgoder, Bodø kommune, Nordland</h3>
+								<div class="ltMeta">
+									<div class="squareWrapper">
+										<p class="ltMetaText">
+											<span class="ltAvd" aria-label="Publisert i">Avd.<br/> II</span>
+											<span class="date" aria-label="Kunngjøringsdato">11. sep.</span>
+										</p>
+									</div>
+								</div>
+							</a>
+						</article>
+						<article aria-labelledby="LTI/forskrift/2026-09-11-1772">
+							<a href="/dokument/LTI/forskrift/2026-09-11-1772">
+								<h3 id="LTI/forskrift/2026-09-11-1772">Delegering av Kongens myndighet til å endre forskrift om Politihøgskolens virksomhet og tilpasning til universitets- og høyskoleloven for Politihøgskolen etter universitets- og høyskoleloven § 1-2 tredje ledd bokstav a</h3>
+								<div class="ltMeta">
+									<div class="squareWrapper">
+										<p class="ltMetaText">
+											<span class="ltAvd" aria-label="Publisert i">Avd.<br/> I</span>
+											<span class="date" aria-label="Kunngjøringsdato">11. sep.</span>
+										</p>
+									</div>
+								</div>
+							</a>
+						</article>
+				</div>
+
+				<div class="ltLink">
+					<a href="/register/lovtidend">Mer fra Norsk Lovtidend</a>
+				</div>
+			</section>
+		</div>
+		<aside aria-labelledby="solutionHeader" class="fpServices">
+			<h2 id="solutionHeader">Våre løsninger og tjenester</h2>
+			<div class="fpIcons">
+				<a title="Les mer om Lovdata Pro" class="ldpro" aria-label="Les mer om Lovdata Pro" href="https://pro.lovdata.no"></a>
+				<a title="Til Europalov.no" class="eurolov" aria-label="Til Europalov.no" href="https://www.europalov.no"></a>
+				<a title="Les mer om våre API-tjenester" class="api" aria-label="Les mer om våre API-tjenester" href="https://api.lovdata.no"></a>
+			</div>
+		</aside>
+	</div>
+</main>
+
+<script type="application/ld+json"> {
+		"@context": "http://schema.org",
+		"@type": "WebSite",
+		"url": "https://lovdata.no/",
+		"potentialAction": {
+			"@type": "SearchAction",
+			"target": "https://lovdata.no/sok?q={search_term}",
+			"query-input": "required name=search_term"
+		}
+	}
+</script>
+<aside role="region" aria-labelledby="faq" class="help closed hidden-xs">
+	<h1 class="sr-only" id="faq">Brukerveiledning</h1>
+	<div class="open-help">
+		<button aria-label="Åpne informasjon om brukerveiledning" aria-expanded="false">
+			<span aria-hidden="true" class="toggle-open ss-icon ss-symbolicons-block">&#x2753;</span>
+			<span aria-hidden="true" class="toggle-close ss-icon ss-symbolicons-block">&#x2421;</span>
+		</button>
+		<noscript>
+			<a aria-label="Gå til hjelpeside" class="open-help-noscript" href="/info/faq"></a>
+		</noscript>
+	</div>
+	<div class="help-container hiddenSidePanel" aria-hidden="true">
+		<h2>Trenger du brukerveiledning?</h2>
+		<p><a class="infolink" href="/info/faq">Få svar på ofte stilte spørsmål her (FAQ)</a></p>
+		<p>Lovdata kan dessverre ikke svare på spørsmål angående juridiske problemer. Lovdata kan heller ikke bidra med å tolke regelverket eller finne frem til rettsregler som passer i et bestemt tilfelle. Kontakt den offentlige etaten spørsmålet gjelder, eventuelt advokat eller rettshjelper hvis du har behov for slik bistand.</p>
+
+		<h2>Fant du ikke det du lette etter?</h2>
+		<p>Send en e-post til <a class="infolink" href="mailto:support@lovdata.no">support@lovdata.no</a></p>
+	</div>
+</aside>
+<footer class="footer">
+	<a href="/info/personvern#cookies" class="cookieInfo" aria-hidden="true"><i class="ss-icon ss-symbolicons-line">&#x1F36A;</i><span class="cookie-label">Om informasjonskapsler</span></a>
+	<ul class="footer-nav">
+		<li><a lang="en" href="/info/information_in_english">Information in English</a></li>
+		<li class="ld-hidden-xs"><p tabindex="0" class="popover-parent" data-placement="top" data-toggle="popover" data-trigger="focus hover" title="" data-content="Hold inne Ctrl-tasten (Cmd-tasten på Mac). Trykk samtidig på + for å forstørre eller - for å forminske.">Juster tekststørrelse<span class="sr-only">Hold inne Ctrl-tasten (Cmd-tasten på Mac). Trykk samtidig på + for å forstørre eller - for å forminske.</span></p></li>
+		<li class="visible-xs"><a href="/info/faq">Hjelp</a></li>
+		<li><a href="/info/kontakt">Kontakt</a></li>
+		<li><a href="/info/brukeravtale">Brukeravtale</a></li>
+	</ul>
+</footer>
+
+	</body>
+</html>
+

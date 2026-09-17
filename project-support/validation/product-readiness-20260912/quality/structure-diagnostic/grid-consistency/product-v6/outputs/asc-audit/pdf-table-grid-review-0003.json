@@ -1,0 +1,22 @@
+{
+  "method": "native-line-grid-consistency/1",
+  "source_sha256": "911b716d6e4f9aacc1e0c7999dbcf1e009f08c3b322269c748d867006521e76d",
+  "page_reference": {
+    "scope_id": "page:3",
+    "page_index": 2,
+    "page": 3
+  },
+  "tolerance_points": 1.0,
+  "reject_ratio": 0.25,
+  "rejected": [],
+  "inspected": [
+    {
+      "candidate_id": "block-672017a57cc898b8ecc61e05",
+      "captured_line_denominator": 107,
+      "crossing_line_numerator": 8,
+      "crossing_ratio": 0.07476635514018691,
+      "reject": false,
+      "reason": null
+    }
+  ]
+}

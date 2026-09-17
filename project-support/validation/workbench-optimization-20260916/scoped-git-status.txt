@@ -1,0 +1,58 @@
+ M .gitignore
+ M AGENTS.md
+ M ENVIRONMENT.md
+ M PROJECT_STATE.md
+ M README.md
+ M system2/src/pdf_extraction/evidence/material_reader.py
+ M system2/src/pdf_extraction/orchestration/material_parser.py
+ M system2/src/pdf_extraction/orchestration/material_service.py
+ M system2/src/pdf_extraction/review/materials.py
+ M system2/tests/test_material_reader_navigation.py
+ M system2/tests/test_materials.py
+ M system3/PROJECT_STATE.md
+ M workbench/PROJECT_STATE.md
+ M workbench/USER_GUIDE.md
+ M workbench/src/local_workbench/recovery.py
+ M workbench/src/local_workbench/server.py
+ M workbench/src/local_workbench/sqlite_support.py
+ M workbench/tests/material-confirmation.test.mjs
+ M workbench/tests/material-navigation-lock.test.mjs
+ M workbench/tests/material-navigation.test.mjs
+ M workbench/tests/material-redesign.test.mjs
+ M workbench/tests/materials-ui.test.mjs
+ M workbench/tests/numbered-labels.test.mjs
+ M workbench/tests/reader-display.test.mjs
+ M workbench/tests/test_extension_availability.mjs
+ M workbench/tests/test_material_http.py
+ M workbench/tests/test_recovery.py
+ M workbench/ui/global-settings.js
+ M workbench/ui/index.html
+ M workbench/ui/materials.css
+ M workbench/ui/materials.js
+?? system2/src/pdf_extraction/orchestration/material_body.py
+?? system2/tests/test_material_body.py
+?? system2/tests/test_material_markdown.py
+?? workbench/docs/manual-requirement-splitting.md
+?? workbench/docs/markdown-content.md
+?? workbench/docs/requirement-interpretation.md
+?? workbench/frontend/
+?? workbench/src/local_workbench/ai_settings.py
+?? workbench/src/local_workbench/check_design.py
+?? workbench/src/local_workbench/interpretation_lineage.py
+?? workbench/src/local_workbench/interpretations.py
+?? workbench/src/local_workbench/requirements.py
+?? workbench/tests/annotations.test.mjs
+?? workbench/tests/check-design.test.mjs
+?? workbench/tests/markdown-content.test.mjs
+?? workbench/tests/requirements.test.mjs
+?? workbench/tests/test_check_design.py
+?? workbench/tests/test_interpretations.py
+?? workbench/tests/test_requirements.py
+?? workbench/ui/check-design.js
+?? workbench/ui/four-pane.css
+?? workbench/ui/interpretations.js
+?? workbench/ui/markdown-content.css
+?? workbench/ui/markdown-content.js
+?? workbench/ui/requirements.css
+?? workbench/ui/requirements.js
+?? workbench/ui/vendor/markdown/

@@ -1,0 +1,1161 @@
+[
+  {
+    "before": [
+      {
+        "id": "block-f4dd657418c46416de5090c7",
+        "type": "text",
+        "text": "Aquaculture Stewardship Council",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              396.9100036621094,
+              37.47711181640625,
+              545.1994018554688,
+              44.65911865234375
+            ],
+            "native_id": "native_p0000_ft000000"
+          }
+        ]
+      },
+      {
+        "id": "block-072b523c92903d8be138fa53",
+        "type": "text",
+        "text": "PRINCIPLE 1: COMPLY WITH ALL APPLICABLE",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              58.13399887084961,
+              66.446044921875,
+              488.491943359375,
+              79.65802001953125
+            ],
+            "native_id": "native_p0000_ft000016"
+          }
+        ]
+      },
+      {
+        "id": "block-52eb621da8cdde48d325cfaf",
+        "type": "text",
+        "text": "NATIONAL LAWS AND LOCAL REGULATIONS",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              58.13399887084961,
+              88.406005859375,
+              479.8380126953125,
+              101.61798095703125
+            ],
+            "native_id": "native_p0000_ft000017"
+          }
+        ]
+      },
+      {
+        "id": "block-320f16364f3be9fb53ec0697",
+        "type": "text",
+        "text": "Principle 1 is intended to ensure that all farms aiming to be certified against the ASC",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              57.8985595703125,
+              120.4130859375,
+              555.716796875,
+              130.84588623046875
+            ],
+            "native_id": "native_p0000_ft000018"
+          }
+        ]
+      },
+      {
+        "id": "block-413dc1f9093517907a9e8c5e",
+        "type": "text",
+        "text": "Salmon Standard standards meet their legal obligations as a baseline requirement.",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              57.158878326416016,
+              136.54833984375,
+              555.4130249023438,
+              146.9259033203125
+            ],
+            "native_id": "native_p0000_ft000019"
+          }
+        ]
+      },
+      {
+        "id": "block-0ca151446c8fb76290155a1f",
+        "type": "text",
+        "text": "Adhering to the law will ensure that producers meet the basic environmental and social",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              56.662078857421875,
+              152.62835693359375,
+              555.3167114257812,
+              163.00592041015625
+            ],
+            "native_id": "native_p0000_ft000020"
+          }
+        ]
+      },
+      {
+        "id": "block-b5b0c9ff96c1a410118f13b5",
+        "type": "text",
+        "text": "requirements and the minimal structures, such as legitimate land tenure rights, on which",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              57.73295974731445,
+              168.7083740234375,
+              555.3721313476562,
+              179.0859375
+            ],
+            "native_id": "native_p0000_ft000021"
+          }
+        ]
+      },
+      {
+        "id": "block-ab7b513482d830bead8903e3",
+        "type": "text",
+        "text": "the effectiveness of the requirements will stand.",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              56.82767868041992,
+              184.85308837890625,
+              320.5157470703125,
+              195.230712890625
+            ],
+            "native_id": "native_p0000_ft000022"
+          }
+        ]
+      },
+      {
+        "id": "block-178593b759a43bacc48be3a8",
+        "type": "text",
+        "text": "Criterion 1.1",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              92.71199798583984,
+              212.87603759765625,
+              161.8679962158203,
+              222.24798583984375
+            ],
+            "native_id": "native_p0000_ft000023"
+          }
+        ]
+      },
+      {
+        "id": "block-2308cc5c992bec58b67fc558",
+        "type": "text",
+        "text": "Compliance with all applicable local and national legal",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              184.7480010986328,
+              212.87603759765625,
+              524.4940185546875,
+              224.5400390625
+            ],
+            "native_id": "native_p0000_ft000024"
+          }
+        ]
+      },
+      {
+        "id": "block-20b621ac564c2f191832c777",
+        "type": "text",
+        "text": "requirements and regulations",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              185.20399475097656,
+              227.51605224609375,
+              369.1400146484375,
+              239.1800537109375
+            ],
+            "native_id": "native_p0000_ft000025"
+          }
+        ]
+      },
+      {
+        "id": "block-8dc1de113a1a22b3100f7551",
+        "type": "table",
+        "text": "",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              56.666666666666664,
+              253.33333333333334,
+              552.6666666666666,
+              577.3333333333334
+            ]
+          }
+        ],
+        "table": {
+          "rows": [
+            [
+              "INDICATOR REQUIREMENT",
+              ""
+            ],
+            [
+              "1.1.1 Presence of documents demonstrating compliance with local and national regulations and requirements on land and water use",
+              "Yes"
+            ],
+            [
+              "1.1.2 Presence of documents demonstrating compliance with all tax laws",
+              "Yes"
+            ],
+            [
+              "1.1.3 Presence of documents demonstrating compliance with all relevant national and local labour laws and regulations",
+              "Yes"
+            ],
+            [
+              "1.1.4 Presence of documents demonstrating compliance with regulations and permits concerning water quality impacts",
+              "Yes"
+            ]
+          ],
+          "merges": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 2
+            }
+          ],
+          "notes": []
+        }
+      },
+      {
+        "id": "block-344367323e8b42d17e662636",
+        "type": "text",
+        "text": "Rationale - Salmon aquaculture operations must, as a baseline, adhere to the national",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              57.55632019042969,
+              592.3715209960938,
+              533.671630859375,
+              603.1907196044922
+            ],
+            "native_id": "native_p0000_ft000046"
+          }
+        ]
+      },
+      {
+        "id": "block-5e372856ab8d7d1649cacd7f",
+        "type": "text",
+        "text": "and local laws of the regions where production is taking place. Farm operations that,",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              57.24720001220703,
+              608.8931121826172,
+              524.8132934570312,
+              619.3259124755859
+            ],
+            "native_id": "native_p0000_ft000047"
+          }
+        ]
+      },
+      {
+        "id": "block-c3065c7de2b47562d092f890",
+        "type": "text",
+        "text": "intentionally or unintentionally, break the law violate a fundamental benchmark of",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              57.55632019042969,
+              624.9731140136719,
+              514.3253784179688,
+              635.4059143066406
+            ],
+            "native_id": "native_p0000_ft000048"
+          }
+        ]
+      },
+      {
+        "id": "block-59b2ad1a18ed0cf2466fd734",
+        "type": "text",
+        "text": "performance for certified farms. It is important that aquaculture operations demonstrate",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              57.73295974731445,
+              641.0531158447266,
+              548.2332763671875,
+              651.4307250976562
+            ],
+            "native_id": "native_p0000_ft000049"
+          }
+        ]
+      },
+      {
+        "id": "block-92da95504f71ab94bc931dd1",
+        "type": "text",
+        "text": "a pattern of legal and responsible behaviour, including the implementation of corrective",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              57.24720001220703,
+              657.1331176757812,
+              545.7020263671875,
+              667.56591796875
+            ],
+            "native_id": "native_p0000_ft000050"
+          }
+        ]
+      },
+      {
+        "id": "block-75b04bb05521a00692513378",
+        "type": "text",
+        "text": "actions for any legal violations.",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              57.24720001220703,
+              673.2131195068359,
+              227.21905517578125,
+              683.6459197998047
+            ],
+            "native_id": "native_p0000_ft000051"
+          }
+        ]
+      },
+      {
+        "id": "block-87fbc08f60350a185d0f6b0f",
+        "type": "table",
+        "text": "",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              270.0,
+              701.3333333333334,
+              528.6666666666666,
+              744.6666666666666
+            ]
+          }
+        ],
+        "table": {
+          "rows": [
+            [
+              "Document ID: Version:",
+              "ASC-STD-010 1.5",
+              "Date issued: Last reviewed:",
+              "13/10/2025 13/10/2025"
+            ],
+            [
+              "",
+              "",
+              "Page 18 of 134",
+              ""
+            ]
+          ],
+          "merges": [],
+          "notes": []
+        }
+      },
+      {
+        "id": "block-5bb8fabaf3438bb0afd0f719",
+        "type": "text",
+        "text": "ASC Salmon and Cod Standard",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              163.71295166015625,
+              705.4478378295898,
+              264.81439208984375,
+              710.2883987426758
+            ],
+            "native_id": "native_p0000_ft000002"
+          }
+        ]
+      },
+      {
+        "id": "block-d99f4c90dc939c7600f93987",
+        "type": "text",
+        "text": "Document Name:",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              90.6427230834961,
+              705.7199935913086,
+              148.12681579589844,
+              710.2819137573242
+            ],
+            "native_id": "native_p0000_ft000001"
+          }
+        ]
+      },
+      {
+        "id": "block-1645a1cf08feeae19a93228e",
+        "type": "text",
+        "text": "Director of Standards and Science",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              159.3987274169922,
+              719.8154373168945,
+              269.6170349121094,
+              724.6884002685547
+            ],
+            "native_id": "native_p0000_ft000008"
+          }
+        ]
+      },
+      {
+        "id": "block-c05bda871e9196e4b1402493",
+        "type": "text",
+        "text": "Document Owner:",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              89.5627212524414,
+              720.0811157226562,
+              149.30833435058594,
+              724.6884002685547
+            ],
+            "native_id": "native_p0000_ft000007"
+          }
+        ]
+      },
+      {
+        "id": "block-e37e89032c6e1e4cd8e6c113",
+        "type": "text",
+        "text": "Classification:",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              97.44095611572266,
+              734.2154388427734,
+              141.15504455566406,
+              739.0883979797363
+            ],
+            "native_id": "native_p0000_ft000013"
+          }
+        ]
+      },
+      {
+        "id": "block-3d2f8560d138f14b3063d08c",
+        "type": "text",
+        "text": "EXTERNAL (PUBLIC)",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              181.71871948242188,
+              734.2478408813477,
+              247.14727783203125,
+              740.306640625
+            ],
+            "native_id": "native_p0000_ft000014"
+          }
+        ]
+      }
+    ],
+    "after": [
+      {
+        "id": "block-f4dd657418c46416de5090c7",
+        "type": "text",
+        "text": "Aquaculture Stewardship Council",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              396.9100036621094,
+              37.47711181640625,
+              545.1994018554688,
+              44.65911865234375
+            ],
+            "native_id": "native_p0000_ft000000"
+          }
+        ]
+      },
+      {
+        "id": "block-072b523c92903d8be138fa53",
+        "type": "text",
+        "text": "PRINCIPLE 1: COMPLY WITH ALL APPLICABLE",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              58.13399887084961,
+              66.446044921875,
+              488.491943359375,
+              79.65802001953125
+            ],
+            "native_id": "native_p0000_ft000016"
+          }
+        ]
+      },
+      {
+        "id": "block-52eb621da8cdde48d325cfaf",
+        "type": "text",
+        "text": "NATIONAL LAWS AND LOCAL REGULATIONS",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              58.13399887084961,
+              88.406005859375,
+              479.8380126953125,
+              101.61798095703125
+            ],
+            "native_id": "native_p0000_ft000017"
+          }
+        ]
+      },
+      {
+        "id": "block-4baeb23cc0d49ee644d869f7",
+        "type": "text",
+        "text": "Principle 1 is intended to ensure that all farms aiming to be certified against the ASC\nSalmon Standard standards meet their legal obligations as a baseline requirement.",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              57.8985595703125,
+              120.4130859375,
+              555.716796875,
+              130.84588623046875
+            ],
+            "native_id": "native_p0000_ft000018"
+          },
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              57.158878326416016,
+              136.54833984375,
+              555.4130249023438,
+              146.9259033203125
+            ],
+            "native_id": "native_p0000_ft000019"
+          }
+        ]
+      },
+      {
+        "id": "block-b792e2f98b984fab236fbac2",
+        "type": "text",
+        "text": "Adhering to the law will ensure that producers meet the basic environmental and social\nrequirements and the minimal structures, such as legitimate land tenure rights, on which\nthe effectiveness of the requirements will stand.",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              56.662078857421875,
+              152.62835693359375,
+              555.3167114257812,
+              163.00592041015625
+            ],
+            "native_id": "native_p0000_ft000020"
+          },
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              57.73295974731445,
+              168.7083740234375,
+              555.3721313476562,
+              179.0859375
+            ],
+            "native_id": "native_p0000_ft000021"
+          },
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              56.82767868041992,
+              184.85308837890625,
+              320.5157470703125,
+              195.230712890625
+            ],
+            "native_id": "native_p0000_ft000022"
+          }
+        ]
+      },
+      {
+        "id": "block-178593b759a43bacc48be3a8",
+        "type": "text",
+        "text": "Criterion 1.1",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              92.71199798583984,
+              212.87603759765625,
+              161.8679962158203,
+              222.24798583984375
+            ],
+            "native_id": "native_p0000_ft000023"
+          }
+        ]
+      },
+      {
+        "id": "block-c37914819c3386cdd1ffd1f9",
+        "type": "text",
+        "text": "Compliance with all applicable local and national legal\nrequirements and regulations",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              184.7480010986328,
+              212.87603759765625,
+              524.4940185546875,
+              224.5400390625
+            ],
+            "native_id": "native_p0000_ft000024"
+          },
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              185.20399475097656,
+              227.51605224609375,
+              369.1400146484375,
+              239.1800537109375
+            ],
+            "native_id": "native_p0000_ft000025"
+          }
+        ]
+      },
+      {
+        "id": "block-8dc1de113a1a22b3100f7551",
+        "type": "table",
+        "text": "",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              56.666666666666664,
+              253.33333333333334,
+              552.6666666666666,
+              577.3333333333334
+            ]
+          }
+        ],
+        "table": {
+          "rows": [
+            [
+              "INDICATOR REQUIREMENT",
+              ""
+            ],
+            [
+              "1.1.1 Presence of documents demonstrating compliance with local and national regulations and requirements on land and water use",
+              "Yes"
+            ],
+            [
+              "1.1.2 Presence of documents demonstrating compliance with all tax laws",
+              "Yes"
+            ],
+            [
+              "1.1.3 Presence of documents demonstrating compliance with all relevant national and local labour laws and regulations",
+              "Yes"
+            ],
+            [
+              "1.1.4 Presence of documents demonstrating compliance with regulations and permits concerning water quality impacts",
+              "Yes"
+            ]
+          ],
+          "merges": [
+            {
+              "row": 0,
+              "col": 0,
+              "rowspan": 1,
+              "colspan": 2
+            }
+          ],
+          "notes": []
+        }
+      },
+      {
+        "id": "block-be9a3108c4a28b74161d90bd",
+        "type": "text",
+        "text": "Rationale - Salmon aquaculture operations must, as a baseline, adhere to the national\nand local laws of the regions where production is taking place. Farm operations that,\nintentionally or unintentionally, break the law violate a fundamental benchmark of\nperformance for certified farms. It is important that aquaculture operations demonstrate\na pattern of legal and responsible behaviour, including the implementation of corrective\nactions for any legal violations.",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              57.55632019042969,
+              592.3715209960938,
+              533.671630859375,
+              603.1907196044922
+            ],
+            "native_id": "native_p0000_ft000046"
+          },
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              57.24720001220703,
+              608.8931121826172,
+              524.8132934570312,
+              619.3259124755859
+            ],
+            "native_id": "native_p0000_ft000047"
+          },
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              57.55632019042969,
+              624.9731140136719,
+              514.3253784179688,
+              635.4059143066406
+            ],
+            "native_id": "native_p0000_ft000048"
+          },
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              57.73295974731445,
+              641.0531158447266,
+              548.2332763671875,
+              651.4307250976562
+            ],
+            "native_id": "native_p0000_ft000049"
+          },
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              57.24720001220703,
+              657.1331176757812,
+              545.7020263671875,
+              667.56591796875
+            ],
+            "native_id": "native_p0000_ft000050"
+          },
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              57.24720001220703,
+              673.2131195068359,
+              227.21905517578125,
+              683.6459197998047
+            ],
+            "native_id": "native_p0000_ft000051"
+          }
+        ]
+      },
+      {
+        "id": "block-87fbc08f60350a185d0f6b0f",
+        "type": "table",
+        "text": "",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              270.0,
+              701.3333333333334,
+              528.6666666666666,
+              744.6666666666666
+            ]
+          }
+        ],
+        "table": {
+          "rows": [
+            [
+              "Document ID: Version:",
+              "ASC-STD-010 1.5",
+              "Date issued: Last reviewed:",
+              "13/10/2025 13/10/2025"
+            ],
+            [
+              "",
+              "",
+              "Page 18 of 134",
+              ""
+            ]
+          ],
+          "merges": [],
+          "notes": []
+        }
+      },
+      {
+        "id": "block-5bb8fabaf3438bb0afd0f719",
+        "type": "text",
+        "text": "ASC Salmon and Cod Standard",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              163.71295166015625,
+              705.4478378295898,
+              264.81439208984375,
+              710.2883987426758
+            ],
+            "native_id": "native_p0000_ft000002"
+          }
+        ]
+      },
+      {
+        "id": "block-d99f4c90dc939c7600f93987",
+        "type": "text",
+        "text": "Document Name:",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              90.6427230834961,
+              705.7199935913086,
+              148.12681579589844,
+              710.2819137573242
+            ],
+            "native_id": "native_p0000_ft000001"
+          }
+        ]
+      },
+      {
+        "id": "block-1645a1cf08feeae19a93228e",
+        "type": "text",
+        "text": "Director of Standards and Science",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              159.3987274169922,
+              719.8154373168945,
+              269.6170349121094,
+              724.6884002685547
+            ],
+            "native_id": "native_p0000_ft000008"
+          }
+        ]
+      },
+      {
+        "id": "block-c05bda871e9196e4b1402493",
+        "type": "text",
+        "text": "Document Owner:",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              89.5627212524414,
+              720.0811157226562,
+              149.30833435058594,
+              724.6884002685547
+            ],
+            "native_id": "native_p0000_ft000007"
+          }
+        ]
+      },
+      {
+        "id": "block-e37e89032c6e1e4cd8e6c113",
+        "type": "text",
+        "text": "Classification:",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              97.44095611572266,
+              734.2154388427734,
+              141.15504455566406,
+              739.0883979797363
+            ],
+            "native_id": "native_p0000_ft000013"
+          }
+        ]
+      },
+      {
+        "id": "block-3d2f8560d138f14b3063d08c",
+        "type": "text",
+        "text": "EXTERNAL (PUBLIC)",
+        "level": 1,
+        "parent_id": null,
+        "numbering": "",
+        "dependencies": [],
+        "source_refs": [
+          {
+            "scope_id": "page:18",
+            "page_index": 17,
+            "page": 18,
+            "bbox": [
+              181.71871948242188,
+              734.2478408813477,
+              247.14727783203125,
+              740.306640625
+            ],
+            "native_id": "native_p0000_ft000014"
+          }
+        ]
+      }
+    ],
+    "fragment_payload_order_exact": true,
+    "input_unmodified": true,
+    "group_text_exact": true,
+    "group_refs_exact": true
+  }
+]

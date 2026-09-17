@@ -1,0 +1,21 @@
+{
+  "verified_at": "2026-09-14T10:42:55.246977+00:00",
+  "repository": "thejaytang/smarter-compliance-aquaculture",
+  "branch": "main",
+  "published_content_commit": "ae4f075386495943df13b528d68510cffb37bd19",
+  "visibility": "PUBLIC",
+  "archived": false,
+  "remote_blob_count": 8680,
+  "remote_tree_matches_local_modes_and_oids": true,
+  "remote_tree_truncated": false,
+  "lfs_download_verified": {
+    "path": "system2/System2_Requirement_Register 2.xlsx",
+    "bytes": 116250063,
+    "sha256": "705c42b3498ac77f5196208c15ab06e61453aceea2d31341a0404aa87fdc59d0",
+    "method": "fetch into an initially empty isolated LFS storage directory"
+  },
+  "credential_pattern_scan": {
+    "files": 8608,
+    "findings": []
+  }
+}

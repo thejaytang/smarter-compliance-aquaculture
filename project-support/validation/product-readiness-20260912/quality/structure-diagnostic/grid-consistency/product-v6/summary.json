@@ -1,0 +1,87 @@
+{
+  "parser_version": "material-structural-parser/6",
+  "source_sha256": "ae3745c920366edfb70934e540f2fbe745835ff772a16aa540b751713123388e",
+  "targeted_regression": {
+    "tests": 159,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "loaded_environments": "Source code and isolated System2 parser workers only; normal Workbench service loading not checked or switched in this subtask.",
+  "prechange_v5_sha256": "ddf3794b24903f5196ff76ceda4570c751f8417385ecc3c760ff4d4504cb807c",
+  "html_functions_unchanged": true,
+  "changed_functions": [
+    "_inspect_pdf_table_grid",
+    "_pdf_tables",
+    "_pdf_blocks"
+  ],
+  "guard_policy": {
+    "method": "native-line-grid-consistency/1",
+    "tolerance_points": 1,
+    "reject_ratio_at_least": 0.25,
+    "uncertain_or_zero_evidence": "Region rejection with preserved evidence and located unresolved warning, not whole-document exception"
+  },
+  "fixed_dev": {
+    "documents": 7,
+    "inspected_grids": 15,
+    "rejected_grids": 6,
+    "restored_positioned_lines": 14,
+    "real_table_regions_retained_unchanged": 8,
+    "known_false_1x1_table_retained": 1,
+    "all_invariants": true
+  },
+  "expected_isolated_comparison": [
+    {
+      "sample": "asc-farm",
+      "blocks_equal_isolated_guard": true,
+      "scope_and_status_equal_isolated_guard": true,
+      "rejected_ids_equal_isolated_guard": true
+    },
+    {
+      "sample": "asc-interpretation",
+      "blocks_equal_isolated_guard": true,
+      "scope_and_status_equal_isolated_guard": true,
+      "rejected_ids_equal_isolated_guard": true
+    },
+    {
+      "sample": "asc-audit",
+      "blocks_equal_isolated_guard": true,
+      "scope_and_status_equal_isolated_guard": true,
+      "rejected_ids_equal_isolated_guard": true
+    },
+    {
+      "sample": "asc-salmon-cod",
+      "blocks_equal_isolated_guard": true,
+      "scope_and_status_equal_isolated_guard": true,
+      "rejected_ids_equal_isolated_guard": true
+    },
+    {
+      "sample": "borderless-merged-figure",
+      "blocks_equal_isolated_guard": true,
+      "scope_and_status_equal_isolated_guard": true,
+      "rejected_ids_equal_isolated_guard": true
+    },
+    {
+      "sample": "born-digital-multicolumn",
+      "blocks_equal_isolated_guard": true,
+      "scope_and_status_equal_isolated_guard": true,
+      "rejected_ids_equal_isolated_guard": true
+    },
+    {
+      "sample": "cross-page-content",
+      "blocks_equal_isolated_guard": true,
+      "scope_and_status_equal_isolated_guard": true,
+      "rejected_ids_equal_isolated_guard": true
+    }
+  ],
+  "quality": "No fixed content-score gain/loss; overall PDF acceptance remains FAIL on last measured /4 reserved evidence. /6 independent verification UNMEASURED; no reserved samples rerun.",
+  "full_system2_regression": "Not run by instruction; notify coordinator once source/report stable. Historical 1072 tests bind /4 only.",
+  "preservation": {
+    "sources": true,
+    "annotations": true,
+    "native_extractor": true,
+    "native_config": true,
+    "lock": true,
+    "parser_stable_since_targeted": true
+  }
+}

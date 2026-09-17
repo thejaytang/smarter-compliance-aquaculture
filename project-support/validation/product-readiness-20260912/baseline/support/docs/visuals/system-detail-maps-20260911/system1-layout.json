@@ -1,0 +1,1541 @@
+{
+  "key": "system1",
+  "title": "System1 | Govern the source, version and admission",
+  "size": [
+    3919.9999999999995,
+    2940.0
+  ],
+  "nodes": [
+    {
+      "module": 1,
+      "row": 1,
+      "title": "01 \u00b7 Registered identity?",
+      "body": "Distinguish existing governed sources from new proposals.",
+      "x": 98.0,
+      "y": 489.99999999999994,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": true
+    },
+    {
+      "module": 1,
+      "row": 2,
+      "title": "02 \u00b7 Receive a candidate",
+      "body": "Authorised local file or structured candidate; record its origin.",
+      "x": 98.0,
+      "y": 672.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 1,
+      "row": 3,
+      "title": "03 \u00b7 Compare identities",
+      "body": "Check duplicate official identities and missing source fields.",
+      "x": 98.0,
+      "y": 854.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": true
+    },
+    {
+      "module": 1,
+      "row": 4,
+      "title": "04 \u00b7 Complete the proposal",
+      "body": "Locate the official source, retrieval target, format and provenance.",
+      "x": 98.0,
+      "y": 1036.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 1,
+      "row": 5,
+      "title": "05 \u00b7 Named human ACCEPT?",
+      "body": "Admission is explicit; ordinary ratings do not create a source.",
+      "x": 98.0,
+      "y": 1218.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": true
+    },
+    {
+      "module": 1,
+      "row": 6,
+      "title": "06 \u00b7 Register the source",
+      "body": "Assign the formal source identity and retain the admission decision.",
+      "x": 98.0,
+      "y": 1400.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 1,
+      "row": 7,
+      "title": "07 \u00b7 Queue eligible retrieval",
+      "body": "Existing and newly admitted current records join the same route.",
+      "x": 98.0,
+      "y": 1582.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 2,
+      "row": 1,
+      "title": "01 \u00b7 Resolve retrieval target",
+      "body": "Official identity and retrievable original are separate concepts.",
+      "x": 1071.0,
+      "y": 489.99999999999994,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 2,
+      "row": 2,
+      "title": "02 \u00b7 Acquire the original",
+      "body": "Keep authoritative language and original published format.",
+      "x": 1071.0,
+      "y": 672.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 2,
+      "row": 3,
+      "title": "03 \u00b7 Usable payload?",
+      "body": "Check format, expected file evidence and failed/restricted access.",
+      "x": 1071.0,
+      "y": 854.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": true
+    },
+    {
+      "module": 2,
+      "row": 4,
+      "title": "04 \u00b7 Compare current version",
+      "body": "Compare exact source bytes with the retained snapshot.",
+      "x": 1071.0,
+      "y": 1036.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": true
+    },
+    {
+      "module": 2,
+      "row": 5,
+      "title": "05 \u00b7 Retain a new snapshot",
+      "body": "Keep the previous original; attach provenance and version lineage.",
+      "x": 1071.0,
+      "y": 1218.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 2,
+      "row": 6,
+      "title": "06 \u00b7 Record acquisition state",
+      "body": "Success, failure and restricted access remain distinct from selection.",
+      "x": 1071.0,
+      "y": 1400.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 2,
+      "row": 7,
+      "title": "07 \u00b7 Return current evidence",
+      "body": "Expose the valid snapshot, version, access result and any open issue.",
+      "x": 1071.0,
+      "y": 1582.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 3,
+      "row": 1,
+      "title": "01 \u00b7 Preserve human decisions",
+      "body": "Read the current selection, named decisions, reports and drafts.",
+      "x": 2043.9999999999998,
+      "y": 489.99999999999994,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 3,
+      "row": 2,
+      "title": "02 \u00b7 Assess five dimensions",
+      "body": "Authority, relevance, currency, traceability and access permission.",
+      "x": 2043.9999999999998,
+      "y": 672.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 3,
+      "row": 3,
+      "title": "03 \u00b7 Evidence supports scores?",
+      "body": "Each dimension needs scoped evidence and calibrated confidence.",
+      "x": 2043.9999999999998,
+      "y": 854.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": true
+    },
+    {
+      "module": 3,
+      "row": 4,
+      "title": "04 \u00b7 All machine gates pass?",
+      "body": "Five HIGH ratings, threshold support, valid original and no hold.",
+      "x": 2043.9999999999998,
+      "y": 1036.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": true
+    },
+    {
+      "module": 3,
+      "row": 5,
+      "title": "05 \u00b7 Resolve effective selection",
+      "body": "Retain human precedence; machine admission never invents a reviewer.",
+      "x": 2043.9999999999998,
+      "y": 1218.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 3,
+      "row": 6,
+      "title": "06 \u00b7 Audit + weekly source QA",
+      "body": "Check source/file consistency. Monday sample: 5 eligible records.",
+      "x": 2043.9999999999998,
+      "y": 1400.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 3,
+      "row": 7,
+      "title": "07 \u00b7 INCLUDE and current?",
+      "body": "Only effective INCLUDE with a usable current snapshot moves on.",
+      "x": 2043.9999999999998,
+      "y": 1582.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": true
+    },
+    {
+      "module": 4,
+      "row": 1,
+      "title": "01 \u00b7 Bind the source package",
+      "body": "Source identity + original + version + selection and acquisition state.",
+      "x": 3017.0,
+      "y": 489.99999999999994,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 4,
+      "row": 2,
+      "title": "02 \u00b7 Recheck current evidence",
+      "body": "Reject changed bytes or stale eligibility before a downstream start.",
+      "x": 3017.0,
+      "y": 672.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": true
+    },
+    {
+      "module": 4,
+      "row": 3,
+      "title": "03 \u00b7 Expose the eligible original",
+      "body": "System2A starts only on explicit user action; opening a view does not start it.",
+      "x": 3017.0,
+      "y": 854.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 4,
+      "row": 4,
+      "title": "04 \u00b7 Publish the source register",
+      "body": "One-way Excel snapshot of the owning saved source state.",
+      "x": 3017.0,
+      "y": 1036.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 4,
+      "row": 5,
+      "title": "05 \u00b7 Reconcile output status",
+      "body": "Saved, export-pending, synchronized and failed are separate states.",
+      "x": 3017.0,
+      "y": 1218.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 4,
+      "row": 6,
+      "title": "06 \u00b7 Process downstream follow-up",
+      "body": "Missing body or source defect returns to the existing source task.",
+      "x": 3017.0,
+      "y": 1400.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 4,
+      "row": 7,
+      "title": "07 \u00b7 Preserve continuity",
+      "body": "New source versions or loss of eligibility suspend affected downstream use.",
+      "x": 3017.0,
+      "y": 1582.0,
+      "w": 532.0,
+      "h": 125.99999999999999,
+      "decision": false
+    },
+    {
+      "module": 1,
+      "row": 1,
+      "title": "Retain identity",
+      "body": "Keep previous decisions; use the existing retrieval route.",
+      "x": 672.0,
+      "y": 487.2,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    },
+    {
+      "module": 1,
+      "row": 3,
+      "title": "Reconcile first",
+      "body": "Keep one source identity. Resolve the proposed link or metadata.",
+      "x": 672.0,
+      "y": 851.1999999999999,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    },
+    {
+      "module": 1,
+      "row": 5,
+      "title": "Remain a candidate",
+      "body": "Pending or declined admission retains its reason.",
+      "x": 672.0,
+      "y": 1215.1999999999998,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    },
+    {
+      "module": 2,
+      "row": 3,
+      "title": "Preserve valid file",
+      "body": "Paywall/failure: record evidence and request an authorised original.",
+      "x": 1645.0,
+      "y": 851.1999999999999,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    },
+    {
+      "module": 2,
+      "row": 4,
+      "title": "Reuse snapshot",
+      "body": "Record the check; avoid creating a duplicate source version.",
+      "x": 1645.0,
+      "y": 1033.2,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    },
+    {
+      "module": 3,
+      "row": 3,
+      "title": "Human assessment",
+      "body": "Unknown stays unknown; no invented percentage.",
+      "x": 2618.0,
+      "y": 851.1999999999999,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    },
+    {
+      "module": 3,
+      "row": 4,
+      "title": "Keep the hold",
+      "body": "Low score, source failure or human follow-up needs action.",
+      "x": 2618.0,
+      "y": 1033.2,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    },
+    {
+      "module": 3,
+      "row": 7,
+      "title": "Retain selection",
+      "body": "PENDING needs review; EXCLUDE stays out of downstream intake.",
+      "x": 2618.0,
+      "y": 1579.1999999999998,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    },
+    {
+      "module": 4,
+      "row": 2,
+      "title": "Refresh evidence",
+      "body": "Reload current source and selection before retry.",
+      "x": 3590.9999999999995,
+      "y": 669.1999999999999,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    },
+    {
+      "module": 4,
+      "row": 5,
+      "title": "Retry the export",
+      "body": "The decision stays saved; retain the last complete workbook.",
+      "x": 3590.9999999999995,
+      "y": 1215.1999999999998,
+      "w": 230.99999999999997,
+      "h": 138.6,
+      "branch": true
+    }
+  ],
+  "wires": [
+    {
+      "points": [
+        [
+          520,
+          880
+        ],
+        [
+          520,
+          960
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          520,
+          1140
+        ],
+        [
+          520,
+          1220
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          520,
+          1400
+        ],
+        [
+          520,
+          1480
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          520,
+          1660
+        ],
+        [
+          520,
+          1740
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          520,
+          1920
+        ],
+        [
+          520,
+          2000
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          520,
+          2180
+        ],
+        [
+          520,
+          2260
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          1910,
+          880
+        ],
+        [
+          1910,
+          960
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          1910,
+          1140
+        ],
+        [
+          1910,
+          1220
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          1910,
+          1400
+        ],
+        [
+          1910,
+          1480
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          1910,
+          1660
+        ],
+        [
+          1910,
+          1740
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          1910,
+          1920
+        ],
+        [
+          1910,
+          2000
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          1910,
+          2180
+        ],
+        [
+          1910,
+          2260
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          3300,
+          880
+        ],
+        [
+          3300,
+          960
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          3300,
+          1140
+        ],
+        [
+          3300,
+          1220
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          3300,
+          1400
+        ],
+        [
+          3300,
+          1480
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          3300,
+          1660
+        ],
+        [
+          3300,
+          1740
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          3300,
+          1920
+        ],
+        [
+          3300,
+          2000
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          3300,
+          2180
+        ],
+        [
+          3300,
+          2260
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          4690,
+          880
+        ],
+        [
+          4690,
+          960
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          4690,
+          1140
+        ],
+        [
+          4690,
+          1220
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          4690,
+          1400
+        ],
+        [
+          4690,
+          1480
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          4690,
+          1660
+        ],
+        [
+          4690,
+          1740
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          4690,
+          1920
+        ],
+        [
+          4690,
+          2000
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          4690,
+          2180
+        ],
+        [
+          4690,
+          2260
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          900,
+          780
+        ],
+        [
+          960,
+          780
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          1290,
+          796
+        ],
+        [
+          1385,
+          796
+        ],
+        [
+          1385,
+          780
+        ],
+        [
+          1530,
+          780
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          900,
+          1300
+        ],
+        [
+          960,
+          1300
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          1290,
+          1316
+        ],
+        [
+          1350,
+          1316
+        ],
+        [
+          1350,
+          2635
+        ]
+      ],
+      "kind": "hold",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          900,
+          1820
+        ],
+        [
+          960,
+          1820
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          1290,
+          1836
+        ],
+        [
+          1350,
+          1836
+        ],
+        [
+          1350,
+          2635
+        ]
+      ],
+      "kind": "hold",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          2290,
+          1300
+        ],
+        [
+          2350,
+          1300
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          2680,
+          1316
+        ],
+        [
+          2740,
+          1316
+        ],
+        [
+          2740,
+          2635
+        ]
+      ],
+      "kind": "hold",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          2290,
+          1560
+        ],
+        [
+          2350,
+          1560
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          2680,
+          1576
+        ],
+        [
+          2775,
+          1576
+        ],
+        [
+          2775,
+          1965
+        ],
+        [
+          2250,
+          1965
+        ],
+        [
+          2250,
+          2000
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          3680,
+          1300
+        ],
+        [
+          3740,
+          1300
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          4070,
+          1316
+        ],
+        [
+          4130,
+          1316
+        ],
+        [
+          4130,
+          2635
+        ]
+      ],
+      "kind": "hold",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          3680,
+          1560
+        ],
+        [
+          3740,
+          1560
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          4070,
+          1576
+        ],
+        [
+          4130,
+          1576
+        ],
+        [
+          4130,
+          2635
+        ]
+      ],
+      "kind": "hold",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          3680,
+          2340
+        ],
+        [
+          3740,
+          2340
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          5070,
+          1040
+        ],
+        [
+          5130,
+          1040
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          5460,
+          1056
+        ],
+        [
+          5520,
+          1056
+        ],
+        [
+          5520,
+          2635
+        ]
+      ],
+      "kind": "hold",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          5070,
+          1820
+        ],
+        [
+          5130,
+          1820
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          5460,
+          1836
+        ],
+        [
+          5520,
+          1836
+        ],
+        [
+          5520,
+          2635
+        ]
+      ],
+      "kind": "hold",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          520,
+          2440
+        ],
+        [
+          520,
+          2470
+        ],
+        [
+          1407,
+          2470
+        ],
+        [
+          1407,
+          780
+        ],
+        [
+          1530,
+          780
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          1910,
+          2440
+        ],
+        [
+          1910,
+          2470
+        ],
+        [
+          2797,
+          2470
+        ],
+        [
+          2797,
+          780
+        ],
+        [
+          2920,
+          780
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          3300,
+          2440
+        ],
+        [
+          3300,
+          2470
+        ],
+        [
+          4187,
+          2470
+        ],
+        [
+          4187,
+          780
+        ],
+        [
+          4310,
+          780
+        ]
+      ],
+      "kind": "flow",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          979,
+          2790
+        ],
+        [
+          1022,
+          2790
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          1874,
+          2790
+        ],
+        [
+          1917,
+          2790
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          2769,
+          2790
+        ],
+        [
+          2812,
+          2790
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          3664,
+          2790
+        ],
+        [
+          3707,
+          2790
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          4559,
+          2790
+        ],
+        [
+          4602,
+          2790
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          1350,
+          2635
+        ],
+        [
+          1350,
+          2690
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          840,
+          2635
+        ],
+        [
+          840,
+          2590
+        ]
+      ],
+      "kind": "return",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          2740,
+          2635
+        ],
+        [
+          2740,
+          2690
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          2230,
+          2635
+        ],
+        [
+          2230,
+          2590
+        ]
+      ],
+      "kind": "return",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          4130,
+          2635
+        ],
+        [
+          4130,
+          2690
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          3620,
+          2635
+        ],
+        [
+          3620,
+          2590
+        ]
+      ],
+      "kind": "return",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          5520,
+          2635
+        ],
+        [
+          5520,
+          2690
+        ]
+      ],
+      "kind": "hold",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          5010,
+          2635
+        ],
+        [
+          5010,
+          2590
+        ]
+      ],
+      "kind": "return",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          560,
+          2590
+        ],
+        [
+          560,
+          2612
+        ]
+      ],
+      "kind": "leader",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          1950,
+          2590
+        ],
+        [
+          1950,
+          2612
+        ]
+      ],
+      "kind": "leader",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          3340,
+          2590
+        ],
+        [
+          3340,
+          2612
+        ]
+      ],
+      "kind": "leader",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          4730,
+          2590
+        ],
+        [
+          4730,
+          2612
+        ]
+      ],
+      "kind": "leader",
+      "arrow": false
+    }
+  ],
+  "human": {
+    "items": [
+      [
+        "1 \u00b7 One source task",
+        "Consolidate candidate, access, URL, original and QA issues."
+      ],
+      [
+        "2 \u00b7 Inspect evidence",
+        "See the exact decision, reason, original and prior history."
+      ],
+      [
+        "3 \u00b7 Correct / supplement",
+        "Rate the source, correct metadata or supply an authorised file."
+      ],
+      [
+        "4 \u00b7 Check current version",
+        "A stale or incomplete request remains a draft or pending."
+      ],
+      [
+        "5 \u00b7 Save named decision",
+        "Apply once, retain the reason, receipt and previous decisions."
+      ],
+      [
+        "6 \u00b7 Return to the owner",
+        "Verified correction re-enters intake, retrieval or governance."
+      ]
+    ],
+    "rule": "A saved URL is metadata only. A supplied original still needs checking. A source may retain other unresolved issues after one correction."
+  },
+  "measurements": [
+    {
+      "module": 1,
+      "title": "Admission and identity",
+      "scope": "Current source base: 87 identities; new-candidate browser admission remains maintainer-assisted.",
+      "rows": [
+        [
+          "Identity / prior history",
+          "Preserved \u00b7 scoped check"
+        ],
+        [
+          "Candidate admission",
+          "Named ACCEPT required"
+        ]
+      ],
+      "method": "Compare source identities and named decisions before/after the controlled transition. Exercise new, duplicate and declined candidates; check that only accepted candidates obtain a formal identity.",
+      "conclusion": "No autonomous discovery provider is configured. Candidate admission and source-population completeness have no measured accuracy percentage."
+    },
+    {
+      "module": 2,
+      "title": "Acquisition and preservation",
+      "scope": "Normal-load preservation and current 38-record intake are different populations.",
+      "rows": [
+        [
+          "Managed originals \u00b7 73 / 73",
+          "Unchanged \u00b7 PASS"
+        ],
+        [
+          "Q01 Explained states \u00b7 38 / 38",
+          "100% \u00b7 PASS"
+        ],
+        [
+          "Missing-body follow-ups \u00b7 7",
+          "Explicit \u00b7 REPORT"
+        ]
+      ],
+      "method": "Match original fingerprints and version lineage before/after the bounded load. Reconcile all intake records to a parse outcome or a located source follow-up. Exercise failed replacement while keeping the previous valid original.",
+      "conclusion": "Stored bytes do not establish complete source content. System2A can still return an empty-body finding. No source was reacquired for this diagram."
+    },
+    {
+      "module": 3,
+      "title": "Governance and weekly checks",
+      "scope": "Five source dimensions; Monday design count of five eligible source records.",
+      "rows": [
+        [
+          "Confidence setting \u00b7 95%",
+          "Policy, not accuracy"
+        ],
+        [
+          "Weekly sample \u00b7 5 sources",
+          "Monitoring design"
+        ],
+        [
+          "Calibrated source accuracy",
+          "UNMEASURED \u00b7 OPEN"
+        ]
+      ],
+      "method": "Bind each rating and confidence to the exact source evidence and calibrated scope. Check all hard gates and human holds. Sample eligible records without duplicate stage/week batches; retain shortfalls and open findings.",
+      "conclusion": "Weekly agreement is reported only for complete reviewed batches. It is not calibration or complete source-coverage evidence."
+    },
+    {
+      "module": 4,
+      "title": "Durable handoff and outputs",
+      "scope": "Checkpoint 15 preserves all five owning business/history stores and normal source revision 1.",
+      "rows": [
+        [
+          "Business/history preservation",
+          "Unchanged \u00b7 scoped PASS"
+        ],
+        [
+          "Saved / source Excel revision",
+          "1 / 1 \u00b7 recorded"
+        ],
+        [
+          "Source-review human time",
+          "UNMEASURED \u00b7 OPEN"
+        ]
+      ],
+      "method": "Compare owning business tables and originals before/after the controlled action. Check source-version guards and saved/exported revision equality. Review stale requests, failed exports and downstream eligibility loss separately.",
+      "conclusion": "The source package is not an extracted Requirement dataset. No Source1 timing is inferred from the separate System2 performance cohort."
+    }
+  ],
+  "modules": [
+    {
+      "label": "Discovery & intake",
+      "description": "Establish identity before admitting a candidate",
+      "x": 70.0,
+      "y": 329.0,
+      "w": 861.0,
+      "h": 2478.0
+    },
+    {
+      "label": "Retrieval & monitoring",
+      "description": "Preserve the official original and its versions",
+      "x": 1043.0,
+      "y": 329.0,
+      "w": 861.0,
+      "h": 2478.0
+    },
+    {
+      "label": "Governance & QA",
+      "description": "Keep human authority and evaluate source eligibility",
+      "x": 2015.9999999999998,
+      "y": 329.0,
+      "w": 861.0,
+      "h": 2478.0
+    },
+    {
+      "label": "Handoff & continuity",
+      "description": "Expose current outputs; reopen only affected scope",
+      "x": 2989.0,
+      "y": 329.0,
+      "w": 861.0,
+      "h": 2478.0
+    }
+  ]
+}

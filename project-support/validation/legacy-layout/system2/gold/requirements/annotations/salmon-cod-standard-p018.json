@@ -1,0 +1,732 @@
+{
+  "schema_version": "2.0",
+  "sample_id": "salmon-cod-standard-p018",
+  "source": {
+    "file_name": "ASC-STD-010-ASC-Salmon-and-Cod-Standard-V1.5-Oct-2025-1.pdf",
+    "sha256": "a34e5f4fc78486136ddbf3d661d26aad85e4b8a1990b2e6eda3f3ac1df7f7b5c",
+    "language": "en",
+    "document_family": "certification_standard",
+    "page_count": 134
+  },
+  "sample": {
+    "round_id": "goal04-round1",
+    "split": "holdout",
+    "page_numbers": [18],
+    "selection_rationale": "Frozen holdout for legacy two-column Indicator plus Requirement-value pairing. The page tests retention of four nominal indicators with their separate affirmative value Yes and exclusion of rationale, headers, and footers."
+  },
+  "annotation": {
+    "status": "frozen",
+    "frozen_at": "2026-08-28",
+    "verification": [
+      "visual_page",
+      "native_text"
+    ],
+    "notes": [
+      "All text and PDF-point bounding boxes were checked against the rendered page and Poppler bbox output.",
+      "Each formal Requirement is the source-preserving combination of indicator_text and requirement_value Yes.",
+      "No modal verb is present in the four table rows, so modalities is intentionally empty.",
+      "The Principle introduction supplies general document context but is not encoded as row-specific applicability."
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "p018-header",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 396.91,
+        "y0": 35.88192,
+        "x1": 545.89492,
+        "y1": 45.09756
+      },
+      "role": "header",
+      "object_kind": "text_block",
+      "segment_order": 0,
+      "source_text": "Aquaculture Stewardship Council"
+    },
+    {
+      "segment_id": "p018-principle-heading",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 56.64,
+        "y0": 62.036,
+        "x1": 483.398,
+        "y1": 105.938
+      },
+      "role": "criterion_heading",
+      "object_kind": "text_block",
+      "segment_order": 1,
+      "source_text": "PRINCIPLE 1: COMPLY WITH ALL APPLICABLE NATIONAL LAWS AND LOCAL REGULATIONS"
+    },
+    {
+      "segment_id": "p018-principle-introduction",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 56.64,
+        "y0": 117.97328,
+        "x1": 552.9568,
+        "y1": 195.87104
+      },
+      "role": "other",
+      "object_kind": "text_block",
+      "segment_order": 2,
+      "source_text": "Principle 1 is intended to ensure that all farms aiming to be certified against the ASC Salmon Standard standards meet their legal obligations as a baseline requirement. Adhering to the law will ensure that producers meet the basic environmental and social requirements and the minimal structures, such as legitimate land tenure rights, on which the effectiveness of the requirements will stand."
+    },
+    {
+      "segment_id": "p018-criterion-label",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 92.184,
+        "y0": 210.524,
+        "x1": 161.868,
+        "y1": 225.152
+      },
+      "role": "criterion_heading",
+      "object_kind": "text_block",
+      "segment_order": 3,
+      "source_text": "Criterion 1.1"
+    },
+    {
+      "segment_id": "p018-criterion-title",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 184.22,
+        "y0": 210.524,
+        "x1": 521.182,
+        "y1": 239.792
+      },
+      "role": "criterion_heading",
+      "object_kind": "text_block",
+      "segment_order": 4,
+      "source_text": "Compliance with all applicable local and national legal requirements and regulations"
+    },
+    {
+      "segment_id": "p018-column-header-indicator",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 169.22,
+        "y0": 270.194,
+        "x1": 241.148,
+        "y1": 284.822
+      },
+      "role": "other",
+      "object_kind": "table_cell",
+      "segment_order": 5,
+      "source_text": "INDICATOR"
+    },
+    {
+      "segment_id": "p018-column-header-requirement",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 406.15,
+        "y0": 270.194,
+        "x1": 500.038,
+        "y1": 284.822
+      },
+      "role": "other",
+      "object_kind": "table_cell",
+      "segment_order": 6,
+      "source_text": "REQUIREMENT"
+    },
+    {
+      "segment_id": "p018-r1-id",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 62.544,
+        "y0": 314.80328,
+        "x1": 79.22544,
+        "y1": 328.26104
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 7,
+      "source_text": "1.1.1"
+    },
+    {
+      "segment_id": "p018-r1-indicator",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 87.86976,
+        "y0": 314.80328,
+        "x1": 330.75888,
+        "y1": 368.46104
+      },
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 8,
+      "source_text": "Presence of documents demonstrating compliance with local and national regulations and requirements on land and water use"
+    },
+    {
+      "segment_id": "p018-r1-value",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 443.59,
+        "y0": 334.96328,
+        "x1": 462.64504,
+        "y1": 348.42104
+      },
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 9,
+      "source_text": "Yes"
+    },
+    {
+      "segment_id": "p018-r2-id",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 62.544,
+        "y0": 398.44328,
+        "x1": 81.51072,
+        "y1": 411.90104
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 10,
+      "source_text": "1.1.2"
+    },
+    {
+      "segment_id": "p018-r2-indicator",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 90.144,
+        "y0": 398.44328,
+        "x1": 307.26768,
+        "y1": 425.36104
+      },
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 11,
+      "source_text": "Presence of documents demonstrating compliance with all tax laws"
+    },
+    {
+      "segment_id": "p018-r2-value",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 443.59,
+        "y0": 405.18328,
+        "x1": 462.64504,
+        "y1": 418.64104
+      },
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 12,
+      "source_text": "Yes"
+    },
+    {
+      "segment_id": "p018-r3-id",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 62.544,
+        "y0": 455.34328,
+        "x1": 81.46656,
+        "y1": 468.80104
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 13,
+      "source_text": "1.1.3"
+    },
+    {
+      "segment_id": "p018-r3-indicator",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 93.00336,
+        "y0": 455.34328,
+        "x1": 324.56544,
+        "y1": 495.68104
+      },
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 14,
+      "source_text": "Presence of documents demonstrating compliance with all relevant national and local labour laws and regulations"
+    },
+    {
+      "segment_id": "p018-r3-value",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 443.59,
+        "y0": 468.78328,
+        "x1": 462.64504,
+        "y1": 482.24104
+      },
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 15,
+      "source_text": "Yes"
+    },
+    {
+      "segment_id": "p018-r4-id",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 62.544,
+        "y0": 525.66328,
+        "x1": 82.53744,
+        "y1": 539.12104
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 16,
+      "source_text": "1.1.4"
+    },
+    {
+      "segment_id": "p018-r4-indicator",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 94.10736,
+        "y0": 525.66328,
+        "x1": 324.68688,
+        "y1": 565.88104
+      },
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 17,
+      "source_text": "Presence of documents demonstrating compliance with regulations and permits concerning water quality impacts"
+    },
+    {
+      "segment_id": "p018-r4-value",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 443.59,
+        "y0": 539.10328,
+        "x1": 462.64504,
+        "y1": 552.56104
+      },
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 18,
+      "source_text": "Yes"
+    },
+    {
+      "segment_id": "p018-rationale",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 56.64,
+        "y0": 590.37328,
+        "x1": 545.29664,
+        "y1": 684.23104
+      },
+      "role": "rationale",
+      "object_kind": "text_block",
+      "segment_order": 19,
+      "source_text": "Rationale - Salmon aquaculture operations must, as a baseline, adhere to the national and local laws of the regions where production is taking place. Farm operations that, intentionally or unintentionally, break the law violate a fundamental benchmark of performance for certified farms. It is important that aquaculture operations demonstrate a pattern of legal and responsible behaviour, including the implementation of corrective actions for any legal violations."
+    },
+    {
+      "segment_id": "p018-footer",
+      "page_number": 18,
+      "page_index": 17,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 88.824,
+        "y0": 703.98336,
+        "x1": 513.1324,
+        "y1": 740.68248
+      },
+      "role": "footer",
+      "object_kind": "text_block",
+      "segment_order": 20,
+      "source_text": "Document Name: ASC Salmon and Cod Standard Document ID: ASC-STD-010 Date issued: 13/10/2025 Document Owner: Director of Standards and Science Version: 1.5 Last reviewed: 13/10/2025 Classification: EXTERNAL (PUBLIC) Page 18 of 134"
+    }
+  ],
+  "requirements": [
+    {
+      "requirement_id": "1.1.1",
+      "requirement_form": "indicator_plus_value",
+      "criterion_path": [
+        "PRINCIPLE 1: COMPLY WITH ALL APPLICABLE NATIONAL LAWS AND LOCAL REGULATIONS",
+        "Criterion 1.1 Compliance with all applicable local and national legal requirements and regulations"
+      ],
+      "language": "en",
+      "indicator_text": "Presence of documents demonstrating compliance with local and national regulations and requirements on land and water use",
+      "requirement_value": "Yes",
+      "normative_text": "Presence of documents demonstrating compliance with local and national regulations and requirements on land and water use",
+      "normative_subjects": [],
+      "applicability": [],
+      "modalities": [],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "1.1.1-c1",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Presence of documents demonstrating compliance with local and national regulations and requirements on land and water use",
+          "joins_next": null
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": [
+        "p018-principle-heading",
+        "p018-principle-introduction",
+        "p018-criterion-label",
+        "p018-criterion-title"
+      ],
+      "source_segment_ids": [
+        "p018-r1-id",
+        "p018-r1-indicator",
+        "p018-r1-value"
+      ],
+      "source_anomalies": [],
+      "gold_notes": [
+        "The complete source Requirement is indicator_text plus the separate requirement_value Yes.",
+        "No modal verb or row-specific applicability statement is present in the table row."
+      ]
+    },
+    {
+      "requirement_id": "1.1.2",
+      "requirement_form": "indicator_plus_value",
+      "criterion_path": [
+        "PRINCIPLE 1: COMPLY WITH ALL APPLICABLE NATIONAL LAWS AND LOCAL REGULATIONS",
+        "Criterion 1.1 Compliance with all applicable local and national legal requirements and regulations"
+      ],
+      "language": "en",
+      "indicator_text": "Presence of documents demonstrating compliance with all tax laws",
+      "requirement_value": "Yes",
+      "normative_text": "Presence of documents demonstrating compliance with all tax laws",
+      "normative_subjects": [],
+      "applicability": [],
+      "modalities": [],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "1.1.2-c1",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Presence of documents demonstrating compliance with all tax laws",
+          "joins_next": null
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": [
+        "p018-principle-heading",
+        "p018-principle-introduction",
+        "p018-criterion-label",
+        "p018-criterion-title"
+      ],
+      "source_segment_ids": [
+        "p018-r2-id",
+        "p018-r2-indicator",
+        "p018-r2-value"
+      ],
+      "source_anomalies": [],
+      "gold_notes": [
+        "The complete source Requirement is indicator_text plus the separate requirement_value Yes.",
+        "No modal verb or row-specific applicability statement is present in the table row."
+      ]
+    },
+    {
+      "requirement_id": "1.1.3",
+      "requirement_form": "indicator_plus_value",
+      "criterion_path": [
+        "PRINCIPLE 1: COMPLY WITH ALL APPLICABLE NATIONAL LAWS AND LOCAL REGULATIONS",
+        "Criterion 1.1 Compliance with all applicable local and national legal requirements and regulations"
+      ],
+      "language": "en",
+      "indicator_text": "Presence of documents demonstrating compliance with all relevant national and local labour laws and regulations",
+      "requirement_value": "Yes",
+      "normative_text": "Presence of documents demonstrating compliance with all relevant national and local labour laws and regulations",
+      "normative_subjects": [],
+      "applicability": [],
+      "modalities": [],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "1.1.3-c1",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Presence of documents demonstrating compliance with all relevant national and local labour laws and regulations",
+          "joins_next": null
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": [
+        "p018-principle-heading",
+        "p018-principle-introduction",
+        "p018-criterion-label",
+        "p018-criterion-title"
+      ],
+      "source_segment_ids": [
+        "p018-r3-id",
+        "p018-r3-indicator",
+        "p018-r3-value"
+      ],
+      "source_anomalies": [],
+      "gold_notes": [
+        "The complete source Requirement is indicator_text plus the separate requirement_value Yes.",
+        "No modal verb or row-specific applicability statement is present in the table row."
+      ]
+    },
+    {
+      "requirement_id": "1.1.4",
+      "requirement_form": "indicator_plus_value",
+      "criterion_path": [
+        "PRINCIPLE 1: COMPLY WITH ALL APPLICABLE NATIONAL LAWS AND LOCAL REGULATIONS",
+        "Criterion 1.1 Compliance with all applicable local and national legal requirements and regulations"
+      ],
+      "language": "en",
+      "indicator_text": "Presence of documents demonstrating compliance with regulations and permits concerning water quality impacts",
+      "requirement_value": "Yes",
+      "normative_text": "Presence of documents demonstrating compliance with regulations and permits concerning water quality impacts",
+      "normative_subjects": [],
+      "applicability": [],
+      "modalities": [],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "1.1.4-c1",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Presence of documents demonstrating compliance with regulations and permits concerning water quality impacts",
+          "joins_next": null
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": [
+        "p018-principle-heading",
+        "p018-principle-introduction",
+        "p018-criterion-label",
+        "p018-criterion-title"
+      ],
+      "source_segment_ids": [
+        "p018-r4-id",
+        "p018-r4-indicator",
+        "p018-r4-value"
+      ],
+      "source_anomalies": [],
+      "gold_notes": [
+        "The complete source Requirement is indicator_text plus the separate requirement_value Yes.",
+        "No modal verb or row-specific applicability statement is present in the table row."
+      ]
+    }
+  ],
+  "excluded_regions": [
+    {
+      "source_segment_ids": [
+        "p018-header",
+        "p018-footer"
+      ],
+      "classification": "header_footer",
+      "reason": "Running document branding and metadata are not Requirement content."
+    },
+    {
+      "source_segment_ids": [
+        "p018-principle-heading",
+        "p018-criterion-label",
+        "p018-criterion-title"
+      ],
+      "classification": "other_non_requirement",
+      "reason": "These segments provide hierarchy only and are not standalone Requirements."
+    },
+    {
+      "source_segment_ids": [
+        "p018-principle-introduction"
+      ],
+      "classification": "other_non_requirement",
+      "reason": "The Principle introduction is contextual prose, not one of the formal table Requirements."
+    },
+    {
+      "source_segment_ids": [
+        "p018-column-header-indicator",
+        "p018-column-header-requirement"
+      ],
+      "classification": "other_non_requirement",
+      "reason": "The two column labels define table structure but contain no normative content."
+    },
+    {
+      "source_segment_ids": [
+        "p018-rationale"
+      ],
+      "classification": "rationale",
+      "reason": "The Rationale explains the policy basis and must not be promoted into the four formal Requirements."
+    }
+  ],
+  "summary": {
+    "requirement_count": 4,
+    "cross_page_requirement_count": 0,
+    "client_action_count": 0,
+    "auditor_action_count": 0,
+    "critical_gold_ambiguities": [
+      "Each complete Requirement consists of the Indicator text plus the separate affirmative value Yes; Yes is not a standalone Requirement.",
+      "No explicit modal verb appears in the four table rows, so no modal is inferred from the Rationale.",
+      "The Principle introduction describes general scope but is not treated as row-specific applicability."
+    ]
+  }
+}

@@ -1,0 +1,109 @@
+- generic [active] [ref=f8e1]:
+  - link "Skip to content" [ref=f8e2] [cursor=pointer]:
+    - /url: "#main"
+  - complementary [ref=f8e3]:
+    - generic [ref=f8e8]:
+      - text: Smarter Compliance
+      - generic [ref=f8e9]: Requirement workbench
+    - navigation "Workspace navigation" [ref=f8e10]:
+      - button "Overview Sources and materials" [ref=f8e11] [cursor=pointer]:
+        - text: Overview
+        - generic [ref=f8e12]: Sources and materials
+      - generic [ref=f8e13]:
+        - button "System1 Source management" [expanded] [ref=f8e14] [cursor=pointer]:
+          - text: System1
+          - generic [aria-hidden] [ref=f8e15]: ⌄
+          - generic [ref=f8e16]: Source management
+        - generic [ref=f8e17]:
+          - button "Pending review" [ref=f8e18] [cursor=pointer]
+          - button "Review history" [ref=f8e19] [cursor=pointer]
+      - button "Materials Human content review" [ref=f8e21] [cursor=pointer]:
+        - text: Materials
+        - generic [aria-hidden] [ref=f8e22]: ⌄
+        - generic [ref=f8e23]: Human content review
+      - button "Confidence settings" [ref=f8e24] [cursor=pointer]
+    - generic [ref=f8e25]:
+      - text: Local workspace
+      - button "Exit workbench" [ref=f8e27] [cursor=pointer]
+  - generic [ref=f8e28]:
+    - banner [ref=f8e29]:
+      - generic [ref=f8e30]:
+        - button "Collapse navigation" [expanded] [ref=f8e31] [cursor=pointer]: ☰
+        - heading "Requirement overview" [level=1] [ref=f8e32]
+      - button "Runtime status" [ref=f8e33] [cursor=pointer]
+      - generic [ref=f8e34]:
+        - generic [ref=f8e35]: Current reviewer
+        - generic [ref=f8e36]:
+          - combobox "Current reviewer" [ref=f8e37]:
+            - option "Select a reviewer"
+            - option "Ana Jokic"
+            - option "Daniel Restad"
+            - option "Weijie Tang" [selected]
+          - button "Switch reviewer" [ref=f8e38] [cursor=pointer]
+    - main [ref=f8e39]:
+      - generic [ref=f8e40]:
+        - generic [ref=f8e41]:
+          - generic [ref=f8e42]: Sources → Material workbench
+          - generic [ref=f8e43]: Data read at 12 Sept, 19:08
+        - paragraph [ref=f8e44]: Read the saved original, correct extracted content and explicitly confirm each material. The third pane inside each material is reserved for Requirement structuring; Process is not connected.
+        - region "Source management and material review" [ref=f8e45]:
+          - article [ref=f8e46]:
+            - generic [ref=f8e47]:
+              - generic [ref=f8e48]: System1
+              - generic [ref=f8e49]: Live review
+            - heading "Source management" [level=2] [ref=f8e50]
+            - paragraph [ref=f8e51]: Select and maintain trustworthy original sources.
+            - generic [ref=f8e52]:
+              - generic [ref=f8e53]: "30"
+              - generic [ref=f8e54]: Sources awaiting review
+            - generic [ref=f8e55]:
+              - generic [ref=f8e56]:
+                - term [ref=f8e57]: Registered sources
+                - definition [ref=f8e58]: "87"
+              - generic [ref=f8e59]:
+                - term [ref=f8e60]: Included sources
+                - definition [ref=f8e61]: "38"
+            - paragraph [ref=f8e62]: Review source ratings, original files and reported issues.
+            - button "Review sources" [ref=f8e63] [cursor=pointer]
+          - article [ref=f8e64]:
+            - generic [ref=f8e65]:
+              - generic [ref=f8e66]: Material workbench
+              - generic [ref=f8e67]: Loading materials
+            - heading "Material content review" [level=2] [ref=f8e68]
+            - paragraph [ref=f8e69]: Read, correct, save and confirm one source material at a time.
+            - generic [ref=f8e70]:
+              - generic [ref=f8e71]: Loading…
+              - generic [ref=f8e72]: Current materials awaiting content review
+            - generic [ref=f8e73]:
+              - generic [ref=f8e74]:
+                - term [ref=f8e75]: Opened material snapshots
+                - definition [ref=f8e76]: –
+              - generic [ref=f8e77]:
+                - term [ref=f8e78]: Current content reviews complete
+                - definition [ref=f8e79]: –
+              - generic [ref=f8e80]:
+                - term [ref=f8e81]: Registered sources available to open
+                - definition [ref=f8e82]: –
+              - generic [ref=f8e83]:
+                - term [ref=f8e84]: Historical source snapshots
+                - definition [ref=f8e85]: –
+            - paragraph [ref=f8e86]: Reading saved material versions and their human review states.
+            - button "Open materials" [ref=f8e87] [cursor=pointer]
+        - paragraph [ref=f8e88]:
+          - text: Historical extraction records remain available in
+          - button "Legacy review" [ref=f8e89] [cursor=pointer]
+          - text: and
+          - button "Legacy history" [ref=f8e90] [cursor=pointer]
+          - text: .
+        - group [ref=f8e91]:
+          - generic "Retained weekly inspection records" [ref=f8e92] [cursor=pointer]
+        - group [ref=f8e93]:
+          - generic "System1 details Source selection, originals and review priorities" [ref=f8e94] [cursor=pointer]:
+            - strong [ref=f8e95]: System1 details
+            - generic [ref=f8e96]: Source selection, originals and review priorities
+        - group [ref=f8e97]:
+          - generic "Metric definitions and data sources" [ref=f8e98] [cursor=pointer]
+    - region "Recent submissions" [ref=f8e99]:
+      - generic [ref=f8e100]:
+        - strong [ref=f8e101]: Applied
+        - generic [ref=f8e102]: Weijie Tang · Decision applied. Source tasks and statistics are updated.

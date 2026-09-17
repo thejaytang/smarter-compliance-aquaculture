@@ -1,0 +1,658 @@
+{
+  "page_index": 3,
+  "source_sha256": "ce5c8950c69e3b5b60b85110f5abd2c6d8637c83291c6c00ac03f28b102dac54",
+  "native_text": "Code ref.: GR – Rules for aquaculture; v6.0_Sep22; English version\r\nGLOBALG.A.P. general regulations – Rules for aquaculture scope\r\nPage 4 of 4 \r\n220929_GG_GR_Rules_for_aquaculture_v6_0_Sep22_en\r\n4.2 CB audit of product handling units\r\nWhere an Option 2 producer group or an Option 1 multisite producer (with or without QMS) has \r\nmore than one product handling unit, each unit shall be audited while in operation (there shall be \r\nno sampling of product handling units).\r\n4.3 CB farm audit duration\r\na) The CB farm audit duration shall allow for an opening meeting with farm management, a \r\ncomplete evaluation of all relevant standard requirements, completion of the applicable \r\nchecklist, and the presentation of the results to the producer.\r\nb) The initial CB farm audit duration for the aquaculture scope shall be no less than one and \r\na half days. This duration excludes the GRASP assessment or any other add-on CB audit \r\nand shall also be applied in the first year of the IFA Smart or IFA GFS CB audit.\r\nc) In subsequent years, the usual CB farm audit duration for the aquaculture scope is no less\r\nthan seven hours on-site.\r\nd) The minimum duration of seven hours shall apply to the simplest circumstances: \r\nSubsequent CB audits of typically mollusc farms but potentially also other small finfish and \r\ncrustacean farms that have very simple or compact operations, a single species, no \r\nproduct handling, and less than five workers. The seven hours exclude reporting, \r\npreparation, and travel (during the CB audit). Any other type of operation will require more \r\nthan seven hours on-site audit time. These seven hours also exclude the duration of the \r\nGRASP assessment or any other add-on CB audit. \r\nCopyright\r\n© Copyright: GLOBALG.A.P. c/o FoodPLUS GmbH, Spichernstr. 55, 50672 Cologne, Germany. \r\nCopying and distribution permitted only in unaltered form.",
+  "groups": [
+    {
+      "operation": "source_exact_native_row",
+      "row_block_id": "block-a793aa082ebd3059892c3412",
+      "normalized_native_interval": [
+        230,
+        322
+      ],
+      "source_text": "Where an Option 2 producer group or an Option 1 multisite producer (with or without QMS) has",
+      "fragments": [
+        {
+          "id": "block-2d17e286509d1502fa65edfd",
+          "type": "text",
+          "text": "Where an Option 2 producer group or an Option",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:4",
+              "page_index": 3,
+              "page": 4,
+              "bbox": [
+                71.05247497558594,
+                111.59423828125,
+                306.5710144042969,
+                121.94976806640625
+              ],
+              "native_id": "native_p0001_ft000021"
+            }
+          ]
+        },
+        {
+          "id": "block-7d0e994d30fa86a909e023c4",
+          "type": "text",
+          "text": "1 multisite producer (with or without QMS) has",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:4",
+              "page_index": 3,
+              "page": 4,
+              "bbox": [
+                311.51470947265625,
+                111.59423828125,
+                541.5628662109375,
+                121.94976806640625
+              ],
+              "native_id": "native_p0001_ft000022"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "source_exact_native_row",
+      "row_block_id": "block-7d29a72826f7ac3e67ebd9aa",
+      "normalized_native_interval": [
+        323,
+        421
+      ],
+      "source_text": "more than one product handling unit, each unit shall be audited while in operation (there shall be",
+      "fragments": [
+        {
+          "id": "block-fe7829de18ef9a083ec1c0ef",
+          "type": "text",
+          "text": "more than one product handling unit, each unit shall be audited while in operation (there",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:4",
+              "page_index": 3,
+              "page": 4,
+              "bbox": [
+                71.63760375976562,
+                124.3233642578125,
+                497.4349365234375,
+                134.6678466796875
+              ],
+              "native_id": "native_p0001_ft000023"
+            }
+          ]
+        },
+        {
+          "id": "block-3ab93ec7d13cab3baaab7a1d",
+          "type": "text",
+          "text": "shall be",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:4",
+              "page_index": 3,
+              "page": 4,
+              "bbox": [
+                501.2261047363281,
+                124.455810546875,
+                541.6258544921875,
+                132.48193359375
+              ],
+              "native_id": "native_p0001_ft000024"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "source_exact_native_row",
+      "row_block_id": "block-7498653892da65d9585cd2a9",
+      "normalized_native_interval": [
+        492,
+        577
+      ],
+      "source_text": "The CB farm audit duration shall allow for an opening meeting with farm management, a",
+      "fragments": [
+        {
+          "id": "block-7486595458074e3148e17de7",
+          "type": "text",
+          "text": "The CB farm audit duration",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:4",
+              "page_index": 3,
+              "page": 4,
+              "bbox": [
+                106.57923889160156,
+                180.240966796875,
+                238.6375274658203,
+                188.3995361328125
+              ],
+              "native_id": "native_p0001_ft000029"
+            }
+          ]
+        },
+        {
+          "id": "block-73f1853a5b081e73f01947fe",
+          "type": "text",
+          "text": "shall allow for an",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:4",
+              "page_index": 3,
+              "page": 4,
+              "bbox": [
+                243.1109161376953,
+                180.240966796875,
+                324.81134033203125,
+                188.3995361328125
+              ],
+              "native_id": "native_p0001_ft000030"
+            }
+          ]
+        },
+        {
+          "id": "block-4af1b32e7c4e274acbd2c719",
+          "type": "text",
+          "text": "opening meeting with farm management, a",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:4",
+              "page_index": 3,
+              "page": 4,
+              "bbox": [
+                329.3001708984375,
+                180.240966796875,
+                541.587158203125,
+                190.58544921875
+              ],
+              "native_id": "native_p0001_ft000031"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "source_exact_native_row",
+      "row_block_id": "block-b93050874189e738d848900d",
+      "normalized_native_interval": [
+        910,
+        991
+      ],
+      "source_text": "and shall also be applied in the first year of the IFA Smart or IFA GFS CB audit.",
+      "fragments": [
+        {
+          "id": "block-df49beb8c8902f0019f91ef9",
+          "type": "text",
+          "text": "and shall also be applied in the first year of the",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:4",
+              "page_index": 3,
+              "page": 4,
+              "bbox": [
+                106.72943115234375,
+                249.47760009765625,
+                332.9346008300781,
+                259.82208251953125
+              ],
+              "native_id": "native_p0001_ft000037"
+            }
+          ]
+        },
+        {
+          "id": "block-68e219d7050daa97179b88d4",
+          "type": "text",
+          "text": "IFA Smart or IFA GFS CB audit.",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:4",
+              "page_index": 3,
+              "page": 4,
+              "bbox": [
+                337.2777404785156,
+                249.47760009765625,
+                491.70526123046875,
+                257.63616943359375
+              ],
+              "native_id": "native_p0001_ft000038"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "source_exact_native_row",
+      "row_block_id": "block-c8940f2a9eb4577adcb11422",
+      "normalized_native_interval": [
+        995,
+        1085
+      ],
+      "source_text": "In subsequent years, the usual CB farm audit duration for the aquaculture scope is no less",
+      "fragments": [
+        {
+          "id": "block-355c3452931a1ff78a6666cc",
+          "type": "text",
+          "text": "In subsequent years, the usual CB farm audit duration for the aquaculture scope is",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:4",
+              "page_index": 3,
+              "page": 4,
+              "bbox": [
+                107.3476791381836,
+                268.0828857421875,
+                501.1610107421875,
+                278.4273681640625
+              ],
+              "native_id": "native_p0001_ft000040"
+            }
+          ]
+        },
+        {
+          "id": "block-3b1dc774fa13fe1aae6365c0",
+          "type": "text",
+          "text": "no",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:4",
+              "page_index": 3,
+              "page": 4,
+              "bbox": [
+                504.975341796875,
+                270.268798828125,
+                516.0926513671875,
+                276.241455078125
+              ],
+              "native_id": "native_p0001_ft000041"
+            }
+          ]
+        },
+        {
+          "id": "block-29ccea52024cee076e8b8ec0",
+          "type": "text",
+          "text": "less",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:4",
+              "page_index": 3,
+              "page": 4,
+              "bbox": [
+                519.8351440429688,
+                268.21533203125,
+                538.253173828125,
+                276.241455078125
+              ],
+              "native_id": "native_p0001_ft000042"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "source_exact_native_row",
+      "row_block_id": "block-ffce3860ea7a25582e472ba8",
+      "normalized_native_interval": [
+        1086,
+        1111
+      ],
+      "source_text": "than seven hours on-site.",
+      "fragments": [
+        {
+          "id": "block-2b3a7fd1ff3e0a656b1ddd47",
+          "type": "text",
+          "text": "than seven",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:4",
+              "page_index": 3,
+              "page": 4,
+              "bbox": [
+                106.53071594238281,
+                280.93341064453125,
+                159.57791137695312,
+                288.95953369140625
+              ],
+              "native_id": "native_p0001_ft000043"
+            }
+          ]
+        },
+        {
+          "id": "block-e1b41187b8ba8a64c1028cbf",
+          "type": "text",
+          "text": "hours on-site.",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:4",
+              "page_index": 3,
+              "page": 4,
+              "bbox": [
+                164.06015014648438,
+                280.93341064453125,
+                228.92015075683594,
+                288.95953369140625
+              ],
+              "native_id": "native_p0001_ft000044"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "source_exact_native_row",
+      "row_block_id": "block-3ff1b3e672a24be05fc6f8df",
+      "normalized_native_interval": [
+        1115,
+        1193
+      ],
+      "source_text": "The minimum duration of seven hours shall apply to the simplest circumstances:",
+      "fragments": [
+        {
+          "id": "block-4c68780b3ac12f77b5fb9175",
+          "type": "text",
+          "text": "The minimum duration of seven",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:4",
+              "page_index": 3,
+              "page": 4,
+              "bbox": [
+                106.57488250732422,
+                299.40289306640625,
+                275.13360595703125,
+                307.56146240234375
+              ],
+              "native_id": "native_p0001_ft000046"
+            }
+          ]
+        },
+        {
+          "id": "block-967a30e87a0adaa19eab82ff",
+          "type": "text",
+          "text": "hours shall apply to the simplest circumstances:",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:4",
+              "page_index": 3,
+              "page": 4,
+              "bbox": [
+                283.44671630859375,
+                299.53533935546875,
+                541.628173828125,
+                309.74737548828125
+              ],
+              "native_id": "native_p0001_ft000047"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "source_exact_native_row",
+      "row_block_id": "block-7557cb88ecfd3cb1f42262cb",
+      "normalized_native_interval": [
+        1370,
+        1450
+      ],
+      "source_text": "product handling, and less than five workers. The seven hours exclude reporting,",
+      "fragments": [
+        {
+          "id": "block-fb14d45d47ffff469026a692",
+          "type": "text",
+          "text": "product handling, and",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:4",
+              "page_index": 3,
+              "page": 4,
+              "bbox": [
+                107.04959869384766,
+                337.4467468261719,
+                218.57568359375,
+                347.65875244140625
+              ],
+              "native_id": "native_p0001_ft000050"
+            }
+          ]
+        },
+        {
+          "id": "block-5398e27584d29384edca06d8",
+          "type": "text",
+          "text": "less than five",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:4",
+              "page_index": 3,
+              "page": 4,
+              "bbox": [
+                226.66799926757812,
+                337.31427001953125,
+                296.80072021484375,
+                345.4728088378906
+              ],
+              "native_id": "native_p0001_ft000051"
+            }
+          ]
+        },
+        {
+          "id": "block-993755d49613d20674e34cfa",
+          "type": "text",
+          "text": "workers. The seven",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:4",
+              "page_index": 3,
+              "page": 4,
+              "bbox": [
+                303.8706970214844,
+                337.4467468261719,
+                406.16845703125,
+                345.4728088378906
+              ],
+              "native_id": "native_p0001_ft000052"
+            }
+          ]
+        },
+        {
+          "id": "block-7a0d62ed4e284c32c96d145d",
+          "type": "text",
+          "text": "hours exclude",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:4",
+              "page_index": 3,
+              "page": 4,
+              "bbox": [
+                414.24859619140625,
+                337.4467468261719,
+                484.9498596191406,
+                345.4728088378906
+              ],
+              "native_id": "native_p0001_ft000053"
+            }
+          ]
+        },
+        {
+          "id": "block-e252a4efe9ac63240bc764c6",
+          "type": "text",
+          "text": "reporting,",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:4",
+              "page_index": 3,
+              "page": 4,
+              "bbox": [
+                492.8424072265625,
+                337.4467468261719,
+                541.6226196289062,
+                347.65875244140625
+              ],
+              "native_id": "native_p0001_ft000054"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "source_exact_native_row",
+      "row_block_id": "block-6de8a91c0281eb5619b7bd0c",
+      "normalized_native_interval": [
+        1544,
+        1631
+      ],
+      "source_text": "than seven hours on-site audit time. These seven hours also exclude the duration of the",
+      "fragments": [
+        {
+          "id": "block-7bb33a71873c8feb7ddc9ffb",
+          "type": "text",
+          "text": "than seven",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:4",
+              "page_index": 3,
+              "page": 4,
+              "bbox": [
+                106.51966094970703,
+                362.7614440917969,
+                159.93118286132812,
+                370.7875061035156
+              ],
+              "native_id": "native_p0001_ft000056"
+            }
+          ]
+        },
+        {
+          "id": "block-6c63fb0faddc6e492b3ae321",
+          "type": "text",
+          "text": "hours on-site audit time. These seven",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:4",
+              "page_index": 3,
+              "page": 4,
+              "bbox": [
+                164.76669311523438,
+                362.7614440917969,
+                348.80352783203125,
+                370.7875061035156
+              ],
+              "native_id": "native_p0001_ft000057"
+            }
+          ]
+        },
+        {
+          "id": "block-34a9e8fb6e8381ecff0e47ac",
+          "type": "text",
+          "text": "hours also exclude the duration of the",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:4",
+              "page_index": 3,
+              "page": 4,
+              "bbox": [
+                353.6390380859375,
+                362.62896728515625,
+                541.5508422851562,
+                370.7875061035156
+              ],
+              "native_id": "native_p0001_ft000058"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

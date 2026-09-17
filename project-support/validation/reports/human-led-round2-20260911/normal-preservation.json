@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "table_changes": {
+    "workbench": [
+      "sessions"
+    ],
+    "system2": [],
+    "governance": [],
+    "assessments": [],
+    "leader": []
+  },
+  "additive_tables": {
+    "workbench": [],
+    "system2": [
+      "material_candidate_index",
+      "material_read_index",
+      "material_read_schema",
+      "material_revision_index"
+    ],
+    "governance": [],
+    "assessments": [],
+    "leader": []
+  },
+  "asset_identity": {
+    "originals": true,
+    "canonical": true
+  },
+  "original_files": 73,
+  "canonical_artifacts": 75,
+  "existing_sessions_preserved": true,
+  "allowed_change": "Additional local maintenance/browser sessions only; no business decisions.",
+  "before": "workbench/runtime/round2-preservation/before/fingerprints.json",
+  "after": "workbench/runtime/round2-preservation/after-browser/fingerprints.json",
+  "post_browser_verified": true,
+  "system1_navigation_draft_post": "Existing navigation submitted the identical saved draft; all 10 draft rows remain byte-identical to the before baseline."
+}

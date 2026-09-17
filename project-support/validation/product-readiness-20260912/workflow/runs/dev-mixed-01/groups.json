@@ -1,0 +1,240 @@
+[
+  {
+    "name": "isolation_setup",
+    "status": "PASS",
+    "seconds": 0.1697483750176616,
+    "details": {
+      "fixture": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/runtime/product-readiness-20260912/workload-dev-mixed-01",
+      "source_count": 5,
+      "live_business_writes": false
+    },
+    "rss_peak_bytes": 27754496
+  },
+  {
+    "name": "initialize_TS001",
+    "status": "PASS",
+    "seconds": 6.886280208011158,
+    "details": {
+      "source": "TS001",
+      "material_id": "100ee263961895f64dd57c71d3db8b5c",
+      "parser_status": "candidate_available",
+      "candidate_status": "ready",
+      "automatic_quality_claim": false
+    },
+    "rss_peak_bytes": 30162944
+  },
+  {
+    "name": "TS001_cycle_1",
+    "status": "PASS",
+    "seconds": 9.452811040973756,
+    "details": {
+      "source": "TS001",
+      "cycle": 1,
+      "saved_revision": 5,
+      "conflict_id": "4996e843-3920-4e96-83ca-6d181269e06c",
+      "same_preparation_after_reopen": true
+    },
+    "rss_peak_bytes": 31293440
+  },
+  {
+    "name": "TS001_cycle_2",
+    "status": "PASS",
+    "seconds": 10.816300750011578,
+    "details": {
+      "source": "TS001",
+      "cycle": 2,
+      "saved_revision": 2,
+      "conflict_id": "185a032a-0553-498a-8bc5-ff76c07effa8",
+      "same_preparation_after_reopen": true
+    },
+    "rss_peak_bytes": 31293440
+  },
+  {
+    "name": "TS001_cycle_3",
+    "status": "PASS",
+    "seconds": 10.763209666998591,
+    "details": {
+      "source": "TS001",
+      "cycle": 3,
+      "saved_revision": 3,
+      "conflict_id": "25e0ac0b-4e3e-4ba8-82f5-5fa819fc070b",
+      "same_preparation_after_reopen": true
+    },
+    "rss_peak_bytes": 31293440
+  },
+  {
+    "name": "TS001_cycle_4",
+    "status": "PASS",
+    "seconds": 11.154568292025942,
+    "details": {
+      "source": "TS001",
+      "cycle": 4,
+      "saved_revision": 4,
+      "conflict_id": "8e909af5-bdfe-4df1-8d25-b7f906729fd4",
+      "same_preparation_after_reopen": true
+    },
+    "rss_peak_bytes": 31293440
+  },
+  {
+    "name": "initialize_TS002",
+    "status": "PASS",
+    "seconds": 6.911427000013646,
+    "details": {
+      "source": "TS002",
+      "material_id": "3d7a7c49ee349e68d1fe282bd7ed54bb",
+      "parser_status": "candidate_available",
+      "candidate_status": "ready",
+      "automatic_quality_claim": false
+    },
+    "rss_peak_bytes": 34111488
+  },
+  {
+    "name": "TS002_cycle_1",
+    "status": "PASS",
+    "seconds": 10.13953450002009,
+    "details": {
+      "source": "TS002",
+      "cycle": 1,
+      "saved_revision": 5,
+      "conflict_id": "fff306dc-ec62-40a4-a111-e2c652817d41",
+      "same_preparation_after_reopen": true
+    },
+    "rss_peak_bytes": 36372480
+  },
+  {
+    "name": "TS002_cycle_2",
+    "status": "PASS",
+    "seconds": 14.912266957981046,
+    "details": {
+      "source": "TS002",
+      "cycle": 2,
+      "saved_revision": 2,
+      "conflict_id": "ebf8b86c-1d00-40ac-8970-8284655d78bd",
+      "same_preparation_after_reopen": true
+    },
+    "rss_peak_bytes": 36372480
+  },
+  {
+    "name": "TS002_cycle_3",
+    "status": "PASS",
+    "seconds": 17.22924504103139,
+    "details": {
+      "source": "TS002",
+      "cycle": 3,
+      "saved_revision": 3,
+      "conflict_id": "dc2db561-3a2a-48b6-939d-39b76dd96574",
+      "same_preparation_after_reopen": true
+    },
+    "rss_peak_bytes": 36372480
+  },
+  {
+    "name": "TS002_cycle_4",
+    "status": "PASS",
+    "seconds": 18.279116165998857,
+    "details": {
+      "source": "TS002",
+      "cycle": 4,
+      "saved_revision": 4,
+      "conflict_id": "e2763ffb-6de5-47d7-87ea-3c9e766b5b1a",
+      "same_preparation_after_reopen": true
+    },
+    "rss_peak_bytes": 36372480
+  },
+  {
+    "name": "initialize_TS003",
+    "status": "PASS",
+    "seconds": 11.75739316700492,
+    "details": {
+      "source": "TS003",
+      "material_id": "9d8b050995446e2a9ad8eeb494006e34",
+      "parser_status": "partial",
+      "candidate_status": "partial",
+      "automatic_quality_claim": false
+    },
+    "rss_peak_bytes": 36372480
+  },
+  {
+    "name": "TS003_cycle_1",
+    "status": "PASS",
+    "seconds": 17.587072958005592,
+    "details": {
+      "source": "TS003",
+      "cycle": 1,
+      "saved_revision": 5,
+      "conflict_id": "6c494941-c250-4892-89a7-c16fdb0d6732",
+      "same_preparation_after_reopen": true
+    },
+    "rss_peak_bytes": 36372480
+  },
+  {
+    "name": "TS003_cycle_2",
+    "status": "PASS",
+    "seconds": 19.417053917015437,
+    "details": {
+      "source": "TS003",
+      "cycle": 2,
+      "saved_revision": 2,
+      "conflict_id": "666db739-179b-4488-bdd8-0e62dc362694",
+      "same_preparation_after_reopen": true
+    },
+    "rss_peak_bytes": 36372480
+  },
+  {
+    "name": "TS003_cycle_3",
+    "status": "PASS",
+    "seconds": 15.807195709028747,
+    "details": {
+      "source": "TS003",
+      "cycle": 3,
+      "saved_revision": 3,
+      "conflict_id": "a1a2b635-8439-40b7-88c4-6a3ebb116e12",
+      "same_preparation_after_reopen": true
+    },
+    "rss_peak_bytes": 36372480
+  },
+  {
+    "name": "TS003_cycle_4",
+    "status": "PASS",
+    "seconds": 15.809179249976296,
+    "details": {
+      "source": "TS003",
+      "cycle": 4,
+      "saved_revision": 4,
+      "conflict_id": "edfd0d15-7df7-4e1c-bfc6-193b197b7a64",
+      "same_preparation_after_reopen": true
+    },
+    "rss_peak_bytes": 36372480
+  },
+  {
+    "name": "worker_and_save_faults",
+    "status": "FAIL",
+    "seconds": 8.609722333028913,
+    "error": "ENGINEERING injected save failure",
+    "traceback": "Traceback (most recent call last):\n  File \"/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/workflow/mixed_workload.py\", line 84, in group\n    details = fn() or {}\n              ^^^^\n  File \"/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/workflow/mixed_workload.py\", line 226, in faults\n    self.c.material_action(ACTOR, 'save', {'material_id': mid, 'expected_revision': current['revision'], 'request_id': uid(), 'blocks': self.edited(current, 'Rejected failed save'), 'issues': current['issues']})\n  File \"/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/src/local_workbench/collaboration.py\", line 364, in material_action\n    result = adapter.call('material_' + action, request=dict(request, actor=actor))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/src/local_workbench/adapter.py\", line 53, in call\n    raise ValueError(reply.get('error', 'System2 request failed.'))\nValueError: ENGINEERING injected save failure\n",
+    "rss_peak_bytes": 36372480
+  },
+  {
+    "name": "three_workspace_exchange",
+    "status": "PASS",
+    "seconds": 45.89371249999385,
+    "details": {
+      "reviewers": [
+        "Ana Jokic",
+        "Daniel Restad"
+      ],
+      "receipt_count": 3,
+      "parallel_conflict": true,
+      "archive_retained": true,
+      "partial_check_still_pending": true,
+      "actual_windows": false
+    },
+    "rss_peak_bytes": 40091648
+  },
+  {
+    "name": "final_preservation",
+    "status": "PASS",
+    "seconds": 0.043276915966998786,
+    "details": {},
+    "rss_peak_bytes": 40091648
+  }
+]

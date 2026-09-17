@@ -1,0 +1,22 @@
+[
+  {
+    "antipattern": "side-tab",
+    "name": "Side-tab accent border",
+    "description": "Thick colored border on one side of a card — the most recognizable tell of AI-generated UIs. Use a subtler accent or remove it entirely.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/ui/style.css",
+    "line": 20,
+    "snippet": "border-left:3px solid #8ea9bc"
+  },
+  {
+    "antipattern": "broken-image",
+    "name": "Broken or placeholder image",
+    "description": "<img> tags with empty src, missing src, or placeholder values ship as broken-image boxes. Use real images, generated assets, or remove the tag.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/ui/materials.js",
+    "line": 367,
+    "snippet": "<img alt=\"Region from the saved original PDF\">"
+  }
+]

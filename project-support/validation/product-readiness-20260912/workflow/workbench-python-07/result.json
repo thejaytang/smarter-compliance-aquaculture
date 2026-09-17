@@ -1,0 +1,17 @@
+{
+  "finished_at": "2026-09-13T15:24:28.616790+00:00",
+  "results": {
+    "python": {
+      "returncode": 1,
+      "duration_seconds": 21.495118041988462,
+      "summary": "ages.js', '/evidence-viewer.js', '/material-inspection.js', '/system2-demo-data.js', '/pdf-table-editor.js', '/system2-review-state.js', '/review-state.js', '/material-editing.js', '/source-workspace.js', '/collaboration.js', '/materials.js', '/extraction.js', '/system2-review.js', '/dashboard.js', '/pdf-assessments.js', '/export-status.js', '/material-navigation.js', '/pdf-references.js', '/source-check.js', '/pdf-repairs.js'}\n\n----------------------------------------------------------------------\nRan 160 tests in 21.351s\n\nFAILED (failures=1)\n"
+    },
+    "frontend": {
+      "returncode": 0,
+      "duration_seconds": 0.4401181249995716,
+      "summary": "est'\n  ...\n# Subtest: five-case walkthrough leaves the missing table open and never manufactures live QA\nok 177 - five-case walkthrough leaves the missing table open and never manufactures live QA\n  ---\n  duration_ms: 0.221584\n  type: 'test'\n  ...\n# Subtest: accept after reopening a correction keeps the corrected text\nok 178 - accept after reopening a correction keeps the corrected text\n  ---\n  duration_ms: 0.09675\n  type: 'test'\n  ...\n1..178\n# tests 178\n# suites 0\n# pass 178\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 396.854084\n"
+    }
+  },
+  "code_changed": [],
+  "scope": "Workbench Python and all frontend mjs tests after receipt summary and import compatibility fixes; not quality or whole-goal acceptance"
+}

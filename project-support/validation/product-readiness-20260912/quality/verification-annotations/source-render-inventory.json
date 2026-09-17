@@ -1,0 +1,50 @@
+[
+  {
+    "sample": "pa057-reserved",
+    "source_sha256": "f9f6bd8531c2cd8a4cc7dd49e4035aaef6ff33cb2f7dbf93f0e340ca0b454778",
+    "page_number": 5,
+    "page_size": [
+      595.3200073242188,
+      841.9199829101562
+    ],
+    "render": "pa057-reserved-p005.png",
+    "text": "pa057-reserved-p005.pdfium.txt",
+    "bbox_assistance": "poppler"
+  },
+  {
+    "sample": "pa057-reserved",
+    "source_sha256": "f9f6bd8531c2cd8a4cc7dd49e4035aaef6ff33cb2f7dbf93f0e340ca0b454778",
+    "page_number": 6,
+    "page_size": [
+      595.3200073242188,
+      841.9199829101562
+    ],
+    "render": "pa057-reserved-p006.png",
+    "text": "pa057-reserved-p006.pdfium.txt",
+    "bbox_assistance": "poppler"
+  },
+  {
+    "sample": "cs010-reserved",
+    "source_sha256": "ce5c8950c69e3b5b60b85110f5abd2c6d8637c83291c6c00ac03f28b102dac54",
+    "page_number": 3,
+    "page_size": [
+      595.3200073242188,
+      841.9199829101562
+    ],
+    "render": "cs010-reserved-p003.png",
+    "text": "cs010-reserved-p003.pdfium.txt",
+    "bbox_assistance": "manual from rendered page; Poppler bbox crashed, pypdf AES dependency unavailable"
+  },
+  {
+    "sample": "cs010-reserved",
+    "source_sha256": "ce5c8950c69e3b5b60b85110f5abd2c6d8637c83291c6c00ac03f28b102dac54",
+    "page_number": 4,
+    "page_size": [
+      595.3200073242188,
+      841.9199829101562
+    ],
+    "render": "cs010-reserved-p004.png",
+    "text": "cs010-reserved-p004.pdfium.txt",
+    "bbox_assistance": "manual from rendered page; Poppler bbox crashed, pypdf AES dependency unavailable"
+  }
+]

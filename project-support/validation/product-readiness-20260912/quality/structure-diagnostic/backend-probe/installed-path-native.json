@@ -1,0 +1,6 @@
+{
+  "status": "failed",
+  "error_type": "RuntimeError",
+  "error": "no FontName found in /Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/lib/python3.12/site-packages/docling_parse/pdf_resources/fonts//custom/Microsoft/Arial.afm",
+  "package_path": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/lib/python3.12/site-packages/docling_parse"
+}

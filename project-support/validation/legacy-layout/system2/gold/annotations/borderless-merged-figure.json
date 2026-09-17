@@ -1,0 +1,10 @@
+{
+  "text": "Annex 2 - Mixed Objects\nThe following table contains a merged header.",
+  "block_types": ["heading", "paragraph", "table", "figure"],
+  "heading_levels": [1],
+  "cross_page_merges": 0,
+  "cells": ["Combined category", "Item", "Low", "High", "Alpha", "2", "8", "Beta", "3", "9"],
+  "cell_spans": ["1x3", "1x1", "1x1", "1x1", "1x1", "1x1", "1x1", "1x1", "1x1", "1x1"],
+  "critical_spans": ["2", "2", "8", "3", "9", "3", "1"],
+  "critical_conflicts": []
+}

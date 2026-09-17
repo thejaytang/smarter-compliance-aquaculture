@@ -1,0 +1,8 @@
+{
+  "workbench/src/local_workbench/requirements.py": "33cf3c05fe2696427c4f28e5d0fbc1b989b78e3b3111bc481d2d8115f5c3b2a5",
+  "workbench/src/local_workbench/server.py": "e7dc28506fc8bc16c7220681bebf306bed47f85dce08f005dbaad848e6c7bed4",
+  "workbench/ui/requirements.js": "73de07763c198fa618b154a26457cfe160e849d3691f1ae707c1e634ce5d6008",
+  "workbench/ui/requirements.css": "6e0f2c1468fe03eb6da7a6ace769d92e18d587adc577c0fa0995d78553df0191",
+  "workbench/ui/materials.js": "90df46ef1e6fd5a1b7711969b30cfeb10d7ef9656e18dc8fb613e8f65d146907",
+  "workbench/ui/index.html": "8fe659aab2e74475e71b82e1b82dfbd7e2ee06c54b7b50f79b385a03aac94a1f"
+}

@@ -1,0 +1,29 @@
+My submissions
+
+Select saved source reviews, material drafts and inspection results. Download freezes each selected result; later editing cannot change the package.
+
+PA001 · personal material
+TS003 · personal material
+TS002 · personal material
+Public saved original: PA001 · spot-check · saved revision 1 · finding_open
+Completed scope and remaining work
+Download selected results as one package
+
+Download requested. Check your browser downloads before sharing the file. Your saved work and review status are unchanged.
+Download this saved package
+
+Received adoption receipts
+Frozen package history
+
+2026-09-12T21:19:48.044865+00:00 · 2 items · ENGINEERING ONLY. Isolated workflow validation; all confirmations are simulated and are not a business review. Preserve PA001 master revision 2 and its open spot-check.
+
+Download this saved package
+
+2026-09-13T10:32:18.178187+00:00 · 1 items · Explicit per-item adoption receipts
+
+Download this saved package
+
+2026-09-13T14:42:31.116217+00:00 · 1 items · Explicit per-item adoption receipts
+
+Download this saved package
+Close

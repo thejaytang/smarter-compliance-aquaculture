@@ -1,0 +1,36 @@
+{"at": "2026-09-13T18:13:15.990256+00:00", "operation": "build_isolated_fixture", "elapsed_seconds": null, "source_count": 5}
+{"at": "2026-09-13T18:13:20.282391+00:00", "operation": "open_source", "elapsed_seconds": 4.291642083961051, "result_status": null, "id": "100ee263961895f64dd57c71d3db8b5c", "revision": 0}
+{"at": "2026-09-13T18:13:22.777894+00:00", "operation": "request_extract", "elapsed_seconds": 1.2431992499623448, "result_status": "applied"}
+{"at": "2026-09-13T18:13:24.105712+00:00", "operation": "replay_extract_request", "elapsed_seconds": 1.3274989170022309, "result_status": "applied"}
+{"at": "2026-09-13T18:13:25.762759+00:00", "operation": "run_explicit_worker", "elapsed_seconds": 1.656880791997537, "result_status": "applied"}
+{"at": "2026-09-13T18:13:26.794350+00:00", "operation": "read_personal_material", "elapsed_seconds": 1.0314674999681301, "result_status": null, "id": "100ee263961895f64dd57c71d3db8b5c", "revision": 2}
+{"at": "2026-09-13T18:13:27.391379+00:00", "operation": "read_full_candidate", "elapsed_seconds": null, "result_status": "ready", "id": "47b52a87-3c6a-499e-9018-24c4222195d3", "material_id": "100ee263961895f64dd57c71d3db8b5c", "request_id": "16f692e5-aae9-4633-9de5-01dbdb43e5e6"}
+{"at": "2026-09-13T18:13:29.457668+00:00", "operation": "save_first_candidate_draft", "elapsed_seconds": 0.9723920419928618, "result_status": "applied"}
+{"at": "2026-09-13T18:13:31.054952+00:00", "operation": "read_personal_material", "elapsed_seconds": 1.5883782919845544, "result_status": null, "id": "100ee263961895f64dd57c71d3db8b5c", "revision": 4}
+{"at": "2026-09-13T18:13:33.508479+00:00", "operation": "save_mixed_order_text_table", "elapsed_seconds": 1.1975385409896262, "result_status": "applied"}
+{"at": "2026-09-13T18:13:34.871171+00:00", "operation": "request_mixed_comparison_extract", "elapsed_seconds": 1.3624786249711178, "result_status": "applied"}
+{"at": "2026-09-13T18:13:36.230568+00:00", "operation": "run_mixed_comparison_worker", "elapsed_seconds": 1.3592809999827296, "result_status": "applied"}
+{"at": "2026-09-13T18:13:37.466625+00:00", "operation": "read_personal_material", "elapsed_seconds": 1.2359235000330955, "result_status": null, "id": "100ee263961895f64dd57c71d3db8b5c", "revision": 7}
+{"at": "2026-09-13T18:13:38.067251+00:00", "operation": "read_mixed_comparison_candidate", "elapsed_seconds": 0.5988117909873836, "result_status": "ready", "id": "07c9f800-9fa6-4409-b447-3f5e133c818b", "material_id": "100ee263961895f64dd57c71d3db8b5c", "request_id": "19560093-e794-477c-9dda-cff160824bac"}
+{"at": "2026-09-13T18:13:40.288722+00:00", "operation": "preview_mixed_machine_changes", "elapsed_seconds": 2.2077291670138948, "result_status": null, "submission_id": "661ee491-f9d5-46a8-8182-4ba7481a632e", "merge_id": "661ee491-f9d5-46a8-8182-4ba7481a632e"}
+{"at": "2026-09-13T18:13:40.293525+00:00", "operation": "save_machine_order_choice_only", "elapsed_seconds": 0.004674667026847601, "result_status": null, "submission_id": "661ee491-f9d5-46a8-8182-4ba7481a632e", "merge_id": "661ee491-f9d5-46a8-8182-4ba7481a632e"}
+{"at": "2026-09-13T18:13:40.296950+00:00", "operation": "reopen_coordinator_store", "elapsed_seconds": null}
+{"at": "2026-09-13T18:13:42.088180+00:00", "operation": "resume_saved_machine_order_choice", "elapsed_seconds": 1.7911403750185855, "result_status": null, "submission_id": "661ee491-f9d5-46a8-8182-4ba7481a632e", "merge_id": "661ee491-f9d5-46a8-8182-4ba7481a632e"}
+{"at": "2026-09-13T18:13:44.179484+00:00", "operation": "resume_saved_machine_order_choice", "elapsed_seconds": 2.090062625007704, "result_status": null, "submission_id": "661ee491-f9d5-46a8-8182-4ba7481a632e", "merge_id": "661ee491-f9d5-46a8-8182-4ba7481a632e"}
+{"at": "2026-09-13T18:13:45.123062+00:00", "operation": "read_personal_material", "elapsed_seconds": 0.9419236249523237, "result_status": null, "id": "100ee263961895f64dd57c71d3db8b5c", "revision": 7}
+{"at": "2026-09-13T18:13:45.124803+00:00", "operation": "reject_incomplete_machine_order", "elapsed_seconds": null, "error": "Keep every content block exactly once when arranging its order. Order cannot add, remove or replace content."}
+{"at": "2026-09-13T18:13:45.129170+00:00", "operation": "keep_human_text_and_table_choices", "elapsed_seconds": 0.0040756670059636235, "result_status": null, "submission_id": "661ee491-f9d5-46a8-8182-4ba7481a632e", "merge_id": "661ee491-f9d5-46a8-8182-4ba7481a632e"}
+{"at": "2026-09-13T18:13:47.697272+00:00", "operation": "apply_mixed_machine_choices", "elapsed_seconds": 2.5678990419837646, "result_status": "applied"}
+{"at": "2026-09-13T18:13:47.697933+00:00", "operation": "replay_mixed_machine_application", "elapsed_seconds": 0.0006012920057401061, "result_status": "applied"}
+{"at": "2026-09-13T18:13:48.616036+00:00", "operation": "read_personal_material", "elapsed_seconds": 0.9180312500102445, "result_status": null, "id": "100ee263961895f64dd57c71d3db8b5c", "revision": 8}
+{"at": "2026-09-13T18:13:50.879277+00:00", "operation": "read_personal_material", "elapsed_seconds": 0.8090737090096809, "result_status": null, "id": "100ee263961895f64dd57c71d3db8b5c", "revision": 8}
+{"at": "2026-09-13T18:13:51.893496+00:00", "operation": "fault_extract_requested", "elapsed_seconds": null, "result_status": "applied"}
+{"at": "2026-09-13T18:13:52.313380+00:00", "operation": "worker_lock_conflict", "elapsed_seconds": 0.4195195420179516, "result_status": "busy"}
+{"at": "2026-09-13T18:13:52.734561+00:00", "operation": "abrupt_isolated_worker_exit", "elapsed_seconds": null, "exit_code": 73}
+{"at": "2026-09-13T18:13:53.829105+00:00", "operation": "read_personal_material", "elapsed_seconds": 1.0944071669946425, "result_status": null, "id": "100ee263961895f64dd57c71d3db8b5c", "revision": 9}
+{"at": "2026-09-13T18:13:53.830798+00:00", "operation": "reopen_coordinator_store", "elapsed_seconds": null}
+{"at": "2026-09-13T18:13:55.630255+00:00", "operation": "resume_interrupted_worker", "elapsed_seconds": 1.799376040988136, "result_status": "applied"}
+{"at": "2026-09-13T18:13:56.614869+00:00", "operation": "read_personal_material", "elapsed_seconds": 0.9844807089539245, "result_status": null, "id": "100ee263961895f64dd57c71d3db8b5c", "revision": 11}
+{"at": "2026-09-13T18:13:57.550062+00:00", "operation": "verify_prior_human_resolution_reuse", "elapsed_seconds": null, "candidate_id": "e2d80ccb-2eb4-4b0c-a219-d902666700df", "prior_candidate_id": "07c9f800-9fa6-4409-b447-3f5e133c818b"}
+{"at": "2026-09-13T18:13:58.466373+00:00", "operation": "injected_save_failure", "elapsed_seconds": null, "error": "ENGINEERING injected save failure"}
+{"at": "2026-09-13T18:13:59.466038+00:00", "operation": "read_personal_material", "elapsed_seconds": 0.9960501660243608, "result_status": null, "id": "100ee263961895f64dd57c71d3db8b5c", "revision": 11}

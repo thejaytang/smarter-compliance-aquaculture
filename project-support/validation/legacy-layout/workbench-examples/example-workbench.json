@@ -1,0 +1,629 @@
+{
+  "schema": "workbench-example/1",
+  "source_id": "ADF-10",
+  "source_language": "English",
+  "provided_schema": "example.json",
+  "requirements": [
+    {
+      "key": "R1",
+      "ids": [
+        0
+      ],
+      "fields": {
+        "Subject": "the operational journal",
+        "Modal Verb": "shall",
+        "Main Verb": "contain",
+        "Object": "updated information"
+      },
+      "conditions": [
+        "For aquaculture establishments that are not subject to specific record-keeping provisions in Chapters 4, 5 and 6"
+      ],
+      "structure": {
+        "children": [
+          {
+            "children": [
+              {
+                "id": "34b36a14-9fbb-5981-b801-efd5bfd2bc8a",
+                "kind": "fragment",
+                "role": "Subject",
+                "span": [
+                  114,
+                  137
+                ],
+                "text": "the operational journal"
+              }
+            ],
+            "id": "4ad3a608-0d95-5946-9219-99152d762771",
+            "kind": "group",
+            "negated": false,
+            "quantity": 1,
+            "role": "Subject"
+          },
+          {
+            "children": [
+              {
+                "id": "6e547693-f53e-5e88-98b3-ed4fa6c419cc",
+                "kind": "fragment",
+                "role": "Modal Verb",
+                "span": [
+                  138,
+                  143
+                ],
+                "text": "shall"
+              }
+            ],
+            "id": "b9a16378-e1ad-54bf-8e4d-21f3dcf2fb83",
+            "kind": "group",
+            "negated": false,
+            "quantity": 1,
+            "role": "Modal Verb"
+          },
+          {
+            "children": [
+              {
+                "id": "14a37691-9f51-51c5-b2c8-37107020fe49",
+                "kind": "fragment",
+                "role": "Main Verb",
+                "span": [
+                  157,
+                  164
+                ],
+                "text": "contain"
+              }
+            ],
+            "id": "0b0d4eec-1e71-5456-bd79-6c9fad6749db",
+            "kind": "group",
+            "negated": false,
+            "quantity": 1,
+            "role": "Main Verb"
+          },
+          {
+            "children": [
+              {
+                "id": "376945c3-b863-5644-8599-5d0f53dacd16",
+                "kind": "fragment",
+                "role": "Object",
+                "span": [
+                  165,
+                  184
+                ],
+                "text": "updated information"
+              }
+            ],
+            "id": "0376f656-f795-5e04-a1d9-7164d51e2cb9",
+            "kind": "group",
+            "negated": false,
+            "quantity": 1,
+            "role": "Object"
+          },
+          {
+            "children": [
+              {
+                "id": "3010eb98-78f0-5b20-8ac3-4dc73eb5d313",
+                "kind": "fragment",
+                "role": "conditions",
+                "span": [
+                  0,
+                  112
+                ],
+                "text": "For aquaculture establishments that are not subject to specific record-keeping provisions in Chapters 4, 5 and 6"
+              }
+            ],
+            "id": "6010f9e5-3dfb-5344-aa79-abfaaf9a8177",
+            "kind": "group",
+            "negated": false,
+            "quantity": 1,
+            "role": "conditions"
+          },
+          {
+            "children": [
+              {
+                "id": "83da78c4-fd06-5214-b8d0-543eb4a72cb8",
+                "kind": "reference",
+                "role": "subrequirement",
+                "target_id": "5da78515-910b-5fb7-ae14-30bb924ff5f8"
+              },
+              {
+                "id": "d2a5926c-7904-5bd7-8dd5-4e1f932c8235",
+                "kind": "reference",
+                "role": "subrequirement",
+                "target_id": "6c308b1f-a205-5639-9b0d-f88d233e16d8"
+              },
+              {
+                "id": "a7a460bc-1290-58b9-9166-bc94a3eb664e",
+                "kind": "reference",
+                "role": "subrequirement",
+                "target_id": "9397c424-929b-50c5-b1e5-b3f98b651e17"
+              }
+            ],
+            "id": "9c7ed823-0abd-569e-9ad6-21837eec2756",
+            "kind": "group",
+            "negated": false,
+            "quantity": 3,
+            "role": "subrequirement"
+          }
+        ],
+        "id": "b2fe01c6-f419-56ec-bdb6-cd2ff4b0b40b/structure",
+        "kind": "clause",
+        "span": [
+          0,
+          188
+        ]
+      }
+    },
+    {
+      "key": "R2",
+      "ids": [
+        1
+      ],
+      "conditions": [],
+      "context_requirement": "R1",
+      "structure": {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "a31e7ab2-d82f-54c4-85b0-f3bb55c5a672",
+                        "kind": "fragment",
+                        "role": "Subject",
+                        "span": [
+                          0,
+                          19
+                        ],
+                        "text": "aquaculture animals"
+                      },
+                      {
+                        "id": "84050741-41e4-5a9a-8a49-c54276e2db1d",
+                        "kind": "fragment",
+                        "role": "Subject",
+                        "span": [
+                          24,
+                          51
+                        ],
+                        "text": "aquaculture animal products"
+                      }
+                    ],
+                    "id": "3dc0b905-9c0d-5307-9b71-97a773b8038c",
+                    "kind": "group",
+                    "negated": false,
+                    "quantity": 2,
+                    "role": "Subject"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "e5f81d81-82b3-5fd1-9a91-217c07dbec6b",
+                        "kind": "fragment",
+                        "role": "Main Verb",
+                        "span": [
+                          52,
+                          64
+                        ],
+                        "text": "brought into"
+                      },
+                      {
+                        "id": "6e112443-6938-507b-b46b-a25e8b705c6a",
+                        "kind": "fragment",
+                        "role": "Main Verb",
+                        "span": [
+                          69,
+                          81
+                        ],
+                        "text": "removed from"
+                      }
+                    ],
+                    "id": "76d3d34c-a3c8-53dc-81c6-97dc2ff96349",
+                    "kind": "group",
+                    "negated": false,
+                    "quantity": 2,
+                    "role": "Main Verb"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "6a0cb3ab-5f64-53a8-b3f8-1d1e18d4afeb",
+                        "kind": "fragment",
+                        "role": "Object",
+                        "span": [
+                          82,
+                          111
+                        ],
+                        "text": "the aquaculture establishment"
+                      }
+                    ],
+                    "id": "c032d216-dde4-5d5d-8424-1207b850eb06",
+                    "kind": "group",
+                    "negated": false,
+                    "quantity": 1,
+                    "role": "Object"
+                  }
+                ],
+                "id": "2d0152fe-fc4c-5db2-941c-df9fa76aecea",
+                "kind": "clause",
+                "span": [
+                  0,
+                  111
+                ]
+              }
+            ],
+            "id": "1b89e13f-d99f-5fa2-97cc-4f06bbc1bd80",
+            "kind": "group",
+            "negated": false,
+            "quantity": 1,
+            "role": "requirements"
+          },
+          {
+            "children": [
+              {
+                "id": "c0103ad4-b989-51cb-8b90-529b782b0c3c",
+                "kind": "fragment",
+                "role": "Object",
+                "span": [
+                  123,
+                  138
+                ],
+                "text": "place of origin"
+              },
+              {
+                "id": "b49f329f-21a0-5891-b0a8-d1886df66dfd",
+                "kind": "fragment",
+                "role": "Object",
+                "span": [
+                  143,
+                  163
+                ],
+                "text": "place of destination"
+              }
+            ],
+            "id": "d8a00a68-bbe2-51c1-93cb-d191f411acb4",
+            "kind": "group",
+            "negated": false,
+            "quantity": [
+              2,
+              2
+            ],
+            "role": "Object"
+          }
+        ],
+        "id": "5da78515-910b-5fb7-ae14-30bb924ff5f8/structure",
+        "kind": "clause",
+        "span": [
+          0,
+          164
+        ]
+      },
+      "semantic_notes": "Main Verb marks include source-stated passive participles inside descriptive phrases. They are not independent obligations; the journal-keeping obligation remains in R1."
+    },
+    {
+      "key": "R3",
+      "ids": [
+        2
+      ],
+      "fields": {
+        "Object": "mortality per production unit"
+      },
+      "conditions": [
+        "relevant to the production method"
+      ],
+      "context_requirement": "R1",
+      "structure": {
+        "children": [
+          {
+            "children": [
+              {
+                "id": "0e251e3e-8f3a-562a-bf57-8281a7483ff0",
+                "kind": "fragment",
+                "role": "Object",
+                "span": [
+                  0,
+                  29
+                ],
+                "text": "mortality per production unit"
+              }
+            ],
+            "id": "e9ad0011-9d1e-5b2f-bde4-b1f9da3531d1",
+            "kind": "group",
+            "negated": false,
+            "quantity": 1,
+            "role": "Object"
+          },
+          {
+            "children": [
+              {
+                "id": "49f2cc03-170c-50b1-a233-25b86f967519",
+                "kind": "fragment",
+                "role": "conditions",
+                "span": [
+                  30,
+                  63
+                ],
+                "text": "relevant to the production method"
+              }
+            ],
+            "id": "a4148d0e-0cfd-5089-90cb-4692a35c5f8e",
+            "kind": "group",
+            "negated": false,
+            "quantity": 1,
+            "role": "conditions"
+          }
+        ],
+        "id": "6c308b1f-a205-5639-9b0d-f88d233e16d8/structure",
+        "kind": "clause",
+        "span": [
+          0,
+          68
+        ]
+      }
+    },
+    {
+      "key": "R4",
+      "ids": [
+        3
+      ],
+      "conditions": [],
+      "context_requirement": "R1",
+      "structure": {
+        "children": [
+          {
+            "children": [
+              {
+                "id": "d4613f0d-283c-5583-aa34-50e9c15f749a",
+                "kind": "fragment",
+                "role": "Object",
+                "span": [
+                  0,
+                  39
+                ],
+                "text": "results of completed health inspections"
+              }
+            ],
+            "id": "9076a425-7e64-5048-a2c9-e4c9a14dfdc0",
+            "kind": "group",
+            "negated": false,
+            "quantity": 1,
+            "role": "Object"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "ec8a7c36-04a8-55c4-bb86-648f389e38a3",
+                        "kind": "fragment",
+                        "role": "Object",
+                        "span": [
+                          41,
+                          79
+                        ],
+                        "text": "number of completed health inspections"
+                      }
+                    ],
+                    "id": "dcfc5679-b6b8-5d84-b69b-9bce687e81c6",
+                    "kind": "group",
+                    "negated": false,
+                    "quantity": 1,
+                    "role": "Object"
+                  }
+                ],
+                "id": "fb5fa4be-0308-53f4-bb7c-283f100c2869",
+                "kind": "clause",
+                "span": [
+                  41,
+                  79
+                ]
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "f9887da5-42f4-52ec-b2ef-77febd8846e3",
+                        "kind": "fragment",
+                        "role": "Object",
+                        "span": [
+                          81,
+                          89
+                        ],
+                        "text": "sampling"
+                      }
+                    ],
+                    "id": "d350d40a-c48c-5999-93bc-a1c0d2b9e31f",
+                    "kind": "group",
+                    "negated": false,
+                    "quantity": 1,
+                    "role": "Object"
+                  }
+                ],
+                "id": "7317e409-1031-51d8-b63e-8ff5ba98d429",
+                "kind": "clause",
+                "span": [
+                  81,
+                  89
+                ]
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "ffb87263-c6a0-53cc-8d88-fcb005c03829",
+                        "kind": "fragment",
+                        "role": "Subject",
+                        "span": [
+                          91,
+                          103
+                        ],
+                        "text": "examinations"
+                      }
+                    ],
+                    "id": "e9a1b8bf-be62-5e98-aa86-9ec96fbae2bc",
+                    "kind": "group",
+                    "negated": false,
+                    "quantity": 1,
+                    "role": "Subject"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "a4bf5b64-663f-533d-9ae8-2898393b9486",
+                        "kind": "fragment",
+                        "role": "Main Verb",
+                        "span": [
+                          104,
+                          113
+                        ],
+                        "text": "performed"
+                      }
+                    ],
+                    "id": "5ada1144-dcd5-5f06-90ac-7ab8dde752b1",
+                    "kind": "group",
+                    "negated": false,
+                    "quantity": 1,
+                    "role": "Main Verb"
+                  }
+                ],
+                "id": "93c270e7-6ba5-5aee-9d02-7c69d637fa0d",
+                "kind": "clause",
+                "span": [
+                  91,
+                  113
+                ]
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "eab72d55-2aa1-58d4-8657-fcb342158927",
+                        "kind": "fragment",
+                        "role": "Object",
+                        "span": [
+                          115,
+                          124
+                        ],
+                        "text": "diagnoses"
+                      }
+                    ],
+                    "id": "b2e87d05-3931-5411-aef3-b6ad33a299e0",
+                    "kind": "group",
+                    "negated": false,
+                    "quantity": 1,
+                    "role": "Object"
+                  }
+                ],
+                "id": "426db78b-28fc-56a1-a9ea-102e26c31bbe",
+                "kind": "clause",
+                "span": [
+                  115,
+                  124
+                ]
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "7ea0e38b-4b19-5ea0-af98-adf13df03faa",
+                        "kind": "fragment",
+                        "role": "Subject",
+                        "span": [
+                          129,
+                          139
+                        ],
+                        "text": "treatments"
+                      }
+                    ],
+                    "id": "36207da3-106e-5e67-ab3b-dae163f944a5",
+                    "kind": "group",
+                    "negated": false,
+                    "quantity": 1,
+                    "role": "Subject"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "3bfb7ac4-682f-52e3-a0bd-67a279fe839e",
+                        "kind": "fragment",
+                        "role": "Main Verb",
+                        "span": [
+                          140,
+                          151
+                        ],
+                        "text": "carried out"
+                      }
+                    ],
+                    "id": "a0701737-cbbd-5eda-bcd1-e1f191be24e4",
+                    "kind": "group",
+                    "negated": false,
+                    "quantity": 1,
+                    "role": "Main Verb"
+                  }
+                ],
+                "id": "f44365b8-9d7a-5a2e-a83c-612249a1ab2b",
+                "kind": "clause",
+                "span": [
+                  129,
+                  151
+                ]
+              }
+            ],
+            "id": "112a25fb-de0c-59ad-9aa5-9628c471ffaf",
+            "kind": "group",
+            "negated": false,
+            "quantity": [
+              5,
+              5
+            ],
+            "role": "requirements"
+          }
+        ],
+        "id": "9397c424-929b-50c5-b1e5-b3f98b651e17/structure",
+        "kind": "clause",
+        "span": [
+          0,
+          152
+        ]
+      },
+      "semantic_notes": "Main Verb marks include source-stated passive participles inside descriptive phrases. They are not independent obligations; the journal-keeping obligation remains in R1."
+    }
+  ],
+  "interpretations": {
+    "R1": {
+      "scope_information": "Identify the operational journal and its owning aquaculture establishment. A = journals associated with aquaculture establishments. Bind establishment_id, journal_id and the assessment date; these are proposed data concepts, not an agreed Site Model schema.",
+      "condition_information": "Within A, determine which establishments are covered by specific record-keeping provisions in Chapters 4, 5 or 6. Proposed logical form: NOT (covered_by_chapter_4 OR covered_by_chapter_5 OR covered_by_chapter_6). B contains journals whose establishments are outside those specific provisions. The excerpt links to these chapters but does not supply their contents. Unknown applicability must remain unresolved, not default to false.",
+      "verification": "For each journal in B, require ALL three linked content requirements: R2 AND R3 AND R4. Check that the required information is present and updated in the same assessment context. The phrase at a minimum means at least the listed content; it does not prohibit additional journal information. C contains journals supported by sufficient evidence for all three requirements. Only with adequate coverage and evidence may B ⊆ C support a positive result. Missing evidence is unresolved; a verified missing mandatory item is a failure. This example defines the method and does not produce a verdict."
+    },
+    "R2": {
+      "scope_information": "R1 supplies the journal-keeping obligation and its establishment scope. Within R2, aquaculture animals and aquaculture animal products are the grammatical subjects of the reduced passive phrase: they undergo the movement, and no actor performing the movement is named. The two Subject entries list covered categories; a single record need not be both an animal and a product.",
+      "condition_information": "Use R1’s shared chapter-applicability condition through the Subrequirement link. The phrases brought into and removed from describe the inbound and outbound records that must be covered. They do not require each animal or product to undergo both movements. Preserve the reference to the same aquaculture establishment. No independent modal verb appears in R2.",
+      "verification": "For each journal to which R1 applies, check the relevant animal and animal-product movement records. Cover both source-stated directions: brought into AND removed from. The establishment is the shared location complement. Check both required location categories: place of origin AND place of destination, [2,2]. Group counts describe coverage of the listed categories and directions, not simultaneous properties of every record. Verify updated and complete records. The verbs qualify the movements to be recorded; they do not create an obligation to bring in or remove animals. Missing records do not prove that no movement occurred."
+    },
+    "R3": {
+      "scope_information": "Shared scope is inherited through the R1 → R3 Subrequirement link. This entry contains only its own list-item wording; no Subject or modal verb is copied into its decomposition. Identify the operational journal and its owning aquaculture establishment. A = journals associated with aquaculture establishments. Bind establishment_id, journal_id and the assessment date; these are proposed data concepts, not an agreed Site Model schema. R3 inherits the lead-in from R1. Identify the establishment’s production units and production method so mortality information can be checked at the stated unit level.",
+      "condition_information": "Use R1’s shared applicability condition through that link. Within A, determine which establishments are covered by specific record-keeping provisions in Chapters 4, 5 or 6. Proposed logical form: NOT (covered_by_chapter_4 OR covered_by_chapter_5 OR covered_by_chapter_6). B contains journals whose establishments are outside those specific provisions. The excerpt links to these chapters but does not supply their contents. Unknown applicability must remain unresolved, not default to false. Additionally retain relevant to the production method as a qualification on the mortality-per-production-unit information. Decide the relevant units/representation using the production method. This qualification does not exempt the entire establishment from R1, R2 or R4. The excerpt does not define relevance; keep that decision unresolved when unsupported.",
+      "verification": "For every relevant production unit, verify that the journal contains updated mortality information attributable to that unit. The excerpt provides no mortality threshold, mandatory reporting interval or unit of measurement. Do not invent a mortality limit or treat a missing value as zero. The check concerns record coverage and currency, not whether mortality is acceptably low."
+    },
+    "R4": {
+      "scope_information": "Shared scope is inherited through the R1 → R4 Subrequirement link. This entry contains only its own list-item wording; no Subject or modal verb is copied into its decomposition. Identify the operational journal and its owning aquaculture establishment. A = journals associated with aquaculture establishments. Bind establishment_id, journal_id and the assessment date; these are proposed data concepts, not an agreed Site Model schema. R4 inherits the lead-in from R1 and concerns completed health inspections and their recorded results for the same establishment.",
+      "condition_information": "Apply R1’s shared applicability condition. In R4, completed qualifies health inspections; performed qualifies examinations and carried out qualifies treatments. These words restrict the records to activities that occurred. They do not require every activity to take place. Sampling is a noun naming an information category here, not an imperative verb.",
+      "verification": "Compare the recorded results with completed health inspections. Check ALL five information categories, [5,5]: number of completed health inspections; sampling; examinations performed; diagnoses; treatments carried out. The examinations/performed and treatments/carried out groups preserve their passive verbal relations. Their grammatical subjects are activities being described, not named personnel. Do not convert these participles into new duties to perform examinations or carry out treatments. Verify coverage and currency, including supported records of none where appropriate. No inspection frequency or update deadline is stated in this excerpt."
+    }
+  },
+  "gaps": [
+    "The linked Chapters 4, 5 and 6 have not been supplied here; their applicability cannot be resolved from this excerpt alone.",
+    "The excerpt requires updated information but supplies no fixed update interval. Agree the assessment date, relevant records and evidence of currency without inventing a deadline.",
+    "No Site Model records, accepted field mappings or real compliance assessment are included."
+  ],
+  "normalization": [
+    "English demonstration translation based on the user-supplied English JSON; original Norwegian excerpt retained in source history.",
+    "Each of the four source passages is a separate Requirement. R2, R3 and R4 contain only their own list items; shared context comes from R1 via explicit Subrequirement links.",
+    "Three child Requirements are linked from R1 with All 3. The 2 location categories and 5 inspection-result categories remain source-bound groups with exact [2,2] and [5,5]; the provided JSON remains unchanged.",
+    "Exact group counts concern the listed mandatory categories; they do not prohibit additional journal content."
+  ]
+}

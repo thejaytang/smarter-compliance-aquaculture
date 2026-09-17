@@ -1,0 +1,633 @@
+- generic [ref=f1e1]:
+  - link "Skip to content" [ref=f1e2] [cursor=pointer]:
+    - /url: "#main"
+  - complementary [ref=f1e3]:
+    - generic [ref=f1e8]:
+      - text: Smarter Compliance
+      - generic [ref=f1e9]: Requirement workbench
+    - navigation "System navigation" [ref=f1e10]:
+      - button "Overview All three systems" [ref=f1e11] [cursor=pointer]:
+        - text: Overview
+        - generic [ref=f1e12]: All three systems
+      - generic [ref=f1e13]:
+        - button "System1 Source management" [expanded] [ref=f1e14] [cursor=pointer]:
+          - text: System1
+          - generic [aria-hidden] [ref=f1e15]: ⌄
+          - generic [ref=f1e16]: Source management
+        - generic [ref=f1e17]:
+          - button "Pending review" [ref=f1e18] [cursor=pointer]
+          - button "Review history" [ref=f1e19] [cursor=pointer]
+      - generic [ref=f1e20]:
+        - button "Materials Human content review" [expanded] [ref=f1e21] [cursor=pointer]:
+          - text: Materials
+          - generic [aria-hidden] [ref=f1e22]: ⌄
+          - generic [ref=f1e23]: Human content review
+        - generic [ref=f1e121]:
+          - button "Open materials" [ref=f1e122] [cursor=pointer]
+          - button "Confirmed content" [ref=f1e123] [cursor=pointer]
+          - button "Legacy review" [ref=f1e124] [cursor=pointer]
+          - button "Legacy history" [ref=f1e125] [cursor=pointer]
+      - button "System3 Semantic enrichment" [ref=f1e25] [cursor=pointer]:
+        - text: System3
+        - generic [aria-hidden] [ref=f1e26]: ⌄
+        - generic [ref=f1e27]: Semantic enrichment
+      - button "Confidence settings" [ref=f1e28] [cursor=pointer]
+    - generic [ref=f1e29]:
+      - text: Local workspace
+      - button "Exit workbench" [ref=f1e31] [cursor=pointer]
+  - generic [ref=f1e32]:
+    - banner [ref=f1e33]:
+      - generic [ref=f1e34]:
+        - button "Collapse navigation" [expanded] [ref=f1e35] [cursor=pointer]: ☰
+        - heading "Material workbench" [level=1] [ref=f1e126]
+      - button "Runtime starting" [ref=f1e37] [cursor=pointer]
+      - generic [ref=f1e38]:
+        - generic [ref=f1e39]: Current reviewer
+        - generic [ref=f1e40]:
+          - combobox "Current reviewer" [ref=f1e41]:
+            - option "Select a reviewer"
+            - option "Ana Jokic"
+            - option "Daniel Restad"
+            - option "Weijie Tang" [selected]
+          - button "Switch reviewer" [ref=f1e127] [cursor=pointer]
+    - main [ref=f1e43]:
+      - generic [ref=f1e128]:
+        - generic [ref=f1e129]:
+          - generic [ref=f1e130]:
+            - text: HUMAN CONTENT REVIEW
+            - heading "ENGINEERING FIXTURE · HTML water checks" [level=2] [ref=f1e438]
+            - generic [ref=f1e132]: TS001 · TS001-001 · saved revision 2 · No adopted content · Candidate ready · 8 blocks · adoption pending · Candidate reconciliation pending
+          - generic [ref=f1e133]:
+            - button "Materials" [expanded] [ref=f1e134] [cursor=pointer]
+            - button "Save material" [ref=f1e135] [cursor=pointer]
+            - button "Confirm content review" [disabled] [ref=f1e136]
+        - status
+        - generic [ref=f1e137]:
+          - complementary "Materials" [ref=f1e138]:
+            - generic [ref=f1e139]:
+              - text: Find a material
+              - searchbox "Find a material" [ref=f1e140]
+            - generic [ref=f1e141]:
+              - heading "In progress 51" [level=4] [ref=f1e1019]:
+                - text: In progress
+                - generic [ref=f1e1020]: "51"
+              - button "ENGINEERING SCALE TS006 Not extracted Extraction not started TS006-001" [ref=f1e1021] [cursor=pointer]:
+                - strong [ref=f1e1022]: ENGINEERING SCALE TS006
+                - generic [ref=f1e1023]: Not extracted
+                - generic [ref=f1e1024]: Extraction not started
+                - generic [ref=f1e1025]: TS006-001
+              - button "ENGINEERING SCALE TS005 Not extracted Extraction not started TS005-001" [ref=f1e1026] [cursor=pointer]:
+                - strong [ref=f1e1027]: ENGINEERING SCALE TS005
+                - generic [ref=f1e1028]: Not extracted
+                - generic [ref=f1e1029]: Extraction not started
+                - generic [ref=f1e1030]: TS005-001
+              - button "ENGINEERING SCALE TS004 Not extracted Extraction not started TS004-001" [ref=f1e1031] [cursor=pointer]:
+                - strong [ref=f1e1032]: ENGINEERING SCALE TS004
+                - generic [ref=f1e1033]: Not extracted
+                - generic [ref=f1e1034]: Extraction not started
+                - generic [ref=f1e1035]: TS004-001
+              - button "ENGINEERING SCALE MATERIAL BB100 Content draft Extraction not started BB100-001" [ref=f1e1036] [cursor=pointer]:
+                - strong [ref=f1e1037]: ENGINEERING SCALE MATERIAL BB100
+                - generic [ref=f1e1038]: Content draft
+                - generic [ref=f1e1039]: Extraction not started
+                - generic [ref=f1e1040]: BB100-001
+              - button "ENGINEERING SCALE MATERIAL BB099 Content draft Extraction not started BB099-001" [ref=f1e1041] [cursor=pointer]:
+                - strong [ref=f1e1042]: ENGINEERING SCALE MATERIAL BB099
+                - generic [ref=f1e1043]: Content draft
+                - generic [ref=f1e1044]: Extraction not started
+                - generic [ref=f1e1045]: BB099-001
+              - button "ENGINEERING SCALE MATERIAL BB098 Content draft Extraction not started BB098-001" [ref=f1e1046] [cursor=pointer]:
+                - strong [ref=f1e1047]: ENGINEERING SCALE MATERIAL BB098
+                - generic [ref=f1e1048]: Content draft
+                - generic [ref=f1e1049]: Extraction not started
+                - generic [ref=f1e1050]: BB098-001
+              - button "ENGINEERING SCALE MATERIAL BB097 Content draft Extraction not started BB097-001" [ref=f1e1051] [cursor=pointer]:
+                - strong [ref=f1e1052]: ENGINEERING SCALE MATERIAL BB097
+                - generic [ref=f1e1053]: Content draft
+                - generic [ref=f1e1054]: Extraction not started
+                - generic [ref=f1e1055]: BB097-001
+              - button "ENGINEERING SCALE MATERIAL BB096 Content draft Extraction not started BB096-001" [ref=f1e1056] [cursor=pointer]:
+                - strong [ref=f1e1057]: ENGINEERING SCALE MATERIAL BB096
+                - generic [ref=f1e1058]: Content draft
+                - generic [ref=f1e1059]: Extraction not started
+                - generic [ref=f1e1060]: BB096-001
+              - button "ENGINEERING SCALE MATERIAL BB095 Content draft Extraction not started BB095-001" [ref=f1e1061] [cursor=pointer]:
+                - strong [ref=f1e1062]: ENGINEERING SCALE MATERIAL BB095
+                - generic [ref=f1e1063]: Content draft
+                - generic [ref=f1e1064]: Extraction not started
+                - generic [ref=f1e1065]: BB095-001
+              - button "ENGINEERING SCALE MATERIAL BB094 Content draft Extraction not started BB094-001" [ref=f1e1066] [cursor=pointer]:
+                - strong [ref=f1e1067]: ENGINEERING SCALE MATERIAL BB094
+                - generic [ref=f1e1068]: Content draft
+                - generic [ref=f1e1069]: Extraction not started
+                - generic [ref=f1e1070]: BB094-001
+              - button "ENGINEERING SCALE MATERIAL BB093 Content draft Extraction not started BB093-001" [ref=f1e1071] [cursor=pointer]:
+                - strong [ref=f1e1072]: ENGINEERING SCALE MATERIAL BB093
+                - generic [ref=f1e1073]: Content draft
+                - generic [ref=f1e1074]: Extraction not started
+                - generic [ref=f1e1075]: BB093-001
+              - button "ENGINEERING SCALE MATERIAL BB092 Content draft Extraction not started BB092-001" [ref=f1e1076] [cursor=pointer]:
+                - strong [ref=f1e1077]: ENGINEERING SCALE MATERIAL BB092
+                - generic [ref=f1e1078]: Content draft
+                - generic [ref=f1e1079]: Extraction not started
+                - generic [ref=f1e1080]: BB092-001
+              - button "ENGINEERING SCALE MATERIAL BB091 Content draft Extraction not started BB091-001" [ref=f1e1081] [cursor=pointer]:
+                - strong [ref=f1e1082]: ENGINEERING SCALE MATERIAL BB091
+                - generic [ref=f1e1083]: Content draft
+                - generic [ref=f1e1084]: Extraction not started
+                - generic [ref=f1e1085]: BB091-001
+              - button "ENGINEERING SCALE MATERIAL BB090 Content draft Extraction not started BB090-001" [ref=f1e1086] [cursor=pointer]:
+                - strong [ref=f1e1087]: ENGINEERING SCALE MATERIAL BB090
+                - generic [ref=f1e1088]: Content draft
+                - generic [ref=f1e1089]: Extraction not started
+                - generic [ref=f1e1090]: BB090-001
+              - button "ENGINEERING SCALE MATERIAL BB089 Content draft Extraction not started BB089-001" [ref=f1e1091] [cursor=pointer]:
+                - strong [ref=f1e1092]: ENGINEERING SCALE MATERIAL BB089
+                - generic [ref=f1e1093]: Content draft
+                - generic [ref=f1e1094]: Extraction not started
+                - generic [ref=f1e1095]: BB089-001
+              - button "ENGINEERING SCALE MATERIAL BB088 Content draft Extraction not started BB088-001" [ref=f1e1096] [cursor=pointer]:
+                - strong [ref=f1e1097]: ENGINEERING SCALE MATERIAL BB088
+                - generic [ref=f1e1098]: Content draft
+                - generic [ref=f1e1099]: Extraction not started
+                - generic [ref=f1e1100]: BB088-001
+              - button "ENGINEERING SCALE MATERIAL BB087 Content draft Extraction not started BB087-001" [ref=f1e1101] [cursor=pointer]:
+                - strong [ref=f1e1102]: ENGINEERING SCALE MATERIAL BB087
+                - generic [ref=f1e1103]: Content draft
+                - generic [ref=f1e1104]: Extraction not started
+                - generic [ref=f1e1105]: BB087-001
+              - button "ENGINEERING SCALE MATERIAL BB086 Content draft Extraction not started BB086-001" [ref=f1e1106] [cursor=pointer]:
+                - strong [ref=f1e1107]: ENGINEERING SCALE MATERIAL BB086
+                - generic [ref=f1e1108]: Content draft
+                - generic [ref=f1e1109]: Extraction not started
+                - generic [ref=f1e1110]: BB086-001
+              - button "ENGINEERING SCALE MATERIAL BB085 Content draft Extraction not started BB085-001" [ref=f1e1111] [cursor=pointer]:
+                - strong [ref=f1e1112]: ENGINEERING SCALE MATERIAL BB085
+                - generic [ref=f1e1113]: Content draft
+                - generic [ref=f1e1114]: Extraction not started
+                - generic [ref=f1e1115]: BB085-001
+              - button "ENGINEERING SCALE MATERIAL BB084 Content draft Extraction not started BB084-001" [ref=f1e1116] [cursor=pointer]:
+                - strong [ref=f1e1117]: ENGINEERING SCALE MATERIAL BB084
+                - generic [ref=f1e1118]: Content draft
+                - generic [ref=f1e1119]: Extraction not started
+                - generic [ref=f1e1120]: BB084-001
+              - button "ENGINEERING SCALE MATERIAL BB083 Content draft Extraction not started BB083-001" [ref=f1e1121] [cursor=pointer]:
+                - strong [ref=f1e1122]: ENGINEERING SCALE MATERIAL BB083
+                - generic [ref=f1e1123]: Content draft
+                - generic [ref=f1e1124]: Extraction not started
+                - generic [ref=f1e1125]: BB083-001
+              - button "ENGINEERING SCALE MATERIAL BB082 Content draft Extraction not started BB082-001" [ref=f1e1126] [cursor=pointer]:
+                - strong [ref=f1e1127]: ENGINEERING SCALE MATERIAL BB082
+                - generic [ref=f1e1128]: Content draft
+                - generic [ref=f1e1129]: Extraction not started
+                - generic [ref=f1e1130]: BB082-001
+              - button "ENGINEERING SCALE MATERIAL BB081 Content draft Extraction not started BB081-001" [ref=f1e1131] [cursor=pointer]:
+                - strong [ref=f1e1132]: ENGINEERING SCALE MATERIAL BB081
+                - generic [ref=f1e1133]: Content draft
+                - generic [ref=f1e1134]: Extraction not started
+                - generic [ref=f1e1135]: BB081-001
+              - button "ENGINEERING SCALE MATERIAL BB080 Content draft Extraction not started BB080-001" [ref=f1e1136] [cursor=pointer]:
+                - strong [ref=f1e1137]: ENGINEERING SCALE MATERIAL BB080
+                - generic [ref=f1e1138]: Content draft
+                - generic [ref=f1e1139]: Extraction not started
+                - generic [ref=f1e1140]: BB080-001
+              - button "ENGINEERING SCALE MATERIAL BB079 Content draft Extraction not started BB079-001" [ref=f1e1141] [cursor=pointer]:
+                - strong [ref=f1e1142]: ENGINEERING SCALE MATERIAL BB079
+                - generic [ref=f1e1143]: Content draft
+                - generic [ref=f1e1144]: Extraction not started
+                - generic [ref=f1e1145]: BB079-001
+              - button "ENGINEERING SCALE MATERIAL BB078 Content draft Extraction not started BB078-001" [ref=f1e1146] [cursor=pointer]:
+                - strong [ref=f1e1147]: ENGINEERING SCALE MATERIAL BB078
+                - generic [ref=f1e1148]: Content draft
+                - generic [ref=f1e1149]: Extraction not started
+                - generic [ref=f1e1150]: BB078-001
+              - button "ENGINEERING SCALE MATERIAL BB077 Content draft Extraction not started BB077-001" [ref=f1e1151] [cursor=pointer]:
+                - strong [ref=f1e1152]: ENGINEERING SCALE MATERIAL BB077
+                - generic [ref=f1e1153]: Content draft
+                - generic [ref=f1e1154]: Extraction not started
+                - generic [ref=f1e1155]: BB077-001
+              - button "ENGINEERING SCALE MATERIAL BB076 Content draft Extraction not started BB076-001" [ref=f1e1156] [cursor=pointer]:
+                - strong [ref=f1e1157]: ENGINEERING SCALE MATERIAL BB076
+                - generic [ref=f1e1158]: Content draft
+                - generic [ref=f1e1159]: Extraction not started
+                - generic [ref=f1e1160]: BB076-001
+              - button "ENGINEERING SCALE MATERIAL BB075 Content draft Extraction not started BB075-001" [ref=f1e1161] [cursor=pointer]:
+                - strong [ref=f1e1162]: ENGINEERING SCALE MATERIAL BB075
+                - generic [ref=f1e1163]: Content draft
+                - generic [ref=f1e1164]: Extraction not started
+                - generic [ref=f1e1165]: BB075-001
+              - button "ENGINEERING SCALE MATERIAL BB074 Content draft Extraction not started BB074-001" [ref=f1e1166] [cursor=pointer]:
+                - strong [ref=f1e1167]: ENGINEERING SCALE MATERIAL BB074
+                - generic [ref=f1e1168]: Content draft
+                - generic [ref=f1e1169]: Extraction not started
+                - generic [ref=f1e1170]: BB074-001
+              - button "ENGINEERING SCALE MATERIAL BB073 Content draft Extraction not started BB073-001" [ref=f1e1171] [cursor=pointer]:
+                - strong [ref=f1e1172]: ENGINEERING SCALE MATERIAL BB073
+                - generic [ref=f1e1173]: Content draft
+                - generic [ref=f1e1174]: Extraction not started
+                - generic [ref=f1e1175]: BB073-001
+              - button "ENGINEERING SCALE MATERIAL BB072 Content draft Extraction not started BB072-001" [ref=f1e1176] [cursor=pointer]:
+                - strong [ref=f1e1177]: ENGINEERING SCALE MATERIAL BB072
+                - generic [ref=f1e1178]: Content draft
+                - generic [ref=f1e1179]: Extraction not started
+                - generic [ref=f1e1180]: BB072-001
+              - button "ENGINEERING SCALE MATERIAL BB071 Content draft Extraction not started BB071-001" [ref=f1e1181] [cursor=pointer]:
+                - strong [ref=f1e1182]: ENGINEERING SCALE MATERIAL BB071
+                - generic [ref=f1e1183]: Content draft
+                - generic [ref=f1e1184]: Extraction not started
+                - generic [ref=f1e1185]: BB071-001
+              - button "ENGINEERING SCALE MATERIAL BB070 Content draft Extraction not started BB070-001" [ref=f1e1186] [cursor=pointer]:
+                - strong [ref=f1e1187]: ENGINEERING SCALE MATERIAL BB070
+                - generic [ref=f1e1188]: Content draft
+                - generic [ref=f1e1189]: Extraction not started
+                - generic [ref=f1e1190]: BB070-001
+              - button "ENGINEERING SCALE MATERIAL BB069 Content draft Extraction not started BB069-001" [ref=f1e1191] [cursor=pointer]:
+                - strong [ref=f1e1192]: ENGINEERING SCALE MATERIAL BB069
+                - generic [ref=f1e1193]: Content draft
+                - generic [ref=f1e1194]: Extraction not started
+                - generic [ref=f1e1195]: BB069-001
+              - button "ENGINEERING SCALE MATERIAL BB068 Content draft Extraction not started BB068-001" [ref=f1e1196] [cursor=pointer]:
+                - strong [ref=f1e1197]: ENGINEERING SCALE MATERIAL BB068
+                - generic [ref=f1e1198]: Content draft
+                - generic [ref=f1e1199]: Extraction not started
+                - generic [ref=f1e1200]: BB068-001
+              - button "ENGINEERING SCALE MATERIAL BB067 Content draft Extraction not started BB067-001" [ref=f1e1201] [cursor=pointer]:
+                - strong [ref=f1e1202]: ENGINEERING SCALE MATERIAL BB067
+                - generic [ref=f1e1203]: Content draft
+                - generic [ref=f1e1204]: Extraction not started
+                - generic [ref=f1e1205]: BB067-001
+              - button "ENGINEERING SCALE MATERIAL BB066 Content draft Extraction not started BB066-001" [ref=f1e1206] [cursor=pointer]:
+                - strong [ref=f1e1207]: ENGINEERING SCALE MATERIAL BB066
+                - generic [ref=f1e1208]: Content draft
+                - generic [ref=f1e1209]: Extraction not started
+                - generic [ref=f1e1210]: BB066-001
+              - button "ENGINEERING SCALE MATERIAL BB065 Content draft Extraction not started BB065-001" [ref=f1e1211] [cursor=pointer]:
+                - strong [ref=f1e1212]: ENGINEERING SCALE MATERIAL BB065
+                - generic [ref=f1e1213]: Content draft
+                - generic [ref=f1e1214]: Extraction not started
+                - generic [ref=f1e1215]: BB065-001
+              - button "ENGINEERING SCALE MATERIAL BB064 Content draft Extraction not started BB064-001" [ref=f1e1216] [cursor=pointer]:
+                - strong [ref=f1e1217]: ENGINEERING SCALE MATERIAL BB064
+                - generic [ref=f1e1218]: Content draft
+                - generic [ref=f1e1219]: Extraction not started
+                - generic [ref=f1e1220]: BB064-001
+              - button "ENGINEERING SCALE MATERIAL BB063 Content draft Extraction not started BB063-001" [ref=f1e1221] [cursor=pointer]:
+                - strong [ref=f1e1222]: ENGINEERING SCALE MATERIAL BB063
+                - generic [ref=f1e1223]: Content draft
+                - generic [ref=f1e1224]: Extraction not started
+                - generic [ref=f1e1225]: BB063-001
+              - button "ENGINEERING SCALE MATERIAL BB062 Content draft Extraction not started BB062-001" [ref=f1e1226] [cursor=pointer]:
+                - strong [ref=f1e1227]: ENGINEERING SCALE MATERIAL BB062
+                - generic [ref=f1e1228]: Content draft
+                - generic [ref=f1e1229]: Extraction not started
+                - generic [ref=f1e1230]: BB062-001
+              - button "ENGINEERING SCALE MATERIAL BB061 Content draft Extraction not started BB061-001" [ref=f1e1231] [cursor=pointer]:
+                - strong [ref=f1e1232]: ENGINEERING SCALE MATERIAL BB061
+                - generic [ref=f1e1233]: Content draft
+                - generic [ref=f1e1234]: Extraction not started
+                - generic [ref=f1e1235]: BB061-001
+              - button "ENGINEERING SCALE MATERIAL BB060 Content draft Extraction not started BB060-001" [ref=f1e1236] [cursor=pointer]:
+                - strong [ref=f1e1237]: ENGINEERING SCALE MATERIAL BB060
+                - generic [ref=f1e1238]: Content draft
+                - generic [ref=f1e1239]: Extraction not started
+                - generic [ref=f1e1240]: BB060-001
+              - button "ENGINEERING SCALE MATERIAL BB059 Content draft Extraction not started BB059-001" [ref=f1e1241] [cursor=pointer]:
+                - strong [ref=f1e1242]: ENGINEERING SCALE MATERIAL BB059
+                - generic [ref=f1e1243]: Content draft
+                - generic [ref=f1e1244]: Extraction not started
+                - generic [ref=f1e1245]: BB059-001
+              - button "ENGINEERING SCALE MATERIAL BB058 Content draft Extraction not started BB058-001" [ref=f1e1246] [cursor=pointer]:
+                - strong [ref=f1e1247]: ENGINEERING SCALE MATERIAL BB058
+                - generic [ref=f1e1248]: Content draft
+                - generic [ref=f1e1249]: Extraction not started
+                - generic [ref=f1e1250]: BB058-001
+              - button "ENGINEERING SCALE MATERIAL BB057 Content draft Extraction not started BB057-001" [ref=f1e1251] [cursor=pointer]:
+                - strong [ref=f1e1252]: ENGINEERING SCALE MATERIAL BB057
+                - generic [ref=f1e1253]: Content draft
+                - generic [ref=f1e1254]: Extraction not started
+                - generic [ref=f1e1255]: BB057-001
+              - button "ENGINEERING SCALE MATERIAL BB056 Content draft Extraction not started BB056-001" [ref=f1e1256] [cursor=pointer]:
+                - strong [ref=f1e1257]: ENGINEERING SCALE MATERIAL BB056
+                - generic [ref=f1e1258]: Content draft
+                - generic [ref=f1e1259]: Extraction not started
+                - generic [ref=f1e1260]: BB056-001
+              - button "ENGINEERING SCALE MATERIAL BB055 Content draft Extraction not started BB055-001" [ref=f1e1261] [cursor=pointer]:
+                - strong [ref=f1e1262]: ENGINEERING SCALE MATERIAL BB055
+                - generic [ref=f1e1263]: Content draft
+                - generic [ref=f1e1264]: Extraction not started
+                - generic [ref=f1e1265]: BB055-001
+              - button "ENGINEERING SCALE MATERIAL BB054 Content draft Extraction not started BB054-001" [ref=f1e1266] [cursor=pointer]:
+                - strong [ref=f1e1267]: ENGINEERING SCALE MATERIAL BB054
+                - generic [ref=f1e1268]: Content draft
+                - generic [ref=f1e1269]: Extraction not started
+                - generic [ref=f1e1270]: BB054-001
+              - button "ENGINEERING FIXTURE · HTML water checks No adopted content Candidate ready · 8 blocks · adoption pending Candidate reconciliation pending TS001-001" [ref=f1e1271] [cursor=pointer]:
+                - strong [ref=f1e1272]: ENGINEERING FIXTURE · HTML water checks
+                - generic [ref=f1e1273]: No adopted content
+                - generic [ref=f1e1274]: Candidate ready · 8 blocks · adoption pending
+                - generic [ref=f1e1275]: Candidate reconciliation pending
+                - generic [ref=f1e1276]: TS001-001
+              - heading "Content reviewed 0" [level=4] [ref=f1e1277]:
+                - text: Content reviewed
+                - generic [ref=f1e1278]: "0"
+              - paragraph [ref=f1e1279]: No materials
+              - generic [ref=f1e1280]:
+                - generic [ref=f1e1281]: 103 materials · more available
+                - button "Next 50" [ref=f1e1282] [cursor=pointer]
+            - group [ref=f1e400]:
+              - generic "Open a source snapshot" [ref=f1e401] [cursor=pointer]
+              - paragraph [ref=f1e702]: Opening only reads the saved source. Extract starts separately.
+              - generic [ref=f1e703]:
+                - text: Registered source
+                - combobox "Registered source" [ref=f1e704]:
+                  - option "Select source"
+                  - 'option "Public saved original: PA001"'
+                  - 'option "Public saved original: CS010"'
+                  - option "ENGINEERING FIXTURE · HTML water checks" [selected]
+                  - option "ENGINEERING FIXTURE · Excel measurements"
+                  - option "ENGINEERING FIXTURE · Native, scan and blank PDF"
+                  - option "ENGINEERING SCALE TS004"
+                  - option "ENGINEERING SCALE TS005"
+                  - option "ENGINEERING SCALE TS006"
+                  - option "ENGINEERING SCALE MATERIAL BB001"
+                  - option "ENGINEERING SCALE MATERIAL BB002"
+                  - option "ENGINEERING SCALE MATERIAL BB003"
+                  - option "ENGINEERING SCALE MATERIAL BB004"
+                  - option "ENGINEERING SCALE MATERIAL BB005"
+                  - option "ENGINEERING SCALE MATERIAL BB006"
+                  - option "ENGINEERING SCALE MATERIAL BB007"
+                  - option "ENGINEERING SCALE MATERIAL BB008"
+                  - option "ENGINEERING SCALE MATERIAL BB009"
+                  - option "ENGINEERING SCALE MATERIAL BB010"
+                  - option "ENGINEERING SCALE MATERIAL BB011"
+                  - option "ENGINEERING SCALE MATERIAL BB012"
+                  - option "ENGINEERING SCALE MATERIAL BB013"
+                  - option "ENGINEERING SCALE MATERIAL BB014"
+                  - option "ENGINEERING SCALE MATERIAL BB015"
+                  - option "ENGINEERING SCALE MATERIAL BB016"
+                  - option "ENGINEERING SCALE MATERIAL BB017"
+                  - option "ENGINEERING SCALE MATERIAL BB018"
+                  - option "ENGINEERING SCALE MATERIAL BB019"
+                  - option "ENGINEERING SCALE MATERIAL BB020"
+                  - option "ENGINEERING SCALE MATERIAL BB021"
+                  - option "ENGINEERING SCALE MATERIAL BB022"
+                  - option "ENGINEERING SCALE MATERIAL BB023"
+                  - option "ENGINEERING SCALE MATERIAL BB024"
+                  - option "ENGINEERING SCALE MATERIAL BB025"
+                  - option "ENGINEERING SCALE MATERIAL BB026"
+                  - option "ENGINEERING SCALE MATERIAL BB027"
+                  - option "ENGINEERING SCALE MATERIAL BB028"
+                  - option "ENGINEERING SCALE MATERIAL BB029"
+                  - option "ENGINEERING SCALE MATERIAL BB030"
+                  - option "ENGINEERING SCALE MATERIAL BB031"
+                  - option "ENGINEERING SCALE MATERIAL BB032"
+                  - option "ENGINEERING SCALE MATERIAL BB033"
+                  - option "ENGINEERING SCALE MATERIAL BB034"
+                  - option "ENGINEERING SCALE MATERIAL BB035"
+                  - option "ENGINEERING SCALE MATERIAL BB036"
+                  - option "ENGINEERING SCALE MATERIAL BB037"
+                  - option "ENGINEERING SCALE MATERIAL BB038"
+                  - option "ENGINEERING SCALE MATERIAL BB039"
+                  - option "ENGINEERING SCALE MATERIAL BB040"
+                  - option "ENGINEERING SCALE MATERIAL BB041"
+                  - option "ENGINEERING SCALE MATERIAL BB042"
+                  - option "ENGINEERING SCALE MATERIAL BB043"
+                  - option "ENGINEERING SCALE MATERIAL BB044"
+                  - option "ENGINEERING SCALE MATERIAL BB045"
+                  - option "ENGINEERING SCALE MATERIAL BB046"
+                  - option "ENGINEERING SCALE MATERIAL BB047"
+                  - option "ENGINEERING SCALE MATERIAL BB048"
+                  - option "ENGINEERING SCALE MATERIAL BB049"
+                  - option "ENGINEERING SCALE MATERIAL BB050"
+                  - option "ENGINEERING SCALE MATERIAL BB051"
+                  - option "ENGINEERING SCALE MATERIAL BB052"
+                  - option "ENGINEERING SCALE MATERIAL BB053"
+                  - option "ENGINEERING SCALE MATERIAL BB054"
+                  - option "ENGINEERING SCALE MATERIAL BB055"
+                  - option "ENGINEERING SCALE MATERIAL BB056"
+                  - option "ENGINEERING SCALE MATERIAL BB057"
+                  - option "ENGINEERING SCALE MATERIAL BB058"
+                  - option "ENGINEERING SCALE MATERIAL BB059"
+                  - option "ENGINEERING SCALE MATERIAL BB060"
+                  - option "ENGINEERING SCALE MATERIAL BB061"
+                  - option "ENGINEERING SCALE MATERIAL BB062"
+                  - option "ENGINEERING SCALE MATERIAL BB063"
+                  - option "ENGINEERING SCALE MATERIAL BB064"
+                  - option "ENGINEERING SCALE MATERIAL BB065"
+                  - option "ENGINEERING SCALE MATERIAL BB066"
+                  - option "ENGINEERING SCALE MATERIAL BB067"
+                  - option "ENGINEERING SCALE MATERIAL BB068"
+                  - option "ENGINEERING SCALE MATERIAL BB069"
+                  - option "ENGINEERING SCALE MATERIAL BB070"
+                  - option "ENGINEERING SCALE MATERIAL BB071"
+                  - option "ENGINEERING SCALE MATERIAL BB072"
+                  - option "ENGINEERING SCALE MATERIAL BB073"
+                  - option "ENGINEERING SCALE MATERIAL BB074"
+                  - option "ENGINEERING SCALE MATERIAL BB075"
+                  - option "ENGINEERING SCALE MATERIAL BB076"
+                  - option "ENGINEERING SCALE MATERIAL BB077"
+                  - option "ENGINEERING SCALE MATERIAL BB078"
+                  - option "ENGINEERING SCALE MATERIAL BB079"
+                  - option "ENGINEERING SCALE MATERIAL BB080"
+                  - option "ENGINEERING SCALE MATERIAL BB081"
+                  - option "ENGINEERING SCALE MATERIAL BB082"
+                  - option "ENGINEERING SCALE MATERIAL BB083"
+                  - option "ENGINEERING SCALE MATERIAL BB084"
+                  - option "ENGINEERING SCALE MATERIAL BB085"
+                  - option "ENGINEERING SCALE MATERIAL BB086"
+                  - option "ENGINEERING SCALE MATERIAL BB087"
+                  - option "ENGINEERING SCALE MATERIAL BB088"
+                  - option "ENGINEERING SCALE MATERIAL BB089"
+                  - option "ENGINEERING SCALE MATERIAL BB090"
+                  - option "ENGINEERING SCALE MATERIAL BB091"
+                  - option "ENGINEERING SCALE MATERIAL BB092"
+                  - option "ENGINEERING SCALE MATERIAL BB093"
+                  - option "ENGINEERING SCALE MATERIAL BB094"
+                  - option "ENGINEERING SCALE MATERIAL BB095"
+                  - option "ENGINEERING SCALE MATERIAL BB096"
+                  - option "ENGINEERING SCALE MATERIAL BB097"
+                  - option "ENGINEERING SCALE MATERIAL BB098"
+                  - option "ENGINEERING SCALE MATERIAL BB099"
+                  - option "ENGINEERING SCALE MATERIAL BB100"
+              - button "Open material" [ref=f1e705] [cursor=pointer]
+          - generic [ref=f1e403]:
+            - generic [ref=f1e404]:
+              - generic [ref=f1e405]:
+                - generic [ref=f1e406]:
+                  - generic [ref=f1e407]: "01"
+                  - heading "Original document" [level=3] [ref=f1e408]
+                  - text: Read-only saved snapshot
+                - button "Extract →" [ref=f1e409] [cursor=pointer]
+              - generic [ref=f1e410]:
+                - link "Open original ↗" [ref=f1e1283] [cursor=pointer]:
+                  - /url: /api/material/original?id=100ee263961895f64dd57c71d3db8b5c
+                - generic [ref=f1e1284]:
+                  - text: Location
+                  - combobox "Location" [ref=f1e1285]:
+                    - option "Start of document" [selected]
+                    - 'option "Engineering fixture: water checks 1 Daily record Record the water temperature each morning. Measurem"'
+                    - 'option "Engineering fixture: water checks 1 Daily record Record the water temperature each morning. Measurem"'
+                    - 'option "Engineering fixture: water checks"'
+                    - option "1 Daily record"
+                    - option "Record the water temperature each morning."
+                    - option "Measurements Temperature 12 C"
+                    - option "Measurements"
+                    - option "Measurements"
+                    - option "Temperature 12 C"
+                    - option "Temperature"
+                    - option "12 C"
+                    - option "Keep a note beside each reading."
+                    - option "img"
+                    - option "Supplementary note Retain empty days in the record."
+                    - option "Supplementary note"
+                    - option "Retain empty days in the record."
+                - button "Go" [ref=f1e1286] [cursor=pointer]
+                - button "Linked content" [ref=f1e1287] [cursor=pointer]
+              - generic [ref=f1e411]:
+                - generic [ref=f1e1288]:
+                  - paragraph [ref=f1e1289]: Saved HTML · selectable text · external assets omitted.
+                  - group [ref=f1e1290]:
+                    - generic "Snapshot display limitations" [ref=f1e1291] [cursor=pointer]
+                - iframe [ref=f1e1292]:
+                  - generic [ref=f3e1]:
+                    - 'heading "Engineering fixture: water checks" [level=1] [ref=f3e2]'
+                    - heading "1 Daily record" [level=2] [ref=f3e3]
+                    - paragraph [ref=f3e4]: Record the water temperature each morning.
+                    - table [ref=f3e5]:
+                      - rowgroup [ref=f3e6]:
+                        - row [ref=f3e7]:
+                          - columnheader "Measurements" [ref=f3e8]
+                        - row [ref=f3e9]:
+                          - cell "Temperature" [ref=f3e10]
+                          - cell "12 C" [ref=f3e11]
+                    - paragraph [ref=f3e12]: Keep a note beside each reading.
+                    - img "Original image requires source follow-up" [ref=f3e13]
+                    - text: "[Image unavailable in offline snapshot: Original image requires source follow-up]"
+                    - group [ref=f3e14]:
+                      - generic "Supplementary note" [ref=f3e15]
+                      - paragraph [ref=f3e16]: Retain empty days in the record.
+            - separator "Resize original pane" [ref=f1e413]
+            - generic [ref=f1e414]:
+              - generic [ref=f1e415]:
+                - generic [ref=f1e416]:
+                  - generic [ref=f1e417]: "02"
+                  - heading "Extracted original text" [level=3] [ref=f1e418]
+                  - text: Editable human draft
+                - button "Process →" [disabled] [ref=f1e419]
+              - generic [ref=f1e420]:
+                - generic [ref=f1e1293]:
+                  - button "+ Text" [ref=f1e1294] [cursor=pointer]
+                  - button "+ Heading" [ref=f1e1295] [cursor=pointer]
+                  - button "+ Table" [ref=f1e1296] [cursor=pointer]
+                  - button "+ Image" [ref=f1e1297] [cursor=pointer]
+                  - button "History" [ref=f1e1298] [cursor=pointer]
+                  - button "Reading mode" [ref=f1e1299] [cursor=pointer]
+                  - button "Reload saved" [ref=f1e1300] [cursor=pointer]
+                - generic [ref=f1e1301]:
+                  - generic [ref=f1e1302]:
+                    - text: Search all content
+                    - searchbox "Search all content" [ref=f1e1303]
+                  - generic [ref=f1e1304]:
+                    - text: Chapters
+                    - combobox "Chapters" [ref=f1e1305]:
+                      - option "Choose heading" [selected]
+                - paragraph [ref=f1e1306]: Read, select a block to edit, then save. Saving never confirms review.
+              - generic [ref=f1e421]:
+                - generic [ref=f1e1307]:
+                  - strong [ref=f1e1308]: Extraction candidate
+                  - paragraph [ref=f1e1309]: 8 blocks · input revision 0 · Full candidate scope reported; human checking is still required.
+                  - paragraph [ref=f1e1310]: The saved HTML has no supported template profile; the complete static DOM is retained as a generic structural candidate for manual review.
+                  - button "Refresh candidate" [ref=f1e1311] [cursor=pointer]
+                  - button "Compare / resolve" [ref=f1e1312] [cursor=pointer]
+                - generic [ref=f1e1313]: No adopted content. Extract a candidate or add missing text, tables and original-bound images manually.
+                - group [ref=f1e1314]:
+                  - generic "Whole-material review · 0/1 ranges checked" [ref=f1e1315] [cursor=pointer]
+            - separator "Resize requirements pane" [ref=f1e423]
+            - generic [ref=f1e424]:
+              - generic [ref=f1e426]:
+                - generic [ref=f1e427]: "03"
+                - heading "Structured requirements" [level=3] [ref=f1e428]
+                - text: Future form-based review
+              - generic [ref=f1e429]:
+                - generic [ref=f1e430]:
+                  - generic [aria-hidden] [ref=f1e431]: ▤
+                  - heading "Not connected" [level=4] [ref=f1e432]
+                  - paragraph [ref=f1e433]: Structure and processor pending.
+                  - paragraph [ref=f1e434]: The future Process action will use a confirmed content version and selected scope to produce a separate candidate for human review.
+                  - paragraph [ref=f1e435]: Content review can be completed here. Requirement structuring remains unavailable.
+                - group [ref=f1e436]:
+                  - generic "Future connection boundary" [ref=f1e437] [cursor=pointer]
+        - dialog [ref=f1e1316]:
+          - heading "Compare extraction candidate" [level=2] [ref=f1e1317]
+          - paragraph [ref=f1e1318]: Machine content is a candidate. Existing human content remains unchanged until you explicitly resolve this comparison.
+          - paragraph [ref=f1e1319]: Input revision 0 · reported full scope
+          - generic [active] [ref=f1e1320]:
+            - generic [ref=f1e1321]:
+              - heading "Previous candidate / input" [level=3] [ref=f1e1322]
+              - paragraph [ref=f1e1323]: Reliable previous block mapping is unavailable. Check the complete original and compare whole versions.
+            - generic [ref=f1e1324]:
+              - heading "Current human content" [level=3] [ref=f1e1325]
+              - generic [ref=f1e1326]:
+                - paragraph [ref=f1e1327]: Blocks 0–0 of 0
+                - paragraph [ref=f1e1328]: No blocks in this version.
+            - generic [ref=f1e1329]:
+              - heading "New candidate" [level=3] [ref=f1e1330]
+              - generic [ref=f1e1331]:
+                - paragraph [ref=f1e1332]: Blocks 1–8 of 8
+                - article [ref=f1e1333]:
+                  - strong [ref=f1e1334]: heading
+                  - paragraph [ref=f1e1335]: "Engineering fixture: water checks"
+                  - text: original-1f0a0406dfac5d5e
+                - article [ref=f1e1336]:
+                  - strong [ref=f1e1337]: 1 heading
+                  - paragraph [ref=f1e1338]: 1 Daily record
+                  - text: original-cdf4b53e81d0a2a2
+                - article [ref=f1e1339]:
+                  - strong [ref=f1e1340]: text
+                  - paragraph [ref=f1e1341]: Record the water temperature each morning.
+                  - text: original-bfec75a68993d233
+                - article [ref=f1e1342]:
+                  - strong [ref=f1e1343]: table
+                  - paragraph
+                  - generic [ref=f1e1344]:
+                    - paragraph [ref=f1e1345]: Rows 1–2 / 2 · columns 1–2 / 2
+                    - table [ref=f1e1347]:
+                      - rowgroup [ref=f1e1348]:
+                        - row [ref=f1e1349]:
+                          - cell "Measurements" [ref=f1e1350]
+                          - cell [ref=f1e1351]
+                        - row [ref=f1e1352]:
+                          - cell "Temperature" [ref=f1e1353]
+                          - cell "12 C" [ref=f1e1354]
+                    - generic [ref=f1e1355]:
+                      - button "↑ Rows" [disabled] [ref=f1e1356]
+                      - button "↓ Rows" [disabled] [ref=f1e1357]
+                      - button "← Columns" [disabled] [ref=f1e1358]
+                      - button "Columns →" [disabled] [ref=f1e1359]
+                    - paragraph
+                  - text: original-8fa86dba172a7bff
+                - article [ref=f1e1360]:
+                  - strong [ref=f1e1361]: text
+                  - paragraph [ref=f1e1362]: Keep a note beside each reading.
+                  - text: original-f1d4b7e2b12a7653
+                - article [ref=f1e1363]:
+                  - strong [ref=f1e1364]: image
+                  - paragraph [ref=f1e1365]: Original image requires source follow-up
+                  - text: original-9628b46fac38c8a4
+                - article [ref=f1e1366]:
+                  - strong [ref=f1e1367]: text
+                  - paragraph [ref=f1e1368]: Supplementary note
+                  - text: original-b0070c19ee139375
+                - article [ref=f1e1369]:
+                  - strong [ref=f1e1370]: text
+                  - paragraph [ref=f1e1371]: Retain empty days in the record.
+                  - text: original-4345e497dbcd0c34
+          - generic [ref=f1e1372]:
+            - checkbox "I checked this comparison against the original source, including changed, missing and ambiguous content." [ref=f1e1373]
+            - text: I checked this comparison against the original source, including changed, missing and ambiguous content.
+          - generic [ref=f1e1374]:
+            - button "Keep current content" [ref=f1e1375] [cursor=pointer]
+            - button "Adopt candidate" [ref=f1e1376] [cursor=pointer]
+            - button "Edit / merge" [ref=f1e1377] [cursor=pointer]
+          - paragraph [ref=f1e1378]: Keep records a new evidence check. Adopt replaces the current effective draft but preserves earlier saved versions. Edit / merge opens a protected local draft for explicit choices.
+          - button "Close" [ref=f1e1380] [cursor=pointer]

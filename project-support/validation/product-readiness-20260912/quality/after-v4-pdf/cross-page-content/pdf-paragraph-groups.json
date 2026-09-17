@@ -1,0 +1,59 @@
+{
+  "method": "same-page-source-preserving/1",
+  "source_sha256": "a01ea98a16cc107450e54cabf9f4e577b9c83652a6145bac4a94e352f617a981",
+  "groups": [
+    {
+      "operation": "same_page_paragraph_group",
+      "group_block_id": "block-15c0c32fde913967907a6b64",
+      "numbering": "",
+      "fragments": [
+        {
+          "id": "block-5e49cba7366c4efb66b0435e",
+          "type": "text",
+          "text": "This paragraph deliberately continues",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:1",
+              "page_index": 0,
+              "page": 1,
+              "bbox": [
+                54.22999954223633,
+                594.8399963378906,
+                220.34999084472656,
+                604.0899963378906
+              ],
+              "native_id": "native_p0000_ft000001"
+            }
+          ]
+        },
+        {
+          "id": "block-afdf02e0c6e4ff7a96722645",
+          "type": "text",
+          "text": "across the page boundary with a hy￾",
+          "level": 1,
+          "parent_id": null,
+          "numbering": "",
+          "dependencies": [],
+          "source_refs": [
+            {
+              "scope_id": "page:1",
+              "page_index": 0,
+              "page": 1,
+              "bbox": [
+                54.36000061035156,
+                614.8399963378906,
+                214.87998962402344,
+                624.0899963378906
+              ],
+              "native_id": "native_p0000_ft000002"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

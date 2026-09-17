@@ -1,0 +1,16 @@
+{
+  "scope": "Additional exposed development diagnostic; not independent holdout or business Gold",
+  "source": "workbench/runtime/product-readiness-20260912/fixture/Data/A_Public_Authority/PA001-001_material.html",
+  "source_sha256": "8c9f2d952806c8dabc44294d197d55654284d98ff63683cae18633b9ab76a967",
+  "before_code": [
+    {
+      "path": "system2/src/pdf_extraction/orchestration/material_parser.py",
+      "sha256": "3696f3aab5aff829e7247418bd0b22cec1b5f3008c6419ac842f67ff7c38bce2"
+    },
+    {
+      "path": "system2/tests/test_material_parser_quality.py",
+      "sha256": "1232f30b1989d28caece8383d9e23be6484b907b231d6b0e7dcc8a5cdb38ee2f"
+    }
+  ],
+  "measurement": "All section-sign heading labels from original DOM, including spaced lowercase suffixes; original text/locators/IDs must remain exact. No automatic recognition score."
+}

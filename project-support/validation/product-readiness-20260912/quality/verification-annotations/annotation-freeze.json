@@ -1,0 +1,44 @@
+{
+  "frozen_at": "2026-09-12T21:16:36.550604+00:00",
+  "prediction_blind": true,
+  "checks": {
+    "pa057-reserved-source-annotation.json": {
+      "units": 33,
+      "critical_spans": 18,
+      "all_boxes_in_page": true,
+      "all_spans_exact": true,
+      "all_source_lines_partitioned": true,
+      "complete_requirement_inventory_partition": true
+    },
+    "cs010-reserved-source-annotation.json": {
+      "units": 45,
+      "critical_spans": 54,
+      "all_boxes_in_page": true,
+      "all_spans_exact": true,
+      "all_source_lines_partitioned": true,
+      "complete_requirement_inventory_partition": true
+    }
+  },
+  "artifacts": {
+    "TRUST_AND_SCOPE.md": "13266b564efd065371c2b7083f1fd080a0d5c6cbe6e33fa9a6724039d071458d",
+    "build_source_annotations.py": "657a628300944a8ed763d173b9458f762b4e8ce78ffe8142da2227534a19d7e3",
+    "cs010-reserved-p003.pdfium.txt": "af4ce2c3c93f13704b9820ce9947d68938788ce39c7d865d02ba4f616ace7d67",
+    "cs010-reserved-p003.png": "202da981aa2bd7ee17a07e1a0a3796dc581a0d9cf51ecd13014399897e87ff80",
+    "cs010-reserved-p003.xhtml": "fc1de9ea4883d4be1b5402238418b45cd3156bad61c6c78f2c5e03659e5fe73f",
+    "cs010-reserved-p004.pdfium.txt": "103652d55d1f70ccaa241764e23840dfa2aa726daf974891d61885b9b257eca8",
+    "cs010-reserved-p004.png": "ade7ee3fc24bb8f7c419ce5647bc3b41b042678ea7d19a857320eeac185989d3",
+    "cs010-reserved-source-annotation.json": "576cc731aedae7907c58fec05c74ccff07615c3dcdc58a3958d5e8f4aadab6c2",
+    "pa057-reserved-p005.pdfium.txt": "27b2ae3a29e19746c5795ca8c64abec21755a7f5ad577acf3a86070b99f8f65c",
+    "pa057-reserved-p005.png": "5a0a879081cc10e2b28a4a05c02ef13125f243aa195fac9edbb449741ca08184",
+    "pa057-reserved-p005.pypdf.txt": "512361e5aeff36ac2802e981c172142077f1957c81245004a1cedd82a2bf3120",
+    "pa057-reserved-p005.txt": "64d3ab877bda5e6e13eb7543ee15653898dc383c02d20830e2c9bd7b0ab8c09a",
+    "pa057-reserved-p005.xhtml": "7fc92ca6ad6c9ab96e7f09bb772a0a3aa41e8798bca21024b33996b8597b885b",
+    "pa057-reserved-p006.pdfium.txt": "c9dbd538629b5c97102b8e3a1cbec0c75a6f754b6b0f09c14173f7aede03f917",
+    "pa057-reserved-p006.png": "df38031cec88c63375688a6efd1fe5d07bc5f17b7102d20fdd80fa577f7400c8",
+    "pa057-reserved-p006.pypdf.txt": "13d11f61ddf6ac78ade51975bebeb3b7f524e57de1fd68607c6091c7c4c7c95c",
+    "pa057-reserved-p006.txt": "39c7e76eae1ee356d630d562f3b67dd03cd2fc3e897ed624f3bde922ec01ed1f",
+    "pa057-reserved-p006.xhtml": "ba5b9d924d15634c92769a74306692b68f2061365d4eb802e30b0dec199102ca",
+    "pa057-reserved-source-annotation.json": "9d6ff3cefb2c3743bdf3c8087ec956d4258b150ca3ce308bf63fce4f885084b8",
+    "source-render-inventory.json": "c9ea26c4a682aab9e39153d74f46977de6fd48aa315465221df5620e72a99a7c"
+  }
+}

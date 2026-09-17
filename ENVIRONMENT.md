@@ -81,6 +81,19 @@ uv sync --locked --no-editable --extra dev --extra docling --extra table-fallbac
 
 Set `UV_CACHE_DIR` to a project-local cache when running `uv` directly. OCR and selected legacy parsers may require separately installed Tesseract/language files, Poppler or cached model weights. Missing optional tools must remain visible; installing a Python wrapper does not establish OCR readiness. Do not download model weights or run paid/remote inference during routine checks.
 
-To rebuild shipped Markdown tools, run `npm ci` and `npm run build` inside `workbench/frontend`. PDF.js vendor files and license notices must remain in the product. Tests and development evidence stay local and are excluded from application Git updates. On a development checkout, run `workbench/.venv/bin/python workbench/tests/run_checks.py all` (Windows: `workbench\.venv\Scripts\python.exe workbench\tests\run_checks.py all`). The helper selects each suite’s owning environment and explicit source paths. Standard `PYTHONPYCACHEPREFIX` is respected when a local validation cache outside a cloud-synchronized folder is necessary.
+To rebuild shipped Markdown tools, run `npm ci` and `npm run build` inside `workbench/frontend`. PDF.js vendor files and license notices must remain in the product. Tests and development evidence are included on `developing-only-jay` and excluded from `main` product updates. On a development checkout, run `workbench/.venv/bin/python workbench/tests/run_checks.py all` (Windows: `workbench\.venv\Scripts\python.exe workbench\tests\run_checks.py all`). The helper selects each suite’s owning environment and explicit source paths. Standard `PYTHONPYCACHEPREFIX` is respected when a local validation cache outside a cloud-synchronized folder is necessary.
 
 Native Windows launch, filesystem locking, migration and exchange must be checked on Windows. macOS passes and simulated platform tests do not prove Windows acceptance.
+
+
+## 6. Jay development checkout
+
+Use `developing-only-jay` for the complete maintained development workspace. Historical database copies, runtime recovery trees, environments, credentials and caches stay local. The versioned initial-data package contains the current saved business snapshot.
+
+On Windows, historical evidence includes long filenames. Enable Git long-path support before cloning this branch:
+
+```bat
+git -c core.longpaths=true clone --branch developing-only-jay https://github.com/thejaytang/smarter-compliance-aquaculture.git C:\sc-dev
+```
+
+Use `main` in a separate short-path checkout when checking the colleague product. Do not switch this working directory back to `main` merely to publish, since Git would remove the development files that are tracked only here. Transfer selected product changes through a separate checkout; do not merge this branch wholesale into `main`.

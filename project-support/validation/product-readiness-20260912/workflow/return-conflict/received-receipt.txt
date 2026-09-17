@@ -1,0 +1,53 @@
+My submissions
+
+Select saved source reviews, material drafts and inspection results. Download freezes each selected result; later editing cannot change the package.
+
+PA001 · personal material
+Completed scope and remaining work
+Download selected results as one package
+
+Received adoption receipts
+Public saved original: PA001
+Material / task
+Public saved original: PA001
+Source
+PA001
+Contributor
+Ana Jokic
+Adopted by
+Weijie Tang
+Master revision
+3
+Recorded at
+2026-09-13T10:22:13.648263+00:00
+Adoption decision
+Adopted
+Content review at receipt
+Draft
+
+Adoption and content review are separate. This receipt records a past decision; it does not update personal work.
+
+Original receipt details
+Public saved original: PA001
+Material / task
+Public saved original: PA001
+Source
+PA001
+Contributor
+Ana Jokic
+Adopted by
+Weijie Tang
+Master revision
+4
+Recorded at
+2026-09-13T14:41:46.250399+00:00
+Adoption decision
+Adopted
+Content review at receipt
+Draft
+
+Adoption and content review are separate. This receipt records a past decision; it does not update personal work.
+
+Original receipt details
+Frozen package history
+Close

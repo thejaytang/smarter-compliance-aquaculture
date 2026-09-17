@@ -1,0 +1,291 @@
+{
+  "upload": {
+    "upload_id": "11ecc2b8-c9dc-4fa5-9923-398e0e44e9cd",
+    "hash": "eb118336d635cb1fb4eb7bb4844be3d9e5991c9dfd98cdb4c25d7240c5de71a7",
+    "size": 2149,
+    "message": "File staged and format check passed. Verify its identity, completeness and permissions before submitting."
+  },
+  "inspection": {
+    "fields": {
+      "source_title": "example",
+      "issuer": "",
+      "version": "",
+      "folder_code": "Z_Pending_Classification",
+      "file_format": "html",
+      "jurisdiction": "Norway",
+      "document_type": "Other",
+      "source_family": "Pending classification",
+      "requirement_role": "Supporting reference",
+      "authoritative_language": "English",
+      "effective_date": "",
+      "inclusion_rationale": "Potential relevance: fish, water. Confirm applicability to the operation.",
+      "automation_readiness": "MEDIUM",
+      "acquisition_channel": "MANUAL_COPY",
+      "provenance_status": "UNVERIFIED",
+      "update_model": "MANUAL",
+      "applicability_reference": "",
+      "primary_source_id": "",
+      "source_notes": "Original excerpt: Anchoring line: scope, conditions, alternative demands and exception The human shall remove the fish if either the tank is red or all of the following are true: the water is hot, the fish is sick, and the pump is off.",
+      "authority_quality": "",
+      "scope_relevance": "MEDIUM",
+      "version_currency": "",
+      "traceability": "MEDIUM",
+      "access_permission": ""
+    },
+    "inspection": {
+      "schema": "source-basic-inspection/1",
+      "status": "partial",
+      "summary": "Anchoring line: scope, conditions, alternative demands and exception The human shall remove the fish if either the tank is red or all of the following are true: the water is hot, the fish is sick, and the pump is off.",
+      "summary_method": "Original metadata or selected original excerpt",
+      "coverage": {
+        "units": "document",
+        "total_units": 1,
+        "inspected_units": 1,
+        "unreadable_units": [],
+        "truncated": false
+      },
+      "dimensions": {
+        "authority_quality": {
+          "rating": "UNKNOWN",
+          "reason": "No publisher identified in readable content.",
+          "evidence": "",
+          "confidence": null,
+          "requires_review": true
+        },
+        "scope_relevance": {
+          "rating": "MEDIUM",
+          "reason": "Topic matches are suggestions, not an applicability decision.",
+          "evidence": "fish, water",
+          "confidence": null,
+          "requires_review": true
+        },
+        "version_currency": {
+          "rating": "UNKNOWN",
+          "reason": "No explicit version/date found.",
+          "evidence": "",
+          "confidence": null,
+          "requires_review": true
+        },
+        "traceability": {
+          "rating": "MEDIUM",
+          "reason": "Uploaded original is hash-bound. Its publication origin needs verification.",
+          "evidence": "User-uploaded original",
+          "confidence": null,
+          "requires_review": true
+        },
+        "access_permission": {
+          "rating": "UNKNOWN",
+          "reason": "Readable or publicly reachable content does not establish reuse permission. Verify the applicable terms.",
+          "evidence": "",
+          "confidence": null,
+          "requires_review": true
+        }
+      },
+      "missing_fields": [
+        "issuer",
+        "version",
+        "effective_date",
+        "applicability_reference"
+      ],
+      "flags": [
+        "No publisher identified in readable content.",
+        "No explicit version/date found.",
+        "Readable or publicly reachable content does not establish reuse permission. Verify the applicable terms."
+      ],
+      "requires_review": true,
+      "method": "Local native-text and explicit content rules; no external model",
+      "content_hash": "eb118336d635cb1fb4eb7bb4844be3d9e5991c9dfd98cdb4c25d7240c5de71a7",
+      "inspected_at": "2026-09-16T08:17:31.333413+00:00",
+      "official_url": "",
+      "retrieval_url": ""
+    },
+    "warnings": [],
+    "method": "Local native-text and explicit content rules; no external model",
+    "requires_review": true,
+    "upload_id": "11ecc2b8-c9dc-4fa5-9923-398e0e44e9cd",
+    "hash": "eb118336d635cb1fb4eb7bb4844be3d9e5991c9dfd98cdb4c25d7240c5de71a7",
+    "inspection_id": "0c600c78-a83c-41e8-aee8-daeb1b9a59ac"
+  },
+  "intake_request": {
+    "request_id": "27dd9e9d-d092-45b8-b746-8422b71865dd",
+    "upload_id": "11ecc2b8-c9dc-4fa5-9923-398e0e44e9cd",
+    "inspection_id": "0c600c78-a83c-41e8-aee8-daeb1b9a59ac",
+    "source_title": "example",
+    "folder_code": "E_Project_Engineering",
+    "file_format": "html",
+    "issuer": "Workbench demonstration",
+    "jurisdiction": "Other",
+    "document_type": "Other",
+    "requirement_role": "Draft working material",
+    "authoritative_language": "English",
+    "source_family": "Workshop demonstration",
+    "version": "2026-09-16",
+    "inclusion_rationale": "User-requested training example for demonstrating the Workbench; no normative authority.",
+    "source_notes": "Workshop demonstration only. Case 1 is the meeting example with its original spelling; case 2 is fictional; case 3 is the user-provided English translation used in the explanatory figures, not an authenticated or current official English legal text. This material contains check designs, not compliance findings.",
+    "official_url": "",
+    "retrieval_url": ""
+  },
+  "intake": {
+    "status": "pending_review",
+    "operation_id": "INTAKE-27dd9e9d-d092-45b8-b746-8422b71865dd",
+    "duplicate_source_id": "",
+    "version_of_source_id": ""
+  },
+  "accept_request": {
+    "request_id": "eb707d24-5979-4e59-9434-873dfc9afa85",
+    "task_id": "INTAKE-27dd9e9d-d092-45b8-b746-8422b71865dd",
+    "revision": "94f1eb812f8c265a27b962731edc4c43984ebdc78e0e04284a0f43cc9326c1f9",
+    "source_revision": "",
+    "action": "candidate_accept",
+    "candidate_fields": {
+      "source_title": "example",
+      "folder_code": "E_Project_Engineering",
+      "file_format": "html",
+      "issuer": "Workbench demonstration",
+      "jurisdiction": "Other",
+      "document_type": "Other",
+      "requirement_role": "Draft working material",
+      "authoritative_language": "English",
+      "source_family": "Workshop demonstration",
+      "version": "2026-09-16",
+      "inclusion_rationale": "User-requested training example for demonstrating the Workbench; no normative authority.",
+      "source_notes": "Workshop demonstration only. Case 1 is the meeting example with its original spelling; case 2 is fictional; case 3 is the user-provided English translation used in the explanatory figures, not an authenticated or current official English legal text. This material contains check designs, not compliance findings.",
+      "official_url": "",
+      "retrieval_url": "",
+      "operator_selection_decision": "INCLUDE"
+    },
+    "note": "Create the example requested by the user for Workbench training only; not a legal source or compliance approval.",
+    "explicit_confirmation": true
+  },
+  "accepted": {
+    "status": "applied",
+    "message": "决定已写入，来源待办及统计已更新。"
+  },
+  "source_id": "PE001",
+  "open_request": {
+    "request_id": "b3de8bce-38cf-43d2-b271-3d14ccaa57fa",
+    "source_id": "PE001"
+  },
+  "training_review_request": {
+    "request_id": "1d29e078-7c37-4f1b-9034-e656dfcafd7a",
+    "source_id": "PE001",
+    "expected_revision": 0,
+    "expected_source_revision": "a160909ad30ef112598d",
+    "source_review": {
+      "fields": {
+        "official_url": "",
+        "retrieval_url": "",
+        "issuer": "Workbench demonstration",
+        "version": "2026-09-16",
+        "provenance_status": "LOCAL_AUTHORED_DEMONSTRATION",
+        "acquisition_channel": "MANUAL_COPY",
+        "applicability_reference": "Workbench training only; never normative or legal authority.",
+        "inclusion_rationale": "Include this locally authored example solely to demonstrate the Workbench. Its draft working material role and workshop family remain unchanged.",
+        "primary_source_id": ""
+      },
+      "scores": {
+        "authority_quality": "HIGH",
+        "scope_relevance": "HIGH",
+        "version_currency": "HIGH",
+        "traceability": "HIGH",
+        "access_permission": "HIGH"
+      },
+      "selection": "INCLUDE",
+      "note": "User explicitly requested this authored training example. Ratings apply only to the local training artifact: its issuer is the Workbench demonstration, its content matches the prepared three-case specification, its version was authored today, its retained bytes match SHA-256, and the user authorized its local use. These ratings do not assess legal authority, the current law, or the accuracy of the illustrative translation. No material review or compliance finding is confirmed.",
+      "issue_verified": false,
+      "issue_checks": {},
+      "task_checks": {},
+      "new_issues": []
+    },
+    "explicit_confirmation": true
+  },
+  "training_review": {
+    "status": "adopted_partial",
+    "request_id": "5516ad1f-aab8-564b-a0ee-04aff1dee6ff",
+    "merge_id": "254f9b76-1884-424e-acf1-e616fe58d392",
+    "source_status": "saved_partial",
+    "source_receipt": {
+      "status": "saved_partial",
+      "request_id": "5aafde90-6d9f-5122-ae73-1bd85ed32128",
+      "operation_id": "COLLAB-5aafde90-6d9f-5122-ae73-1bd85ed32128",
+      "source_id": "PE001",
+      "source_revision": "a52247121960aead66ca",
+      "effective_selection": "INCLUDE",
+      "unresolved_reasons": [
+        "Source acquisition or governance remains unresolved: MISSING_OFFICIAL_URL"
+      ],
+      "submission_id": "ebe8750c-c1a6-54b4-b7e9-f7c8fbb18cc6",
+      "contributor": "Weijie Tang",
+      "actor": "Weijie Tang"
+    },
+    "material_status": "not_present",
+    "material": null,
+    "submission_id": "ebe8750c-c1a6-54b4-b7e9-f7c8fbb18cc6",
+    "actor": "Weijie Tang",
+    "contributor": "Weijie Tang",
+    "at": "2026-09-16T08:25:53.436024+00:00"
+  },
+  "material": {
+    "association_review_required": false,
+    "blocks": [],
+    "checked_scope": [],
+    "collaboration_provenance": [],
+    "confirmation": null,
+    "content_revision": 0,
+    "content_status": "not_extracted",
+    "created_at": "2026-09-16T08:25:56.950376+00:00",
+    "id": "fb2ab88857c490664724dbad418d2943",
+    "issues": [],
+    "last_action": {
+      "actor": "source_intake",
+      "at": "2026-09-16T08:25:56.950513+00:00",
+      "kind": "opened"
+    },
+    "legacy": null,
+    "provenance_version": 1,
+    "requirement_status": "not_connected",
+    "revision": 0,
+    "scope": [
+      {
+        "id": "html:document",
+        "kind": "html",
+        "label": "Complete saved HTML document",
+        "location": {
+          "anchor": "original-document"
+        }
+      }
+    ],
+    "source": {
+      "assessment_id": null,
+      "content_hash": "eb118336d635cb1fb4eb7bb4844be3d9e5991c9dfd98cdb4c25d7240c5de71a7",
+      "download_status": "SUCCESS",
+      "file_format": "html",
+      "operator_selection_decision": "INCLUDE",
+      "parsing_copy_of": null,
+      "registry_kind": "sqlite_snapshot",
+      "registry_sha256": "dca30ae0b6a3ffdd96704cb03bc1079ed8140032c709b90e6b72305ccc394743",
+      "relative_path": "E_Project_Engineering/PE001-001_example.html",
+      "selection_origin": "human",
+      "selection_status": "INCLUDE",
+      "snapshot_id": "PE001-001",
+      "snapshot_status": "STORED",
+      "source_id": "PE001",
+      "source_status": "CURRENT"
+    },
+    "source_stale": false,
+    "title": "example",
+    "updated_at": "2026-09-16T08:25:56.950513+00:00",
+    "candidates": [],
+    "conflicts": [],
+    "related_versions": [],
+    "source_issues": [],
+    "collaboration": {
+      "mode": "coordinator",
+      "view": "personal",
+      "draft_revision": 0,
+      "coordinator": "Weijie Tang",
+      "master_digest": "38a57854baacc4fdb2ea3b3eddb36f9231a3fcd54a8de129098c9967b310848f",
+      "provenance": []
+    }
+  }
+}

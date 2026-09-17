@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/.venv/bin/python",
+    "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/quality/structure-diagnostic/grid-consistency/fallback-experiment/run.py",
+    "born-digital-multicolumn"
+  ],
+  "cwd": "/private/tmp/smarter-grid-fallback-803y2m78",
+  "status": "completed",
+  "guard_stage": null,
+  "exit_code": 0,
+  "elapsed_seconds": 0.8098576670163311,
+  "readiness": {
+    "stage": "ready",
+    "readiness_seconds": 0.5291995839797892,
+    "ready_monotonic": 497033.767757333
+  },
+  "stdout": "born-digital-multicolumn-stdout.log",
+  "stderr": "born-digital-multicolumn-stderr.log"
+}

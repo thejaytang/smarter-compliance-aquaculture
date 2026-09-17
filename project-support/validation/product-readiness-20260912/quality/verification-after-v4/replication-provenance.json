@@ -1,0 +1,8 @@
+{
+  "copied_from": "project-support/product-readiness-20260912/quality/verification-after",
+  "evaluator_exact_copy": true,
+  "matching_policy_exact_copy": true,
+  "grouped_refs_compatible": "Existing page_of iterates all source_refs and produces page-number set; /4 groups remain same-page. No evaluator adaptation.",
+  "boundary": "Current-round reserved assessment after parser /4 code freeze, historically exposed documents. No code changes or tuning from these results.",
+  "operator": "Codex extraction_baseline, delegated isolated measurement; implementation author also runs frozen evaluator, not independent human review."
+}

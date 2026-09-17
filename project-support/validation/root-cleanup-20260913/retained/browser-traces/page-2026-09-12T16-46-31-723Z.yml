@@ -1,0 +1,30 @@
+- generic [active] [ref=f1e1]:
+  - link "Skip to content" [ref=f1e2] [cursor=pointer]:
+    - /url: "#main"
+  - complementary [ref=f1e3]:
+    - generic [ref=f1e8]:
+      - text: Smarter Compliance
+      - generic [ref=f1e9]: Requirement workbench
+    - navigation "Workspace navigation" [ref=f1e10]:
+      - button "Overview" [ref=f1e11] [cursor=pointer]
+      - generic [ref=f1e12]:
+        - button "System1" [expanded] [ref=f1e13] [cursor=pointer]: System1 ⌄
+        - generic [ref=f1e14]:
+          - button "Pending review" [ref=f1e15] [cursor=pointer]
+          - button "Review history" [ref=f1e16] [cursor=pointer]
+      - button "Materials" [ref=f1e18] [cursor=pointer]: Materials ⌄
+      - button "Confidence settings" [ref=f1e19] [cursor=pointer]
+  - generic [ref=f1e20]:
+    - banner [ref=f1e21]:
+      - generic [ref=f1e22]:
+        - button "Collapse navigation" [expanded] [ref=f1e23] [cursor=pointer]: ☰
+        - heading "Requirement overview" [level=1] [ref=f1e24]
+      - button "Runtime starting" [ref=f1e25] [cursor=pointer]
+      - generic [ref=f1e26]:
+        - generic [ref=f1e27]: Current reviewer
+        - generic [ref=f1e28]:
+          - combobox "Current reviewer" [ref=f1e29]:
+            - option "Select a reviewer" [selected]
+          - button "Use this name" [ref=f1e30] [cursor=pointer]
+    - main [ref=f1e31]:
+      - paragraph [ref=f1e32]: Loading requirement workspace…

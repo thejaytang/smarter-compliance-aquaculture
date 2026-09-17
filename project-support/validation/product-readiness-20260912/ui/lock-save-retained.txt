@@ -1,0 +1,6 @@
+{
+  "status": [
+    "database is locked. Your draft is retained. Retry uses the same request identity after an uncertain response."
+  ],
+  "input": "SCANNED ORIGINAL FIXTURE\nManual transcription: water checked daily.\n[ENGINEERING LOCK-RETRY: input retained]"
+}

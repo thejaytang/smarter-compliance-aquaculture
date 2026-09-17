@@ -1,0 +1,193 @@
+[
+  {
+    "id": "asc-farm",
+    "counts": {
+      "formal_normative_text": {
+        "denominator": 6,
+        "before_single_group": 1,
+        "after_single_group": 6,
+        "note": "Active engineering diagnostics, not recall or Requirement classification; overlapping formal/clause checks must not be pooled."
+      },
+      "annotated_clause_text": {
+        "denominator": 7,
+        "before_single_group": 2,
+        "after_single_group": 7,
+        "note": "Active engineering diagnostics, not recall or Requirement classification; overlapping formal/clause checks must not be pooled."
+      }
+    },
+    "legacy_comparison": [
+      {
+        "id": "1.1.1",
+        "native_assembler_exact_normative_text": true,
+        "source_span_count": 2
+      },
+      {
+        "id": "1.1.2",
+        "native_assembler_exact_normative_text": true,
+        "source_span_count": 2
+      },
+      {
+        "id": "1.2.1",
+        "native_assembler_exact_normative_text": true,
+        "source_span_count": 2
+      },
+      {
+        "id": "1.2.2",
+        "native_assembler_exact_normative_text": true,
+        "source_span_count": 2
+      },
+      {
+        "id": "1.2.3",
+        "native_assembler_exact_normative_text": true,
+        "source_span_count": 2
+      },
+      {
+        "id": "1.2.4",
+        "native_assembler_exact_normative_text": true,
+        "source_span_count": 2
+      }
+    ],
+    "table_candidates": [
+      {
+        "id": "block-4759623c2382f78bab8d39d3",
+        "source_ref": {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            46.666666666666664,
+            61.333333333333336,
+            541.3333333333334,
+            101.33333333333333
+          ]
+        },
+        "rows": 1,
+        "cols": 14,
+        "nonempty_cells": 3
+      },
+      {
+        "id": "block-0031678dbbee5f7883675be2",
+        "source_ref": {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            54.0,
+            334.0,
+            542.0,
+            368.6666666666667
+          ]
+        },
+        "rows": 1,
+        "cols": 8,
+        "nonempty_cells": 1
+      },
+      {
+        "id": "block-e51332517c8a3a4a4190df4c",
+        "source_ref": {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            51.333333333333336,
+            62.666666666666664,
+            552.0,
+            102.66666666666667
+          ]
+        },
+        "rows": 3,
+        "cols": 18,
+        "nonempty_cells": 3
+      },
+      {
+        "id": "block-4e4c05a6bc51dbe8f3d649dd",
+        "source_ref": {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            53.333333333333336,
+            331.3333333333333,
+            540.6666666666666,
+            366.0
+          ]
+        },
+        "rows": 1,
+        "cols": 8,
+        "nonempty_cells": 1
+      }
+    ],
+    "source_order_and_payload_unchanged": true
+  },
+  {
+    "id": "asc-interpretation",
+    "counts": {
+      "formal_normative_text": {
+        "denominator": 3,
+        "before_single_group": 0,
+        "after_single_group": 1,
+        "note": "Active engineering diagnostics, not recall or Requirement classification; overlapping formal/clause checks must not be pooled."
+      },
+      "annotated_clause_text": {
+        "denominator": 13,
+        "before_single_group": 5,
+        "after_single_group": 13,
+        "note": "Active engineering diagnostics, not recall or Requirement classification; overlapping formal/clause checks must not be pooled."
+      }
+    },
+    "legacy_comparison": [
+      {
+        "id": "1.4.1",
+        "native_assembler_exact_normative_text": true,
+        "source_span_count": 2
+      },
+      {
+        "id": "1.4.2",
+        "native_assembler_exact_normative_text": false,
+        "source_span_count": 2
+      },
+      {
+        "id": "1.4.3",
+        "native_assembler_exact_normative_text": true,
+        "source_span_count": 4
+      }
+    ],
+    "table_candidates": [
+      {
+        "id": "block-e66702ee289904396e640ea2",
+        "source_ref": {
+          "scope_id": "page:19",
+          "page_index": 18,
+          "page": 19,
+          "bbox": [
+            54.0,
+            108.66666666666667,
+            542.0,
+            143.33333333333334
+          ]
+        },
+        "rows": 1,
+        "cols": 16,
+        "nonempty_cells": 2
+      },
+      {
+        "id": "block-31adb1c846913e395fa421f8",
+        "source_ref": {
+          "scope_id": "page:20",
+          "page_index": 19,
+          "page": 20,
+          "bbox": [
+            54.0,
+            533.3333333333334,
+            542.0,
+            568.0
+          ]
+        },
+        "rows": 1,
+        "cols": 16,
+        "nonempty_cells": 2
+      }
+    ],
+    "source_order_and_payload_unchanged": true
+  }
+]

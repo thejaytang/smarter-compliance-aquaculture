@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "documents": [
+    {
+      "id": "born-digital-multicolumn",
+      "document_type": "born_digital",
+      "error_types": ["multi_column", "bordered_table", "critical_spans", "explicit_link"],
+      "pdf": "pdfs/born-digital-multicolumn.pdf",
+      "gold": "annotations/born-digital-multicolumn.json",
+      "prediction": "../outputs/gold/born-digital-multicolumn/canonical.json"
+    },
+    {
+      "id": "scanned-critical",
+      "document_type": "scanned",
+      "error_types": ["scanned_text", "critical_spans", "abstention"],
+      "pdf": "pdfs/scanned-critical.pdf",
+      "gold": "annotations/scanned-critical.json",
+      "prediction": "../outputs/gold/scanned-critical/canonical.json"
+    },
+    {
+      "id": "cross-page-content",
+      "document_type": "born_digital_cross_page",
+      "error_types": ["cross_page_paragraph", "cross_page_table", "repeated_header", "partial_row"],
+      "pdf": "pdfs/cross-page-content.pdf",
+      "gold": "annotations/cross-page-content.json",
+      "prediction": "../outputs/gold/cross-page-content/canonical.json"
+    },
+    {
+      "id": "borderless-merged-figure",
+      "document_type": "born_digital_mixed_objects",
+      "error_types": ["borderless_table", "merged_cell", "figure", "inferred_link", "note_role"],
+      "pdf": "pdfs/borderless-merged-figure.pdf",
+      "gold": "annotations/borderless-merged-figure.json",
+      "prediction": "../outputs/gold/borderless-merged-figure/canonical.json"
+    }
+  ]
+}

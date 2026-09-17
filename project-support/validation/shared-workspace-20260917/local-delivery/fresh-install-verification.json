@@ -1,0 +1,13 @@
+{
+  "restore": {
+    "status": "restored",
+    "files": 83,
+    "source_revision": 13
+  },
+  "adapter_sources": 88,
+  "counts": {
+    "sources": 88,
+    "requirements": 0
+  },
+  "tracked_storage_guide_preserved": true
+}

@@ -1,0 +1,2039 @@
+{
+  "parser_version": "material-structural-parser/7",
+  "samples": [
+    {
+      "id": "asc-farm",
+      "status": "partial",
+      "blocks_before": 50,
+      "blocks_after": 49,
+      "joined_rows": 1,
+      "member_fragments": 2,
+      "primitives_exact": true,
+      "experiment_blocks_exact": true,
+      "tables_exact": true,
+      "fixed_dev_diagnostics": {
+        "before": {
+          "segments": [
+            {
+              "id": "farm-p028-header",
+              "matched": true
+            },
+            {
+              "id": "farm-p028-criterion-1.1",
+              "matched": false
+            },
+            {
+              "id": "farm-p028-rationale",
+              "matched": false
+            },
+            {
+              "id": "farm-p028-intent",
+              "matched": false
+            },
+            {
+              "id": "farm-p028-indicators-label",
+              "matched": true
+            },
+            {
+              "id": "farm-p028-r1.1.1-id",
+              "matched": true
+            },
+            {
+              "id": "farm-p028-r1.1.1-text",
+              "matched": true
+            },
+            {
+              "id": "farm-p028-r1.1.2-id",
+              "matched": true
+            },
+            {
+              "id": "farm-p028-r1.1.2-text",
+              "matched": true
+            },
+            {
+              "id": "farm-p028-rationale-footnote-4",
+              "matched": true
+            },
+            {
+              "id": "farm-p028-footer",
+              "matched": false
+            },
+            {
+              "id": "farm-p029-header",
+              "matched": true
+            },
+            {
+              "id": "farm-p029-criterion-1.2",
+              "matched": false
+            },
+            {
+              "id": "farm-p029-rationale",
+              "matched": true
+            },
+            {
+              "id": "farm-p029-intent",
+              "matched": false
+            },
+            {
+              "id": "farm-p029-indicators-label",
+              "matched": true
+            },
+            {
+              "id": "farm-p029-r1.2.1-id",
+              "matched": true
+            },
+            {
+              "id": "farm-p029-r1.2.1-text",
+              "matched": true
+            },
+            {
+              "id": "farm-p029-r1.2.2-id",
+              "matched": true
+            },
+            {
+              "id": "farm-p029-r1.2.2-text",
+              "matched": true
+            },
+            {
+              "id": "farm-p029-r1.2.3-id",
+              "matched": true
+            },
+            {
+              "id": "farm-p029-r1.2.3-text",
+              "matched": true
+            },
+            {
+              "id": "farm-p029-r1.2.4-id",
+              "matched": true
+            },
+            {
+              "id": "farm-p029-r1.2.4-text",
+              "matched": true
+            },
+            {
+              "id": "farm-p029-footer",
+              "matched": false
+            }
+          ],
+          "critical": [
+            {
+              "id": "1.1.1:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.1.2:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.2.1:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.2.2:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.2.2:thresholds:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.2.3:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.2.4:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.2.4:conditions:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.2.4:dates:0",
+              "status": "PASS"
+            }
+          ],
+          "segment_summary": {
+            "matched": 18,
+            "denominator": 25
+          },
+          "critical_summary": {
+            "PASS": 9
+          }
+        },
+        "after": {
+          "segments": [
+            {
+              "id": "farm-p028-header",
+              "matched": true
+            },
+            {
+              "id": "farm-p028-criterion-1.1",
+              "matched": false
+            },
+            {
+              "id": "farm-p028-rationale",
+              "matched": false
+            },
+            {
+              "id": "farm-p028-intent",
+              "matched": false
+            },
+            {
+              "id": "farm-p028-indicators-label",
+              "matched": true
+            },
+            {
+              "id": "farm-p028-r1.1.1-id",
+              "matched": true
+            },
+            {
+              "id": "farm-p028-r1.1.1-text",
+              "matched": true
+            },
+            {
+              "id": "farm-p028-r1.1.2-id",
+              "matched": true
+            },
+            {
+              "id": "farm-p028-r1.1.2-text",
+              "matched": true
+            },
+            {
+              "id": "farm-p028-rationale-footnote-4",
+              "matched": true
+            },
+            {
+              "id": "farm-p028-footer",
+              "matched": false
+            },
+            {
+              "id": "farm-p029-header",
+              "matched": true
+            },
+            {
+              "id": "farm-p029-criterion-1.2",
+              "matched": false
+            },
+            {
+              "id": "farm-p029-rationale",
+              "matched": true
+            },
+            {
+              "id": "farm-p029-intent",
+              "matched": false
+            },
+            {
+              "id": "farm-p029-indicators-label",
+              "matched": true
+            },
+            {
+              "id": "farm-p029-r1.2.1-id",
+              "matched": true
+            },
+            {
+              "id": "farm-p029-r1.2.1-text",
+              "matched": true
+            },
+            {
+              "id": "farm-p029-r1.2.2-id",
+              "matched": true
+            },
+            {
+              "id": "farm-p029-r1.2.2-text",
+              "matched": true
+            },
+            {
+              "id": "farm-p029-r1.2.3-id",
+              "matched": true
+            },
+            {
+              "id": "farm-p029-r1.2.3-text",
+              "matched": true
+            },
+            {
+              "id": "farm-p029-r1.2.4-id",
+              "matched": true
+            },
+            {
+              "id": "farm-p029-r1.2.4-text",
+              "matched": true
+            },
+            {
+              "id": "farm-p029-footer",
+              "matched": false
+            }
+          ],
+          "critical": [
+            {
+              "id": "1.1.1:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.1.2:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.2.1:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.2.2:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.2.2:thresholds:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.2.3:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.2.4:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.2.4:conditions:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.2.4:dates:0",
+              "status": "PASS"
+            }
+          ],
+          "segment_summary": {
+            "matched": 18,
+            "denominator": 25
+          },
+          "critical_summary": {
+            "PASS": 9
+          }
+        }
+      },
+      "lost_previous_segments": [],
+      "lost_previous_critical": []
+    },
+    {
+      "id": "asc-interpretation",
+      "status": "partial",
+      "blocks_before": 117,
+      "blocks_after": 117,
+      "joined_rows": 0,
+      "member_fragments": 0,
+      "primitives_exact": true,
+      "experiment_blocks_exact": true,
+      "tables_exact": true,
+      "fixed_dev_diagnostics": {
+        "before": {
+          "segments": [
+            {
+              "id": "int-p19-criterion",
+              "matched": true
+            },
+            {
+              "id": "int-1.4.1-id",
+              "matched": true
+            },
+            {
+              "id": "int-1.4.1-text",
+              "matched": true
+            },
+            {
+              "id": "int-1.4.2-id",
+              "matched": true
+            },
+            {
+              "id": "int-1.4.2-text",
+              "matched": false
+            },
+            {
+              "id": "int-p19-interpretation",
+              "matched": false
+            },
+            {
+              "id": "int-p20-context",
+              "matched": false
+            },
+            {
+              "id": "int-1.4.3-id",
+              "matched": true
+            },
+            {
+              "id": "int-1.4.3-applicability",
+              "matched": true
+            },
+            {
+              "id": "int-1.4.3-text-p20",
+              "matched": true
+            },
+            {
+              "id": "int-1.4.3-text-p21",
+              "matched": true
+            },
+            {
+              "id": "int-p21-context",
+              "matched": false
+            }
+          ],
+          "critical": [
+            {
+              "id": "1.4.1:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.4.2:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.4.2:modalities:1",
+              "status": "PASS"
+            },
+            {
+              "id": "1.4.2:conditions:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.4.3:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.4.3:conditions:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.4.3:conditions:1",
+              "status": "PASS"
+            }
+          ],
+          "segment_summary": {
+            "matched": 8,
+            "denominator": 12
+          },
+          "critical_summary": {
+            "PASS": 7
+          }
+        },
+        "after": {
+          "segments": [
+            {
+              "id": "int-p19-criterion",
+              "matched": true
+            },
+            {
+              "id": "int-1.4.1-id",
+              "matched": true
+            },
+            {
+              "id": "int-1.4.1-text",
+              "matched": true
+            },
+            {
+              "id": "int-1.4.2-id",
+              "matched": true
+            },
+            {
+              "id": "int-1.4.2-text",
+              "matched": false
+            },
+            {
+              "id": "int-p19-interpretation",
+              "matched": false
+            },
+            {
+              "id": "int-p20-context",
+              "matched": false
+            },
+            {
+              "id": "int-1.4.3-id",
+              "matched": true
+            },
+            {
+              "id": "int-1.4.3-applicability",
+              "matched": true
+            },
+            {
+              "id": "int-1.4.3-text-p20",
+              "matched": true
+            },
+            {
+              "id": "int-1.4.3-text-p21",
+              "matched": true
+            },
+            {
+              "id": "int-p21-context",
+              "matched": false
+            }
+          ],
+          "critical": [
+            {
+              "id": "1.4.1:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.4.2:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.4.2:modalities:1",
+              "status": "PASS"
+            },
+            {
+              "id": "1.4.2:conditions:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.4.3:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.4.3:conditions:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.4.3:conditions:1",
+              "status": "PASS"
+            }
+          ],
+          "segment_summary": {
+            "matched": 8,
+            "denominator": 12
+          },
+          "critical_summary": {
+            "PASS": 7
+          }
+        }
+      },
+      "lost_previous_segments": [],
+      "lost_previous_critical": []
+    },
+    {
+      "id": "asc-audit",
+      "status": "partial",
+      "blocks_before": 14,
+      "blocks_after": 14,
+      "joined_rows": 0,
+      "member_fragments": 0,
+      "primitives_exact": true,
+      "experiment_blocks_exact": true,
+      "tables_exact": true,
+      "fixed_dev_diagnostics": {
+        "before": {
+          "segments": [
+            {
+              "id": "seg-p001-document-metadata",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-principle-1",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-criterion-1-1",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-r111-id",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-r111-metadata",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-r111-client",
+              "matched": false
+            },
+            {
+              "id": "seg-p001-r111-auditor",
+              "matched": false
+            },
+            {
+              "id": "seg-p001-r112-id",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-r112-metadata",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-r112-client",
+              "matched": false
+            },
+            {
+              "id": "seg-p001-r112-auditor",
+              "matched": false
+            },
+            {
+              "id": "seg-p001-r113-id",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-r113-metadata",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-r113-client",
+              "matched": false
+            },
+            {
+              "id": "seg-p001-r113-auditor",
+              "matched": false
+            },
+            {
+              "id": "seg-p001-r114-id",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-r114-metadata",
+              "matched": false
+            },
+            {
+              "id": "seg-p001-r114-client",
+              "matched": false
+            },
+            {
+              "id": "seg-p001-r114-auditor",
+              "matched": false
+            },
+            {
+              "id": "seg-p001-principle-2",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-criterion-2-1",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-footnote-1",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-instruction-c21-methodology",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-r211-option-note",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-r211-id",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-r211-metadata",
+              "matched": false
+            },
+            {
+              "id": "seg-p001-r211-client",
+              "matched": false
+            },
+            {
+              "id": "seg-p001-r211-auditor",
+              "matched": false
+            },
+            {
+              "id": "seg-p001-footnote-2",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-footer",
+              "matched": true
+            },
+            {
+              "id": "seg-p002-footnote-3",
+              "matched": true
+            },
+            {
+              "id": "seg-p002-r212-option-note",
+              "matched": true
+            },
+            {
+              "id": "seg-p002-r212-id",
+              "matched": true
+            },
+            {
+              "id": "seg-p002-r212-metadata",
+              "matched": false
+            },
+            {
+              "id": "seg-p002-r212-client",
+              "matched": false
+            },
+            {
+              "id": "seg-p002-r212-auditor",
+              "matched": false
+            },
+            {
+              "id": "seg-p002-footnote-4",
+              "matched": true
+            },
+            {
+              "id": "seg-p002-footnote-5",
+              "matched": true
+            },
+            {
+              "id": "seg-p002-r213-id",
+              "matched": true
+            },
+            {
+              "id": "seg-p002-r213-metadata",
+              "matched": false
+            },
+            {
+              "id": "seg-p002-r213-client",
+              "matched": false
+            },
+            {
+              "id": "seg-p002-r213-auditor",
+              "matched": false
+            },
+            {
+              "id": "seg-p002-footnote-6",
+              "matched": true
+            },
+            {
+              "id": "seg-p002-r214-id",
+              "matched": true
+            },
+            {
+              "id": "seg-p002-r214-metadata",
+              "matched": false
+            },
+            {
+              "id": "seg-p002-r214-client",
+              "matched": false
+            },
+            {
+              "id": "seg-p002-r214-auditor",
+              "matched": false
+            },
+            {
+              "id": "seg-p002-footnote-7",
+              "matched": true
+            },
+            {
+              "id": "seg-p002-footer",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-criterion-2-2",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-footnote-8",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-r221-instruction-method",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-r221-instruction-exception",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-r221-note-definition",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-r221-id",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-r221-metadata",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-r221-client",
+              "matched": false
+            },
+            {
+              "id": "seg-p003-r221-auditor",
+              "matched": false
+            },
+            {
+              "id": "seg-p003-footnote-9",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-footnote-10",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-footnote-11",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-r222-id",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-r222-metadata",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-r222-client",
+              "matched": false
+            },
+            {
+              "id": "seg-p003-r222-auditor",
+              "matched": false
+            },
+            {
+              "id": "seg-p003-r223-id",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-r223-metadata",
+              "matched": false
+            },
+            {
+              "id": "seg-p003-r223-client",
+              "matched": false
+            },
+            {
+              "id": "seg-p003-r223-auditor",
+              "matched": false
+            },
+            {
+              "id": "seg-p003-footnote-12",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-footnote-13",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-footnote-14",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-footnote-15",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-r224-id",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-r224-metadata",
+              "matched": false
+            },
+            {
+              "id": "seg-p003-r224-client",
+              "matched": false
+            },
+            {
+              "id": "seg-p003-r224-auditor",
+              "matched": false
+            },
+            {
+              "id": "seg-p003-footnote-16",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-footer",
+              "matched": true
+            }
+          ],
+          "critical": [
+            {
+              "id": "1.1.1:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.1.2:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.1.3:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.1.4:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.1:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.1:thresholds:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.1:thresholds:1",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.1:thresholds:2",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.1:conditions:0",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.1.1:conditions:1",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.1.1:exemptions:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.1:exemptions:1",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.1.2:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.2:thresholds:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.2:thresholds:1",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.2:thresholds:2",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.2:thresholds:3",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.2:thresholds:4",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.2:conditions:0",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.1.2:conditions:1",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.1.2:exemptions:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.2:exemptions:1",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.1.3:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.3:thresholds:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.3:thresholds:1",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.3:thresholds:2",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.3:conditions:0",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.1.3:exemptions:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.3:negations:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.4:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.4:thresholds:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.4:exemptions:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.4:dates:0",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.1:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.1:thresholds:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.1:thresholds:1",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.1:thresholds:2",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.1:thresholds:3",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.1:thresholds:4",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.1:conditions:0",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.1:conditions:1",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.1:exceptions:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.1:exceptions:1",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.1:negations:0",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.1:dates:0",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.2:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.2:thresholds:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.2:thresholds:1",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.2:conditions:0",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.3:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.3:thresholds:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.3:thresholds:1",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.3:thresholds:2",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.3:conditions:0",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.3:conditions:1",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.3:exemptions:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.3:dates:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.4:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.4:thresholds:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.4:thresholds:1",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.4:conditions:0",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.4:exemptions:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.4:negations:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.4:dates:0",
+              "status": "UNMEASURED"
+            }
+          ],
+          "segment_summary": {
+            "matched": 48,
+            "denominator": 79
+          },
+          "critical_summary": {
+            "PASS": 42,
+            "UNMEASURED": 22
+          }
+        },
+        "after": {
+          "segments": [
+            {
+              "id": "seg-p001-document-metadata",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-principle-1",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-criterion-1-1",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-r111-id",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-r111-metadata",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-r111-client",
+              "matched": false
+            },
+            {
+              "id": "seg-p001-r111-auditor",
+              "matched": false
+            },
+            {
+              "id": "seg-p001-r112-id",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-r112-metadata",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-r112-client",
+              "matched": false
+            },
+            {
+              "id": "seg-p001-r112-auditor",
+              "matched": false
+            },
+            {
+              "id": "seg-p001-r113-id",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-r113-metadata",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-r113-client",
+              "matched": false
+            },
+            {
+              "id": "seg-p001-r113-auditor",
+              "matched": false
+            },
+            {
+              "id": "seg-p001-r114-id",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-r114-metadata",
+              "matched": false
+            },
+            {
+              "id": "seg-p001-r114-client",
+              "matched": false
+            },
+            {
+              "id": "seg-p001-r114-auditor",
+              "matched": false
+            },
+            {
+              "id": "seg-p001-principle-2",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-criterion-2-1",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-footnote-1",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-instruction-c21-methodology",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-r211-option-note",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-r211-id",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-r211-metadata",
+              "matched": false
+            },
+            {
+              "id": "seg-p001-r211-client",
+              "matched": false
+            },
+            {
+              "id": "seg-p001-r211-auditor",
+              "matched": false
+            },
+            {
+              "id": "seg-p001-footnote-2",
+              "matched": true
+            },
+            {
+              "id": "seg-p001-footer",
+              "matched": true
+            },
+            {
+              "id": "seg-p002-footnote-3",
+              "matched": true
+            },
+            {
+              "id": "seg-p002-r212-option-note",
+              "matched": true
+            },
+            {
+              "id": "seg-p002-r212-id",
+              "matched": true
+            },
+            {
+              "id": "seg-p002-r212-metadata",
+              "matched": false
+            },
+            {
+              "id": "seg-p002-r212-client",
+              "matched": false
+            },
+            {
+              "id": "seg-p002-r212-auditor",
+              "matched": false
+            },
+            {
+              "id": "seg-p002-footnote-4",
+              "matched": true
+            },
+            {
+              "id": "seg-p002-footnote-5",
+              "matched": true
+            },
+            {
+              "id": "seg-p002-r213-id",
+              "matched": true
+            },
+            {
+              "id": "seg-p002-r213-metadata",
+              "matched": false
+            },
+            {
+              "id": "seg-p002-r213-client",
+              "matched": false
+            },
+            {
+              "id": "seg-p002-r213-auditor",
+              "matched": false
+            },
+            {
+              "id": "seg-p002-footnote-6",
+              "matched": true
+            },
+            {
+              "id": "seg-p002-r214-id",
+              "matched": true
+            },
+            {
+              "id": "seg-p002-r214-metadata",
+              "matched": false
+            },
+            {
+              "id": "seg-p002-r214-client",
+              "matched": false
+            },
+            {
+              "id": "seg-p002-r214-auditor",
+              "matched": false
+            },
+            {
+              "id": "seg-p002-footnote-7",
+              "matched": true
+            },
+            {
+              "id": "seg-p002-footer",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-criterion-2-2",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-footnote-8",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-r221-instruction-method",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-r221-instruction-exception",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-r221-note-definition",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-r221-id",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-r221-metadata",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-r221-client",
+              "matched": false
+            },
+            {
+              "id": "seg-p003-r221-auditor",
+              "matched": false
+            },
+            {
+              "id": "seg-p003-footnote-9",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-footnote-10",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-footnote-11",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-r222-id",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-r222-metadata",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-r222-client",
+              "matched": false
+            },
+            {
+              "id": "seg-p003-r222-auditor",
+              "matched": false
+            },
+            {
+              "id": "seg-p003-r223-id",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-r223-metadata",
+              "matched": false
+            },
+            {
+              "id": "seg-p003-r223-client",
+              "matched": false
+            },
+            {
+              "id": "seg-p003-r223-auditor",
+              "matched": false
+            },
+            {
+              "id": "seg-p003-footnote-12",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-footnote-13",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-footnote-14",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-footnote-15",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-r224-id",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-r224-metadata",
+              "matched": false
+            },
+            {
+              "id": "seg-p003-r224-client",
+              "matched": false
+            },
+            {
+              "id": "seg-p003-r224-auditor",
+              "matched": false
+            },
+            {
+              "id": "seg-p003-footnote-16",
+              "matched": true
+            },
+            {
+              "id": "seg-p003-footer",
+              "matched": true
+            }
+          ],
+          "critical": [
+            {
+              "id": "1.1.1:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.1.2:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.1.3:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "1.1.4:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.1:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.1:thresholds:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.1:thresholds:1",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.1:thresholds:2",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.1:conditions:0",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.1.1:conditions:1",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.1.1:exemptions:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.1:exemptions:1",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.1.2:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.2:thresholds:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.2:thresholds:1",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.2:thresholds:2",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.2:thresholds:3",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.2:thresholds:4",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.2:conditions:0",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.1.2:conditions:1",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.1.2:exemptions:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.2:exemptions:1",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.1.3:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.3:thresholds:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.3:thresholds:1",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.3:thresholds:2",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.3:conditions:0",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.1.3:exemptions:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.3:negations:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.4:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.4:thresholds:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.4:exemptions:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.1.4:dates:0",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.1:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.1:thresholds:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.1:thresholds:1",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.1:thresholds:2",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.1:thresholds:3",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.1:thresholds:4",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.1:conditions:0",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.1:conditions:1",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.1:exceptions:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.1:exceptions:1",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.1:negations:0",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.1:dates:0",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.2:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.2:thresholds:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.2:thresholds:1",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.2:conditions:0",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.3:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.3:thresholds:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.3:thresholds:1",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.3:thresholds:2",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.3:conditions:0",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.3:conditions:1",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.3:exemptions:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.3:dates:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.4:modalities:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.4:thresholds:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.4:thresholds:1",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.4:conditions:0",
+              "status": "UNMEASURED"
+            },
+            {
+              "id": "2.2.4:exemptions:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.4:negations:0",
+              "status": "PASS"
+            },
+            {
+              "id": "2.2.4:dates:0",
+              "status": "UNMEASURED"
+            }
+          ],
+          "segment_summary": {
+            "matched": 48,
+            "denominator": 79
+          },
+          "critical_summary": {
+            "PASS": 42,
+            "UNMEASURED": 22
+          }
+        }
+      },
+      "lost_previous_segments": [],
+      "lost_previous_critical": []
+    },
+    {
+      "id": "asc-salmon-cod",
+      "status": "partial",
+      "blocks_before": 16,
+      "blocks_after": 16,
+      "joined_rows": 0,
+      "member_fragments": 0,
+      "primitives_exact": true,
+      "experiment_blocks_exact": true,
+      "tables_exact": true,
+      "fixed_dev_diagnostics": {
+        "before": {
+          "segments": [
+            {
+              "id": "p018-header",
+              "matched": true
+            },
+            {
+              "id": "p018-principle-heading",
+              "matched": true
+            },
+            {
+              "id": "p018-principle-introduction",
+              "matched": true
+            },
+            {
+              "id": "p018-criterion-label",
+              "matched": true
+            },
+            {
+              "id": "p018-criterion-title",
+              "matched": true
+            },
+            {
+              "id": "p018-column-header-indicator",
+              "matched": true
+            },
+            {
+              "id": "p018-column-header-requirement",
+              "matched": true
+            },
+            {
+              "id": "p018-r1-id",
+              "matched": true
+            },
+            {
+              "id": "p018-r1-indicator",
+              "matched": true
+            },
+            {
+              "id": "p018-r1-value",
+              "matched": true
+            },
+            {
+              "id": "p018-r2-id",
+              "matched": true
+            },
+            {
+              "id": "p018-r2-indicator",
+              "matched": true
+            },
+            {
+              "id": "p018-r2-value",
+              "matched": true
+            },
+            {
+              "id": "p018-r3-id",
+              "matched": true
+            },
+            {
+              "id": "p018-r3-indicator",
+              "matched": true
+            },
+            {
+              "id": "p018-r3-value",
+              "matched": true
+            },
+            {
+              "id": "p018-r4-id",
+              "matched": true
+            },
+            {
+              "id": "p018-r4-indicator",
+              "matched": true
+            },
+            {
+              "id": "p018-r4-value",
+              "matched": true
+            },
+            {
+              "id": "p018-rationale",
+              "matched": true
+            },
+            {
+              "id": "p018-footer",
+              "matched": false
+            }
+          ],
+          "critical": [],
+          "segment_summary": {
+            "matched": 20,
+            "denominator": 21
+          },
+          "critical_summary": {}
+        },
+        "after": {
+          "segments": [
+            {
+              "id": "p018-header",
+              "matched": true
+            },
+            {
+              "id": "p018-principle-heading",
+              "matched": true
+            },
+            {
+              "id": "p018-principle-introduction",
+              "matched": true
+            },
+            {
+              "id": "p018-criterion-label",
+              "matched": true
+            },
+            {
+              "id": "p018-criterion-title",
+              "matched": true
+            },
+            {
+              "id": "p018-column-header-indicator",
+              "matched": true
+            },
+            {
+              "id": "p018-column-header-requirement",
+              "matched": true
+            },
+            {
+              "id": "p018-r1-id",
+              "matched": true
+            },
+            {
+              "id": "p018-r1-indicator",
+              "matched": true
+            },
+            {
+              "id": "p018-r1-value",
+              "matched": true
+            },
+            {
+              "id": "p018-r2-id",
+              "matched": true
+            },
+            {
+              "id": "p018-r2-indicator",
+              "matched": true
+            },
+            {
+              "id": "p018-r2-value",
+              "matched": true
+            },
+            {
+              "id": "p018-r3-id",
+              "matched": true
+            },
+            {
+              "id": "p018-r3-indicator",
+              "matched": true
+            },
+            {
+              "id": "p018-r3-value",
+              "matched": true
+            },
+            {
+              "id": "p018-r4-id",
+              "matched": true
+            },
+            {
+              "id": "p018-r4-indicator",
+              "matched": true
+            },
+            {
+              "id": "p018-r4-value",
+              "matched": true
+            },
+            {
+              "id": "p018-rationale",
+              "matched": true
+            },
+            {
+              "id": "p018-footer",
+              "matched": false
+            }
+          ],
+          "critical": [],
+          "segment_summary": {
+            "matched": 20,
+            "denominator": 21
+          },
+          "critical_summary": {}
+        }
+      },
+      "lost_previous_segments": [],
+      "lost_previous_critical": []
+    },
+    {
+      "id": "borderless-merged-figure",
+      "status": "candidate_available",
+      "blocks_before": 16,
+      "blocks_after": 16,
+      "joined_rows": 0,
+      "member_fragments": 0,
+      "primitives_exact": true,
+      "experiment_blocks_exact": true,
+      "tables_exact": true
+    },
+    {
+      "id": "born-digital-multicolumn",
+      "status": "candidate_available",
+      "blocks_before": 9,
+      "blocks_after": 9,
+      "joined_rows": 0,
+      "member_fragments": 0,
+      "primitives_exact": true,
+      "experiment_blocks_exact": true,
+      "tables_exact": true
+    },
+    {
+      "id": "cross-page-content",
+      "status": "candidate_available",
+      "blocks_before": 7,
+      "blocks_after": 7,
+      "joined_rows": 0,
+      "member_fragments": 0,
+      "primitives_exact": true,
+      "experiment_blocks_exact": true,
+      "tables_exact": true
+    },
+    {
+      "id": "scanned-critical",
+      "status": "empty",
+      "blocks_before": 1,
+      "blocks_after": 1,
+      "joined_rows": 0,
+      "member_fragments": 0,
+      "primitives_exact": true,
+      "experiment_blocks_exact": true,
+      "tables_exact": true
+    },
+    {
+      "id": "cs010-reserved",
+      "status": "partial",
+      "blocks_before": 144,
+      "blocks_after": 83,
+      "joined_rows": 23,
+      "member_fragments": 67,
+      "primitives_exact": true,
+      "experiment_blocks_exact": true,
+      "tables_exact": true,
+      "content": {
+        "all": {
+          "denominator": 45,
+          "strict_full": 10,
+          "whitespace_normalized_full": 30,
+          "all_source_fragments_present": 33
+        },
+        "native_assisted": {
+          "denominator": 37,
+          "strict_full": 8,
+          "whitespace_normalized_full": 28,
+          "all_source_fragments_present": 31
+        },
+        "visual_only": {
+          "denominator": 8,
+          "strict_full": 2,
+          "whitespace_normalized_full": 2,
+          "all_source_fragments_present": 2
+        }
+      },
+      "critical": {
+        "matched": 52,
+        "denominator": 54,
+        "association_accuracy": "UNMEASURED"
+      },
+      "structure": {
+        "heading_parent": {
+          "FAIL": 4
+        },
+        "list_member": {
+          "FAIL": 4
+        },
+        "precedes": {
+          "FAIL": 8,
+          "PASS": 17,
+          "UNMEASURED": 2
+        },
+        "under_heading": {
+          "FAIL": 20
+        }
+      },
+      "lost_previous_units": []
+    }
+  ],
+  "tests_exit_code": 0,
+  "preservation": {
+    "system2/src/pdf_extraction/orchestration/material_parser.py": true,
+    "system2/src/pdf_extraction/assemble/material_rows.py": true,
+    "project-support/product-readiness-20260912/quality/manifest.json": true,
+    "project-support/product-readiness-20260912/quality/verification-after-v4/measure_frozen_windows.py": true,
+    "system2/tests/test_material_processor.py": true,
+    "system2/tests/test_material_reader_navigation.py": true,
+    "system2/tests/test_material_reader_resolution.py": true,
+    "system2/tests/test_material_legacy.py": true,
+    "system2/tests/test_material_parser_grid.py": true,
+    "system2/tests/test_material_reader_parser.py": true,
+    "system2/tests/test_material_pdf_rows.py": true,
+    "system2/tests/test_material_provenance.py": true,
+    "system2/tests/test_material_read_performance.py": true,
+    "system2/tests/test_material_service.py": true,
+    "system2/tests/test_material_impact.py": true,
+    "system2/tests/test_material_collaboration.py": true,
+    "system2/tests/test_materials.py": true,
+    "system2/tests/test_material_html_display.py": true,
+    "system2/tests/test_material_parser_quality.py": true,
+    "system2/data/inputs/ASC-STD-001-ASC-Farm-Standard-V1.0.1-Aug-2025.pdf": true,
+    "system2/data/inputs/ASC-INT-001-ASC-Farm-Standard-Interpretation-Manual-V1.0-May-2025.pdf": true,
+    "system2/data/inputs/download-module-691-ASC-Salmon-Audit-Manual_v1.4.pdf": true,
+    "system2/data/inputs/ASC-STD-010-ASC-Salmon-and-Cod-Standard-V1.5-Oct-2025-1.pdf": true,
+    "system2/gold/pdfs/borderless-merged-figure.pdf": true,
+    "system2/gold/pdfs/born-digital-multicolumn.pdf": true,
+    "system2/gold/pdfs/cross-page-content.pdf": true,
+    "system2/gold/pdfs/scanned-critical.pdf": true,
+    "system1/Data/C_Certification_Scheme/CS010-001_GLOBALG.A.P._General_Regulations_-_Rules_for_aquaculture_scope.pdf": true,
+    "system2/gold/requirements/annotations/farm-standard-p028-p029.json": true,
+    "system2/gold/requirements/annotations/interpretation-manual-p019-p021.json": true,
+    "system2/gold/requirements/annotations/audit-manual-p001-p003.json": true,
+    "system2/gold/requirements/annotations/salmon-cod-standard-p018-v2.json": true,
+    "system2/gold/annotations/borderless-merged-figure.json": true,
+    "system2/gold/annotations/born-digital-multicolumn.json": true,
+    "system2/gold/annotations/cross-page-content.json": true,
+    "system2/gold/annotations/scanned-critical.json": true,
+    "project-support/product-readiness-20260912/quality/verification-annotations/cs010-reserved-source-annotation.json": true
+  },
+  "finished_at": "2026-09-13T16:19:01.223028+00:00"
+}

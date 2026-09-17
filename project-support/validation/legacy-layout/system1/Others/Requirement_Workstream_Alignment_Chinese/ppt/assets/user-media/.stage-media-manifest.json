@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "sourceId": "8c84c08ed73c",
+      "relative": "assets/user-media/slide-43.png",
+      "kind": "image",
+      "mime": "image/png"
+    },
+    {
+      "sourceId": "ec3ee5afcdab",
+      "relative": "assets/user-media/codex-clipboard-44762e6d-8d85-4e0e-ba17-013b53446b1a.png",
+      "kind": "image",
+      "mime": "image/png"
+    }
+  ]
+}

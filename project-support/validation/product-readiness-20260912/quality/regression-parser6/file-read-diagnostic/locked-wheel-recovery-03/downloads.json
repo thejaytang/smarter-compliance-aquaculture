@@ -1,0 +1,225 @@
+{
+  "started_at": "2026-09-13T14:24:57.281493+00:00",
+  "uv_lock_sha256": "de4049919fe35a6cedf4fd4188c6e7d8692516e1c2fc0fb551b7901448f6d4cc",
+  "machine": "arm64",
+  "packages": [
+    {
+      "name": "numba",
+      "version": "0.67.0",
+      "wheel": {
+        "url": "https://files.pythonhosted.org/packages/0d/58/915cddba90010348ed0444451132fdde9b000bcbaff1582029b5bf115d11/numba-0.67.0-cp312-cp312-macosx_12_0_arm64.whl",
+        "hash": "sha256:6004d8d5f28d4028687fb2d972d629295b13685943bd2ed5cd8810c3b848e219",
+        "size": 2745050,
+        "upload-time": "2026-08-11T23:03:25.607Z"
+      },
+      "status": "download_verified",
+      "remaining_input_count": 32,
+      "http_status": 200,
+      "download_sha256": "6004d8d5f28d4028687fb2d972d629295b13685943bd2ed5cd8810c3b848e219",
+      "download_size": 2745050,
+      "archive": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/quality/regression-parser6/file-read-diagnostic/locked-wheel-recovery-03/numba-0.67.0-cp312-cp312-macosx_12_0_arm64.whl",
+      "files": [
+        {
+          "path": "numba/_unicodetype_db.h",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/core/callconv.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/core/rewrites/ir_print.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/core/rewrites/registry.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/core/types/abstract.pyi",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/cuda/cudadrv/__init__.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/cuda/cudadrv/rtapi.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/cuda/deviceufunc.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/cuda/simulator/api.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/cuda/simulator/cudadrv/devicearray.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/cuda/simulator_init.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/cuda/tests/cudapy/test_overload.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/cuda/tests/cudapy/test_sm.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/cuda/tests/cudapy/test_vectorize.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/cuda/tests/cudasim/test_cudasim_issues.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/cuda/tests/nocuda/test_nvvm.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/np/numpy_support.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/stencils/__init__.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/testing/loader.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/tests/orphaned_semaphore_usecase.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/tests/test_conditions_as_predicates.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/tests/test_debug.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/tests/test_dictobject.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/tests/test_import.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/tests/test_lists.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/tests/test_mangling.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/tests/test_mathlib.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/tests/test_multi3.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/tests/test_remove_dead.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/tests/test_setobject.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/tests/test_stencils.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "numba/tests/test_unicode.py",
+          "status": "prepared_exact_RECORD"
+        }
+      ]
+    },
+    {
+      "name": "anyio",
+      "version": "4.14.2",
+      "wheel": {
+        "url": "https://files.pythonhosted.org/packages/da/35/f2287558c17e29fafc8ef3daf819bb9834061cfa43bff8014f7df7f63bdc/anyio-4.14.2-py3-none-any.whl",
+        "hash": "sha256:9f505dda5ac9f0c8309b5e8bd445a8c2bf7246f3ce950121e45ea15bc41d1494",
+        "size": 125813,
+        "upload-time": "2026-07-12T20:29:05.763Z"
+      },
+      "status": "download_verified",
+      "remaining_input_count": 4,
+      "http_status": 200,
+      "download_sha256": "9f505dda5ac9f0c8309b5e8bd445a8c2bf7246f3ce950121e45ea15bc41d1494",
+      "download_size": 125813,
+      "archive": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/quality/regression-parser6/file-read-diagnostic/locked-wheel-recovery-03/anyio-4.14.2-py3-none-any.whl",
+      "files": [
+        {
+          "path": "anyio/_backends/_asyncio.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "anyio/streams/__init__.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "anyio/streams/tls.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "anyio/to_process.py",
+          "status": "prepared_exact_RECORD"
+        }
+      ]
+    },
+    {
+      "name": "img2table",
+      "version": "1.4.0",
+      "wheel": {
+        "url": "https://files.pythonhosted.org/packages/de/9c/98fc3e8b40261bcba1f3c32bad10af557b408f3a39616ccafb7ea2006604/img2table-1.4.0-py3-none-any.whl",
+        "hash": "sha256:1a1e27b4e8a92aa7bb1eafeaafe41db9106394a124f82c92db1fb600d67331d5",
+        "size": 92062,
+        "upload-time": "2024-11-11T19:07:29.598Z"
+      },
+      "status": "download_verified",
+      "remaining_input_count": 5,
+      "http_status": 200,
+      "download_sha256": "1a1e27b4e8a92aa7bb1eafeaafe41db9106394a124f82c92db1fb600d67331d5",
+      "download_size": 92062,
+      "archive": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/product-readiness-20260912/quality/regression-parser6/file-read-diagnostic/locked-wheel-recovery-03/img2table-1.4.0-py3-none-any.whl",
+      "files": [
+        {
+          "path": "img2table/tables/objects/cell.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "img2table/tables/objects/line.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "img2table/tables/objects/row.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "img2table/tables/objects/table.py",
+          "status": "prepared_exact_RECORD"
+        },
+        {
+          "path": "img2table/tables/processing/borderless_tables/layout/image_elements.py",
+          "status": "prepared_exact_RECORD"
+        }
+      ]
+    }
+  ]
+}

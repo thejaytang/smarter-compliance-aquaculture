@@ -1,0 +1,3331 @@
+{
+  "schema_version": "2.0",
+  "sample_id": "audit-manual-p011-p012-round4-holdout",
+  "source": {
+    "file_name": "download-module-691-ASC-Salmon-Audit-Manual_v1.4.pdf",
+    "sha256": "911b716d6e4f9aacc1e0c7999dbcf1e009f08c3b322269c748d867006521e76d",
+    "language": "en",
+    "document_family": "audit_manual",
+    "page_count": 30
+  },
+  "sample": {
+    "round_id": "goal04-round4",
+    "split": "holdout",
+    "page_numbers": [
+      11,
+      12
+    ],
+    "selection_rationale": "Untouched audit-matrix window containing seven formal Requirement rows, independent client/CAB action columns, Yes and Not required/N/A values, alternative formulas joined by or, multiple explicit thresholds, inherited and direct footnotes, shared and indicator-specific instructions, and a row beginning without a repeated page header."
+  },
+  "annotation": {
+    "status": "frozen",
+    "frozen_at": "2026-08-28",
+    "verification": [
+      "visual_page",
+      "native_text"
+    ],
+    "notes": [
+      "Frozen before any parser prediction or current output for pages 11-12 was inspected.",
+      "Formal Requirement cells, client actions, CAB actions, shared instructions and footnotes were transcribed from the visible matrix and cross-checked against native text.",
+      "A dash in a client-action cell is retained only as an empty visual placeholder and is not annotated as a client action."
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "p11-footer",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 54.0,
+        "y0": 757.3,
+        "x1": 556.0,
+        "y1": 768.7
+      },
+      "role": "footer",
+      "object_kind": "text_block",
+      "segment_order": 0,
+      "source_text": "Audit Manual - ASC Salmon Standard v1.4 Oct 2022\nCopyright (c) Aquaculture Stewardship Council. All rights reserved by Aquaculture Stewardship Council\nPage 11 of 30"
+    },
+    {
+      "segment_id": "p11-r3.4.4-id",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 60.0,
+        "y0": 222.0,
+        "x1": 69.3,
+        "y1": 226.7
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 1,
+      "source_text": "3.4.4"
+    },
+    {
+      "segment_id": "p11-r3.4.4-indicator",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 80.0,
+        "y0": 188.0,
+        "x1": 188.0,
+        "y1": 236.0
+      },
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 2,
+      "source_text": "Evidence of escape prevention planning and related employee training, including: net strength testing; appropriate net mesh size; net traceability; system robustness; predator management; record keeping and reporting of risk events (e.g., holes, infrastructure issues, handling errors, reporting and follow up of escape events); and worker training on escape prevention and counting technologies"
+    },
+    {
+      "segment_id": "p11-r3.4.4-value",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 80.0,
+        "y0": 244.0,
+        "x1": 116.0,
+        "y1": 248.7
+      },
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 3,
+      "source_text": "Yes"
+    },
+    {
+      "segment_id": "p11-r3.4.4-applicability",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 80.0,
+        "y0": 256.7,
+        "x1": 112.0,
+        "y1": 261.3
+      },
+      "role": "applicability",
+      "object_kind": "table_cell",
+      "segment_order": 4,
+      "source_text": "All"
+    },
+    {
+      "segment_id": "p11-r3.4.4-client-a",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 122.7,
+        "x1": 372.7,
+        "y1": 140.0
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 5,
+      "source_text": "a. Prepare an Escape Prevention Plan and submit it to the CAB before the first audit. This plan may be part of a more comprehensive farm planning document as long as it addresses all required elements of Indicator 3.4.4."
+    },
+    {
+      "segment_id": "p11-r3.4.4-client-b",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 152.0,
+        "x1": 359.3,
+        "y1": 218.7
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 6,
+      "source_text": "b. If the farm operates an open (net pen) system, ensure the plan (3.4.4a) covers the following areas: net strength testing; appropriate net mesh size; net traceability; system robustness; predator management; record keeping; reporting risk events (e.g., holes, infrastructure issues, handling errors); planning of staff training to cover all of the above areas; and planning of staff training on escape prevention and counting technologies."
+    },
+    {
+      "segment_id": "p11-r3.4.4-client-c",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 234.0,
+        "x1": 370.7,
+        "y1": 276.0
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 7,
+      "source_text": "c. If the farm operates a closed system, ensure the plan (3.4.4a) covers the following areas: system robustness; predator management; record keeping; reporting risk events (e.g., holes, infrastructure issues, handling errors); planning of staff training to cover all of the above areas; and planning of staff training on escape prevention and counting technologies."
+    },
+    {
+      "segment_id": "p11-r3.4.4-client-d",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 290.7,
+        "x1": 278.7,
+        "y1": 295.3
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 8,
+      "source_text": "d. Maintain records as specified in the plan."
+    },
+    {
+      "segment_id": "p11-r3.4.4-client-e",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 306.7,
+        "x1": 324.0,
+        "y1": 311.3
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 9,
+      "source_text": "e. Train staff on escape prevention planning as per the farm's plan."
+    },
+    {
+      "segment_id": "p11-r3.4.4-cab-a",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.7,
+        "y0": 128.7,
+        "x1": 551.3,
+        "y1": 133.3
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 10,
+      "source_text": "A. Obtain and review the farm's escape prevention plan prior to scheduling the first audit."
+    },
+    {
+      "segment_id": "p11-r3.4.4-cab-b",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.7,
+        "y0": 180.0,
+        "x1": 552.7,
+        "y1": 190.7
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 11,
+      "source_text": "B. Confirm the farm's Escape Prevention Plan contains all required elements for open (net pen) systems as applicable."
+    },
+    {
+      "segment_id": "p11-r3.4.4-cab-c",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.7,
+        "y0": 249.3,
+        "x1": 546.0,
+        "y1": 260.7
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 12,
+      "source_text": "C. Confirm the farm's Escape Prevention Plan contains all required elements for closed systems as applicable."
+    },
+    {
+      "segment_id": "p11-r3.4.4-cab-d",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.7,
+        "y0": 290.7,
+        "x1": 514.7,
+        "y1": 295.3
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 13,
+      "source_text": "D. Review documentary evidence showing implementation of the plan."
+    },
+    {
+      "segment_id": "p11-r3.4.4-cab-e",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.7,
+        "y0": 303.3,
+        "x1": 557.3,
+        "y1": 314.7
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 14,
+      "source_text": "E. Review records (i.e., attendance records, meeting notes) to confirm that farm staff attend training on escape prevention planning."
+    },
+    {
+      "segment_id": "p11-r3.4.4-cab-f",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.7,
+        "y0": 322.7,
+        "x1": 506.7,
+        "y1": 327.3
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 15,
+      "source_text": "F. Interview farm workers to confirm that the plan is implemented."
+    },
+    {
+      "segment_id": "p11-principle-4",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 52.0,
+        "y0": 334.0,
+        "x1": 243.3,
+        "y1": 338.7
+      },
+      "role": "criterion_heading",
+      "object_kind": "text_block",
+      "segment_order": 16,
+      "source_text": "PRINCIPLE 4: USE RESOURCES IN AN ENVIRONMENTALLY EFFICIENT AND RESPONSIBLE MANNER"
+    },
+    {
+      "segment_id": "p11-criterion-4.1",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 52.0,
+        "y0": 340.0,
+        "x1": 148.7,
+        "y1": 344.7
+      },
+      "role": "criterion_heading",
+      "object_kind": "text_block",
+      "segment_order": 17,
+      "source_text": "Criterion 4.1 Traceability of raw materials in feed"
+    },
+    {
+      "segment_id": "p11-audit-table-header",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 52.0,
+        "y0": 346.7,
+        "x1": 558.0,
+        "y1": 351.3
+      },
+      "role": "other",
+      "object_kind": "table_cell",
+      "segment_order": 18,
+      "source_text": "Compliance Criteria (Required Client Actions): Auditor Evaluation (Required CAB Actions):"
+    },
+    {
+      "segment_id": "p11-shared-client-instruction-4.1.1-4.4.2",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 52.0,
+        "y0": 364.7,
+        "x1": 558.0,
+        "y1": 494.7
+      },
+      "role": "other",
+      "object_kind": "text_block",
+      "segment_order": 19,
+      "source_text": "Instruction to Clients for Indicators 4.1.1 through 4.4.2 - Sourcing of Responsibly Produced Salmon Feeds\nFarms must show that all feeds used by the farm are produced in compliance with the requirements of Indicators 4.1.1 through 4.4.4. To do so, farms must obtain documentary evidence that the feed producers (see note 1) are audited at regular intervals by an independent auditing firm or a conformity assessment body against a recognized standard which substantially incorporate requirements for traceability. Acceptable certification schemes include Global GAP or other schemes that have been acknowledged by the ASC (see 4.1.1c below). Results from these audits shall demonstrate that feed producers have robust information systems and information handling processes to allow the feed producers to be able to bring forward accurate information about their production and supply chains. Declarations from the feed producer that are provided to the farm to demonstrate compliance with these indicators must be supported by the audits. Farms must also show that all of their feed producers are duly informed of the requirements of the ASC Salmon Standard relating to sourcing of responsibly produced salmon feed (see 4.1.1b below).\nIn addition to the above, farms must also show that their feed suppliers comply with the more detailed requirements for traceability and ingredient sourcing that are specified under indicators 4.1.1 through 4.4.2. The ASC Salmon Standard allows farms to use one of two different methods to demonstrate compliance of feed producers:\nMethod #1: Farms may choose to source feed from feed producers who used only those ingredients allowed under the ASC Salmon Standards during the production of a given batch of feed. For example, the farm may request its feed supplier to produce a batch of feed according to farm specifications. Audits of the feed producer will independently verify that manufacturing processes are in compliance with ASC requirements.\nMethod #2: Farms may choose to source feed from feed producers who demonstrate compliance using a \"mass-balance\" method. In this method, feed producers show that the balance of all ingredients (both amount and type) used during a given feed production period meets ASC requirements. However, mixing of ingredients into the general silos and production lines is allowed during manufacturing. Audits of the feed producer will independently verify that manufacturing processes are in compliance with ASC requirements. The mass balance method can be applied, for example, to integrated feed production companies that handle all steps of feed manufacturing (purchasing of raw materials, processing to finished feed, and sales) under the management of a single legal entity.\nNote 1: The term \"feed producer\" is used here to identify the organization that produces the fish feed (i.e., it is the \"feed manufacturer\"). In most cases, the organization supplying feed to a farm (i.e., the feed supplier) will be the same organization that produced the feed, but there may be instances where feed suppliers are not directly responsible for feed production. Regardless of whether the farm sources feeds directly from a feed producer or indirectly through an intermediary organization, it remains the farm's obligation to show evidence that all feeds used are in compliance with requirements."
+    },
+    {
+      "segment_id": "p11-r4.1.1-id",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 60.0,
+        "y0": 580.0,
+        "x1": 69.3,
+        "y1": 584.7
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 20,
+      "source_text": "4.1.1"
+    },
+    {
+      "segment_id": "p11-r4.1.1-indicator",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 80.0,
+        "y0": 560.7,
+        "x1": 191.3,
+        "y1": 578.0
+      },
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 21,
+      "source_text": "Evidence of traceability, demonstrated by the feed producer, of feed ingredients that make up more than 1% of the feed [50]."
+    },
+    {
+      "segment_id": "p11-r4.1.1-value",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 80.0,
+        "y0": 586.0,
+        "x1": 116.0,
+        "y1": 590.7
+      },
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 22,
+      "source_text": "Yes"
+    },
+    {
+      "segment_id": "p11-r4.1.1-applicability",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 80.0,
+        "y0": 598.7,
+        "x1": 113.3,
+        "y1": 603.3
+      },
+      "role": "applicability",
+      "object_kind": "table_cell",
+      "segment_order": 23,
+      "source_text": "All"
+    },
+    {
+      "segment_id": "p11-r4.1.1-client-a",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 512.7,
+        "x1": 352.7,
+        "y1": 523.3
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 24,
+      "source_text": "a. Maintain detailed records of all feed suppliers and purchases including contact information and purchase and delivery records."
+    },
+    {
+      "segment_id": "p11-r4.1.1-client-b",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 533.3,
+        "x1": 364.7,
+        "y1": 544.0
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 25,
+      "source_text": "b. Inform each feed supplier in writing of ASC requirements pertaining to production of salmon feeds and send them a copy of the ASC Salmon Standard."
+    },
+    {
+      "segment_id": "p11-r4.1.1-client-c",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 555.3,
+        "x1": 368.7,
+        "y1": 572.0
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 26,
+      "source_text": "c. For each feed producer used by the farm, confirm that an audit of the producer was recently done by an audit firm or CAB against an ASC-acknowledged certification scheme. Obtain a copy of the most recent audit report for each feed producer."
+    },
+    {
+      "segment_id": "p11-r4.1.1-client-d",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 587.3,
+        "x1": 369.3,
+        "y1": 598.7
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 27,
+      "source_text": "d. For each feed producer, determine whether the farm will use method #1 or method #2 (see Instructions above) to show compliance of feed producers. Inform the CAB."
+    },
+    {
+      "segment_id": "p11-r4.1.1-client-e",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 613.3,
+        "x1": 374.7,
+        "y1": 630.7
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 28,
+      "source_text": "e. Obtain declaration from feed supplier(s) stating that the company can assure traceability of all feed ingredients that make up more than 1% of the feed to a level of detail required by the ASC Salmon Standard [50]."
+    },
+    {
+      "segment_id": "p11-r4.1.1-cab-a",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.7,
+        "y0": 512.7,
+        "x1": 552.7,
+        "y1": 523.3
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 29,
+      "source_text": "A. Review feed records for completeness and confirm the number of feed suppliers to the client."
+    },
+    {
+      "segment_id": "p11-r4.1.1-cab-b",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.7,
+        "y0": 533.3,
+        "x1": 543.3,
+        "y1": 544.0
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 30,
+      "source_text": "B. Review farm records to verify that the farm has informed all of its feed suppliers of relevant ASC requirements for feed production."
+    },
+    {
+      "segment_id": "p11-r4.1.1-cab-c",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.7,
+        "y0": 555.3,
+        "x1": 552.7,
+        "y1": 572.0
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 31,
+      "source_text": "C. Verify that the farm obtains current audit reports from all relevant feed producers, that these audits were performed by an audit firm or CAB against an ASC-acknowledged certification scheme, and that audit results demonstrate compliance with requirements."
+    },
+    {
+      "segment_id": "p11-r4.1.1-cab-d",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.7,
+        "y0": 587.3,
+        "x1": 544.7,
+        "y1": 598.7
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 32,
+      "source_text": "D. Review which method the farm will use and confirm that independent audit results (4.1.1c) show compliance of feed producers."
+    },
+    {
+      "segment_id": "p11-r4.1.1-cab-e",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.7,
+        "y0": 616.7,
+        "x1": 553.3,
+        "y1": 628.0
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 33,
+      "source_text": "E. Review declaration from each feed supplier to confirm the company assures traceability to the level of detail required by Standard."
+    },
+    {
+      "segment_id": "p11-r4.1.1-cab-f",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.7,
+        "y0": 642.0,
+        "x1": 558.0,
+        "y1": 652.7
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 34,
+      "source_text": "F. Cross-check the declarations against results from audits of feed suppliers (4.1.1c) to verify evidence of required levels of traceability."
+    },
+    {
+      "segment_id": "p11-footnote-50",
+      "page_number": 11,
+      "page_index": 10,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 80.0,
+        "y0": 660.7,
+        "x1": 546.7,
+        "y1": 672.0
+      },
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 35,
+      "source_text": "[50] Traceability shall be at a level of detail that permits the feed producer to demonstrate compliance with the standards in this document (i.e., marine raw ingredients must be traced back to the fishery, soy to the region grown, etc.). Feed manufacturers will need to supply the farm with third-party documentation of the ingredients covered under this standard."
+    },
+    {
+      "segment_id": "p12-footer",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 54.0,
+        "y0": 757.3,
+        "x1": 556.0,
+        "y1": 768.7
+      },
+      "role": "footer",
+      "object_kind": "text_block",
+      "segment_order": 36,
+      "source_text": "Audit Manual - ASC Salmon Standard v1.4 Oct 2022\nCopyright (c) Aquaculture Stewardship Council. All rights reserved by Aquaculture Stewardship Council\nPage 12 of 30"
+    },
+    {
+      "segment_id": "p12-criterion-4.2",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 52.0,
+        "y0": 74.7,
+        "x1": 132.0,
+        "y1": 79.3
+      },
+      "role": "criterion_heading",
+      "object_kind": "text_block",
+      "segment_order": 37,
+      "source_text": "Criterion 4.2 Use of wild fish for feed [51]"
+    },
+    {
+      "segment_id": "p12-audit-table-header-4.2",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 52.0,
+        "y0": 81.3,
+        "x1": 558.0,
+        "y1": 86.0
+      },
+      "role": "other",
+      "object_kind": "table_cell",
+      "segment_order": 38,
+      "source_text": "Compliance Criteria (Required Client Actions): Auditor Evaluation (Required CAB Actions):"
+    },
+    {
+      "segment_id": "p12-footnote-51",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 80.0,
+        "y0": 88.7,
+        "x1": 218.7,
+        "y1": 93.3
+      },
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 39,
+      "source_text": "[51] See Appendix VI for transparency requirements for 4.2.1 and 4.2.2."
+    },
+    {
+      "segment_id": "p12-r4.2.1-client-instruction",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 105.3,
+        "x1": 556.0,
+        "y1": 147.3
+      },
+      "role": "other",
+      "object_kind": "text_block",
+      "segment_order": 40,
+      "source_text": "Instruction to Clients for Indicator 4.2.1 - Calculation of FFDRm\nFarms must calculate the Fishmeal Forage Fish Dependency Ration (FFDRm) according to formula presented in Appendix IV-1 using data from the prior production cycle. Farms must also show that they have maintained sufficient information in order to make an accurate calculation of FFDRm as outlined below. For first audits, farms may be exempted from compliance with Indicator 4.2.1 for the prior production cycle (i.e., if the FFDRm of the most recent crop was > 1.2) if the farm can satisfactorily demonstrate to the auditor that:\nthe client understands how to accurately calculate FFDRm;\nthe client maintains all information needed to accurately calculate FFDRm (i.e., all feed specs for > 6 months) for the current production cycle; and\nthe client can show how feed used for the current production cycle will ensure that the farm will meet requirements at harvest (i.e., FFDRm < 1.2)."
+    },
+    {
+      "segment_id": "p12-r4.2.1-id",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 60.0,
+        "y0": 187.3,
+        "x1": 69.3,
+        "y1": 192.0
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 41,
+      "source_text": "4.2.1"
+    },
+    {
+      "segment_id": "p12-r4.2.1-indicator",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 80.0,
+        "y0": 168.7,
+        "x1": 180.0,
+        "y1": 185.3
+      },
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 42,
+      "source_text": "Fishmeal Forage Fish Dependency Ratio (FFDRm) for grow-out (calculated using formulas in Appendix IV-1)"
+    },
+    {
+      "segment_id": "p12-r4.2.1-value",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 80.0,
+        "y0": 193.3,
+        "x1": 119.3,
+        "y1": 198.0
+      },
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 43,
+      "source_text": "< 1.2"
+    },
+    {
+      "segment_id": "p12-r4.2.1-applicability",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 80.0,
+        "y0": 206.0,
+        "x1": 113.3,
+        "y1": 210.7
+      },
+      "role": "applicability",
+      "object_kind": "table_cell",
+      "segment_order": 44,
+      "source_text": "All"
+    },
+    {
+      "segment_id": "p12-r4.2.1-client-a",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 164.0,
+        "x1": 337.3,
+        "y1": 199.3
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 45,
+      "source_text": "a. Maintain a detailed inventory of the feed used including: Quantities used of each formulation (kg); Percentage of fishmeal in each formulation used; Source (fishery) of fishmeal in each formulation used; Percentage of fishmeal in each formulation derived from trimmings; and Supporting documentation and signed declaration from feed supplier."
+    },
+    {
+      "segment_id": "p12-r4.2.1-client-b",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 210.0,
+        "x1": 370.7,
+        "y1": 221.3
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 46,
+      "source_text": "b. For FFDRm calculation, exclude fishmeal derived from rendering of seafood by-products (e.g., the \"trimmings\") from a human consumption fishery."
+    },
+    {
+      "segment_id": "p12-r4.2.1-client-c",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 234.0,
+        "x1": 376.0,
+        "y1": 238.7
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 47,
+      "source_text": "c. Calculate eFCR using formula in Appendix IV-1 (use this calculation also in 4.2.2 option #1)."
+    },
+    {
+      "segment_id": "p12-r4.2.1-client-d",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 254.7,
+        "x1": 295.3,
+        "y1": 259.3
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 48,
+      "source_text": "d. Calculate FFDRm using formulas in Appendix IV-1."
+    },
+    {
+      "segment_id": "p12-r4.2.1-client-e",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 273.3,
+        "x1": 331.3,
+        "y1": 278.0
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 49,
+      "source_text": "e. Submit FFDRm to ASC as per Appendix VI for each production cycle."
+    },
+    {
+      "segment_id": "p12-r4.2.1-cab-a",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.7,
+        "y0": 176.0,
+        "x1": 554.0,
+        "y1": 187.3
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 50,
+      "source_text": "A. Verify completeness of records and that values are stated in a declaration from the feed manufacturer."
+    },
+    {
+      "segment_id": "p12-r4.2.1-cab-b",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.7,
+        "y0": 210.0,
+        "x1": 550.7,
+        "y1": 221.3
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 51,
+      "source_text": "B. Verify that the client excludes from the FFDRm calculation any fishmeal rendered from seafood by-products."
+    },
+    {
+      "segment_id": "p12-r4.2.1-cab-c",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.7,
+        "y0": 234.0,
+        "x1": 474.0,
+        "y1": 238.7
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 52,
+      "source_text": "C. Verify that eFCR calculation was done correctly."
+    },
+    {
+      "segment_id": "p12-r4.2.1-cab-d",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.7,
+        "y0": 252.0,
+        "x1": 554.7,
+        "y1": 262.7
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 53,
+      "source_text": "D. Verify that FFDRm calculations were done correctly and confirm the value complies with the requirement."
+    },
+    {
+      "segment_id": "p12-r4.2.1-cab-e",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.7,
+        "y0": 273.3,
+        "x1": 503.3,
+        "y1": 278.0
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 54,
+      "source_text": "E. Confirm that client has submitted FFDRm to ASC (Appendix VI)."
+    },
+    {
+      "segment_id": "p12-r4.2.2-option-note",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 288.0,
+        "x1": 553.3,
+        "y1": 299.3
+      },
+      "role": "other",
+      "object_kind": "text_block",
+      "segment_order": 55,
+      "source_text": "Note: Under Indicator 4.2.2, farms can choose to calculate FFDRo (Option #1) or EPA & DHA (Option #2). Farms do not have to demonstrate that they meet both threshold values. Client shall inform the CAB which option they will use."
+    },
+    {
+      "segment_id": "p12-r4.2.2-id",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 60.0,
+        "y0": 356.0,
+        "x1": 69.3,
+        "y1": 360.7
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 56,
+      "source_text": "4.2.2"
+    },
+    {
+      "segment_id": "p12-r4.2.2-indicator",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 80.0,
+        "y0": 321.3,
+        "x1": 192.7,
+        "y1": 357.3
+      },
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 57,
+      "source_text": "Fish Oil Forage Fish Dependency Ratio (FFDRo) for grow-out (calculated using formulas in Appendix IV-1), or, Maximum amount of EPA and DHA from direct marine sources [52] (calculated according to Appendix IV-2)"
+    },
+    {
+      "segment_id": "p12-r4.2.2-value",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 80.0,
+        "y0": 365.3,
+        "x1": 134.7,
+        "y1": 382.0
+      },
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 58,
+      "source_text": "FFDRo < 2.52\nor\n(EPA + DHA) < 30 g/kg feed"
+    },
+    {
+      "segment_id": "p12-r4.2.2-applicability",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 80.0,
+        "y0": 390.0,
+        "x1": 113.3,
+        "y1": 394.7
+      },
+      "role": "applicability",
+      "object_kind": "table_cell",
+      "segment_order": 59,
+      "source_text": "All"
+    },
+    {
+      "segment_id": "p12-r4.2.2-client-a",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 310.7,
+        "x1": 331.3,
+        "y1": 315.3
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 60,
+      "source_text": "a. Maintain a detailed inventory of the feed used as specified in 4.2.1a."
+    },
+    {
+      "segment_id": "p12-r4.2.2-client-b",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 326.7,
+        "x1": 363.3,
+        "y1": 344.0
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 61,
+      "source_text": "b. For FFDRo and EPA+DHA calculations (either option #1 or option #2), exclude fish oil derived from rendering of seafood by-products (e.g., the \"trimmings\" from a human consumption fishery."
+    },
+    {
+      "segment_id": "p12-r4.2.2-client-c",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 355.3,
+        "x1": 353.3,
+        "y1": 366.0
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 62,
+      "source_text": "c. Inform the CAB whether the farm chose option #1 or option #2 to demonstrate compliance with the requirements of the Standard."
+    },
+    {
+      "segment_id": "p12-r4.2.2-client-d",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 376.0,
+        "x1": 360.0,
+        "y1": 386.7
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 63,
+      "source_text": "d. For option #1, calculate FFDRo using formulas in Appendix IV-1 and using the eFCR calculated under 4.2.1c."
+    },
+    {
+      "segment_id": "p12-r4.2.2-client-e",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 399.3,
+        "x1": 351.3,
+        "y1": 404.0
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 64,
+      "source_text": "e. For option #2, calculate amount of EPA + DHA using formulas in Appendix IV-2."
+    },
+    {
+      "segment_id": "p12-r4.2.2-client-f",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 420.7,
+        "x1": 356.0,
+        "y1": 425.3
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 65,
+      "source_text": "f. Submit FFDRo or EPA & DHA to ASC as per Appendix VI for each production cycle."
+    },
+    {
+      "segment_id": "p12-r4.2.2-cab-a",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.7,
+        "y0": 310.7,
+        "x1": 476.7,
+        "y1": 315.3
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 66,
+      "source_text": "A. Verify completeness of feed records as in 4.2.1A."
+    },
+    {
+      "segment_id": "p12-r4.2.2-cab-b",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.7,
+        "y0": 330.0,
+        "x1": 554.0,
+        "y1": 340.7
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 67,
+      "source_text": "B. Verify client excludes fish oil rendered from by-products from the FFDRo or (EPA + DHA) calculation."
+    },
+    {
+      "segment_id": "p12-r4.2.2-cab-c",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.7,
+        "y0": 358.0,
+        "x1": 454.7,
+        "y1": 362.7
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 68,
+      "source_text": "C. Record which option the client chose."
+    },
+    {
+      "segment_id": "p12-r4.2.2-cab-d",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.7,
+        "y0": 376.0,
+        "x1": 553.3,
+        "y1": 386.7
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 69,
+      "source_text": "D. Verify that FFDRo calculations were done correctly and confirm the value complies with the standard."
+    },
+    {
+      "segment_id": "p12-r4.2.2-cab-e",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.7,
+        "y0": 396.7,
+        "x1": 552.0,
+        "y1": 407.3
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 70,
+      "source_text": "E. Verify that (EPA+DHA) calculations were done correctly and confirm the value complies with the standard."
+    },
+    {
+      "segment_id": "p12-r4.2.2-cab-f",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.7,
+        "y0": 420.7,
+        "x1": 529.3,
+        "y1": 425.3
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 71,
+      "source_text": "F. Confirm that client has submitted FFDRo or EPA & DHA to ASC (Appendix VI)."
+    },
+    {
+      "segment_id": "p12-footnote-52",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 80.0,
+        "y0": 438.0,
+        "x1": 556.0,
+        "y1": 461.3
+      },
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 72,
+      "source_text": "[52] Calculation excludes DHA and EPA derived from fisheries by-products and trimmings. Trimmings are defined as by-products when fish are processed for human consumption or if whole fish is rejected for use of human consumption because the quality at the time of landing does not meet official regulations with regard to fish suitable for human consumption. Fishmeal and fish oil that are produced from trimmings can be excluded from the calculation as long as the origin of the trimmings is not any species that are classified as critically endangered, endangered or vulnerable in the IUCN Red List of Threatened Species (http://www.iucnredlist.org)."
+    },
+    {
+      "segment_id": "p12-criterion-4.3",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 52.0,
+        "y0": 466.7,
+        "x1": 138.7,
+        "y1": 471.3
+      },
+      "role": "criterion_heading",
+      "object_kind": "text_block",
+      "segment_order": 73,
+      "source_text": "Criterion 4.3 Source of marine raw materials"
+    },
+    {
+      "segment_id": "p12-audit-table-header-4.3",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 52.0,
+        "y0": 473.3,
+        "x1": 558.0,
+        "y1": 478.0
+      },
+      "role": "other",
+      "object_kind": "table_cell",
+      "segment_order": 74,
+      "source_text": "Compliance Criteria (Required Client Actions): Auditor Evaluation (Required CAB Actions):"
+    },
+    {
+      "segment_id": "p12-r4.3.1-id",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 60.0,
+        "y0": 510.0,
+        "x1": 69.3,
+        "y1": 514.7
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 75,
+      "source_text": "4.3.1"
+    },
+    {
+      "segment_id": "p12-r4.3.1-indicator",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 80.0,
+        "y0": 485.3,
+        "x1": 193.3,
+        "y1": 514.7
+      },
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 76,
+      "source_text": "Timeframe for all fishmeal and fish oil used in feed to come from fisheries [53] certified under a scheme that is an ISEAL member [54] and has guidelines that specifically promote responsible environmental management of small pelagic fisheries"
+    },
+    {
+      "segment_id": "p12-r4.3.1-value",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 80.0,
+        "y0": 522.7,
+        "x1": 134.7,
+        "y1": 527.3
+      },
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 77,
+      "source_text": "Not required"
+    },
+    {
+      "segment_id": "p12-r4.3.1-applicability",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 80.0,
+        "y0": 535.3,
+        "x1": 116.0,
+        "y1": 540.0
+      },
+      "role": "applicability",
+      "object_kind": "table_cell",
+      "segment_order": 78,
+      "source_text": "N/A"
+    },
+    {
+      "segment_id": "p12-r4.3.1-interim-note",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 503.3,
+        "x1": 554.7,
+        "y1": 520.7
+      },
+      "role": "other",
+      "object_kind": "text_block",
+      "segment_order": 79,
+      "source_text": "Note: In November 2016 ASC published an Interim Solution for ASC Marine Feed Ingredients, which will replace indicators 4.3.1, 4.3.2 of this Standard. This solution applies to all ASC’s Standards, which have indicators for marine raw material origin, including this ASC Salmon Standard. This interim solution will apply until the ASC Feed Standard will be available or until further official and public notice by ASC."
+    },
+    {
+      "segment_id": "p12-footnote-53",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 80.0,
+        "y0": 546.7,
+        "x1": 502.7,
+        "y1": 551.3
+      },
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 80,
+      "source_text": "[53] This standard and standard 4.3.2 applies to fishmeal and oil from forage fisheries, pelagic fisheries, or fisheries where the catch is directly reduced (including krill) and not to by-products or trimmings used in feed."
+    },
+    {
+      "segment_id": "p12-footnote-54",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 80.0,
+        "y0": 554.0,
+        "x1": 331.3,
+        "y1": 558.7
+      },
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 81,
+      "source_text": "[54] Meets ISEAL guidelines as demonstrated through full membership in the ISEAL Alliance, or equivalent as determined by ASC."
+    },
+    {
+      "segment_id": "p12-r4.3.2-id",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 60.0,
+        "y0": 583.3,
+        "x1": 69.3,
+        "y1": 588.0
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 82,
+      "source_text": "4.3.2"
+    },
+    {
+      "segment_id": "p12-r4.3.2-indicator",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 80.0,
+        "y0": 562.0,
+        "x1": 190.0,
+        "y1": 578.7
+      },
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 83,
+      "source_text": "Prior to achieving 4.3.1, the FishSource score [55] for the fishery(ies) from which all marine raw material in feed is derived"
+    },
+    {
+      "segment_id": "p12-r4.3.2-value",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 80.0,
+        "y0": 586.7,
+        "x1": 157.3,
+        "y1": 598.0
+      },
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 84,
+      "source_text": "All individual scores ≥ 6,\nand biomass score ≥ 6"
+    },
+    {
+      "segment_id": "p12-r4.3.2-applicability",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 80.0,
+        "y0": 605.3,
+        "x1": 113.3,
+        "y1": 610.0
+      },
+      "role": "applicability",
+      "object_kind": "table_cell",
+      "segment_order": 85,
+      "source_text": "All"
+    },
+    {
+      "segment_id": "p12-r4.3.2-interim-note",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 576.7,
+        "x1": 554.7,
+        "y1": 594.0
+      },
+      "role": "other",
+      "object_kind": "text_block",
+      "segment_order": 86,
+      "source_text": "Note: In November 2016 ASC published an Interim Solution for ASC Marine Feed Ingredients, which will replace indicators 4.3.1, 4.3.2 of this Standard. This solution applies to all ASC’s Standards, which have indicators for marine raw material origin, including this ASC Salmon Standard. This interim solution will apply until the ASC Feed Standard will be available or until further official and public notice by ASC."
+    },
+    {
+      "segment_id": "p12-footnote-55",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 80.0,
+        "y0": 612.7,
+        "x1": 296.0,
+        "y1": 617.3
+      },
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 87,
+      "source_text": "[55] Or equivalent score using the same methodology. See Appendix IV-3 for explanation of FishSource scoring."
+    },
+    {
+      "segment_id": "p12-r4.3.3-client-instruction",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 625.3,
+        "x1": 549.3,
+        "y1": 667.3
+      },
+      "role": "other",
+      "object_kind": "text_block",
+      "segment_order": 88,
+      "source_text": "Instruction to Clients for Indicator 4.3.3 - Third-Party Verification of Traceability\nIndicator 4.3.3 requires that farms show that their feed producers can demonstrate chain of custody and traceability as verified through third-party audits. Farms may submit reports from audits of feed producers (see 4.1.1c) as evidence that traceability systems are in compliance. Alternatively, farms may show that their feed producers comply with traceability requirements of Indicator 4.3.3 by submitting evidence that suppliers, and the batches of fishmeal and oil, are certified to the International Fishmeal and Fish Oil Organization's Global Standard for Responsible Supply or to the Marine Stewardship Council Chain of Custody Standard.\nFor the first audit, a minimum of 6 months of data on feed is required and evidence shall relate to species used in said dataset."
+    },
+    {
+      "segment_id": "p12-r4.3.3-id",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 60.0,
+        "y0": 666.0,
+        "x1": 69.3,
+        "y1": 670.7
+      },
+      "role": "requirement_id",
+      "object_kind": "table_cell",
+      "segment_order": 89,
+      "source_text": "4.3.3"
+    },
+    {
+      "segment_id": "p12-r4.3.3-indicator",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 80.0,
+        "y0": 644.0,
+        "x1": 188.7,
+        "y1": 667.3
+      },
+      "role": "indicator_text",
+      "object_kind": "table_cell",
+      "segment_order": 90,
+      "source_text": "Prior to achieving 4.3.1, demonstration of third-party verified chain of custody and traceability for the batches of fishmeal and fish oil which are in compliance with 4.3.2."
+    },
+    {
+      "segment_id": "p12-r4.3.3-value",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 80.0,
+        "y0": 675.3,
+        "x1": 116.0,
+        "y1": 680.0
+      },
+      "role": "requirement_value",
+      "object_kind": "table_cell",
+      "segment_order": 91,
+      "source_text": "Yes"
+    },
+    {
+      "segment_id": "p12-r4.3.3-applicability",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 80.0,
+        "y0": 688.0,
+        "x1": 113.3,
+        "y1": 692.7
+      },
+      "role": "applicability",
+      "object_kind": "table_cell",
+      "segment_order": 92,
+      "source_text": "All"
+    },
+    {
+      "segment_id": "p12-r4.3.3-client-a",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 676.7,
+        "x1": 372.7,
+        "y1": 694.0
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 93,
+      "source_text": "a. Obtain from the feed supplier documentary evidence that the origin of all fishmeal and fish oil used in the feed is traceable via a third-party verified chain of custody or traceability program."
+    },
+    {
+      "segment_id": "p12-r4.3.3-client-b",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 194.0,
+        "y0": 704.7,
+        "x1": 373.3,
+        "y1": 709.3
+      },
+      "role": "client_action",
+      "object_kind": "table_cell",
+      "segment_order": 94,
+      "source_text": "b. Ensure evidence covers all the species used (as consistent with 4.3.2a, 4.2.1a, and 4.2.2a)."
+    },
+    {
+      "segment_id": "p12-r4.3.3-cab-a",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.7,
+        "y0": 680.0,
+        "x1": 550.7,
+        "y1": 690.7
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 95,
+      "source_text": "A. Review evidence and confirm that a third party verified chain of custody or traceability program was used for the fishmeal and fish oil."
+    },
+    {
+      "segment_id": "p12-r4.3.3-cab-b",
+      "page_number": 12,
+      "page_index": 11,
+      "page_size": {
+        "width": 612.0,
+        "height": 792.0,
+        "unit": "pdf_point",
+        "origin": "top_left"
+      },
+      "bbox": {
+        "x0": 376.7,
+        "y0": 702.0,
+        "x1": 557.3,
+        "y1": 712.7
+      },
+      "role": "auditor_action",
+      "object_kind": "table_cell",
+      "segment_order": 96,
+      "source_text": "B. Verify that demonstration of third-party verified chain-of-custody is in place for all species used."
+    }
+  ],
+  "requirements": [
+    {
+      "requirement_id": "3.4.4",
+      "requirement_form": "audit_matrix",
+      "criterion_path": [
+        "Principle 3",
+        "Criterion 3.4"
+      ],
+      "language": "en",
+      "indicator_text": "Evidence of escape prevention planning and related employee training, including: net strength testing; appropriate net mesh size; net traceability; system robustness; predator management; record keeping and reporting of risk events (e.g., holes, infrastructure issues, handling errors, reporting and follow up of escape events); and worker training on escape prevention and counting technologies",
+      "requirement_value": "Yes",
+      "normative_text": "Indicator: Evidence of escape prevention planning and related employee training, including: net strength testing; appropriate net mesh size; net traceability; system robustness; predator management; record keeping and reporting of risk events (e.g., holes, infrastructure issues, handling errors, reporting and follow up of escape events); and worker training on escape prevention and counting technologies\nRequirement: Yes\nApplicability: All",
+      "normative_subjects": [],
+      "applicability": [
+        "All"
+      ],
+      "modalities": [],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "3.4.4-main",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Indicator: Evidence of escape prevention planning and related employee training, including: net strength testing; appropriate net mesh size; net traceability; system robustness; predator management; record keeping and reporting of risk events (e.g., holes, infrastructure issues, handling errors, reporting and follow up of escape events); and worker training on escape prevention and counting technologies\nRequirement: Yes\nApplicability: All",
+          "joins_next": null
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [
+        {
+          "marker": "a",
+          "text": "Prepare an Escape Prevention Plan and submit it to the CAB before the first audit. This plan may be part of a more comprehensive farm planning document as long as it addresses all required elements of Indicator 3.4.4.",
+          "source_segment_ids": [
+            "p11-r3.4.4-client-a"
+          ]
+        },
+        {
+          "marker": "b",
+          "text": "If the farm operates an open (net pen) system, ensure the plan (3.4.4a) covers the following areas: net strength testing; appropriate net mesh size; net traceability; system robustness; predator management; record keeping; reporting risk events (e.g., holes, infrastructure issues, handling errors); planning of staff training to cover all of the above areas; and planning of staff training on escape prevention and counting technologies.",
+          "source_segment_ids": [
+            "p11-r3.4.4-client-b"
+          ]
+        },
+        {
+          "marker": "c",
+          "text": "If the farm operates a closed system, ensure the plan (3.4.4a) covers the following areas: system robustness; predator management; record keeping; reporting risk events (e.g., holes, infrastructure issues, handling errors); planning of staff training to cover all of the above areas; and planning of staff training on escape prevention and counting technologies.",
+          "source_segment_ids": [
+            "p11-r3.4.4-client-c"
+          ]
+        },
+        {
+          "marker": "d",
+          "text": "Maintain records as specified in the plan.",
+          "source_segment_ids": [
+            "p11-r3.4.4-client-d"
+          ]
+        },
+        {
+          "marker": "e",
+          "text": "Train staff on escape prevention planning as per the farm's plan.",
+          "source_segment_ids": [
+            "p11-r3.4.4-client-e"
+          ]
+        }
+      ],
+      "auditor_actions": [
+        {
+          "marker": "A",
+          "text": "Obtain and review the farm's escape prevention plan prior to scheduling the first audit.",
+          "source_segment_ids": [
+            "p11-r3.4.4-cab-a"
+          ]
+        },
+        {
+          "marker": "B",
+          "text": "Confirm the farm's Escape Prevention Plan contains all required elements for open (net pen) systems as applicable.",
+          "source_segment_ids": [
+            "p11-r3.4.4-cab-b"
+          ]
+        },
+        {
+          "marker": "C",
+          "text": "Confirm the farm's Escape Prevention Plan contains all required elements for closed systems as applicable.",
+          "source_segment_ids": [
+            "p11-r3.4.4-cab-c"
+          ]
+        },
+        {
+          "marker": "D",
+          "text": "Review documentary evidence showing implementation of the plan.",
+          "source_segment_ids": [
+            "p11-r3.4.4-cab-d"
+          ]
+        },
+        {
+          "marker": "E",
+          "text": "Review records (i.e., attendance records, meeting notes) to confirm that farm staff attend training on escape prevention planning.",
+          "source_segment_ids": [
+            "p11-r3.4.4-cab-e"
+          ]
+        },
+        {
+          "marker": "F",
+          "text": "Interview farm workers to confirm that the plan is implemented.",
+          "source_segment_ids": [
+            "p11-r3.4.4-cab-f"
+          ]
+        }
+      ],
+      "related_context_ids": [],
+      "source_segment_ids": [
+        "p11-r3.4.4-id",
+        "p11-r3.4.4-indicator",
+        "p11-r3.4.4-value",
+        "p11-r3.4.4-applicability"
+      ],
+      "source_anomalies": [
+        "The audit row starts at the top of page 11 without a repeated criterion or column header, but its complete indicator, value, applicability, client actions and CAB actions are visible on page 11."
+      ],
+      "gold_notes": [
+        "The formal Requirement is the legacy audit-matrix combination of indicator_text, requirement_value and applicability; client and CAB actions remain separate provenance fields."
+      ]
+    },
+    {
+      "requirement_id": "4.1.1",
+      "requirement_form": "audit_matrix",
+      "criterion_path": [
+        "Principle 4",
+        "Criterion 4.1"
+      ],
+      "language": "en",
+      "indicator_text": "Evidence of traceability, demonstrated by the feed producer, of feed ingredients that make up more than 1% of the feed [50].",
+      "requirement_value": "Yes",
+      "normative_text": "Indicator: Evidence of traceability, demonstrated by the feed producer, of feed ingredients that make up more than 1% of the feed [50].\nRequirement: Yes\nApplicability: All",
+      "normative_subjects": [],
+      "applicability": [
+        "All"
+      ],
+      "modalities": [],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "4.1.1-main",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Indicator: Evidence of traceability, demonstrated by the feed producer, of feed ingredients that make up more than 1% of the feed [50].\nRequirement: Yes\nApplicability: All",
+          "joins_next": null
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [
+        {
+          "raw_text": "more than 1%",
+          "operator": "gt",
+          "normalized_value": 1,
+          "unit": "%",
+          "applies_to": "feed ingredients for which traceability is demonstrated",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p11-r4.1.1-indicator"
+          ]
+        }
+      ],
+      "dates": [],
+      "cross_references": [
+        {
+          "text": "[50]",
+          "target": "footnote 50",
+          "type": "internal_exact"
+        }
+      ],
+      "footnote_refs": [
+        {
+          "marker": "50",
+          "text": "Traceability shall be at a level of detail that permits the feed producer to demonstrate compliance with the standards in this document (i.e., marine raw ingredients must be traced back to the fishery, soy to the region grown, etc.). Feed manufacturers will need to supply the farm with third-party documentation of the ingredients covered under this standard.",
+          "link_type": "direct",
+          "source_segment_ids": [
+            "p11-footnote-50"
+          ]
+        }
+      ],
+      "associated_instructions": [
+        {
+          "marker": null,
+          "text": "Instruction to Clients for Indicators 4.1.1 through 4.4.2 - Sourcing of Responsibly Produced Salmon Feeds\nFarms must show that all feeds used by the farm are produced in compliance with the requirements of Indicators 4.1.1 through 4.4.4. To do so, farms must obtain documentary evidence that the feed producers (see note 1) are audited at regular intervals by an independent auditing firm or a conformity assessment body against a recognized standard which substantially incorporate requirements for traceability. Acceptable certification schemes include Global GAP or other schemes that have been acknowledged by the ASC (see 4.1.1c below). Results from these audits shall demonstrate that feed producers have robust information systems and information handling processes to allow the feed producers to be able to bring forward accurate information about their production and supply chains. Declarations from the feed producer that are provided to the farm to demonstrate compliance with these indicators must be supported by the audits. Farms must also show that all of their feed producers are duly informed of the requirements of the ASC Salmon Standard relating to sourcing of responsibly produced salmon feed (see 4.1.1b below).\nIn addition to the above, farms must also show that their feed suppliers comply with the more detailed requirements for traceability and ingredient sourcing that are specified under indicators 4.1.1 through 4.4.2. The ASC Salmon Standard allows farms to use one of two different methods to demonstrate compliance of feed producers:\nMethod #1: Farms may choose to source feed from feed producers who used only those ingredients allowed under the ASC Salmon Standards during the production of a given batch of feed. For example, the farm may request its feed supplier to produce a batch of feed according to farm specifications. Audits of the feed producer will independently verify that manufacturing processes are in compliance with ASC requirements.\nMethod #2: Farms may choose to source feed from feed producers who demonstrate compliance using a \"mass-balance\" method. In this method, feed producers show that the balance of all ingredients (both amount and type) used during a given feed production period meets ASC requirements. However, mixing of ingredients into the general silos and production lines is allowed during manufacturing. Audits of the feed producer will independently verify that manufacturing processes are in compliance with ASC requirements. The mass balance method can be applied, for example, to integrated feed production companies that handle all steps of feed manufacturing (purchasing of raw materials, processing to finished feed, and sales) under the management of a single legal entity.\nNote 1: The term \"feed producer\" is used here to identify the organization that produces the fish feed (i.e., it is the \"feed manufacturer\"). In most cases, the organization supplying feed to a farm (i.e., the feed supplier) will be the same organization that produced the feed, but there may be instances where feed suppliers are not directly responsible for feed production. Regardless of whether the farm sources feeds directly from a feed producer or indirectly through an intermediary organization, it remains the farm's obligation to show evidence that all feeds used are in compliance with requirements.",
+          "effect": "method",
+          "source_segment_ids": [
+            "p11-shared-client-instruction-4.1.1-4.4.2"
+          ]
+        }
+      ],
+      "client_actions": [
+        {
+          "marker": "a",
+          "text": "Maintain detailed records of all feed suppliers and purchases including contact information and purchase and delivery records.",
+          "source_segment_ids": [
+            "p11-r4.1.1-client-a"
+          ]
+        },
+        {
+          "marker": "b",
+          "text": "Inform each feed supplier in writing of ASC requirements pertaining to production of salmon feeds and send them a copy of the ASC Salmon Standard.",
+          "source_segment_ids": [
+            "p11-r4.1.1-client-b"
+          ]
+        },
+        {
+          "marker": "c",
+          "text": "For each feed producer used by the farm, confirm that an audit of the producer was recently done by an audit firm or CAB against an ASC-acknowledged certification scheme. Obtain a copy of the most recent audit report for each feed producer.",
+          "source_segment_ids": [
+            "p11-r4.1.1-client-c"
+          ]
+        },
+        {
+          "marker": "d",
+          "text": "For each feed producer, determine whether the farm will use method #1 or method #2 (see Instructions above) to show compliance of feed producers. Inform the CAB.",
+          "source_segment_ids": [
+            "p11-r4.1.1-client-d"
+          ]
+        },
+        {
+          "marker": "e",
+          "text": "Obtain declaration from feed supplier(s) stating that the company can assure traceability of all feed ingredients that make up more than 1% of the feed to a level of detail required by the ASC Salmon Standard [50].",
+          "source_segment_ids": [
+            "p11-r4.1.1-client-e"
+          ]
+        }
+      ],
+      "auditor_actions": [
+        {
+          "marker": "A",
+          "text": "Review feed records for completeness and confirm the number of feed suppliers to the client.",
+          "source_segment_ids": [
+            "p11-r4.1.1-cab-a"
+          ]
+        },
+        {
+          "marker": "B",
+          "text": "Review farm records to verify that the farm has informed all of its feed suppliers of relevant ASC requirements for feed production.",
+          "source_segment_ids": [
+            "p11-r4.1.1-cab-b"
+          ]
+        },
+        {
+          "marker": "C",
+          "text": "Verify that the farm obtains current audit reports from all relevant feed producers, that these audits were performed by an audit firm or CAB against an ASC-acknowledged certification scheme, and that audit results demonstrate compliance with requirements.",
+          "source_segment_ids": [
+            "p11-r4.1.1-cab-c"
+          ]
+        },
+        {
+          "marker": "D",
+          "text": "Review which method the farm will use and confirm that independent audit results (4.1.1c) show compliance of feed producers.",
+          "source_segment_ids": [
+            "p11-r4.1.1-cab-d"
+          ]
+        },
+        {
+          "marker": "E",
+          "text": "Review declaration from each feed supplier to confirm the company assures traceability to the level of detail required by Standard.",
+          "source_segment_ids": [
+            "p11-r4.1.1-cab-e"
+          ]
+        },
+        {
+          "marker": "F",
+          "text": "Cross-check the declarations against results from audits of feed suppliers (4.1.1c) to verify evidence of required levels of traceability.",
+          "source_segment_ids": [
+            "p11-r4.1.1-cab-f"
+          ]
+        }
+      ],
+      "related_context_ids": [
+        "p11-shared-client-instruction-4.1.1-4.4.2"
+      ],
+      "source_segment_ids": [
+        "p11-r4.1.1-id",
+        "p11-r4.1.1-indicator",
+        "p11-r4.1.1-value",
+        "p11-r4.1.1-applicability",
+        "p11-footnote-50"
+      ],
+      "source_anomalies": [],
+      "gold_notes": [
+        "The formal Requirement is the legacy audit-matrix combination of indicator_text, requirement_value and applicability; client and CAB actions remain separate provenance fields."
+      ]
+    },
+    {
+      "requirement_id": "4.2.1",
+      "requirement_form": "audit_matrix",
+      "criterion_path": [
+        "Principle 4",
+        "Criterion 4.2"
+      ],
+      "language": "en",
+      "indicator_text": "Fishmeal Forage Fish Dependency Ratio (FFDRm) for grow-out (calculated using formulas in Appendix IV-1)",
+      "requirement_value": "< 1.2",
+      "normative_text": "Indicator: Fishmeal Forage Fish Dependency Ratio (FFDRm) for grow-out (calculated using formulas in Appendix IV-1)\nRequirement: < 1.2\nApplicability: All",
+      "normative_subjects": [],
+      "applicability": [
+        "All"
+      ],
+      "modalities": [],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "4.2.1-main",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Indicator: Fishmeal Forage Fish Dependency Ratio (FFDRm) for grow-out (calculated using formulas in Appendix IV-1)\nRequirement: < 1.2\nApplicability: All",
+          "joins_next": null
+        }
+      ],
+      "conditions": [
+        {
+          "text": "if the farm can satisfactorily demonstrate to the auditor all three listed capabilities and records",
+          "applies_to": "first-audit exemption from compliance for the prior production cycle"
+        }
+      ],
+      "exceptions": [],
+      "exemptions": [
+        {
+          "text": "For first audits, farms may be exempted from compliance with Indicator 4.2.1 for the prior production cycle if all three listed demonstrations are satisfactory to the auditor.",
+          "applies_to": "Indicator 4.2.1 compliance for the prior production cycle"
+        }
+      ],
+      "thresholds": [
+        {
+          "raw_text": "< 1.2",
+          "operator": "lt",
+          "normalized_value": 1.2,
+          "unit": null,
+          "applies_to": "FFDRm for grow-out",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p12-r4.2.1-value"
+          ]
+        },
+        {
+          "raw_text": "> 1.2",
+          "operator": "gt",
+          "normalized_value": 1.2,
+          "unit": null,
+          "applies_to": "FFDRm of the most recent crop in the first-audit exemption",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p12-r4.2.1-client-instruction"
+          ]
+        },
+        {
+          "raw_text": "> 6 months",
+          "operator": "gt",
+          "normalized_value": 6,
+          "unit": "months",
+          "applies_to": "feed specifications maintained for the current production cycle in the first-audit exemption",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p12-r4.2.1-client-instruction"
+          ]
+        },
+        {
+          "raw_text": "FFDRm < 1.2",
+          "operator": "lt",
+          "normalized_value": 1.2,
+          "unit": null,
+          "applies_to": "FFDRm expected at harvest for the current production cycle in the first-audit exemption",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p12-r4.2.1-client-instruction"
+          ]
+        }
+      ],
+      "dates": [
+        {
+          "text": "using data from the prior production cycle",
+          "applies_to": "FFDRm calculation"
+        },
+        {
+          "text": "For first audits",
+          "applies_to": "possible exemption from compliance for the prior production cycle"
+        },
+        {
+          "text": "for > 6 months",
+          "applies_to": "feed specifications maintained for the current production cycle"
+        },
+        {
+          "text": "at harvest",
+          "applies_to": "demonstration that the current production cycle will meet FFDRm < 1.2"
+        }
+      ],
+      "cross_references": [
+        {
+          "text": "Appendix IV-1",
+          "target": "Appendix IV-1",
+          "type": "internal_exact"
+        },
+        {
+          "text": "[51]",
+          "target": "footnote 51",
+          "type": "internal_exact"
+        },
+        {
+          "text": "Appendix VI",
+          "target": "Appendix VI",
+          "type": "internal_exact"
+        }
+      ],
+      "footnote_refs": [
+        {
+          "marker": "51",
+          "text": "See Appendix VI for transparency requirements for 4.2.1 and 4.2.2.",
+          "link_type": "inherited",
+          "source_segment_ids": [
+            "p12-footnote-51"
+          ]
+        }
+      ],
+      "associated_instructions": [
+        {
+          "marker": null,
+          "text": "Instruction to Clients for Indicators 4.1.1 through 4.4.2 - Sourcing of Responsibly Produced Salmon Feeds\nFarms must show that all feeds used by the farm are produced in compliance with the requirements of Indicators 4.1.1 through 4.4.4. To do so, farms must obtain documentary evidence that the feed producers (see note 1) are audited at regular intervals by an independent auditing firm or a conformity assessment body against a recognized standard which substantially incorporate requirements for traceability. Acceptable certification schemes include Global GAP or other schemes that have been acknowledged by the ASC (see 4.1.1c below). Results from these audits shall demonstrate that feed producers have robust information systems and information handling processes to allow the feed producers to be able to bring forward accurate information about their production and supply chains. Declarations from the feed producer that are provided to the farm to demonstrate compliance with these indicators must be supported by the audits. Farms must also show that all of their feed producers are duly informed of the requirements of the ASC Salmon Standard relating to sourcing of responsibly produced salmon feed (see 4.1.1b below).\nIn addition to the above, farms must also show that their feed suppliers comply with the more detailed requirements for traceability and ingredient sourcing that are specified under indicators 4.1.1 through 4.4.2. The ASC Salmon Standard allows farms to use one of two different methods to demonstrate compliance of feed producers:\nMethod #1: Farms may choose to source feed from feed producers who used only those ingredients allowed under the ASC Salmon Standards during the production of a given batch of feed. For example, the farm may request its feed supplier to produce a batch of feed according to farm specifications. Audits of the feed producer will independently verify that manufacturing processes are in compliance with ASC requirements.\nMethod #2: Farms may choose to source feed from feed producers who demonstrate compliance using a \"mass-balance\" method. In this method, feed producers show that the balance of all ingredients (both amount and type) used during a given feed production period meets ASC requirements. However, mixing of ingredients into the general silos and production lines is allowed during manufacturing. Audits of the feed producer will independently verify that manufacturing processes are in compliance with ASC requirements. The mass balance method can be applied, for example, to integrated feed production companies that handle all steps of feed manufacturing (purchasing of raw materials, processing to finished feed, and sales) under the management of a single legal entity.\nNote 1: The term \"feed producer\" is used here to identify the organization that produces the fish feed (i.e., it is the \"feed manufacturer\"). In most cases, the organization supplying feed to a farm (i.e., the feed supplier) will be the same organization that produced the feed, but there may be instances where feed suppliers are not directly responsible for feed production. Regardless of whether the farm sources feeds directly from a feed producer or indirectly through an intermediary organization, it remains the farm's obligation to show evidence that all feeds used are in compliance with requirements.",
+          "effect": "method",
+          "source_segment_ids": [
+            "p11-shared-client-instruction-4.1.1-4.4.2"
+          ]
+        },
+        {
+          "marker": null,
+          "text": "Instruction to Clients for Indicator 4.2.1 - Calculation of FFDRm\nFarms must calculate the Fishmeal Forage Fish Dependency Ration (FFDRm) according to formula presented in Appendix IV-1 using data from the prior production cycle. Farms must also show that they have maintained sufficient information in order to make an accurate calculation of FFDRm as outlined below. For first audits, farms may be exempted from compliance with Indicator 4.2.1 for the prior production cycle (i.e., if the FFDRm of the most recent crop was > 1.2) if the farm can satisfactorily demonstrate to the auditor that:\nthe client understands how to accurately calculate FFDRm;\nthe client maintains all information needed to accurately calculate FFDRm (i.e., all feed specs for > 6 months) for the current production cycle; and\nthe client can show how feed used for the current production cycle will ensure that the farm will meet requirements at harvest (i.e., FFDRm < 1.2).",
+          "effect": "exemption",
+          "source_segment_ids": [
+            "p12-r4.2.1-client-instruction"
+          ]
+        }
+      ],
+      "client_actions": [
+        {
+          "marker": "a",
+          "text": "Maintain a detailed inventory of the feed used including: Quantities used of each formulation (kg); Percentage of fishmeal in each formulation used; Source (fishery) of fishmeal in each formulation used; Percentage of fishmeal in each formulation derived from trimmings; and Supporting documentation and signed declaration from feed supplier.",
+          "source_segment_ids": [
+            "p12-r4.2.1-client-a"
+          ]
+        },
+        {
+          "marker": "b",
+          "text": "For FFDRm calculation, exclude fishmeal derived from rendering of seafood by-products (e.g., the \"trimmings\") from a human consumption fishery.",
+          "source_segment_ids": [
+            "p12-r4.2.1-client-b"
+          ]
+        },
+        {
+          "marker": "c",
+          "text": "Calculate eFCR using formula in Appendix IV-1 (use this calculation also in 4.2.2 option #1).",
+          "source_segment_ids": [
+            "p12-r4.2.1-client-c"
+          ]
+        },
+        {
+          "marker": "d",
+          "text": "Calculate FFDRm using formulas in Appendix IV-1.",
+          "source_segment_ids": [
+            "p12-r4.2.1-client-d"
+          ]
+        },
+        {
+          "marker": "e",
+          "text": "Submit FFDRm to ASC as per Appendix VI for each production cycle.",
+          "source_segment_ids": [
+            "p12-r4.2.1-client-e"
+          ]
+        }
+      ],
+      "auditor_actions": [
+        {
+          "marker": "A",
+          "text": "Verify completeness of records and that values are stated in a declaration from the feed manufacturer.",
+          "source_segment_ids": [
+            "p12-r4.2.1-cab-a"
+          ]
+        },
+        {
+          "marker": "B",
+          "text": "Verify that the client excludes from the FFDRm calculation any fishmeal rendered from seafood by-products.",
+          "source_segment_ids": [
+            "p12-r4.2.1-cab-b"
+          ]
+        },
+        {
+          "marker": "C",
+          "text": "Verify that eFCR calculation was done correctly.",
+          "source_segment_ids": [
+            "p12-r4.2.1-cab-c"
+          ]
+        },
+        {
+          "marker": "D",
+          "text": "Verify that FFDRm calculations were done correctly and confirm the value complies with the requirement.",
+          "source_segment_ids": [
+            "p12-r4.2.1-cab-d"
+          ]
+        },
+        {
+          "marker": "E",
+          "text": "Confirm that client has submitted FFDRm to ASC (Appendix VI).",
+          "source_segment_ids": [
+            "p12-r4.2.1-cab-e"
+          ]
+        }
+      ],
+      "related_context_ids": [
+        "p11-shared-client-instruction-4.1.1-4.4.2",
+        "p12-r4.2.1-client-instruction"
+      ],
+      "source_segment_ids": [
+        "p12-r4.2.1-id",
+        "p12-r4.2.1-indicator",
+        "p12-r4.2.1-value",
+        "p12-r4.2.1-applicability",
+        "p12-footnote-51"
+      ],
+      "source_anomalies": [],
+      "gold_notes": [
+        "The formal Requirement is the legacy audit-matrix combination of indicator_text, requirement_value and applicability; client and CAB actions remain separate provenance fields."
+      ]
+    },
+    {
+      "requirement_id": "4.2.2",
+      "requirement_form": "audit_matrix",
+      "criterion_path": [
+        "Principle 4",
+        "Criterion 4.2"
+      ],
+      "language": "en",
+      "indicator_text": "Fish Oil Forage Fish Dependency Ratio (FFDRo) for grow-out (calculated using formulas in Appendix IV-1), or, Maximum amount of EPA and DHA from direct marine sources [52] (calculated according to Appendix IV-2)",
+      "requirement_value": "FFDRo < 2.52\nor\n(EPA + DHA) < 30 g/kg feed",
+      "normative_text": "Indicator: Fish Oil Forage Fish Dependency Ratio (FFDRo) for grow-out (calculated using formulas in Appendix IV-1), or, Maximum amount of EPA and DHA from direct marine sources [52] (calculated according to Appendix IV-2)\nRequirement: FFDRo < 2.52\nor\n(EPA + DHA) < 30 g/kg feed\nApplicability: All",
+      "normative_subjects": [],
+      "applicability": [
+        "All"
+      ],
+      "modalities": [],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "4.2.2-main",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "The farm may demonstrate compliance through one of two alternative calculation limits.",
+          "joins_next": null
+        },
+        {
+          "clause_id": "4.2.2-option-1",
+          "parent_clause_id": "4.2.2-main",
+          "marker": "option #1",
+          "text": "FFDRo < 2.52",
+          "joins_next": "or"
+        },
+        {
+          "clause_id": "4.2.2-option-2",
+          "parent_clause_id": "4.2.2-main",
+          "marker": "option #2",
+          "text": "(EPA + DHA) < 30 g/kg feed",
+          "joins_next": null
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [
+        {
+          "text": "Farms do not have to demonstrate that they meet both threshold values.",
+          "applies_to": "the two alternative thresholds in Indicator 4.2.2"
+        }
+      ],
+      "thresholds": [
+        {
+          "raw_text": "FFDRo < 2.52",
+          "operator": "lt",
+          "normalized_value": 2.52,
+          "unit": null,
+          "applies_to": "FFDRo for grow-out under option #1",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p12-r4.2.2-value"
+          ]
+        },
+        {
+          "raw_text": "(EPA + DHA) < 30 g/kg feed",
+          "operator": "lt",
+          "normalized_value": 30,
+          "unit": "g/kg feed",
+          "applies_to": "EPA and DHA from direct marine sources under option #2",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p12-r4.2.2-value"
+          ]
+        }
+      ],
+      "dates": [],
+      "cross_references": [
+        {
+          "text": "Appendix IV-1",
+          "target": "Appendix IV-1",
+          "type": "internal_exact"
+        },
+        {
+          "text": "Appendix IV-2",
+          "target": "Appendix IV-2",
+          "type": "internal_exact"
+        },
+        {
+          "text": "[51]",
+          "target": "footnote 51",
+          "type": "internal_exact"
+        },
+        {
+          "text": "[52]",
+          "target": "footnote 52",
+          "type": "internal_exact"
+        }
+      ],
+      "footnote_refs": [
+        {
+          "marker": "51",
+          "text": "See Appendix VI for transparency requirements for 4.2.1 and 4.2.2.",
+          "link_type": "inherited",
+          "source_segment_ids": [
+            "p12-footnote-51"
+          ]
+        },
+        {
+          "marker": "52",
+          "text": "Calculation excludes DHA and EPA derived from fisheries by-products and trimmings. Trimmings are defined as by-products when fish are processed for human consumption or if whole fish is rejected for use of human consumption because the quality at the time of landing does not meet official regulations with regard to fish suitable for human consumption. Fishmeal and fish oil that are produced from trimmings can be excluded from the calculation as long as the origin of the trimmings is not any species that are classified as critically endangered, endangered or vulnerable in the IUCN Red List of Threatened Species (http://www.iucnredlist.org).",
+          "link_type": "direct",
+          "source_segment_ids": [
+            "p12-footnote-52"
+          ]
+        }
+      ],
+      "associated_instructions": [
+        {
+          "marker": null,
+          "text": "Instruction to Clients for Indicators 4.1.1 through 4.4.2 - Sourcing of Responsibly Produced Salmon Feeds\nFarms must show that all feeds used by the farm are produced in compliance with the requirements of Indicators 4.1.1 through 4.4.4. To do so, farms must obtain documentary evidence that the feed producers (see note 1) are audited at regular intervals by an independent auditing firm or a conformity assessment body against a recognized standard which substantially incorporate requirements for traceability. Acceptable certification schemes include Global GAP or other schemes that have been acknowledged by the ASC (see 4.1.1c below). Results from these audits shall demonstrate that feed producers have robust information systems and information handling processes to allow the feed producers to be able to bring forward accurate information about their production and supply chains. Declarations from the feed producer that are provided to the farm to demonstrate compliance with these indicators must be supported by the audits. Farms must also show that all of their feed producers are duly informed of the requirements of the ASC Salmon Standard relating to sourcing of responsibly produced salmon feed (see 4.1.1b below).\nIn addition to the above, farms must also show that their feed suppliers comply with the more detailed requirements for traceability and ingredient sourcing that are specified under indicators 4.1.1 through 4.4.2. The ASC Salmon Standard allows farms to use one of two different methods to demonstrate compliance of feed producers:\nMethod #1: Farms may choose to source feed from feed producers who used only those ingredients allowed under the ASC Salmon Standards during the production of a given batch of feed. For example, the farm may request its feed supplier to produce a batch of feed according to farm specifications. Audits of the feed producer will independently verify that manufacturing processes are in compliance with ASC requirements.\nMethod #2: Farms may choose to source feed from feed producers who demonstrate compliance using a \"mass-balance\" method. In this method, feed producers show that the balance of all ingredients (both amount and type) used during a given feed production period meets ASC requirements. However, mixing of ingredients into the general silos and production lines is allowed during manufacturing. Audits of the feed producer will independently verify that manufacturing processes are in compliance with ASC requirements. The mass balance method can be applied, for example, to integrated feed production companies that handle all steps of feed manufacturing (purchasing of raw materials, processing to finished feed, and sales) under the management of a single legal entity.\nNote 1: The term \"feed producer\" is used here to identify the organization that produces the fish feed (i.e., it is the \"feed manufacturer\"). In most cases, the organization supplying feed to a farm (i.e., the feed supplier) will be the same organization that produced the feed, but there may be instances where feed suppliers are not directly responsible for feed production. Regardless of whether the farm sources feeds directly from a feed producer or indirectly through an intermediary organization, it remains the farm's obligation to show evidence that all feeds used are in compliance with requirements.",
+          "effect": "method",
+          "source_segment_ids": [
+            "p11-shared-client-instruction-4.1.1-4.4.2"
+          ]
+        },
+        {
+          "marker": null,
+          "text": "Note: Under Indicator 4.2.2, farms can choose to calculate FFDRo (Option #1) or EPA & DHA (Option #2). Farms do not have to demonstrate that they meet both threshold values. Client shall inform the CAB which option they will use.",
+          "effect": "method",
+          "source_segment_ids": [
+            "p12-r4.2.2-option-note"
+          ]
+        }
+      ],
+      "client_actions": [
+        {
+          "marker": "a",
+          "text": "Maintain a detailed inventory of the feed used as specified in 4.2.1a.",
+          "source_segment_ids": [
+            "p12-r4.2.2-client-a"
+          ]
+        },
+        {
+          "marker": "b",
+          "text": "For FFDRo and EPA+DHA calculations (either option #1 or option #2), exclude fish oil derived from rendering of seafood by-products (e.g., the \"trimmings\" from a human consumption fishery.",
+          "source_segment_ids": [
+            "p12-r4.2.2-client-b"
+          ]
+        },
+        {
+          "marker": "c",
+          "text": "Inform the CAB whether the farm chose option #1 or option #2 to demonstrate compliance with the requirements of the Standard.",
+          "source_segment_ids": [
+            "p12-r4.2.2-client-c"
+          ]
+        },
+        {
+          "marker": "d",
+          "text": "For option #1, calculate FFDRo using formulas in Appendix IV-1 and using the eFCR calculated under 4.2.1c.",
+          "source_segment_ids": [
+            "p12-r4.2.2-client-d"
+          ]
+        },
+        {
+          "marker": "e",
+          "text": "For option #2, calculate amount of EPA + DHA using formulas in Appendix IV-2.",
+          "source_segment_ids": [
+            "p12-r4.2.2-client-e"
+          ]
+        },
+        {
+          "marker": "f",
+          "text": "Submit FFDRo or EPA & DHA to ASC as per Appendix VI for each production cycle.",
+          "source_segment_ids": [
+            "p12-r4.2.2-client-f"
+          ]
+        }
+      ],
+      "auditor_actions": [
+        {
+          "marker": "A",
+          "text": "Verify completeness of feed records as in 4.2.1A.",
+          "source_segment_ids": [
+            "p12-r4.2.2-cab-a"
+          ]
+        },
+        {
+          "marker": "B",
+          "text": "Verify client excludes fish oil rendered from by-products from the FFDRo or (EPA + DHA) calculation.",
+          "source_segment_ids": [
+            "p12-r4.2.2-cab-b"
+          ]
+        },
+        {
+          "marker": "C",
+          "text": "Record which option the client chose.",
+          "source_segment_ids": [
+            "p12-r4.2.2-cab-c"
+          ]
+        },
+        {
+          "marker": "D",
+          "text": "Verify that FFDRo calculations were done correctly and confirm the value complies with the standard.",
+          "source_segment_ids": [
+            "p12-r4.2.2-cab-d"
+          ]
+        },
+        {
+          "marker": "E",
+          "text": "Verify that (EPA+DHA) calculations were done correctly and confirm the value complies with the standard.",
+          "source_segment_ids": [
+            "p12-r4.2.2-cab-e"
+          ]
+        },
+        {
+          "marker": "F",
+          "text": "Confirm that client has submitted FFDRo or EPA & DHA to ASC (Appendix VI).",
+          "source_segment_ids": [
+            "p12-r4.2.2-cab-f"
+          ]
+        }
+      ],
+      "related_context_ids": [
+        "p11-shared-client-instruction-4.1.1-4.4.2",
+        "p12-r4.2.2-option-note"
+      ],
+      "source_segment_ids": [
+        "p12-r4.2.2-id",
+        "p12-r4.2.2-indicator",
+        "p12-r4.2.2-value",
+        "p12-r4.2.2-applicability",
+        "p12-footnote-51",
+        "p12-footnote-52"
+      ],
+      "source_anomalies": [],
+      "gold_notes": [
+        "The formal Requirement is the legacy audit-matrix combination of indicator_text, requirement_value and applicability; client and CAB actions remain separate provenance fields."
+      ]
+    },
+    {
+      "requirement_id": "4.3.1",
+      "requirement_form": "audit_matrix",
+      "criterion_path": [
+        "Principle 4",
+        "Criterion 4.3"
+      ],
+      "language": "en",
+      "indicator_text": "Timeframe for all fishmeal and fish oil used in feed to come from fisheries [53] certified under a scheme that is an ISEAL member [54] and has guidelines that specifically promote responsible environmental management of small pelagic fisheries",
+      "requirement_value": "Not required",
+      "normative_text": "Indicator: Timeframe for all fishmeal and fish oil used in feed to come from fisheries [53] certified under a scheme that is an ISEAL member [54] and has guidelines that specifically promote responsible environmental management of small pelagic fisheries\nRequirement: Not required\nApplicability: N/A",
+      "normative_subjects": [],
+      "applicability": [
+        "N/A"
+      ],
+      "modalities": [],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "4.3.1-main",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Indicator: Timeframe for all fishmeal and fish oil used in feed to come from fisheries [53] certified under a scheme that is an ISEAL member [54] and has guidelines that specifically promote responsible environmental management of small pelagic fisheries\nRequirement: Not required\nApplicability: N/A",
+          "joins_next": null
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [
+        {
+          "text": "[53]",
+          "target": "footnote 53",
+          "type": "internal_exact"
+        },
+        {
+          "text": "[54]",
+          "target": "footnote 54",
+          "type": "internal_exact"
+        }
+      ],
+      "footnote_refs": [
+        {
+          "marker": "53",
+          "text": "This standard and standard 4.3.2 applies to fishmeal and oil from forage fisheries, pelagic fisheries, or fisheries where the catch is directly reduced (including krill) and not to by-products or trimmings used in feed.",
+          "link_type": "direct",
+          "source_segment_ids": [
+            "p12-footnote-53"
+          ]
+        },
+        {
+          "marker": "54",
+          "text": "Meets ISEAL guidelines as demonstrated through full membership in the ISEAL Alliance, or equivalent as determined by ASC.",
+          "link_type": "direct",
+          "source_segment_ids": [
+            "p12-footnote-54"
+          ]
+        }
+      ],
+      "associated_instructions": [
+        {
+          "marker": null,
+          "text": "Instruction to Clients for Indicators 4.1.1 through 4.4.2 - Sourcing of Responsibly Produced Salmon Feeds\nFarms must show that all feeds used by the farm are produced in compliance with the requirements of Indicators 4.1.1 through 4.4.4. To do so, farms must obtain documentary evidence that the feed producers (see note 1) are audited at regular intervals by an independent auditing firm or a conformity assessment body against a recognized standard which substantially incorporate requirements for traceability. Acceptable certification schemes include Global GAP or other schemes that have been acknowledged by the ASC (see 4.1.1c below). Results from these audits shall demonstrate that feed producers have robust information systems and information handling processes to allow the feed producers to be able to bring forward accurate information about their production and supply chains. Declarations from the feed producer that are provided to the farm to demonstrate compliance with these indicators must be supported by the audits. Farms must also show that all of their feed producers are duly informed of the requirements of the ASC Salmon Standard relating to sourcing of responsibly produced salmon feed (see 4.1.1b below).\nIn addition to the above, farms must also show that their feed suppliers comply with the more detailed requirements for traceability and ingredient sourcing that are specified under indicators 4.1.1 through 4.4.2. The ASC Salmon Standard allows farms to use one of two different methods to demonstrate compliance of feed producers:\nMethod #1: Farms may choose to source feed from feed producers who used only those ingredients allowed under the ASC Salmon Standards during the production of a given batch of feed. For example, the farm may request its feed supplier to produce a batch of feed according to farm specifications. Audits of the feed producer will independently verify that manufacturing processes are in compliance with ASC requirements.\nMethod #2: Farms may choose to source feed from feed producers who demonstrate compliance using a \"mass-balance\" method. In this method, feed producers show that the balance of all ingredients (both amount and type) used during a given feed production period meets ASC requirements. However, mixing of ingredients into the general silos and production lines is allowed during manufacturing. Audits of the feed producer will independently verify that manufacturing processes are in compliance with ASC requirements. The mass balance method can be applied, for example, to integrated feed production companies that handle all steps of feed manufacturing (purchasing of raw materials, processing to finished feed, and sales) under the management of a single legal entity.\nNote 1: The term \"feed producer\" is used here to identify the organization that produces the fish feed (i.e., it is the \"feed manufacturer\"). In most cases, the organization supplying feed to a farm (i.e., the feed supplier) will be the same organization that produced the feed, but there may be instances where feed suppliers are not directly responsible for feed production. Regardless of whether the farm sources feeds directly from a feed producer or indirectly through an intermediary organization, it remains the farm's obligation to show evidence that all feeds used are in compliance with requirements.",
+          "effect": "method",
+          "source_segment_ids": [
+            "p11-shared-client-instruction-4.1.1-4.4.2"
+          ]
+        },
+        {
+          "marker": "Note",
+          "text": "Note: In November 2016 ASC published an Interim Solution for ASC Marine Feed Ingredients, which will replace indicators 4.3.1, 4.3.2 of this Standard. This solution applies to all ASC’s Standards, which have indicators for marine raw material origin, including this ASC Salmon Standard. This interim solution will apply until the ASC Feed Standard will be available or until further official and public notice by ASC.",
+          "effect": "other",
+          "source_segment_ids": [
+            "p12-r4.3.1-interim-note"
+          ]
+        }
+      ],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": [
+        "p11-shared-client-instruction-4.1.1-4.4.2",
+        "p12-r4.3.1-interim-note"
+      ],
+      "source_segment_ids": [
+        "p12-r4.3.1-id",
+        "p12-r4.3.1-indicator",
+        "p12-r4.3.1-value",
+        "p12-r4.3.1-applicability",
+        "p12-footnote-53",
+        "p12-footnote-54"
+      ],
+      "source_anomalies": [],
+      "gold_notes": [
+        "The formal Requirement is the legacy audit-matrix combination of indicator_text, requirement_value and applicability; client and CAB actions remain separate provenance fields.",
+        "The source explicitly states Requirement: Not required and Applicability: N/A; these values must be preserved exactly despite the adjacent interim-solution note."
+      ]
+    },
+    {
+      "requirement_id": "4.3.2",
+      "requirement_form": "audit_matrix",
+      "criterion_path": [
+        "Principle 4",
+        "Criterion 4.3"
+      ],
+      "language": "en",
+      "indicator_text": "Prior to achieving 4.3.1, the FishSource score [55] for the fishery(ies) from which all marine raw material in feed is derived",
+      "requirement_value": "All individual scores ≥ 6,\nand biomass score ≥ 6",
+      "normative_text": "Indicator: Prior to achieving 4.3.1, the FishSource score [55] for the fishery(ies) from which all marine raw material in feed is derived\nRequirement: All individual scores ≥ 6,\nand biomass score ≥ 6\nApplicability: All",
+      "normative_subjects": [],
+      "applicability": [
+        "All"
+      ],
+      "modalities": [],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "4.3.2-main",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Prior to achieving 4.3.1, the FishSource score for the relevant fishery(ies) must meet both score conditions.",
+          "joins_next": null
+        },
+        {
+          "clause_id": "4.3.2-a",
+          "parent_clause_id": "4.3.2-main",
+          "marker": null,
+          "text": "All individual scores ≥ 6",
+          "joins_next": "and"
+        },
+        {
+          "clause_id": "4.3.2-b",
+          "parent_clause_id": "4.3.2-main",
+          "marker": null,
+          "text": "biomass score ≥ 6",
+          "joins_next": null
+        }
+      ],
+      "conditions": [
+        {
+          "text": "Prior to achieving 4.3.1",
+          "applies_to": "the FishSource score requirement"
+        }
+      ],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [
+        {
+          "raw_text": "All individual scores ≥ 6",
+          "operator": "gte",
+          "normalized_value": 6,
+          "unit": "FishSource score",
+          "applies_to": "each individual FishSource score",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p12-r4.3.2-value"
+          ]
+        },
+        {
+          "raw_text": "biomass score ≥ 6",
+          "operator": "gte",
+          "normalized_value": 6,
+          "unit": "FishSource score",
+          "applies_to": "biomass score",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p12-r4.3.2-value"
+          ]
+        }
+      ],
+      "dates": [],
+      "cross_references": [
+        {
+          "text": "4.3.1",
+          "target": "Indicator 4.3.1",
+          "type": "internal_exact"
+        },
+        {
+          "text": "[55]",
+          "target": "footnote 55",
+          "type": "internal_exact"
+        },
+        {
+          "text": "Appendix IV-3",
+          "target": "Appendix IV-3",
+          "type": "internal_exact"
+        }
+      ],
+      "footnote_refs": [
+        {
+          "marker": "53",
+          "text": "This standard and standard 4.3.2 applies to fishmeal and oil from forage fisheries, pelagic fisheries, or fisheries where the catch is directly reduced (including krill) and not to by-products or trimmings used in feed.",
+          "link_type": "inherited",
+          "source_segment_ids": [
+            "p12-footnote-53"
+          ]
+        },
+        {
+          "marker": "55",
+          "text": "Or equivalent score using the same methodology. See Appendix IV-3 for explanation of FishSource scoring.",
+          "link_type": "direct",
+          "source_segment_ids": [
+            "p12-footnote-55"
+          ]
+        }
+      ],
+      "associated_instructions": [
+        {
+          "marker": null,
+          "text": "Instruction to Clients for Indicators 4.1.1 through 4.4.2 - Sourcing of Responsibly Produced Salmon Feeds\nFarms must show that all feeds used by the farm are produced in compliance with the requirements of Indicators 4.1.1 through 4.4.4. To do so, farms must obtain documentary evidence that the feed producers (see note 1) are audited at regular intervals by an independent auditing firm or a conformity assessment body against a recognized standard which substantially incorporate requirements for traceability. Acceptable certification schemes include Global GAP or other schemes that have been acknowledged by the ASC (see 4.1.1c below). Results from these audits shall demonstrate that feed producers have robust information systems and information handling processes to allow the feed producers to be able to bring forward accurate information about their production and supply chains. Declarations from the feed producer that are provided to the farm to demonstrate compliance with these indicators must be supported by the audits. Farms must also show that all of their feed producers are duly informed of the requirements of the ASC Salmon Standard relating to sourcing of responsibly produced salmon feed (see 4.1.1b below).\nIn addition to the above, farms must also show that their feed suppliers comply with the more detailed requirements for traceability and ingredient sourcing that are specified under indicators 4.1.1 through 4.4.2. The ASC Salmon Standard allows farms to use one of two different methods to demonstrate compliance of feed producers:\nMethod #1: Farms may choose to source feed from feed producers who used only those ingredients allowed under the ASC Salmon Standards during the production of a given batch of feed. For example, the farm may request its feed supplier to produce a batch of feed according to farm specifications. Audits of the feed producer will independently verify that manufacturing processes are in compliance with ASC requirements.\nMethod #2: Farms may choose to source feed from feed producers who demonstrate compliance using a \"mass-balance\" method. In this method, feed producers show that the balance of all ingredients (both amount and type) used during a given feed production period meets ASC requirements. However, mixing of ingredients into the general silos and production lines is allowed during manufacturing. Audits of the feed producer will independently verify that manufacturing processes are in compliance with ASC requirements. The mass balance method can be applied, for example, to integrated feed production companies that handle all steps of feed manufacturing (purchasing of raw materials, processing to finished feed, and sales) under the management of a single legal entity.\nNote 1: The term \"feed producer\" is used here to identify the organization that produces the fish feed (i.e., it is the \"feed manufacturer\"). In most cases, the organization supplying feed to a farm (i.e., the feed supplier) will be the same organization that produced the feed, but there may be instances where feed suppliers are not directly responsible for feed production. Regardless of whether the farm sources feeds directly from a feed producer or indirectly through an intermediary organization, it remains the farm's obligation to show evidence that all feeds used are in compliance with requirements.",
+          "effect": "method",
+          "source_segment_ids": [
+            "p11-shared-client-instruction-4.1.1-4.4.2"
+          ]
+        },
+        {
+          "marker": "Note",
+          "text": "Note: In November 2016 ASC published an Interim Solution for ASC Marine Feed Ingredients, which will replace indicators 4.3.1, 4.3.2 of this Standard. This solution applies to all ASC’s Standards, which have indicators for marine raw material origin, including this ASC Salmon Standard. This interim solution will apply until the ASC Feed Standard will be available or until further official and public notice by ASC.",
+          "effect": "other",
+          "source_segment_ids": [
+            "p12-r4.3.2-interim-note"
+          ]
+        }
+      ],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": [
+        "p11-shared-client-instruction-4.1.1-4.4.2",
+        "p12-r4.3.2-interim-note"
+      ],
+      "source_segment_ids": [
+        "p12-r4.3.2-id",
+        "p12-r4.3.2-indicator",
+        "p12-r4.3.2-value",
+        "p12-r4.3.2-applicability",
+        "p12-footnote-53",
+        "p12-footnote-55"
+      ],
+      "source_anomalies": [],
+      "gold_notes": [
+        "The formal Requirement is the legacy audit-matrix combination of indicator_text, requirement_value and applicability; client and CAB actions remain separate provenance fields.",
+        "The adjacent interim-solution note is preserved as associated instruction; it does not erase the formal two-part score value from normative_text."
+      ]
+    },
+    {
+      "requirement_id": "4.3.3",
+      "requirement_form": "audit_matrix",
+      "criterion_path": [
+        "Principle 4",
+        "Criterion 4.3"
+      ],
+      "language": "en",
+      "indicator_text": "Prior to achieving 4.3.1, demonstration of third-party verified chain of custody and traceability for the batches of fishmeal and fish oil which are in compliance with 4.3.2.",
+      "requirement_value": "Yes",
+      "normative_text": "Indicator: Prior to achieving 4.3.1, demonstration of third-party verified chain of custody and traceability for the batches of fishmeal and fish oil which are in compliance with 4.3.2.\nRequirement: Yes\nApplicability: All",
+      "normative_subjects": [],
+      "applicability": [
+        "All"
+      ],
+      "modalities": [],
+      "negations": [],
+      "clauses": [
+        {
+          "clause_id": "4.3.3-main",
+          "parent_clause_id": null,
+          "marker": null,
+          "text": "Indicator: Prior to achieving 4.3.1, demonstration of third-party verified chain of custody and traceability for the batches of fishmeal and fish oil which are in compliance with 4.3.2.\nRequirement: Yes\nApplicability: All",
+          "joins_next": null
+        }
+      ],
+      "conditions": [
+        {
+          "text": "Prior to achieving 4.3.1",
+          "applies_to": "demonstration of third-party verified chain of custody and traceability"
+        },
+        {
+          "text": "For the first audit",
+          "applies_to": "minimum feed-data evidence period and species coverage"
+        }
+      ],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [
+        {
+          "raw_text": "a minimum of 6 months of data on feed",
+          "operator": "gte",
+          "normalized_value": 6,
+          "unit": "months",
+          "applies_to": "feed data required for the first audit",
+          "basis": "explicit",
+          "source_segment_ids": [
+            "p12-r4.3.3-client-instruction"
+          ]
+        }
+      ],
+      "dates": [
+        {
+          "text": "For the first audit",
+          "applies_to": "minimum of 6 months of feed data"
+        }
+      ],
+      "cross_references": [
+        {
+          "text": "4.3.1",
+          "target": "Indicator 4.3.1",
+          "type": "internal_exact"
+        },
+        {
+          "text": "4.3.2",
+          "target": "Indicator 4.3.2",
+          "type": "internal_exact"
+        }
+      ],
+      "footnote_refs": [],
+      "associated_instructions": [
+        {
+          "marker": null,
+          "text": "Instruction to Clients for Indicators 4.1.1 through 4.4.2 - Sourcing of Responsibly Produced Salmon Feeds\nFarms must show that all feeds used by the farm are produced in compliance with the requirements of Indicators 4.1.1 through 4.4.4. To do so, farms must obtain documentary evidence that the feed producers (see note 1) are audited at regular intervals by an independent auditing firm or a conformity assessment body against a recognized standard which substantially incorporate requirements for traceability. Acceptable certification schemes include Global GAP or other schemes that have been acknowledged by the ASC (see 4.1.1c below). Results from these audits shall demonstrate that feed producers have robust information systems and information handling processes to allow the feed producers to be able to bring forward accurate information about their production and supply chains. Declarations from the feed producer that are provided to the farm to demonstrate compliance with these indicators must be supported by the audits. Farms must also show that all of their feed producers are duly informed of the requirements of the ASC Salmon Standard relating to sourcing of responsibly produced salmon feed (see 4.1.1b below).\nIn addition to the above, farms must also show that their feed suppliers comply with the more detailed requirements for traceability and ingredient sourcing that are specified under indicators 4.1.1 through 4.4.2. The ASC Salmon Standard allows farms to use one of two different methods to demonstrate compliance of feed producers:\nMethod #1: Farms may choose to source feed from feed producers who used only those ingredients allowed under the ASC Salmon Standards during the production of a given batch of feed. For example, the farm may request its feed supplier to produce a batch of feed according to farm specifications. Audits of the feed producer will independently verify that manufacturing processes are in compliance with ASC requirements.\nMethod #2: Farms may choose to source feed from feed producers who demonstrate compliance using a \"mass-balance\" method. In this method, feed producers show that the balance of all ingredients (both amount and type) used during a given feed production period meets ASC requirements. However, mixing of ingredients into the general silos and production lines is allowed during manufacturing. Audits of the feed producer will independently verify that manufacturing processes are in compliance with ASC requirements. The mass balance method can be applied, for example, to integrated feed production companies that handle all steps of feed manufacturing (purchasing of raw materials, processing to finished feed, and sales) under the management of a single legal entity.\nNote 1: The term \"feed producer\" is used here to identify the organization that produces the fish feed (i.e., it is the \"feed manufacturer\"). In most cases, the organization supplying feed to a farm (i.e., the feed supplier) will be the same organization that produced the feed, but there may be instances where feed suppliers are not directly responsible for feed production. Regardless of whether the farm sources feeds directly from a feed producer or indirectly through an intermediary organization, it remains the farm's obligation to show evidence that all feeds used are in compliance with requirements.",
+          "effect": "method",
+          "source_segment_ids": [
+            "p11-shared-client-instruction-4.1.1-4.4.2"
+          ]
+        },
+        {
+          "marker": null,
+          "text": "Instruction to Clients for Indicator 4.3.3 - Third-Party Verification of Traceability\nIndicator 4.3.3 requires that farms show that their feed producers can demonstrate chain of custody and traceability as verified through third-party audits. Farms may submit reports from audits of feed producers (see 4.1.1c) as evidence that traceability systems are in compliance. Alternatively, farms may show that their feed producers comply with traceability requirements of Indicator 4.3.3 by submitting evidence that suppliers, and the batches of fishmeal and oil, are certified to the International Fishmeal and Fish Oil Organization's Global Standard for Responsible Supply or to the Marine Stewardship Council Chain of Custody Standard.\nFor the first audit, a minimum of 6 months of data on feed is required and evidence shall relate to species used in said dataset.",
+          "effect": "method",
+          "source_segment_ids": [
+            "p12-r4.3.3-client-instruction"
+          ]
+        }
+      ],
+      "client_actions": [
+        {
+          "marker": "a",
+          "text": "Obtain from the feed supplier documentary evidence that the origin of all fishmeal and fish oil used in the feed is traceable via a third-party verified chain of custody or traceability program.",
+          "source_segment_ids": [
+            "p12-r4.3.3-client-a"
+          ]
+        },
+        {
+          "marker": "b",
+          "text": "Ensure evidence covers all the species used (as consistent with 4.3.2a, 4.2.1a, and 4.2.2a).",
+          "source_segment_ids": [
+            "p12-r4.3.3-client-b"
+          ]
+        }
+      ],
+      "auditor_actions": [
+        {
+          "marker": "A",
+          "text": "Review evidence and confirm that a third party verified chain of custody or traceability program was used for the fishmeal and fish oil.",
+          "source_segment_ids": [
+            "p12-r4.3.3-cab-a"
+          ]
+        },
+        {
+          "marker": "B",
+          "text": "Verify that demonstration of third-party verified chain-of-custody is in place for all species used.",
+          "source_segment_ids": [
+            "p12-r4.3.3-cab-b"
+          ]
+        }
+      ],
+      "related_context_ids": [
+        "p11-shared-client-instruction-4.1.1-4.4.2",
+        "p12-r4.3.3-client-instruction"
+      ],
+      "source_segment_ids": [
+        "p12-r4.3.3-id",
+        "p12-r4.3.3-indicator",
+        "p12-r4.3.3-value",
+        "p12-r4.3.3-applicability"
+      ],
+      "source_anomalies": [],
+      "gold_notes": [
+        "The formal Requirement is the legacy audit-matrix combination of indicator_text, requirement_value and applicability; client and CAB actions remain separate provenance fields."
+      ]
+    }
+  ],
+  "excluded_regions": [
+    {
+      "source_segment_ids": [
+        "p11-footer",
+        "p12-footer"
+      ],
+      "classification": "header_footer",
+      "reason": "Repeated footer branding, copyright and page numbers are not Requirement content."
+    },
+    {
+      "source_segment_ids": [
+        "p11-principle-4",
+        "p11-criterion-4.1",
+        "p12-criterion-4.2",
+        "p12-criterion-4.3"
+      ],
+      "classification": "other_non_requirement",
+      "reason": "Principle and criterion headings establish hierarchy but are not formal Requirement evidence."
+    },
+    {
+      "source_segment_ids": [
+        "p11-audit-table-header",
+        "p12-audit-table-header-4.2",
+        "p12-audit-table-header-4.3"
+      ],
+      "classification": "other_non_requirement",
+      "reason": "Repeated client/CAB column headers are matrix structure, not Requirement content."
+    },
+    {
+      "source_segment_ids": [
+        "p11-shared-client-instruction-4.1.1-4.4.2",
+        "p12-r4.2.1-client-instruction",
+        "p12-r4.2.2-option-note",
+        "p12-r4.3.1-interim-note",
+        "p12-r4.3.2-interim-note",
+        "p12-r4.3.3-client-instruction"
+      ],
+      "classification": "other_non_requirement",
+      "reason": "Shared and indicator-specific instructions or notes are preserved through associated_instructions, but remain outside the formal legacy Requirement cell."
+    },
+    {
+      "source_segment_ids": [
+        "p11-r3.4.4-client-a",
+        "p11-r3.4.4-client-b",
+        "p11-r3.4.4-client-c",
+        "p11-r3.4.4-client-d",
+        "p11-r3.4.4-client-e",
+        "p11-r4.1.1-client-a",
+        "p11-r4.1.1-client-b",
+        "p11-r4.1.1-client-c",
+        "p11-r4.1.1-client-d",
+        "p11-r4.1.1-client-e",
+        "p12-r4.2.1-client-a",
+        "p12-r4.2.1-client-b",
+        "p12-r4.2.1-client-c",
+        "p12-r4.2.1-client-d",
+        "p12-r4.2.1-client-e",
+        "p12-r4.2.2-client-a",
+        "p12-r4.2.2-client-b",
+        "p12-r4.2.2-client-c",
+        "p12-r4.2.2-client-d",
+        "p12-r4.2.2-client-e",
+        "p12-r4.2.2-client-f",
+        "p12-r4.3.3-client-a",
+        "p12-r4.3.3-client-b"
+      ],
+      "classification": "client_action",
+      "reason": "Required client actions are linked to their Requirement but are never merged into normative_text."
+    },
+    {
+      "source_segment_ids": [
+        "p11-r3.4.4-cab-a",
+        "p11-r3.4.4-cab-b",
+        "p11-r3.4.4-cab-c",
+        "p11-r3.4.4-cab-d",
+        "p11-r3.4.4-cab-e",
+        "p11-r3.4.4-cab-f",
+        "p11-r4.1.1-cab-a",
+        "p11-r4.1.1-cab-b",
+        "p11-r4.1.1-cab-c",
+        "p11-r4.1.1-cab-d",
+        "p11-r4.1.1-cab-e",
+        "p11-r4.1.1-cab-f",
+        "p12-r4.2.1-cab-a",
+        "p12-r4.2.1-cab-b",
+        "p12-r4.2.1-cab-c",
+        "p12-r4.2.1-cab-d",
+        "p12-r4.2.1-cab-e",
+        "p12-r4.2.2-cab-a",
+        "p12-r4.2.2-cab-b",
+        "p12-r4.2.2-cab-c",
+        "p12-r4.2.2-cab-d",
+        "p12-r4.2.2-cab-e",
+        "p12-r4.2.2-cab-f",
+        "p12-r4.3.3-cab-a",
+        "p12-r4.3.3-cab-b"
+      ],
+      "classification": "auditor_action",
+      "reason": "Required CAB actions are linked to their Requirement in an independent provenance bucket and are never merged into normative_text or client actions."
+    }
+  ],
+  "summary": {
+    "requirement_count": 7,
+    "cross_page_requirement_count": 0,
+    "client_action_count": 23,
+    "auditor_action_count": 25,
+    "critical_gold_ambiguities": []
+  }
+}

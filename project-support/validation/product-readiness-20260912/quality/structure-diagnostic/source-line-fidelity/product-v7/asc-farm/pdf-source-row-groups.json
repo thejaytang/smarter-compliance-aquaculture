@@ -1,0 +1,84 @@
+{
+  "method": "source-exact-same-row/1",
+  "source_sha256": "3b0cdf01f72b518710d5af9c1d8ccaa653c381f45053c7b20a102e06c1de4b20",
+  "adapter_config_hash": "9573703c19dda8605e0d158e4f2d6a295e813a221b52db678e0d68e2d87e7a8c",
+  "offset_basis": "whitespace-normalized native text, not glyph indices",
+  "pages": [
+    {
+      "page_reference": {
+        "scope_id": "page:28",
+        "page_index": 27,
+        "page": 28
+      },
+      "native_text": "Aquaculture Stewardship Council\r\nDocument Name ASC Farm Standard Document ID ASC-STD-001 Version V1.0.1 Page 28 of 256\r\nCriterion 1.1 – Legal Compliance\r\nRationale \r\nA legal business complies with applicable laws, licensing, and permit requirements.\r\nA wide variety of laws and regulations apply to aquaculture. Ensuring national laws are followed, and \r\nnecessary permits and licences are acquired helps to promote a socially and environmentally \r\nresponsible aquaculture industry. Compliance also benefits a business by enhancing customer trust, \r\nincreasing revenue, strengthening reputation, and avoiding legal sanctions and fines4\r\n.\r\nThis criterion focuses on the legal compliance of ASC certified farms as the basis of a well-managed \r\nbusiness.\r\nIntent – The aquaculture industry complies with all applicable legal requirements.\r\nIndicators:\r\n1.1.1 The UoC shall hold all applicable legal licences and permits.\r\n1.1.2 The UoC shall comply with all applicable legal requirements, including those relevant to the \r\nCriteria within the ASC Farm Standard.\r\n4 Widjaja, G. (2024). Managing Legal and Corporate Compliance to Induce and Enhance Business. Law and Humanities \r\nQuarterly Reviews, 3(2). https://doi.org/10.31014/aior.1996.03.02.115\r\n1 Legal Compliance .1 ",
+      "groups": [
+        {
+          "operation": "source_exact_native_row",
+          "row_block_id": "block-904b32b235d02fc21d99d7d8",
+          "normalized_native_interval": [
+            538,
+            625
+          ],
+          "source_text": "increasing revenue, strengthening reputation, and avoiding legal sanctions and fines4 .",
+          "fragments": [
+            {
+              "id": "block-75533f43d48016a33a5ee9ed",
+              "type": "text",
+              "text": "increasing revenue, strengthening reputation, and avoiding legal sanctions and fines4",
+              "level": 1,
+              "parent_id": null,
+              "numbering": "",
+              "dependencies": [],
+              "source_refs": [
+                {
+                  "scope_id": "page:28",
+                  "page_index": 27,
+                  "page": 28,
+                  "bbox": [
+                    51.78683853149414,
+                    228.25994873046875,
+                    458.5419921875,
+                    237.8170166015625
+                  ],
+                  "native_id": "native_p0000_ft000014"
+                }
+              ]
+            },
+            {
+              "id": "block-8114f4a51cdb4b99079b952a",
+              "type": "text",
+              "text": ".",
+              "level": 1,
+              "parent_id": null,
+              "numbering": "",
+              "dependencies": [],
+              "source_refs": [
+                {
+                  "scope_id": "page:28",
+                  "page_index": 27,
+                  "page": 28,
+                  "bbox": [
+                    459.1224365234375,
+                    234.9541015625,
+                    460.1273193359375,
+                    235.9779052734375
+                  ],
+                  "native_id": "native_p0000_ft000015"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_reference": {
+        "scope_id": "page:29",
+        "page_index": 28,
+        "page": 29
+      },
+      "native_text": "Aquaculture Stewardship Council\r\nDocument Name ASC Farm Standard Document ID ASC-STD-001 Version V1.0.1 Page 29 of 256\r\nCriterion 1.2 – Management Systems\r\nRationale\r\nA management system supports an organisation to manage the interrelated parts of the business to \r\nachieve its objectives. Management systems include policies, processes and procedures, and vary in \r\ncomplexity depending on the organisation’s context. They can support compliance with laws and \r\nregulations, detection and resolution of issues, and monitoring of essential operational activities.\r\nThis Criterion focuses on the development of a management system for the implementation and \r\nmaintenance of ASC Requirements on ASC certified farms.\r\nIntent – The aquaculture industry continuously manages and improves processes to deliver consistent \r\nperformance against the ASC requirements.\r\nIndicators:\r\n1.2.1 The UoC shall develop, implement and maintain a management system to support the \r\nimplementation of the ASC Requirements that is appropriate to the size and complexity of \r\nthe UoC.\r\n1.2.2 The UoC shall appoint at least one member of management responsible for the \r\nimplementation of the ASC Requirements.\r\n1.2.3 The UoC shall ensure that relevant employees have the necessary skills and training to \r\nimplement the ASC Requirements.\r\n1.2.4 The UoC shall annually review the management system and revise it where necessary to \r\nensure its continued suitability, adequacy and effectiveness in implementing the ASC \r\nRequirements.\r\n1 Management Systems .2 ",
+      "groups": []
+    }
+  ]
+}

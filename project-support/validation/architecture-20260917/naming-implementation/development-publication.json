@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-17",
+  "branch": "developing-only-jay",
+  "main_unchanged_commit": "31c4cf95f1a35a4356d4a045696acf19d771cc67",
+  "scope_confirmed_by_user": true,
+  "reviewed_files": 9592,
+  "reviewed_bytes": 1065936061,
+  "credential_findings": 0,
+  "pending_cloud_files": 0,
+  "boundary_unit_tests": 4,
+  "historical_instance_ids": "Public health identifiers; not authentication credentials. Test Cookie finding was a fixed synthetic test string.",
+  "old_runtime_backups": "Kept locally, not staged",
+  "functional_app_changes": false
+}

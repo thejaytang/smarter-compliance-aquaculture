@@ -1,0 +1,22 @@
+{
+  "status": "COMPLETE",
+  "verified_utc": "2026-09-14T16:53:34.554741+00:00",
+  "original_files_and_symlinks": 260759,
+  "uploaded_unique_original_paths": 260759,
+  "missing_original_paths": 0,
+  "original_directories": 18826,
+  "original_regular_file_bytes": 59160003237,
+  "source_paths_verified_present": 8681,
+  "source_commit": "f0909e71dba5e66d9e9fccbd9ce958dbed2102b9",
+  "data_archives_verified": 766,
+  "compressed_archive_bytes_verified": 12849799576,
+  "all_archive_sizes_and_remote_sha256_match": true,
+  "per_file_manifest_reconciliation_passed": true,
+  "public": true,
+  "archived": false,
+  "release_url": "https://github.com/thejaytang/smarter-compliance-aquaculture/releases/tag/full-workspace-20260914",
+  "recovery_parts": 581,
+  "consistent_database_snapshots": 8,
+  "snapshot_scope": "Original 05 inventory captured for the 2026-09-14 upload. Subsequent live edits are separate increments.",
+  "windows_acceptance": "NOT_ESTABLISHED"
+}

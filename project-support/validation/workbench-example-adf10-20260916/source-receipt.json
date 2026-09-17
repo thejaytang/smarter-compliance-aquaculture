@@ -1,0 +1,103 @@
+{
+  "input_hashes": {
+    "example 1.md": "6bc8bbe8662e2f64d5bf557dd9fcdc0f0eb863ef14e3c449e9d81edc994b2ae4",
+    "example 1.html": "0cf90433deb57f48398290c5312d39700f52b6800c88e106ea1385039d833974",
+    "example 1 2.json": "9d59a07076c226fae90286d1d673074b43bf20630db57c5e906e90377211db21"
+  },
+  "upload": {
+    "upload_id": "8d77efeb-a5fa-4205-9f34-7600129c309d",
+    "hash": "c08d613bd0f504b9bce7c7a01cf5801b1ebdbe6a76bfd16295a34b50e75b8ac4",
+    "size": 930,
+    "message": "File staged and format check passed. Verify its identity, completeness and permissions before submitting."
+  },
+  "manual_request": {
+    "request_id": "aca6bc39-48c3-416b-a0d8-39fad97cea7b",
+    "task_id": "COLLAB-5aafde90-6d9f-5122-ae73-1bd85ed32128",
+    "revision": "837fba924f0bb1414a56b96740e87bcfd5d76f9bca4c6561863a861edc2355c5",
+    "source_revision": "a52247121960aead66ca",
+    "action": "manual",
+    "note": "User explicitly replaces the Workbench example with the supplied ADF-10 excerpt. This is a training excerpt, not a complete legal document or a legal review. Only file-format wrappers were removed; Norwegian text and chapter links are unchanged.",
+    "upload_id": "8d77efeb-a5fa-4205-9f34-7600129c309d",
+    "identity_verified": true,
+    "permission_verified": true,
+    "explicit_confirmation": true
+  },
+  "manual": {
+    "status": "applied",
+    "message": "决定已写入，来源待办及统计已更新。"
+  },
+  "source": {
+    "source_id": "PE001",
+    "source_title": "example",
+    "snapshot_id": "PE001-002",
+    "content_hash": "c08d613bd0f504b9bce7c7a01cf5801b1ebdbe6a76bfd16295a34b50e75b8ac4",
+    "effective_selection": "INCLUDE"
+  },
+  "open_request": {
+    "request_id": "c5570c58-1a6b-4355-a782-f3ceea64a902",
+    "source_id": "PE001"
+  },
+  "material": {
+    "association_review_required": false,
+    "blocks": [],
+    "checked_scope": [],
+    "collaboration_provenance": [],
+    "confirmation": null,
+    "content_revision": 0,
+    "content_status": "not_extracted",
+    "created_at": "2026-09-16T14:42:06.790655+00:00",
+    "id": "ad7738ca612922619d85d725080cc26e",
+    "issues": [],
+    "last_action": {
+      "actor": "source_intake",
+      "at": "2026-09-16T14:42:06.790665+00:00",
+      "kind": "opened"
+    },
+    "legacy": null,
+    "provenance_version": 1,
+    "requirement_status": "not_connected",
+    "revision": 0,
+    "scope": [
+      {
+        "id": "html:document",
+        "kind": "html",
+        "label": "Complete saved HTML document",
+        "location": {
+          "anchor": "original-document"
+        }
+      }
+    ],
+    "source": {
+      "assessment_id": null,
+      "content_hash": "c08d613bd0f504b9bce7c7a01cf5801b1ebdbe6a76bfd16295a34b50e75b8ac4",
+      "download_status": "SUCCESS",
+      "file_format": "html",
+      "operator_selection_decision": "INCLUDE",
+      "parsing_copy_of": null,
+      "registry_kind": "sqlite_snapshot",
+      "registry_sha256": "e34c09d6b506f367e8a595ac0a2a4d514ff609cfb50fdd6f1a836e9b9536a8f1",
+      "relative_path": "E_Project_Engineering/PE001-002_example.html",
+      "selection_origin": "human",
+      "selection_status": "INCLUDE",
+      "snapshot_id": "PE001-002",
+      "snapshot_status": "STORED",
+      "source_id": "PE001",
+      "source_status": "CURRENT"
+    },
+    "source_stale": false,
+    "title": "example",
+    "updated_at": "2026-09-16T14:42:06.790665+00:00",
+    "candidates": [],
+    "conflicts": [],
+    "related_versions": [],
+    "source_issues": [],
+    "collaboration": {
+      "mode": "coordinator",
+      "view": "personal",
+      "draft_revision": 0,
+      "coordinator": "Weijie Tang",
+      "master_digest": "6a6227c8537370b93ee8f9a68b47bda827e792b4b5a9185d2fec52f00d56d3d3",
+      "provenance": []
+    }
+  }
+}

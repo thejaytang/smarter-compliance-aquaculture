@@ -1,0 +1,126 @@
+- generic [active] [ref=f41e1]:
+  - link "Skip to content" [ref=f41e2] [cursor=pointer]:
+    - /url: "#main"
+  - complementary [ref=f41e3]:
+    - generic [ref=f41e8]:
+      - text: Smarter Compliance
+      - generic [ref=f41e9]: Requirement workbench
+    - navigation "System navigation" [ref=f41e10]:
+      - button "Overview All three systems" [ref=f41e11] [cursor=pointer]:
+        - text: Overview
+        - generic [ref=f41e12]: All three systems
+      - generic [ref=f41e13]:
+        - button "System1 Source management" [expanded] [ref=f41e14] [cursor=pointer]:
+          - text: System1
+          - generic [aria-hidden] [ref=f41e15]: ⌄
+          - generic [ref=f41e16]: Source management
+        - generic [ref=f41e17]:
+          - button "Pending review" [ref=f41e18] [cursor=pointer]
+          - button "Review history" [ref=f41e19] [cursor=pointer]
+      - button "Materials Human content review" [ref=f41e21] [cursor=pointer]:
+        - text: Materials
+        - generic [aria-hidden] [ref=f41e22]: ⌄
+        - generic [ref=f41e23]: Human content review
+      - button "System3 Semantic enrichment" [ref=f41e25] [cursor=pointer]:
+        - text: System3
+        - generic [aria-hidden] [ref=f41e26]: ⌄
+        - generic [ref=f41e27]: Semantic enrichment
+    - generic [ref=f41e28]:
+      - text: Local workspace
+      - button "Exit workbench" [ref=f41e30] [cursor=pointer]
+  - generic [ref=f41e31]:
+    - banner [ref=f41e32]:
+      - generic [ref=f41e33]:
+        - button "Collapse navigation" [expanded] [ref=f41e34] [cursor=pointer]: ☰
+        - heading "Requirement overview" [level=1] [ref=f41e35]
+      - button "Runtime starting" [ref=f41e36] [cursor=pointer]
+      - generic [ref=f41e37]:
+        - generic [ref=f41e38]: Current reviewer
+        - generic [ref=f41e39]:
+          - combobox "Current reviewer" [ref=f41e40]:
+            - option "Select a reviewer" [selected]
+            - option "Ana Jokic"
+            - option "Daniel Restad"
+            - option "Weijie Tang"
+          - button "Use this name" [ref=f41e41] [cursor=pointer]
+    - main [ref=f41e42]:
+      - generic [ref=f41e43]:
+        - generic [ref=f41e44]:
+          - generic [ref=f41e45]: Sources → Human content review → Reserved Requirement processing
+          - generic [ref=f41e46]: Data read at 12 Sept, 17:06
+        - paragraph [ref=f41e47]: Read the saved original, correct extracted content and explicitly confirm each material. Requirement structuring is not connected.
+        - region "Three-system workflow" [ref=f41e48]:
+          - article [ref=f41e49]:
+            - generic [ref=f41e50]:
+              - generic [ref=f41e51]: System1
+              - generic [ref=f41e52]: Live review
+            - heading "Source management" [level=2] [ref=f41e53]
+            - paragraph [ref=f41e54]: Select and maintain trustworthy original sources.
+            - generic [ref=f41e55]:
+              - generic [ref=f41e56]: "0"
+              - generic [ref=f41e57]: Sources awaiting review
+            - generic [ref=f41e58]:
+              - generic [ref=f41e59]:
+                - term [ref=f41e60]: Registered sources
+                - definition [ref=f41e61]: "1"
+              - generic [ref=f41e62]:
+                - term [ref=f41e63]: Included sources
+                - definition [ref=f41e64]: "1"
+            - paragraph [ref=f41e65]: Review source ratings, original files and reported issues.
+            - button "Review sources" [ref=f41e66] [cursor=pointer]
+          - article [ref=f41e67]:
+            - generic [ref=f41e68]:
+              - generic [ref=f41e69]: Material workbench
+              - generic [ref=f41e70]: Select reviewer
+            - heading "Material content review" [level=2] [ref=f41e71]
+            - paragraph [ref=f41e72]: Read, correct, save and confirm one source material at a time.
+            - generic [ref=f41e73]:
+              - generic [ref=f41e74]: Select reviewer
+              - generic [ref=f41e75]: Current materials awaiting content review
+            - generic [ref=f41e76]:
+              - generic [ref=f41e77]:
+                - term [ref=f41e78]: Opened material snapshots
+                - definition [ref=f41e79]: –
+              - generic [ref=f41e80]:
+                - term [ref=f41e81]: Current content reviews complete
+                - definition [ref=f41e82]: –
+              - generic [ref=f41e83]:
+                - term [ref=f41e84]: Registered sources available to open
+                - definition [ref=f41e85]: –
+              - generic [ref=f41e86]:
+                - term [ref=f41e87]: Historical source snapshots
+                - definition [ref=f41e88]: –
+            - paragraph [ref=f41e89]: Choose your name above to open personal material work.
+            - button "Open materials" [ref=f41e90] [cursor=pointer]
+          - article [ref=f41e91]:
+            - generic [ref=f41e92]:
+              - generic [ref=f41e93]: Structured requirements
+              - generic [ref=f41e94]: Not connected
+            - heading "Structure and processor pending" [level=2] [ref=f41e95]
+            - paragraph [ref=f41e96]: Reserved for future precise processing and form-based human review.
+            - generic [ref=f41e97]:
+              - generic [ref=f41e98]: Not connected
+              - generic [ref=f41e99]: Requirement structuring unavailable
+            - generic [ref=f41e100]:
+              - generic [ref=f41e101]:
+                - term [ref=f41e102]: Processor connection
+                - definition [ref=f41e103]: Not connected
+              - generic [ref=f41e104]:
+                - term [ref=f41e105]: Final structure
+                - definition [ref=f41e106]: Pending user specification
+            - paragraph [ref=f41e107]: Process is disabled. Content review can finish independently; no completed structured-Requirement output is claimed.
+            - button "View reserved workspace" [ref=f41e108] [cursor=pointer]
+        - paragraph [ref=f41e109]:
+          - text: Historical extraction records remain available in
+          - button "Legacy review" [ref=f41e110] [cursor=pointer]
+          - text: and
+          - button "Legacy history" [ref=f41e111] [cursor=pointer]
+          - text: .
+        - group [ref=f41e112]:
+          - generic "Retained weekly inspection records" [ref=f41e113] [cursor=pointer]
+        - group [ref=f41e114]:
+          - generic "System1 details Source selection, originals and review priorities" [ref=f41e115] [cursor=pointer]:
+            - strong [ref=f41e116]: System1 details
+            - generic [ref=f41e117]: Source selection, originals and review priorities
+        - group [ref=f41e118]:
+          - generic "Metric definitions and data sources" [ref=f41e119] [cursor=pointer]

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "zip_sha256": "c77baecd1a6f9dcb67d74f60c0c23d6d14e8db60b3acecaa652cb00026fc4929",
+  "zip_bytes": 1293156,
+  "zip_members": 351,
+  "repository_files_byte_matched": 349,
+  "generated_entries": 2,
+  "separate_work_packages_verified": 3,
+  "runtime_environments_databases_and_live_config_excluded": true,
+  "windows_acceptance": "PENDING_ACTUAL_WINDOWS",
+  "transmission": "NOT_SENT"
+}

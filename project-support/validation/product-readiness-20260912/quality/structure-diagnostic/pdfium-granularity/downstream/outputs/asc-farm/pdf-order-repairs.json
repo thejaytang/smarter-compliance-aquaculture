@@ -1,0 +1,216 @@
+{
+  "method": "same-row-before-body/1",
+  "source_sha256": "3b0cdf01f72b518710d5af9c1d8ccaa653c381f45053c7b20a102e06c1de4b20",
+  "operations": [
+    {
+      "operation": "marker_before_adjacent_same_row_text",
+      "marker_block_id": "block-8aff8d999ece30fbf8c92219",
+      "body_block_id": "block-587017bf1fd3ae3f5b5ef698",
+      "horizontal_gap_points": 40.269805908203125,
+      "vertical_overlap_ratio": 0.8049657670136859,
+      "marker_source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            53.9782829284668,
+            386.70196533203125,
+            77.74620056152344,
+            396.62823486328125
+          ],
+          "native_id": "native_p0000_ft000020"
+        }
+      ],
+      "body_source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            118.01600646972656,
+            385.0519714355469,
+            384.875,
+            393.5119934082031
+          ],
+          "native_id": "native_p0000_ft000021"
+        }
+      ]
+    },
+    {
+      "operation": "marker_before_adjacent_same_row_text",
+      "marker_block_id": "block-7a506db12a79dff9aabd6e7d",
+      "body_block_id": "block-cfbed504a73c9c10a2432c47",
+      "horizontal_gap_points": 37.48988342285156,
+      "vertical_overlap_ratio": 0.8225187397643732,
+      "marker_source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            53.9782829284668,
+            434.1934814453125,
+            80.526123046875,
+            444.2882385253906
+          ],
+          "native_id": "native_p0000_ft000022"
+        }
+      ],
+      "body_source_refs": [
+        {
+          "scope_id": "page:28",
+          "page_index": 27,
+          "page": 28,
+          "bbox": [
+            118.01600646972656,
+            432.6919860839844,
+            532.5562133789062,
+            441.1520080566406
+          ],
+          "native_id": "native_p0000_ft000023"
+        }
+      ]
+    },
+    {
+      "operation": "marker_before_adjacent_same_row_text",
+      "marker_block_id": "block-3c8384e1edb9fad7b9c71a05",
+      "body_block_id": "block-1a0f2a317f8ef6c9ebb46a68",
+      "horizontal_gap_points": 37.24833679199219,
+      "vertical_overlap_ratio": 0.8248815012012207,
+      "marker_source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            53.9782829284668,
+            383.4134826660156,
+            80.52766418457031,
+            393.50823974609375
+          ],
+          "native_id": "native_p0001_ft000019"
+        }
+      ],
+      "body_source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            117.7760009765625,
+            381.9319763183594,
+            511.81414794921875,
+            390.3919982910156
+          ],
+          "native_id": "native_p0001_ft000020"
+        }
+      ]
+    },
+    {
+      "operation": "marker_before_adjacent_same_row_text",
+      "marker_block_id": "block-8bb8ad61351254613cf714b0",
+      "body_block_id": "block-e78c62cd2de3647458096dcc",
+      "horizontal_gap_points": 34.348419189453125,
+      "vertical_overlap_ratio": 0.8205151206349662,
+      "marker_source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            53.9782829284668,
+            453.27349853515625,
+            83.42758178710938,
+            463.3682556152344
+          ],
+          "native_id": "native_p0001_ft000023"
+        }
+      ],
+      "body_source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            117.7760009765625,
+            451.7469787597656,
+            477.87506103515625,
+            460.2519836425781
+          ],
+          "native_id": "native_p0001_ft000024"
+        }
+      ]
+    },
+    {
+      "operation": "marker_before_adjacent_same_row_text",
+      "marker_block_id": "block-aee19a6dcb8b06901403bc61",
+      "body_block_id": "block-2c3d9936ea2d9d46d1111b76",
+      "horizontal_gap_points": 34.39796447753906,
+      "vertical_overlap_ratio": 0.8254345527899836,
+      "marker_source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            53.9782829284668,
+            507.8735046386719,
+            83.37803649902344,
+            518.0244445800781
+          ],
+          "native_id": "native_p0001_ft000026"
+        }
+      ],
+      "body_source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            117.7760009765625,
+            506.3919677734375,
+            510.75103759765625,
+            514.8789672851562
+          ],
+          "native_id": "native_p0001_ft000027"
+        }
+      ]
+    },
+    {
+      "operation": "marker_before_adjacent_same_row_text",
+      "marker_block_id": "block-61cadc19e78ad4893ab734a0",
+      "body_block_id": "block-3076c5883f7c901ec227a062",
+      "horizontal_gap_points": 33.12031555175781,
+      "vertical_overlap_ratio": 0.8248815012012207,
+      "marker_source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            53.9782829284668,
+            562.3534851074219,
+            84.65568542480469,
+            572.4482421875
+          ],
+          "native_id": "native_p0001_ft000029"
+        }
+      ],
+      "body_source_refs": [
+        {
+          "scope_id": "page:29",
+          "page_index": 28,
+          "page": 29,
+          "bbox": [
+            117.7760009765625,
+            560.8719787597656,
+            517.529052734375,
+            569.3320007324219
+          ],
+          "native_id": "native_p0001_ft000030"
+        }
+      ]
+    }
+  ]
+}

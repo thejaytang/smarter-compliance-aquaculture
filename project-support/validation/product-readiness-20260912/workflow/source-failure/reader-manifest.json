@@ -1,0 +1,31 @@
+{
+  "scope": "Isolated TS004 pinned HTML only; no original bytes rewritten, no DB mutation by harness",
+  "database": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/collaboration/personal/f9daf58e-521e-4c80-9fbd-93db1dd3b9ec/workflow.sqlite",
+  "pin": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/collaboration/personal/f9daf58e-521e-4c80-9fbd-93db1dd3b9ec/material-originals/4156dd8844430fb21f40b92cf67d70c1b539f29bc6e5306aec17be95903752fe.html",
+  "held": "workbench/runtime/product-readiness-20260912/ui-fault-fixture/workbench/runtime/collaboration/personal/f9daf58e-521e-4c80-9fbd-93db1dd3b9ec/material-originals/4156dd8844430fb21f40b92cf67d70c1b539f29bc6e5306aec17be95903752fe.html.engineering-held",
+  "original_sha256": "4156dd8844430fb21f40b92cf67d70c1b539f29bc6e5306aec17be95903752fe",
+  "backup_sha256": "6dd5ce4f57615a5703af6c33ab62c25463e85e83795d9ab7bfd0114487f8051f",
+  "before_revision": 8,
+  "events": [
+    {
+      "action": "worker-lock-held-original-still-readable",
+      "time": "2026-09-13T17:32:08.012648+00:00"
+    },
+    {
+      "action": "original-temporarily-unavailable",
+      "time": "2026-09-13T17:32:17.089624+00:00"
+    },
+    {
+      "action": "original-restored-and-hash-verified",
+      "time": "2026-09-13T17:33:20.799717+00:00"
+    },
+    {
+      "action": "original-restored-and-hash-verified",
+      "time": "2026-09-13T17:33:20.800295+00:00"
+    },
+    {
+      "action": "fault-controller-finished",
+      "time": "2026-09-13T17:33:20.800455+00:00"
+    }
+  ]
+}

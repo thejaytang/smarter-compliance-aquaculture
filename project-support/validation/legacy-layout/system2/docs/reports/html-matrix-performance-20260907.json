@@ -1,0 +1,31 @@
+{
+  "samples": [
+    {
+      "source_id": "PA002",
+      "seconds": 0.099,
+      "canonical_equal_except_parser_version": true,
+      "before_approx_seconds": 0.147
+    },
+    {
+      "source_id": "PA005",
+      "seconds": 0.096,
+      "canonical_equal_except_parser_version": true,
+      "before_approx_seconds": 0.08
+    },
+    {
+      "source_id": "PA015",
+      "seconds": 0.049,
+      "canonical_equal_except_parser_version": true,
+      "before_approx_seconds": 0.053
+    },
+    {
+      "source_id": "PA047",
+      "seconds": 1.768,
+      "canonical_equal_except_parser_version": true,
+      "before_approx_seconds": 43.509
+    }
+  ],
+  "parser_before_sha256": "6796ac69eeb4cfe60ba4933844af956be427b3a773ccaf8a550ec576789770f1",
+  "parser_after_sha256": "b7c61b5a8b65283d355084e086aa2ad3f2701d2e9a747e3411cc7ec9b85cf4aa",
+  "timing_caveat": "Before: filesystem directory birth to result write. After: monotonic elapsed. Single local observation, not a controlled benchmark."
+}

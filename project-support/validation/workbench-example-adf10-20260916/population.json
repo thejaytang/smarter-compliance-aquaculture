@@ -1,0 +1,2352 @@
+{
+  "content": {
+    "status": "applied",
+    "material": {
+      "association_review_required": true,
+      "blocks": [
+        {
+          "id": "0eb5f3ec-09cd-5212-8402-8ced24eb1355",
+          "type": "text",
+          "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6, skal driftsjournalen minst inneholde oppdaterte opplysninger om:",
+          "source_refs": [
+            {
+              "scope_id": "html:document",
+              "anchor": "original-ba8bfb5569299e4e"
+            }
+          ],
+          "parent_id": null,
+          "dependencies": [],
+          "markdown": {
+            "version": 1,
+            "source": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i [kapittel 4](https://lovdata.no/forskrift/2008-06-17-822/kap4), [kapittel 5](https://lovdata.no/forskrift/2008-06-17-822/kap5) og [kapittel 6](https://lovdata.no/forskrift/2008-06-17-822/kap6), skal driftsjournalen minst inneholde oppdaterte opplysninger om:",
+            "baseline": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i [kapittel 4](https://lovdata.no/forskrift/2008-06-17-822/kap4), [kapittel 5](https://lovdata.no/forskrift/2008-06-17-822/kap5) og [kapittel 6](https://lovdata.no/forskrift/2008-06-17-822/kap6), skal driftsjournalen minst inneholde oppdaterte opplysninger om:"
+          }
+        },
+        {
+          "id": "50ea184a-c54a-5c29-90d5-b39c5b2a1acc",
+          "type": "text",
+          "text": "akvakulturdyr og akvakulturdyrprodukter tatt inn til og ut fra akvakulturanlegget, inkludert opprinnelsessted og mottakssted,",
+          "source_refs": [
+            {
+              "scope_id": "html:document",
+              "anchor": "original-d87cc27cdd367a8a"
+            }
+          ],
+          "parent_id": null,
+          "dependencies": [],
+          "markdown": {
+            "version": 1,
+            "source": "- akvakulturdyr og akvakulturdyrprodukter tatt inn til og ut fra akvakulturanlegget, inkludert opprinnelsessted og mottakssted,",
+            "baseline": "- akvakulturdyr og akvakulturdyrprodukter tatt inn til og ut fra akvakulturanlegget, inkludert opprinnelsessted og mottakssted,"
+          }
+        },
+        {
+          "id": "03633fdc-7274-5f12-ab48-a54e4eaf470b",
+          "type": "text",
+          "text": "dødelighet per produksjonsenhet som er relevant for produksjonsformen, og",
+          "source_refs": [
+            {
+              "scope_id": "html:document",
+              "anchor": "original-fcda0061e03730ec"
+            }
+          ],
+          "parent_id": null,
+          "dependencies": [],
+          "markdown": {
+            "version": 1,
+            "source": "- dødelighet per produksjonsenhet som er relevant for produksjonsformen, og",
+            "baseline": "- dødelighet per produksjonsenhet som er relevant for produksjonsformen, og"
+          }
+        },
+        {
+          "id": "514ba39f-34c5-56a8-9c15-4cbd5d9e89b7",
+          "type": "text",
+          "text": "resultater av gjennomførte helsekontroller: antall gjennomførte helsekontroller, prøveuttak, foretatte undersøkelser, diagnoser og gjennomførte behandlinger.",
+          "source_refs": [
+            {
+              "scope_id": "html:document",
+              "anchor": "original-ddfbeb5f67b15c57"
+            }
+          ],
+          "parent_id": null,
+          "dependencies": [],
+          "markdown": {
+            "version": 1,
+            "source": "- resultater av gjennomførte helsekontroller: antall gjennomførte helsekontroller, prøveuttak, foretatte undersøkelser, diagnoser og gjennomførte behandlinger.",
+            "baseline": "- resultater av gjennomførte helsekontroller: antall gjennomførte helsekontroller, prøveuttak, foretatte undersøkelser, diagnoser og gjennomførte behandlinger."
+          }
+        }
+      ],
+      "checked_scope": [],
+      "collaboration_provenance": [
+        {
+          "path": "/blocks/0eb5f3ec-09cd-5212-8402-8ced24eb1355",
+          "origin": "human",
+          "actor": "Weijie Tang",
+          "selected_by": null,
+          "candidate_id": null,
+          "content_revision": 1,
+          "at": "2026-09-16T14:45:11.087263+00:00",
+          "source_hash": "c08d613bd0f504b9bce7c7a01cf5801b1ebdbe6a76bfd16295a34b50e75b8ac4",
+          "source_refs": [
+            {
+              "scope_id": "html:document",
+              "anchor": "original-ba8bfb5569299e4e"
+            }
+          ],
+          "status": "human_unreviewed"
+        },
+        {
+          "path": "/blocks/50ea184a-c54a-5c29-90d5-b39c5b2a1acc",
+          "origin": "human",
+          "actor": "Weijie Tang",
+          "selected_by": null,
+          "candidate_id": null,
+          "content_revision": 1,
+          "at": "2026-09-16T14:45:11.087263+00:00",
+          "source_hash": "c08d613bd0f504b9bce7c7a01cf5801b1ebdbe6a76bfd16295a34b50e75b8ac4",
+          "source_refs": [
+            {
+              "scope_id": "html:document",
+              "anchor": "original-d87cc27cdd367a8a"
+            }
+          ],
+          "status": "human_unreviewed"
+        },
+        {
+          "path": "/blocks/03633fdc-7274-5f12-ab48-a54e4eaf470b",
+          "origin": "human",
+          "actor": "Weijie Tang",
+          "selected_by": null,
+          "candidate_id": null,
+          "content_revision": 1,
+          "at": "2026-09-16T14:45:11.087263+00:00",
+          "source_hash": "c08d613bd0f504b9bce7c7a01cf5801b1ebdbe6a76bfd16295a34b50e75b8ac4",
+          "source_refs": [
+            {
+              "scope_id": "html:document",
+              "anchor": "original-fcda0061e03730ec"
+            }
+          ],
+          "status": "human_unreviewed"
+        },
+        {
+          "path": "/blocks/514ba39f-34c5-56a8-9c15-4cbd5d9e89b7",
+          "origin": "human",
+          "actor": "Weijie Tang",
+          "selected_by": null,
+          "candidate_id": null,
+          "content_revision": 1,
+          "at": "2026-09-16T14:45:11.087263+00:00",
+          "source_hash": "c08d613bd0f504b9bce7c7a01cf5801b1ebdbe6a76bfd16295a34b50e75b8ac4",
+          "source_refs": [
+            {
+              "scope_id": "html:document",
+              "anchor": "original-ddfbeb5f67b15c57"
+            }
+          ],
+          "status": "human_unreviewed"
+        }
+      ],
+      "confirmation": null,
+      "content_revision": 1,
+      "content_status": "draft",
+      "created_at": "2026-09-16T14:42:06.790655+00:00",
+      "id": "ad7738ca612922619d85d725080cc26e",
+      "issues": [],
+      "last_action": {
+        "kind": "saved",
+        "actor": "Weijie Tang",
+        "at": "2026-09-16T14:45:11.087263+00:00"
+      },
+      "legacy": null,
+      "provenance_version": 1,
+      "requirement_status": "not_connected",
+      "revision": 1,
+      "scope": [
+        {
+          "id": "html:document",
+          "kind": "html",
+          "label": "Complete saved HTML document",
+          "location": {
+            "anchor": "original-document"
+          }
+        }
+      ],
+      "source": {
+        "assessment_id": null,
+        "content_hash": "c08d613bd0f504b9bce7c7a01cf5801b1ebdbe6a76bfd16295a34b50e75b8ac4",
+        "download_status": "SUCCESS",
+        "file_format": "html",
+        "operator_selection_decision": "INCLUDE",
+        "parsing_copy_of": null,
+        "registry_kind": "sqlite_snapshot",
+        "registry_sha256": "e34c09d6b506f367e8a595ac0a2a4d514ff609cfb50fdd6f1a836e9b9536a8f1",
+        "relative_path": "E_Project_Engineering/PE001-002_example.html",
+        "selection_origin": "human",
+        "selection_status": "INCLUDE",
+        "snapshot_id": "PE001-002",
+        "snapshot_status": "STORED",
+        "source_id": "PE001",
+        "source_status": "CURRENT"
+      },
+      "source_stale": false,
+      "title": "example",
+      "updated_at": "2026-09-16T14:45:11.087263+00:00",
+      "review_impact": {
+        "from_content_revision": 0,
+        "affected_scope": [
+          "html:document"
+        ],
+        "retained_scope": [],
+        "affected_blocks": [
+          "03633fdc-7274-5f12-ab48-a54e4eaf470b",
+          "0eb5f3ec-09cd-5212-8402-8ced24eb1355",
+          "50ea184a-c54a-5c29-90d5-b39c5b2a1acc",
+          "514ba39f-34c5-56a8-9c15-4cbd5d9e89b7"
+        ],
+        "structural": true,
+        "full_review_required": false,
+        "reason": "structure_or_dependency_changed"
+      },
+      "review_checks": {},
+      "candidates": [],
+      "related_versions": [],
+      "conflicts": [],
+      "source_issues": [],
+      "collaboration": {
+        "mode": "coordinator",
+        "view": "personal",
+        "draft_revision": 1,
+        "coordinator": "Weijie Tang",
+        "master_digest": "6a6227c8537370b93ee8f9a68b47bda827e792b4b5a9185d2fec52f00d56d3d3",
+        "provenance": [
+          {
+            "path": "/blocks/0eb5f3ec-09cd-5212-8402-8ced24eb1355",
+            "origin": "human",
+            "actor": "Weijie Tang",
+            "selected_by": null,
+            "candidate_id": null,
+            "content_revision": 1,
+            "at": "2026-09-16T14:45:11.087263+00:00",
+            "source_hash": "c08d613bd0f504b9bce7c7a01cf5801b1ebdbe6a76bfd16295a34b50e75b8ac4",
+            "source_refs": [
+              {
+                "scope_id": "html:document",
+                "anchor": "original-ba8bfb5569299e4e"
+              }
+            ],
+            "status": "human_unreviewed"
+          },
+          {
+            "path": "/blocks/50ea184a-c54a-5c29-90d5-b39c5b2a1acc",
+            "origin": "human",
+            "actor": "Weijie Tang",
+            "selected_by": null,
+            "candidate_id": null,
+            "content_revision": 1,
+            "at": "2026-09-16T14:45:11.087263+00:00",
+            "source_hash": "c08d613bd0f504b9bce7c7a01cf5801b1ebdbe6a76bfd16295a34b50e75b8ac4",
+            "source_refs": [
+              {
+                "scope_id": "html:document",
+                "anchor": "original-d87cc27cdd367a8a"
+              }
+            ],
+            "status": "human_unreviewed"
+          },
+          {
+            "path": "/blocks/03633fdc-7274-5f12-ab48-a54e4eaf470b",
+            "origin": "human",
+            "actor": "Weijie Tang",
+            "selected_by": null,
+            "candidate_id": null,
+            "content_revision": 1,
+            "at": "2026-09-16T14:45:11.087263+00:00",
+            "source_hash": "c08d613bd0f504b9bce7c7a01cf5801b1ebdbe6a76bfd16295a34b50e75b8ac4",
+            "source_refs": [
+              {
+                "scope_id": "html:document",
+                "anchor": "original-fcda0061e03730ec"
+              }
+            ],
+            "status": "human_unreviewed"
+          },
+          {
+            "path": "/blocks/514ba39f-34c5-56a8-9c15-4cbd5d9e89b7",
+            "origin": "human",
+            "actor": "Weijie Tang",
+            "selected_by": null,
+            "candidate_id": null,
+            "content_revision": 1,
+            "at": "2026-09-16T14:45:11.087263+00:00",
+            "source_hash": "c08d613bd0f504b9bce7c7a01cf5801b1ebdbe6a76bfd16295a34b50e75b8ac4",
+            "source_refs": [
+              {
+                "scope_id": "html:document",
+                "anchor": "original-ddfbeb5f67b15c57"
+              }
+            ],
+            "status": "human_unreviewed"
+          }
+        ]
+      }
+    }
+  },
+  "R1": {
+    "status": "saved",
+    "document": {
+      "id": "3913d5bd-bfe2-5c2e-9a10-062c4b90f686",
+      "material_id": "ad7738ca612922619d85d725080cc26e",
+      "revision": 1,
+      "phase": "complete",
+      "block_id": "0eb5f3ec-09cd-5212-8402-8ced24eb1355",
+      "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6, skal driftsjournalen minst inneholde oppdaterte opplysninger om:",
+      "source": {
+        "assessment_id": null,
+        "content_hash": "c08d613bd0f504b9bce7c7a01cf5801b1ebdbe6a76bfd16295a34b50e75b8ac4",
+        "download_status": "SUCCESS",
+        "file_format": "html",
+        "operator_selection_decision": "INCLUDE",
+        "parsing_copy_of": null,
+        "registry_kind": "sqlite_snapshot",
+        "registry_sha256": "e34c09d6b506f367e8a595ac0a2a4d514ff609cfb50fdd6f1a836e9b9536a8f1",
+        "relative_path": "E_Project_Engineering/PE001-002_example.html",
+        "selection_origin": "human",
+        "selection_status": "INCLUDE",
+        "snapshot_id": "PE001-002",
+        "snapshot_status": "STORED",
+        "source_id": "PE001",
+        "source_status": "CURRENT"
+      },
+      "source_refs": [
+        {
+          "anchor": "original-ba8bfb5569299e4e",
+          "scope_id": "html:document"
+        }
+      ],
+      "material_revision": 1,
+      "chapter": "",
+      "title": "example",
+      "roots": [
+        1,
+        "0a40a0e6-94b6-5e6f-b13d-963462c5eab5"
+      ],
+      "units": {
+        "0a40a0e6-94b6-5e6f-b13d-963462c5eab5": {
+          "id": "0a40a0e6-94b6-5e6f-b13d-963462c5eab5",
+          "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6, skal driftsjournalen minst inneholde oppdaterte opplysninger om:",
+          "Subject": null,
+          "Modal Verb": null,
+          "Main Verb": null,
+          "Object": null,
+          "conditions": null,
+          "exceptions": null,
+          "subrequirement": null
+        }
+      },
+      "spans": {
+        "0a40a0e6-94b6-5e6f-b13d-963462c5eab5": [
+          0,
+          186
+        ]
+      },
+      "done": [
+        "0a40a0e6-94b6-5e6f-b13d-963462c5eab5"
+      ],
+      "roles": {
+        "0a40a0e6-94b6-5e6f-b13d-963462c5eab5": "requirement"
+      },
+      "field_spans": {},
+      "reference_evidence": {},
+      "source_segments": [
+        {
+          "block_id": "0eb5f3ec-09cd-5212-8402-8ced24eb1355",
+          "start": 0,
+          "end": 186,
+          "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6, skal driftsjournalen minst inneholde oppdaterte opplysninger om:",
+          "source_refs": [
+            {
+              "anchor": "original-ba8bfb5569299e4e",
+              "scope_id": "html:document"
+            }
+          ]
+        }
+      ],
+      "labels": {
+        "0a40a0e6-94b6-5e6f-b13d-963462c5eab5": "R1"
+      },
+      "structures": {
+        "0a40a0e6-94b6-5e6f-b13d-963462c5eab5": {
+          "id": "0a40a0e6-94b6-5e6f-b13d-963462c5eab5/structure",
+          "kind": "clause",
+          "span": [
+            0,
+            186
+          ],
+          "children": [
+            {
+              "id": "63869eee-64b3-5a1e-a292-7ab791565172",
+              "kind": "group",
+              "role": "Subject",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "a2d0e8cf-fe84-57a3-ab09-5dd024df89e5",
+                  "kind": "fragment",
+                  "role": "Subject",
+                  "span": [
+                    127,
+                    142
+                  ],
+                  "text": "driftsjournalen"
+                }
+              ]
+            },
+            {
+              "id": "e4633ef7-d95c-5625-8b03-8f091858eee4",
+              "kind": "group",
+              "role": "Modal Verb",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "42481f0f-124a-50d5-ab19-35ed1d944e41",
+                  "kind": "fragment",
+                  "role": "Modal Verb",
+                  "span": [
+                    122,
+                    126
+                  ],
+                  "text": "skal"
+                }
+              ]
+            },
+            {
+              "id": "443a0433-db69-5b57-a298-25f53495f851",
+              "kind": "group",
+              "role": "Main Verb",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "339b9f5e-6b43-5a28-8c00-457671d23113",
+                  "kind": "fragment",
+                  "role": "Main Verb",
+                  "span": [
+                    149,
+                    158
+                  ],
+                  "text": "inneholde"
+                }
+              ]
+            },
+            {
+              "id": "9d95222e-0c5b-565b-8e81-b2a5af939bbf",
+              "kind": "group",
+              "role": "Object",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "5c2f1d28-3079-5073-bd3c-4c2211371923",
+                  "kind": "fragment",
+                  "role": "Object",
+                  "span": [
+                    159,
+                    182
+                  ],
+                  "text": "oppdaterte opplysninger"
+                }
+              ]
+            },
+            {
+              "id": "d83d9d82-efcb-59b4-b52d-bee67cc18d23",
+              "kind": "group",
+              "role": "conditions",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "fb341371-573c-5d75-8f37-dfb1d12f1368",
+                  "kind": "fragment",
+                  "role": "conditions",
+                  "span": [
+                    0,
+                    120
+                  ],
+                  "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "structure_schema": "requirement-structure/1",
+      "saved_at": "2026-09-16T14:45:14.243097+00:00",
+      "structure_views": {
+        "0a40a0e6-94b6-5e6f-b13d-963462c5eab5": {
+          "id": "0a40a0e6-94b6-5e6f-b13d-963462c5eab5/structure",
+          "kind": "clause",
+          "span": [
+            0,
+            186
+          ],
+          "children": [
+            {
+              "id": "63869eee-64b3-5a1e-a292-7ab791565172",
+              "kind": "group",
+              "role": "Subject",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "a2d0e8cf-fe84-57a3-ab09-5dd024df89e5",
+                  "kind": "fragment",
+                  "role": "Subject",
+                  "span": [
+                    127,
+                    142
+                  ],
+                  "text": "driftsjournalen"
+                }
+              ]
+            },
+            {
+              "id": "e4633ef7-d95c-5625-8b03-8f091858eee4",
+              "kind": "group",
+              "role": "Modal Verb",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "42481f0f-124a-50d5-ab19-35ed1d944e41",
+                  "kind": "fragment",
+                  "role": "Modal Verb",
+                  "span": [
+                    122,
+                    126
+                  ],
+                  "text": "skal"
+                }
+              ]
+            },
+            {
+              "id": "443a0433-db69-5b57-a298-25f53495f851",
+              "kind": "group",
+              "role": "Main Verb",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "339b9f5e-6b43-5a28-8c00-457671d23113",
+                  "kind": "fragment",
+                  "role": "Main Verb",
+                  "span": [
+                    149,
+                    158
+                  ],
+                  "text": "inneholde"
+                }
+              ]
+            },
+            {
+              "id": "9d95222e-0c5b-565b-8e81-b2a5af939bbf",
+              "kind": "group",
+              "role": "Object",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "5c2f1d28-3079-5073-bd3c-4c2211371923",
+                  "kind": "fragment",
+                  "role": "Object",
+                  "span": [
+                    159,
+                    182
+                  ],
+                  "text": "oppdaterte opplysninger"
+                }
+              ]
+            },
+            {
+              "id": "d83d9d82-efcb-59b4-b52d-bee67cc18d23",
+              "kind": "group",
+              "role": "conditions",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "fb341371-573c-5d75-8f37-dfb1d12f1368",
+                  "kind": "fragment",
+                  "role": "conditions",
+                  "span": [
+                    0,
+                    120
+                  ],
+                  "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "R2": {
+    "status": "saved",
+    "document": {
+      "id": "fe141629-352f-543a-b73e-10e7fc3cd0d0",
+      "material_id": "ad7738ca612922619d85d725080cc26e",
+      "revision": 1,
+      "phase": "complete",
+      "block_id": "0eb5f3ec-09cd-5212-8402-8ced24eb1355",
+      "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6, skal driftsjournalen minst inneholde oppdaterte opplysninger om:\n\nakvakulturdyr og akvakulturdyrprodukter tatt inn til og ut fra akvakulturanlegget, inkludert opprinnelsessted og mottakssted,",
+      "source": {
+        "assessment_id": null,
+        "content_hash": "c08d613bd0f504b9bce7c7a01cf5801b1ebdbe6a76bfd16295a34b50e75b8ac4",
+        "download_status": "SUCCESS",
+        "file_format": "html",
+        "operator_selection_decision": "INCLUDE",
+        "parsing_copy_of": null,
+        "registry_kind": "sqlite_snapshot",
+        "registry_sha256": "e34c09d6b506f367e8a595ac0a2a4d514ff609cfb50fdd6f1a836e9b9536a8f1",
+        "relative_path": "E_Project_Engineering/PE001-002_example.html",
+        "selection_origin": "human",
+        "selection_status": "INCLUDE",
+        "snapshot_id": "PE001-002",
+        "snapshot_status": "STORED",
+        "source_id": "PE001",
+        "source_status": "CURRENT"
+      },
+      "source_refs": [
+        {
+          "anchor": "original-ba8bfb5569299e4e",
+          "scope_id": "html:document"
+        },
+        {
+          "anchor": "original-d87cc27cdd367a8a",
+          "scope_id": "html:document"
+        }
+      ],
+      "material_revision": 1,
+      "chapter": "",
+      "title": "example",
+      "roots": [
+        1,
+        "dd9491c6-5887-53b2-8d02-a0b7df1dbdb8"
+      ],
+      "units": {
+        "dd9491c6-5887-53b2-8d02-a0b7df1dbdb8": {
+          "id": "dd9491c6-5887-53b2-8d02-a0b7df1dbdb8",
+          "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6, skal driftsjournalen minst inneholde oppdaterte opplysninger om:\n\nakvakulturdyr og akvakulturdyrprodukter tatt inn til og ut fra akvakulturanlegget, inkludert opprinnelsessted og mottakssted,",
+          "Subject": null,
+          "Modal Verb": null,
+          "Main Verb": null,
+          "Object": null,
+          "conditions": null,
+          "exceptions": null,
+          "subrequirement": null
+        }
+      },
+      "spans": {
+        "dd9491c6-5887-53b2-8d02-a0b7df1dbdb8": [
+          0,
+          313
+        ]
+      },
+      "done": [
+        "dd9491c6-5887-53b2-8d02-a0b7df1dbdb8"
+      ],
+      "roles": {
+        "dd9491c6-5887-53b2-8d02-a0b7df1dbdb8": "requirement"
+      },
+      "field_spans": {},
+      "reference_evidence": {},
+      "source_segments": [
+        {
+          "block_id": "0eb5f3ec-09cd-5212-8402-8ced24eb1355",
+          "start": 0,
+          "end": 186,
+          "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6, skal driftsjournalen minst inneholde oppdaterte opplysninger om:",
+          "source_refs": [
+            {
+              "anchor": "original-ba8bfb5569299e4e",
+              "scope_id": "html:document"
+            }
+          ]
+        },
+        {
+          "block_id": "50ea184a-c54a-5c29-90d5-b39c5b2a1acc",
+          "start": 188,
+          "end": 313,
+          "text": "akvakulturdyr og akvakulturdyrprodukter tatt inn til og ut fra akvakulturanlegget, inkludert opprinnelsessted og mottakssted,",
+          "source_refs": [
+            {
+              "anchor": "original-d87cc27cdd367a8a",
+              "scope_id": "html:document"
+            }
+          ]
+        }
+      ],
+      "labels": {
+        "dd9491c6-5887-53b2-8d02-a0b7df1dbdb8": "R1"
+      },
+      "structures": {
+        "dd9491c6-5887-53b2-8d02-a0b7df1dbdb8": {
+          "id": "dd9491c6-5887-53b2-8d02-a0b7df1dbdb8/structure",
+          "kind": "clause",
+          "span": [
+            0,
+            313
+          ],
+          "children": [
+            {
+              "id": "fd68e957-13ae-5ab4-a50b-1a78e7389c34",
+              "kind": "group",
+              "role": "Subject",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "ee603943-1597-5824-a0f2-44823b97e518",
+                  "kind": "fragment",
+                  "role": "Subject",
+                  "span": [
+                    127,
+                    142
+                  ],
+                  "text": "driftsjournalen"
+                }
+              ]
+            },
+            {
+              "id": "42e1bb53-3e89-5bef-944f-7798cb930698",
+              "kind": "group",
+              "role": "Modal Verb",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "39f3d102-1799-569d-beb2-12391629bd6d",
+                  "kind": "fragment",
+                  "role": "Modal Verb",
+                  "span": [
+                    122,
+                    126
+                  ],
+                  "text": "skal"
+                }
+              ]
+            },
+            {
+              "id": "544d7c57-9e89-5ce6-9a16-b8fbf27e3bbf",
+              "kind": "group",
+              "role": "Main Verb",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "d5c44d05-9cf6-523a-b26f-a05178c6dce3",
+                  "kind": "fragment",
+                  "role": "Main Verb",
+                  "span": [
+                    149,
+                    158
+                  ],
+                  "text": "inneholde"
+                }
+              ]
+            },
+            {
+              "id": "56adf68a-1df1-5b3a-a23d-b5ca0ef5b2fd",
+              "kind": "group",
+              "role": "Object",
+              "quantity": 2,
+              "negated": false,
+              "children": [
+                {
+                  "id": "1c65d05f-cd0b-5ca4-b353-cb09b9823884",
+                  "kind": "fragment",
+                  "role": "Object",
+                  "span": [
+                    188,
+                    269
+                  ],
+                  "text": "akvakulturdyr og akvakulturdyrprodukter tatt inn til og ut fra akvakulturanlegget"
+                },
+                {
+                  "id": "6495527c-f760-54c3-a199-f985c9ca66d2",
+                  "kind": "group",
+                  "role": "Object",
+                  "quantity": [
+                    2,
+                    2
+                  ],
+                  "negated": false,
+                  "children": [
+                    {
+                      "id": "7e3633c0-e1d9-526e-b6ca-575bf2cb949e",
+                      "kind": "fragment",
+                      "role": "Object",
+                      "span": [
+                        281,
+                        297
+                      ],
+                      "text": "opprinnelsessted"
+                    },
+                    {
+                      "id": "f241f8e1-578e-50af-bc20-57b06e647985",
+                      "kind": "fragment",
+                      "role": "Object",
+                      "span": [
+                        301,
+                        312
+                      ],
+                      "text": "mottakssted"
+                    }
+                  ],
+                  "span": [
+                    281,
+                    312
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "9c505fb0-34d0-59b2-af44-c81d6fde1581",
+              "kind": "group",
+              "role": "conditions",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "d61aa704-3393-51e0-9817-52a0fdcb3167",
+                  "kind": "fragment",
+                  "role": "conditions",
+                  "span": [
+                    0,
+                    120
+                  ],
+                  "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "structure_schema": "requirement-structure/1",
+      "saved_at": "2026-09-16T14:45:15.785039+00:00",
+      "structure_views": {
+        "dd9491c6-5887-53b2-8d02-a0b7df1dbdb8": {
+          "id": "dd9491c6-5887-53b2-8d02-a0b7df1dbdb8/structure",
+          "kind": "clause",
+          "span": [
+            0,
+            313
+          ],
+          "children": [
+            {
+              "id": "fd68e957-13ae-5ab4-a50b-1a78e7389c34",
+              "kind": "group",
+              "role": "Subject",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "ee603943-1597-5824-a0f2-44823b97e518",
+                  "kind": "fragment",
+                  "role": "Subject",
+                  "span": [
+                    127,
+                    142
+                  ],
+                  "text": "driftsjournalen"
+                }
+              ]
+            },
+            {
+              "id": "42e1bb53-3e89-5bef-944f-7798cb930698",
+              "kind": "group",
+              "role": "Modal Verb",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "39f3d102-1799-569d-beb2-12391629bd6d",
+                  "kind": "fragment",
+                  "role": "Modal Verb",
+                  "span": [
+                    122,
+                    126
+                  ],
+                  "text": "skal"
+                }
+              ]
+            },
+            {
+              "id": "544d7c57-9e89-5ce6-9a16-b8fbf27e3bbf",
+              "kind": "group",
+              "role": "Main Verb",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "d5c44d05-9cf6-523a-b26f-a05178c6dce3",
+                  "kind": "fragment",
+                  "role": "Main Verb",
+                  "span": [
+                    149,
+                    158
+                  ],
+                  "text": "inneholde"
+                }
+              ]
+            },
+            {
+              "id": "56adf68a-1df1-5b3a-a23d-b5ca0ef5b2fd",
+              "kind": "group",
+              "role": "Object",
+              "quantity": 2,
+              "negated": false,
+              "children": [
+                {
+                  "id": "1c65d05f-cd0b-5ca4-b353-cb09b9823884",
+                  "kind": "fragment",
+                  "role": "Object",
+                  "span": [
+                    188,
+                    269
+                  ],
+                  "text": "akvakulturdyr og akvakulturdyrprodukter tatt inn til og ut fra akvakulturanlegget"
+                },
+                {
+                  "id": "6495527c-f760-54c3-a199-f985c9ca66d2",
+                  "kind": "group",
+                  "role": "Object",
+                  "quantity": [
+                    2,
+                    2
+                  ],
+                  "negated": false,
+                  "children": [
+                    {
+                      "id": "7e3633c0-e1d9-526e-b6ca-575bf2cb949e",
+                      "kind": "fragment",
+                      "role": "Object",
+                      "span": [
+                        281,
+                        297
+                      ],
+                      "text": "opprinnelsessted"
+                    },
+                    {
+                      "id": "f241f8e1-578e-50af-bc20-57b06e647985",
+                      "kind": "fragment",
+                      "role": "Object",
+                      "span": [
+                        301,
+                        312
+                      ],
+                      "text": "mottakssted"
+                    }
+                  ],
+                  "span": [
+                    281,
+                    312
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "9c505fb0-34d0-59b2-af44-c81d6fde1581",
+              "kind": "group",
+              "role": "conditions",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "d61aa704-3393-51e0-9817-52a0fdcb3167",
+                  "kind": "fragment",
+                  "role": "conditions",
+                  "span": [
+                    0,
+                    120
+                  ],
+                  "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "R3": {
+    "status": "saved",
+    "document": {
+      "id": "83008ca0-30e1-55e9-be02-38675f5f0f6f",
+      "material_id": "ad7738ca612922619d85d725080cc26e",
+      "revision": 1,
+      "phase": "complete",
+      "block_id": "0eb5f3ec-09cd-5212-8402-8ced24eb1355",
+      "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6, skal driftsjournalen minst inneholde oppdaterte opplysninger om:\n\ndødelighet per produksjonsenhet som er relevant for produksjonsformen, og",
+      "source": {
+        "assessment_id": null,
+        "content_hash": "c08d613bd0f504b9bce7c7a01cf5801b1ebdbe6a76bfd16295a34b50e75b8ac4",
+        "download_status": "SUCCESS",
+        "file_format": "html",
+        "operator_selection_decision": "INCLUDE",
+        "parsing_copy_of": null,
+        "registry_kind": "sqlite_snapshot",
+        "registry_sha256": "e34c09d6b506f367e8a595ac0a2a4d514ff609cfb50fdd6f1a836e9b9536a8f1",
+        "relative_path": "E_Project_Engineering/PE001-002_example.html",
+        "selection_origin": "human",
+        "selection_status": "INCLUDE",
+        "snapshot_id": "PE001-002",
+        "snapshot_status": "STORED",
+        "source_id": "PE001",
+        "source_status": "CURRENT"
+      },
+      "source_refs": [
+        {
+          "anchor": "original-ba8bfb5569299e4e",
+          "scope_id": "html:document"
+        },
+        {
+          "anchor": "original-fcda0061e03730ec",
+          "scope_id": "html:document"
+        }
+      ],
+      "material_revision": 1,
+      "chapter": "",
+      "title": "example",
+      "roots": [
+        1,
+        "4198ee3c-b3d3-5e6f-9756-d872989b1927"
+      ],
+      "units": {
+        "4198ee3c-b3d3-5e6f-9756-d872989b1927": {
+          "id": "4198ee3c-b3d3-5e6f-9756-d872989b1927",
+          "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6, skal driftsjournalen minst inneholde oppdaterte opplysninger om:\n\ndødelighet per produksjonsenhet som er relevant for produksjonsformen, og",
+          "Subject": null,
+          "Modal Verb": null,
+          "Main Verb": null,
+          "Object": null,
+          "conditions": null,
+          "exceptions": null,
+          "subrequirement": null
+        }
+      },
+      "spans": {
+        "4198ee3c-b3d3-5e6f-9756-d872989b1927": [
+          0,
+          261
+        ]
+      },
+      "done": [
+        "4198ee3c-b3d3-5e6f-9756-d872989b1927"
+      ],
+      "roles": {
+        "4198ee3c-b3d3-5e6f-9756-d872989b1927": "requirement"
+      },
+      "field_spans": {},
+      "reference_evidence": {},
+      "source_segments": [
+        {
+          "block_id": "0eb5f3ec-09cd-5212-8402-8ced24eb1355",
+          "start": 0,
+          "end": 186,
+          "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6, skal driftsjournalen minst inneholde oppdaterte opplysninger om:",
+          "source_refs": [
+            {
+              "anchor": "original-ba8bfb5569299e4e",
+              "scope_id": "html:document"
+            }
+          ]
+        },
+        {
+          "block_id": "03633fdc-7274-5f12-ab48-a54e4eaf470b",
+          "start": 188,
+          "end": 261,
+          "text": "dødelighet per produksjonsenhet som er relevant for produksjonsformen, og",
+          "source_refs": [
+            {
+              "anchor": "original-fcda0061e03730ec",
+              "scope_id": "html:document"
+            }
+          ]
+        }
+      ],
+      "labels": {
+        "4198ee3c-b3d3-5e6f-9756-d872989b1927": "R1"
+      },
+      "structures": {
+        "4198ee3c-b3d3-5e6f-9756-d872989b1927": {
+          "id": "4198ee3c-b3d3-5e6f-9756-d872989b1927/structure",
+          "kind": "clause",
+          "span": [
+            0,
+            261
+          ],
+          "children": [
+            {
+              "id": "13399ab7-90be-5668-9366-7544a72ed2f3",
+              "kind": "group",
+              "role": "Subject",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "950307c3-1038-5bbc-9f1e-44421ceca27b",
+                  "kind": "fragment",
+                  "role": "Subject",
+                  "span": [
+                    127,
+                    142
+                  ],
+                  "text": "driftsjournalen"
+                }
+              ]
+            },
+            {
+              "id": "d52ffa18-c425-572f-b493-1b8787c2b154",
+              "kind": "group",
+              "role": "Modal Verb",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "e3c6a13f-a94e-58e6-b0e3-0a907440ad80",
+                  "kind": "fragment",
+                  "role": "Modal Verb",
+                  "span": [
+                    122,
+                    126
+                  ],
+                  "text": "skal"
+                }
+              ]
+            },
+            {
+              "id": "2d9c0e23-fb8a-5903-823b-86669e992fc0",
+              "kind": "group",
+              "role": "Main Verb",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "221c9a16-b873-582b-9b11-c6da12a1c3fc",
+                  "kind": "fragment",
+                  "role": "Main Verb",
+                  "span": [
+                    149,
+                    158
+                  ],
+                  "text": "inneholde"
+                }
+              ]
+            },
+            {
+              "id": "39d72b5f-704a-5e75-8223-0b1c9996ce3e",
+              "kind": "group",
+              "role": "Object",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "0feb3852-6ee7-5c77-a8ce-e83cfff05d3e",
+                  "kind": "fragment",
+                  "role": "Object",
+                  "span": [
+                    188,
+                    219
+                  ],
+                  "text": "dødelighet per produksjonsenhet"
+                }
+              ]
+            },
+            {
+              "id": "b44851ca-7203-583a-b923-bc65b652cfa7",
+              "kind": "group",
+              "role": "conditions",
+              "quantity": 2,
+              "negated": false,
+              "children": [
+                {
+                  "id": "900725d4-7c98-5635-a7b7-7f3b8dcf52b3",
+                  "kind": "fragment",
+                  "role": "conditions",
+                  "span": [
+                    0,
+                    120
+                  ],
+                  "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6"
+                },
+                {
+                  "id": "77782209-caf9-50f1-b638-12487355cb32",
+                  "kind": "fragment",
+                  "role": "conditions",
+                  "span": [
+                    220,
+                    257
+                  ],
+                  "text": "som er relevant for produksjonsformen"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "structure_schema": "requirement-structure/1",
+      "saved_at": "2026-09-16T14:45:17.637370+00:00",
+      "structure_views": {
+        "4198ee3c-b3d3-5e6f-9756-d872989b1927": {
+          "id": "4198ee3c-b3d3-5e6f-9756-d872989b1927/structure",
+          "kind": "clause",
+          "span": [
+            0,
+            261
+          ],
+          "children": [
+            {
+              "id": "13399ab7-90be-5668-9366-7544a72ed2f3",
+              "kind": "group",
+              "role": "Subject",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "950307c3-1038-5bbc-9f1e-44421ceca27b",
+                  "kind": "fragment",
+                  "role": "Subject",
+                  "span": [
+                    127,
+                    142
+                  ],
+                  "text": "driftsjournalen"
+                }
+              ]
+            },
+            {
+              "id": "d52ffa18-c425-572f-b493-1b8787c2b154",
+              "kind": "group",
+              "role": "Modal Verb",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "e3c6a13f-a94e-58e6-b0e3-0a907440ad80",
+                  "kind": "fragment",
+                  "role": "Modal Verb",
+                  "span": [
+                    122,
+                    126
+                  ],
+                  "text": "skal"
+                }
+              ]
+            },
+            {
+              "id": "2d9c0e23-fb8a-5903-823b-86669e992fc0",
+              "kind": "group",
+              "role": "Main Verb",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "221c9a16-b873-582b-9b11-c6da12a1c3fc",
+                  "kind": "fragment",
+                  "role": "Main Verb",
+                  "span": [
+                    149,
+                    158
+                  ],
+                  "text": "inneholde"
+                }
+              ]
+            },
+            {
+              "id": "39d72b5f-704a-5e75-8223-0b1c9996ce3e",
+              "kind": "group",
+              "role": "Object",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "0feb3852-6ee7-5c77-a8ce-e83cfff05d3e",
+                  "kind": "fragment",
+                  "role": "Object",
+                  "span": [
+                    188,
+                    219
+                  ],
+                  "text": "dødelighet per produksjonsenhet"
+                }
+              ]
+            },
+            {
+              "id": "b44851ca-7203-583a-b923-bc65b652cfa7",
+              "kind": "group",
+              "role": "conditions",
+              "quantity": 2,
+              "negated": false,
+              "children": [
+                {
+                  "id": "900725d4-7c98-5635-a7b7-7f3b8dcf52b3",
+                  "kind": "fragment",
+                  "role": "conditions",
+                  "span": [
+                    0,
+                    120
+                  ],
+                  "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6"
+                },
+                {
+                  "id": "77782209-caf9-50f1-b638-12487355cb32",
+                  "kind": "fragment",
+                  "role": "conditions",
+                  "span": [
+                    220,
+                    257
+                  ],
+                  "text": "som er relevant for produksjonsformen"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "R4": {
+    "status": "saved",
+    "document": {
+      "id": "898620c7-f5d4-5347-aa8a-9e4087973718",
+      "material_id": "ad7738ca612922619d85d725080cc26e",
+      "revision": 1,
+      "phase": "complete",
+      "block_id": "0eb5f3ec-09cd-5212-8402-8ced24eb1355",
+      "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6, skal driftsjournalen minst inneholde oppdaterte opplysninger om:\n\nresultater av gjennomførte helsekontroller: antall gjennomførte helsekontroller, prøveuttak, foretatte undersøkelser, diagnoser og gjennomførte behandlinger.",
+      "source": {
+        "assessment_id": null,
+        "content_hash": "c08d613bd0f504b9bce7c7a01cf5801b1ebdbe6a76bfd16295a34b50e75b8ac4",
+        "download_status": "SUCCESS",
+        "file_format": "html",
+        "operator_selection_decision": "INCLUDE",
+        "parsing_copy_of": null,
+        "registry_kind": "sqlite_snapshot",
+        "registry_sha256": "e34c09d6b506f367e8a595ac0a2a4d514ff609cfb50fdd6f1a836e9b9536a8f1",
+        "relative_path": "E_Project_Engineering/PE001-002_example.html",
+        "selection_origin": "human",
+        "selection_status": "INCLUDE",
+        "snapshot_id": "PE001-002",
+        "snapshot_status": "STORED",
+        "source_id": "PE001",
+        "source_status": "CURRENT"
+      },
+      "source_refs": [
+        {
+          "anchor": "original-ba8bfb5569299e4e",
+          "scope_id": "html:document"
+        },
+        {
+          "anchor": "original-ddfbeb5f67b15c57",
+          "scope_id": "html:document"
+        }
+      ],
+      "material_revision": 1,
+      "chapter": "",
+      "title": "example",
+      "roots": [
+        1,
+        "e20b355f-3bb8-5436-988b-c06c23d39b05"
+      ],
+      "units": {
+        "e20b355f-3bb8-5436-988b-c06c23d39b05": {
+          "id": "e20b355f-3bb8-5436-988b-c06c23d39b05",
+          "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6, skal driftsjournalen minst inneholde oppdaterte opplysninger om:\n\nresultater av gjennomførte helsekontroller: antall gjennomførte helsekontroller, prøveuttak, foretatte undersøkelser, diagnoser og gjennomførte behandlinger.",
+          "Subject": null,
+          "Modal Verb": null,
+          "Main Verb": null,
+          "Object": null,
+          "conditions": null,
+          "exceptions": null,
+          "subrequirement": null
+        }
+      },
+      "spans": {
+        "e20b355f-3bb8-5436-988b-c06c23d39b05": [
+          0,
+          345
+        ]
+      },
+      "done": [
+        "e20b355f-3bb8-5436-988b-c06c23d39b05"
+      ],
+      "roles": {
+        "e20b355f-3bb8-5436-988b-c06c23d39b05": "requirement"
+      },
+      "field_spans": {},
+      "reference_evidence": {},
+      "source_segments": [
+        {
+          "block_id": "0eb5f3ec-09cd-5212-8402-8ced24eb1355",
+          "start": 0,
+          "end": 186,
+          "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6, skal driftsjournalen minst inneholde oppdaterte opplysninger om:",
+          "source_refs": [
+            {
+              "anchor": "original-ba8bfb5569299e4e",
+              "scope_id": "html:document"
+            }
+          ]
+        },
+        {
+          "block_id": "514ba39f-34c5-56a8-9c15-4cbd5d9e89b7",
+          "start": 188,
+          "end": 345,
+          "text": "resultater av gjennomførte helsekontroller: antall gjennomførte helsekontroller, prøveuttak, foretatte undersøkelser, diagnoser og gjennomførte behandlinger.",
+          "source_refs": [
+            {
+              "anchor": "original-ddfbeb5f67b15c57",
+              "scope_id": "html:document"
+            }
+          ]
+        }
+      ],
+      "labels": {
+        "e20b355f-3bb8-5436-988b-c06c23d39b05": "R1"
+      },
+      "structures": {
+        "e20b355f-3bb8-5436-988b-c06c23d39b05": {
+          "id": "e20b355f-3bb8-5436-988b-c06c23d39b05/structure",
+          "kind": "clause",
+          "span": [
+            0,
+            345
+          ],
+          "children": [
+            {
+              "id": "5e1212ac-e113-5915-8afc-aaac572d87ed",
+              "kind": "group",
+              "role": "Subject",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "8c817f16-1c9f-5ee7-8613-6cb0cd2986f7",
+                  "kind": "fragment",
+                  "role": "Subject",
+                  "span": [
+                    127,
+                    142
+                  ],
+                  "text": "driftsjournalen"
+                }
+              ]
+            },
+            {
+              "id": "c13c57eb-2cca-52e7-b72b-148e1a5d966d",
+              "kind": "group",
+              "role": "Modal Verb",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "60e93318-f625-52c5-b9ef-93dbc9106570",
+                  "kind": "fragment",
+                  "role": "Modal Verb",
+                  "span": [
+                    122,
+                    126
+                  ],
+                  "text": "skal"
+                }
+              ]
+            },
+            {
+              "id": "9d61aee4-c876-5d26-b349-4bb83ffe8c70",
+              "kind": "group",
+              "role": "Main Verb",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "cd02c224-9d36-5683-ba48-981efc52bcb4",
+                  "kind": "fragment",
+                  "role": "Main Verb",
+                  "span": [
+                    149,
+                    158
+                  ],
+                  "text": "inneholde"
+                }
+              ]
+            },
+            {
+              "id": "b66d2826-7f1e-5b3f-84f6-8dd31374277f",
+              "kind": "group",
+              "role": "Object",
+              "quantity": 2,
+              "negated": false,
+              "children": [
+                {
+                  "id": "5d3881e2-bf29-58ec-8971-eead08a81447",
+                  "kind": "fragment",
+                  "role": "Object",
+                  "span": [
+                    188,
+                    230
+                  ],
+                  "text": "resultater av gjennomførte helsekontroller"
+                },
+                {
+                  "id": "1588a1c9-671c-5f94-b475-f52306a27e03",
+                  "kind": "group",
+                  "role": "Object",
+                  "quantity": [
+                    5,
+                    5
+                  ],
+                  "negated": false,
+                  "children": [
+                    {
+                      "id": "e016b4ad-4221-5364-9b37-bad682979663",
+                      "kind": "fragment",
+                      "role": "Object",
+                      "span": [
+                        232,
+                        267
+                      ],
+                      "text": "antall gjennomførte helsekontroller"
+                    },
+                    {
+                      "id": "9125bf3a-60c0-5f69-b791-d6037ca58940",
+                      "kind": "fragment",
+                      "role": "Object",
+                      "span": [
+                        269,
+                        279
+                      ],
+                      "text": "prøveuttak"
+                    },
+                    {
+                      "id": "da7cbb47-5130-55d9-b064-f44e77c8629f",
+                      "kind": "fragment",
+                      "role": "Object",
+                      "span": [
+                        281,
+                        304
+                      ],
+                      "text": "foretatte undersøkelser"
+                    },
+                    {
+                      "id": "545beb45-0795-5b14-9e23-28fa53fc1840",
+                      "kind": "fragment",
+                      "role": "Object",
+                      "span": [
+                        306,
+                        315
+                      ],
+                      "text": "diagnoser"
+                    },
+                    {
+                      "id": "58650dbc-35bc-5f0b-961b-e2bebc4c2f55",
+                      "kind": "fragment",
+                      "role": "Object",
+                      "span": [
+                        319,
+                        344
+                      ],
+                      "text": "gjennomførte behandlinger"
+                    }
+                  ],
+                  "span": [
+                    232,
+                    344
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "28737db4-76ee-5cb3-a46d-3dce45ce59a1",
+              "kind": "group",
+              "role": "conditions",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "d7bd0094-45e0-5e65-bf32-94a886a43d17",
+                  "kind": "fragment",
+                  "role": "conditions",
+                  "span": [
+                    0,
+                    120
+                  ],
+                  "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "structure_schema": "requirement-structure/1",
+      "saved_at": "2026-09-16T14:45:19.340808+00:00",
+      "structure_views": {
+        "e20b355f-3bb8-5436-988b-c06c23d39b05": {
+          "id": "e20b355f-3bb8-5436-988b-c06c23d39b05/structure",
+          "kind": "clause",
+          "span": [
+            0,
+            345
+          ],
+          "children": [
+            {
+              "id": "5e1212ac-e113-5915-8afc-aaac572d87ed",
+              "kind": "group",
+              "role": "Subject",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "8c817f16-1c9f-5ee7-8613-6cb0cd2986f7",
+                  "kind": "fragment",
+                  "role": "Subject",
+                  "span": [
+                    127,
+                    142
+                  ],
+                  "text": "driftsjournalen"
+                }
+              ]
+            },
+            {
+              "id": "c13c57eb-2cca-52e7-b72b-148e1a5d966d",
+              "kind": "group",
+              "role": "Modal Verb",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "60e93318-f625-52c5-b9ef-93dbc9106570",
+                  "kind": "fragment",
+                  "role": "Modal Verb",
+                  "span": [
+                    122,
+                    126
+                  ],
+                  "text": "skal"
+                }
+              ]
+            },
+            {
+              "id": "9d61aee4-c876-5d26-b349-4bb83ffe8c70",
+              "kind": "group",
+              "role": "Main Verb",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "cd02c224-9d36-5683-ba48-981efc52bcb4",
+                  "kind": "fragment",
+                  "role": "Main Verb",
+                  "span": [
+                    149,
+                    158
+                  ],
+                  "text": "inneholde"
+                }
+              ]
+            },
+            {
+              "id": "b66d2826-7f1e-5b3f-84f6-8dd31374277f",
+              "kind": "group",
+              "role": "Object",
+              "quantity": 2,
+              "negated": false,
+              "children": [
+                {
+                  "id": "5d3881e2-bf29-58ec-8971-eead08a81447",
+                  "kind": "fragment",
+                  "role": "Object",
+                  "span": [
+                    188,
+                    230
+                  ],
+                  "text": "resultater av gjennomførte helsekontroller"
+                },
+                {
+                  "id": "1588a1c9-671c-5f94-b475-f52306a27e03",
+                  "kind": "group",
+                  "role": "Object",
+                  "quantity": [
+                    5,
+                    5
+                  ],
+                  "negated": false,
+                  "children": [
+                    {
+                      "id": "e016b4ad-4221-5364-9b37-bad682979663",
+                      "kind": "fragment",
+                      "role": "Object",
+                      "span": [
+                        232,
+                        267
+                      ],
+                      "text": "antall gjennomførte helsekontroller"
+                    },
+                    {
+                      "id": "9125bf3a-60c0-5f69-b791-d6037ca58940",
+                      "kind": "fragment",
+                      "role": "Object",
+                      "span": [
+                        269,
+                        279
+                      ],
+                      "text": "prøveuttak"
+                    },
+                    {
+                      "id": "da7cbb47-5130-55d9-b064-f44e77c8629f",
+                      "kind": "fragment",
+                      "role": "Object",
+                      "span": [
+                        281,
+                        304
+                      ],
+                      "text": "foretatte undersøkelser"
+                    },
+                    {
+                      "id": "545beb45-0795-5b14-9e23-28fa53fc1840",
+                      "kind": "fragment",
+                      "role": "Object",
+                      "span": [
+                        306,
+                        315
+                      ],
+                      "text": "diagnoser"
+                    },
+                    {
+                      "id": "58650dbc-35bc-5f0b-961b-e2bebc4c2f55",
+                      "kind": "fragment",
+                      "role": "Object",
+                      "span": [
+                        319,
+                        344
+                      ],
+                      "text": "gjennomførte behandlinger"
+                    }
+                  ],
+                  "span": [
+                    232,
+                    344
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "28737db4-76ee-5cb3-a46d-3dce45ce59a1",
+              "kind": "group",
+              "role": "conditions",
+              "quantity": 1,
+              "negated": false,
+              "children": [
+                {
+                  "id": "d7bd0094-45e0-5e65-bf32-94a886a43d17",
+                  "kind": "fragment",
+                  "role": "conditions",
+                  "span": [
+                    0,
+                    120
+                  ],
+                  "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "R1-links": {
+    "status": "saved",
+    "document": {
+      "block_id": "0eb5f3ec-09cd-5212-8402-8ced24eb1355",
+      "chapter": "",
+      "done": [
+        "0a40a0e6-94b6-5e6f-b13d-963462c5eab5"
+      ],
+      "field_spans": {},
+      "id": "3913d5bd-bfe2-5c2e-9a10-062c4b90f686",
+      "labels": {
+        "0a40a0e6-94b6-5e6f-b13d-963462c5eab5": "R1"
+      },
+      "material_id": "ad7738ca612922619d85d725080cc26e",
+      "material_revision": 1,
+      "phase": "complete",
+      "reference_evidence": {
+        "dd9491c6-5887-53b2-8d02-a0b7df1dbdb8": {
+          "source": {
+            "block_id": "0eb5f3ec-09cd-5212-8402-8ced24eb1355",
+            "material_revision": 1,
+            "source": {
+              "assessment_id": null,
+              "content_hash": "c08d613bd0f504b9bce7c7a01cf5801b1ebdbe6a76bfd16295a34b50e75b8ac4",
+              "download_status": "SUCCESS",
+              "file_format": "html",
+              "operator_selection_decision": "INCLUDE",
+              "parsing_copy_of": null,
+              "registry_kind": "sqlite_snapshot",
+              "registry_sha256": "e34c09d6b506f367e8a595ac0a2a4d514ff609cfb50fdd6f1a836e9b9536a8f1",
+              "relative_path": "E_Project_Engineering/PE001-002_example.html",
+              "selection_origin": "human",
+              "selection_status": "INCLUDE",
+              "snapshot_id": "PE001-002",
+              "snapshot_status": "STORED",
+              "source_id": "PE001",
+              "source_status": "CURRENT"
+            },
+            "source_refs": [
+              {
+                "anchor": "original-ba8bfb5569299e4e",
+                "scope_id": "html:document"
+              },
+              {
+                "anchor": "original-d87cc27cdd367a8a",
+                "scope_id": "html:document"
+              }
+            ],
+            "source_segments": [
+              {
+                "block_id": "0eb5f3ec-09cd-5212-8402-8ced24eb1355",
+                "end": 186,
+                "source_refs": [
+                  {
+                    "anchor": "original-ba8bfb5569299e4e",
+                    "scope_id": "html:document"
+                  }
+                ],
+                "start": 0,
+                "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6, skal driftsjournalen minst inneholde oppdaterte opplysninger om:"
+              },
+              {
+                "block_id": "50ea184a-c54a-5c29-90d5-b39c5b2a1acc",
+                "end": 313,
+                "source_refs": [
+                  {
+                    "anchor": "original-d87cc27cdd367a8a",
+                    "scope_id": "html:document"
+                  }
+                ],
+                "start": 188,
+                "text": "akvakulturdyr og akvakulturdyrprodukter tatt inn til og ut fra akvakulturanlegget, inkludert opprinnelsessted og mottakssted,"
+              }
+            ],
+            "span": [
+              0,
+              313
+            ]
+          },
+          "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6, skal driftsjournalen minst inneholde oppdaterte opplysninger om:\n\nakvakulturdyr og akvakulturdyrprodukter tatt inn til og ut fra akvakulturanlegget, inkludert opprinnelsessted og mottakssted,",
+          "session_id": "fe141629-352f-543a-b73e-10e7fc3cd0d0",
+          "revision": 1
+        },
+        "4198ee3c-b3d3-5e6f-9756-d872989b1927": {
+          "source": {
+            "block_id": "0eb5f3ec-09cd-5212-8402-8ced24eb1355",
+            "material_revision": 1,
+            "source": {
+              "assessment_id": null,
+              "content_hash": "c08d613bd0f504b9bce7c7a01cf5801b1ebdbe6a76bfd16295a34b50e75b8ac4",
+              "download_status": "SUCCESS",
+              "file_format": "html",
+              "operator_selection_decision": "INCLUDE",
+              "parsing_copy_of": null,
+              "registry_kind": "sqlite_snapshot",
+              "registry_sha256": "e34c09d6b506f367e8a595ac0a2a4d514ff609cfb50fdd6f1a836e9b9536a8f1",
+              "relative_path": "E_Project_Engineering/PE001-002_example.html",
+              "selection_origin": "human",
+              "selection_status": "INCLUDE",
+              "snapshot_id": "PE001-002",
+              "snapshot_status": "STORED",
+              "source_id": "PE001",
+              "source_status": "CURRENT"
+            },
+            "source_refs": [
+              {
+                "anchor": "original-ba8bfb5569299e4e",
+                "scope_id": "html:document"
+              },
+              {
+                "anchor": "original-fcda0061e03730ec",
+                "scope_id": "html:document"
+              }
+            ],
+            "source_segments": [
+              {
+                "block_id": "0eb5f3ec-09cd-5212-8402-8ced24eb1355",
+                "end": 186,
+                "source_refs": [
+                  {
+                    "anchor": "original-ba8bfb5569299e4e",
+                    "scope_id": "html:document"
+                  }
+                ],
+                "start": 0,
+                "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6, skal driftsjournalen minst inneholde oppdaterte opplysninger om:"
+              },
+              {
+                "block_id": "03633fdc-7274-5f12-ab48-a54e4eaf470b",
+                "end": 261,
+                "source_refs": [
+                  {
+                    "anchor": "original-fcda0061e03730ec",
+                    "scope_id": "html:document"
+                  }
+                ],
+                "start": 188,
+                "text": "dødelighet per produksjonsenhet som er relevant for produksjonsformen, og"
+              }
+            ],
+            "span": [
+              0,
+              261
+            ]
+          },
+          "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6, skal driftsjournalen minst inneholde oppdaterte opplysninger om:\n\ndødelighet per produksjonsenhet som er relevant for produksjonsformen, og",
+          "session_id": "83008ca0-30e1-55e9-be02-38675f5f0f6f",
+          "revision": 1
+        },
+        "e20b355f-3bb8-5436-988b-c06c23d39b05": {
+          "source": {
+            "block_id": "0eb5f3ec-09cd-5212-8402-8ced24eb1355",
+            "material_revision": 1,
+            "source": {
+              "assessment_id": null,
+              "content_hash": "c08d613bd0f504b9bce7c7a01cf5801b1ebdbe6a76bfd16295a34b50e75b8ac4",
+              "download_status": "SUCCESS",
+              "file_format": "html",
+              "operator_selection_decision": "INCLUDE",
+              "parsing_copy_of": null,
+              "registry_kind": "sqlite_snapshot",
+              "registry_sha256": "e34c09d6b506f367e8a595ac0a2a4d514ff609cfb50fdd6f1a836e9b9536a8f1",
+              "relative_path": "E_Project_Engineering/PE001-002_example.html",
+              "selection_origin": "human",
+              "selection_status": "INCLUDE",
+              "snapshot_id": "PE001-002",
+              "snapshot_status": "STORED",
+              "source_id": "PE001",
+              "source_status": "CURRENT"
+            },
+            "source_refs": [
+              {
+                "anchor": "original-ba8bfb5569299e4e",
+                "scope_id": "html:document"
+              },
+              {
+                "anchor": "original-ddfbeb5f67b15c57",
+                "scope_id": "html:document"
+              }
+            ],
+            "source_segments": [
+              {
+                "block_id": "0eb5f3ec-09cd-5212-8402-8ced24eb1355",
+                "end": 186,
+                "source_refs": [
+                  {
+                    "anchor": "original-ba8bfb5569299e4e",
+                    "scope_id": "html:document"
+                  }
+                ],
+                "start": 0,
+                "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6, skal driftsjournalen minst inneholde oppdaterte opplysninger om:"
+              },
+              {
+                "block_id": "514ba39f-34c5-56a8-9c15-4cbd5d9e89b7",
+                "end": 345,
+                "source_refs": [
+                  {
+                    "anchor": "original-ddfbeb5f67b15c57",
+                    "scope_id": "html:document"
+                  }
+                ],
+                "start": 188,
+                "text": "resultater av gjennomførte helsekontroller: antall gjennomførte helsekontroller, prøveuttak, foretatte undersøkelser, diagnoser og gjennomførte behandlinger."
+              }
+            ],
+            "span": [
+              0,
+              345
+            ]
+          },
+          "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6, skal driftsjournalen minst inneholde oppdaterte opplysninger om:\n\nresultater av gjennomførte helsekontroller: antall gjennomførte helsekontroller, prøveuttak, foretatte undersøkelser, diagnoser og gjennomførte behandlinger.",
+          "session_id": "898620c7-f5d4-5347-aa8a-9e4087973718",
+          "revision": 1
+        }
+      },
+      "revision": 2,
+      "roles": {
+        "0a40a0e6-94b6-5e6f-b13d-963462c5eab5": "requirement"
+      },
+      "roots": [
+        1,
+        "0a40a0e6-94b6-5e6f-b13d-963462c5eab5"
+      ],
+      "saved_at": "2026-09-16T14:45:23.715595+00:00",
+      "source": {
+        "assessment_id": null,
+        "content_hash": "c08d613bd0f504b9bce7c7a01cf5801b1ebdbe6a76bfd16295a34b50e75b8ac4",
+        "download_status": "SUCCESS",
+        "file_format": "html",
+        "operator_selection_decision": "INCLUDE",
+        "parsing_copy_of": null,
+        "registry_kind": "sqlite_snapshot",
+        "registry_sha256": "e34c09d6b506f367e8a595ac0a2a4d514ff609cfb50fdd6f1a836e9b9536a8f1",
+        "relative_path": "E_Project_Engineering/PE001-002_example.html",
+        "selection_origin": "human",
+        "selection_status": "INCLUDE",
+        "snapshot_id": "PE001-002",
+        "snapshot_status": "STORED",
+        "source_id": "PE001",
+        "source_status": "CURRENT"
+      },
+      "source_refs": [
+        {
+          "anchor": "original-ba8bfb5569299e4e",
+          "scope_id": "html:document"
+        }
+      ],
+      "source_segments": [
+        {
+          "block_id": "0eb5f3ec-09cd-5212-8402-8ced24eb1355",
+          "end": 186,
+          "source_refs": [
+            {
+              "anchor": "original-ba8bfb5569299e4e",
+              "scope_id": "html:document"
+            }
+          ],
+          "start": 0,
+          "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6, skal driftsjournalen minst inneholde oppdaterte opplysninger om:"
+        }
+      ],
+      "spans": {
+        "0a40a0e6-94b6-5e6f-b13d-963462c5eab5": [
+          0,
+          186
+        ]
+      },
+      "structure_schema": "requirement-structure/1",
+      "structures": {
+        "0a40a0e6-94b6-5e6f-b13d-963462c5eab5": {
+          "children": [
+            {
+              "children": [
+                {
+                  "id": "a2d0e8cf-fe84-57a3-ab09-5dd024df89e5",
+                  "kind": "fragment",
+                  "role": "Subject",
+                  "span": [
+                    127,
+                    142
+                  ],
+                  "text": "driftsjournalen"
+                }
+              ],
+              "id": "63869eee-64b3-5a1e-a292-7ab791565172",
+              "kind": "group",
+              "negated": false,
+              "quantity": 1,
+              "role": "Subject"
+            },
+            {
+              "children": [
+                {
+                  "id": "42481f0f-124a-50d5-ab19-35ed1d944e41",
+                  "kind": "fragment",
+                  "role": "Modal Verb",
+                  "span": [
+                    122,
+                    126
+                  ],
+                  "text": "skal"
+                }
+              ],
+              "id": "e4633ef7-d95c-5625-8b03-8f091858eee4",
+              "kind": "group",
+              "negated": false,
+              "quantity": 1,
+              "role": "Modal Verb"
+            },
+            {
+              "children": [
+                {
+                  "id": "339b9f5e-6b43-5a28-8c00-457671d23113",
+                  "kind": "fragment",
+                  "role": "Main Verb",
+                  "span": [
+                    149,
+                    158
+                  ],
+                  "text": "inneholde"
+                }
+              ],
+              "id": "443a0433-db69-5b57-a298-25f53495f851",
+              "kind": "group",
+              "negated": false,
+              "quantity": 1,
+              "role": "Main Verb"
+            },
+            {
+              "children": [
+                {
+                  "id": "5c2f1d28-3079-5073-bd3c-4c2211371923",
+                  "kind": "fragment",
+                  "role": "Object",
+                  "span": [
+                    159,
+                    182
+                  ],
+                  "text": "oppdaterte opplysninger"
+                }
+              ],
+              "id": "9d95222e-0c5b-565b-8e81-b2a5af939bbf",
+              "kind": "group",
+              "negated": false,
+              "quantity": 1,
+              "role": "Object"
+            },
+            {
+              "children": [
+                {
+                  "id": "fb341371-573c-5d75-8f37-dfb1d12f1368",
+                  "kind": "fragment",
+                  "role": "conditions",
+                  "span": [
+                    0,
+                    120
+                  ],
+                  "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6"
+                }
+              ],
+              "id": "d83d9d82-efcb-59b4-b52d-bee67cc18d23",
+              "kind": "group",
+              "negated": false,
+              "quantity": 1,
+              "role": "conditions"
+            },
+            {
+              "id": "648da17e-d0c8-5df3-90a7-2bab16be6ccd",
+              "kind": "group",
+              "role": "subrequirement",
+              "quantity": 3,
+              "negated": false,
+              "children": [
+                {
+                  "id": "6d947594-1000-578b-9dae-6dc93e29fbaa",
+                  "kind": "reference",
+                  "role": "subrequirement",
+                  "target_id": "dd9491c6-5887-53b2-8d02-a0b7df1dbdb8"
+                },
+                {
+                  "id": "8adf0126-4566-5b23-9ce4-9f2d3357f2ea",
+                  "kind": "reference",
+                  "role": "subrequirement",
+                  "target_id": "4198ee3c-b3d3-5e6f-9756-d872989b1927"
+                },
+                {
+                  "id": "2fe9fd99-c58d-58f6-bd40-759ce5ddce06",
+                  "kind": "reference",
+                  "role": "subrequirement",
+                  "target_id": "e20b355f-3bb8-5436-988b-c06c23d39b05"
+                }
+              ]
+            }
+          ],
+          "id": "0a40a0e6-94b6-5e6f-b13d-963462c5eab5/structure",
+          "kind": "clause",
+          "span": [
+            0,
+            186
+          ]
+        }
+      },
+      "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6, skal driftsjournalen minst inneholde oppdaterte opplysninger om:",
+      "title": "example",
+      "units": {
+        "0a40a0e6-94b6-5e6f-b13d-963462c5eab5": {
+          "Main Verb": null,
+          "Modal Verb": null,
+          "Object": null,
+          "Subject": null,
+          "conditions": null,
+          "exceptions": null,
+          "id": "0a40a0e6-94b6-5e6f-b13d-963462c5eab5",
+          "subrequirement": null,
+          "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6, skal driftsjournalen minst inneholde oppdaterte opplysninger om:"
+        }
+      },
+      "structure_views": {
+        "0a40a0e6-94b6-5e6f-b13d-963462c5eab5": {
+          "children": [
+            {
+              "children": [
+                {
+                  "id": "a2d0e8cf-fe84-57a3-ab09-5dd024df89e5",
+                  "kind": "fragment",
+                  "role": "Subject",
+                  "span": [
+                    127,
+                    142
+                  ],
+                  "text": "driftsjournalen"
+                }
+              ],
+              "id": "63869eee-64b3-5a1e-a292-7ab791565172",
+              "kind": "group",
+              "negated": false,
+              "quantity": 1,
+              "role": "Subject"
+            },
+            {
+              "children": [
+                {
+                  "id": "42481f0f-124a-50d5-ab19-35ed1d944e41",
+                  "kind": "fragment",
+                  "role": "Modal Verb",
+                  "span": [
+                    122,
+                    126
+                  ],
+                  "text": "skal"
+                }
+              ],
+              "id": "e4633ef7-d95c-5625-8b03-8f091858eee4",
+              "kind": "group",
+              "negated": false,
+              "quantity": 1,
+              "role": "Modal Verb"
+            },
+            {
+              "children": [
+                {
+                  "id": "339b9f5e-6b43-5a28-8c00-457671d23113",
+                  "kind": "fragment",
+                  "role": "Main Verb",
+                  "span": [
+                    149,
+                    158
+                  ],
+                  "text": "inneholde"
+                }
+              ],
+              "id": "443a0433-db69-5b57-a298-25f53495f851",
+              "kind": "group",
+              "negated": false,
+              "quantity": 1,
+              "role": "Main Verb"
+            },
+            {
+              "children": [
+                {
+                  "id": "5c2f1d28-3079-5073-bd3c-4c2211371923",
+                  "kind": "fragment",
+                  "role": "Object",
+                  "span": [
+                    159,
+                    182
+                  ],
+                  "text": "oppdaterte opplysninger"
+                }
+              ],
+              "id": "9d95222e-0c5b-565b-8e81-b2a5af939bbf",
+              "kind": "group",
+              "negated": false,
+              "quantity": 1,
+              "role": "Object"
+            },
+            {
+              "children": [
+                {
+                  "id": "fb341371-573c-5d75-8f37-dfb1d12f1368",
+                  "kind": "fragment",
+                  "role": "conditions",
+                  "span": [
+                    0,
+                    120
+                  ],
+                  "text": "For akvakulturanlegg som ikke omfattes av særskilte bestemmelser om journalføring i kapittel 4, kapittel 5 og kapittel 6"
+                }
+              ],
+              "id": "d83d9d82-efcb-59b4-b52d-bee67cc18d23",
+              "kind": "group",
+              "negated": false,
+              "quantity": 1,
+              "role": "conditions"
+            },
+            {
+              "id": "648da17e-d0c8-5df3-90a7-2bab16be6ccd",
+              "kind": "group",
+              "role": "subrequirement",
+              "quantity": 3,
+              "negated": false,
+              "children": [
+                {
+                  "id": "6d947594-1000-578b-9dae-6dc93e29fbaa",
+                  "kind": "reference",
+                  "role": "subrequirement",
+                  "target_id": "dd9491c6-5887-53b2-8d02-a0b7df1dbdb8"
+                },
+                {
+                  "id": "8adf0126-4566-5b23-9ce4-9f2d3357f2ea",
+                  "kind": "reference",
+                  "role": "subrequirement",
+                  "target_id": "4198ee3c-b3d3-5e6f-9756-d872989b1927"
+                },
+                {
+                  "id": "2fe9fd99-c58d-58f6-bd40-759ce5ddce06",
+                  "kind": "reference",
+                  "role": "subrequirement",
+                  "target_id": "e20b355f-3bb8-5436-988b-c06c23d39b05"
+                }
+              ]
+            }
+          ],
+          "id": "0a40a0e6-94b6-5e6f-b13d-963462c5eab5/structure",
+          "kind": "clause",
+          "span": [
+            0,
+            186
+          ]
+        }
+      }
+    }
+  },
+  "units": {
+    "R1": "0a40a0e6-94b6-5e6f-b13d-963462c5eab5",
+    "R2": "dd9491c6-5887-53b2-8d02-a0b7df1dbdb8",
+    "R3": "4198ee3c-b3d3-5e6f-9756-d872989b1927",
+    "R4": "e20b355f-3bb8-5436-988b-c06c23d39b05"
+  },
+  "R1-interpretation": {
+    "status": "saved",
+    "revision": 1
+  },
+  "R2-interpretation": {
+    "status": "saved",
+    "revision": 1
+  },
+  "R3-interpretation": {
+    "status": "saved",
+    "revision": 1
+  },
+  "R4-interpretation": {
+    "status": "saved",
+    "revision": 1
+  },
+  "pin": {
+    "material_id": "ad7738ca612922619d85d725080cc26e",
+    "pinned": true
+  }
+}

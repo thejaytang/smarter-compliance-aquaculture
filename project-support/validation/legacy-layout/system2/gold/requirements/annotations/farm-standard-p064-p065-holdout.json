@@ -1,0 +1,868 @@
+{
+  "schema_version": "2.0",
+  "sample_id": "farm-standard-p064-p065-holdout",
+  "source": {
+    "file_name": "ASC-STD-001-ASC-Farm-Standard-V1.0.1-Aug-2025.pdf",
+    "sha256": "3b0cdf01f72b518710d5af9c1d8ccaa653c381f45053c7b20a102e06c1de4b20",
+    "language": "en",
+    "document_family": "general_standard",
+    "page_count": 256
+  },
+  "sample": {
+    "round_id": "goal04-round2",
+    "split": "holdout",
+    "page_numbers": [64, 65],
+    "selection_rationale": "Human pages 64-65 form a complete two-page Requirement window. Every numbered Requirement beginning in the window ends within the window, and page 65 does not continue a Requirement onto page 66."
+  },
+  "annotation": {
+    "status": "frozen",
+    "frozen_at": "2026-08-28",
+    "verification": ["visual_page", "native_text"],
+    "notes": [
+      "All bounding boxes use PDF points with a top-left origin and were checked against the rendered pages and native text layer.",
+      "Indicator-applicability lines are linked to their numbered normative indicators rather than treated as standalone Requirements.",
+      "Footnote 45 is a direct scope clarification; footnotes 46-48 are direct external-source links."
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "p064-header",
+      "page_number": 64,
+      "page_index": 63,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 394.27, "y0": 35.50, "x1": 543.26, "y1": 43.06},
+      "role": "header",
+      "object_kind": "text_block",
+      "segment_order": 0,
+      "source_text": "Aquaculture Stewardship Council"
+    },
+    {
+      "segment_id": "p064-criterion-banner",
+      "page_number": 64,
+      "page_index": 63,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 64.58, "y0": 84.75, "x1": 280.50, "y1": 117.27},
+      "role": "criterion_heading",
+      "object_kind": "text_block",
+      "segment_order": 1,
+      "source_text": "2.11 Material Use, Waste and Pollution Control"
+    },
+    {
+      "segment_id": "p064-rationale",
+      "page_number": 64,
+      "page_index": 63,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 51.00, "y0": 159.15, "x1": 537.85, "y1": 368.19},
+      "role": "rationale",
+      "object_kind": "text_block",
+      "segment_order": 2,
+      "source_text": "Rationale\nWaste is generated through human activities such as agriculture, construction and demolition, industrial or commercial operations, the healthcare sector and domestic refuse. Improper material use and disposal can cause long-term pollution of terrestrial and aquatic environments, and have a direct effect on biodiversity loss, pollution and climate change.44\nFrom construction, to operation and decommissioning, aquaculture farms use materials and generate waste that can be hazardous. Copper-based antifoulants can leach into the water and cause harm to marine life in the water column and to the sediments below the farm. Therapeutants and chemicals used to treat farmed animals can also create unintended impacts on the animals themselves, the ecosystem and their handling staff.\nThis Criterion focuses on ASC certified farms using, and re-using, resources responsibly, minimising generated waste, and preventing pollution and harm to communities and the environment."
+    },
+    {
+      "segment_id": "p064-intent",
+      "page_number": 64,
+      "page_index": 63,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 51.00, "y0": 403.11, "x1": 535.72, "y1": 428.79},
+      "role": "other",
+      "object_kind": "text_block",
+      "segment_order": 3,
+      "source_text": "Intent – The aquaculture industry prevents pollution by responsibly managing and disposing of waste and chemicals."
+    },
+    {
+      "segment_id": "p064-indicators-heading",
+      "page_number": 64,
+      "page_index": 63,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.88, "y0": 451.61, "x1": 109.01, "y1": 461.57},
+      "role": "other",
+      "object_kind": "text_block",
+      "segment_order": 4,
+      "source_text": "Indicators:"
+    },
+    {
+      "segment_id": "p064-req-2-11-1-id",
+      "page_number": 64,
+      "page_index": 63,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.88, "y0": 490.19, "x1": 86.05, "y1": 504.23},
+      "role": "requirement_id",
+      "object_kind": "text_block",
+      "segment_order": 5,
+      "source_text": "2.11.1"
+    },
+    {
+      "segment_id": "p064-req-2-11-1-normative",
+      "page_number": 64,
+      "page_index": 63,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 489.17, "x1": 531.03, "y1": 513.53},
+      "role": "normative_text",
+      "object_kind": "text_block",
+      "segment_order": 6,
+      "source_text": "The UoC shall assess and, where feasible, implement measures to reduce, reuse and recycle waste materials."
+    },
+    {
+      "segment_id": "p064-req-2-11-2-id",
+      "page_number": 64,
+      "page_index": 63,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.88, "y0": 544.79, "x1": 88.76, "y1": 558.83},
+      "role": "requirement_id",
+      "object_kind": "text_block",
+      "segment_order": 7,
+      "source_text": "2.11.2"
+    },
+    {
+      "segment_id": "p064-req-2-11-2-applicability",
+      "page_number": 64,
+      "page_index": 63,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 543.77, "x1": 327.29, "y1": 552.77},
+      "role": "applicability",
+      "object_kind": "text_block",
+      "segment_order": 8,
+      "source_text": "Indicator applicability: point-source discharge"
+    },
+    {
+      "segment_id": "p064-req-2-11-2-normative",
+      "page_number": 64,
+      "page_index": 63,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 565.13, "x1": 494.26, "y1": 589.49},
+      "role": "normative_text",
+      "object_kind": "text_block",
+      "segment_order": 9,
+      "source_text": "The UoC shall capture non-biological solid waste, including plastics, prior to effluent discharge."
+    },
+    {
+      "segment_id": "p064-req-2-11-3-id",
+      "page_number": 64,
+      "page_index": 63,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.88, "y0": 620.66, "x1": 88.86, "y1": 634.70},
+      "role": "requirement_id",
+      "object_kind": "text_block",
+      "segment_order": 10,
+      "source_text": "2.11.3"
+    },
+    {
+      "segment_id": "p064-req-2-11-3-normative",
+      "page_number": 64,
+      "page_index": 63,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 619.25, "x1": 318.47, "y1": 628.64},
+      "role": "normative_text",
+      "object_kind": "text_block",
+      "segment_order": 11,
+      "source_text": "The UoC shall dispose of waste45 responsibly."
+    },
+    {
+      "segment_id": "p064-footnote-44",
+      "page_number": 64,
+      "page_index": 63,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 51.00, "y0": 728.45, "x1": 461.72, "y1": 750.91},
+      "role": "resource",
+      "object_kind": "footnote",
+      "segment_order": 12,
+      "source_text": "44 UN Environment Programme (2024). Beyond an age of waste – Turning rubbish into a resource. DOI: LXXTW:HSMSVK1091172000118224499"
+    },
+    {
+      "segment_id": "p064-footnote-45",
+      "page_number": 64,
+      "page_index": 63,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 51.00, "y0": 762.28, "x1": 219.55, "y1": 771.79},
+      "role": "footnote",
+      "object_kind": "footnote",
+      "segment_order": 13,
+      "source_text": "45 Including human waste and mortalities."
+    },
+    {
+      "segment_id": "p064-footer",
+      "page_number": 64,
+      "page_index": 63,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 59.30, "y0": 793.75, "x1": 538.78, "y1": 799.27},
+      "role": "footer",
+      "object_kind": "table_cell",
+      "segment_order": 14,
+      "source_text": "Document Name ASC Farm Standard Document ID ASC-STD-001 Version V1.0.1 Page 64 of 256"
+    },
+    {
+      "segment_id": "p065-header",
+      "page_number": 65,
+      "page_index": 64,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 394.27, "y0": 35.50, "x1": 543.26, "y1": 43.06},
+      "role": "header",
+      "object_kind": "text_block",
+      "segment_order": 0,
+      "source_text": "Aquaculture Stewardship Council"
+    },
+    {
+      "segment_id": "p065-req-2-11-4-id",
+      "page_number": 65,
+      "page_index": 64,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.88, "y0": 82.74, "x1": 90.22, "y1": 96.78},
+      "role": "requirement_id",
+      "object_kind": "text_block",
+      "segment_order": 1,
+      "source_text": "2.11.4"
+    },
+    {
+      "segment_id": "p065-req-2-11-4-normative",
+      "page_number": 65,
+      "page_index": 64,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 81.72, "x1": 535.41, "y1": 185.52},
+      "role": "normative_text",
+      "object_kind": "list",
+      "segment_order": 2,
+      "source_text": "The UoC shall not use pesticides that are banned or restricted by any of the following conventions or organisations:\no The Rotterdam Convention on Prior Informed Consent (PIC)46\no The Stockholm Convention on Persistent Organic Pollutants (POPs)47\no The World Health Organisation (WHO), for products classed as ’extremely hazardous‘ or ’highly hazardous‘ (classes Ia and Ib).48"
+    },
+    {
+      "segment_id": "p065-req-2-11-5-id",
+      "page_number": 65,
+      "page_index": 64,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.88, "y0": 216.66, "x1": 88.90, "y1": 230.70},
+      "role": "requirement_id",
+      "object_kind": "text_block",
+      "segment_order": 3,
+      "source_text": "2.11.5"
+    },
+    {
+      "segment_id": "p065-req-2-11-5-normative",
+      "page_number": 65,
+      "page_index": 64,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 215.64, "x1": 495.87, "y1": 255.36},
+      "role": "normative_text",
+      "object_kind": "text_block",
+      "segment_order": 4,
+      "source_text": "The UoC shall only use net antifouling agents containing biocides that are approved by local regulations in either Australia, the European Union, Japan or the United States of America."
+    },
+    {
+      "segment_id": "p065-req-2-11-6-id",
+      "page_number": 65,
+      "page_index": 64,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.88, "y0": 286.65, "x1": 89.49, "y1": 300.69},
+      "role": "requirement_id",
+      "object_kind": "text_block",
+      "segment_order": 5,
+      "source_text": "2.11.6"
+    },
+    {
+      "segment_id": "p065-req-2-11-6-normative",
+      "page_number": 65,
+      "page_index": 64,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 285.63, "x1": 501.23, "y1": 309.99},
+      "role": "normative_text",
+      "object_kind": "text_block",
+      "segment_order": 6,
+      "source_text": "The UoC shall hold water containing hormones for at least 48 hours or as per product specifications, whichever is greater, prior to discharge."
+    },
+    {
+      "segment_id": "p065-req-2-11-7-id",
+      "page_number": 65,
+      "page_index": 64,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.88, "y0": 341.13, "x1": 89.25, "y1": 355.17},
+      "role": "requirement_id",
+      "object_kind": "text_block",
+      "segment_order": 7,
+      "source_text": "2.11.7"
+    },
+    {
+      "segment_id": "p065-req-2-11-7-normative",
+      "page_number": 65,
+      "page_index": 64,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 340.11, "x1": 487.92, "y1": 364.47},
+      "role": "normative_text",
+      "object_kind": "text_block",
+      "segment_order": 8,
+      "source_text": "The UoC shall ensure that all processing effluent is treated to minimise biosecurity and environmental risks."
+    },
+    {
+      "segment_id": "p065-req-2-11-8-id",
+      "page_number": 65,
+      "page_index": 64,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.88, "y0": 395.61, "x1": 89.81, "y1": 409.65},
+      "role": "requirement_id",
+      "object_kind": "text_block",
+      "segment_order": 9,
+      "source_text": "2.11.8"
+    },
+    {
+      "segment_id": "p065-req-2-11-8-applicability",
+      "page_number": 65,
+      "page_index": 64,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 394.59, "x1": 470.10, "y1": 418.95},
+      "role": "applicability",
+      "object_kind": "text_block",
+      "segment_order": 10,
+      "source_text": "Indicator applicability: cage culture and suspended culture not using copper-treated gear or infrastructure"
+    },
+    {
+      "segment_id": "p065-req-2-11-8-normative",
+      "page_number": 65,
+      "page_index": 64,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 431.31, "x1": 502.06, "y1": 455.69},
+      "role": "normative_text",
+      "object_kind": "text_block",
+      "segment_order": 11,
+      "source_text": "The UoC shall clean aquaculture gear or infrastructure in land-based facilities only if the facility treats effluents."
+    },
+    {
+      "segment_id": "p065-req-2-11-9-id",
+      "page_number": 65,
+      "page_index": 64,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.88, "y0": 486.95, "x1": 89.49, "y1": 500.99},
+      "role": "requirement_id",
+      "object_kind": "text_block",
+      "segment_order": 12,
+      "source_text": "2.11.9"
+    },
+    {
+      "segment_id": "p065-req-2-11-9-applicability",
+      "page_number": 65,
+      "page_index": 64,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 485.93, "x1": 486.42, "y1": 510.29},
+      "role": "applicability",
+      "object_kind": "text_block",
+      "segment_order": 13,
+      "source_text": "Indicator applicability: cage culture and suspended culture using copper-treated gear or infrastructure"
+    },
+    {
+      "segment_id": "p065-req-2-11-9-normative",
+      "page_number": 65,
+      "page_index": 64,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 522.65, "x1": 446.71, "y1": 531.65},
+      "role": "normative_text",
+      "object_kind": "text_block",
+      "segment_order": 14,
+      "source_text": "The UoC shall not treat or clean aquaculture gear or infrastructure in situ."
+    },
+    {
+      "segment_id": "p065-req-2-11-10-id",
+      "page_number": 65,
+      "page_index": 64,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 53.88, "y0": 562.79, "x1": 95.60, "y1": 576.83},
+      "role": "requirement_id",
+      "object_kind": "text_block",
+      "segment_order": 15,
+      "source_text": "2.11.10"
+    },
+    {
+      "segment_id": "p065-req-2-11-10-applicability",
+      "page_number": 65,
+      "page_index": 64,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 561.77, "x1": 486.42, "y1": 586.13},
+      "role": "applicability",
+      "object_kind": "text_block",
+      "segment_order": 16,
+      "source_text": "Indicator applicability: cage culture and suspended culture using copper-treated gear or infrastructure"
+    },
+    {
+      "segment_id": "p065-req-2-11-10-normative",
+      "page_number": 65,
+      "page_index": 64,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 117.74, "y0": 598.49, "x1": 485.85, "y1": 622.88},
+      "role": "normative_text",
+      "object_kind": "text_block",
+      "segment_order": 17,
+      "source_text": "The UoC shall clean aquaculture gear or infrastructure in land-based facilities that treat effluents, including the capturing of copper."
+    },
+    {
+      "segment_id": "p065-footnote-46",
+      "page_number": 65,
+      "page_index": 64,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 51.00, "y0": 744.04, "x1": 317.54, "y1": 752.83},
+      "role": "resource",
+      "object_kind": "footnote",
+      "segment_order": 18,
+      "source_text": "46 http://www.pic.int/TheConvention/Chemicals/AnnexIIIChemicals"
+    },
+    {
+      "segment_id": "p065-footnote-47",
+      "page_number": 65,
+      "page_index": 64,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 51.00, "y0": 753.76, "x1": 396.72, "y1": 762.55},
+      "role": "resource",
+      "object_kind": "footnote",
+      "segment_order": 19,
+      "source_text": "47 http://chm.pops.int/TheConvention/ThePOPs/ListingofPOPs/tabid/2509/Default.aspx"
+    },
+    {
+      "segment_id": "p065-footnote-48",
+      "page_number": 65,
+      "page_index": 64,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 51.00, "y0": 763.48, "x1": 285.29, "y1": 772.27},
+      "role": "resource",
+      "object_kind": "footnote",
+      "segment_order": 20,
+      "source_text": "48 https://www.who.int/publications/i/item/9789240005662"
+    },
+    {
+      "segment_id": "p065-footer",
+      "page_number": 65,
+      "page_index": 64,
+      "page_size": {"width": 595.32, "height": 841.92, "unit": "pdf_point", "origin": "top_left"},
+      "bbox": {"x0": 59.30, "y0": 793.75, "x1": 538.78, "y1": 799.27},
+      "role": "footer",
+      "object_kind": "table_cell",
+      "segment_order": 21,
+      "source_text": "Document Name ASC Farm Standard Document ID ASC-STD-001 Version V1.0.1 Page 65 of 256"
+    }
+  ],
+  "requirements": [
+    {
+      "requirement_id": "2.11.1",
+      "requirement_form": "normative_indicator",
+      "criterion_path": [
+        "Principle 2: The aquaculture industry demonstrates environmental stewardship",
+        "Criterion 2.11 – Material Use, Waste and Pollution Control"
+      ],
+      "language": "en",
+      "indicator_text": "The UoC shall assess and, where feasible, implement measures to reduce, reuse and recycle waste materials.",
+      "requirement_value": null,
+      "normative_text": "The UoC shall assess and, where feasible, implement measures to reduce, reuse and recycle waste materials.",
+      "normative_subjects": ["UoC"],
+      "applicability": [],
+      "modalities": [
+        {"token": "shall", "type": "obligation", "scope": "assess and, where feasible, implement measures to reduce, reuse and recycle waste materials"}
+      ],
+      "negations": [],
+      "clauses": [
+        {"clause_id": "2.11.1-a", "parent_clause_id": null, "marker": null, "text": "The UoC shall assess and, where feasible, implement measures to reduce, reuse and recycle waste materials.", "joins_next": null}
+      ],
+      "conditions": [
+        {"text": "where feasible", "applies_to": "implementation of measures to reduce, reuse and recycle waste materials"}
+      ],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["p064-criterion-banner", "p064-intent"],
+      "source_segment_ids": ["p064-req-2-11-1-id", "p064-req-2-11-1-normative"],
+      "source_anomalies": [],
+      "gold_notes": []
+    },
+    {
+      "requirement_id": "2.11.2",
+      "requirement_form": "normative_indicator",
+      "criterion_path": [
+        "Principle 2: The aquaculture industry demonstrates environmental stewardship",
+        "Criterion 2.11 – Material Use, Waste and Pollution Control"
+      ],
+      "language": "en",
+      "indicator_text": "The UoC shall capture non-biological solid waste, including plastics, prior to effluent discharge.",
+      "requirement_value": null,
+      "normative_text": "The UoC shall capture non-biological solid waste, including plastics, prior to effluent discharge.",
+      "normative_subjects": ["UoC"],
+      "applicability": ["point-source discharge"],
+      "modalities": [
+        {"token": "shall", "type": "obligation", "scope": "capture non-biological solid waste, including plastics, prior to effluent discharge"}
+      ],
+      "negations": [],
+      "clauses": [
+        {"clause_id": "2.11.2-a", "parent_clause_id": null, "marker": null, "text": "The UoC shall capture non-biological solid waste, including plastics, prior to effluent discharge.", "joins_next": null}
+      ],
+      "conditions": [
+        {"text": "prior to effluent discharge", "applies_to": "capture of non-biological solid waste"}
+      ],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["p064-criterion-banner", "p064-intent"],
+      "source_segment_ids": ["p064-req-2-11-2-id", "p064-req-2-11-2-applicability", "p064-req-2-11-2-normative"],
+      "source_anomalies": [],
+      "gold_notes": []
+    },
+    {
+      "requirement_id": "2.11.3",
+      "requirement_form": "normative_indicator",
+      "criterion_path": [
+        "Principle 2: The aquaculture industry demonstrates environmental stewardship",
+        "Criterion 2.11 – Material Use, Waste and Pollution Control"
+      ],
+      "language": "en",
+      "indicator_text": "The UoC shall dispose of waste responsibly.",
+      "requirement_value": null,
+      "normative_text": "The UoC shall dispose of waste responsibly.",
+      "normative_subjects": ["UoC"],
+      "applicability": ["waste, including human waste and mortalities"],
+      "modalities": [
+        {"token": "shall", "type": "obligation", "scope": "dispose of waste responsibly"}
+      ],
+      "negations": [],
+      "clauses": [
+        {"clause_id": "2.11.3-a", "parent_clause_id": null, "marker": null, "text": "The UoC shall dispose of waste responsibly.", "joins_next": null}
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [],
+      "footnote_refs": [
+        {"marker": "45", "text": "Including human waste and mortalities.", "link_type": "direct", "source_segment_ids": ["p064-footnote-45"]}
+      ],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["p064-criterion-banner", "p064-intent"],
+      "source_segment_ids": ["p064-req-2-11-3-id", "p064-req-2-11-3-normative", "p064-footnote-45"],
+      "source_anomalies": [],
+      "gold_notes": []
+    },
+    {
+      "requirement_id": "2.11.4",
+      "requirement_form": "normative_indicator",
+      "criterion_path": [
+        "Principle 2: The aquaculture industry demonstrates environmental stewardship",
+        "Criterion 2.11 – Material Use, Waste and Pollution Control"
+      ],
+      "language": "en",
+      "indicator_text": "The UoC shall not use pesticides that are banned or restricted by any of the following conventions or organisations: The Rotterdam Convention on Prior Informed Consent (PIC); The Stockholm Convention on Persistent Organic Pollutants (POPs); The World Health Organisation (WHO), for products classed as ’extremely hazardous‘ or ’highly hazardous‘ (classes Ia and Ib).",
+      "requirement_value": null,
+      "normative_text": "The UoC shall not use pesticides that are banned or restricted by any of the following conventions or organisations: The Rotterdam Convention on Prior Informed Consent (PIC); The Stockholm Convention on Persistent Organic Pollutants (POPs); The World Health Organisation (WHO), for products classed as ’extremely hazardous‘ or ’highly hazardous‘ (classes Ia and Ib).",
+      "normative_subjects": ["UoC"],
+      "applicability": [],
+      "modalities": [
+        {"token": "shall not", "type": "prohibition", "scope": "use of pesticides banned or restricted by any listed convention or organisation"}
+      ],
+      "negations": [
+        {"text": "shall not use pesticides", "applies_to": "pesticides banned or restricted by any listed convention or organisation"}
+      ],
+      "clauses": [
+        {"clause_id": "2.11.4-root", "parent_clause_id": null, "marker": null, "text": "The UoC shall not use pesticides that are banned or restricted by any of the following conventions or organisations:", "joins_next": null},
+        {"clause_id": "2.11.4-a", "parent_clause_id": "2.11.4-root", "marker": "o", "text": "The Rotterdam Convention on Prior Informed Consent (PIC)", "joins_next": "or"},
+        {"clause_id": "2.11.4-b", "parent_clause_id": "2.11.4-root", "marker": "o", "text": "The Stockholm Convention on Persistent Organic Pollutants (POPs)", "joins_next": "or"},
+        {"clause_id": "2.11.4-c", "parent_clause_id": "2.11.4-root", "marker": "o", "text": "The World Health Organisation (WHO), for products classed as ’extremely hazardous‘ or ’highly hazardous‘ (classes Ia and Ib).", "joins_next": null}
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [
+        {"text": "The Rotterdam Convention on Prior Informed Consent (PIC)", "target": "http://www.pic.int/TheConvention/Chemicals/AnnexIIIChemicals", "type": "external_document"},
+        {"text": "The Stockholm Convention on Persistent Organic Pollutants (POPs)", "target": "http://chm.pops.int/TheConvention/ThePOPs/ListingofPOPs/tabid/2509/Default.aspx", "type": "external_document"},
+        {"text": "The World Health Organisation (WHO)", "target": "https://www.who.int/publications/i/item/9789240005662", "type": "external_document"}
+      ],
+      "footnote_refs": [
+        {"marker": "46", "text": "http://www.pic.int/TheConvention/Chemicals/AnnexIIIChemicals", "link_type": "direct", "source_segment_ids": ["p065-footnote-46"]},
+        {"marker": "47", "text": "http://chm.pops.int/TheConvention/ThePOPs/ListingofPOPs/tabid/2509/Default.aspx", "link_type": "direct", "source_segment_ids": ["p065-footnote-47"]},
+        {"marker": "48", "text": "https://www.who.int/publications/i/item/9789240005662", "link_type": "direct", "source_segment_ids": ["p065-footnote-48"]}
+      ],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": [
+        "p064-criterion-banner",
+        "p064-intent",
+        "p065-footnote-46",
+        "p065-footnote-47",
+        "p065-footnote-48"
+      ],
+      "source_segment_ids": ["p065-req-2-11-4-id", "p065-req-2-11-4-normative"],
+      "source_anomalies": [],
+      "gold_notes": []
+    },
+    {
+      "requirement_id": "2.11.5",
+      "requirement_form": "normative_indicator",
+      "criterion_path": [
+        "Principle 2: The aquaculture industry demonstrates environmental stewardship",
+        "Criterion 2.11 – Material Use, Waste and Pollution Control"
+      ],
+      "language": "en",
+      "indicator_text": "The UoC shall only use net antifouling agents containing biocides that are approved by local regulations in either Australia, the European Union, Japan or the United States of America.",
+      "requirement_value": null,
+      "normative_text": "The UoC shall only use net antifouling agents containing biocides that are approved by local regulations in either Australia, the European Union, Japan or the United States of America.",
+      "normative_subjects": ["UoC"],
+      "applicability": [],
+      "modalities": [
+        {"token": "shall only", "type": "obligation", "scope": "use only net antifouling agents containing biocides approved by local regulations in a listed jurisdiction"}
+      ],
+      "negations": [],
+      "clauses": [
+        {"clause_id": "2.11.5-a", "parent_clause_id": null, "marker": null, "text": "The UoC shall only use net antifouling agents containing biocides that are approved by local regulations in either Australia, the European Union, Japan or the United States of America.", "joins_next": null}
+      ],
+      "conditions": [
+        {"text": "approved by local regulations in either Australia, the European Union, Japan or the United States of America", "applies_to": "net antifouling agents containing biocides"}
+      ],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["p064-criterion-banner", "p064-intent"],
+      "source_segment_ids": ["p065-req-2-11-5-id", "p065-req-2-11-5-normative"],
+      "source_anomalies": [],
+      "gold_notes": []
+    },
+    {
+      "requirement_id": "2.11.6",
+      "requirement_form": "normative_indicator",
+      "criterion_path": [
+        "Principle 2: The aquaculture industry demonstrates environmental stewardship",
+        "Criterion 2.11 – Material Use, Waste and Pollution Control"
+      ],
+      "language": "en",
+      "indicator_text": "The UoC shall hold water containing hormones for at least 48 hours or as per product specifications, whichever is greater, prior to discharge.",
+      "requirement_value": null,
+      "normative_text": "The UoC shall hold water containing hormones for at least 48 hours or as per product specifications, whichever is greater, prior to discharge.",
+      "normative_subjects": ["UoC"],
+      "applicability": [],
+      "modalities": [
+        {"token": "shall", "type": "obligation", "scope": "hold water containing hormones for the greater of at least 48 hours or the product-specified duration prior to discharge"}
+      ],
+      "negations": [],
+      "clauses": [
+        {"clause_id": "2.11.6-a", "parent_clause_id": null, "marker": null, "text": "The UoC shall hold water containing hormones for at least 48 hours or as per product specifications, whichever is greater, prior to discharge.", "joins_next": null}
+      ],
+      "conditions": [
+        {"text": "as per product specifications, whichever is greater", "applies_to": "the minimum holding duration"},
+        {"text": "prior to discharge", "applies_to": "holding water containing hormones"}
+      ],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [
+        {
+          "raw_text": "at least 48 hours",
+          "operator": "gte",
+          "normalized_value": 48,
+          "unit": "hours",
+          "applies_to": "holding duration for water containing hormones, subject to a greater product-specified duration",
+          "basis": "explicit",
+          "source_segment_ids": ["p065-req-2-11-6-normative"]
+        }
+      ],
+      "dates": [],
+      "cross_references": [],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["p064-criterion-banner", "p064-intent"],
+      "source_segment_ids": ["p065-req-2-11-6-id", "p065-req-2-11-6-normative"],
+      "source_anomalies": [],
+      "gold_notes": []
+    },
+    {
+      "requirement_id": "2.11.7",
+      "requirement_form": "normative_indicator",
+      "criterion_path": [
+        "Principle 2: The aquaculture industry demonstrates environmental stewardship",
+        "Criterion 2.11 – Material Use, Waste and Pollution Control"
+      ],
+      "language": "en",
+      "indicator_text": "The UoC shall ensure that all processing effluent is treated to minimise biosecurity and environmental risks.",
+      "requirement_value": null,
+      "normative_text": "The UoC shall ensure that all processing effluent is treated to minimise biosecurity and environmental risks.",
+      "normative_subjects": ["UoC"],
+      "applicability": [],
+      "modalities": [
+        {"token": "shall", "type": "obligation", "scope": "ensure all processing effluent is treated to minimise biosecurity and environmental risks"}
+      ],
+      "negations": [],
+      "clauses": [
+        {"clause_id": "2.11.7-a", "parent_clause_id": null, "marker": null, "text": "The UoC shall ensure that all processing effluent is treated to minimise biosecurity and environmental risks.", "joins_next": null}
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["p064-criterion-banner", "p064-intent"],
+      "source_segment_ids": ["p065-req-2-11-7-id", "p065-req-2-11-7-normative"],
+      "source_anomalies": [],
+      "gold_notes": []
+    },
+    {
+      "requirement_id": "2.11.8",
+      "requirement_form": "normative_indicator",
+      "criterion_path": [
+        "Principle 2: The aquaculture industry demonstrates environmental stewardship",
+        "Criterion 2.11 – Material Use, Waste and Pollution Control"
+      ],
+      "language": "en",
+      "indicator_text": "The UoC shall clean aquaculture gear or infrastructure in land-based facilities only if the facility treats effluents.",
+      "requirement_value": null,
+      "normative_text": "The UoC shall clean aquaculture gear or infrastructure in land-based facilities only if the facility treats effluents.",
+      "normative_subjects": ["UoC"],
+      "applicability": ["cage culture and suspended culture not using copper-treated gear or infrastructure"],
+      "modalities": [
+        {"token": "shall", "type": "obligation", "scope": "clean aquaculture gear or infrastructure in land-based facilities only if the facility treats effluents"}
+      ],
+      "negations": [],
+      "clauses": [
+        {"clause_id": "2.11.8-a", "parent_clause_id": null, "marker": null, "text": "The UoC shall clean aquaculture gear or infrastructure in land-based facilities only if the facility treats effluents.", "joins_next": null}
+      ],
+      "conditions": [
+        {"text": "only if the facility treats effluents", "applies_to": "cleaning aquaculture gear or infrastructure in land-based facilities"}
+      ],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["p064-criterion-banner", "p064-intent"],
+      "source_segment_ids": ["p065-req-2-11-8-id", "p065-req-2-11-8-applicability", "p065-req-2-11-8-normative"],
+      "source_anomalies": [],
+      "gold_notes": []
+    },
+    {
+      "requirement_id": "2.11.9",
+      "requirement_form": "normative_indicator",
+      "criterion_path": [
+        "Principle 2: The aquaculture industry demonstrates environmental stewardship",
+        "Criterion 2.11 – Material Use, Waste and Pollution Control"
+      ],
+      "language": "en",
+      "indicator_text": "The UoC shall not treat or clean aquaculture gear or infrastructure in situ.",
+      "requirement_value": null,
+      "normative_text": "The UoC shall not treat or clean aquaculture gear or infrastructure in situ.",
+      "normative_subjects": ["UoC"],
+      "applicability": ["cage culture and suspended culture using copper-treated gear or infrastructure"],
+      "modalities": [
+        {"token": "shall not", "type": "prohibition", "scope": "treating or cleaning aquaculture gear or infrastructure in situ"}
+      ],
+      "negations": [
+        {"text": "shall not treat or clean aquaculture gear or infrastructure in situ", "applies_to": "cage culture and suspended culture using copper-treated gear or infrastructure"}
+      ],
+      "clauses": [
+        {"clause_id": "2.11.9-a", "parent_clause_id": null, "marker": null, "text": "The UoC shall not treat or clean aquaculture gear or infrastructure in situ.", "joins_next": null}
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["p064-criterion-banner", "p064-intent"],
+      "source_segment_ids": ["p065-req-2-11-9-id", "p065-req-2-11-9-applicability", "p065-req-2-11-9-normative"],
+      "source_anomalies": [],
+      "gold_notes": []
+    },
+    {
+      "requirement_id": "2.11.10",
+      "requirement_form": "normative_indicator",
+      "criterion_path": [
+        "Principle 2: The aquaculture industry demonstrates environmental stewardship",
+        "Criterion 2.11 – Material Use, Waste and Pollution Control"
+      ],
+      "language": "en",
+      "indicator_text": "The UoC shall clean aquaculture gear or infrastructure in land-based facilities that treat effluents, including the capturing of copper.",
+      "requirement_value": null,
+      "normative_text": "The UoC shall clean aquaculture gear or infrastructure in land-based facilities that treat effluents, including the capturing of copper.",
+      "normative_subjects": ["UoC"],
+      "applicability": ["cage culture and suspended culture using copper-treated gear or infrastructure"],
+      "modalities": [
+        {"token": "shall", "type": "obligation", "scope": "clean aquaculture gear or infrastructure in land-based facilities that treat effluents, including capturing copper"}
+      ],
+      "negations": [],
+      "clauses": [
+        {"clause_id": "2.11.10-a", "parent_clause_id": null, "marker": null, "text": "The UoC shall clean aquaculture gear or infrastructure in land-based facilities that treat effluents, including the capturing of copper.", "joins_next": null}
+      ],
+      "conditions": [
+        {"text": "in land-based facilities that treat effluents", "applies_to": "cleaning aquaculture gear or infrastructure"}
+      ],
+      "exceptions": [],
+      "exemptions": [],
+      "thresholds": [],
+      "dates": [],
+      "cross_references": [],
+      "footnote_refs": [],
+      "associated_instructions": [],
+      "client_actions": [],
+      "auditor_actions": [],
+      "related_context_ids": ["p064-criterion-banner", "p064-intent"],
+      "source_segment_ids": ["p065-req-2-11-10-id", "p065-req-2-11-10-applicability", "p065-req-2-11-10-normative"],
+      "source_anomalies": [],
+      "gold_notes": []
+    }
+  ],
+  "excluded_regions": [
+    {
+      "source_segment_ids": ["p064-header", "p064-footer", "p065-header", "p065-footer"],
+      "classification": "header_footer",
+      "reason": "Repeated document furniture, not Requirement content."
+    },
+    {
+      "source_segment_ids": ["p064-rationale"],
+      "classification": "rationale",
+      "reason": "Explanatory Rationale prose is not a standalone numbered Requirement."
+    },
+    {
+      "source_segment_ids": ["p064-criterion-banner", "p064-intent", "p064-indicators-heading"],
+      "classification": "other_non_requirement",
+      "reason": "Criterion context, intent and section label used for hierarchy, not standalone Requirements."
+    },
+    {
+      "source_segment_ids": ["p064-footnote-45"],
+      "classification": "other_non_requirement",
+      "reason": "Direct scope clarification linked to its Requirement, not a standalone Requirement."
+    },
+    {
+      "source_segment_ids": ["p064-footnote-44", "p065-footnote-46", "p065-footnote-47", "p065-footnote-48"],
+      "classification": "resource",
+      "reason": "Bibliographic or external-source material, not standalone Requirements."
+    }
+  ],
+  "summary": {
+    "requirement_count": 10,
+    "cross_page_requirement_count": 0,
+    "client_action_count": 0,
+    "auditor_action_count": 0,
+    "critical_gold_ambiguities": []
+  }
+}

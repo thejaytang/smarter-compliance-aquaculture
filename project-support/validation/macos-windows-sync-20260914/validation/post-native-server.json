@@ -1,0 +1,1 @@
+{"platform": "darwin", "macos_reuse_address": true, "occupied_port_fallback": "PASS", "close_and_rebind": "PASS", "temporary_runtime_only": true}

@@ -1,0 +1,45 @@
+- generic [active] [ref=f10e1]:
+  - link "Skip to content" [ref=f10e2] [cursor=pointer]:
+    - /url: "#main"
+  - complementary [ref=f10e3]:
+    - generic [ref=f10e8]:
+      - text: Smarter Compliance
+      - generic [ref=f10e9]: Requirement workbench
+    - navigation "System navigation" [ref=f10e10]:
+      - button "Overview All three systems" [ref=f10e11] [cursor=pointer]:
+        - text: Overview
+        - generic [ref=f10e12]: All three systems
+      - generic [ref=f10e13]:
+        - button "System1 Source management" [expanded] [ref=f10e14] [cursor=pointer]:
+          - text: System1
+          - generic [aria-hidden] [ref=f10e15]: ⌄
+          - generic [ref=f10e16]: Source management
+        - generic [ref=f10e17]:
+          - button "Pending review" [ref=f10e18] [cursor=pointer]
+          - button "Review history" [ref=f10e19] [cursor=pointer]
+      - button "Materials Human content review" [ref=f10e21] [cursor=pointer]:
+        - text: Materials
+        - generic [aria-hidden] [ref=f10e22]: ⌄
+        - generic [ref=f10e23]: Human content review
+      - button "System3 Semantic enrichment" [ref=f10e25] [cursor=pointer]:
+        - text: System3
+        - generic [aria-hidden] [ref=f10e26]: ⌄
+        - generic [ref=f10e27]: Semantic enrichment
+      - button "Confidence settings" [ref=f10e28] [cursor=pointer]
+    - generic [ref=f10e29]:
+      - text: Local workspace
+      - button "Exit workbench" [ref=f10e31] [cursor=pointer]
+  - generic [ref=f10e32]:
+    - banner [ref=f10e33]:
+      - generic [ref=f10e34]:
+        - button "Collapse navigation" [expanded] [ref=f10e35] [cursor=pointer]: ☰
+        - heading "Requirement overview" [level=1] [ref=f10e36]
+      - button "Runtime starting" [ref=f10e37] [cursor=pointer]
+      - generic [ref=f10e38]:
+        - generic [ref=f10e39]: Current reviewer
+        - generic [ref=f10e40]:
+          - combobox "Current reviewer" [ref=f10e41]:
+            - option "Select a reviewer" [selected]
+          - button "Use this name" [ref=f10e42] [cursor=pointer]
+    - main [ref=f10e43]:
+      - paragraph [ref=f10e44]: Loading requirement workspace…

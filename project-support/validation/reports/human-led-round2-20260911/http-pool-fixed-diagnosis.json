@@ -1,0 +1,502 @@
+{
+  "scope": "100 sequential synthetic 600000-cell responses per fresh isolated server; existing Handler.send, new-thread versus reused-worker control; no business databases",
+  "variants": [
+    {
+      "port": 61516,
+      "pid": 28667,
+      "payload_bytes": 7306795,
+      "variant": "pool-fixed",
+      "series": [
+        {
+          "reads": 0,
+          "pid": 28667,
+          "traced_current": 152705,
+          "traced_peak": 312052,
+          "objects_delta": 282,
+          "initial_traced": 84,
+          "threads": 2,
+          "gc_counts": [
+            319,
+            0,
+            0
+          ],
+          "gc_collections": [
+            {
+              "collections": 58,
+              "collected": 260,
+              "uncollectable": 0
+            },
+            {
+              "collections": 5,
+              "collected": 16,
+              "uncollectable": 0
+            },
+            {
+              "collections": 1,
+              "collected": 0,
+              "uncollectable": 0
+            }
+          ],
+          "rss_bytes": 88817664
+        },
+        {
+          "reads": 10,
+          "pid": 28667,
+          "traced_current": 167854,
+          "traced_peak": 14781369,
+          "objects_delta": 329,
+          "initial_traced": 84,
+          "threads": 2,
+          "gc_counts": [
+            377,
+            0,
+            0
+          ],
+          "gc_collections": [
+            {
+              "collections": 58,
+              "collected": 260,
+              "uncollectable": 0
+            },
+            {
+              "collections": 5,
+              "collected": 16,
+              "uncollectable": 0
+            },
+            {
+              "collections": 1,
+              "collected": 0,
+              "uncollectable": 0
+            }
+          ],
+          "rss_bytes": 162070528
+        },
+        {
+          "reads": 20,
+          "pid": 28667,
+          "traced_current": 176630,
+          "traced_peak": 14790077,
+          "objects_delta": 355,
+          "initial_traced": 84,
+          "threads": 2,
+          "gc_counts": [
+            413,
+            0,
+            0
+          ],
+          "gc_collections": [
+            {
+              "collections": 58,
+              "collected": 260,
+              "uncollectable": 0
+            },
+            {
+              "collections": 5,
+              "collected": 16,
+              "uncollectable": 0
+            },
+            {
+              "collections": 1,
+              "collected": 0,
+              "uncollectable": 0
+            }
+          ],
+          "rss_bytes": 235339776
+        },
+        {
+          "reads": 30,
+          "pid": 28667,
+          "traced_current": 185837,
+          "traced_peak": 14799268,
+          "objects_delta": 381,
+          "initial_traced": 84,
+          "threads": 2,
+          "gc_counts": [
+            450,
+            0,
+            0
+          ],
+          "gc_collections": [
+            {
+              "collections": 58,
+              "collected": 260,
+              "uncollectable": 0
+            },
+            {
+              "collections": 5,
+              "collected": 16,
+              "uncollectable": 0
+            },
+            {
+              "collections": 1,
+              "collected": 0,
+              "uncollectable": 0
+            }
+          ],
+          "rss_bytes": 308592640
+        },
+        {
+          "reads": 40,
+          "pid": 28667,
+          "traced_current": 195060,
+          "traced_peak": 14808491,
+          "objects_delta": 407,
+          "initial_traced": 84,
+          "threads": 2,
+          "gc_counts": [
+            487,
+            0,
+            0
+          ],
+          "gc_collections": [
+            {
+              "collections": 58,
+              "collected": 260,
+              "uncollectable": 0
+            },
+            {
+              "collections": 5,
+              "collected": 16,
+              "uncollectable": 0
+            },
+            {
+              "collections": 1,
+              "collected": 0,
+              "uncollectable": 0
+            }
+          ],
+          "rss_bytes": 381845504
+        },
+        {
+          "reads": 50,
+          "pid": 28667,
+          "traced_current": 204768,
+          "traced_peak": 14818243,
+          "objects_delta": 433,
+          "initial_traced": 84,
+          "threads": 2,
+          "gc_counts": [
+            524,
+            0,
+            0
+          ],
+          "gc_collections": [
+            {
+              "collections": 58,
+              "collected": 260,
+              "uncollectable": 0
+            },
+            {
+              "collections": 5,
+              "collected": 16,
+              "uncollectable": 0
+            },
+            {
+              "collections": 1,
+              "collected": 0,
+              "uncollectable": 0
+            }
+          ],
+          "rss_bytes": 455114752
+        },
+        {
+          "reads": 60,
+          "pid": 28667,
+          "traced_current": 213482,
+          "traced_peak": 14826957,
+          "objects_delta": 459,
+          "initial_traced": 84,
+          "threads": 2,
+          "gc_counts": [
+            561,
+            0,
+            0
+          ],
+          "gc_collections": [
+            {
+              "collections": 58,
+              "collected": 260,
+              "uncollectable": 0
+            },
+            {
+              "collections": 5,
+              "collected": 16,
+              "uncollectable": 0
+            },
+            {
+              "collections": 1,
+              "collected": 0,
+              "uncollectable": 0
+            }
+          ],
+          "rss_bytes": 528367616
+        },
+        {
+          "reads": 70,
+          "pid": 28667,
+          "traced_current": 222286,
+          "traced_peak": 14835825,
+          "objects_delta": 485,
+          "initial_traced": 84,
+          "threads": 2,
+          "gc_counts": [
+            596,
+            0,
+            0
+          ],
+          "gc_collections": [
+            {
+              "collections": 58,
+              "collected": 260,
+              "uncollectable": 0
+            },
+            {
+              "collections": 5,
+              "collected": 16,
+              "uncollectable": 0
+            },
+            {
+              "collections": 1,
+              "collected": 0,
+              "uncollectable": 0
+            }
+          ],
+          "rss_bytes": 550354944
+        },
+        {
+          "reads": 80,
+          "pid": 28667,
+          "traced_current": 233949,
+          "traced_peak": 14847476,
+          "objects_delta": 536,
+          "initial_traced": 84,
+          "threads": 3,
+          "gc_counts": [
+            653,
+            0,
+            0
+          ],
+          "gc_collections": [
+            {
+              "collections": 58,
+              "collected": 260,
+              "uncollectable": 0
+            },
+            {
+              "collections": 5,
+              "collected": 16,
+              "uncollectable": 0
+            },
+            {
+              "collections": 1,
+              "collected": 0,
+              "uncollectable": 0
+            }
+          ],
+          "rss_bytes": 550404096
+        },
+        {
+          "reads": 90,
+          "pid": 28667,
+          "traced_current": 242077,
+          "traced_peak": 14855624,
+          "objects_delta": 562,
+          "initial_traced": 84,
+          "threads": 3,
+          "gc_counts": [
+            677,
+            0,
+            0
+          ],
+          "gc_collections": [
+            {
+              "collections": 58,
+              "collected": 260,
+              "uncollectable": 0
+            },
+            {
+              "collections": 5,
+              "collected": 16,
+              "uncollectable": 0
+            },
+            {
+              "collections": 1,
+              "collected": 0,
+              "uncollectable": 0
+            }
+          ],
+          "rss_bytes": 550404096
+        },
+        {
+          "reads": 100,
+          "pid": 28667,
+          "traced_current": 183008,
+          "traced_peak": 14855624,
+          "objects_delta": 246,
+          "initial_traced": 84,
+          "threads": 3,
+          "gc_counts": [
+            18,
+            1,
+            0
+          ],
+          "gc_collections": [
+            {
+              "collections": 59,
+              "collected": 514,
+              "uncollectable": 0
+            },
+            {
+              "collections": 5,
+              "collected": 16,
+              "uncollectable": 0
+            },
+            {
+              "collections": 1,
+              "collected": 0,
+              "uncollectable": 0
+            }
+          ],
+          "rss_bytes": 550404096
+        },
+        {
+          "reads": 101,
+          "pid": 28667,
+          "traced_current": 169515,
+          "traced_peak": 14855624,
+          "objects_delta": 238,
+          "initial_traced": 84,
+          "threads": 3,
+          "gc_counts": [
+            27,
+            0,
+            0
+          ],
+          "gc_collections": [
+            {
+              "collections": 59,
+              "collected": 514,
+              "uncollectable": 0
+            },
+            {
+              "collections": 5,
+              "collected": 16,
+              "uncollectable": 0
+            },
+            {
+              "collections": 2,
+              "collected": 38,
+              "uncollectable": 0
+            }
+          ],
+          "rss_bytes": 550404096
+        }
+      ],
+      "gc_after100": {
+        "collected": 38
+      },
+      "seconds": [
+        0.28829508303897455,
+        0.29129070800263435,
+        0.28500845801318064,
+        0.2860905409906991,
+        0.28096283302875236,
+        0.28541137505089864,
+        0.28098475001752377,
+        0.28621208301046863,
+        0.2815912080113776,
+        0.28599483298603445,
+        0.2941354580107145,
+        0.29225787497125566,
+        0.27928808401338756,
+        0.30475299997488037,
+        0.29894237499684095,
+        0.2989109579939395,
+        0.30072416696930304,
+        0.2979969580192119,
+        0.2773149590357207,
+        0.2764937079627998,
+        0.2816586249973625,
+        0.27761754201492295,
+        0.2754796660155989,
+        0.27502562495647,
+        0.27054541604593396,
+        0.279390792013146,
+        0.2744712079875171,
+        0.2759081249823794,
+        0.2868894590064883,
+        0.29836162499850616,
+        0.29963941703317687,
+        0.2904086670023389,
+        0.2711447500041686,
+        0.2758058750187047,
+        0.2780518340296112,
+        0.2748662499943748,
+        0.28214045794447884,
+        0.27968033304205164,
+        0.2728630829951726,
+        0.2710922920377925,
+        0.274511291005183,
+        0.2833327919943258,
+        0.28222195798298344,
+        0.278147250006441,
+        0.2813505840022117,
+        0.2834520840551704,
+        0.28736399998888373,
+        0.27414475003024563,
+        0.2763270419673063,
+        0.30625191604485735,
+        0.2736065830104053,
+        0.2721532920259051,
+        0.2727796249673702,
+        0.27569562499411404,
+        0.27678120805649087,
+        0.27477716701105237,
+        0.2711967910290696,
+        0.2805067499866709,
+        0.2789389580138959,
+        0.2814525000285357,
+        0.28646775003289804,
+        0.2804572500172071,
+        0.2742227500420995,
+        0.27945433399872854,
+        0.27602591598406434,
+        0.2785709999734536,
+        0.2755992090096697,
+        0.27204295800765976,
+        0.278302334016189,
+        0.28124170802766457,
+        0.27599704201566055,
+        0.2734408749965951,
+        0.2842969580087811,
+        0.28826179198222235,
+        0.2837947499938309,
+        0.2780017500044778,
+        0.28400854096980765,
+        0.2859633330372162,
+        0.28508583299117163,
+        0.2767196669592522,
+        0.2693637500051409,
+        0.28220329200848937,
+        0.28083162498660386,
+        0.2787462919950485,
+        0.2770787500194274,
+        0.2746122920070775,
+        0.2703101660008542,
+        0.2703245000448078,
+        0.2685752910329029,
+        0.280689750041347,
+        0.2792470830027014,
+        0.28064233297482133,
+        0.2829435409512371,
+        0.2926215420011431,
+        0.2747040000394918,
+        0.2723261670325883,
+        0.2733204590040259,
+        0.2789145829738118,
+        0.27686962502775714,
+        0.27826758299488574
+      ]
+    }
+  ]
+}

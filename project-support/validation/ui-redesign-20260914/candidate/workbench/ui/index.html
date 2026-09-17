@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en-GB">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%23185abc%27/%3E%3C/svg%3E"><title>Smarter Compliance · Workbench</title><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/system2-review.css"><link rel="stylesheet" href="/extraction.css"><link rel="stylesheet" href="/materials.css"><link rel="stylesheet" href="/collaboration.css"><link rel="stylesheet" href="/source-workspace.css"><script src="/app.js" type="module"></script></head>
+<body class="compact-shell">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="workspace">
+  <header class="app-navigation" aria-label="Workbench">
+    <label class="workspace-picker"><span class="visually-hidden">Workspace</span><select id="workspace-selector" aria-label="Workspace"><option value="sources">Sources</option><option value="materials">Materials</option></select></label>
+    <nav id="module-navigation" aria-label="Workspace modules"></nav>
+    <button id="open-collaboration" type="button" disabled>Collaboration</button>
+    <details id="application-menu" class="app-menu">
+      <summary id="operator-menu-label">Select reviewer</summary>
+      <div class="app-menu-content">
+        <form id="actor-form"><label for="actor">Current reviewer</label><div class="actor-controls"><select id="actor" required aria-label="Current reviewer"><option value="">Select a reviewer</option></select><button type="submit" id="actor-save">Use this name</button></div></form>
+        <button id="runtime-status" class="mw-runtime-indicator" type="button">Runtime status</button>
+        <button id="show-activity" type="button">Recent submissions &amp; source export</button>
+        <button data-view="settings" type="button">Confidence settings</button>
+        <details class="app-advanced"><summary>Additional tools</summary><button data-view="assessments" type="button">Source machine assessments</button><button data-view="system2QA" type="button">Weekly checks</button><button data-view="legacyReview" type="button">Legacy extraction review</button><button data-view="legacyHistory" type="button">Legacy review history</button></details>
+        <button id="stop" type="button">Exit workbench</button>
+      </div>
+    </details>
+  </header>
+  <div id="notice" role="status" aria-live="polite"></div>
+  <button id="reload-task" hidden>Reload current task</button>
+  <div id="shell-attention" role="status" hidden><span></span><button id="show-attention" type="button">View details</button></div>
+  <main id="main" tabindex="-1" aria-label="Source review"><p>Loading workbench…</p></main>
+</div>
+<dialog id="runtime-dialog" class="mw-runtime-status"></dialog>
+<dialog id="activity-dialog" class="app-dialog"><h2>Submissions &amp; source export</h2><div id="source-excel" class="muted" hidden><span role="status" aria-live="polite"></span><p><a href="/api/system1/workbook">Download source Excel</a></p></div><section id="requests" aria-label="Recent submissions"></section><button id="activity-close" type="button">Close</button></dialog>
+</body></html>

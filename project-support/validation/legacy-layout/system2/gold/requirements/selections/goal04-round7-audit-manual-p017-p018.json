@@ -1,0 +1,17 @@
+{
+  "selection_version": "1.0",
+  "round_id": "goal04-round7",
+  "selected_before_source_inspection": true,
+  "selected_at": "2026-08-28",
+  "sample_id": "audit-manual-p017-p018-round7-holdout",
+  "source_file": "download-module-691-ASC-Salmon-Audit-Manual_v1.4.pdf",
+  "page_numbers": [17, 18],
+  "split": "holdout",
+  "selection_rationale": "Untouched two-page Audit Matrix window from the predefined risk pool. It tests dense Requirement inventory, short values, applicability, client/CAB action separation, footnotes, and a page boundary without exceeding the Round 7 page budget.",
+  "parser_state_sha256": "55d489e3a2913216daef4d5278839b71d9b9c39d4ad46e02c600647345f2bd76",
+  "prediction_generated": true,
+  "prediction_sha256": "da6c5b6e3851fd293d692a83c3319bb4bde7a3428142b97dca0786266d2948ee",
+  "gold_opened": true,
+  "gold_frozen": true,
+  "gold_sha256": "863987077dc2e1ae8023a9a2f50fc1cb90fd1ea0e30e166cf976cb8152d19e61"
+}

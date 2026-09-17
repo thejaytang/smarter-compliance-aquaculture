@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "scope": "macOS real adapter machine candidate comparison",
+  "workspace": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/runtime/offline-collaboration-acceptance/machine-44f7003c",
+  "checks": [
+    "first empty draft candidate preview",
+    "no extraction overwrite",
+    "inline keep/choose/edit interface",
+    "explicit unchanged human baseline",
+    "replayed same resolution",
+    "identical re-extraction reused prior human choice",
+    "input changed after comparison rejected"
+  ]
+}

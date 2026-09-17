@@ -1,0 +1,109 @@
+{
+  "url": "http://127.0.0.1:54135",
+  "current": {
+    "status": "healthy",
+    "checked_at": "2026-09-12T15:00:30.769575+00:00",
+    "components": [
+      {
+        "id": "source",
+        "name": "Source service",
+        "state": "idle",
+        "last_checked": "2026-09-12T15:00:26.655750+00:00",
+        "last_success": "2026-09-12T15:00:26.655757+00:00",
+        "current_task": null,
+        "duration": 0.0,
+        "error": null,
+        "failures": 0,
+        "retry_seconds": 0,
+        "last_error": {
+          "code": "interrupted",
+          "message": "A previous operation was interrupted. Durable pending work will be checked on restart.",
+          "event_id": "b78fd4bcf0104acf9636bf503bca6b97",
+          "at": "2026-09-12T14:56:52.017725+00:00"
+        },
+        "request_id": null
+      },
+      {
+        "id": "material",
+        "name": "Material extraction",
+        "state": "idle",
+        "last_checked": "2026-09-12T15:00:29.536405+00:00",
+        "last_success": "2026-09-12T15:00:29.536418+00:00",
+        "current_task": null,
+        "duration": 0.537,
+        "error": null,
+        "failures": 0,
+        "retry_seconds": 0,
+        "last_error": null,
+        "request_id": null
+      },
+      {
+        "id": "storage",
+        "name": "Saved material storage",
+        "state": "idle",
+        "last_checked": "2026-09-12T15:00:24.157506+00:00",
+        "last_success": "2026-09-12T15:00:24.157517+00:00",
+        "current_task": null,
+        "duration": 0.002,
+        "error": null,
+        "failures": 0,
+        "retry_seconds": 0,
+        "last_error": null,
+        "request_id": null
+      },
+      {
+        "id": "excel",
+        "name": "Excel output",
+        "state": "stopped",
+        "last_checked": null,
+        "last_success": null,
+        "current_task": null,
+        "duration": 0,
+        "error": null,
+        "failures": 0,
+        "retry_seconds": 0,
+        "last_error": null
+      },
+      {
+        "id": "source_excel",
+        "name": "Source Excel output",
+        "state": "stopped",
+        "last_checked": null,
+        "last_success": null,
+        "current_task": null,
+        "duration": 0,
+        "error": null,
+        "failures": 0,
+        "retry_seconds": 0,
+        "last_error": null
+      },
+      {
+        "id": "legacy",
+        "name": "Legacy processing",
+        "state": "stopped",
+        "last_checked": null,
+        "last_success": null,
+        "current_task": null,
+        "duration": 0,
+        "error": null,
+        "failures": 0,
+        "retry_seconds": 0,
+        "last_error": null
+      }
+    ],
+    "persistence_error": null,
+    "resources": {
+      "uptime_seconds": 218.753,
+      "active_threads": 14,
+      "peak_rss_bytes": 44285952,
+      "memory_measurement": "process lifetime high-water resident memory, not current memory"
+    }
+  },
+  "recent_events": [
+    {
+      "component": "source",
+      "state": "recovered",
+      "at": "2026-09-12T14:57:31.658616+00:00"
+    }
+  ]
+}

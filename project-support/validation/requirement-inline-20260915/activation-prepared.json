@@ -1,0 +1,258 @@
+{
+  "prepared_at": "2026-09-15T13:47:05.075016+00:00",
+  "before_instance": "wSnCAQJLJkT-VWrG62tIV2cd1vfPTPGe",
+  "url": "http://127.0.0.1:62742",
+  "stores": [
+    {
+      "path": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/runtime/workbench.sqlite",
+      "backup": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/requirement-inline-20260915/activation-backup/0-workbench.sqlite",
+      "logical_before": {
+        "actors": {
+          "rows": 2,
+          "sha256": "64f2740db5c866c1a1d957b37697d9c2fb325fdd378021e7c4535830c80c817d"
+        },
+        "collaboration_objects": {
+          "rows": 6,
+          "sha256": "9a3dc1aa775f5d1bbe284437fcda949197f8e884bd2d763dfe2fbd7801b03d34"
+        },
+        "drafts": {
+          "rows": 10,
+          "sha256": "8a6730e09e1186dd8078446605d1a9ddfa3e1bb3c3f3bbca629c4a87cd60c39e"
+        },
+        "requests": {
+          "rows": 1,
+          "sha256": "2e0ae5857afb0e2ab4fd716a6f26f2a39871df2c166ef291ddefdde8c8b002d5"
+        },
+        "requirement_requests": {
+          "rows": 2,
+          "sha256": "9dd3f737edc94c92bb367ccb05ad9d7ca0593a8ee78a5695b146071424a1e3a2"
+        },
+        "requirement_sessions": {
+          "rows": 2,
+          "sha256": "e3e2f644ea3afe97f91db29bed148dfeade9d89d77a383be4592ac19f603d26e"
+        },
+        "requirement_steps": {
+          "rows": 2,
+          "sha256": "069cf3ae869eaa16138edb6c15c81ef3b50fd87b65a842502e0d0e0369afe350"
+        },
+        "requirement_units": {
+          "rows": 2,
+          "sha256": "393d06b08a4d6a2fcbd2db7ee952bb91a37d873b7341a6200e50deb6e09f4327"
+        },
+        "review_policies": {
+          "rows": 1,
+          "sha256": "0c9e47701fd79bddbcd997060249548e18234627eb4d506dd8df313e93b0712c"
+        },
+        "sessions": {
+          "rows": 269,
+          "sha256": "20ae244d3b1195628fd9f67332ce995af3af24c0e8877edaf91061fe1fc0615d"
+        }
+      }
+    },
+    {
+      "path": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system1/Code/runtime/governance.sqlite",
+      "backup": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/requirement-inline-20260915/activation-backup/1-governance.sqlite",
+      "logical_before": {
+        "artifacts": {
+          "rows": 73,
+          "sha256": "5e74d1c1d0ad462f217ee692ac60378a77b01ec090a8ee3753a8fd4f3c801aeb"
+        },
+        "history": {
+          "rows": 226,
+          "sha256": "9e505a99050124bbdce6db4ca53b1353d8f4a4f41ea2c199adaa3f7eae072ae7"
+        },
+        "operations": {
+          "rows": 134,
+          "sha256": "9dbab268c45758c49a1bf325d4bd076ded7bf064e59fdd35af8b6c3d7a43f7c3"
+        },
+        "source_versions": {
+          "rows": 70,
+          "sha256": "03f84978a4368f4daf889e921fcd1ffb2be38603722440c4a375479574852b07"
+        },
+        "sources": {
+          "rows": 87,
+          "sha256": "fd46353fa4b73f06bb001b7486e78a6cb7fe433b5c4722b8f843bfb853be3f67"
+        },
+        "state": {
+          "rows": 1,
+          "sha256": "a920435341f55a8a72f655f0870466c9240201e8df68c1295c1c46ce4553f5c8"
+        }
+      }
+    },
+    {
+      "path": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/system2/runtime/workflow/workflow.sqlite",
+      "backup": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/requirement-inline-20260915/activation-backup/2-workflow.sqlite",
+      "logical_before": {
+        "deliveries": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "documents": {
+          "rows": 38,
+          "sha256": "cdf413fa9be983813b8eb1bfac3e6c5a52b518f8428807e635bb573a6ae5147f"
+        },
+        "events": {
+          "rows": 73,
+          "sha256": "8baea8c36e01bda36eab48edfaf516057087fca857b3e02567876265f9c7991c"
+        },
+        "material_candidate_index": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "material_candidates": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "material_conflicts": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "material_documents": {
+          "rows": 2,
+          "sha256": "7b4665d224ed0aa00ea88f293f7677d72ef29bb2b5bbaa780e1b25ef7b1da710"
+        },
+        "material_read_index": {
+          "rows": 2,
+          "sha256": "d92e236c6c17fa87193d2ee8185743b44d090cd9e867321c2d17ef4d1bc1f0c9"
+        },
+        "material_read_schema": {
+          "rows": 4,
+          "sha256": "c286b02d9f2ed11949bd3e9a6905450ef00d35b33f30149293c81edee9dc8687"
+        },
+        "material_receipts": {
+          "rows": 2,
+          "sha256": "aafa83707ada7cc43e5dc507771de94c2aca129c63186d57d35677ee2aeb016c"
+        },
+        "material_revision_index": {
+          "rows": 2,
+          "sha256": "08c79292c6926ee0e67bf8cf6095eb2e2e0b39c93d414a8b1afd7827b2e16469"
+        },
+        "material_revisions": {
+          "rows": 2,
+          "sha256": "43c758f8b4e7faaddd940a91a96185f8267d699654af5308f34f583445c10e1d"
+        },
+        "policies": {
+          "rows": 1,
+          "sha256": "593c6f41789104dc085828eddb7f7f776109eeb857fc5353bd1feeed699e9fda"
+        },
+        "receipts": {
+          "rows": 3,
+          "sha256": "b1e7657d409adae240f33a6ba218074ce903cc0a0b0c92506403ed021280072b"
+        },
+        "review_dependencies": {
+          "rows": 35150,
+          "sha256": "26e5b0bfc84bbbed01fbb0b52d8a958dfe880b00b412ce16c5f70699dea47cb2"
+        },
+        "review_history": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "review_units": {
+          "rows": 15120,
+          "sha256": "ab0b867f24b8bd9259dec4d8c05117334e886da106459948acbae88392ef6e03"
+        },
+        "storage_version": {
+          "rows": 1,
+          "sha256": "4139ed3d9f4821835ab5a2f89a9953278c882a614ec58a5ee1a98abb464717ce"
+        },
+        "weekly_qa": {
+          "rows": 2,
+          "sha256": "2942a1246d57616ea2f7e2bb67f5a3092e4f3e691753ca1548161f9d85f92b4e"
+        }
+      }
+    },
+    {
+      "path": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/runtime/collaboration/personal/a45bb879-a248-4172-a62a-f21c915635d8/workflow.sqlite",
+      "backup": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/requirement-inline-20260915/activation-backup/3-workflow.sqlite",
+      "logical_before": {
+        "material_candidate_index": {
+          "rows": 4,
+          "sha256": "efd3c2add67daaf33d944b8215b4edf0fcd8234ffdf7e66b22526c7d2aa8060e"
+        },
+        "material_candidates": {
+          "rows": 4,
+          "sha256": "1f93c1abe3c4df2fff121a29a08912b3cd5333a25f9673c0fd71d535a88ad43e"
+        },
+        "material_collaboration_evidence": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "material_conflicts": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "material_documents": {
+          "rows": 1,
+          "sha256": "d5f11ef37052835b51415af6ba89e5efebaf78103e4321087c09372813c17ae2"
+        },
+        "material_read_index": {
+          "rows": 1,
+          "sha256": "4f1710df895de783649bea08fa004de9de040541d7edac8d8ec4cb7220a42b96"
+        },
+        "material_read_schema": {
+          "rows": 1,
+          "sha256": "8a78bb019661a0bcbee09bf98256f5a89c3ee84a0e3dc84ca7f614bce2a30f36"
+        },
+        "material_receipts": {
+          "rows": 5,
+          "sha256": "2b0b9390a0d904cba78dc991b89c41a82033b4c920d7cd4fb5244db49c9e7214"
+        },
+        "material_revision_index": {
+          "rows": 11,
+          "sha256": "7e5a53ec2daf2d64fcab067ecb1b198886a446bc81ca4e6e33522a4b1f892163"
+        },
+        "material_revisions": {
+          "rows": 11,
+          "sha256": "967c0aaf344a57c139893282f5d4d4870001df4a918bc250b0ad16cb42259bf2"
+        }
+      }
+    },
+    {
+      "path": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/workbench/runtime/collaboration/personal/454f0acf-cf0f-4fb3-9daf-466c25693094/workflow.sqlite",
+      "backup": "/Users/tang/Desktop/smarter-compliance-aquaculture/05_Working area of requirements side/project-support/requirement-inline-20260915/activation-backup/4-workflow.sqlite",
+      "logical_before": {
+        "material_candidate_index": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "material_candidates": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "material_collaboration_evidence": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "material_conflicts": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "material_documents": {
+          "rows": 1,
+          "sha256": "66f05733a271b50bb61a441c477b9c7bd73166450d46384217fa866e64d4bc13"
+        },
+        "material_read_index": {
+          "rows": 1,
+          "sha256": "ea07501899f501dcfcaaa814775b72450d7e081e40295cc9a183485d04d1c506"
+        },
+        "material_read_schema": {
+          "rows": 1,
+          "sha256": "8a78bb019661a0bcbee09bf98256f5a89c3ee84a0e3dc84ca7f614bce2a30f36"
+        },
+        "material_receipts": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "material_revision_index": {
+          "rows": 1,
+          "sha256": "c52f735f7796db6f124b9d67d12f56f8f47de353f819d1655719f33f05207437"
+        },
+        "material_revisions": {
+          "rows": 1,
+          "sha256": "424089164954f7aa9310ded5f124e71b90fdc87138f7bf45d5e27dea05d7d276"
+        }
+      }
+    }
+  ],
+  "automation_enabled_before": false
+}

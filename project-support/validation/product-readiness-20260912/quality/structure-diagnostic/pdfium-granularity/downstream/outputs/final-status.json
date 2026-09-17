@@ -1,0 +1,41 @@
+{
+  "decision": "DO_NOT_PROMOTE_NAIVE_WORD_REPLACEMENT",
+  "status": "ISOLATED_EXPERIMENT_COMPLETED_NO_MEASURED_DOWNSTREAM_GAIN",
+  "backend": "pypdfium2",
+  "native_generator": "pdfium-character-word-evidence/experiment-1",
+  "sample_scope": {
+    "asc-farm": [
+      27,
+      28
+    ],
+    "asc-interpretation": [
+      18,
+      19,
+      20
+    ]
+  },
+  "pages": 5,
+  "native_characters": 8097,
+  "word_partitions": 1160,
+  "all_original_native_line_evidence_preserved": true,
+  "all_candidate_block_ids_order_and_refs_preserved": true,
+  "metric_gain": "None in unchanged source-segment, formal/clause, critical-phrase or frozen marker-relation diagnostics",
+  "candidate_differences": {
+    "asc-farm": "2 table payloads changed, with words further fragmented across the existing false fine grid",
+    "asc-interpretation": "All 115 blocks exactly identical"
+  },
+  "unsupported_acceptance": "Independent word, general heading/table/order and source-visibility quality remain UNMEASURED; no new business Gold",
+  "preservation": {
+    "material_parser": true,
+    "native_extractor": true,
+    "positioned_config": true,
+    "pyproject": true,
+    "uv_lock": true,
+    "original_sources": true,
+    "annotations": true,
+    "original_relation_subset": true,
+    "baseline_candidates": true,
+    "experiment_scripts": true
+  },
+  "regression_scope": "Both candidates passed existing validate_blocks; no product edits and no System2 full regression rerun."
+}

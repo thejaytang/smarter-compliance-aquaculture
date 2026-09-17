@@ -1,0 +1,13 @@
+{
+  "recorded_at": "2026-09-13T16:03:02.363963+00:00",
+  "development_promotion": [
+    "cs010-reserved"
+  ],
+  "source_sha256": "ce5c8950c69e3b5b60b85110f5abd2c6d8637c83291c6c00ac03f28b102dac54",
+  "page_indices": [
+    2,
+    3
+  ],
+  "reason": "Diagnose exposed critical phrase/order failures. Historical frozen source annotations and matching denominators remain unchanged. CS010 cannot be used as independent holdout after this point.",
+  "future_independent_verification": "UNMEASURED; select and annotate a new document/template scope before checking candidate predictions."
+}

@@ -1,0 +1,26 @@
+{
+  "actual_native_backends": [
+    "pypdfium2"
+  ],
+  "module_policy": {
+    "adapter": "material-structural-parser/4+dev-pdfium-granularity",
+    "semantic_processing": false,
+    "external_models": false,
+    "ocr": false,
+    "pdf_window_pages": 3,
+    "pdf_backend": "pdfium",
+    "native_granularity": "pdfium-character-word-evidence/experiment-1",
+    "pdf_marker_order": "same-row-before-body/1",
+    "pdf_paragraph_grouping": "same-page-source-preserving/1",
+    "human_adoption_required": true
+  },
+  "config_hash": "292959861c55bf871f5673f693c72e1bdf97bba2be09f7977deb65e0c27639e6",
+  "parser_version": "material-structural-parser/4+dev-pdfium-granularity",
+  "production_parser_hash": "3696f3aab5aff829e7247418bd0b22cec1b5f3008c6419ac842f67ff7c38bce2",
+  "experimental_source_hash": "d10392a86e3ac8747cd8b57f4145ca3009739550affcc1fb856b6c9ecddaefe0",
+  "native_generator": "pdfium-character-word-evidence/experiment-1",
+  "native_generator_sha256": "c54939074444a479cf730289f9c7ce702c9358c83504f179fa265663c23844b0",
+  "all_group_invariants": true,
+  "business_adoption": false,
+  "docling_imported": false
+}

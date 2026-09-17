@@ -1,0 +1,432 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.pdf-extraction-product/requirement-gold-v3.schema.json",
+  "title": "Requirement Gold v3 sample with immutable revision metadata",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "gold_revision",
+    "supersedes",
+    "supersedes_sha256",
+    "revision_reason",
+    "sample_id",
+    "source",
+    "sample",
+    "annotation",
+    "segments",
+    "requirements",
+    "excluded_regions",
+    "summary"
+  ],
+  "properties": {
+    "schema_version": {"const": "3.0"},
+    "gold_revision": {"type": "integer", "minimum": 1},
+    "supersedes": {"type": ["string", "null"]},
+    "supersedes_sha256": {
+      "type": ["string", "null"],
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "revision_reason": {"type": "string", "minLength": 1},
+    "sample_id": {"type": "string", "minLength": 1},
+    "source": {"$ref": "#/$defs/source"},
+    "sample": {"$ref": "#/$defs/sample"},
+    "annotation": {"$ref": "#/$defs/annotation"},
+    "segments": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/sourceSegment"}
+    },
+    "requirements": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/requirement"}
+    },
+    "excluded_regions": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/excludedRegion"}
+    },
+    "summary": {"$ref": "#/$defs/summary"}
+  },
+  "$defs": {
+    "nullableString": {
+      "type": ["string", "null"]
+    },
+    "stringArray": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "bbox": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x0", "y0", "x1", "y1"],
+      "properties": {
+        "x0": {"type": "number", "minimum": 0},
+        "y0": {"type": "number", "minimum": 0},
+        "x1": {"type": "number", "minimum": 0},
+        "y1": {"type": "number", "minimum": 0}
+      }
+    },
+    "pageSize": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["width", "height", "unit", "origin"],
+      "properties": {
+        "width": {"type": "number", "exclusiveMinimum": 0},
+        "height": {"type": "number", "exclusiveMinimum": 0},
+        "unit": {"const": "pdf_point"},
+        "origin": {"const": "top_left"}
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "file_name",
+        "sha256",
+        "language",
+        "document_family",
+        "page_count"
+      ],
+      "properties": {
+        "file_name": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "language": {"enum": ["en", "no"]},
+        "document_family": {
+          "enum": [
+            "law_or_regulation",
+            "general_standard",
+            "certification_standard",
+            "interpretation_manual",
+            "audit_manual"
+          ]
+        },
+        "page_count": {"type": "integer", "minimum": 1}
+      }
+    },
+    "sample": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["round_id", "split", "page_numbers", "selection_rationale"],
+      "properties": {
+        "round_id": {"type": "string", "minLength": 1},
+        "split": {"enum": ["active", "holdout"]},
+        "page_numbers": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "integer", "minimum": 1}
+        },
+        "selection_rationale": {"type": "string", "minLength": 1}
+      }
+    },
+    "annotation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "frozen_at", "verification", "notes"],
+      "properties": {
+        "status": {"const": "frozen"},
+        "frozen_at": {"type": "string", "format": "date"},
+        "verification": {
+          "type": "array",
+          "minItems": 2,
+          "uniqueItems": true,
+          "items": {"enum": ["visual_page", "native_text", "second_annotator"]}
+        },
+        "notes": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "sourceSegment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "segment_id",
+        "page_number",
+        "page_index",
+        "page_size",
+        "bbox",
+        "role",
+        "object_kind",
+        "segment_order",
+        "source_text"
+      ],
+      "properties": {
+        "segment_id": {"type": "string", "minLength": 1},
+        "page_number": {"type": "integer", "minimum": 1},
+        "page_index": {"type": "integer", "minimum": 0},
+        "page_size": {"$ref": "#/$defs/pageSize"},
+        "bbox": {"$ref": "#/$defs/bbox"},
+        "role": {
+          "enum": [
+            "criterion_heading",
+            "requirement_id",
+            "indicator_text",
+            "requirement_value",
+            "normative_text",
+            "applicability",
+            "requirement_continuation",
+            "client_action",
+            "auditor_action",
+            "rationale",
+            "interpretation",
+            "evidence_example",
+            "auditor_guidance",
+            "resource",
+            "footnote",
+            "header",
+            "footer",
+            "other"
+          ]
+        },
+        "object_kind": {
+          "enum": ["text_block", "table_cell", "list", "footnote", "other"]
+        },
+        "segment_order": {"type": "integer", "minimum": 0},
+        "source_text": {"type": "string", "minLength": 1},
+        "continues_segment_id": {"$ref": "#/$defs/nullableString"}
+      }
+    },
+    "modality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["token", "type", "scope"],
+      "properties": {
+        "token": {"type": "string", "minLength": 1},
+        "type": {
+          "enum": ["obligation", "prohibition", "permission", "recommendation", "other"]
+        },
+        "scope": {"type": "string", "minLength": 1}
+      }
+    },
+    "scopedText": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text", "applies_to"],
+      "properties": {
+        "text": {"type": "string", "minLength": 1},
+        "applies_to": {"type": "string", "minLength": 1}
+      }
+    },
+    "clause": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["clause_id", "parent_clause_id", "marker", "text", "joins_next"],
+      "properties": {
+        "clause_id": {"type": "string", "minLength": 1},
+        "parent_clause_id": {"$ref": "#/$defs/nullableString"},
+        "marker": {"$ref": "#/$defs/nullableString"},
+        "text": {"type": "string", "minLength": 1},
+        "joins_next": {"enum": ["and", "or", null]}
+      }
+    },
+    "threshold": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "raw_text",
+        "operator",
+        "normalized_value",
+        "unit",
+        "applies_to",
+        "basis",
+        "source_segment_ids"
+      ],
+      "properties": {
+        "raw_text": {"type": "string", "minLength": 1},
+        "operator": {"enum": ["lt", "lte", "eq", "gte", "gt", "range", "other", null]},
+        "normalized_value": {"type": ["number", "string", "null"]},
+        "unit": {"$ref": "#/$defs/nullableString"},
+        "applies_to": {"type": "string", "minLength": 1},
+        "basis": {"enum": ["explicit", "inferred_from_source_structure"]},
+        "source_segment_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "crossReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text", "target", "type"],
+      "properties": {
+        "text": {"type": "string", "minLength": 1},
+        "target": {"type": "string", "minLength": 1},
+        "type": {
+          "enum": ["internal_exact", "internal_generic", "external_document", "defined_term"]
+        }
+      }
+    },
+    "footnoteReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["marker", "text", "link_type", "source_segment_ids"],
+      "properties": {
+        "marker": {"type": "string", "minLength": 1},
+        "text": {"type": "string", "minLength": 1},
+        "link_type": {"enum": ["direct", "inherited", "semantic", "anomalous"]},
+        "source_segment_ids": {"$ref": "#/$defs/stringArray"}
+      }
+    },
+    "linkedAction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["marker", "text", "source_segment_ids"],
+      "properties": {
+        "marker": {"$ref": "#/$defs/nullableString"},
+        "text": {"type": "string", "minLength": 1},
+        "source_segment_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "linkedInstruction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["marker", "text", "effect", "source_segment_ids"],
+      "properties": {
+        "marker": {"$ref": "#/$defs/nullableString"},
+        "text": {"type": "string", "minLength": 1},
+        "effect": {
+          "enum": ["method", "condition", "exception", "exemption", "procedure", "other"]
+        },
+        "source_segment_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "requirement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "requirement_id",
+        "requirement_form",
+        "criterion_path",
+        "language",
+        "indicator_text",
+        "requirement_value",
+        "normative_text",
+        "normative_subjects",
+        "applicability",
+        "modalities",
+        "negations",
+        "clauses",
+        "conditions",
+        "exceptions",
+        "exemptions",
+        "thresholds",
+        "dates",
+        "cross_references",
+        "footnote_refs",
+        "associated_instructions",
+        "client_actions",
+        "auditor_actions",
+        "related_context_ids",
+        "source_segment_ids",
+        "source_anomalies",
+        "gold_notes"
+      ],
+      "properties": {
+        "requirement_id": {"type": "string", "minLength": 1},
+        "requirement_form": {
+          "enum": [
+            "normative_indicator",
+            "indicator_plus_value",
+            "requirement_table",
+            "audit_matrix",
+            "prose_clause",
+            "appendix_procedure"
+          ]
+        },
+        "criterion_path": {"$ref": "#/$defs/stringArray"},
+        "language": {"enum": ["en", "no"]},
+        "indicator_text": {"$ref": "#/$defs/nullableString"},
+        "requirement_value": {"$ref": "#/$defs/nullableString"},
+        "normative_text": {"type": "string", "minLength": 1},
+        "normative_subjects": {"$ref": "#/$defs/stringArray"},
+        "applicability": {"$ref": "#/$defs/stringArray"},
+        "modalities": {"type": "array", "items": {"$ref": "#/$defs/modality"}},
+        "negations": {"type": "array", "items": {"$ref": "#/$defs/scopedText"}},
+        "clauses": {"type": "array", "items": {"$ref": "#/$defs/clause"}},
+        "conditions": {"type": "array", "items": {"$ref": "#/$defs/scopedText"}},
+        "exceptions": {"type": "array", "items": {"$ref": "#/$defs/scopedText"}},
+        "exemptions": {"type": "array", "items": {"$ref": "#/$defs/scopedText"}},
+        "thresholds": {"type": "array", "items": {"$ref": "#/$defs/threshold"}},
+        "dates": {"type": "array", "items": {"$ref": "#/$defs/scopedText"}},
+        "cross_references": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/crossReference"}
+        },
+        "footnote_refs": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/footnoteReference"}
+        },
+        "associated_instructions": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/linkedInstruction"}
+        },
+        "client_actions": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/linkedAction"}
+        },
+        "auditor_actions": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/linkedAction"}
+        },
+        "related_context_ids": {"$ref": "#/$defs/stringArray"},
+        "source_segment_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string"}
+        },
+        "source_anomalies": {"$ref": "#/$defs/stringArray"},
+        "gold_notes": {"$ref": "#/$defs/stringArray"}
+      }
+    },
+    "excludedRegion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_segment_ids", "classification", "reason"],
+      "properties": {
+        "source_segment_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string"}
+        },
+        "classification": {
+          "enum": [
+            "header_footer",
+            "rationale",
+            "interpretation",
+            "evidence_example",
+            "auditor_guidance",
+            "resource",
+            "client_action",
+            "auditor_action",
+            "other_non_requirement"
+          ]
+        },
+        "reason": {"type": "string", "minLength": 1}
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "requirement_count",
+        "cross_page_requirement_count",
+        "client_action_count",
+        "auditor_action_count",
+        "critical_gold_ambiguities"
+      ],
+      "properties": {
+        "requirement_count": {"type": "integer", "minimum": 0},
+        "cross_page_requirement_count": {"type": "integer", "minimum": 0},
+        "client_action_count": {"type": "integer", "minimum": 0},
+        "auditor_action_count": {"type": "integer", "minimum": 0},
+        "critical_gold_ambiguities": {"$ref": "#/$defs/stringArray"}
+      }
+    }
+  }
+}

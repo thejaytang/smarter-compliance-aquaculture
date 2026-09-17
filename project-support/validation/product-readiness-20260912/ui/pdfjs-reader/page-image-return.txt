@@ -1,0 +1,143 @@
+- link "Skip to content":
+  - /url: "#main"
+- complementary:
+  - text: Smarter Compliance
+  - generic: Requirement workbench
+  - navigation "Workspace navigation":
+    - button "Overview Sources and materials":
+      - text: Overview
+      - generic: Sources and materials
+    - button "Source Management System Sources and original files" [expanded]:
+      - text: Source Management System
+      - generic: ⌄
+      - generic: Sources and original files
+    - button "Pending review"
+    - button "Source records"
+    - button "Review history"
+    - button "Requirement Extraction System Human content review" [expanded]:
+      - text: Requirement Extraction System
+      - generic: ⌄
+      - generic: Human content review
+    - button "Pending materials"
+    - button "Archive"
+    - button "Confidence settings"
+  - text: Local workspace
+  - button "Exit workbench"
+- banner:
+  - button "Collapse navigation" [expanded]:
+  - heading "Pending materials" [level=1]
+  - button "Runtime status"
+  - generic: Current reviewer
+  - combobox "Current reviewer":
+    - option "Select a reviewer"
+    - option "Ana Jokic"
+    - option "Daniel Restad"
+    - option "Weijie Tang" [selected]
+  - button "Switch reviewer"
+- main:
+  - 'heading "Public saved original: CS010" [level=2]'
+  - generic: CS010 · CS010-001 · saved revision 0 · Not extracted · Extraction not started
+  - button "Expand workspace"
+  - button "Materials" [expanded]
+  - button "Reset column widths"
+  - button "Save material"
+  - button "Confirm personal content review"
+  - status
+  - strong: Coordinator workspace
+  - generic: Personal draft · master unchanged
+  - button "Source review"
+  - button "Review my changes"
+  - button "View master"
+  - generic "Exchange work packages & submissions"
+  - complementary "Materials":
+    - text: Find a material
+    - searchbox "Find a material"
+    - heading "Pending materials · 7" [level=4]
+    - 'button "Public saved original: PA001 Personal content · Not extracted Master revision 0 · Not extracted"':
+      - strong: "Public saved original: PA001"
+      - generic: Personal content · Not extracted
+      - generic: Master revision 0 · Not extracted
+    - 'button "Public saved original: CS010 Personal content · Not extracted Master revision 0 · Not extracted"':
+      - strong: "Public saved original: CS010"
+      - generic: Personal content · Not extracted
+      - generic: Master revision 0 · Not extracted
+    - button "ENGINEERING FIXTURE · Empty HTML original Personal content · Content draft Master revision 0 · Not extracted Personal changes await adoption":
+      - strong: ENGINEERING FIXTURE · Empty HTML original
+      - generic: Personal content · Content draft
+      - generic: Master revision 0 · Not extracted
+      - generic: Personal changes await adoption
+    - button "ENGINEERING FIXTURE · HTML water checks Not extracted":
+      - strong: ENGINEERING FIXTURE · HTML water checks
+      - generic: Not extracted
+    - button "ENGINEERING FIXTURE · Excel measurements Not extracted":
+      - strong: ENGINEERING FIXTURE · Excel measurements
+      - generic: Not extracted
+    - button "ENGINEERING FIXTURE · Native, scan and blank PDF Not extracted":
+      - strong: ENGINEERING FIXTURE · Native, scan and blank PDF
+      - generic: Not extracted
+    - button "ENGINEERING FIXTURE · Unreadable PDF original Not extracted":
+      - strong: ENGINEERING FIXTURE · Unreadable PDF original
+      - generic: Not extracted
+    - generic "Open a source snapshot"
+    - option "Select source" [selected]
+    - 'option "Public saved original: PA001"'
+    - 'option "Public saved original: CS010"'
+    - option "ENGINEERING FIXTURE · HTML water checks"
+    - option "ENGINEERING FIXTURE · Excel measurements"
+    - option "ENGINEERING FIXTURE · Native, scan and blank PDF"
+    - option "ENGINEERING FIXTURE · Empty HTML original"
+    - option "ENGINEERING FIXTURE · Unreadable PDF original"
+  - heading "Original document" [level=3]
+  - button "Extract →"
+  - button "Previous PDF page": ←
+  - text: Page
+  - spinbutton "Page": "3"
+  - generic: of 4
+  - button "Go"
+  - button "Next PDF page": →
+  - text: Zoom
+  - combobox "Zoom":
+    - option "Fit width" [selected]
+    - option "75%"
+    - option "100%"
+    - option "125%"
+    - option "150%"
+    - option "200%"
+  - link "Open original ↗":
+    - /url: /api/material/original?id=600f271ad02e96450ae5d13ff146b0e6&view=personal
+  - button "Linked content"
+  - button "PDF reader"
+  - button "Reading details"
+  - generic "Original PDF page image; scroll to read at the selected zoom":
+    - img "Saved original PDF page 3 of 4"
+  - status: Saved PDF · page 3 of 4
+  - separator "Resize original pane"
+  - generic: "02"
+  - heading "Extracted original text" [level=3]
+  - text: Editable personal draft
+  - button "Process →" [disabled]
+  - button "Rebuild table"
+  - button "+ Text"
+  - button "+ Heading"
+  - button "+ Table"
+  - button "+ Image"
+  - button "History"
+  - button "Reading mode"
+  - button "Reload saved"
+  - text: Search all content
+  - searchbox "Search all content"
+  - text: Chapters
+  - combobox "Chapters":
+    - option "Choose heading" [selected]
+  - paragraph: Read, select a block to edit, then save. Saving never confirms review.
+  - generic: No adopted content. Extract a candidate or add missing text, tables and original-bound images manually.
+  - generic "Whole-material review · 0/4 ranges checked"
+  - separator "Resize requirements pane"
+  - generic: "03"
+  - heading "Structured requirements" [level=3]
+  - text: Future form-based review
+  - heading "Not connected" [level=4]
+  - paragraph: Structure and processor pending.
+  - paragraph: The future Process action will use a confirmed content version and selected scope to produce a separate candidate for human review.
+  - paragraph: Content review can be completed here. Requirement structuring remains unavailable.
+  - generic "Future connection boundary"

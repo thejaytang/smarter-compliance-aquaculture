@@ -1,0 +1,40 @@
+# 1. Workflow correction acceptance
+
+Date: 2026-09-12. Status: locally implemented and exercised; **PENDING_ACTUAL_WINDOWS**. The complete round is not accepted until the office Windows journey and returned-package adoption have actual evidence. Normal loading and preserved-data fingerprints are recorded in [PROJECT_STATE.md](../../../PROJECT_STATE.md) and the companion preservation report.
+
+## 1.1 Delivered route
+
+Source Management System owns independent source/task details, source records and history. It supports the existing source and selection review, retrieval/manual-file cases, new candidates, replacement review, QA inspection, reported issues and re-review. Preview and Confirm and apply are one administrator-facing action with separate saved contribution/adoption records. Reviewer actions remain personal proposals. Missing, hash-mismatched or otherwise invalid originals cannot produce current INCLUDE. Issue/task decisions bind to individually identified records; old broad issue flags do not close later issues. See the complete [coverage contract](../../design/offline-human-review.md).
+
+Requirement Extraction System owns Pending materials and Archive in the same three-pane workspace. Eligible unopened PDF/HTML/Excel appear directly in Pending. Listing and opening do not extract. First explicit extraction is a correctable candidate preview, saved with a machine baseline and personal changes, without human completion. Later candidates retain inline comparison. Hierarchy shifts are distinct from ordering. Text-to-table reconstruction retains original blocks and references; row/column insertion and deletion preserve merged-cell constraints. Archive Continue editing restores existing personal work or creates it from the current main, and returns to Pending while keeping the accepted archive.
+
+My submissions selects multiple saved source/material/task/check results. Version 2 collections fully validate their nested payloads before import, retain immutable package identity, and permit independent comparison/adoption and receipt return. Version 1 single work/submission packages remain readable. Source decisions precede material validity checks. Partial and unknown/stale results do not become whole-package completion. A changed re-delivered inspection assignment is retained separately, with the existing personal check and baseline unchanged; the drawer explains the need for a new assigned check.
+
+## 1.2 Local evidence
+
+| Evidence | Observed scope |
+|---|---|
+| Source service regression | 141 passing tests, including source operations and inherited fixtures. Scoped application, invalid-original gates, selected issue/task resolution, human issue creation and replay protection. |
+| Workbench service regression | 113 passing tests. Includes task ownership/confirmation, interrupted owner-call replay, typed submission direction and changed-assignment protection. |
+| Frontend regression | 105 passing checks over current JavaScript modules. Hierarchy/table evidence, navigation, conflict and prior material behavior included. |
+| Material owning-store regression | 104 passing material tests. Includes edited first-candidate save, candidate provenance, version checks and protected confirmation/history. |
+| Three independent workspaces | [workflow-correction.json](workflow-correction.json): coordinator plus Ana and Daniel, each with its own stores. Same-paragraph conflicts, frozen multi-item returns, partial source/inspection results, receipt return, repeated import, whole-package validation and retained archive. |
+| Real Chrome, isolated main and reviewer | Independent source details, source proposal/preview/application on TS001, PDF/HTML/Excel readers, editable first candidates, save/reload, text-to-table correction, multi-item download, expanded workspace, separator keyboard adjustment, narrow layout and archive Continue editing. No actual business material decisions. |
+
+Screenshots are in `output/playwright/offline-collaboration/`: `source-workspace-desktop.png`, `source-workspace-narrow.png`, `candidate-preview-expanded.png`, `table-reconstruction-saved.png`, `excel-first-candidate-saved.png`, `material-correction-narrow.png`, and `archive-continue-editing.png`. Synthetic browser download: `browser-multi-submission.zip`. Browser fixture roots are in [workflow-browser-services.json](workflow-browser-services.json); backend reruns use fresh, separately recorded roots.
+
+The browser exercise caught and fixed a source-search loading race, dialog-handler reuse, a saved-candidate banner that stayed visible and archive navigation returning before its material mount completed. Final targeted checks have no page errors. Browser checks do not claim that every source task type was manually clicked; task-type coverage also comes from service tests. Scanned and blank PDF pages remain explicit limitations, with no implicit OCR/model activation. This round supplies no new multi-day stability evidence. Full-backup hashing and independent file copies now use eight workers under the existing stopped-service and database writer reservations. Thirteen backup/recovery tests passed after that change; all hash, inventory, database and source-change checks are retained. A second backup failed because 108 nonempty files received empty post-read hashes; sampled original bytes still matched the copies. A read-only mapped-buffer check passed the full inventory and all bound Canonical hashes. The checksum reader now maps the complete descriptor length, rejects a truncated mapping and checks complete size; before/copy/after content hashes remain the version check, so a timestamp-only change does not count as changed content; empty files have a separate valid path. Incomplete packages remain diagnostic evidence and are not accepted as recovery packages. The underlying intermittent file-read latency is recorded separately from business content changes.
+
+## 1.3 Remaining acceptance and exclusions
+
+Run the [Windows checklist](../../../workbench/docs/windows-offline-review-checklist.md) on the actual office computer: startup, import, PDF/HTML/Excel reading, explicit extraction, corrections, save/restart/recovery, multi-item export, then import/compare/adopt that return on macOS and return item receipts. Prepared code and synthetic fixture packages remain local, not sent.
+
+The third-pane schema, forms and semantic processor remain Not connected; Process is disabled. Content review completion is distinct from structured Requirement completion. No real business acceptance, repository push, publication, material transmission, model activation, new scheduling or automatic synchronization was performed.
+
+## 1.4 Normal loading and handoff result
+
+The final verified backup contains 6 stores, 8,389 resource files and 337 code files. [Preservation](workflow-preservation.json) confirms unchanged originals, Canonical files and business/history tables, with only maintenance-session additions. The strict read-only mapping path completed all before/copy/after checks. Earlier incomplete packages remain available for diagnosis and are not accepted recovery packages.
+
+The [loaded normal instance](workflow-normal-runtime.json) reported healthy after initial timeouts had recovered, with the previous errors still retained. An independent in-app browser check rendered all 87 source records in the separate source workspace and all 38 eligible unstarted material entries in Pending, without opening or extracting a business material. The external Playwright CLI still failed reading its own cached help JSON on this host; it was not used as normal-browser acceptance evidence. This host-level/tool-read anomaly and startup recovery are limits on any broader stability claim.
+
+The [final code verification](windows-workflow-code-verification.json) records 369 ZIP members, of which 367 match current repository files. [Synthetic work-package verification](windows-workflow-fixtures.json) records its successful clean macOS import. Both packages remain local, with actual Windows acceptance pending.
