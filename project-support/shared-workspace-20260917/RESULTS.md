@@ -17,9 +17,18 @@
 - Local Workbench regression: 307 Python tests passed, plus the new shared full-snapshot round-trip test and two application-boundary checks passed independently (310 total).
 - Frontend: 371 tests passed.
 - New tests cover cross-author editing, attribution, stale versions/sources, cross-author link exchange, shared graph conflict resolution, safe initial restore and readable conflict rendering.
-- [Windows/Linux CI for `56489b6`](https://github.com/thejaytang/smarter-compliance-aquaculture/actions/runs/35202244273) passed all six jobs. The initial attempt exposed tests reading live business Excel; they now use a synthetic fixture. A further run verifies retirement of old development snapshots before publication. Native Windows desktop/pointer/scaling and the user's Windows refinements remain separate from CI.
+- [Windows/Linux CI for `3d02898`](https://github.com/thejaytang/smarter-compliance-aquaculture/actions/runs/35202684306) passed all six jobs after retiring historical snapshots: Workbench backend/HTTP/frontend/launcher checks, System1 and the System2 material/platform subset. The initial attempt exposed tests reading live business Excel; they now use a synthetic fixture. Native Windows desktop/pointer/scaling and the user's Windows refinements remain separate from CI.
 - The final 83-file seed restores into a fresh application layout with its tracked storage guide already present. The real System1 bridge reads 88 sources; both databases pass integrity/foreign-key checks and Requirement sessions remain zero.
 
 ## Delivery boundary
 
 Fresh colleagues clone the separated application version, rebuild environments and restore the initial source seed once. Existing older clones must preserve formerly tracked originals/config/output before this transition; Git removes those tracked paths when applying the separation commit. Daily application updates must never reapply the seed. All collaborators update before exchanging shared Requirement v4 packages; older apps reject the new contract rather than silently discarding its contents.
+
+## Published milestone
+
+On 2026-09-17, GitHub `main` was fast-forwarded without force to verified functional commit `3d0289865328a2d03227892a9775f111625eb885`. Later status-only commits retain this tested implementation. The [initial-data release](https://github.com/thejaytang/smarter-compliance-aquaculture/releases/tag/initial-source-data-20260917) was published at `2026-09-17T09:05:36Z`, targeting that commit. GitHub confirms all four assets and their SHA-256 digests.
+
+- Source seed: `6c141d49199a01975d0cc559cc930afbbc6137a604d6b5d46e7fee84b92d8e1a`.
+- Environment kit: `be0133aec4efeb2d83c0515bcb27cf15df9fb0c95d15cb778d693d8014dfe64b`.
+
+New colleagues should use the guide's shallow `main` clone to avoid downloading old Git history, rebuild environments and restore the initial seed once. Real subsequent work is exchanged through Collaboration. The normal Mac service has the shared-workspace implementation loaded and its source register still lists 88 entries.
