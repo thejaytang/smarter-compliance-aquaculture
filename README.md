@@ -2,7 +2,9 @@
 
 A local, human-led workspace for governing sources and preparing traceable Requirements and check designs. It runs on your own computer and opens in a browser.
 
-This directory is the application root. Its visible entries are the five root guides, the two launchers, `deployment.py`, `project-support/` and `workbench/`. Local development is grouped under `project-support/{design,decisions,plans,validation}`. Old entry points and development helpers are retained there as historical evidence rather than active application folders.
+Use `main` for shared product installations and updates on Windows and macOS. Jay's `developing-only-jay` branch also includes development documents and tests. The Windows fixes are part of `main`; a separate operating-system branch is not required.
+
+This directory is the application root. The product checkout contains the four root guides, the two launchers, `deployment.py` and `workbench/`. Development checkouts additionally contain `PROJECT_STATE.md` and `project-support/`; they are not needed to run the product.
 
 ## 1. Start here
 
