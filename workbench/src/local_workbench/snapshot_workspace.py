@@ -203,6 +203,6 @@ class SnapshotWorkspace:
   if key.startswith('requirements:'):
    from .identities import REVIEWERS
    from .requirement_delivery import key_for
-   actor=next(a for a in REVIEWERS if key_for(a)==key)
+   actor='shared' if key==key_for('shared') else next(a for a in REVIEWERS if key_for(a)==key)
   branch='shared' if key.startswith('source:') else actor
   self.c.put('sync_observed',key+':'+branch,{'head':head})

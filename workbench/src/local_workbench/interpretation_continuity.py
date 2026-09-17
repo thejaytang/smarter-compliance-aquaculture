@@ -61,7 +61,7 @@ def impact(service, actor, doc, material_cache=None):
             unit_id=doc['unit_id'],fields=fields,rules=sorted({r for k in fields for r in rule_links.get(k, [])}),
             scope='requirement' if own else 'citation' if fields else 'context'))
     for old in saved['sessions']:
-        with service.c.db() as db:row=db.execute('SELECT revision FROM requirement_sessions WHERE actor=? AND id=?',(actor,old['id'])).fetchone()
+        with service.c.db() as db:row=db.execute('SELECT revision FROM requirement_sessions WHERE (actor=? OR ?) AND id=?',(actor,service.r.shared,old['id'])).fetchone()
         if not row or old['revision'] != row[0]:
             items.append(dict(reason='splitting_changed',session_id=old['id'],unit_id=doc['unit_id'],fields=list(doc['fields']),rules=sorted({r for rs in rule_links.values() for r in rs}),scope='requirement'))
     # Metadata changes affect the available context even if no paragraph moved.

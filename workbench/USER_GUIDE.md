@@ -12,6 +12,8 @@ The bottom bar offers **Save** (keep editing), **Save & close** (validate, save 
 
 ## Settings and collaboration (current)
 
+Windows colleagues should start with [the colleague guide](docs/windows-colleague-guide.md). The 2026-09-17 initial-delivery scope retains genuine System1 source review and excludes development Materials; do not use a full export of the development workspace as that initial package. This does not change the ordinary full-export behavior described below.
+
 Open **Settings**, or your name at the bottom left. Keep using **Current reviewer** to switch identity. All saved work remains attributed to its author.
 
 - **Collaboration → Export full workspace** prepares a complete saved-work snapshot and displays its size. Click **Download full workspace** to save the ZIP, then send it to your colleague. Save any open edits first. Exporting does not remove work from future exports.
@@ -305,7 +307,9 @@ The inspector verifies the selected code against the archived runtime/dependency
 
 This is an isolated restoration and inspection path. Replacing a live workspace, enabling restored writers or migrating legacy absolute references into a new operational deployment requires a separate, explicit operational action. The package contains recoverable source and dependency declarations, not installed interpreters, native tools, downloaded libraries or models. Rebuilding environments on a new machine remains a separate installation step; the isolated acceptance exercise reused existing component environments while loading source from the recovered archive.
 
-## Offline review with colleagues
+## Legacy offline review with colleagues
+
+The older work/result package workflow below is retained for reference. Current Collaboration uses full workspace import/export as described [above](#settings-and-collaboration-current); use the [Windows colleague guide](docs/windows-colleague-guide.md) for new handoffs.
 
 Use **workbench/deployment/Open Reviewer Workbench.cmd** on Windows for a reviewer-only workspace. Follow [Windows setup and actual acceptance](docs/windows-offline-review-checklist.md). The ordinary launcher opens the coordinator workspace; those modes are deliberately separate.
 

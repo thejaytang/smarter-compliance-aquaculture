@@ -49,6 +49,7 @@ class FullSnapshot:
   # Retain received versions/evidence. Export is self-contained even after a
   # sync or when another reviewer has not opened the received material yet.
   for item in self.c.all('sync_head'):
+   if getattr(self.c.app,'peer_sync',False) and item['key'].startswith('requirements:') and item['key']!='requirements:shared':continue
    heads.setdefault(item['key'],[]).extend(item['heads'])
   for item in self.c.all('sync_evidence'):evidence.setdefault(item['id'],item['value'])
   for item in self.c.all('sync_file'):

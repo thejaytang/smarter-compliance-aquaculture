@@ -42,6 +42,9 @@ def main():
         if not args.dry_run:
             subprocess.run(command, cwd=directory, check=True, env={**os.environ,
                 "UV_CACHE_DIR": str(directory / ".cache/uv"), "PYTHONUTF8": "1"})
+    if not args.dry_run:
+        from initialize_local import initialize
+        initialize(ROOT)
     print("Environment plan checked." if args.dry_run else "Environments ready. Import saved work separately; no service was started.")
 
 

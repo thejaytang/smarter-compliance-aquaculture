@@ -104,7 +104,7 @@ export class InterpretationEditor{
    <details><summary>Checking chain</summary><div class="ip-logic">${logicMarkup(checkingLogic({...d.fields,...derived},d.context?.exceptions))}</div></details>
    ${designMarkup(d.check_design||emptyDesign(),disabled,d.catalog)}
    <div class="ip-save"><button data-ip="save" ${disabled}>Save interpretation</button>${d.retry?'<button data-ip="retry">Retry save</button>':''}</div>
-   <details><summary>History</summary><button data-ip="reload" ${disabled}>Reload saved interpretation</button>${(d.history||[]).map(h=>`<p>Revision ${h.revision} <button data-ip="restore" data-revision="${h.revision}" ${disabled}>Restore</button></p>`).join('')}</details>`;
+   <details><summary>History</summary><button data-ip="reload" ${disabled}>Reload saved interpretation</button>${(d.history||[]).map(h=>`<p>Revision ${h.revision} · ${esc(h.edited_by||'Author not recorded')} · ${esc(h.at||'')} <button data-ip="restore" data-revision="${h.revision}" ${disabled}>Restore</button></p>`).join('')}</details>`;
  }
  async suggestLogic(k){
   const d=this.draft,key=this.active;if(!d.provider?.available||d.logicCandidates?.[k]?.status==='generating')return;

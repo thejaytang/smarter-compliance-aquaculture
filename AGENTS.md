@@ -78,6 +78,13 @@ The 2026-09-16 saved-data revision narrows subsequent Git retention to System1 a
 - Tests, generated workbooks, previews, diagrams and directory integration are evidence for their specific checks, not automatic business, legal or release acceptance.
 - Inspect current repository, workbook or runtime evidence before current-state claims. Label older reports and presentation assets as historical.
 
+## User-controlled update milestones
+
+- Routine feature work, fixes and validation accumulate locally. Do not automatically create or update a pull request, push a branch, merge, tag or publish a release after each small change.
+- The user chooses update milestones and the scope of each delivery. Implementing a feature, passing tests or completing a goal does not authorize GitHub synchronization or publication. Earlier one-off publication permissions do not carry forward to later milestones.
+- At a user-requested milestone, consolidate the selected changes, validation evidence, local-data preservation and any dependency/data-migration requirements. Execute only the commit, push, PR or release actions explicitly authorized for that milestone; retain the existing explicit-authorization boundary for commits.
+- Apply the same boundary to existing PR branches: pushing more commits updates an open PR. Do not use an existing PR, remote CI or a previous synchronization workflow as a reason to publish local work automatically.
+
 ## Working method
 
 Use adaptive, rolling-horizon planning. Diagnose observed failures with the smallest discriminating check before modifying. At a checkpoint choose `CONTINUE`, `ADJUST`, `BACKTRACK`, `PIVOT` or `STOP`.
@@ -344,3 +351,9 @@ Scope: `workbench/`, relative to this workstream root.
 User-facing names: **Source Management System** and **Requirement Extraction System**. Keep internal `system1`/`system2` identifiers stable; Requirement Extraction System includes the human-led material workflow and distinguishes connected manual splitting from the disconnected automatic processor.
 
 - Source Management System uses its own source/task workspace and retains all existing task types. Source examples never limit its scope. Missing originals cannot enter INCLUDE. Source confirmations close only explicitly checked, version-bound tasks and issues; generic old issue flags remain evidence only. Version 2 collections preserve per-item import/adoption receipts and version 1 compatibility; inspection exchange does not establish Windows acceptance.
+
+## Shared colleague workspace and application-only updates
+
+The 2026-09-17 user revision supersedes actor-private Requirement visibility: named reviewers share saved third/fourth-pane work in a workspace. Creator keys remain stable for provenance; each saved history version records the actual editor and time. Shared Requirement delivery version 4 includes the whole cross-author reference graph. Preserve source-version, conflict, explicit-save and review-declaration checks.
+
+Application Git updates must not contain active business originals, databases, local configuration, generated registers or Collaboration packages. The initial source seed is distributed once as a separate release asset; never restore it over existing work. Keep code, templates, dependency locks, tests and guides in Git. The user-authorized 2026-09-17 Materials development cleanup is a one-time local operation, never an installation migration. See the [colleague guide](workbench/docs/windows-colleague-guide.md) and [handoff result](project-support/shared-workspace-20260917/RESULTS.md).

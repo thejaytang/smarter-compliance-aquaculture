@@ -2,9 +2,10 @@ name: Workbench portability
 on:
   workflow_dispatch:
   push:
-    branches: ['codex/workbench-optimization-*']
+    branches: ['main', 'codex/workbench-optimization-*']
     paths:
       - 'workbench/**'
+      - 'system1/Code/**'
       - 'system2/src/**'
       - 'system2/tests/**'
       - '.github/workflows/workbench-portability.yml'

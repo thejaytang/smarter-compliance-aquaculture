@@ -1,5 +1,7 @@
 # Smarter Compliance Aquaculture
 
+**Windows colleagues:** use [the installation, Collaboration and app-update guide](workbench/docs/windows-colleague-guide.md). The initial source-data package is separate from application updates. Saved Requirement work is shared across named reviewers; local databases, originals, settings and Collaboration packages stay outside Git. [Current handoff evidence](project-support/shared-workspace-20260917/RESULTS.md).
+
 **Manual saving and continuity:** unsaved content, splitting and interpretation edits remain in page memory, with an explicit leave warning. Saved work retains source-absence states, configurable Site Model fields, focused source-change review and full workspace ZIP support. [Workflow and delivery contract](workbench/docs/requirement-interpretation.md).
 
 **Traceable checks and simpler editing:** saved fields link to their Requirement, splitting revision and source passage through **Source trail**. Optional typed rule groups expose QueryBuilder handoff without executing a compliance check. [Current verification and Windows CI](project-support/workbench-optimization-20260916/RESULTS.md).

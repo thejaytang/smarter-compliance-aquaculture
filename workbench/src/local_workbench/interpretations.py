@@ -55,7 +55,7 @@ def annotations(c, actor, material_id):
     out = []; stale = []
     with c.db() as db:
         docs = [service.load(db, actor, r[0]) for r in db.execute(
-            'SELECT id FROM requirement_sessions WHERE actor=? AND material_id=? ORDER BY rowid', (actor, material_id))]
+            'SELECT id FROM requirement_sessions WHERE (actor=? OR ?) AND material_id=? ORDER BY rowid', (actor, service.shared, material_id))]
     for d in docs:
         if d.get('deleted'):continue
         if service.stale(d, material):
@@ -112,8 +112,21 @@ class Interpretations:
                   SELECT actor,id,json_extract(body,'$.unit_id') FROM interpretation_runs''')
                 db.execute("INSERT OR IGNORE INTO interpretation_migrations VALUES('run-index-1')")
 
+    def owner(self, actor, uid):
+        """Storage identity remains stable; it is never the editor attribution."""
+        actor = named(actor)
+        if not self.r.shared:
+            return actor
+        with self.c.db() as db:
+            row = db.execute('SELECT actor FROM requirement_units WHERE id=?', (uid,)).fetchone()
+            if row is None:
+                row = db.execute('SELECT actor FROM requirement_interpretations WHERE unit_id=?', (uid,)).fetchone()
+        if row is None:
+            raise ValueError('Requirement is not available in this workspace.')
+        return row[0]
+
     def trace(self, actor, uid, revision=None):
-        actor=named(actor)
+        actor=self.owner(actor,uid)
         with self.c.db() as db:
             latest=db.execute('SELECT MAX(revision) FROM interpretation_history WHERE actor=? AND unit_id=?',(actor,uid)).fetchone()[0]
             if latest is None:raise ValueError('No saved interpretation is available to this reviewer.')
@@ -128,7 +141,7 @@ class Interpretations:
         actor = named(actor)
         if not isinstance(linked,(list,tuple)) or len(linked)>20 or any(not isinstance(x,str) or not re.fullmatch('[a-f0-9]{32}',x) for x in linked):raise ValueError('Choose up to 20 registered related materials.')
         with self.c.db() as db:
-            row = db.execute('SELECT session_id FROM requirement_units WHERE id=? AND actor=?', (uid,actor)).fetchone()
+            row = db.execute('SELECT session_id FROM requirement_units WHERE id=? AND (actor=? OR ?)', (uid,actor,self.r.shared)).fetchone()
             if not row: raise ValueError('Requirement is not available to this reviewer.')
             d = self.r.load(db, actor, row[0])
         material = self.r.material(actor,d['material_id'])
@@ -205,19 +218,19 @@ class Interpretations:
         return AISettings(self.c.app).public()
 
     def read(self, actor, uid):
-        actor=named(actor)
-        # Require the current unit to belong to the requesting reviewer even for stale history.
+        actor=named(actor);owner=self.owner(actor,uid)
+        # Shared saved work is visible to every named reviewer; source checks still apply.
         with self.c.db() as db:
-            unit=db.execute('SELECT session_id FROM requirement_units WHERE id=? AND actor=?',(uid,actor)).fetchone()
+            unit=db.execute('SELECT session_id FROM requirement_units WHERE id=? AND (actor=? OR ?)',(uid,actor,self.r.shared)).fetchone()
             if not unit:raise ValueError('Requirement is not available to this reviewer.')
-            row=db.execute('SELECT body FROM requirement_interpretations WHERE actor=? AND unit_id=?',(actor,uid)).fetchone()
+            row=db.execute('SELECT body FROM requirement_interpretations WHERE actor=? AND unit_id=?',(owner,uid)).fetchone()
             doc=json.loads(row[0]) if row else dict(schema=SCHEMA,unit_id=uid,revision=0,fields={k:dict(value='',basis='unresolved',references=[],gaps=[]) for k in KEYS},linked_material_ids=[],reviewed=False)
-            history=[dict(revision=r[0],action=r[1],at=r[2]) for r in db.execute('SELECT revision,action,at FROM interpretation_history WHERE actor=? AND unit_id=? ORDER BY revision DESC LIMIT 50',(actor,uid))]
+            history=[dict(revision=r[0],action=r[1],at=r[2],edited_by=r[3] or owner) for r in db.execute("SELECT revision,action,at,json_extract(body,'$.edited_by') FROM interpretation_history WHERE actor=? AND unit_id=? ORDER BY revision DESC LIMIT 50",(owner,uid))]
             runs=[json.loads(r[0]) for r in db.execute('''SELECT r.body FROM interpretation_runs r
               JOIN interpretation_run_index i ON i.actor=r.actor AND i.id=r.id
-              WHERE i.actor=? AND i.unit_id=? ORDER BY r.rowid DESC LIMIT 10''',(actor,uid))]
-            lineage.backfill(db,actor,uid)
-            doc['lineage']=lineage.read(db,actor,uid,doc['revision'])
+              WHERE (i.actor=? OR ?) AND i.unit_id=? ORDER BY r.rowid DESC LIMIT 10''',(actor,self.r.shared,uid))]
+            lineage.backfill(db,owner,uid)
+            doc['lineage']=lineage.read(db,owner,uid,doc['revision'])
         doc['impact']=impact(self,actor,doc) if doc['revision'] else dict(status='not-saved',items=[])
         doc['catalog']=Catalog(self.c).read()
         doc['check_design']=validate_design(doc.get('check_design'))
@@ -238,7 +251,7 @@ class Interpretations:
         # Reading the owning material also enforces access to this workspace.
         self.r.material(actor,material_id)
         with self.c.db() as db:
-            docs=[json.loads(r[0]) for r in db.execute("SELECT body FROM requirement_interpretations WHERE actor=? AND json_extract(body,'$.material_id')=?",(actor,material_id))]
+            docs=[json.loads(r[0]) for r in db.execute("SELECT body FROM requirement_interpretations WHERE (actor=? OR ?) AND json_extract(body,'$.material_id')=?",(actor,self.r.shared,material_id))]
         items=[];material_cache={}
         for doc in docs:
             if doc['material_id']!=material_id:continue
@@ -281,13 +294,13 @@ class Interpretations:
     def save(self, actor, req):
         from .interpretation_continuity import Drafts
         Drafts(self.c)
-        actor=named(actor);rid=str(uuid.UUID(req['request_id']));digest=fingerprint(req);uid=req['unit_id']
+        actor=named(actor);rid=str(uuid.UUID(req['request_id']));digest=fingerprint(req);uid=req['unit_id'];owner=self.owner(actor,uid)
         with self.c.lock,self.c.db() as db:
             prior=db.execute('SELECT digest,response FROM interpretation_requests WHERE actor=? AND id=?',(actor,rid)).fetchone()
             if prior:
                 if prior[0]!=digest:raise ValueError('Request ID already used for different content.')
                 return json.loads(prior[1])
-            row=db.execute('SELECT body FROM requirement_interpretations WHERE actor=? AND unit_id=?',(actor,uid)).fetchone()
+            row=db.execute('SELECT body FROM requirement_interpretations WHERE actor=? AND unit_id=?',(owner,uid)).fetchone()
             old=json.loads(row[0]) if row else {'revision':0}
             if old['revision']!=req.get('expected_revision'):return dict(status='conflict',error='A newer interpretation is saved. Reload before saving.')
             linked=req.get('linked_material_ids',[])
@@ -296,7 +309,7 @@ class Interpretations:
             if req.get('context_fingerprint')!=ctx['fingerprint']:return dict(status='conflict',error='Source context changed. Reload and review your draft before saving.')
             fields=req.get('fields');action=req.get('action','save')
             if action=='restore':
-                h=db.execute('SELECT body FROM interpretation_history WHERE actor=? AND unit_id=? AND revision=?',(actor,uid,req.get('history_revision'))).fetchone()
+                h=db.execute('SELECT body FROM interpretation_history WHERE actor=? AND unit_id=? AND revision=?',(owner,uid,req.get('history_revision'))).fetchone()
                 if not h:raise ValueError('Unknown interpretation revision.')
                 historical=json.loads(h[0]);fields=historical['fields']
             elif action not in ('save','review'):raise ValueError('Unknown interpretation action.')
@@ -308,7 +321,7 @@ class Interpretations:
             if catalog['fields'] and issues:raise ValueError('Correct the mappings against the current Site Model catalog before saving.')
             if action=='review' and any(not review_ready(fields[k]) for k in KEYS):
                 raise ValueError('Resolve the six fields and their gaps before marking this interpretation reviewed.')
-            doc=dict(schema=SCHEMA,unit_id=uid,actor=actor,material_id=ctx['material_id'],session_id=ctx['session_id'],
+            doc=dict(schema=SCHEMA,unit_id=uid,actor=owner,edited_by=actor,material_id=ctx['material_id'],session_id=ctx['session_id'],
                 session_revision=ctx['session_revision'],revision=old['revision']+1,fields=fields,
                 linked_material_ids=linked,context_fingerprint=ctx['fingerprint'],context_manifest=[dict(id=m['id'],revision=m['revision'],source=m['source']) for m in ctx['materials']],
                 reviewed=action=='review',updated_at=now(),check_design=design,context_snapshot=context_snapshot(ctx),
@@ -320,9 +333,9 @@ class Interpretations:
                 if prior[0]!=digest:raise ValueError('Request ID already used for different content.')
                 return json.loads(prior[1])
             for bound in ctx['sessions']:
-                actual=db.execute('SELECT revision FROM requirement_sessions WHERE id=? AND actor=?',(bound['id'],actor)).fetchone()
+                actual=db.execute('SELECT revision FROM requirement_sessions WHERE id=? AND (actor=? OR ?)',(bound['id'],actor,self.r.shared)).fetchone()
                 if not actual or actual[0]!=bound['revision']:return dict(status='conflict',error='Splitting changed while saving. Refresh the source context.')
-            current=db.execute('SELECT revision FROM requirement_interpretations WHERE actor=? AND unit_id=?',(actor,uid)).fetchone()
+            current=db.execute('SELECT revision FROM requirement_interpretations WHERE actor=? AND unit_id=?',(owner,uid)).fetchone()
             if (current[0] if current else 0)!=req.get('expected_revision'):return dict(status='conflict',error='A newer interpretation is saved. Reload before saving.')
             draft_revision=None
             if 'draft_revision' in req:
@@ -331,8 +344,8 @@ class Interpretations:
                 draft_revision=current_draft[0] if current_draft else 0
                 if draft_revision!=req['draft_revision']:return dict(status='conflict',error='A working copy changed in another window. Reopen to compare before formal save.')
                 db.execute('INSERT OR REPLACE INTO interpretation_drafts VALUES(?,?,?,?,?)',(actor,uid,draft_revision+1,'null',now()))
-            db.execute('INSERT OR REPLACE INTO requirement_interpretations VALUES(?,?,?,?)',(actor,uid,doc['revision'],encode(doc)))
-            db.execute('INSERT INTO interpretation_history VALUES(?,?,?,?,?,?)',(actor,uid,doc['revision'],encode(doc),action,now()))
+            db.execute('INSERT OR REPLACE INTO requirement_interpretations VALUES(?,?,?,?)',(owner,uid,doc['revision'],encode(doc)))
+            db.execute('INSERT INTO interpretation_history VALUES(?,?,?,?,?,?)',(owner,uid,doc['revision'],encode(doc),action,now()))
             lineage.project(db,doc,ctx['origin'],ctx['citations'])
             response=dict(status='saved',revision=doc['revision'])
             if draft_revision is not None:response['draft_revision']=draft_revision+1
@@ -345,10 +358,10 @@ class Interpretations:
 
     def run(self,actor,rid):
         with self.c.db() as db:
-            row=db.execute('SELECT body FROM interpretation_runs WHERE actor=? AND id=?',(named(actor),rid)).fetchone()
+            row=db.execute('SELECT body,actor FROM interpretation_runs WHERE (actor=? OR ?) AND id=?',(named(actor),self.r.shared,rid)).fetchone()
         if not row:raise ValueError('Generation request not found.')
         r=json.loads(row[0])
-        with RUN_LOCK:active=(str(self.c.app.runtime),actor,rid) in RUNNING
+        with RUN_LOCK:active=(str(self.c.app.runtime),row[1],rid) in RUNNING
         if r['status']=='running' and not active:
             r['status']='interrupted';r['error']='Generation was interrupted. Existing edits were retained. Start a new request.'
         return self.public_run(r)

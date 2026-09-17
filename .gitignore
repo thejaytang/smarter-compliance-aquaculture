@@ -84,3 +84,22 @@ project-support/requirement-splitting-20260915/activation-backup/
 /project-support/workbench-continuity-20260916/failed-fixture-start/
 /project-support/workbench-continuity-20260916/final-activation/
 /project-support/workbench-continuity-20260916/*.log
+
+# Authorized local cleanup recovery, never a colleague seed.
+/project-support/shared-workspace-20260917/local-backup/
+
+/project-support/shared-workspace-20260917/local-delivery/
+
+# Business data and machine-local settings are initialized once, then stay local.
+/system1/Data/**
+!/system1/Data/STORAGE.md
+!/system1/Data/.gitkeep
+/system1/Code/config/config.json
+/system1/Code/config/schedule.json
+/system1/Requirement_Source_Registry.xlsx
+/system2/System2_Requirement_Register.xlsx
+/reviewer-workspace/
+/system1/saved-records/*.zip
+/system1/saved-records/*.zip.sha256
+/workbench/saved-packages/*.zip
+/workbench/saved-packages/*.zip.sha256

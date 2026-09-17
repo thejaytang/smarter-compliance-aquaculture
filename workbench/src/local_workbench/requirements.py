@@ -101,13 +101,17 @@ class Requirements:
             from .requirement_relations import initialize
             initialize(db)
 
+    @property
+    def shared(self):
+        return bool(getattr(getattr(self.c, "app", None), "peer_sync", False))
+
     def material(self, actor, identity):
         return self.c.read_material(named(actor), identity)
 
     def listing(self, actor, material_id):
         actor = named(actor)
         with self.c.db() as db:
-            rows = db.execute('SELECT body FROM requirement_sessions WHERE actor=? AND material_id=? ORDER BY rowid', (actor, material_id)).fetchall()
+            rows = db.execute('SELECT body FROM requirement_sessions WHERE (actor=? OR ?) AND material_id=? ORDER BY rowid', (actor, self.shared, material_id)).fetchall()
         docs=[json.loads(r[0]) for r in rows]
         return {'sessions': [self.summary(d) for d in docs if not d.get('deleted')], 'deleted': [self.summary(d) for d in docs if d.get('deleted')]}
 
@@ -116,7 +120,7 @@ class Requirements:
         return dict({k: doc[k] for k in ('id','revision','phase','text','chapter','block_id','units','spans','field_spans','roles','done','labels','source_segments','deleted','structures','structure_schema','roots') if k in doc}, structure_views=structure.views(doc))
 
     def load(self, db, actor, identity):
-        row = db.execute('SELECT body FROM requirement_sessions WHERE id=? AND actor=?', (identity, actor)).fetchone()
+        row = db.execute('SELECT body FROM requirement_sessions WHERE id=? AND (actor=? OR ?)', (identity, actor, self.shared)).fetchone()
         if row is None:
             raise ValueError('This splitting session is not available to the selected reviewer.')
         return ensure_labels(json.loads(row[0]))
@@ -132,8 +136,8 @@ class Requirements:
         actor = named(actor)
         with self.c.db() as db:
             doc = self.load(db, actor, identity)
-            doc['steps'] = [{'revision': r[0], 'action': r[1], 'at': r[2]} for r in db.execute(
-                'SELECT revision,action,at FROM requirement_steps WHERE session_id=? ORDER BY revision DESC LIMIT 50', (identity,))]
+            doc['steps'] = [{'revision': r[0], 'action': r[1], 'at': r[2], 'edited_by': r[3] or r[4]} for r in db.execute(
+                "SELECT revision,action,at,json_extract(body,'$.edited_by'),(SELECT actor FROM requirement_sessions WHERE id=session_id) FROM requirement_steps WHERE session_id=? ORDER BY revision DESC LIMIT 50", (identity,))]
         doc['stale'] = bool(self.stale(doc, self.material(actor, doc['material_id'])))
         return structure.response(doc)
 
@@ -144,8 +148,8 @@ class Requirements:
         pattern = '%' + query.replace('\\', '\\\\').replace('%', '\\%').replace('_', '\\_') + '%'
         with self.c.db() as db:
             rows = db.execute("""SELECT id,session_id,material_id,text,chapter,source FROM requirement_units
-                WHERE actor=? AND (text LIKE ? ESCAPE '\\' OR chapter LIKE ? ESCAPE '\\' OR id=?)
-                ORDER BY rowid DESC LIMIT 50""", (actor, pattern, pattern, query)).fetchall()
+                WHERE (actor=? OR ?) AND (text LIKE ? ESCAPE '\\' OR chapter LIKE ? ESCAPE '\\' OR id=?)
+                ORDER BY rowid DESC LIMIT 50""", (actor, self.shared, pattern, pattern, query)).fetchall()
         return {'units': [dict(zip(('id', 'session_id', 'material_id', 'text', 'chapter', 'source'), r)) for r in rows]}
 
     def batch(self, actor, request):
@@ -255,13 +259,17 @@ class Requirements:
             self.validate(db, actor, doc)
             doc['revision'] += 1
             doc['saved_at'] = now()
+            owner_row = db.execute('SELECT actor FROM requirement_sessions WHERE id=?', (doc['id'],)).fetchone()
+            owner = owner_row[0] if owner_row else actor
+            doc.setdefault('created_by', owner)
+            doc['edited_by'] = actor
             body = encode(doc)
             db.execute('INSERT INTO requirement_sessions VALUES(?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET revision=excluded.revision,body=excluded.body',
-                       (doc['id'], actor, doc['material_id'], doc['revision'], body))
+                       (doc['id'], owner, doc['material_id'], doc['revision'], body))
             db.execute('INSERT INTO requirement_steps VALUES(?,?,?,?,?)', (doc['id'], doc['revision'], body, action, doc['saved_at']))
             db.execute('DELETE FROM requirement_units WHERE session_id=?', (doc['id'],))
             for u in ([] if doc.get('deleted') else doc['units'].values()):
-                db.execute('INSERT INTO requirement_units VALUES(?,?,?,?,?,?,?)', (u['id'], doc['id'], actor, doc['material_id'], u['text'], doc['chapter'],
+                db.execute('INSERT INTO requirement_units VALUES(?,?,?,?,?,?,?)', (u['id'], doc['id'], owner, doc['material_id'], u['text'], doc['chapter'],
                            encode(dict(source=doc['source'], source_refs=doc['source_refs'], block_id=doc['block_id'], span=doc['spans'][u['id']], material_revision=doc['material_revision'],source_segments=doc.get('source_segments',[])))))
             from .requirement_relations import project
             project(db,doc)
@@ -321,7 +329,7 @@ class Requirements:
                 if relation in ('exceptions','subrequirement') and target in doc['units']:
                     raise ValueError('Choose another complete Requirement entry, not an internal item.')
                 if target not in doc['units']:
-                    row=db.execute('SELECT source,text,session_id FROM requirement_units WHERE id=? AND actor=?',(target,actor)).fetchone()
+                    row=db.execute('SELECT source,text,session_id FROM requirement_units WHERE id=? AND (actor=? OR ?)',(target,actor,self.shared)).fetchone()
                     if row is None:raise ValueError('Choose an existing Requirement belonging to this reviewer.')
                     linked=self.load(db,actor,row[2])
                     if relation in ('exceptions','subrequirement') and (linked.get('deleted') or target != next(iter(leaves(linked['roots'])),None)):
@@ -401,7 +409,7 @@ class Requirements:
             if not u or field not in RELATIONS or target == u['id']:
                 raise ValueError('Choose a different unit and a relationship field.')
             if target not in doc['units']:
-                row = db.execute('SELECT source,text,session_id FROM requirement_units WHERE id=? AND actor=?', (target, actor)).fetchone()
+                row = db.execute('SELECT source,text,session_id FROM requirement_units WHERE id=? AND (actor=? OR ?)', (target, actor, self.shared)).fetchone()
                 if row is None:
                     raise ValueError('Choose an existing requirement ID from the search results.')
                 target_doc = self.load(db, actor, row[2])
@@ -474,7 +482,7 @@ class Requirements:
         if not doc['units'] or len(doc['units']) > 1000:
             raise ValueError('A passage must contain 1 to 1000 units.')
         structure.validate(doc)
-        all_docs = [json.loads(r[0]) for r in db.execute('SELECT body FROM requirement_sessions WHERE actor=? AND id<>?', (actor, doc['id']))]
+        all_docs = [json.loads(r[0]) for r in db.execute('SELECT body FROM requirement_sessions WHERE (actor=? OR ?) AND id<>?', (actor, self.shared, doc['id']))]
         all_docs.append(doc)
         graph = {}
         for item in all_docs:

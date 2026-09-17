@@ -20,9 +20,11 @@ from .interpretation_continuity import review_ready
 SCHEMA='requirement-delivery/2'
 RELATIONSHIP_SCHEMA='requirement-delivery/3'
 LEGACY_SCHEMA='requirement-delivery/1'
+SHARED_SCHEMA='requirement-delivery/4'
+SHARED_KEY='requirements:shared'
 
 
-def key_for(actor):return 'requirements:'+fingerprint(named(actor))
+def key_for(actor):return SHARED_KEY if actor == 'shared' else 'requirements:'+fingerprint(named(actor))
 
 
 class Delivery:
@@ -56,6 +58,16 @@ class Delivery:
                 has_relationships=any(step['document'].get('structure_schema')==tree_structure.RELATIONSHIP_SCHEMA for item in sessions for step in item['steps'])
                 value=dict(schema=RELATIONSHIP_SCHEMA if has_relationships else SCHEMA if has_groups else LEGACY_SCHEMA,actor=actor,sessions=sessions,interpretations=interpretations,candidates=candidates)
                 items.append(dict(key=key_for(actor),value=value,branch=actor,actor=actor,guard=fingerprint(value)))
+        if self.r.shared and items:
+            value = dict(schema=SHARED_SCHEMA, actor='shared', sessions=[], interpretations=[], candidates=[], owners={})
+            for item in items:
+                bundle = item['value']; owner = bundle['actor']
+                for session in bundle['sessions']:
+                    value['owners'][session['document']['id']] = owner
+                value['sessions'].extend(bundle['sessions'])
+                value['interpretations'].extend(bundle['interpretations'])
+                value['candidates'].extend(dict(run, requested_by=owner) for run in bundle['candidates'])
+            return [dict(key=SHARED_KEY, value=value, branch='shared', actor='shared', guard=fingerprint(value))]
         return items
 
     def validate(self,value):
@@ -64,8 +76,13 @@ class Delivery:
         return value
 
     def _validate(self,v):
-        if not isinstance(v,dict) or set(v)!={'schema','actor','sessions','interpretations','candidates'} or v['schema'] not in (SCHEMA,LEGACY_SCHEMA,RELATIONSHIP_SCHEMA):raise ValueError('Unsupported Requirement delivery.')
-        named(v['actor'])
+        shared=isinstance(v,dict) and v.get('schema')==SHARED_SCHEMA
+        keys={'schema','actor','sessions','interpretations','candidates'} | ({'owners'} if shared else set())
+        if not isinstance(v,dict) or set(v)!=keys or v['schema'] not in (SCHEMA,LEGACY_SCHEMA,RELATIONSHIP_SCHEMA,SHARED_SCHEMA):raise ValueError('Unsupported Requirement delivery.')
+        if shared:
+            if v['actor']!='shared' or not isinstance(v['owners'],dict):raise ValueError('Invalid shared Requirement ownership.')
+            for owner in v['owners'].values():named(owner)
+        else:named(v['actor'])
         for k in ('sessions','interpretations','candidates'):
             if not isinstance(v[k],list) or len(v[k])>10000:raise ValueError('Requirement delivery exceeds the supported size.')
         if len(encoded(v).encode())>64000000:raise ValueError('Requirement delivery exceeds the supported size.')
@@ -90,7 +107,7 @@ class Delivery:
                         ids.add(part['block_id']);offset=part['end']+2
                     if '\n\n'.join(part['text'] for part in parts)!=x['text'] or parts!=d.get('source_segments'):raise ValueError('Source segment binding differs.')
                 if x.get('structures') and v['schema']==LEGACY_SCHEMA:raise ValueError('Unified groups require Requirement delivery version 2 or later.')
-                if x.get('structure_schema')==tree_structure.RELATIONSHIP_SCHEMA and v['schema']!=RELATIONSHIP_SCHEMA:raise ValueError('Group relationships require Requirement delivery version 3.')
+                if x.get('structure_schema')==tree_structure.RELATIONSHIP_SCHEMA and v['schema'] not in (RELATIONSHIP_SCHEMA,SHARED_SCHEMA):raise ValueError('Group relationships require Requirement delivery version 3.')
                 tree_structure.validate(x)
                 leaves(x['roots'])
                 for uid,u in x['units'].items():
@@ -109,6 +126,7 @@ class Delivery:
             if steps.get((sid,d['revision']))!=d:raise ValueError('Current splitting does not match its immutable history.')
             if uids&set(d['units']):raise ValueError('Requirement identity occurs in more than one session.')
             uids.update(d['units'])
+        if shared and set(v['owners'])!=set(current):raise ValueError('Missing Requirement ownership.')
         graph={uid:(tree_structure.references(d['structures'][uid]) if uid in d.get('structures',{}) else sum((leaves(u[r]) for r in RELATIONS),[])) for d in current.values() if not d.get('deleted') for uid,u in d['units'].items()}
         visiting=set();seen=set()
         def walk(uid):
@@ -131,7 +149,7 @@ class Delivery:
             for entry in item['history']:
                 if set(entry)!={'document','action','at','anchor','citations'}:raise ValueError('Invalid interpretation evidence.')
                 d=entry['document'];a=entry['anchor'];split=steps.get((d['session_id'],d['session_revision']))
-                if not split or d['unit_id'] not in split['units'] or d['unit_id']!=item['unit_id'] or d['actor']!=v['actor'] or d['schema']!='requirement-interpretation/1':raise ValueError('Interpretation origin differs.')
+                if not split or d['unit_id'] not in split['units'] or d['unit_id']!=item['unit_id'] or d['actor']!=(v['owners'].get(d['session_id']) if shared else v['actor']) or d['schema']!='requirement-interpretation/1':raise ValueError('Interpretation origin differs.')
                 if type(d['revision']) is not int or d['revision']<1 or d['revision'] in heads:raise ValueError('Invalid interpretation version.')
                 heads.append(d['revision'])
                 expected=lineage.source_anchor(d,split,a['quality'])
@@ -157,6 +175,7 @@ class Delivery:
             if item['head_revision'] not in heads:raise ValueError('Missing interpretation head.')
         seen_runs=set()
         for run in v['candidates']:
+            if shared:named(run.get('requested_by'))
             uuid.UUID(run['id'])
             if run['id'] in seen_runs or run['unit_id'] not in {u for d in steps.values() for u in d['units']}:raise ValueError('Invalid candidate identity.')
             seen_runs.add(run['id'])
@@ -166,10 +185,13 @@ class Delivery:
 
     def apply(self,value,request_id,expected_digest=False):
         self.validate(value);actor=value['actor'];digest=fingerprint(value)
+        owners=value.get('owners', {s['document']['id']:actor for s in value['sessions']})
         with self.c.lock,self.c.db() as db:
             db.execute('BEGIN IMMEDIATE')
             old=db.execute('SELECT body FROM requirement_delivery_receipts WHERE id=?',(request_id,)).fetchone()
             if old:return json.loads(old[0])
+            if self.r.shared and value['schema']!=SHARED_SCHEMA and self.capture(db):
+                raise ValueError('This older package uses private Requirement versions. Re-export it with the updated app before merging into existing shared work.')
             if expected_digest is not False:
                 current=next((item['guard'] for item in self.capture(db) if item['actor']==actor),None)
                 if current!=expected_digest:raise ValueError('Requirement work changed after the import preview. Refresh the comparison.')
@@ -178,7 +200,7 @@ class Delivery:
             revision_map={};pending=[];heads={}
             for item in value['sessions']:
                 sid=item['document']['id'];old=db.execute('SELECT actor,body FROM requirement_sessions WHERE id=?',(sid,)).fetchone()
-                if old and old[0]!=actor:raise ValueError('Splitting identity belongs to another reviewer.')
+                if old and old[0]!=owners[sid]:raise ValueError('Splitting identity belongs to another reviewer.')
                 maximum=db.execute('SELECT MAX(revision) FROM requirement_steps WHERE session_id=?',(sid,)).fetchone()[0] or 0
                 for step in item['steps']:
                     d=step['document'];prior=db.execute('SELECT body FROM requirement_steps WHERE session_id=? AND revision=?',(sid,d['revision'])).fetchone()
@@ -200,29 +222,30 @@ class Delivery:
                 db.execute('INSERT INTO requirement_steps VALUES(?,?,?,?,?)',(d['id'],revision,encoded(d),step['action'],step['at']))
             for sid,raw in heads.items():
                 d=rebound(raw,revision_map[sid,raw['revision']])
-                db.execute('INSERT INTO requirement_sessions VALUES(?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET revision=excluded.revision,body=excluded.body',(sid,actor,d['material_id'],d['revision'],encoded(d)))
+                db.execute('INSERT INTO requirement_sessions VALUES(?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET revision=excluded.revision,body=excluded.body',(sid,owners[sid],d['material_id'],d['revision'],encoded(d)))
                 db.execute('DELETE FROM requirement_units WHERE session_id=?',(sid,))
                 for uid,u in ([] if d.get('deleted') else d['units'].items()):
-                    db.execute('INSERT INTO requirement_units VALUES(?,?,?,?,?,?,?)',(uid,sid,actor,d['material_id'],u['text'],d['chapter'],encoded(dict(source=d['source'],source_refs=d['source_refs'],block_id=d['block_id'],span=d['spans'][uid],material_revision=d['material_revision'],source_segments=d.get('source_segments',[])))))
+                    db.execute('INSERT INTO requirement_units VALUES(?,?,?,?,?,?,?)',(uid,sid,owners[sid],d['material_id'],u['text'],d['chapter'],encoded(dict(source=d['source'],source_refs=d['source_refs'],block_id=d['block_id'],span=d['spans'][uid],material_revision=d['material_revision'],source_segments=d.get('source_segments',[])))))
             for sid in heads:
-                d=self.r.load(db,actor,sid);self.r.validate(db,actor,d);project_relations(db,d)
+                d=self.r.load(db,owners[sid],sid);self.r.validate(db,owners[sid],d);project_relations(db,d)
             for item in value['interpretations']:
-                uid=item['unit_id'];maximum=db.execute('SELECT MAX(revision) FROM interpretation_history WHERE actor=? AND unit_id=?',(actor,uid)).fetchone()[0] or 0
+                owner=item['history'][0]['document']['actor']
+                uid=item['unit_id'];maximum=db.execute('SELECT MAX(revision) FROM interpretation_history WHERE actor=? AND unit_id=?',(owner,uid)).fetchone()[0] or 0
                 ordered=sorted(item['history'],key=lambda e:(e['document']['revision']==item['head_revision'],e['document']['revision']))
                 for entry in ordered:
                     original=entry['document'];d=deepcopy(original);maximum+=1;d['revision']=maximum
                     d['session_revision']=revision_map[d['session_id'],d['session_revision']]
-                    d['delivery_origin']=dict(digest=digest,actor=actor,revision=original['revision'])
+                    d['delivery_origin']=dict(digest=digest,actor=owner,revision=original['revision'])
                     # Keep the original reviewed evidence, but require local context
                     # review if the saved dependency fingerprint no longer matches.
-                    db.execute('INSERT INTO interpretation_history VALUES(?,?,?,?,?,?)',(actor,uid,maximum,encoded(d),entry['action'],entry['at']))
+                    db.execute('INSERT INTO interpretation_history VALUES(?,?,?,?,?,?)',(owner,uid,maximum,encoded(d),entry['action'],entry['at']))
                     a=deepcopy(entry['anchor']);a['session_revision']=d['session_revision']
                     lineage.project(db,d,a,entry['citations'])
-                db.execute('INSERT OR REPLACE INTO requirement_interpretations VALUES(?,?,?,?)',(actor,uid,maximum,encoded(d)))
+                db.execute('INSERT OR REPLACE INTO requirement_interpretations VALUES(?,?,?,?)',(owner,uid,maximum,encoded(d)))
             for run in value['candidates']:
                 # Candidate identities are immutable; conflicting candidates remain
                 # in the received archive rather than overwriting local evidence.
-                db.execute('INSERT OR IGNORE INTO interpretation_runs VALUES(?,?,?)',(actor,run['id'],encoded(run)))
+                db.execute('INSERT OR IGNORE INTO interpretation_runs VALUES(?,?,?)',(run.get('requested_by',actor),run['id'],encoded(run)))
             receipt=dict(status='synchronized',actor=actor,sessions=len(heads),interpretations=len(value['interpretations']),archive_digest=digest)
             db.execute('INSERT INTO requirement_delivery_receipts VALUES(?,?)',(request_id,encoded(receipt)))
         return receipt

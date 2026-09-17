@@ -222,3 +222,9 @@ Workbench Markdown rendering and diff tools are pinned under `workbench/frontend
 ## GitHub portability checks
 
 The branch-scoped `workbench-portability.yml` exercises Windows and Ubuntu with synthetic test data. Workbench HTTP integration tests require the separately installed System2 environment because the reviewer bridge launches that component. Install both declared environments before running the complete Workbench suite. For Windows Git checkouts containing the retained historical evidence tree, enable `core.longpaths` before checkout (or use a short destination path); the CI runner applies this setting before checkout. This does not change application data locations or remove historical artifacts.
+
+## App-only updates and initial data (2026-09-17)
+
+The active `system1/Data/`, source/output workbooks, live `config.json` and `schedule.json`, runtime databases and reviewer workspaces are local and ignored by Git. Versioned `*.example.json` files are templates. The rebuild entry points create missing local configuration only, with scheduling disabled on a new installation, and never overwrite existing settings.
+
+The one-time source seed is a separate GitHub release asset. Follow [the Windows colleague guide](workbench/docs/windows-colleague-guide.md) for the checksummed restore command. The restore refuses existing source or Workbench databases. Do not use it for application updates. `windows-environment-kit.zip` contains declarations, locks and setup/restore scripts for use alongside a matching application clone; packages are downloaded during rebuild and no Mac `.venv` is distributed as a Windows environment.

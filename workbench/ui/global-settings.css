@@ -31,3 +31,10 @@
 @media (max-width: 760px) { .global-settings-dialog { width: calc(100vw - 16px); max-height: calc(100dvh - 16px); padding: 16px; }.settings-heading { top: -16px; }.sync-layout { grid-template-columns: minmax(0,1fr); }.sync-layout > aside { border-left: 0; border-top: 1px solid var(--line); padding: 16px 0 0; }.sync-choices,.automation-fields { grid-template-columns: minmax(0,1fr); } }
 
 .compact-shell.sidebar-collapsed .app-menu-content .navigation-label { display: inline; }
+
+.sync-requirements { overflow-wrap: anywhere; max-height: 60vh; overflow: auto; margin-block: 12px; }
+.sync-requirements section { padding-block: 12px; border-bottom: 1px solid var(--line); }
+.sync-requirements h5 { margin: 0 0 8px; font-size: 1em; }
+.sync-requirements ul { padding-left: 20px; }
+.sync-requirements li { margin-block: 6px; }
+.sync-requirements blockquote { margin: 10px 0; padding: 8px 12px; border-left: 3px solid var(--line); }
