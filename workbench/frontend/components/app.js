@@ -99,7 +99,7 @@ function renderNavigation(){
  $('#open-collaboration').disabled=navigating||switchingActor||externalActorChange||!state?.actor?.id;
  $('#workspace-selector').disabled=!state||navigating||switchingActor||externalActorChange;
 }
-async function renderView(){renderRequests();void sourceExportStatus();system2Review.leave();extraction.leave();materials.leave();sources.leave();document.body.classList.toggle('material-view',['system2','system2History'].includes(view));renderNavigation();
+async function renderView(){renderRequests();system2Review.leave();extraction.leave();materials.leave();sources.leave();document.body.classList.toggle('material-view',['system2','system2History'].includes(view));renderNavigation();
 if(['addSources','system1','sourceRecords','history'].includes(moduleFor(view))){await sources.mount(main,{api,state,category:{addSources:'intake',system1:'pending',sourceRecords:'records',history:'history'}[moduleFor(view)],intakeMode:modulePages.addSources.find(([id])=>id===view)?.[2]});return;}
 if(state.collaboration?.mode==='reviewer'&&['legacyReview','legacyHistory','settings','assessments','system2QA'].includes(view)){main.innerHTML='<section class="panel"><h2>Personal reviewer workspace</h2><p>Use the Requirement Extraction System and personal source review. Master and legacy operations belong to the coordinator.</p></section>';return}
 if(view==='history'){const rows=historyRows(state);main.innerHTML='<section class="panel"><h2>Review records · '+rows.length+'</h2><p class="muted">Review history preserves each reviewer, decision and original note. A blank reviewer on a pending task means this round is not yet complete.</p><div class="history-wrap"><table class="history"><thead><tr><th>Source</th><th>Reviewer</th><th>Recorded at</th><th>Decision / result</th><th>Notes</th></tr></thead><tbody>'+rows.map(historyRowHTML).join('')+'</tbody></table></div></section>';main.querySelectorAll('[data-followup-source]').forEach(button=>button.onclick=()=>openFilteredTasks([button.dataset.followupSource],'Link verification'));return}
@@ -242,8 +242,10 @@ $('#reload-task').onclick=async()=>{
   if(!state.tasks.some(t=>t.operation_id===selected)){selected=state.tasks[0]?.operation_id;search='';}
   await loadDraft();$('#reload-task').hidden=true;renderView();
 };
+let polling=false;
 const poll=setInterval(async()=>{
-  if(!state||busy||navigating||switchingActor)return;
+  if(!state||busy||navigating||switchingActor||polling)return;
+  polling=true;
   try{
     await refresh(false);
     if(state.collaboration?.mode||externalActorChange)return;
@@ -263,7 +265,8 @@ const poll=setInterval(async()=>{
     if(view==='system1'&&draft.pending&&status!==requestStatus)renderDetail();
     requestStatus=status;
   }catch(error){notice('Unable to read the workbench state. Your draft is preserved. '+error.message)}
-},2500);
+  finally{polling=false;}
+},5000);
 renderNavigation();
 refresh().catch(e=>notice(e.message));
 

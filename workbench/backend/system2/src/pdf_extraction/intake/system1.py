@@ -7,6 +7,10 @@ from pathlib import Path
 from ..platform_support import venv_python
 from backend.shared.platform_support import system1_code, python_path
 import subprocess
+from backend.shared.timing import measured
+from backend.shared.component_process import ComponentPool
+
+_bridge_pool = ComponentPool()
 
 from .registry import IntakeError, read_registry
 
@@ -34,18 +38,15 @@ class System1Handoff:
                 raise IntakeError('system1_changed_during_handoff')
 
 
+@measured('source.bridge')
 def _bridge(code, config_path, command='read'):
-    process = subprocess.run(
-        [str(venv_python(code)), '-m', 'system1.workbench_bridge'],
-        input=json.dumps({'command': command, 'config': str(config_path)}),
-        capture_output=True, text=True, encoding="utf-8", cwd=code,
-        env=dict(os.environ, PYTHONPATH=python_path(code / 'src'), PYTHONDONTWRITEBYTECODE='1', PYTHONUTF8='1'), timeout=60,
-    )
     try:
-        reply = json.loads(process.stdout)
-        if process.returncode or reply.get('ok') is not True: raise ValueError('bridge_failed')
+        reply = _bridge_pool.request(venv_python(code), 'system1.workbench_bridge', code,
+            dict(os.environ, PYTHONPATH=python_path(code / 'src'), PYTHONDONTWRITEBYTECODE='1', PYTHONUTF8='1'),
+            {'command': command, 'config': str(config_path)}, timeout=60)
+        if reply.get('ok') is not True: raise ValueError('bridge_failed')
         return reply['data']
-    except (ValueError, KeyError, TypeError) as exc:
+    except (ValueError, KeyError, TypeError, RuntimeError) as exc:
         raise IntakeError('system1_invalid_read_receipt') from exc
 
 

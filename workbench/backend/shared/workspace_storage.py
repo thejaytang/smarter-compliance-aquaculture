@@ -9,7 +9,8 @@ import json
 import re
 import sqlite3
 from pathlib import Path
-from urllib.parse import unquote, urlsplit
+from urllib.parse import urlsplit
+from urllib.request import url2pathname
 
 TOKEN = re.compile(r"('(?:''|[^'])*'|\"(?:\"\"|[^\"])*\"|\[(?:[^\]])*\]|--[^\n]*|/\*[\s\S]*?\*/|\b[A-Za-z_][A-Za-z_0-9]*\b)")
 SYSTEM2_TABLES = {
@@ -84,7 +85,9 @@ class Connection(sqlite3.Connection):
 def connect(database, *args, **kwargs):
     original=str(database)
     if original.startswith('file:'):
-        path=Path(unquote(urlsplit(original).path))
+        uri=urlsplit(original)
+        authority='//'+uri.netloc if uri.netloc and uri.netloc!='localhost' else ''
+        path=Path(url2pathname(authority+uri.path))
     else:path=Path(original)
     marker=path.parent/'.storage.json'
     names={};routed=False

@@ -36,6 +36,14 @@ class Handler(BaseHTTPRequestHandler):
     server_version = "LocalWorkbench"
     protocol_version = "HTTP/1.1"
 
+    def handle(self):
+        try:
+            super().handle()
+        except (BrokenPipeError, ConnectionResetError, ConnectionAbortedError):
+            # Browsers cancel transfers on navigation, including PDF range reads.
+            # No response can be sent to a closed socket; saved writes are retained.
+            self.close_connection = True
+
     @property
     def app(self):
         return self.server.app
@@ -116,9 +124,13 @@ class Handler(BaseHTTPRequestHandler):
                 from local_workbench.automation_settings import AutomationSettings
                 return self.send(200, AutomationSettings(self.app).read())
             if parsed.path == '/api/runtime-status':
-                stores = [self.app.runtime / 'workbench.sqlite']
-                workflow = self.app.system2.runtime / 'workflow.sqlite'
-                if workflow.is_file() or not self.app.reviewer: stores.append(workflow)
+                if self.app.layout:
+                    from backend.shared.workspace import DATABASES
+                    stores = [self.app.layout.journal,*[self.app.layout.database(name) for name in DATABASES]]
+                else:
+                    stores = [self.app.runtime / 'workbench.sqlite']
+                    workflow = self.app.system2.runtime / 'workflow.sqlite'
+                    if workflow.is_file() or not self.app.reviewer: stores.append(workflow)
                 self.app.monitor.probe_storage(stores)
                 for attr, component in (('worker', 'source'), ('parser_worker', 'legacy'), ('material_worker', 'material'), ('workbook_worker', 'excel'), ('confidence_worker', 'source_excel')):
                     worker = getattr(self.app, attr, None)
@@ -494,6 +506,8 @@ class Handler(BaseHTTPRequestHandler):
                 return self.send(404,{"error":"Page not found."})
             path=self.app.static_path(static[parsed.path])
             return self.send(200,path.read_bytes(),ui_content_type(path)+"; charset=utf-8")
+        except (BrokenPipeError, ConnectionResetError, ConnectionAbortedError):
+            raise
         except Exception as exc:
             self.send(400,{"error":str(exc)})
 
@@ -574,7 +588,7 @@ class Handler(BaseHTTPRequestHandler):
                 service=Interpretations(self.app.collaboration)
                 action=self.path.rsplit('/',1)[-1]
                 if action=='context':result=service.context(session['name'],body['unit_id'],body.get('linked_material_ids',[]))
-                elif action=='save':result=service.save(session['name'],body)
+                elif action=='save':result=service.save_and_read(session['name'],body)
                 elif action=='generate':result=service.generate(session['name'],body)
                 elif action=='draft':
                     from backend.system3.interpretation_continuity import Drafts
@@ -774,6 +788,8 @@ class Handler(BaseHTTPRequestHandler):
                     return self.send(409,{'error':'This unit, its evidence or the policy changed. Your draft is retained. Compare it with the current result before submitting again.','current':current})
                 except Exception:pass
             self.send(400,{"error":str(exc)})
+        except (BrokenPipeError, ConnectionResetError, ConnectionAbortedError):
+            raise
         except Exception:
             self.send(503,{"error":"The application receipt is unavailable. Keep the request and retry the same action."})
 

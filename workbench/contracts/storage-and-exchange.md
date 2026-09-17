@@ -11,11 +11,17 @@
 
 `runtime/state/workbench.sqlite` is a local coordination journal for actors, requests, sessions, resumable operations and editable local policy. It is not a fifth business database and is never exported. Private settings live under `runtime/settings`; original attachments and processing artifacts under `workspace/sources`.
 
+SQLite `file:` URI reads resolve through the same owning aliases as filesystem-path reads. URI decoding uses native path conversion so Windows drive roots, escaped characters and Unicode names retain their identity; read-only query parameters and personal-branch table prefixes are preserved.
+
+Application operations remain serialized and reentrant. Waiting interactive operations precede background legacy/export checks unless the oldest waiter has aged for ten seconds; a running operation is never interrupted. This is a scheduling preference, not a ten-second execution deadline. Idle legacy checks wait ten seconds, active processing retains its three-second interval, and source Excel checks wait five seconds. Materials and Collaboration display projections may reuse the shell's existing three-second source snapshot; save/adoption checks continue to resolve owning evidence and expected revisions.
+
 System2's main material tables have their original names. Retained personal branches use `branch_<stable-reviewer-id>__<table>` in the same System2 file. Local `.storage.json` descriptors resolve branch paths to that owner; they are operational pointers, not business identity. No extra workflow SQLite file is created for a branch. Replaceable source-check/Excel markers and locks resolve to `runtime/state/system2/<branch>/`; retained pre-migration marker files are excluded from business packages.
 
 ## 2. Authority and bindings
 
 Immutable `requirement_steps.body` and `interpretation_history.body` preserve exact JSON, authors and time. Current rows point to saved heads. Relational source/structure/citation tables are derived indexes, validated against saved authority. Interface `R1`/`G1` labels never replace stable IDs.
+
+Interpretation reads reuse each owning material read only within the same coordinated request. A successful interpretation save returns its committed document in the HTTP response, avoiding a second browser fetch. The durable request receipt is unchanged. A retry after a lost response reuses that receipt and reads the current saved document without appending another revision. Conflicts return no replacement document; drafts and explicit conflict decisions remain with the client. No context snapshot is reused across independent requests.
 
 A Requirement session records material ID/revision, source identity/hash/version, block IDs, text, exact spans/source segments and source references. Units retain stable IDs and Group trees, relationships, quantities and links. An interpretation records its unit ID, session ID/revision and frozen context/source citations. Version 3 remains version 3 after Requirement version 4 is saved; reads flag it stale. Saving a new interpretation is explicit.
 
@@ -53,6 +59,12 @@ Open each SQLite snapshot read-only. Start from an S/C/D history JSON body, use 
 The manifest gives schema version/hash and table inventory, and SQLite `sqlite_master` gives the complete readable schema. Human logs carry actor, time, object type/ID, action, before/after version and operation identity with source evidence. Optional unknown legacy event fields remain unknown, never replaced with migration time.
 
 ## 6. Migration and recovery
+
+Component process reuse does not cache business authority or bypass write coordination. Every request opens its owning stores and retains the existing source checks, expected versions, durable request identities and immutable history. A transport failure after a possible commit is an uncertain receipt, not permission to repeat a new write. The application closes component processes after draining background writers during shutdown. Read-only material scheduling hints use the existing candidate status in the correct storage alias/branch; missing or unreadable stores are errors, not an empty queue.
+
+Material candidate computation may run outside the application operation lock, under the existing worker file lock, because it reads hash-checked immutable originals and creates only isolated attempt artifacts. Preparing the captured candidate binding and finalizing its result use the owning service under write coordination. Finalization checks the exact candidate/source/scope/input revision; concurrent human revisions are preserved and make the candidate stale. This does not authorize new extraction, auto-adoption or confirmation.
+
+Initial business-seed import separates temporary preparation (`runtime/staging/seed/`, resolved by `Workspace`) from durable recovery receipts (`runtime/backups/initial-import/`). A retry requires the same verified package and compares retained legacy prepared files without deleting them. Promotion is restricted to the package inventory. Windows destination preflight includes promotion temporary names; it rejects unsupported path lengths before package-file writes. Existing completed workspaces remain ineligible for seed restoration.
 
 `workbench-layout/1` is explicit and requires a stopped service. It makes SQLite-consistent old-store backups, copies tables without rewriting authoritative JSON, retains historical source files, validates and promotes staged stores. The layout marker appears only after verification. Prepared hashes and refusal to overwrite different destinations support interruption/retry.
 

@@ -7,6 +7,17 @@ from pathlib import Path, PurePosixPath
 import sys
 import zipfile
 
+def check_destination_paths(paths, *, windows=None):
+    """Check conservative native Windows limits before preparing any files."""
+    if not (os.name == 'nt' if windows is None else windows):return
+    for path in paths:
+        path=Path(path).absolute()
+        units=lambda value:len(str(value).encode('utf-16-le'))//2
+        if units(path)>=260 or units(path.parent)>=248:
+            raise ValueError('Initial import path exceeds portable Windows limits. '
+                             'Use a shorter checkout path before retrying: '+str(path))
+
+
 def restore(root,archive,expected_sha256):
     root=Path(root).resolve();wb=root/'workbench'
     if Path(archive).stat().st_size>512*1024*1024:raise ValueError('Initial data is too large.')
@@ -58,7 +69,7 @@ def restore_business(root, raw, digest):
     from backend.shared.workspace import Workspace
     from backend.shared.workspace_storage import alias
     from local_workbench.workspace_package import validate
-    from local_workbench.workspace_migration import clone_file
+    from local_workbench.workspace_migration import clone_file, promotion_temp
     from local_workbench.workspace_integrity import inspect
     wb=root/'workbench';marker=wb/'runtime/state/layout.json'
     receipt=wb/'runtime/backups/initial-import/receipt.json'
@@ -69,13 +80,19 @@ def restore_business(root, raw, digest):
         elif any((wb/'workspace/databases').glob('*.sqlite')):
             raise ValueError('This installation already has work. Initial data never overwrites saved work.')
         _, manifest=validate(raw,allow_delivery=True)
-        stage=receipt.parent/'prepared';stage.mkdir(parents=True,exist_ok=True)
-        receipt.parent.mkdir(parents=True,exist_ok=True)
-        temporary=receipt.with_suffix('.tmp');temporary.write_text(json.dumps({'sha256':digest,'package_id':manifest['id']}));temporary.replace(receipt)
         w=Workspace(wb)
+        stage=w.staging('seed')
+        legacy_stage=receipt.parent/'prepared'
+        names=[name for name in manifest['files'] if name.startswith(('databases/','sources/','logs/'))]
+        destinations=[w.workspace/name for name in names]
+        check_destination_paths([*[stage/name for name in names],*destinations,
+                                 *[promotion_temp(p) for p in destinations]])
+        stage.mkdir(parents=True,exist_ok=True)
+        receipt.parent.mkdir(parents=True,exist_ok=True)
+        temporary=receipt.with_suffix('.tmp');temporary.write_text(json.dumps({'sha256':digest,'package_id':manifest['id'],
+            'staging':stage.relative_to(wb).as_posix()}));temporary.replace(receipt)
         with zipfile.ZipFile(BytesIO(raw)) as package:
-            for name in manifest['files']:
-                if not name.startswith(('databases/','sources/','logs/')):continue
+            for name in names:
                 target=stage/name;data=package.read(name)
                 # Rebase local descriptors before staging, making retry byte-identical.
                 if name.endswith('/offline-source.json'):
@@ -87,10 +104,14 @@ def restore_business(root, raw, digest):
                         filename=str(value['path']).replace('\\','/').rsplit('/',1)[-1]
                         value['path']=str(w.workspace/Path(name).parent/filename)
                         data=json.dumps(value).encode()
-                if target.exists() and target.read_bytes()!=data:raise ValueError('Prepared initial content differs.')
-                target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(data)
-        for source in stage.rglob('*'):
-            if source.is_file():clone_file(source,w.workspace/source.relative_to(stage))
+                # Preserve older interrupted staging as evidence and compare it
+                # with the verified package before rebuilding the shorter stage.
+                for existing in (legacy_stage/name,target):
+                    if existing.exists() and existing.read_bytes()!=data:raise ValueError('Prepared initial content differs.')
+                target.parent.mkdir(parents=True,exist_ok=True)
+                if not target.exists():target.write_bytes(data)
+        # Only inventory entries may be promoted, not arbitrary staging files.
+        for name in names:clone_file(stage/name,w.workspace/name)
         cfg=json.loads((root/'workbench/config/system1/config.example.json').read_text())
         locations={'source_root':w.workspace/'sources/system1','manual_intake_root':w.workspace/'sources/system1/00_Human_Intake',
             'manual_intake_archive_root':w.workspace/'sources/intake-history','backup_root':w.runtime/'backups/system1',
