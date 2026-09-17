@@ -1,6 +1,0 @@
-{
-  "src/pdf_extraction/domains/requirements/classification.py": "d4860751208b3bfdf68cc20c36359ff40ba91e784707da4e13b224ba333dc7d0",
-  "src/pdf_extraction/domains/requirements/classification_evidence.py": "a71606c60434cbb78f830ddb9845a6064a7f70db726df86668530c9b7dc2a185",
-  "src/pdf_extraction/review/effective.py": "95e188492c29a6951c5d0e19b3f27cf1be86d82398eb9dad716abdda67a5528a",
-  "tests/integration/test_source_role_proposals.py": "43353b235fbbf07c0d453f206793b63905d20ffe6f3065669fe8f065f647b462"
-}

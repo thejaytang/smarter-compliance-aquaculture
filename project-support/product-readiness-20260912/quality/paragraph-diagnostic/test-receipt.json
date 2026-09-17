@@ -1,7 +1,0 @@
-{
-  "result": "PASS",
-  "tests_passed": 85,
-  "command": "PYTHONPATH=system2/src system2/.venv/bin/python -m pytest system2/tests/test_material_parser_quality.py system2/tests/test_material_reader_parser.py system2/tests/test_material_service.py system2/tests/test_materials.py system2/tests/test_material_collaboration.py system2/tests/test_material_provenance.py -q",
-  "observed_exit_code": 0,
-  "evidence_note": "Final conservative /4 code; no product changes after this run except explanatory code comments. Initial test-only call passed incorrect scope argument, corrected to actual validator contract. First /4 false short-label grouping is retained separately; final /4 regression covers that failure."
-}

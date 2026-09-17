@@ -1,8 +1,0 @@
-{
-  "id": "pa002-html",
-  "exit_code": 0,
-  "stdout": "{\"id\": \"pa002-html\", \"status\": \"candidate_available\", \"block_count\": 373, \"block_types\": {\"image\": 15, \"text\": 197, \"heading\": 44, \"table\": 117}, \"covered_scope\": [\"html:document\"], \"total_scope_count\": 1, \"warnings\": [\"unresolved_or_ambiguous_links\", \"image_content_not_transcribed\"], \"unresolved\": [], \"requirement_status\": \"not_connected\", \"candidate_path\": \"before-guarded/pa002-html/candidate.json\", \"mode\": \"before-guarded\", \"baseline_equivalent\": true}\n",
-  "stderr": "",
-  "status": "returned",
-  "elapsed_seconds": 0.379
-}

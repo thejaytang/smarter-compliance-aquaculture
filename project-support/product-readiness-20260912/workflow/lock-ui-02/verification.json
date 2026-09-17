@@ -1,9 +1,0 @@
-{
-  "status": "PASS",
-  "scope": "Actual UI lock failure/retry/reopen, isolated TS003",
-  "current_revision": 6,
-  "historical_revisions_unchanged": 6,
-  "no_lock_transaction_writes": true,
-  "checks_retained": [],
-  "originals": "No original operations by lock probe; backup is personal store only"
-}

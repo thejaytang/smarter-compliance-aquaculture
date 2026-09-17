@@ -1,8 +1,0 @@
-{
-  "id": "globalgap-xlsx",
-  "exit_code": 0,
-  "stdout": "{\"id\": \"globalgap-xlsx\", \"status\": \"candidate_available\", \"block_count\": 16, \"block_types\": {\"heading\": 6, \"table\": 10}, \"covered_scope\": [\"sheet:Audit_Info\", \"sheet:Audit scope_Info\", \"sheet:CL - IFA v6 Smart - AQ\", \"sheet:Audit Result\", \"sheet:IFA Inspection Guideline\", \"sheet:Info _ Workers welfare P&Cs\"], \"total_scope_count\": 6, \"warnings\": [\"Cell values and merge relationships are preserved; native styling, charts, drawings and conditional display are not reproduced. Hidden worksheets, rows and columns remain available and are labelled. Formulas are not calculated; saved caches may be missing or stale.\", \"All worksheets remain in required scope, including blank and hidden sheets. Charts, drawings, comments and native formatting require original inspection or manual image/notes supplementation; formulas are source text, not calculated results.\"], \"unresolved\": [], \"requirement_status\": \"not_connected\", \"candidate_path\": \"before-guarded/globalgap-xlsx/candidate.json\", \"mode\": \"before-guarded\", \"baseline_equivalent\": true}\n",
-  "stderr": "",
-  "status": "returned",
-  "elapsed_seconds": 0.513
-}

@@ -1,5 +1,0 @@
-{
-  "before_sha256": "5b7487d175408bebebb9b1019d09d9a673707712c758b555c297244410fadb92",
-  "after_sha256": "71e25f32799a67201a88de7e88c610e0f935bb6f5d0be797e080ef429b2dd235",
-  "scope": "Plain-language lock recovery message; retry identity logic unchanged"
-}

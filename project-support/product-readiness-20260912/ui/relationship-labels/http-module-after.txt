@@ -1,6 +1,0 @@
-test_app_import_graph_is_served_as_javascript_with_exact_source_bytes (test_frontend_module_routes.FrontendModuleRouteTests.test_app_import_graph_is_served_as_javascript_with_exact_source_bytes) ... ok
-
-----------------------------------------------------------------------
-Ran 1 test in 1.655s
-
-OK

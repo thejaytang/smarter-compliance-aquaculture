@@ -1,8 +1,0 @@
-{
-  "id": "asc-farm",
-  "exit_code": 0,
-  "stdout": "{\"id\": \"asc-farm\", \"status\": \"partial\", \"block_count\": 66, \"block_types\": {\"text\": 56, \"table\": 4, \"image\": 6}, \"covered_scope\": [\"page:28\", \"page:29\"], \"total_scope_count\": 256, \"warnings\": [\"Native text can differ from visible page marks. Compare it with the original page image. Scanned pages may require manual transcription; no OCR is run when viewing.\", \"PDF candidate uses the existing positioned native parser in mapped three-page windows. Ruled-table grids use existing local geometry assembly. Reading order, headings and unruled tables may need manual correction; source page images and complete native evidence are retained. No Requirement classifier, semantic processor, OCR model or external service runs.\"], \"unresolved\": [], \"requirement_status\": \"not_connected\", \"candidate_path\": \"pdfium-diagnostic/asc-farm/candidate.json\", \"mode\": \"pdfium-diagnostic\", \"baseline_equivalent\": false}\n",
-  "stderr": "",
-  "status": "returned",
-  "elapsed_seconds": 1.24
-}

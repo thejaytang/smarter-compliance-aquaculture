@@ -103,3 +103,21 @@ project-support/requirement-splitting-20260915/activation-backup/
 /system1/saved-records/*.zip.sha256
 /workbench/saved-packages/*.zip
 /workbench/saved-packages/*.zip.sha256
+
+# Historical development snapshots stay local; current code/tests/docs remain shared.
+/project-support/product-readiness-20260912/baseline/
+/project-support/product-readiness-20260912/quality/
+/project-support/product-readiness-20260912/workflow/
+/project-support/product-readiness-20260912/ui/
+/project-support/ui-redesign-20260914/candidate/
+/project-support/ui-redesign-20260914/activation-checkpoint/
+/project-support/ui-redesign-20260914/baseline/
+/project-support/ui-redesign-20260914/rollback-validation/
+/project-support/settings-sync-20260914/sandbox/
+/project-support/root-cleanup-20260913/retained/
+/project-support/root-cleanup-20260913/pre-change/
+/project-support/**/fixture/
+/project-support/**/pytest-tmp/
+/project-support/**/*.zip
+/system2/System2_Requirement_Register 2.xlsx
+/system1/Others/Legacy_Requirement_Workbook.xlsx
