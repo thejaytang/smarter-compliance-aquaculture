@@ -1,0 +1,18 @@
+# Explicit local geometry-preserving route. Requires the locked docling extra.
+native_extraction:
+  backend: docling-parse
+layout:
+  backend: heuristic
+ocr:
+  backend: tesseract
+tables:
+  backend: native
+  recognition_pipeline_enabled: false
+  img2table_enabled: false
+  gmft_enabled: false
+equations:
+  transcription_enabled: false
+precision_review:
+  enabled: false
+security:
+  external_models_enabled: false

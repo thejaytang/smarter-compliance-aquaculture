@@ -1,0 +1,40 @@
+/* Settings are a single global entry; native dialogs own focus and top-layer order. */
+.app-navigation > .app-menu { margin-top: auto; }
+.app-menu-content #open-collaboration { margin-top: 0; }
+.app-menu-content > button { width: 100%; text-align: left; }
+.global-settings-dialog { width: min(1100px, calc(100vw - 40px)); max-width: none; max-height: calc(100dvh - 40px); padding: 24px; overflow: auto; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-panel); }
+.global-settings-dialog::backdrop, #runtime-dialog::backdrop, #activity-dialog::backdrop { background: rgb(20 32 48 / .36); }
+.settings-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; position: sticky; top: -24px; padding: 16px 0; background: var(--surface); z-index: 1; border-bottom: 1px solid var(--line); margin-bottom: 20px; }
+.settings-heading h2 { margin: 0; }
+.settings-heading button { flex-shrink: 0; }
+.sync-layout { display: grid; grid-template-columns: minmax(0,1fr) minmax(230px,.42fr); gap: 28px; }
+.sync-layout > section, .sync-layout > aside { min-width: 0; }
+.sync-layout > aside { border-left: 1px solid var(--line); padding-left: 20px; }
+.sync-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.settings-table-scroll { overflow-x: auto; margin-block: 16px; }
+.settings-table-scroll table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.settings-table-scroll th, .settings-table-scroll td { text-align: left; vertical-align: top; padding: 10px; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+.sync-conflict { border-top: 1px solid var(--line); padding-block: 16px; }
+.sync-choices { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+.sync-choices > div { background: var(--surface-subtle); padding: 16px; border-radius: var(--radius-control); }
+.sync-text { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 240px; overflow: auto; font: inherit; }
+.sync-download { display: inline-block; padding: 10px 16px; background: var(--accent); color: var(--on-accent); border-radius: var(--radius-control); }
+.sync-download:hover { background: var(--accent-hover); }
+.automation-schedule { border-top: 1px solid var(--line); margin-top: 28px; padding-top: 20px; }
+.automation-fields { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; margin-block: 16px; }
+.automation-fields label { display: grid; gap: 8px; }
+.settings-check { display: flex; align-items: center; gap: 10px; }
+.global-settings-dialog input, .global-settings-dialog select { min-height: 36px; }
+.global-settings-dialog input[type=checkbox] { min-height: auto; width: auto; }
+.global-settings-dialog fieldset { border: 0; padding: 0; }
+#settings-feedback:not(:empty) { padding: 12px; background: var(--surface-subtle); border-radius: var(--radius-control); }
+@media (max-width: 760px) { .global-settings-dialog { width: calc(100vw - 16px); max-height: calc(100dvh - 16px); padding: 16px; }.settings-heading { top: -16px; }.sync-layout { grid-template-columns: minmax(0,1fr); }.sync-layout > aside { border-left: 0; border-top: 1px solid var(--line); padding: 16px 0 0; }.sync-choices,.automation-fields { grid-template-columns: minmax(0,1fr); } }
+
+.compact-shell.sidebar-collapsed .app-menu-content .navigation-label { display: inline; }
+
+.sync-requirements { overflow-wrap: anywhere; max-height: 60vh; overflow: auto; margin-block: 12px; }
+.sync-requirements section { padding-block: 12px; border-bottom: 1px solid var(--line); }
+.sync-requirements h5 { margin: 0 0 8px; font-size: 1em; }
+.sync-requirements ul { padding-left: 20px; }
+.sync-requirements li { margin-block: 6px; }
+.sync-requirements blockquote { margin: 10px 0; padding: 8px 12px; border-left: 3px solid var(--line); }

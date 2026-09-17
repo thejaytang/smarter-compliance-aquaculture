@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Source-grounded PDF review</title>
+  <link rel="stylesheet" href="/static/review.css">
+</head>
+<body>
+  <header><strong>PDF Evidence Review</strong><span id="status"></span></header>
+  <main>
+    <section class="source"><canvas id="page"></canvas><nav><button id="prev">Previous</button><span id="page-label"></span><button id="next">Next</button></nav></section>
+    <section class="review">
+      <label>Reviewer name<input id="actor" autocomplete="name" required></label>
+      <div class="filters">
+        <label><input type="checkbox" id="critical" checked> critical</label>
+        <label><input type="checkbox" id="ambiguous" checked> ambiguous</label>
+        <label><input type="checkbox" id="unknown" checked> unknown</label>
+        <label><input type="checkbox" id="low-confidence" checked> low confidence</label>
+      </div>
+      <select id="targets" size="8"></select>
+      <dl id="metadata"></dl>
+      <label>Native<textarea id="native" readonly></textarea></label>
+      <label>OCR<textarea id="ocr" readonly></textarea></label>
+      <label>Review<textarea id="review-value"></textarea></label>
+      <label>Resolved<textarea id="resolved" readonly></textarea></label>
+      <label>Reason<input id="reason"></label>
+      <div class="actions">
+        <button data-action="accept">Accept</button><button data-action="modify">Modify</button>
+        <button data-action="reject">Reject</button><button data-action="unreadable">Unreadable</button>
+      </div>
+    </section>
+  </main>
+  <script src="/static/review.js"></script>
+</body>
+</html>

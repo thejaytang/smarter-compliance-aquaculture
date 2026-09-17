@@ -1,0 +1,2 @@
+LOCAL BUSINESS DATA
+This folder contains databases, source originals/attachments, derived human-history exports and collaboration/delivery packages. Preserve it during updates and environment rebuilds. Only this README belongs in the application Git product. Use Collaboration to merge colleagues' saved work; never replace active databases with an incoming package. Database history is authoritative; logs are derived exports. See ../../USER_GUIDE.md.

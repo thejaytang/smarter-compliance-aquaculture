@@ -1,6 +1,20 @@
-# Local environments, generated caches and build products.
+# Product updates exclude active local data, development evidence and credentials.
+# The immutable workbench/initial-data snapshot is the authorized first-handoff exception.
+/project-support/
+/PROJECT_STATE.md
+/.github/
+/workbench/PROJECT_STATE.md
+/workbench/tests/
+/workbench/examples/
+/workbench/scripts/
+/reviewer-workspace/
+/system1/
+/system2/
+/system3/
+/workbench/saved-packages/
 **/.venv/
 **/.venv.*/
+**/.venv
 **/.cache/
 **/__pycache__/
 **/node_modules/
@@ -9,26 +23,23 @@
 **/build/
 **/dist/
 **/*.egg-info/
-*.py[cod]
-.coverage
-.coverage.*
-.DS_Store
-**/.DS_Store
-
-# Local execution history, service sessions and generated parsing results.
-# Selected importable ZIPs belong in workbench/saved-packages/, outside runtime.
-# Runtime exclusion is a Git publication boundary, not a local deletion rule.
 **/runtime/
+!/workbench/runtime/
+/workbench/runtime/*
+!/workbench/runtime/README.txt
+/workbench/workspace/*
+!/workbench/workspace/README.txt
 **/tmp/
-system2/outputs/
+*.py[cod]
 *.sqlite
 *.sqlite3
 *.sqlite-wal
 *.sqlite-shm
 *.ses
 *.log
-
-# Local secrets and editor state. Keep sanitized examples only.
+.coverage*
+.DS_Store
+**/.DS_Store
 .env
 .env.*
 **/.env
@@ -40,84 +51,11 @@ system2/outputs/
 .idea/
 .vscode/
 .playwright-cli/
+**/ai-provider.json
 **/model-provider.local.json
 **/machine-assessment-rules.local.json
 **/scoring-rules.local.json
-
-# Bundled PDF.js runtime assets are required in portable checkouts.
+/workbench/backend/system1/config/
+**/.system1-source-management.lock
 !**/vendor/pdfjs/build/
 !**/vendor/pdfjs/build/**
-
-# Local environment links and live coordination locks are not portable.
-**/.venv
-**/.system1-source-management.lock
-
-# Local acceptance originals, databases and restart recovery for manual splitting.
-project-support/requirement-splitting-20260915/fixture/
-project-support/requirement-splitting-20260915/activation-backup/
-
-# Isolated Markdown notebook engineering artifacts
-/project-support/markdown-notebook-20260915/fixture/
-/project-support/markdown-notebook-20260915/activation-backup/
-/project-support/markdown-notebook-20260915/real-html-extraction*/
-
-/project-support/markdown-notebook-20260915/pa004-correction/*.sqlite*
-/project-support/markdown-notebook-20260915/pa004-correction/parser-artifacts/
-/project-support/markdown-notebook-20260915/pa004-correction/result.json
-/project-support/markdown-notebook-20260915/pa004-correction/activation-backup/
-
-# Four-pane local backup and isolated engineering data; never publish credentials.
-/project-support/four-pane-20260916/before/
-/project-support/four-pane-20260916/fixture/
-/project-support/four-pane-20260916/activation-backup/
-**/ai-provider.json
-
-# Optimization recovery is local; publish only selected reports and tests.
-/project-support/workbench-optimization-20260916/before/
-/project-support/workbench-optimization-20260916/activation-backup/
-/project-support/workbench-optimization-20260916/fixture/
-
-/project-support/workbench-optimization-20260916/final-activation/
-
-# Continuity acceptance stays local; only selected reports are published.
-/project-support/workbench-continuity-20260916/fixture/
-/project-support/workbench-continuity-20260916/failed-fixture-start/
-/project-support/workbench-continuity-20260916/final-activation/
-/project-support/workbench-continuity-20260916/*.log
-
-# Authorized local cleanup recovery, never a colleague seed.
-/project-support/shared-workspace-20260917/local-backup/
-
-/project-support/shared-workspace-20260917/local-delivery/
-
-# Business data and machine-local settings are initialized once, then stay local.
-/system1/Data/**
-!/system1/Data/STORAGE.md
-!/system1/Data/.gitkeep
-/system1/Code/config/config.json
-/system1/Code/config/schedule.json
-/system1/Requirement_Source_Registry.xlsx
-/system2/System2_Requirement_Register.xlsx
-/reviewer-workspace/
-/system1/saved-records/*.zip
-/system1/saved-records/*.zip.sha256
-/workbench/saved-packages/*.zip
-/workbench/saved-packages/*.zip.sha256
-
-# Historical development snapshots stay local; current code/tests/docs remain shared.
-/project-support/product-readiness-20260912/baseline/
-/project-support/product-readiness-20260912/quality/
-/project-support/product-readiness-20260912/workflow/
-/project-support/product-readiness-20260912/ui/
-/project-support/ui-redesign-20260914/candidate/
-/project-support/ui-redesign-20260914/activation-checkpoint/
-/project-support/ui-redesign-20260914/baseline/
-/project-support/ui-redesign-20260914/rollback-validation/
-/project-support/settings-sync-20260914/sandbox/
-/project-support/root-cleanup-20260913/retained/
-/project-support/root-cleanup-20260913/pre-change/
-/project-support/**/fixture/
-/project-support/**/pytest-tmp/
-/project-support/**/*.zip
-/system2/System2_Requirement_Register 2.xlsx
-/system1/Others/Legacy_Requirement_Workbook.xlsx

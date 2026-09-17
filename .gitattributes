@@ -1,13 +1,13 @@
-# Preserve hash-bound source originals and bundled assets on every platform.
-system1/Data/** -text
-system2/data/** -text
-system2/gold/** -text
-workbench/ui/vendor/pdfjs/** -text
+# Predictable script line endings across platforms.
 *.py text eol=lf
 *.sh text eol=lf
 *.command text eol=lf
 *.cmd text eol=crlf
 
-# Explicitly saved import packages retain exact ZIP bytes across platforms.
-workbench/saved-packages/*.zip -text
-system1/saved-records/*.zip -text
+# Preserve original and bundled third-party bytes.
+workbench/workspace/** -text
+workbench/frontend/assets/vendor/** -text
+*.zip -text
+
+# Preserve PDF byte offsets and treat PDF assets as binary.
+*.pdf binary

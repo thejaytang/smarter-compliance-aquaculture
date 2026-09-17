@@ -1,230 +1,86 @@
-# Runtime Environment
+# Environment and Deployment
 
-This is the shared environment guide for the Requirement Workstream. Paths and commands below start from the directory containing this file unless a different working directory is stated. This is the GitHub repository root; in the original authoring workspace it is named `05_Working area of requirements side/`. Use [README.md](README.md) for the project entry and [PROJECT_STATE.md](PROJECT_STATE.md) for dated verification results.
+## 1. Requirements and ownership
 
-## Environment ownership
+Run commands from this repository root. Install Python matching [.python-version](.python-version), `uv`, and Git. A browser is required. Node is needed only to rebuild frontend bundles or run local frontend tests, not for daily use. Dependency downloads require network access; no application or model credentials are required for setup.
 
-Keep one isolated environment per executable component. The workbench calls System1 through its own interpreter; System2 does the same for governed source intake. There is no shared root `.venv`.
-
-| Component | Environment | Python requirement | Dependency source of truth |
-| --- | --- | --- | --- |
-| System1 | `system1/Code/.venv/` | 3.11+ | [Pinned requirements](system1/Code/deployment/requirements.txt) and [setup script](system1/Code/deployment/setup_macos.command) |
-| System2 | `system2/.venv/` | >=3.11,<3.14 | [pyproject.toml](system2/pyproject.toml) declares dependencies/extras; [uv.lock](system2/uv.lock) locks their resolution |
-| Workbench | `workbench/.venv/` | 3.11+ | [pyproject.toml](workbench/pyproject.toml); standard-library runtime on macOS/Linux; pinned `tzdata` on Windows |
-| System3 | None yet | Not selected | [Design-only state](system3/PROJECT_STATE.md); create an independent environment when implementation begins |
-
-Python 3.12 is the common setup target. Use the explicit component interpreter rather than an ambient `python` or another activated environment. Dependency declarations remain in their owning components; this guide does not replace them. System1 direct requirements resolve through [requirements.lock](system1/Code/deployment/requirements.lock), including transitive dependencies and distribution hashes; both platform setup scripts enforce those hashes. Workbench source execution does not require a package build or a separate dependency lockfile.
-
-## New-machine setup
-
-The commands in this section create or synchronize environments and may download dependencies. They are setup actions, not daily launch steps. On a new computer, recreate environments instead of copying `.venv` directories. Restore only the explicitly retained data described in [the saved-data policy](workbench/USER_GUIDE.md#saved-data-for-github). A runtime directory is not the unit of Git publication.
-
-### Complete base environment rebuild (macOS and Windows)
-
-The rebuild kit is committed source plus dependency locks, not a copy of installed environments or an offline wheel archive. Install Python **3.12** and `uv` first. Dependency downloads require network access. The Mac system `python3` may still be 3.9; use `python3.12` explicitly.
-
-| Platform | Entry from the repository root |
-| --- | --- |
-| macOS | `./workbench/deployment/Rebuild\ environments.command` |
-| Windows Command Prompt | `call "workbench\deployment\Rebuild environments.cmd"` |
-
-Both entries call [the same setup implementation](workbench/deployment/rebuild_environments.py). It creates the three component environments, installs hash-locked System1 requirements, applies the Workbench Windows-only timezone dependency and synchronizes the base System2 environment with `uv.lock`. Existing business data and configuration are untouched. No service, parsing job or schedule is started. Append `--dry-run` to inspect commands without changing environments, or `--reviewer` to omit System1 for an independent import-only workspace.
-
-This base profile supports the current manual material route. Optional legacy parsing/OCR and development profiles are described below; their native tools/model caches are separate from Python dependency locks. The shipped browser bundles need no Node installation for daily use. To rebuild those bundles, retain `workbench/frontend/package.json` and `package-lock.json` and use the documented `npm ci` workflow.
-
-After setup, restore the System1 saved-record package before starting the normal coordinator. A fresh independent reviewer can instead start with `--reviewer --root reviewer-workspace` and import a selected Workbench ZIP. Rebuilding environments does not recover unexported Workbench state.
-
-### System1 and the workbench on macOS
-
-Prerequisite: Python 3.12. Prefer the complete rebuild entry above, which checks the exact Python minor version. The older component-only setup below requires `python3` on `PATH` to resolve to Python 3.12. A browser is required for daily operation. Microsoft Excel is used for workbook inspection and native acceptance, not as the daily review interface.
-
-```sh
-python3 --version
-mkdir -p system1/Code/runtime/backups system1/Code/runtime/logs
-./system1/Code/deployment/setup_macos.command
-python3 -m venv workbench/.venv --without-pip
-```
-
-The empty runtime directories support a fresh clone's write-location checks; live runtime records are not committed. The System1 setup script creates its environment, installs its pinned requirements and creates missing local configuration from examples. It leaves existing configuration in place and does not register a schedule. Read its Doctor result and rerun the check below if any issue is reported. The script waits for a keypress before closing.
-
-After setup, the normal daily entry is:
-
-```sh
-./Open\ Workbench.command
-```
-
-The launcher starts the local workbench and may process already-submitted requests and due weekly QA while it runs. It is not an environment-only diagnostic. System1 database decisions remain available while Excel is open; close Excel when its generated snapshot needs synchronization.
-
-### Windows coordinator and reviewer setup
-
-Use a short local checkout such as `%USERPROFILE%\Aquaculture`. Long OneDrive paths can exceed Windows filename limits when source snapshots add their own nested directories. Git's `core.longpaths` only helps Git; it does not enable long paths in every application. Keep original filenames and hashes intact. Recreate each `.venv` on Windows instead of copying the Mac environment.
-
-Prerequisites: Python 3.12 with the `py` launcher and `uv` on `PATH`. From the repository root in Command Prompt:
-
-```bat
-py -3.12 --version
-uv --version
-call system1\Code\deployment\setup_windows.cmd
-call workbench\deployment\setup_windows.cmd
-```
-
-System1 setup pauses for its Doctor result. The Workbench script installs its Windows timezone dependency and the locked base System2 environment. Neither setup starts the service or registers schedules. For an independent offline reviewer, skip System1 setup and use the reviewer instructions below. A coordinator using database-mode configuration must restore its verified governance database and immutable migration companion before normal launch; Git source files cannot recreate saved human decisions.
-
-For System2 development and the local parsing profile used in Windows verification, run from the repository root in Command Prompt:
-
-```bat
-call workbench\deployment\environment_windows.cmd
-cd /d system2
-set "UV_CACHE_DIR=%CD%\.cache\uv"
-uv sync --locked --python 3.12 --no-editable --extra dev --extra docling --extra table-fallbacks
-cd ..
-```
-
-Double-click [Open Workbench.cmd](workbench/deployment/Open%20Workbench.cmd) for the coordinator or [Open Reviewer Workbench.cmd](workbench/deployment/Open%20Reviewer%20Workbench.cmd) for an independent reviewer. The coordinator launcher may resume submitted jobs; use it only after the intended business state has been restored. Interpreters resolve to `.venv/Scripts/python.exe` on Windows and `.venv/bin/python` on macOS/Linux.
-
-The shared [Windows environment script](workbench/deployment/environment_windows.cmd) sets UTF-8 subprocess text and a component-owned Numba cache. It discovers Tesseract in standard user/machine installation locations, plus optional portable tools under `workbench/.cache/tools/`: `bin/uv.exe`, `node-*-win-x64/node.exe`, and `native/poppler-*/Library/bin/`. Tools already on `PATH` remain available; a sibling `.tools/` directory is also supported for existing installations. It changes only the current process environment, with no registry or system PATH modifications. Install the native tools and configured OCR languages separately when the selected parser requires them; the script does not download them.
-
-Windows smoke checks, from the repository root in Command Prompt:
-
-```bat
-call workbench\deployment\environment_windows.cmd
-set "PYTHONPATH=%CD%\system1\Code\src"
-system1\Code\.venv\Scripts\python.exe -m system1 doctor --config system1\Code\config\config.json --schedule system1\Code\config\schedule.json
-set "PYTHONPATH=%CD%\workbench\src"
-workbench\.venv\Scripts\python.exe -c "from zoneinfo import ZoneInfo; import local_workbench; print(ZoneInfo('Europe/Oslo'))"
-set "PYTHONPATH=%CD%\system2\src"
-system2\.venv\Scripts\python.exe -c "from pdf_extraction.platform_memory import peak_rss_mb; print(peak_rss_mb())"
-```
-
-[Windows compatibility evidence](project-support/windows-compatibility-20260914/RESULTS.md) records actual Windows regression and browser checks. This does not replace the separate multi-computer reviewer round-trip acceptance checklist.
-
-### System2 development and local parsing
-
-Prerequisites: `uv` and Python 3.12. Run this block from the workstream root; the subshell keeps the surrounding working directory unchanged:
-
-```sh
-(
-  cd system2
-  UV_CACHE_DIR="$PWD/.cache/uv" uv sync --locked --python 3.12 \
-    --no-editable --extra dev --extra docling --extra table-fallbacks
-)
-```
-
-`--locked` refuses a dependency change that requires updating `uv.lock`. `--no-editable` installs an ordinary package rather than relying on an editable-install `.pth` file. Continue using `PYTHONPATH=src` when running source code so a stale installed wheel cannot override current files.
-
-This profile includes test tools, positioned native extraction and table fallbacks. HTML/XLSX use the base dependencies. The separate `paddle` extra enables additional OCR/layout/model integrations; it is not required for the current HTML/XLSX workflow or included in the profile above. If a task explicitly needs it, add `--extra paddle` to the same synchronization command, retaining the other extras. Python packages and cached model files are separate requirements; a cache directory alone does not prove a backend can run. Do not change parser profiles as a substitute for accuracy validation.
-
-For the current explicit local PDF route, inspect [pdf-intake-positioned.yaml](system2/config/pdf-intake-positioned.yaml). Parser commands and bounded sample selection belong to the [System2 guide](system2/USER_GUIDE.md); full PDF runs are not setup checks.
-
-## Human-led material route
-
-The material workspace uses the existing Workbench and System2 environments above; it adds no dependency installation or System3 environment. Workbench's material worker calls `pdf_extraction.orchestration.material_service` through System2's interpreter and consumes only previously requested Extract candidates. It is separate from the legacy domain-producing parser worker and introduces no external scheduler.
-
-The structural candidate route reuses local HTML/OOXML parsing, positioned PDF native extraction, PDFium window copies/rendering and existing ruled-table geometry. It does not start OCR or external models. No Tesseract invocation or model download is needed for this route; the legacy parser's native-tool requirements below retain their own scope. Always use `PYTHONPATH=src` in System2 so the active source version is selected.
-
-See the [material interface guide](system2/docs/contracts/human-material-workbench.md#5-local-engineering-checks) for targeted tests and the isolated browser fixture build/serve commands. The fixture has its own source/database/runtime data and must not replace normal business state. Its existing evidence directory is preserved rather than rebuilt destructively.
-
-## Bundled browser PDF reader
-
-The material reader now includes locally bundled Mozilla PDF.js 6.3.289. Its exact files, upstream integrity and license notices belong to [the vendor manifest](workbench/ui/vendor/pdfjs/manifest.json) and [maintenance note](workbench/ui/vendor/pdfjs/README.md). This adds browser assets, not Python or Node runtime dependencies. Distribute `workbench/ui/vendor/pdfjs/` with the workbench; no CDN or runtime download is required. A parent service restart is required for the new reader routes and capability advertisement. Actual loading and acceptance are in Workbench PROJECT_STATE, not implied by files being present.
-
-## Tools outside the Python environments
-
-| Tool | Used for | Requirement |
+| Component | Local environment | Dependency authority |
 | --- | --- | --- |
-| `uv` | System2 locked dependency setup | Needed when rebuilding/synchronizing System2; not required to double-click an already-installed workbench |
-| Node.js | Workbench frontend state tests | Development only; not required by the workbench Python service |
-| Playwright CLI and local Google Chrome | Isolated real-browser acceptance | Development only; round-two evidence used `@playwright/cli` 0.1.19 with downloads cached under `workbench/.cache/npm` and daemon state under `workbench/.cache/playwright-daemon`. Neither is a service dependency or shared global installation. |
-| Poppler `pdftotext`, `pdftoppm` | Positioned native text and full-page raster evidence | Must be on the parsing/checking process's `PATH`; shared extraction/verification engines do not establish independent correctness |
-| Tesseract | Local OCR for the selected PDF route | Requires the executable and language data matching the run configuration |
+| Workbench and System3 | `workbench/.venv` | [pyproject.toml](workbench/pyproject.toml) |
+| System1 | `workbench/backend/system1/.venv` | [requirements.lock](workbench/backend/system1/deployment/requirements.lock) |
+| System2 | `workbench/backend/system2/.venv` | [pyproject.toml](workbench/backend/system2/pyproject.toml), [uv.lock](workbench/backend/system2/uv.lock) |
+| Frontend build | `workbench/frontend/node_modules` | [package-lock.json](workbench/frontend/package-lock.json) |
 
-Executable checks:
+`deployment.py` owns platform selection and setup commands. Windows uses `.venv/Scripts/python.exe`; macOS uses `.venv/bin/python`. Recreate environments on each computer. Never copy a Mac virtual environment to Windows. Choose a short local checkout path on Windows and avoid cloud-synchronized folders for live SQLite files.
 
-```sh
-uv --version
-node --version
-pdftotext -v
-tesseract --version
-tesseract --list-langs
+## 2. First installation
+
+Windows Command Prompt:
+
+```bat
+py -3.12 deployment.py install
+py -3.12 deployment.py check
+py -3.12 deployment.py restore-initial --archive "C:\path\initial-data.zip" --sha256 HASH_SUPPLIED_WITH_THE_PACKAGE
 ```
 
-An installed Python OCR wrapper does not install the Tesseract executable or prove that Norwegian language data is available. Missing secondary evidence must remain visible in verification results. Native-tool and model requirements depend on the selected parser configuration; environment readiness is separate from source-fidelity acceptance.
-
-## Configuration, environment variables and persistent data
-
-| Setting or location | Purpose |
-| --- | --- |
-| `PYTHONPATH=src` | Select current source code when running from the owning component's code directory |
-| `UV_CACHE_DIR="$PWD/.cache/uv"` from `system2/` | Keep System2 package downloads in its local cache |
-| `system1/Code/config/config.json` | Relative workbook/Data/runtime paths and operational settings |
-| `governance_db` in System1 configuration | Relative path to the pre-migrated owning SQLite authority. Current activation belongs to System1 state. Keep its immutable migration workbook companion and related runtime history with every live-workspace recovery package. Runtime is excluded from Git; a clone requires an explicit verified restore or isolated initialization. Requires no new dependencies. |
-| `system1/Code/config/schedule.json` | Schedule intent; setup does not enable or register an operating-system schedule |
-| `system2/config/*.yaml` | Parser, routing, verification and external-model settings selected per run |
-| `system2/.cache/` | Rebuildable package/model caches; first use of a missing model may need a download |
-| `workbench/runtime/` | Persistent operators, drafts, requests, receipts and staged uploads, plus local service metadata |
-
-System2's [model-runtime setup](system2/src/pdf_extraction/ocr.py) supplies project-local defaults for `PADDLE_PDX_CACHE_HOME`, `XDG_CACHE_HOME`, `MPLCONFIGDIR` and `HF_HOME`. Run from `system2/` so these defaults remain inside the component. Existing process environment overrides take precedence.
-
-The optional standalone [System2 API module](system2/src/pdf_extraction/api/app.py) no longer creates a job database on import or `/health`. Its default store is deferred until a store operation and belongs to `system2/runtime/jobs.sqlite3`, independent of the caller's working directory. Explicit `create_app(database)` and CLI `--database` paths remain authoritative. Run API/worker operations with the intended component environment and database; no root job store is owned by this workstream. The [root cleanup record](project-support/root-cleanup-20260913/RESULTS.md) retains the empty accidental root database and verifies the import/ownership guard. Component runtimes mix business data and local execution state. For Git publication, preserve the selected System1 authority snapshot and explicit Workbench ZIPs under the saved-data policy; do not copy entire runtimes. This publication scope does not itself delete local records.
-
-`ENVIRONMENT.md` is documentation. A `.env` file is a different mechanism for process configuration or secrets; the current launch/setup paths do not require a shared root `.env`. Do not put real credentials into this guide or version control. Keep `.venv`, rebuildable caches and local runtime files out of commits; preserve persistent business and review data during environment repair. Workbench SQLite and System1 history are not disposable environment caches.
-
-The workbench listens on `127.0.0.1` and manages its local port through runtime metadata. Do not hard-code a machine-specific address into shared configuration. See the [workbench guide](workbench/USER_GUIDE.md) for service behavior.
-
-## Verify an existing installation
-
-These checks inspect the environment and imports without starting the review service or parsing source files:
+macOS:
 
 ```sh
-(
-  cd system1/Code
-  PYTHONPATH=src .venv/bin/python -m system1 doctor
-)
-(
-  cd system2
-  PYTHONPATH=src .venv/bin/python -c \
-    'import sys, pdf_extraction; print(sys.version); print(pdf_extraction.__file__)'
-  UV_CACHE_DIR="$PWD/.cache/uv" uv sync --locked --dry-run --offline \
-    --no-python-downloads --no-editable --extra dev --extra docling --extra table-fallbacks
-)
-(
-  cd workbench
-  PYTHONPATH=src .venv/bin/python -c \
-    'import sys, sqlite3, local_workbench; print(sys.version); print(local_workbench.__file__)'
-)
+python3.12 deployment.py install
+python3.12 deployment.py check
+python3.12 deployment.py restore-initial --archive /path/initial-data.zip --sha256 HASH_SUPPLIED_WITH_THE_PACKAGE
 ```
 
-The import paths should point into the intended component's `src/`. The dry run previews synchronization without installing or removing packages or rewriting the lockfile; it is not a fresh-machine installation test. If an offline check cannot resolve cached information, report that limitation instead of removing `--locked` or silently changing dependencies.
+Use the [bundled first-handoff snapshot and its exact checksum](workbench/initial-data/README.md). It contains the four current business databases, originals and history. The initial import checks the package hash and refuses a workspace containing existing business databases. Current `workbench-business-package/1` snapshots are validated and restored only into a fresh workspace. The previously supplied `source-initial-data/1` release remains supported; it is migrated directly into the four owning stores. No private API configuration is imported. Keep your original seed as recovery evidence.
 
-After environment or code changes, use the component's existing checks: [System1 tests](system1/Code/ENGINEERING.md#testing), [System2 tests](system2/USER_GUIDE.md#tests) and [workbench checks](workbench/USER_GUIDE.md#file-ownership). Documentation changes require link/path/command checks, not a full parser run. Update this guide when setup procedures or environment ownership change, update the owning dependency declaration/lockfile for dependency changes, and record verified state in the appropriate `PROJECT_STATE.md`.
+Double-click `Open Workbench (Windows).cmd` or `Open Workbench (macOS).command` after installation. Both are thin wrappers around `deployment.py start`. The macOS launcher prefers the existing Workbench environment, so opening it from Finder does not depend on a shell's Python search path. The service binds to loopback. Its chosen port and process identity are under `workbench/runtime/state/`; diagnostic output is under `runtime/logs/`. Python bytecode generated by the root launcher is routed to `runtime/cache/python`, keeping the product folders clear of new bytecode caches. Already submitted local jobs may resume. Launch/view does not authorize external retrieval, an AI request or a Full Source Check.
 
-## Optional local evidence renderer
+## 3. Updating an existing installation
 
-System2 uses its existing lxml, openpyxl, Pillow and PDFium dependencies for bound-original evidence. On macOS, installed Google Chrome can render isolated HTML-region screenshots using a temporary profile, offline CSP and disabled original scripts; no browser profile or remote provider is used. If Chrome cannot render, the workbench retains an isolated original-markup view and explicitly reports the missing image evidence. No renderer install or external asset download happens during review.
+Save browser work, close Workbench, and inspect local code changes before updating. Use a fast-forward Git update on the agreed branch. Preserve local `workspace/` and `runtime/`. Run `deployment.py check`; use `deployment.py rebuild` only for changed/missing dependencies. `--dry-run` displays setup commands without installing anything. Rebuild retains already installed optional packages; it does not silently remove a local parsing profile.
 
+An older installation has data under `system1`, `system2/runtime/workflow` and `workbench/runtime`. After installing the new application, explicitly run:
 
-## Offline reviewer setup on Windows
+```sh
+python3.12 deployment.py migrate --legacy-system1 /path/to/old/system1 --legacy-system2 /path/to/old/system2/runtime/workflow
+```
 
-Run `workbench/deployment/setup_windows.cmd` to create the project-local Workbench environment and locked base System2 environment. Then double-click `workbench/deployment/Open Reviewer Workbench.cmd`; it uses a separate `reviewer-workspace` directory and disables coordinator business schedules. Import the coordinator’s work ZIP and select a named reviewer. A reviewer clone does not need the coordinator’s normal governance database, output workbook or all business originals.
+On Windows replace `python3.12` with `py -3.12` and use quoted Windows paths. For an in-place upgrade with the original directories still present, `deployment.py migrate` finds them automatically. Stop the old service before migration. The new process refuses ordinary startup until a valid layout marker exists.
 
-Adapters resolve `.venv/Scripts/python.exe` on Windows and `.venv/bin/python` on macOS. File locks use the platform implementation, PID checks do not signal/terminate Windows processes, adapter text uses UTF-8, and offline ZIP paths obey Windows filename rules. The macOS launcher retains its existing environment and can accept `--reviewer --root <separate-folder>`.
+Migration snapshots old databases with SQLite backup, stages the four new stores, validates rows and source bindings, and promotes resumably. Original data is retained. A retry completes the same prepared migration; a conflicting destination is rejected. Never delete a destination merely to bypass a migration error.
 
-Actual office validation remains mandatory: [Windows offline review checklist](workbench/docs/windows-offline-review-checklist.md). Local portability tests do not establish an actual Windows pass.
+## 4. Verification and recovery
 
-## Workflow correction compatibility
+```sh
+python3.12 deployment.py check
+python3.12 deployment.py verify
+```
 
-The independent source workspace, structural material editing and version 2 collection exchange use the existing component environments and standard-library archive/locking code. No new model, scheduler or external-sync dependency is introduced. Version 1 single-item work/return packages remain readable. Windows verification must include multiple selected results and an inspection result, not only a single material export; see [the office checklist](workbench/docs/windows-offline-review-checklist.md). Actual Windows evidence remains pending until recorded.
+`check` reports interpreter availability and the layout marker. `verify` checks all four stores, original hashes and saved cross-store bindings. It does not edit data, execute a Site Model check or certify parsing quality. Stop the service before direct verification so the inspected files form a stable saved state.
 
-## Markdown frontend assets
+Create a full local recovery folder only while the service is stopped:
 
-Workbench Markdown rendering and diff tools are pinned under `workbench/frontend/` with a project-local `node_modules` and npm lockfile. `npm ci --ignore-scripts` followed by `npm run build` rebuilds the shipped `workbench/ui/vendor/markdown/tools.mjs` and notices. Daily operation uses the committed local browser bundle and needs no Node service or CDN. [Notebook tool contract](workbench/docs/markdown-content.md).
+```sh
+python3.12 deployment.py backup --destination /path/new-recovery-folder
+python3.12 deployment.py restore --archive /path/new-recovery-folder --destination /path/new-restored-folder
+```
 
-## GitHub portability checks
+Use quoted Windows paths with `py -3.12` on Windows. Recovery includes consistent business stores, local coordination state, source dependencies and the matching application code. API credential files are deliberately excluded and must be configured again. Restoration requires a new destination and never replaces an active workspace. The retained recovery mapping preserves historical path strings; use the matching recovered code and isolated inspection before adopting a restore.
 
-The branch-scoped `workbench-portability.yml` exercises Windows and Ubuntu with synthetic test data. Workbench HTTP integration tests require the separately installed System2 environment because the reviewer bridge launches that component. Install both declared environments before running the complete Workbench suite. For Windows Git checkouts containing the retained historical evidence tree, enable `core.longpaths` before checkout (or use a short destination path); the CI runner applies this setting before checkout. This does not change application data locations or remove historical artifacts.
+Migration recovery is under `workbench/runtime/backups/architecture-v1/`: old SQLite snapshots, prepared stores and a migration report. The code revision and additional local recovery evidence are retained by the developer separately. For full recovery stop the service and restore one verified, matching set of databases, sources and runtime recovery state. Do not mix databases from different backup times or copy a live SQLite file. Collaboration import is the safe route for combining colleagues' work; backup restore is a stopped-service recovery procedure.
 
-## App-only updates and initial data (2026-09-17)
+Application updates and ordinary startup never reset databases, overwrite private settings or re-import the initial seed. A missing environment is repairable; missing saved business work is not recreated by dependency installation.
 
-The active `system1/Data/`, source/output workbooks, live `config.json` and `schedule.json`, runtime databases and reviewer workspaces are local and ignored by Git. Versioned `*.example.json` files are templates. The rebuild entry points create missing local configuration only, with scheduling disabled on a new installation, and never overwrite existing settings.
+## 5. Optional local development and parsing
 
-The one-time source seed is a separate GitHub release asset. Follow [the Windows colleague guide](workbench/docs/windows-colleague-guide.md) for the checksummed restore command. The restore refuses existing source or Workbench databases. Do not use it for application updates. `windows-environment-kit.zip` contains declarations, locks and setup/restore scripts for use alongside a matching application clone; packages are downloaded during rebuild and no Mac `.venv` is distributed as a Windows environment.
+The base environment supports the normal manual material flow. To restore the local PDF/development profile, run inside `workbench/backend/system2`:
+
+```sh
+uv sync --locked --no-editable --extra dev --extra docling --extra table-fallbacks
+```
+
+Set `UV_CACHE_DIR` to a project-local cache when running `uv` directly. OCR and selected legacy parsers may require separately installed Tesseract/language files, Poppler or cached model weights. Missing optional tools must remain visible; installing a Python wrapper does not establish OCR readiness. Do not download model weights or run paid/remote inference during routine checks.
+
+To rebuild shipped Markdown tools, run `npm ci` and `npm run build` inside `workbench/frontend`. PDF.js vendor files and license notices must remain in the product. Tests and development evidence stay local and are excluded from application Git updates. On a development checkout, run `workbench/.venv/bin/python workbench/tests/run_checks.py all` (Windows: `workbench\.venv\Scripts\python.exe workbench\tests\run_checks.py all`). The helper selects each suite’s owning environment and explicit source paths. Standard `PYTHONPYCACHEPREFIX` is respected when a local validation cache outside a cloud-synchronized folder is necessary.
+
+Native Windows launch, filesystem locking, migration and exchange must be checked on Windows. macOS passes and simulated platform tests do not prove Windows acceptance.

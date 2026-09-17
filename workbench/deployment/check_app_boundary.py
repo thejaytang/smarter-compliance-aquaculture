@@ -1,23 +1,58 @@
-"""Reject active business data in the application Git index (not Git history)."""
+"""Check the current Git index, not old history; never delete local files."""
 from pathlib import PurePosixPath
+import re
+import unicodedata
 import subprocess
 import sys
 
-EXACT={'system1/Code/config/config.json','system1/Code/config/schedule.json','system1/Requirement_Source_Registry.xlsx','system2/System2_Requirement_Register.xlsx','system2/System2_Requirement_Register 2.xlsx','system1/Others/Legacy_Requirement_Workbook.xlsx'}
+ROOT_FILES={'.gitattributes','.gitignore','.python-version','README.md','USER_GUIDE.md','ENVIRONMENT.md','AGENTS.md','deployment.py','Open Workbench (Windows).cmd','Open Workbench (macOS).command'}
+WORKBENCH_FILES={'workbench/pyproject.toml','workbench/workspace/README.txt','workbench/runtime/README.txt'}
+PREFIXES=('workbench/frontend/','workbench/backend/application/','workbench/backend/shared/','workbench/backend/system3/',
+ 'workbench/backend/system1/src/','workbench/backend/system1/deployment/',
+ 'workbench/backend/system2/src/','workbench/backend/system2/config/','workbench/backend/system2/ui/',
+ 'workbench/contracts/','workbench/config/','workbench/deployment/')
+INITIAL_DATA_FILES={'workbench/initial-data/'+name for name in ('README.md','manifest.json','workspace-20260917.zip','workspace-20260917.zip.sha256')}
+COMPONENT_FILES={'workbench/backend/__init__.py','workbench/backend/system2/pyproject.toml','workbench/backend/system2/uv.lock','workbench/backend/system2/USER_GUIDE.md'}
 
 def business_file(path):
     p=PurePosixPath(path)
-    return (path in EXACT or 'runtime' in p.parts or path.startswith('reviewer-workspace/')
-        or path.startswith('project-support/') and (path.endswith('.zip') or 'fixture' in p.parts or 'pytest-tmp' in p.parts)
-        or path.startswith('system1/Data/') and path not in ('system1/Data/STORAGE.md','system1/Data/.gitkeep')
-        or path.startswith(('system1/saved-records/','workbench/saved-packages/')) and (path.endswith('.zip') or path.endswith('.zip.sha256'))
-        or p.name in ('ai-provider.json','model-provider.local.json') or p.name=='.env')
+    if p.name=='.DS_Store':return True
+    if path in ROOT_FILES|WORKBENCH_FILES|COMPONENT_FILES|INITIAL_DATA_FILES:return False
+    if not path.startswith(PREFIXES):return True
+    if any(x in p.parts for x in ('.venv','node_modules','__pycache__','.cache','runtime','workspace','tests','project-support')):return True
+    if p.name.startswith('.env') and p.name!='.env.example':return True
+    if p.name in ('ai-provider.json','model-provider.local.json','machine-assessment-rules.local.json','scoring-rules.local.json'):return True
+    return p.suffix.lower() in {'.sqlite','.sqlite3','.db','.zip','.xlsx','.key','.pem','.pyc','.log'}
+
+def naming_issues(paths):
+    issues=[];seen={}
+    for path in paths:
+        p=PurePosixPath(path)
+        for component in p.parts:
+            if (re.match(r'^(CON|PRN|AUX|NUL|COM[1-9¹²³]|LPT[1-9¹²³])(?:\.|$)',component,re.I)
+                or component.endswith((' ','.')) or re.search(r'[<>:"\\|?*\x00-\x1f]',component)):
+                issues.append('Windows-incompatible name: '+path)
+        for part in (p,*p.parents):
+            spelling=str(part);key=unicodedata.normalize('NFC',spelling).casefold()
+            if key in seen and seen[key]!=spelling:issues.append('Case/Unicode collision: '+spelling+' / '+seen[key])
+            seen[key]=spelling
+        if '/vendor/' in path:continue
+        if p.suffix=='.py' and not re.fullmatch(r'[a-z_][a-z0-9_]*',p.stem):
+            issues.append('Python module must use snake_case: '+path)
+        if any(any(c.isupper() for c in part) for part in p.parts[:-1]):
+            issues.append('Product directories must use lowercase: '+path)
+    return sorted(set(issues))
+
 
 def main():
     paths=subprocess.check_output(['git','ls-files','-z']).decode('utf-8').split('\0')
-    bad=[p for p in paths if p and business_file(p)]
+    paths=[p for p in paths if p]
+    bad=[p for p in paths if business_file(p)]
     if bad:
-        print('Application update contains local business data/settings:\n'+'\n'.join(bad));return 1
-    print('Application/data boundary passed.');return 0
+        print('Excluded local/development data remains in the product index:\n'+'\n'.join(bad));return 1
+    issues=naming_issues(paths)
+    if issues:
+        print('\n'.join(issues));return 1
+    print('Product index boundary and naming checks passed.');return 0
 
 if __name__=='__main__':sys.exit(main())
