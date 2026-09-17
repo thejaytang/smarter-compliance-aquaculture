@@ -6,6 +6,36 @@ on:
 permissions:
   contents: read
 jobs:
+  colleague-handoff:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    env:
+      PYTHONUTF8: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install environment manager
+        run: python -m pip install uv
+      - name: Rebuild through the Windows entry point
+        if: runner.os == 'Windows'
+        shell: cmd
+        run: call "workbench\deployment\Rebuild environments.cmd"
+      - name: Rebuild through the shared environment implementation
+        if: runner.os != 'Windows'
+        run: python workbench/deployment/rebuild_environments.py
+      - name: Real launch, Collaboration return and application update
+        shell: bash
+        run: |
+          if [ "$RUNNER_OS" = "Windows" ]; then component_python=workbench/.venv/Scripts/python.exe; else component_python=workbench/.venv/bin/python; fi
+          "$component_python" workbench/tests/integration/colleague_handoff.py
   workbench:
     strategy:
       fail-fast: false
