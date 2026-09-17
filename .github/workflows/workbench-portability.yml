@@ -3,12 +3,6 @@ on:
   workflow_dispatch:
   push:
     branches: ['main', 'codex/workbench-optimization-*']
-    paths:
-      - 'workbench/**'
-      - 'system1/Code/**'
-      - 'system2/src/**'
-      - 'system2/tests/**'
-      - '.github/workflows/workbench-portability.yml'
 permissions:
   contents: read
 jobs:
