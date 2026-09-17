@@ -52,5 +52,5 @@ def stream_original(handler, original, allowed_root):
             chunk = source.read(min(256*1024, remaining))
             if not chunk: raise OSError('Original became unavailable during transfer.')
             try: handler.wfile.write(chunk)
-            except (BrokenPipeError, ConnectionResetError): return
+            except (BrokenPipeError, ConnectionResetError, ConnectionAbortedError): return
             remaining -= len(chunk)

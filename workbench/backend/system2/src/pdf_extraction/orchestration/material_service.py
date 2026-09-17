@@ -14,6 +14,7 @@ import sys
 import subprocess
 import tempfile
 import uuid
+from backend.shared.timing import measured
 
 from ..contracts.source import Snapshot
 from ..platform_support import lock_file
@@ -25,12 +26,14 @@ from ..evidence.material_reader import inspect_original, read_material
 
 
 class MaterialService:
+    @measured('material.initialize')
     def __init__(self, root, system1, config=None):
         self.root = Path(root).resolve()
         self.system1 = Path(system1).resolve()
         self.config = Path(config).resolve() if config else None
         self.store = MaterialStore(self.root)
 
+    @measured('material.source_handoff')
     def handoff(self):
         from .material_collaboration import offline_handoff
         return offline_handoff(self.root) or read_system1(self.system1, self.config)
@@ -75,6 +78,7 @@ class MaterialService:
                 temporary.unlink(missing_ok=True)
         return path
 
+    @measured('material.observe_sources')
     def observe_sources(self, handoff):
         current = {r['source_id']: r for r in handoff.records}
         for source in self.store.source_bindings():
@@ -143,6 +147,7 @@ class MaterialService:
             if i.get('source_id') == material['source']['source_id']]
         return material
 
+    @measured('material.reader')
     def reader(self, identity, **options):
         source = self.store.source_metadata(identity)
         result = read_material(self._path(source), source['content_hash'], **options)
@@ -192,6 +197,34 @@ class MaterialService:
         if result.get('material'):
             result['material'] = self.store.compact_view(self.annotate(result['material'], handoff))
         return result
+
+    def prepare_job(self):
+        pending = self.store.pending_candidates()
+        if not pending:
+            return None
+        candidate = pending[0]
+        return {'material_id': candidate['material_id'], 'candidate_id': candidate['id'],
+                **{key: candidate[key] for key in ('source', 'scope', 'input_revision')}}
+
+    def finish_job(self, job, parsed):
+        # The source and input binding must still describe this exact candidate.
+        with self.store.connect() as db:
+            row = db.execute('SELECT data FROM material_candidates WHERE id=? AND material_id=?',
+                             (job['candidate_id'], job['material_id'])).fetchone()
+        if not row:
+            raise ValueError('candidate_not_found_for_material')
+        candidate = json.loads(row[0])
+        if any(candidate[key] != job[key] for key in ('source', 'scope', 'input_revision')):
+            raise ValueError('candidate_input_changed')
+        try:
+            self.observe_sources(self.handoff())
+        except (ValueError, OSError, subprocess.SubprocessError):
+            parsed.setdefault('warnings', []).append('Source availability could not be rechecked; confirm requires current authority.')
+        return self.store.finish_candidate(job['material_id'], job['candidate_id'], parsed.get('blocks', []),
+            complete=parsed.get('status') == 'candidate_available' and not parsed.get('unresolved'),
+            error=parsed.get('error'), warnings=parsed.get('warnings', []),
+            metadata={'parser_status': parsed.get('status'), **{key: parsed.get(key) for key in
+                ('parser_version', 'canonical_artifacts', 'covered_scope', 'processed_scope', 'usable_scope', 'unprocessed_scope', 'unresolved', 'body_filter')}})
 
     def tick(self):
         # Only durable candidates created by Extract are eligible. A crash resumes
@@ -256,6 +289,12 @@ def main():
                 result = service.original(envelope['material_id'])
             elif command == 'tick':
                 result = service.tick()
+                if result.get('candidate'): result['candidate'] = compact_candidate(result['candidate'])
+                if result.get('material'): result['material'] = service.store.compact_view(result['material'])
+            elif command == 'prepare-job':
+                result = service.prepare_job()
+            elif command == 'finish-job':
+                result = service.finish_job(payload['job'], payload['parsed'])
                 if result.get('candidate'): result['candidate'] = compact_candidate(result['candidate'])
                 if result.get('material'): result['material'] = service.store.compact_view(result['material'])
             else:

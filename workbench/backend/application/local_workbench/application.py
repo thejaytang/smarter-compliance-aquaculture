@@ -13,6 +13,8 @@ from local_workbench.export_status import read_status
 from local_workbench.export_schedule import ExportSchedule
 from local_workbench.runtime_status import RuntimeStatus, ObservedAdapter
 from local_workbench.collaboration import Collaboration, PackageSourceAdapter
+from local_workbench.operation_gate import OperationGate
+from backend.shared.component_process import ComponentPool
 
 
 class Application:
@@ -22,7 +24,8 @@ class Application:
         self.ui_root = self.code_root / 'workbench/frontend'
         self.reviewer = bool(reviewer)
         self.peer_sync = True
-        self.operation_lock = threading.RLock()
+        self.operation_lock = OperationGate()
+        self.component_pool = ComponentPool()
         from backend.shared.workspace import Workspace, active
         self.layout = Workspace(self.root) if active(self.root) else None
         self.runtime = self.layout.runtime/"state" if self.layout else self.root / "runtime"
@@ -35,6 +38,7 @@ class Application:
                               self.layout.materials if self.layout else self.runtime / 'system2-workflow' if self.reviewer or system_root or self.root != self.code_root / 'workbench' else None)
         self.adapter.gate=self.operation_lock
         self.system2.gate=self.operation_lock
+        self.adapter.pool = self.system2.pool = self.component_pool
         self.collaboration = Collaboration(self, reviewer=self.reviewer)
         if self.reviewer:
             self.adapter = PackageSourceAdapter(self.collaboration, self.code_root / 'workbench/backend/system1')
@@ -55,9 +59,9 @@ class Application:
         self.qa_status = {}
         self.worker = threading.Thread(target=self.work, daemon=True)
         if start_workers and not self.reviewer: self.worker.start()
-        self.parser_worker = threading.Thread(target=self.parse_work, daemon=True)
+        self.parser_worker = threading.Thread(target=self.operation_lock.run_background, args=(self.parse_work,), daemon=True)
         if start_workers and not self.reviewer: self.parser_worker.start()
-        self.material_worker = threading.Thread(target=self.material_work, daemon=True)
+        self.material_worker = threading.Thread(target=self.operation_lock.run_background, args=(self.material_work,), daemon=True)
         if start_workers: self.material_worker.start()
         self.workbook_status = {'status': 'scheduled'}
         saved_status = self.runtime / 'excel-worker.json'
@@ -66,9 +70,9 @@ class Application:
                 previous = json.loads(saved_status.read_text())
                 if previous.get('status') == 'failed': self.workbook_status = previous
             except (OSError, ValueError): pass
-        self.workbook_worker = threading.Thread(target=self.refresh_workbook, daemon=True)
+        self.workbook_worker = threading.Thread(target=self.operation_lock.run_background, args=(self.refresh_workbook,), daemon=True)
         if start_workers and not self.reviewer: self.workbook_worker.start()
-        self.confidence_worker = threading.Thread(target=self.refresh_confidence, daemon=True)
+        self.confidence_worker = threading.Thread(target=self.operation_lock.run_background, args=(self.refresh_confidence,), daemon=True)
         if start_workers and not self.reviewer: self.confidence_worker.start()
 
         if self.reviewer:
@@ -94,10 +98,12 @@ class Application:
             self.synced_policy=policy['revision']
 
     def parse_work(self):
-        while not self.stop.wait(self.monitor.backoff('legacy', 3)):
+        interval = 3
+        while not self.stop.wait(self.monitor.backoff('legacy', interval)):
             try:
                 self.sync_policy()
                 self.system2_status = self.system2.call('tick')
+                interval = 10 if self.system2_status.get('status') == 'idle' else 3
                 summary=self.system2.call('state', view='summary')
                 self.system2_summary={'pending':summary['pending'],'published':summary['published'],
                     'parsed':sum(d['parser_complete'] for d in summary['documents']),
@@ -181,7 +187,7 @@ class Application:
     def refresh_confidence(self):
         # Source-governance export cannot delay System2's durable-state snapshot.
         schedule=ExportSchedule(time.monotonic());legacy_next=time.monotonic()+60
-        while not self.stop.wait(self.monitor.backoff('source_excel', 1)):
+        while not self.stop.wait(self.monitor.backoff('source_excel', 5)):
             try:
                 config=json.loads(self.adapter.config.read_text())
                 if not config.get('governance_db'):
@@ -259,4 +265,5 @@ class Application:
             if worker.ident is not None: worker.join()
         if getattr(self, 'material_worker', None):
             if self.material_worker.ident is not None: self.material_worker.join()
+        self.component_pool.close()
         if getattr(self, 'monitor', None): self.monitor.close()

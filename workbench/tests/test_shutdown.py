@@ -1,11 +1,13 @@
 import threading
 import unittest
 from local_workbench.server import Application
+from backend.shared.component_process import ComponentPool
 
 
 class ShutdownTests(unittest.TestCase):
     def test_shutdown_waits_for_running_export_before_releasing_service(self):
         app=Application.__new__(Application);app.stop=threading.Event()
+        app.component_pool=ComponentPool()
         entered=threading.Event();release=threading.Event();closed=threading.Event()
         def exporting():entered.set();release.wait(3)
         def idle():app.stop.wait(3)

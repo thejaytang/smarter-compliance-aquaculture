@@ -22,6 +22,16 @@ test('save excludes unaccepted candidates and preserves edits during a save',asy
  m.api=async(path,body)=>{if(body){d.fields.verification.value='newer edit';d.changeNumber=1;return {draft_revision:0};}return {...d,revision:2,fields:{...d.fields,verification:field('saved old edit')}};};
  await e.save('save',{});assert.equal(e.draft.fields.verification.value,'newer edit');assert.equal(e.draft.revision,2);assert.equal(e.draft.dirty,true);
 });
+test('save uses the committed response without requesting a second document',async()=>{
+ const {e,m,d}=fixture();let calls=0;
+ m.api=async(path,body)=>{calls++;assert.ok(body);assert.equal(path,'/api/interpretations/save');return {status:'saved',revision:2,document:{...d,revision:2}};};
+ await e.save('save',{});assert.equal(calls,1);assert.equal(e.draft.revision,2);assert.equal(e.draft.dirty,false);
+});
+test('committed response retains newer edits made while saving',async()=>{
+ const {e,m,d}=fixture();let calls=0;
+ m.api=async()=>{calls++;const saved=structuredClone(d);d.fields.verification.value='typed during save';d.changeNumber=1;return {status:'saved',revision:2,document:{...saved,revision:2}};};
+ await e.save('save',{});assert.equal(calls,1);assert.equal(e.draft.fields.verification.value,'typed during save');assert.equal(e.draft.revision,2);assert.equal(e.draft.dirty,true);
+});
 test('logic text areas remain editable in pending and generating states',()=>{
  const {e,d}=fixture();e.pending=true;d.logicCandidates={verification:{status:'generating',value:'editable'}};
  const html=e.editorMarkup(d);assert.match(html,/Generating/);assert.doesNotMatch(html,/<textarea[^>]*(disabled|readonly)/);assert.doesNotMatch(html,/Source status|Not explicitly stated|Generate six suggestions/);

@@ -37,6 +37,10 @@ Double-click `Open Workbench (Windows).cmd` or `Open Workbench (macOS).command` 
 
 ## 3. Updating an existing installation
 
+Current business-seed restoration prepares files under `workbench/runtime/staging/seed/`. Durable import receipts remain under `runtime/backups/initial-import/`; existing `prepared/` files there are retained and compared with the verified package on retry. Only inventoried files are promoted. Atomic copies use same-directory hashed temporary names instead of extending original filenames. Windows restoration checks staged, final and promotion-temporary paths before writing package files and reports when a shorter checkout is required. This does not enable system-wide long paths. Neither normal startup nor updates restore the seed.
+
+On Windows, System2 declares its own `tzdata` dependency for Oslo weekly-QA dates. Installing time-zone data only in the application environment is insufficient; use `deployment.py rebuild` after updating this declaration. Runtime storage health checks inspect the coordination journal and all four owning business stores in the current layout.
+
 Save browser work, close Workbench, and inspect local code changes before updating. Use a fast-forward Git update on the agreed branch. Preserve local `workspace/` and `runtime/`. Run `deployment.py check`; use `deployment.py rebuild` only for changed/missing dependencies. `--dry-run` displays setup commands without installing anything. Rebuild retains already installed optional packages; it does not silently remove a local parsing profile.
 
 An older installation has data under `system1`, `system2/runtime/workflow` and `workbench/runtime`. After installing the new application, explicitly run:
@@ -70,6 +74,14 @@ Use quoted Windows paths with `py -3.12` on Windows. Recovery includes consisten
 Migration recovery is under `workbench/runtime/backups/architecture-v1/`: old SQLite snapshots, prepared stores and a migration report. The code revision and additional local recovery evidence are retained by the developer separately. For full recovery stop the service and restore one verified, matching set of databases, sources and runtime recovery state. Do not mix databases from different backup times or copy a live SQLite file. Collaboration import is the safe route for combining colleagues' work; backup restore is a stopped-service recovery procedure.
 
 Application updates and ordinary startup never reset databases, overwrite private settings or re-import the initial seed. A missing environment is repairable; missing saved business work is not recreated by dependency installation.
+
+The service reuses pipe-connected System1 and System2 component processes in their own virtual environments. Only imported code is retained: each request reconstructs its owning service and reads current configuration and business state. Normal shutdown drains workers and closes these processes. A missing or timed-out receipt is not automatically replayed; retry the same saved request identity after inspecting the result. Empty personal material queues do not start processing commands. Already submitted candidates and unresolved ready/partial candidates remain eligible for their existing processing and resolution checks.
+
+For submitted material candidates, the scheduler prepares a version-bound job under the operation lock, computes against immutable originals in a separate System2 process, then reacquires the operation lock to record its result. The single-material-worker file lock remains held across these phases. Computation does not open business databases. Concurrent human edits are retained; an old result remains a stale candidate requiring explicit review. An interrupted computation leaves its existing candidate available for resumption. Legacy processing and source-governance operations retain their existing coordination.
+
+For local performance diagnosis, set `WORKBENCH_TIMING_DIR` to an existing local diagnostics directory before launch. Per-process JSONL files record fixed operation labels, process/thread IDs and durations only, without request bodies or credentials. Leave this variable unset for ordinary operation. Timing logs are runtime diagnostics, never business exports.
+
+Component startup waits for an explicit import-ready receipt before a background request enters the shared operation lock. First use still pays initialization cost; repeated requests reuse the process. This does not allow uncoordinated business writes. Browser cancellation of an original transfer closes that connection without treating it as a source-integrity failure.
 
 ## 5. Optional local development and parsing
 

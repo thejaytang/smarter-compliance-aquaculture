@@ -109,9 +109,14 @@ test('material-wide labels match headers and complete Requirement reference choi
 });
 test('right-pane selection reveals the matching left card and deselection clears the active interpretation',async()=>{
  const {editor,m,host}=fixture();editor.doc=documentFixture();editor.sessions=[editor.doc];editor.selected=null;editor.closedUnits=new Set(['u','v']);editor.render=()=>{};host.querySelector=()=>null;
- let opened,empty=0;m.interpretations={open:async id=>opened=id,render:()=>empty++,active:'old'};
+ let opened,empty=0;m.interpretations={owner:()=> 'actor:material',open:async id=>{opened=id;m.interpretations.active='actor:material:'+id;m.interpretations.draft={unit_id:id};},render:()=>empty++,active:'old'};
  await editor.selectFromInterpretation('v');assert.equal(editor.selected,'v');assert.equal(opened,'v');assert.equal(editor.closedUnits.has('v'),false);
  await editor.selectFromInterpretation('v');assert.equal(editor.selected,null);assert.equal(m.interpretations.active,null);assert.equal(empty,1);
+});
+test('right-pane selection opens an already selected left card when its interpretation is not displayed',async()=>{
+ const {editor,m,host}=fixture();editor.doc=documentFixture();editor.sessions=[editor.doc];editor.selected='v';editor.render=()=>{};host.querySelector=()=>null;
+ let opened;m.interpretations={owner:()=> 'actor:material',active:null,open:async id=>opened=id};
+ await editor.selectFromInterpretation('v');assert.equal(editor.selected,'v');assert.equal(opened,'v');
 });
 test('linking another complete Requirement submits its immutable ID and relationship',async()=>{
  const {editor}=fixture();editor.doc=documentFixture();let sent;

@@ -165,8 +165,9 @@ class Collaboration:
         return self.mode == 'coordinator' and actor in REVIEWERS and (actor == COORDINATOR or getattr(self.app,'peer_sync',False))
 
     def state(self, actor=None):
+        snapshot = self.app.snapshot() if self.mode == 'coordinator' else None
         return {'mode': self.mode, 'peer_sync': getattr(self.app,'peer_sync',False), 'coordinator': COORDINATOR,
-            'sources': [{'source_id': s['source_id'], 'title': s.get('source_title') or s['source_id']} for s in self.source_records()],
+            'sources': [{'source_id': s['source_id'], 'title': s.get('source_title') or s['source_id']} for s in self.source_records(snapshot)],
             'submissions': [{key: item.get(key) for key in ('id', 'actor', 'source_id', 'material_id', 'title', 'summary', 'status', 'at')}
                 for item in self.all('submission')],
             'work_packages': [{key: p.get(key) for key in ('id', 'source_id', 'material_id', 'title', 'at')} for p in self.all('work')],
@@ -259,6 +260,7 @@ class Collaboration:
             self.layout.material_branch(runtime,prefix)
         adapter = System2(master.root, master.system1, master.config, runtime)
         adapter.gate=self.lock
+        adapter.pool = getattr(self.app, 'component_pool', None)
         if getattr(self.app, 'monitor', None):
             from local_workbench.runtime_status import ObservedAdapter
             return ObservedAdapter(adapter, self.app.monitor, 2)
@@ -396,10 +398,29 @@ class Collaboration:
         return result
 
     def tick(self):
+        from backend.shared.material_work import pending_work
+        from backend.shared.platform_support import exclusive_lock
         for workspace in self.all('workspace'):
-            adapter = self.adapter(self.workspace_runtime(workspace))
-            result = adapter.call('material_tick')
-            adapter.call('material_repeat-resolution', request={})
+            runtime = self.workspace_runtime(workspace)
+            pending = pending_work(runtime)
+            if not pending['run'] and not pending['resolve']:
+                continue
+            adapter = self.adapter(runtime)
+            result = {'status': 'idle'}
+            if pending['run']:
+                try:
+                    # Retain single-worker ownership throughout prepare/compute/
+                    # finalize, without holding the interactive write gate during
+                    # pure parsing. A crash leaves the same running candidate.
+                    with exclusive_lock(runtime / '.material-worker.lock'):
+                        job = adapter.call('material_prepare-job')
+                        if job:
+                            parsed = adapter.call('material_compute', request=job)
+                            result = adapter.call('material_finish-job', request={'job': job, 'parsed': parsed})
+                except BlockingIOError:
+                    result = {'status': 'busy'}
+            if pending['resolve'] or result.get('status') not in ('idle', 'busy'):
+                adapter.call('material_repeat-resolution', request={})
             if result.get('status') not in ('idle', 'busy'):
                 return result
         return {'status': 'idle'}

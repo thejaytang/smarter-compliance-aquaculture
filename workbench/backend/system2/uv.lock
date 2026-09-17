@@ -2044,6 +2044,7 @@ dependencies = [
     { name = "pytesseract" },
     { name = "pyyaml" },
     { name = "rdflib" },
+    { name = "tzdata", marker = "sys_platform == 'win32'" },
     { name = "uvicorn" },
 ]
 
@@ -2098,6 +2099,7 @@ requires-dist = [
     { name = "rdflib", specifier = ">=7.1,<8" },
     { name = "reportlab", marker = "extra == 'dev'", specifier = ">=4,<5" },
     { name = "transformers", marker = "extra == 'table-fallbacks'", specifier = ">=4.40,<5" },
+    { name = "tzdata", marker = "sys_platform == 'win32'", specifier = "==2026.3" },
     { name = "uvicorn", specifier = ">=0.34,<1" },
 ]
 provides-extras = ["docling", "paddle", "dev", "table-fallbacks"]

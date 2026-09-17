@@ -13,6 +13,8 @@ Source Management retains the source register, originals, source versions, human
 
 Use the relevant **Save** action to create a saved version. Unsaved edits stay in page memory. Leaving, reloading or closing may lose them and triggers the existing warning. Selecting text, resizing panes, expanding an entry and reading history do not create business revisions. Save, review, accept a suggestion and archive have separate meanings.
 
+The shell refreshes status every five seconds and waits for an unfinished refresh before starting another. Unsaved edits remain in the page during these updates.
+
 Saved Requirement and S/C/D work is visible to named colleagues in the same workspace. Each version retains its editor and time. If a saved Requirement changes, existing S/C/D keeps its original binding and asks for review; it is not silently rewritten. Preserve that distinction when explaining results.
 
 ## 2. Collaboration between computers

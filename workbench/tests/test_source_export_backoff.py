@@ -37,11 +37,11 @@ class SourceExportBackoffTests(unittest.TestCase):
                 app.adapter = ObservedAdapter(SimpleNamespace(config=config, call=call), app.monitor, 1)
                 app.refresh_confidence()
             self.assertEqual(len(probes), 10)
-            self.assertEqual(waits[:4], [1, 2, 4, 8])
+            self.assertEqual(waits[:4], [5, 10, 20, 40])
             self.assertGreater(waits[7], waits[3])
             self.assertLessEqual(max(waits), 60)
             self.assertEqual(waits[5:9], [max(waits)]*4)
-            self.assertEqual(waits[-2:], [1, 1])
+            self.assertEqual(waits[-2:], [5, 5])
             self.assertEqual(len(exports), 1)  # Recovery allows the scheduled export, then respects its interval.
             self.assertGreater(exports[0], probes[7])
             row = app.monitor.components['source_excel']

@@ -25,12 +25,17 @@ def sha(path):
     return h.hexdigest()
 
 
+def promotion_temp(target):
+    """Same-directory atomic promotion without extending original filenames."""
+    return target.with_name('.migration-'+hashlib.sha256(target.name.encode('utf-8')).hexdigest()+'.tmp')
+
+
 def clone_file(source,target):
     target.parent.mkdir(parents=True,exist_ok=True)
     if target.exists():
         if sha(source)!=sha(target):raise ValueError('Migration destination already differs: '+str(target))
         return
-    tmp=target.with_name(target.name+'.migration-tmp')
+    tmp=promotion_temp(target)
     with source.open('rb') as src,tmp.open('wb') as dst:
         left=source.stat().st_size
         while left:

@@ -34,6 +34,7 @@ class MaterialQueueTests(unittest.TestCase):
                 return json.loads(r[0])
             raise AssertionError(command)
         self.app=SimpleNamespace(runtime=self.root,system2=SimpleNamespace(runtime=self.runtime,call=call),adapter=SimpleNamespace(call=lambda *a,**k:{'tasks':[]}))
+        self.app.snapshot=lambda:self.app.adapter.call('read')
         self.c=Collaboration(self.app);self.q=MaterialQueue(self.c)
     def tearDown(self):self.tmp.cleanup()
     def db(self):return connect_sqlite(self.runtime/'workflow.sqlite')

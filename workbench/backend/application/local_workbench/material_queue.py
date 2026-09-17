@@ -73,7 +73,9 @@ class MaterialQueue:
         incoming = {s.get('material_id') for s in self.c.all('submission') if s.get('status') not in ('adopted', 'adopted_partial')}
         # Source issue evidence is public authority, not copied personal decisions.
         try:
-            snapshot = self.c.app.adapter.call('read')
+            # A display-only projection can share the shell's short-lived read.
+            # Mutation/confirmation routes still resolve fresh owning evidence.
+            snapshot = self.c.app.snapshot()
             issue_sources = {t.get('source_id') for t in snapshot.get('tasks', []) if t.get('human_issue')}
         except (OSError, ValueError, RuntimeError):
             issue_sources = set()

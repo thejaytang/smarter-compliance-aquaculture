@@ -63,6 +63,11 @@ class Workspace:
     def source_config(self):return self.runtime/'settings/system1/config.json'
     @property
     def materials(self):return self.workspace/'sources/processing/main'
+    def staging(self, name):
+        """Short preparation area; durable recovery receipts live in backups."""
+        if not re.fullmatch(r'[a-z0-9][a-z0-9_-]{0,15}', name):
+            raise ValueError('Invalid staging identifier.')
+        return self.runtime/'staging'/name
     def material_branch(self,root,prefix=''):
         alias(root,'workflow.sqlite',self.database('system2'),prefix)
     def connect(self,timeout=30):

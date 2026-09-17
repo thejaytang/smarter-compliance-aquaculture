@@ -55,7 +55,7 @@
 !**/vendor/pdfjs/build/
 !**/vendor/pdfjs/build/**
 
-# Retained on this Mac: old runtime copies, not development source or reports.
+# Exclude historical runtime copies and regenerated test output from Git.
 /project-support/**/*backup*/
 /project-support/validation/architecture-20260917/recovery/
 /project-support/validation/architecture-20260917/four-store-recovery/

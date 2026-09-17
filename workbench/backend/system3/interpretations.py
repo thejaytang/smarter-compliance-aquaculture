@@ -138,14 +138,19 @@ class Interpretations:
             result['unit_active']=bool(db.execute('SELECT 1 FROM requirement_units WHERE actor=? AND id=?',(actor,uid)).fetchone())
             return result
 
-    def context(self, actor, uid, linked=()):
+    def context(self, actor, uid, linked=(), *, _materials=None):
         actor = named(actor)
+        materials_read = {} if _materials is None else _materials
+        def read_material(identity):
+            if identity not in materials_read:
+                materials_read[identity] = self.r.material(actor, identity)
+            return materials_read[identity]
         if not isinstance(linked,(list,tuple)) or len(linked)>20 or any(not isinstance(x,str) or not re.fullmatch('[a-f0-9]{32}',x) for x in linked):raise ValueError('Choose up to 20 registered related materials.')
         with self.c.db() as db:
             row = db.execute('SELECT session_id FROM requirement_units WHERE id=? AND (actor=? OR ?)', (uid,actor,self.r.shared)).fetchone()
             if not row: raise ValueError('Requirement is not available to this reviewer.')
             d = self.r.load(db, actor, row[0])
-        material = self.r.material(actor,d['material_id'])
+        material = read_material(d['material_id'])
         if self.r.stale(d,material): raise ValueError('Source content changed. Open a current splitting session before interpreting it.')
         def active_references(doc):
             # Cached evidence survives unlinking for history. Only live tree links
@@ -163,7 +168,7 @@ class Interpretations:
         mids={d['material_id'], *linked, *(x['material_id'] for x in sessions.values())}
         materials=[]; citations=[];limitations=['Saved text is not proof of complete or reviewed legislation. Missing annexes and unresolved references must remain gaps.']
         for mid in sorted(mids):
-            m=material if mid==d['material_id'] else self.r.material(actor,mid)
+            m=read_material(mid)
             if not m.get('blocks'): raise ValueError('A linked material has no saved text. Extract and save it first.')
             information={};confidential=bool(m.get('confidential'))
             if hasattr(self.c,'source'):
@@ -219,6 +224,12 @@ class Interpretations:
         return AISettings(self.c.app).public()
 
     def read(self, actor, uid):
+        # Dependency impact and context must describe the same owning revisions.
+        # This map lives only for this lock-protected operation, never across reads.
+        with self.c.lock:
+            return self._read(actor, uid, _materials={})
+
+    def _read(self, actor, uid, *, _materials, _saved_context=None):
         actor=named(actor);owner=self.owner(actor,uid)
         # Shared saved work is visible to every named reviewer; source checks still apply.
         with self.c.db() as db:
@@ -232,13 +243,15 @@ class Interpretations:
               WHERE (i.actor=? OR ?) AND i.unit_id=? ORDER BY r.rowid DESC LIMIT 10''',(actor,self.r.shared,uid))]
             lineage.backfill(db,owner,uid)
             doc['lineage']=lineage.read(db,owner,uid,doc['revision'])
-        doc['impact']=impact(self,actor,doc) if doc['revision'] else dict(status='not-saved',items=[])
+        doc['impact']=impact(self,actor,doc,_materials) if doc['revision'] else dict(status='not-saved',items=[])
         doc['catalog']=Catalog(self.c).read()
         doc['check_design']=validate_design(doc.get('check_design'))
         doc['mapping_issues']=mapping_issues(doc['check_design'],doc['catalog'])
         doc['querybuilder']=querybuilder_projection(doc['check_design'])
         try:
-            ctx=self.context(actor,uid,doc['linked_material_ids']);doc['stale']=bool(doc.get('context_fingerprint') and doc['context_fingerprint']!=ctx['fingerprint'])
+            ctx=(_saved_context['context'] if _saved_context and _saved_context['revision']==doc['revision']
+                 else self.context(actor,uid,doc['linked_material_ids'],_materials=_materials))
+            doc['stale']=bool(doc.get('context_fingerprint') and doc['context_fingerprint']!=ctx['fingerprint'])
             doc['context']=ctx
         except ValueError as e:
             doc['stale']=True;doc['context_error']=str(e)
@@ -292,7 +305,22 @@ class Interpretations:
             if 'state' in f or state=='not_stated':result[k].update(state=state,absence_reason=reason)
         return result
 
-    def save(self, actor, req):
+    def save_and_read(self, actor, req):
+        """Return committed content without a second browser round trip.
+
+        Durable receipts remain unchanged. A replay reads current saved content,
+        as the previous separate GET did. Only a newly committed save can reuse
+        its validated context, while the same write coordinator is still held.
+        """
+        with self.c.lock:
+            materials, saved_context = {}, {}
+            result = self.save(actor, req, _materials=materials, _capture=saved_context)
+            if result.get('status') != 'saved':
+                return result
+            return dict(result, document=self._read(actor, req['unit_id'],
+                _materials=materials, _saved_context=saved_context))
+
+    def save(self, actor, req, *, _materials=None, _capture=None):
         from backend.system3.interpretation_continuity import Drafts
         Drafts(self.c)
         actor=named(actor);rid=str(uuid.UUID(req['request_id']));digest=fingerprint(req);uid=req['unit_id'];owner=self.owner(actor,uid)
@@ -306,7 +334,7 @@ class Interpretations:
             if old['revision']!=req.get('expected_revision'):return dict(status='conflict',error='A newer interpretation is saved. Reload before saving.')
             linked=req.get('linked_material_ids',[])
             if not isinstance(linked,list) or len(linked)>20 or any(not isinstance(x,str) or not re.fullmatch('[a-f0-9]{32}',x) for x in linked):raise ValueError('Use registered material IDs for related documents.')
-            ctx=self.context(actor,uid,linked)
+            ctx=self.context(actor,uid,linked,_materials=_materials)
             if req.get('context_fingerprint')!=ctx['fingerprint']:return dict(status='conflict',error='Source context changed. Reload and review your draft before saving.')
             fields=req.get('fields');action=req.get('action','save')
             if action=='restore':
@@ -351,6 +379,8 @@ class Interpretations:
             response=dict(status='saved',revision=doc['revision'])
             if draft_revision is not None:response['draft_revision']=draft_revision+1
             db.execute('INSERT INTO interpretation_requests VALUES(?,?,?,?)',(actor,rid,digest,encode(response)))
+            if _capture is not None:
+                _capture.update(revision=doc['revision'], context=ctx)
             return response
 
     @staticmethod

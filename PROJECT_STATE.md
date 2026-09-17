@@ -1,27 +1,26 @@
 # Workbench current state
 
-Updated 2026-09-17. This is Jay’s `developing-only-jay` development branch. Naming and architecture cleanup is implemented and verified locally. The normal Workbench is running at http://127.0.0.1:62742/ with 88 retained sources.
+Updated 2026-09-18. This checkout is Jay's `developing-only-jay` development branch. The shared product baseline is `main`, including Windows source commit `d1e8aab` and product integration `2458352`.
 
 ## 1. Current result
 
-- System1 now owns src/, deployment/ and its rebuilt local environment directly. Explicit Python packages separate application orchestration, shared utilities and System3. The unreferenced old implementation is retained only as local evidence.
-- The four-pane workflow, four business databases, source IDs/history, saved-version semantics and platform-labelled launchers are preserved.
-- File naming, Windows collisions and staged product/data boundaries are mechanically checked. Root guides and dependency paths reflect the current layout.
-- The user explicitly authorized GitHub synchronization of product and sensitive business data on 2026-09-17. The public repository now contains 708 product files and an immutable initial-data ZIP, checksum, manifest and guide. Active data, credentials and environments remain local. Development support is now authorized for this branch only. Publication is confirmed: commit `31c4cf95f1a35a4356d4a045696acf19d771cc67` is on both `main` and `codex/workbench-optimization-20260916`. GitHub returned the same data-package blob hash and 65,565,379-byte size. See [publication evidence](project-support/validation/architecture-20260917/naming-implementation/publication.json).
+- Windows startup, URI/storage, background scheduling, persistent component and save-readback improvements are integrated into the common Windows/macOS product. The Mac checkout uses the same product implementation while retaining development documents and tests.
+- The user authorized synchronizing `main`, this Mac checkout and GitHub's `developing-only-jay` on 2026-09-18. `developing-win` is retained as the original incoming reference. Colleagues should use `main` for future application updates.
+- The normal Mac service is running at http://127.0.0.1:62742/ with the updated source snapshot. Browser checks show 88 sources, 38 material source choices and no archived materials.
+- Four business stores, source IDs/history, Requirement/SCD bindings, manual-save semantics and both platform launchers are preserved. No initial seed reimport or database migration was required. The existing initial-data ZIP is unchanged.
+- The prior uncommitted Mac idle prototype is historical evidence under [its earlier report](project-support/validation/material-idle-20260917/RESULTS.md); it is no longer an active parallel implementation.
 
-## 2. Development branch handoff
+## 2. Verification and recovery
 
-The user authorized this branch to include code, design documents, tests, validation reports, diagrams and the complete initial business snapshot. Large historical database copies and runtime backups remain local, as explicitly confirmed. `main` remains at `31c4cf95f1a35a4356d4a045696acf19d771cc67`. Both branches are public. Development-only changes are not a whole-branch merge candidate for `main`. Development records are now included under this branch policy; exact publication commits are identified by the Git history and remote branch reference. The previously named development branch has been renamed on GitHub.
+331 Workbench checks, 374 frontend checks and 51 focused System2 checks pass. Two isolated peers passed real source/material/Requirement/interpretation exchange, Git update preservation and restart readback on macOS. Full database integrity and source bindings pass; 137 System1 governance operations and 240 history entries remain. See [current integration evidence](project-support/validation/windows-sync-20260918/RESULTS.md).
 
-## 3. Verification and limitations
+The stopped-service recovery package `workbench/runtime/backups/windows-sync-20260918-before` contains 190 data/support files, 709 code files and six retained stores. All four business databases and private configuration, 11 protected files, remained byte-identical through integration and restart checks. Credentials, active workspaces, environments and backups stay local.
 
-326 Workbench checks, 169 System1 checks and 26 frontend checks passed. The 1165 System2 checks have passing coverage across the full run plus corrected focused subprocess checks; two optional checks were skipped. Real migration/failure-retry, two-peer collaboration, Git update/data preservation and initial-package restoration were verified. Initial-package retry, overwrite refusal, exact restored database bytes and real source readback passed.
+Windows performance is reported fixed by the user; this Mac has no native Windows execution environment and did not repeat that acceptance. Real AI/OCR, large-document performance and every four-pane pointer interaction were not rerun. The live-source read checks are distinct from the isolated save/collaboration tests.
 
-Native Windows execution of this revised layout remains unverified. No paid/remote model calls were made. This checkout is under iCloud Desktop; keep code, dependencies and databases locally downloaded. Interrupted iCloud-backed validation was rerun successfully after hydration with a temporary local Python cache.
+## 3. Project and delivery boundaries
 
-## 4. References
-
-- [Naming and implementation evidence](project-support/validation/architecture-20260917/naming-implementation/RESULTS.md).
-- [Initial data and first-install commands](workbench/initial-data/README.md).
-- [Environment and recovery](ENVIRONMENT.md), [Agent rules](AGENTS.md), [storage contract](workbench/contracts/storage-and-exchange.md).
-- Consistent pre-change recovery: workbench/runtime/backups/naming-structure-20260917-ready. Outer workspace directories 01–04 are unchanged.
+- [Branch policy](project-support/decisions/development-branch.md): `main` carries the product and authorized immutable initial business snapshot; `developing-only-jay` adds development materials. Never merge development-only records wholesale into `main`.
+- [Environment guide](ENVIRONMENT.md), [user guide](USER_GUIDE.md), [Agent rules](AGENTS.md), [storage contract](workbench/contracts/storage-and-exchange.md).
+- [Architecture/naming evidence](project-support/validation/architecture-20260917/naming-implementation/RESULTS.md) and [authorized historical storage cleanup](project-support/validation/local-storage-cleanup-20260917/RESULTS.md) remain retained history. The original migration checkpoint and prior complete recovery remain local.
+- Outer workspace directories 01–04 are unchanged. This checkout is under iCloud Desktop; keep code, environments and databases locally downloaded.

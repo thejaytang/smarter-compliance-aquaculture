@@ -241,7 +241,9 @@ export class RequirementsEditor {
     return `<details class="rq-links"><summary>Link an existing requirement</summary><p>Select the requirement ID belonging to the referenced passage or chapter.</p><label>Find by original text, extracted chapter or ID<input data-rq-search type="search" aria-label="Find requirement by text chapter or ID"></label>${button('search','Find requirements',disabled)}<label>Requirement<select data-rq-target aria-label="Requirement to link">${choices.map(x=>`<option value="${x.id}">${esc(x.chapter?x.chapter+' · ':'')}${esc(x.text.slice(0,110))} · ${x.id.slice(0,8)}</option>`).join('')}</select></label><label>Relationship<select data-rq-relation>${(this.doc.roles[u.id]==='condition'?['conditions']:relations).map(f=>`<option>${f}</option>`).join('')}</select></label>${button('link','Link selected requirement',`${disabled||!choices.length?'disabled':''}`)}<p>${this.searchPerformed?`${this.results.length} saved units found for this reviewer.`:''}</p></details>`;
   }
   async selectFromInterpretation(id){
-    if(this.selected===id){this.closedUnits.add(id);this.selected=null;this.render(true);return this.syncInterpretation();}
+    const interpretation=this.m.interpretations;
+    const displayed=interpretation?.draft?.unit_id===id&&interpretation.active?.startsWith(interpretation.owner()+':');
+    if(this.selected===id&&displayed){this.closedUnits.add(id);this.selected=null;this.render(true);return this.syncInterpretation();}
     const s=this.orderedSessions().find(s=>s.units?.[id]);if(!s)return;
     const changedSession=this.doc?.id!==s.id;
     if(changedSession){await this.open(s.id,id);if(this.doc?.id!==s.id)return;}
