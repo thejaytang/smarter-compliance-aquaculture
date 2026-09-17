@@ -21,10 +21,28 @@
 
 ## Boundaries
 
-No real model request was made. Native Windows and OS-level 200% scaling were not rerun for this increment. The implementation uses the existing browser/standard-library components and no new platform-specific dependency. The earlier Windows limitation remains.
+No real model request was made. Windows automated runtime verification is recorded below. Windows desktop browser interaction, OS-level 200% scaling and the cross-computer reviewer round trip were not exercised for this increment. The implementation uses the existing browser/standard-library components and no new platform-specific dependency.
 
 The interaction contract is [here](../../workbench/docs/manual-requirement-splitting.md#interaction-language-current-2026-09-17). These local checks establish the tested workflow; colleague acceptance remains separate.
 
 ## Publication
 
 2026-09-17: implementation commit `0fae54eac5990a8229fb1f934358771aac7c6baf` was pushed to `origin/codex/workbench-optimization-20260916`. The remote branch reference was read back and matched that commit. Main was not merged. This receipt is maintained separately from local runtime data.
+
+## Windows verification, 2026-09-17
+
+Inspected the completed [portability run 35160637346](https://github.com/thejaytang/smarter-compliance-aquaculture/actions/runs/35160637346), including full job logs and the reported checkout SHA. It ran automatically after the implementation push, on commit `0fae54eac5990a8229fb1f934358771aac7c6baf`. At verification, HEAD `5bc96ff81567d23716f839b768bbe5d3ac5863f0` differed only by this report's publication receipt; the tested source/UI/test paths had no uncommitted changes. No duplicate run was needed for unchanged executable code.
+
+The actual runner was Microsoft Windows Server 2025 (`windows-2025-vs2026`), with Python 3.12.10 and Node 22. All three Windows jobs and all three Ubuntu counterparts succeeded.
+
+| Windows check | Result | Evidence |
+| --- | --- | --- |
+| Workbench backend and HTTP | 299 tests, OK | [Workbench job](https://github.com/thejaytang/smarter-compliance-aquaculture/actions/runs/35160637346/job/105010335877) |
+| Frontend state/rendering logic | 366 passed, zero failed/cancelled/skipped | Same Workbench job |
+| Workbench Python compilation | Passed | Same Workbench job |
+| System2 material/platform contract subset | Passed; progress reached 100% with no failures | [Material job](https://github.com/thejaytang/smarter-compliance-aquaculture/actions/runs/35160637346/job/105010335556) |
+| System1 source contract suite | 168 tests, OK | [Source job](https://github.com/thejaytang/smarter-compliance-aquaculture/actions/runs/35160637346/job/105010335766) |
+
+The material subset covers material content/body/Markdown, reader navigation, API environment, platform memory, SQLite lifecycle and platform-support integration. Its existing pytest quiet configuration suppresses a numeric summary; it is not the full System2 suite. Logs include non-failing dependency/action deprecation warnings and a dependency-cache hardlink fallback. No source change or dependency upgrade was required by this verification.
+
+These are real Windows OS/runtime tests on isolated CI fixtures. Frontend tests run in Node, so this does not establish Windows Chrome/Edge pointer selection, layout/scaling, native Office behavior, fresh-user launcher setup or reviewer ZIP round-trip acceptance. The user's running Mac service, open drafts and business data were untouched.
