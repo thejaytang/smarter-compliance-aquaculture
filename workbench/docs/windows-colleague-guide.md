@@ -42,7 +42,7 @@ All collaborators should update before exchanging new shared Requirement package
 3. Run **Rebuild environments.cmd** when the release changes dependencies. Existing local settings are preserved; initial data is never restored during an update.
 4. Reopen Workbench and inspect your known source records, saved annotation and Collaboration history.
 
-For developers: Mac development → Windows validation/small fixes → commit and push application changes → colleagues pull `main`. Keep production data and credentials out of commits. CI exercises Windows backend/frontend contracts; actual Windows pointer, scaling and office-to-office use are separate acceptance checks.
+For developers: Mac development → Windows validation/small fixes → commit and push application changes → colleagues pull `main`. Keep production data and credentials out of commits. CI rebuilds and launches through the Windows entry points, exchanges material/Requirement/interpretation work between two independent services, performs an application-only Git pull, and checks saved work after restart. Backend/frontend contracts are also covered; actual Windows pointer, scaling and office-to-office use are separate acceptance checks.
 
 Never use `git reset --hard`, `git clean -fdx`, whole-folder replacement or database deletion as an update procedure.
 

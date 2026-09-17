@@ -1,5 +1,7 @@
 # System1 current state
 
+2026-09-17 Windows follow-up: controlled Excel publication checks both modification time and content hash before replacement, preserving concurrent external edits even when timestamp/size are unchanged. The regression reproduced failure before the fix; all 169 System1 tests pass on Mac and Windows/Linux CI (`790b10c`). [Completion audit](../project-support/shared-workspace-20260917/RESULTS.md#completion-audit-colleague-installation-collaboration-and-updates).
+
 2026-09-17 handoff: source authority revision 13 (88 sources, 137 operations, 240 history rows, 73 source-version links) and human assessment holds survived Materials cleanup unchanged. All 73 referenced originals pass SHA-256 checks. The initial seed is published in release `initial-source-data-20260917`; active originals, local config and generated workbook are no longer Git-updated. [Evidence](../project-support/shared-workspace-20260917/RESULTS.md).
 
 ## Earlier checkpoints

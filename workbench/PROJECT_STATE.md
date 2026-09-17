@@ -1,5 +1,7 @@
 # Workbench current state
 
+2026-09-17 colleague journey: actual `.cmd` rebuild/launch and two-workspace HTTP collaboration passed on Windows, with matching Linux/Mac runs. Source/material/Requirement/interpretation exchange survives a real application-only Git pull and restart with unchanged local database/original/configuration bytes. All eight CI jobs pass for `790b10c`; browser pointer/scaling and actual team acceptance remain separate. [Completion audit](../project-support/shared-workspace-20260917/RESULTS.md#completion-audit-colleague-installation-collaboration-and-updates).
+
 2026-09-17 shared saved work: named reviewers can read/edit imported Requirements and interpretations with actual editor/time in history. Shared delivery v4 preserves cross-author references; conflicts show readable Group structure. Active Materials test state was backed up and removed while source drafts and source authority were retained. 310 backend tests and 371 frontend tests are covered by the successful Windows/Linux run for `3d02898`. The implementation is merged into `main` and the one-time data/rebuild release is published. Native Windows desktop/team acceptance remains separate. [Evidence](../project-support/shared-workspace-20260917/RESULTS.md).
 
 
