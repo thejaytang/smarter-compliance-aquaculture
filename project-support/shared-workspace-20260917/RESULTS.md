@@ -14,10 +14,11 @@
 
 ## Validation
 
-- Local Workbench regression: 307 Python tests passed, plus the new shared full-snapshot round-trip test passed independently (308 total).
+- Local Workbench regression: 307 Python tests passed, plus the new shared full-snapshot round-trip test and two application-boundary checks passed independently (310 total).
 - Frontend: 371 tests passed.
 - New tests cover cross-author editing, attribution, stale versions/sources, cross-author link exchange, shared graph conflict resolution, safe initial restore and readable conflict rendering.
-- Fresh Windows/Linux CI and publication are pending at this checkpoint. Prior Windows results do not certify this new patch. Native Windows desktop/pointer/scaling and the user's Windows refinements remain separate from CI.
+- [Windows/Linux CI for `56489b6`](https://github.com/thejaytang/smarter-compliance-aquaculture/actions/runs/35202244273) passed all six jobs. The initial attempt exposed tests reading live business Excel; they now use a synthetic fixture. A further run verifies retirement of old development snapshots before publication. Native Windows desktop/pointer/scaling and the user's Windows refinements remain separate from CI.
+- The final 83-file seed restores into a fresh application layout with its tracked storage guide already present. The real System1 bridge reads 88 sources; both databases pass integrity/foreign-key checks and Requirement sessions remain zero.
 
 ## Delivery boundary
 

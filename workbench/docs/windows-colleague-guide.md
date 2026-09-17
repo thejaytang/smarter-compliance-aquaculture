@@ -8,7 +8,7 @@
 
 ## 2. First installation, once only
 
-1. Clone `main` into a short local folder, such as `C:\Users\YourName\Aquaculture`. Keep this clone for subsequent updates.
+1. Clone `main` into a short local folder, such as `C:\Users\YourName\Aquaculture`. A helper can use `git clone --depth 1 --branch main https://github.com/thejaytang/smarter-compliance-aquaculture.git Aquaculture` to fetch the current application without the old development history. Keep this clone for subsequent updates; it can be added as an existing repository in GitHub Desktop.
 2. Give your local agent or IT helper [ENVIRONMENT.md](../../ENVIRONMENT.md). Install Python 3.12 and `uv`, then run `workbench\deployment\Rebuild environments.cmd`. It recreates the component environments from declared dependencies. It does not start the app or change existing data. Node is needed for frontend development/tests, not daily use.
 3. Download `source-initial-data-20260917.zip` and its checksum from the [one-time initial-data release](https://github.com/thejaytang/smarter-compliance-aquaculture/releases/tag/initial-source-data-20260917). The release also provides `windows-environment-kit.zip`, a copy of the rebuild scripts, dependency declarations and instructions to use with this application clone. It is not a prebuilt Windows virtual environment and needs access to package repositories.
 4. **Before the first launch**, have the helper run from the repository root:
