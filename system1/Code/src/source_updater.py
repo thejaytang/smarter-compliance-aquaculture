@@ -269,6 +269,9 @@ def registry_lock(config, stale_hours=12):
 def save_workbook_atomic(wb, workbook_path: Path, expected_mtime_ns: int) -> int:
     if workbook_mtime(workbook_path) != expected_mtime_ns:
         raise UpdaterError("STORAGE", "The workbook changed while the updater was running; the write was stopped to protect human edits.")
+    # Filesystems may retain the same timestamp for a fast external save.
+    # Preserve that writer's bytes even when metadata alone cannot detect it.
+    expected_content_hash = sha256_file(workbook_path)
     workbook_path.parent.mkdir(parents=True, exist_ok=True)
     fd, temporary_name = tempfile.mkstemp(
         prefix=f".{workbook_path.stem}.", suffix=".tmp.xlsx", dir=workbook_path.parent
@@ -293,7 +296,8 @@ def save_workbook_atomic(wb, workbook_path: Path, expected_mtime_ns: int) -> int
             bad_member = archive.testzip()
             if bad_member:
                 raise UpdaterError("STORAGE", f"Temporary Excel file is corrupt: {bad_member}")
-        if workbook_mtime(workbook_path) != expected_mtime_ns:
+        if (workbook_mtime(workbook_path) != expected_mtime_ns
+                or sha256_file(workbook_path) != expected_content_hash):
             raise UpdaterError("STORAGE", "The workbook changed during formula calculation; the saved copy was not promoted.")
         from system1.workbook_guard import excel_appears_open
         if excel_appears_open(workbook_path):

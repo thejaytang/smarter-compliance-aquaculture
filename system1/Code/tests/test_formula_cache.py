@@ -1,4 +1,5 @@
 import json
+import os
 from pathlib import Path
 import shutil
 import tempfile
@@ -101,4 +102,22 @@ class FormulaCacheTests(unittest.TestCase):
             with patch.object(WorkbookCalculator, 'calculate', concurrent):
                 with self.assertRaisesRegex(u.UpdaterError, 'changed during'):
                     u.save_workbook_atomic(wb, path, u.workbook_mtime(path))
-            self.assertEqual(path.read_bytes(), b'new external content')
+                self.assertEqual(path.read_bytes(), b'new external content')
+
+    def test_external_change_with_unchanged_timestamp_is_preserved(self):
+        with tempfile.TemporaryDirectory() as name:
+            path = Path(name) / 'registry.xlsx'
+            wb = Workbook(); wb.save(path); wb.active['A1'] = '=1+1'
+            stamp = path.stat()
+            external = path.read_bytes()[:-1] + b'X'
+            calculate = WorkbookCalculator.calculate
+            def concurrent(calculator):
+                path.write_bytes(external)
+                os.utime(path, ns=(stamp.st_atime_ns, stamp.st_mtime_ns))
+                return calculate(calculator)
+            with patch.object(WorkbookCalculator, 'calculate', concurrent):
+                with self.assertRaisesRegex(u.UpdaterError, 'changed during'):
+                    u.save_workbook_atomic(wb, path, stamp.st_mtime_ns)
+            self.assertEqual(path.read_bytes(), external)
+            self.assertEqual(list(path.parent.glob('.*.tmp.xlsx')), [])
+            wb.close()

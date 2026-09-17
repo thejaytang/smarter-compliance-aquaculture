@@ -4,6 +4,7 @@ Only synthetic sources and temporary Git repositories are used. Component
 adapters run in the declared project environments; no domain service is mocked.
 Windows runs the shipped .cmd launcher. Browser pointer/layout QA is separate.
 """
+from contextlib import closing
 from hashlib import sha256
 from http.client import HTTPConnection
 import json
@@ -141,7 +142,7 @@ def fingerprints(root):
              and (p.suffix in ('.sqlite', '.html') or p.name in ('config.json', 'schedule.json'))]
     for path in files:
         if path.suffix == '.sqlite':
-            with sqlite3.connect(path) as db:
+            with closing(sqlite3.connect(path)) as db:
                 assert db.execute('PRAGMA integrity_check').fetchone()[0] == 'ok'
                 assert not db.execute('PRAGMA foreign_key_check').fetchall()
     return {p.relative_to(root).as_posix(): sha256(p.read_bytes()).hexdigest() for p in files}
