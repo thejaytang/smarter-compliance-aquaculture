@@ -16,3 +16,11 @@ Use the named reviewer authorised to apply source updates on your installation. 
 This file matches local demonstration snapshot PE001-004 from 2026-09-18. SHA-256: `307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475`. A receiving installation allocates its own next source-version identifier.
 
 The repository fixes this HTML file to LF line endings on Windows and macOS so that Git checkout preserves the documented checksum, including when `core.autocrlf` is enabled. This rule does not rewrite existing registered originals or saved material versions.
+
+## Saved annotation work, 2026-09-18
+
+[example-work-20260918.zip](example-work-20260918.zip) is a scoped Collaboration package captured at **2026-09-18 08:54:14 UTC**. It includes only PE001 example source/review records, its current and preceding retained HTML, material revision **12** with **27 blocks**, and **3 saved Requirements** with **7 historical saved versions** in total. Requirement UUIDs, source spans, Groups, constraints, links, editor attribution and saved completion states are preserved. Two Requirements remain in progress. There were **no saved fourth-pane interpretations** at capture time. No unsaved browser edits are included.
+
+After pulling main, open **Collaboration**, import this ZIP, inspect the preview and explicitly apply it. Resolve any local/incoming conflicts before applying; existing unrelated work is retained. Reopen **Materials → example** from the material list afterwards. Use this package to bring in the saved annotation work; uploading `example.html` alone only updates the source. Do not unpack it over workspace files or restore the initial-data archive.
+
+The application accepts this package through its existing logical snapshot import. It contains no raw databases, credentials, runtime configuration or unrelated materials. The accompanying `.sha256` file verifies the ZIP. This is a saved work-in-progress snapshot, not a completed legal review or compliance finding.

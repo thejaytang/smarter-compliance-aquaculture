@@ -12,7 +12,8 @@ PREFIXES=('workbench/frontend/','workbench/backend/application/','workbench/back
  'workbench/backend/system2/src/','workbench/backend/system2/config/','workbench/backend/system2/ui/',
  'workbench/contracts/','workbench/config/','workbench/deployment/')
 INITIAL_DATA_FILES={'workbench/initial-data/'+name for name in ('README.md','manifest.json','workspace-20260917.zip','workspace-20260917.zip.sha256')}
-TRAINING_FILES={'workbench/resources/examples/example.html','workbench/resources/examples/README.md'}
+TRAINING_FILES={'workbench/resources/examples/example.html','workbench/resources/examples/README.md',
+ 'workbench/resources/examples/example-work-20260918.zip','workbench/resources/examples/example-work-20260918.zip.sha256'}
 COMPONENT_FILES={'workbench/backend/__init__.py','workbench/backend/system2/pyproject.toml','workbench/backend/system2/uv.lock','workbench/backend/system2/USER_GUIDE.md'}
 
 def business_file(path):

@@ -16,6 +16,7 @@ import tempfile
 import uuid
 from backend.shared.timing import measured
 
+from ..contracts.source import Snapshot
 from ..platform_support import lock_file
 from ..intake.system1 import read_system1
 from ..intake.registry import build_manifest, read_snapshot
