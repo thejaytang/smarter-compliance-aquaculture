@@ -17,6 +17,8 @@ The shell refreshes status every five seconds and waits for an unfinished refres
 
 Saved Requirement and S/C/D work is visible to named colleagues in the same workspace. Each version retains its editor and time. If a saved Requirement changes, existing S/C/D keeps its original binding and asks for review; it is not silently rewritten. Preserve that distinction when explaining results.
 
+The repository includes a [three-excerpt English training example](workbench/resources/examples/README.md). Follow its instructions to update an existing `example` source; Git updates do not overwrite your local material versions.
+
 ## 2. Collaboration between computers
 
 All collaborators use the full local installation. Install the application, restore the supplied initial data once, and select your own reviewer name.
