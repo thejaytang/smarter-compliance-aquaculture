@@ -16,7 +16,6 @@ import tempfile
 import uuid
 from backend.shared.timing import measured
 
-from ..contracts.source import Snapshot
 from ..platform_support import lock_file
 from ..intake.system1 import read_system1
 from ..intake.registry import build_manifest, read_snapshot
@@ -224,7 +223,7 @@ class MaterialService:
             complete=parsed.get('status') == 'candidate_available' and not parsed.get('unresolved'),
             error=parsed.get('error'), warnings=parsed.get('warnings', []),
             metadata={'parser_status': parsed.get('status'), **{key: parsed.get(key) for key in
-                ('parser_version', 'canonical_artifacts', 'covered_scope', 'processed_scope', 'usable_scope', 'unprocessed_scope', 'unresolved', 'body_filter')}})
+                ('parser_version', 'canonical_artifacts', 'artifact_directory', 'attempt_id', 'covered_scope', 'processed_scope', 'usable_scope', 'unprocessed_scope', 'unresolved', 'body_filter')}})
 
     def tick(self):
         # Only durable candidates created by Extract are eligible. A crash resumes
@@ -240,12 +239,10 @@ class MaterialService:
             candidate = pending[0]
             material = self.store.read(candidate['material_id'])
             source = candidate['source']
-            output = self.root / 'material-artifacts' / material['id'] / candidate['id'] / str(uuid.uuid4())
             try:
-                from .material_parser import parse_material
-                pinned = self._path(source)
-                source_copy = Snapshot(**dict(source, relative_path=pinned.name))
-                parsed = parse_material(source_copy, pinned.parent, output)
+                from .material_job import compute
+                parsed = compute(self.root, dict(material_id=material['id'], candidate_id=candidate['id'],
+                    source=source, scope=candidate['scope'], input_revision=candidate['input_revision']))
                 try:
                     self.observe_sources(self.handoff())
                 except (ValueError, OSError, subprocess.SubprocessError):
@@ -253,7 +250,7 @@ class MaterialService:
                 return self.store.finish_candidate(material['id'], candidate['id'], parsed['blocks'],
                     complete=parsed.get('status') == 'candidate_available' and not parsed.get('unresolved'),
                     error=parsed.get('error'), warnings=parsed.get('warnings', []),
-                    metadata={'parser_status': parsed.get('status'), **{key: parsed.get(key) for key in ('parser_version', 'canonical_artifacts', 'covered_scope', 'processed_scope', 'usable_scope', 'unprocessed_scope', 'unresolved', 'body_filter')}})
+                    metadata={'parser_status': parsed.get('status'), **{key: parsed.get(key) for key in ('parser_version', 'canonical_artifacts', 'artifact_directory', 'attempt_id', 'covered_scope', 'processed_scope', 'usable_scope', 'unprocessed_scope', 'unresolved', 'body_filter')}})
             except Exception as exc:
                 return self.store.finish_candidate(material['id'], candidate['id'], [], complete=False, error=str(exc))
 

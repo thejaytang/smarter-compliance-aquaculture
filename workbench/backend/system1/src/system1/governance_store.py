@@ -54,6 +54,7 @@ def publish_bytes(path, raw):
     if path.exists():
         if path.read_bytes() != raw: raise ValueError('Immutable archive identity conflict')
         return
+    path.parent.mkdir(parents=True, exist_ok=True)
     with NamedTemporaryFile(dir=path.parent, prefix='.'+path.name, delete=False) as handle:
         temporary = Path(handle.name)
         handle.write(raw); handle.flush(); os.fsync(handle.fileno())
