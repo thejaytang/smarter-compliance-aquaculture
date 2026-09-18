@@ -14,3 +14,5 @@ Pulling application updates downloads this file; it does not replace local sourc
 Use the named reviewer authorised to apply source updates on your installation. Colleagues can also exchange the updated source through the existing Collaboration review process. Do not copy SQLite files between installations.
 
 This file matches local demonstration snapshot PE001-004 from 2026-09-18. SHA-256: `307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475`. A receiving installation allocates its own next source-version identifier.
+
+The repository fixes this HTML file to LF line endings on Windows and macOS so that Git checkout preserves the documented checksum, including when `core.autocrlf` is enabled. This rule does not rewrite existing registered originals or saved material versions.
