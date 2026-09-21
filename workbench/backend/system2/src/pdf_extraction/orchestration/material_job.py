@@ -27,10 +27,22 @@ def compute(root, job):
     if material_id != job['material_id']:
         raise ValueError('Invalid material identity.')
     candidate_id = str(uuid.UUID(job['candidate_id']))
-    output = root / 'material-artifacts' / material_id / candidate_id / str(uuid.uuid4())
+    if candidate_id != job['candidate_id']:
+        raise ValueError('Invalid candidate identity.')
+    # Personal workspace roots are already deep on Windows. Keep a full unique
+    # attempt ID, with material/candidate identities in evidence rather than
+    # three nested identifier directories. Earlier artifacts remain untouched.
+    attempt_id = uuid.uuid4().hex
+    output = root / 'material-artifacts' / attempt_id
     original = root / 'material-originals' / (fingerprint + suffix)
     copied = Snapshot(**dict(source, relative_path=original.name))
-    return parse_material(copied, original.parent, output)
+    try:
+        parsed = parse_material(copied, original.parent, output)
+    finally:
+        if output.is_dir():
+            with (output / 'attempt-binding.json').open('x', encoding='utf-8') as stream:
+                json.dump({'schema':'material-attempt/1','attempt_id':attempt_id,**job}, stream, ensure_ascii=False, indent=2)
+    return dict(parsed, artifact_directory=output.relative_to(root).as_posix(), attempt_id=attempt_id)
 
 
 def main():

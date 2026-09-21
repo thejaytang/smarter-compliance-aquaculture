@@ -182,7 +182,7 @@ def _evidence(request, material):
                 if (item.get('source') != material['source'] or item.get('scope') != material['scope']
                         or type(item.get('input_revision')) is not int
                         or not 0 <= item['input_revision'] <= material['content_revision']
-                        or item.get('status') not in ('running', 'ready', 'partial', 'failed', 'kept', 'adopted', 'merged')):
+                        or item.get('status') not in ('running', 'ready', 'partial', 'failed', 'kept', 'adopted', 'merged', 'superseded')):
                     raise ValueError('Package candidate evidence input or status is invalid.')
                 validate_blocks(item.get('blocks'), material['scope'])
                 validate_blocks(item.get('base_blocks'), material['scope'])
