@@ -1,0 +1,22 @@
+{
+  "status": "prepared",
+  "seed": "example-seed-20260922.zip",
+  "sha256": "ddae83dde9a29f456fee1de78d270896d7e1304d3637ab961dfd4d4f4df688c2",
+  "bytes": 17180126,
+  "source_ids": [
+    "PE002"
+  ],
+  "materials": [
+    "c3fd36db7f5b246d56f3c1bbd3f21ca5"
+  ],
+  "blocks": 85,
+  "active_requirements": 21,
+  "active_interpretations": 21,
+  "databases": [
+    "system1",
+    "system2",
+    "system3_requirements",
+    "system3_scd"
+  ],
+  "fresh_restore_and_restart": "pending"
+}

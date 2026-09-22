@@ -1,6 +1,21 @@
-# Initial business snapshot
+# Complete development snapshots
 
-This is the complete first-handoff business snapshot explicitly authorized for public GitHub publication on 2026-09-17. It includes original materials, the four business databases and human history, including confidential business content. API keys, login sessions, local environments and development evidence are excluded.
+This directory belongs only to `developing-only-jay`. On 2026-09-22 the user explicitly chose this same public repository for complete development content. `main` now contains only the permanent PE002 Example. These complete snapshots include original materials, the four business databases and human history, including confidential business content. API keys, login sessions, local environments and development evidence are excluded.
+
+The current complete snapshot is **workspace-20260922.zip**, captured at **2026-09-21 23:02:45 UTC**, package ID `8ca47f11-7bd3-4539-b7ea-4dbee796cd6c`. It contains 76 registered originals, 157 source bindings and the saved material/Requirement/interpretation work, including PE002. Its exact internal inventory is copied to `manifest-20260922.json`. SHA-256: `cd5d033e4cfa10ae91838589b773720d9388918122cb43058d1fa61f9bb05bc0`.
+
+For a fresh development installation, after dependency setup:
+
+```sh
+python3.12 deployment.py restore-initial --archive workbench/initial-data/workspace-20260922.zip --sha256 cd5d033e4cfa10ae91838589b773720d9388918122cb43058d1fa61f9bb05bc0
+python3.12 deployment.py verify
+```
+
+On Windows use `py -3.12` instead. For an existing workspace, import the package through **Collaboration**, inspect the preview and apply explicitly; resolve conflicts without overwriting the workspace files. Application updates never import it. Native Windows restoration remains unverified.
+
+## Historical first handoff, 2026-09-17
+
+The following package and manifest remain unchanged for recovery and provenance. They predate the current saved Material and Requirement work.
 
 The package is immutable. Application updates never apply it. Future work is exchanged through Collaboration, not by committing active databases. Keep this snapshot as recovery evidence if it is later removed from the application checkout; removal from a branch does not erase Git history.
 

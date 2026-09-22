@@ -42,18 +42,24 @@ def impact(service, actor, doc, material_cache=None):
             unavailable.append(old['id'])
     sources = {m['id']: m['source'] for m in saved['materials']}
     rule_links = {}
+    concept_fields = {}
+    concepts = {c['id']: c for c in doc.get('check_design', {}).get('concepts', [])}
     def walk(n):
         if not n: return
         if 'rules' in n:
             for child in n['rules']: walk(child)
-        else: rule_links.setdefault(n['interpretation_field'], []).append(n['id'])
+        else:
+            rule_links.setdefault(n['interpretation_field'], []).append(n['id'])
+            for identity in n.get('concept_ids', []):
+                for ref in concepts.get(identity, {}).get('references', []):
+                    concept_fields.setdefault(ref['id'], set()).add(n['interpretation_field'])
     for n in doc.get('check_design', {}).get('groups', {}).values(): walk(n)
     items = []
     for old in saved['citations']:
         new = current.get(old['id'])
         if old.get('block_id') is None: continue  # metadata checked separately below
         if new and (new['text'], new['source'], new['source_refs']) == (old['text'], sources[old['material_id']], old.get('source_refs', [])): continue
-        fields = [k for k, f in doc['fields'].items() if any(r['id'] == old['id'] for r in f['references'])]
+        fields = [k for k, f in doc['fields'].items() if any(r['id'] == old['id'] for r in f['references']) or k in concept_fields.get(old['id'], set())]
         origin = saved['origin']; own = old['material_id'] == origin['material_id'] and old['block_id'] in [p['block_id'] for p in origin.get('source_segments',[])] + [origin['block_id']]
         if own: fields = list(doc['fields'])
         items.append(dict(citation_id=old['id'],material_id=old['material_id'],block_id=old['block_id'],
@@ -110,7 +116,7 @@ class Drafts:
             if not isinstance(body.get('title',''),str) or not isinstance(body.get('linked_material_ids',[]),list):raise ValueError('Invalid working context.')
             design=body.get('check_design')
             if design is not None:
-                if not isinstance(design,dict) or design.get('schema')!='requirement-check-design/1' or set(design.get('groups',{}))!={'scope','condition','demand'}:raise ValueError('Invalid working rule design.')
+                if not isinstance(design,dict) or design.get('schema') not in ('requirement-check-design/1','requirement-check-design/2') or set(design.get('groups',{}))!={'scope','condition','demand'}:raise ValueError('Invalid working rule design.')
                 count=[0]
                 def check(n,depth=0):
                     if n is None:return
@@ -119,6 +125,8 @@ class Drafts:
                     if 'rules' in n:
                         if n.get('condition') not in ('AND','OR') or not isinstance(n['rules'],list):raise ValueError('Invalid working group.')
                         for child in n['rules']:check(child,depth+1)
+                    elif 'expression' in n:
+                        if design['schema']!='requirement-check-design/2' or not isinstance(n['expression'],str) or len(n['expression'])>4000 or n.get('interpretation_field') not in KEYS:raise ValueError('Invalid working predicate.')
                     elif not all(isinstance(n.get(k),str) for k in ('field','operator','type','interpretation_field')) or 'value' not in n:raise ValueError('Invalid working comparison.')
                 for n in design['groups'].values():check(n)
         with self.c.lock,self.c.db() as db:

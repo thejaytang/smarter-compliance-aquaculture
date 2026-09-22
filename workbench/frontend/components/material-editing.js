@@ -35,6 +35,16 @@ export function tableAxis(table,axis,index,remove=false){
  for(const m of t.merges||[]){if(index<m[start]||(!remove&&index===m[start]))m[start]+=remove?-1:1;else if(index<m[start]+m[span])m[span]+=remove?-1:1;}
  t.merges=(t.merges||[]).filter(m=>m.rowspan>0&&m.colspan>0&&(m.rowspan>1||m.colspan>1));return t;
 }
+export function pasteTableCells(table,row,col,text){
+ if(!text.includes('\t'))return null;
+ const rows=text.replace(/\r\n?/g,'\n').replace(/\n$/,'').split('\n').map(line=>line.split('\t')),width=rows[0].length;
+ if(rows.some(line=>line.length!==width))throw Error('Paste a rectangular range with the same number of tab-separated cells in each row.');
+ const height=Math.max(table.rows.length,row+rows.length),columns=Math.max(table.rows[0].length,col+width);
+ if(height*columns>100000)throw Error('This paste would exceed 100,000 table cells. Paste a smaller range.');
+ if(!Number.isInteger(row)||!Number.isInteger(col)||row<0||col<0||row>=table.rows.length||col>=table.rows[0].length)throw Error('Choose an existing table cell.');
+ const next=copy(table);next.rows=Array.from({length:height},(_,r)=>Array.from({length:columns},(_,c)=>next.rows[r]?.[c]??''));
+ rows.forEach((cells,r)=>cells.forEach((value,c)=>next.rows[row+r][col+c]=value));return next;
+}
 export function rebuildTableDialog(w){
  const eligible=w.draft.blocks.filter(b=>['text','table'].includes(b.type));
  w.dialog(`<h2>Rebuild a table</h2><p>Select adjacent blocks. Their original text and links stay in conversion history. Paste tab-separated cells or enter the dimensions.</p>${eligible.map(b=>`<label class="mw-check"><input type="checkbox" data-rebuild-id="${esc(b.id)}">${esc((b.text||b.type).slice(0,110))}</label>`).join('')}<label>Rows<input id="rebuild-rows" type="number" min="1" max="1000" value="2"></label><label>Columns<input id="rebuild-cols" type="number" min="1" max="100" value="2"></label><label>Tab-separated cells<textarea id="rebuild-text" rows="5"></textarea></label><button id="rebuild-preview">Preview</button><div id="rebuild-result"></div><button id="rebuild-apply" disabled>Use this table in my draft</button><p id="rebuild-error" role="status"></p>`,d=>{

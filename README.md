@@ -16,7 +16,7 @@ This directory is the application root. The product checkout contains the four r
 - [Storage and exchange contract](workbench/contracts/storage-and-exchange.md): four databases, version bindings and package format.
 - [Review contract](workbench/contracts/review-workflow.md): the existing four-pane workflow and source semantics.
 
-Double-click **Open Workbench (Windows).cmd** on Windows or **Open Workbench (macOS).command** on macOS after setup. Both call `deployment.py`. The [initial business snapshot](workbench/initial-data/README.md) is included for this one-time handoff and imported explicitly once; an ordinary launch or application update never imports that seed again.
+Double-click **Open Workbench (Windows).cmd** on Windows or **Open Workbench (macOS).command** on macOS after setup. Both call `deployment.py`. The [permanent Example](workbench/resources/examples/README.md) includes the full Norwegian law and its saved annotations. Import its seed explicitly on a fresh installation; an ordinary launch or application update never imports it again. Existing installations can import its scoped Collaboration package.
 
 ## 2. What is stored where
 
@@ -25,7 +25,8 @@ Double-click **Open Workbench (Windows).cmd** on Windows or **Open Workbench (ma
 | `workbench/frontend/` | Pages, components and bundled browser assets | Yes |
 | `workbench/backend/` | Application, System1, System2, System3 and shared code | Yes |
 | `workbench/contracts/`, `workbench/config/`, `workbench/deployment/` | Product contracts, sanitized templates and deployment helpers | Yes |
-| `workbench/initial-data/` | Immutable first-handoff business snapshot and checksum | One-time authorized snapshot |
+| `workbench/resources/examples/` | Permanent PE002 law, Example-only seed and saved annotation package | Yes |
+| `workbench/initial-data/` | Complete dated business snapshots and checksums | Development branch only |
 | `workbench/workspace/` | Business databases, originals, exported human history and packages | README only |
 | `workbench/runtime/` | Private settings, execution state, recovery backups, diagnostic logs and cache | README only |
 | `project-support/`, `workbench/tests/`, `PROJECT_STATE.md` | Development plans, tests and evidence | This development branch only |
@@ -36,4 +37,4 @@ Collaboration exchanges saved work through a preview and explicit decisions. A d
 
 ## 3. Development and product branches
 
-Keep development evidence on `developing-only-jay`. Publish selected application changes to `main`; do not merge this branch wholesale into `main`, because that would also publish the development-only file policy and records. Active workspaces remain local and use validated snapshots for handoff. Environments, credentials and caches are rebuilt or configured locally.
+Keep full business snapshots and development evidence on `developing-only-jay`. `main` carries only the product and permanent PE002 Example. Publish selected application changes to `main`; do not merge this branch wholesale into `main`. Both branches and previously published Git history are public. Active workspaces remain local and use validated snapshots for handoff. Environments, credentials and caches are rebuilt or configured locally.

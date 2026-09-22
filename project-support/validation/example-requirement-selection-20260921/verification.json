@@ -1,0 +1,18 @@
+{
+  "active_requirements": 21,
+  "unchanged_retained_requirements": 20,
+  "context_only_entries": 13,
+  "combined_counting_entries": 1,
+  "recoverable_removed_entries": 15,
+  "source_blocks_unchanged": 85,
+  "original_html_sha256": "9334a78a021971411e5c8826a2bb16aab1db707d778f6249c9a36b0afc90a4a1",
+  "all_prior_requirement_history_preserved": true,
+  "all_prior_interpretation_records_and_history_preserved": true,
+  "unrelated_requirement_heads_unchanged": true,
+  "full_context_preserved": true,
+  "exact_spans_citations_links": "passed",
+  "counting_boundary_exemption_cases": 12,
+  "temperature_concepts_preserved": 9,
+  "human_review_completed": false,
+  "site_compliance_executed": false
+}

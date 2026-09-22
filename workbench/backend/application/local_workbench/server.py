@@ -456,22 +456,18 @@ class Handler(BaseHTTPRequestHandler):
                     query=parse_qs(parsed.query)
                     return self.send(200,self.app.adapter.call('spreadsheet_preview',source_id=source_id,
                         sheet=query.get('sheet',[None])[0],row=query.get('row',[1])[0],column=query.get('column',[1])[0]))
-                if path.suffix.lower() not in {".html",".htm",".txt"}:
-                    return self.send(200,{"kind":"download","message":"Download and open the original to review it."})
-                import html
-                from html.parser import HTMLParser
-                class TextOnly(HTMLParser):
-                    def __init__(self):
-                        super().__init__();self.parts=[];self.skip=0
-                    def handle_starttag(self,tag,attrs):
-                        if tag in {"script","style"}:self.skip+=1
-                        if tag in {"p","br","tr","h1","h2","li","section"}:self.parts.append("\n")
-                    def handle_endtag(self,tag):
-                        if tag in {"script","style"}:self.skip=max(0,self.skip-1)
-                    def handle_data(self,data):
-                        if not self.skip:self.parts.append(data)
-                parser=TextOnly();parser.feed(path.read_text(errors="replace"))
-                return self.send(200,{"kind":"text","text":"".join(parser.parts),"label":"Text preview of the local snapshot. Open the original for its published layout."})
+                if path.suffix.lower() in {'.html', '.htm'}:
+                    reader = self.app.system2.call('material_source-html', path=str(path),
+                        expected_hash=expected or artifact.get('hash'))
+                    if parse_qs(parsed.query).get('view', [''])[0] == 'html':
+                        return self.send(200, reader['html'].encode(), 'text/html; charset=utf-8',
+                            {'Content-Security-Policy': "default-src 'none'; img-src data:; style-src 'unsafe-inline'; script-src 'none'; connect-src 'none'; form-action 'none'; base-uri 'none'; frame-ancestors 'self'; sandbox"})
+                    return self.send(200, {**reader,
+                        'label': 'Simplified HTML reading view of the saved original. Source website styling is not preserved.'})
+                if path.suffix.lower() == '.txt':
+                    return self.send(200, {'kind': 'text', 'text': path.read_text(errors='replace'),
+                        'label': 'Text preview of the saved original.'})
+                return self.send(200, {'kind': 'download', 'message': 'Download and open the original to review it.'})
             if parsed.path.startswith('/vendor/pdfjs/'):
                 vendor = self.app.ui_root / 'assets/vendor/pdfjs'
                 relative = parsed.path.removeprefix('/vendor/pdfjs/')
@@ -494,6 +490,7 @@ class Handler(BaseHTTPRequestHandler):
                     "/evidence-viewer.js":"evidence-viewer.js", "/pdf-repairs.js":"pdf-repairs.js", "/pdf-table-editor.js":"pdf-table-editor.js", "/pdf-table-rows.js":"pdf-table-rows.js", "/pdf-pages.js":"pdf-pages.js","/review-state.js":"review-state.js", "/source-check.js":"source-check.js", "/export-status.js":"export-status.js",
                     "/dashboard.js":"dashboard.js", "/qa-chart.js":"qa-chart.js", "/pdf-references.js":"pdf-references.js", "/pdf-assessments.js":"pdf-assessments.js",
                     "/extraction.js":"extraction.js", "/extraction.css":"extraction.css",
+                    "/settings-form.js":"settings-form.js",
                     "/system2-review.js":"system2-review.js", "/system2-review.css":"system2-review.css",
                     "/system2-review-state.js":"system2-review-state.js",
                     "/system2-demo-data.js":"system2-demo-data.js",

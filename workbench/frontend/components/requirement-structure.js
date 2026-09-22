@@ -40,9 +40,65 @@ export const plainField=n=>n.kind==='group'&&!n.span&&!n.relationship&&(!n.negat
 export function structureLabels(doc,unitLabels={}){let g=Object.keys(doc.units||{}).length,f=0;const labels={};for(const t of Object.values({...doc.structure_views,...doc.structures}))for(const n of treeNodes(t))labels[n.id]=n.kind==='fragment'?`F${++f}`:n.kind==='reference'?(unitLabels[n.target_id]||n.target_id):plainField(n)?n.role:`G${++g}`;return labels;}
 const control=(action,text,attrs='')=>`<button type="button" data-straction="${action}" ${attrs}>${text}</button>`;
 export class StructureEditor{
- constructor(editor){this.e=editor;this.closed=new Set();this.qcOpen=new Set();this.rangeModes=new Map();this.selection=null;this.linkOpen=new Set();}
+ constructor(editor){this.e=editor;this.reset();}
+ reset(){this.stopSelectionTracking();this.closed=new Set();this.qcOpen=new Set();this.rangeModes=new Map();this.selection=null;this.selectionContext=null;this.linkOpen=new Set();this.picks=new Map();}
  tree(uid){return this.e.doc.structures?.[uid]||this.e.doc.structure_views?.[uid];}
  labels(tree){const unitLabels=Object.fromEntries(Object.keys(this.e.doc.units||{}).map(id=>[id,this.e.internalLabel?.(id)||this.e.label(id)]));return structureLabels({...this.e.doc,structure_views:{...this.e.doc.structure_views,...(!Object.values({...this.e.doc.structure_views,...this.e.doc.structures}).some(t=>t.id===tree.id)?{fallback:tree}:{})}},unitLabels);}
+
+ pickKey(uid,id){return [this.e.doc.id,uid,id].join(':');}
+ picked(uid,node){const selected=this.picks.get(this.pickKey(uid,node.id));return (node.children||[]).filter(n=>selected?.has(n.id)).map(n=>n.id);}
+ pickMarkup(uid,owner,child,label){return `<input type="checkbox" data-structure-pick="${esc(child.id)}" aria-label="Select ${esc(label)} for grouping" ${this.picked(uid,owner).includes(child.id)?'checked':''}>`;}
+ groupButton(uid,node){const count=this.picked(uid,node).length;return control('group',count?`Group selected (${count})`:'Group selected',`${this.e.locked||count<2?'disabled':''} title="Select at least two direct items"`);}
+ prunePicks(){
+  const valid=new Map();for(const uid of Object.keys(this.e.doc.units||{})){const tree=this.tree(uid);if(tree)for(const node of treeNodes(tree)){const picked=this.picked(uid,node);if(picked.length)valid.set(this.pickKey(uid,node.id),new Set(picked));}}
+  this.picks=valid;
+ }
+ path(uid,id){const tree=this.tree(uid);if(!tree)return [];const nodes=treeNodes(tree),node=nodes.find(n=>n.id===id);if(!node)return [];const path=[node];let parent;while((parent=nodes.find(n=>n.children?.some(c=>c.id===path[0].id))))path.unshift(parent);return path;}
+ reveal(uid,id,part='node'){
+  const path=this.path(uid,id);if(!path.length||(part==='relationship'&&!path.at(-1).relationship)){this.e.showError(Error('This saved mark can no longer be located.'));return false;}
+  this.selection=null;this.selectionContext=null;
+  for(const n of path)this.closed.delete(n.id);this.e.closedUnits.delete(uid);this.e.selected=uid;this.e.sessionCollapsed=false;
+  if(part==='quantity')this.qcOpen.add(id);
+  this.e.render(true);this.e.m.revealPane?.('requirements');
+  const host=this.e.host,cards=[...(host.querySelectorAll?.('[data-structure-node]')||[])];
+  // Transparent wrappers have no card; their sole displayed child is the same location.
+  let model=path.at(-1);while(transparentGroup(model))model=model.children[0];
+  const card=cards.find(n=>n.dataset.owner===uid&&n.dataset.structureNode===model.id);
+  const target=part==='relationship'?card?.querySelector('[data-relationship-node]'):part==='quantity'?card?.querySelector('[data-rq-min]:not(:disabled),[data-straction="range-mode"]'):part==='source'?host.querySelector?.('[data-entry-source] [data-structure-source]'):card;
+  const focus=target||card;focus?.setAttribute('tabindex','-1');focus?.scrollIntoView({block:'nearest'});focus?.focus();return true;
+ }
+ locatePending(){
+  for(const uid of this.e.unitIds()){
+   const tree=this.tree(uid);if(!tree)continue;
+   for(const node of treeNodes(tree)){
+    const sides=relationshipSides(node),empty=['clause','group'].includes(node.kind)&&!node.children.length,quantity=node.kind==='group'&&node.quantity===null,relationship=node.relationship&&(!sides.before.length||!sides.after.length);
+    if(!empty&&!quantity&&!relationship)continue;
+    const label=node===tree?this.e.label(uid):this.labels(tree)[node.id];
+    this.e.notice+=` ${label}: ${empty?'mark the missing source content.':quantity?'choose a quantity.':'mark the content before and after the relationship.'}`;
+    return this.reveal(uid,node.id,quantity&&!empty?'quantity':'source');
+   }
+  }
+  return false;
+ }
+ selectionStamp(){const s=this.selection,e=this.e;return s?JSON.stringify([e.context,e.doc?.id,e.doc?.material_revision,e.doc?.units?.[s.unit_id]?.text,e.doc?.spans?.[s.unit_id]]):null;}
+ selectionValid(){return !!this.selection&&this.selectionContext===this.selectionStamp()&&this.path(this.selection.unit_id,this.selection.node_id).length>0;}
+ restoreSelection(){
+  if(!this.selectionContext)return;
+  if(!this.selectionValid()){this.selection=null;this.selectionContext=null;return;}
+  if(this.e.locked||typeof window==='undefined'||typeof document==='undefined')return;
+  const saved={...this.selection},host=this.e.host,sources=[...host.querySelectorAll('[data-structure-source]')];
+  const source=sources.find(n=>{const container=n.closest('[data-source-node]');return container?.dataset.sourceOwner===saved.unit_id&&container.dataset.sourceNode===saved.node_id;})||sources.find(n=>n.closest('[data-entry-source]'));
+  if(!source)return;
+  const container=source.closest('[data-source-node]'),shift=container?-Number(container.dataset.sourceStart||0):(this.e.doc.spans?.[saved.unit_id]?.[0]||0),text=Array.from(source.textContent),start=saved.start+shift,end=saved.end+shift;
+  if(start<0||end>text.length||start>=end)return;
+  const offsets=[text.slice(0,start).join('').length,text.slice(0,end).join('').length],walker=document.createTreeWalker(source,4),points=[];let total=0,node;
+  while((node=walker.nextNode())){while(points.length<2&&offsets[points.length]<=total+node.textContent.length)points.push([node,offsets[points.length]-total]);total+=node.textContent.length;}
+  if(points.length!==2)return;
+  const range=document.createRange();range.setStart(...points[0]);range.setEnd(...points[1]);const selection=window.getSelection();source.focus({preventScroll:true});selection.removeAllRanges();selection.addRange(range);source.onmouseup?.();
+  this.selection=saved;this.selectionContext=this.selectionStamp();
+  const bar=(container||source.closest('[data-entry-source]')).querySelector('[data-selection-tools]'),target=bar?.querySelector('[data-selection-target]');
+  if(target){target.value=saved.node_id;this.updateSelectionTools(bar,saved.unit_id,this.path(saved.unit_id,saved.node_id).at(-1));}
+ }
 
  unitMarkup(u,complete,inline){
   const e=this.e,done=e.doc.done.includes(u.id),tree=this.tree(u.id),disabled=e.locked;
@@ -73,16 +129,16 @@ export class StructureEditor{
   if(node.kind==='group'&&['exceptions','subrequirement'].includes(node.role)){
    const legacy=this.hasInlineRelation(node),children=node.children.filter(child=>this.hasExternalRelation(child)),locked=this.e.locked;
    const nested=treeNodes(tree).some(parent=>parent.kind==='group'&&parent.role===node.role&&parent.children.some(child=>child.id===node.id));
-   const rows=children.map(child=>`<li>${!locked&&!legacy?`<input type="checkbox" data-structure-pick="${esc(child.id)}" aria-label="Select ${esc(child.kind==='reference'?this.e.label(child.target_id):labels[child.id])} for grouping">`:''}${this.nodeMarkup(child,u,tree,labels,locked)}</li>`).join('');
-   return `<section class="rq-reference-picker rq-relation-group semantic ${semanticClass(node.role)}" data-structure-node="${id}" data-owner="${u.id}"><strong>${node.role==='exceptions'?'Exception':'Subrequirement'}${nested?' · '+esc(labels[node.id]):''}</strong>${remove}<div class="rq-tree-body">${!legacy&&children.length?this.qcMarkup(node,locked):''}${!locked&&!legacy&&(children.length>1||nested)?`<div class="rq-tree-actions">${children.length>1?control('group','Group selected','disabled title="Select at least two direct items"'):''}${this.canUngroup(node,tree)?control('ungroup','Ungroup','title="Remove this grouping and keep its links"'):''}</div>`:''}<ol class="rq-tree-children rq-linked-list">${rows}</ol>${this.linkMarkup(u,node,locked||legacy,true)}</div></section>`;
+   const rows=children.map(child=>`<li>${!locked&&!legacy?this.pickMarkup(u.id,node,child,child.kind==='reference'?this.e.label(child.target_id):labels[child.id]):''}${this.nodeMarkup(child,u,tree,labels,locked)}</li>`).join('');
+   return `<section class="rq-reference-picker rq-relation-group semantic ${semanticClass(node.role)}" data-structure-node="${id}" data-owner="${u.id}"><strong>${node.role==='exceptions'?'Exception':'Subrequirement'}${nested?' · '+esc(labels[node.id]):''}</strong>${remove}<div class="rq-tree-body">${!legacy&&children.length?this.qcMarkup(node,locked):''}${!locked&&!legacy&&(children.length>1||nested)?`<div class="rq-tree-actions">${children.length>1?this.groupButton(u.id,node):''}${this.canUngroup(node,tree)?control('ungroup','Ungroup','title="Remove this grouping and keep its links"'):''}</div>`:''}<ol class="rq-tree-children rq-linked-list">${rows}</ol>${this.linkMarkup(u,node,locked||legacy,true)}</div></section>`;
   }
   if(plainField(node))return `<div class="rq-plain-field semantic ${semanticClass(node.role)}" data-structure-node="${id}" data-owner="${u.id}"><div class="rq-plain-field-title"><strong>${esc(node.role)}</strong>${node.negated?'<small>Saved NOT annotation · read-only</small>':''}</div>${remove}${node.children.map(child=>this.nodeMarkup(child,u,tree,labels,disabled,false,true)).join('')}</div>`;
   const group=node.kind==='group',kind=group?'Group · '+node.role:'Group',summary=`<strong>${label}</strong><span>${esc(kind)}</span>${node.negated?'<small class="rq-not-label">Saved NOT annotation · read-only</small>':''}${group?`<span class="rq-tree-count" title="Quantity of direct items">${node.quantity===null?'Choose quantity':quantityPreview(node.quantity)}</span>`:''}${!root&&text?`<span class="rq-tree-summary">${esc(text)}</span>`:''}`;
-  const childMarkup=child=>`<li>${group&&!disabled?`<input type="checkbox" data-structure-pick="${esc(child.id)}" aria-label="Select ${labels[child.id]} in ${label}">`:''}${this.nodeMarkup(child,u,tree,labels,disabled)}</li>`;
-  const sides=relationshipSides(node),relationship=node.relationship?`<li class="rq-relationship-row"><div class="rq-relationship semantic semantic-7"><strong>Relationship</strong><span>${esc(node.relationship.text)}</span>${!this.e.locked?control('remove-relationship','×','class="rq-node-remove" aria-label="Remove relationship" title="Remove this relationship; keep both parts"'):''}</div></li>`:'';
+  const childMarkup=child=>`<li>${group&&!disabled?this.pickMarkup(u.id,node,child,labels[child.id]):''}${this.nodeMarkup(child,u,tree,labels,disabled)}</li>`;
+  const sides=relationshipSides(node),relationship=node.relationship?`<li class="rq-relationship-row" data-relationship-node="${id}" tabindex="-1"><div class="rq-relationship semantic semantic-7"><strong>Relationship</strong><span>${esc(node.relationship.text)}</span>${!this.e.locked?control('remove-relationship','×','class="rq-node-remove" aria-label="Remove relationship" title="Remove this relationship; keep both parts"'):''}</div></li>`:'';
   const children=relationship?sides.before.map(childMarkup).join('')+relationship+sides.after.map(childMarkup).join('')+sides.crossing.map(childMarkup).join(''):node.children.map(childMarkup).join('');
   const relationGap=node.relationship&&(!sides.before.length||!sides.after.length)?'<p class="rq-hint" role="status">Mark the content before and after this relationship.</p>':'';
-  return `<${root?'section':'details'} class="rq-tree-node ${group?'rq-tree-group semantic '+semanticClass(node.origin_role||node.role):'rq-tree-clause'}" data-structure-node="${id}" data-owner="${u.id}" ${!root&&!this.closed.has(node.id)?'open':''}>${root?'':`<summary>${summary}${remove}</summary>`}<div class="rq-tree-body">${root&&this.e.rootIds?.(this.e.doc)?.length>1?this.sourceMarkup(node,u,tree,disabled):''}${root&&!disabled?'<p class="rq-hint">Select the original text above to mark fields or groups.</p>':''}${group&&(node.children.length>1||node.quantity!==1||this.qcOpen.has(node.id))?this.qcMarkup(node,disabled):''}${group?`<div class="rq-tree-actions">${!disabled&&!['exceptions','subrequirement'].includes(node.role)?(node.children.length>1?control('group','Group selected','disabled title="Select at least two direct items"'):'')+(this.canUngroup(node,tree)?control('ungroup','Ungroup',`title="Remove this grouping and keep its items"`):''):''}</div>`:''}<ol class="rq-tree-children">${children}</ol>${relationGap}${!node.children.length?'<p class="rq-blank">Select wording above to add items.</p>':''}${this.e.doc.roles?.[u.id]!=='condition'&&node.kind==='clause'?this.clauseLinks(u,node,disabled,root):''}</div></${root?'section':'details'}>`;
+  return `<${root?'section':'details'} class="rq-tree-node ${group?'rq-tree-group semantic '+semanticClass(node.origin_role||node.role):'rq-tree-clause'}" data-structure-node="${id}" data-owner="${u.id}" ${!root&&!this.closed.has(node.id)?'open':''}>${root?'':`<summary>${summary}${remove}</summary>`}<div class="rq-tree-body">${root&&this.e.rootIds?.(this.e.doc)?.length>1?this.sourceMarkup(node,u,tree,disabled):''}${root&&!disabled?'<p class="rq-hint">Select the original text above to mark fields or groups.</p>':''}${group&&(node.children.length>1||node.quantity!==1||this.qcOpen.has(node.id))?this.qcMarkup(node,disabled):''}${group?`<div class="rq-tree-actions">${!disabled&&!['exceptions','subrequirement'].includes(node.role)?(node.children.length>1?this.groupButton(u.id,node):'')+(this.canUngroup(node,tree)?control('ungroup','Ungroup',`title="Remove this grouping and keep its items"`):''):''}</div>`:''}<ol class="rq-tree-children">${children}</ol>${relationGap}${!node.children.length?'<p class="rq-blank">Select wording above to add items.</p>':''}${this.e.doc.roles?.[u.id]!=='condition'&&node.kind==='clause'?this.clauseLinks(u,node,disabled,root):''}</div></${root?'section':'details'}>`;
  }
  canUngroup(node,tree){
   const parent=treeNodes(tree).find(p=>p.children?.some(n=>n.id===node.id));
@@ -122,7 +178,8 @@ export class StructureEditor{
   const fields=node.kind==='group'?[node.role]:['subrequirement','exceptions'].filter(role=>!node.children?.some(n=>n.role===role));
   return fields.map(role=>{const linked=new Set(treeNodes(node).filter(n=>n.kind==='reference'&&n.role===role).map(n=>n.target_id)),choices=this.e.completeRequirements(u.id).filter(v=>!linked.has(v.id));
    const title=role==='exceptions'?'Exception':'Subrequirement';
-   const content=`<div class="rq-tree-link" data-reference-role="${role}"><label><select data-structure-reference aria-label="${title} Requirement" ${disabled||!choices.length?'disabled':''}><option value="">Choose a Requirement…</option>${choices.map(v=>`<option value="${esc(v.id)}">${esc(this.e.label(v.id))} · ${esc(v.text.slice(0,90))}</option>`).join('')}</select></label>${control('link','Link','disabled')}</div>${!choices.length?'<small>No other available Requirement.</small>':''}`;
+   const previewId=`rq-link-${u.id}-${node.id}-${role}`;
+   const content=`<div class="rq-tree-link" data-reference-role="${role}"><label><select data-structure-reference aria-label="${title} Requirement" aria-describedby="${esc(previewId)}" ${disabled||!choices.length?'disabled':''}><option value="">Choose a Requirement…</option>${choices.map(v=>`<option value="${esc(v.id)}">${esc(this.e.label(v.id))} · ${esc(v.text.slice(0,90))}</option>`).join('')}</select></label>${control('link','Link','disabled')}<p data-reference-preview id="${esc(previewId)}" class="rq-original" hidden></p></div>${!choices.length?'<small>No other available Requirement.</small>':''}`;
    return inline?content:`<section class="rq-reference-picker semantic ${semanticClass(role)}"><strong>${title}</strong>${content}</section>`;
   }).join('');
  }
@@ -130,7 +187,20 @@ export class StructureEditor{
   const count=node.children.length,q=node.quantity,mode=quantityMode(q,count),custom=this.rangeModes.get(node.id)??(q!==null&&mode==='custom'),values=Array.isArray(q)?q:[q??'',q??''];
   return `<div class="rq-qc-row" data-rq-qc data-structure-qc data-count="${count}"><output data-rq-preview class="rq-qc-preview" aria-live="polite">${q===null?'Choose quantity':quantityPreview(q)}</output><div class="rq-quantity-presets">${[['all','All'],['any','Any'],['one','Only'],['not-all','Not All']].map(([preset,label])=>control('preset',label,`data-preset="${preset}" title="${preset==='not-all'?'At least one, fewer than all':preset==='all'?`K = ${count}`:preset==='any'?`[1, ${count}]`:'K = 1'}" aria-pressed="${!custom&&mode===preset}" ${disabled||!count||(preset==='not-all'&&count<2)?'disabled':''}`)).join('')}${control('range-mode','MIN–MAX',`aria-pressed="${custom}" ${disabled||!count?'disabled':''}`)}</div><input data-rq-min aria-label="Minimum" inputmode="numeric" pattern="[0-9]*" value="${values[0]}" ${disabled||!count||!custom?'disabled':''}><span>-</span><input data-rq-max aria-label="Maximum" inputmode="numeric" pattern="[0-9]*" value="${values[1]}" ${disabled||!count||!custom?'disabled':''}></div><small class="rq-qc-error" data-qc-error hidden role="status"></small>`;
  }
+ stopSelectionTracking(){this.selectionTracking?.();this.selectionTracking=null;this.selectionSource=null;}
+ trackSelection(host,source,bar,range){
+  this.stopSelectionTracking();this.selectionSource=source;const captured=range.cloneRange();
+  const place=()=>{
+   if(!source.isConnected||!bar.isConnected||!this.selectionValid()||this.e.locked){bar.hidden=true;this.stopSelectionTracking();return;}
+   const rect=captured.getBoundingClientRect(),clip=source.closest('.mw-pane-body')?.getBoundingClientRect(),left=Math.max(0,clip?.left??0),right=Math.min(window.innerWidth,clip?.right??window.innerWidth),top=Math.max(0,clip?.top??0),bottom=Math.min(window.innerHeight,clip?.bottom??window.innerHeight);
+   if(rect.bottom<=top||rect.top>=bottom||rect.right<=left||rect.left>=right){bar.hidden=true;this.stopSelectionTracking();return;}
+   bar.style.left=Math.max(8,Math.min(rect.left,window.innerWidth-bar.offsetWidth-8))+'px';bar.style.top=Math.max(8,Math.min(rect.bottom+10,window.innerHeight-bar.offsetHeight-8))+'px';
+  };
+  window.addEventListener('resize',place);window.addEventListener('scroll',place,true);window.visualViewport?.addEventListener('resize',place);
+  this.selectionTracking=()=>{window.removeEventListener('resize',place);window.removeEventListener('scroll',place,true);window.visualViewport?.removeEventListener('resize',place);};place();
+ }
  bind(host){
+  this.stopSelectionTracking();
   host.querySelectorAll?.('[data-entry-source] > .rq-source-preview').forEach(source=>{source.setAttribute('data-structure-source','');source.setAttribute('contenteditable','true');source.setAttribute('role','textbox');source.setAttribute('aria-readonly','true');source.setAttribute('aria-label','Requirement original text');source.setAttribute('spellcheck','false');});
   host.querySelectorAll?.('[data-structure-source]').forEach(source=>{
    source.onbeforeinput=event=>event.preventDefault();source.onpaste=event=>event.preventDefault();source.oncut=event=>event.preventDefault();source.ondrop=event=>event.preventDefault();
@@ -145,7 +215,7 @@ export class StructureEditor{
     if(entry){const candidates=Object.entries(this.e.doc.spans).filter(([,s])=>s[0]<=start&&s[1]>=end).sort((a,b)=>(b[1][1]-b[1][0])-(a[1][1]-a[1][0]));if(!candidates.length)return;uid=candidates[0][0];start-=candidates[0][1][0];end-=candidates[0][1][0];id=this.tree(uid).id;}
     const tree=this.tree(uid),containers=treeNodes(tree).reverse().filter(n=>['clause','group'].includes(n.kind)&&n.span&&n.span[0]<=start&&n.span[1]>=end).sort((a,b)=>(a.span[1]-a.span[0])-(b.span[1]-b.span[0]));
     if(containers.length)id=containers[0].id;
-    this.selection={unit_id:uid,node_id:id,start,end};
+    this.selection={unit_id:uid,node_id:id,start,end};this.selectionContext=this.selectionStamp();
     host.querySelectorAll('[data-selection-tools]').forEach(n=>n.hidden=n.parentElement!==container);
     const bar=container.querySelector('[data-selection-tools]');if(bar){
       const owners=[...containers.filter(n=>n!==tree&&!transparentGroup(n)),tree];
@@ -154,18 +224,23 @@ export class StructureEditor{
       if(target){target.innerHTML=owners.map(n=>`<option value="${esc(n.id)}">${esc(n===tree?this.e.label(uid):labels[n.id])}${n===tree?' · Requirement':' · Group'}</option>`).join('');
         target.onchange=()=>{const next=owners.find(n=>n.id===target.value);if(!next)return;this.selection={unit_id:uid,node_id:next.id,start,end};this.updateSelectionTools(bar,uid,next);};}
       this.updateSelectionTools(bar,uid,owner);
-      const rect=range.getBoundingClientRect();bar.style.left=Math.max(8,Math.min(event?.clientX??rect.left,window.innerWidth-bar.offsetWidth-8))+'px';bar.style.top=Math.max(8,Math.min((event?.clientY??rect.bottom)+10,window.innerHeight-bar.offsetHeight-8))+'px';
+      this.trackSelection(host,source,bar,range);
     }
 
    };source.onmouseup=capture;source.onkeyup=capture;
   });
   host.onmousedown=event=>{if(!event.target.closest('[data-selection-tools],[data-structure-source]'))host.querySelectorAll('[data-selection-tools]').forEach(n=>n.hidden=true);};
-  host.onkeydown=event=>{if(event.key==='Escape')host.querySelectorAll('[data-selection-tools]').forEach(n=>n.hidden=true);};
+  host.onkeydown=event=>{if(event.key==='Escape'){const source=this.selectionSource;if(event.target.closest('[data-selection-tools]')){event.preventDefault();source?.focus?.({preventScroll:true});}host.querySelectorAll('[data-selection-tools]').forEach(n=>n.hidden=true);this.stopSelectionTracking();}};
   host.querySelectorAll?.('[data-selection-tools]').forEach(toolbar=>toolbar.onmousedown=e=>{if(e.target.closest('button'))e.preventDefault();});
   host.querySelectorAll?.('details[data-structure-node]').forEach(node=>node.ontoggle=()=>{if(!node.isConnected)return;if(node.open)this.closed.delete(node.dataset.structureNode);else this.closed.add(node.dataset.structureNode);});
-  host.querySelectorAll?.('[data-structure-reference]').forEach(select=>select.onchange=()=>{select.closest('.rq-tree-link').querySelector('[data-straction="link"]').disabled=this.e.locked||!select.value;});
+  host.querySelectorAll?.('[data-structure-reference]').forEach(select=>select.onchange=()=>{
+    const link=select.closest('.rq-tree-link'),uid=select.closest('[data-structure-node]').dataset.owner,target=this.e.completeRequirements(uid).find(n=>n.id===select.value),preview=link.querySelector('[data-reference-preview]');
+    link.querySelector('[data-straction="link"]').disabled=this.e.locked||!target;
+    preview.textContent=target?`${this.e.label(target.id)} · ${target.id}\n${target.text}`:'';preview.hidden=!target;
+  });
   host.querySelectorAll?.('[data-structure-pick]').forEach(pick=>pick.onchange=()=>{
     const owner=pick.closest('[data-structure-node]'),picks=owner.querySelectorAll(':scope > .rq-tree-body > .rq-tree-children > li > [data-structure-pick]:checked');
+    this.picks.set(this.pickKey(owner.dataset.owner,owner.dataset.structureNode),new Set([...picks].map(n=>n.dataset.structurePick)));
     const button=owner.querySelector(':scope > .rq-tree-body > .rq-tree-actions > [data-straction="group"]');
     if(button){button.disabled=this.e.locked||picks.length<2;button.textContent=picks.length?`Group selected (${picks.length})`:'Group selected';}
   });
@@ -186,7 +261,7 @@ export class StructureEditor{
    }
    e.quantityDrafts.delete(key);e.render(true);return true;
   };
-  inputs.forEach(input=>{input.dataset.previous=input.value;input.onbeforeinput=event=>{if(event.data&&!/^\d+$/.test(event.data))event.preventDefault();};input.oninput=()=>{if(!/^\d*$/.test(input.value)){input.value=input.dataset.previous;return;}if(input.value!=='')input.value=String(Math.min(count,Number(input.value)));input.dataset.previous=input.value;e.quantityDrafts.set(key,inputs.map(i=>i.value));preview();e.m.updateNavigationLock?.();};input.onkeydown=event=>{if(event.key==='Enter'){event.preventDefault();void row.commitQuantity();}if(event.key==='Escape'){event.preventDefault();e.quantityDrafts.delete(key);e.render(true);}};});
+  inputs.forEach(input=>{input.dataset.previous=input.value;input.onbeforeinput=event=>{if(event.data&&!/^\d+$/.test(event.data))event.preventDefault();};input.oninput=()=>{if(!/^\d*$/.test(input.value)){input.value=input.dataset.previous;return;}input.dataset.previous=input.value;e.quantityDrafts.set(key,inputs.map(i=>i.value));preview();e.m.updateNavigationLock?.();};input.onkeydown=event=>{if(event.key==='Enter'){event.preventDefault();void row.commitQuantity();}if(event.key==='Escape'){event.preventDefault();e.quantityDrafts.delete(key);e.render(true);}};});
   row.onfocusout=event=>{if(row.contains(event.relatedTarget)||event.relatedTarget?.closest('[data-rq],[data-straction],summary'))return;void row.commitQuantity();};
  }
  async action(button){
@@ -198,17 +273,22 @@ export class StructureEditor{
   if(action==='show-qc'){if(this.qcOpen.has(id))this.qcOpen.delete(id);else this.qcOpen.add(id);e.render(true);return;}
   if(e.locked)return;
   if(action==='range-mode'){this.rangeModes.set(id,true);e.render(true);e.host.querySelector(`[data-structure-node="${id}"] [data-rq-min]`)?.focus();return;}
-  if(action==='remove')for(const n of treeNodes(this.tree(uid)).filter(n=>n.id===id).flatMap(treeNodes))e.quantityDrafts.delete('tree:'+uid+':'+n.id);
+  const removed=action==='remove'?treeNodes(this.tree(uid)).filter(n=>n.id===id).flatMap(treeNodes).map(n=>'tree:'+uid+':'+n.id):[];
   for(const row of e.host.querySelectorAll('[data-rq-qc]')){if(action==='remove'&&element.contains?.(row))continue;if(action==='preset'&&row.contains(button))continue;if(row.commitQuantity&&!(await row.commitQuantity()))return;}
   const model=treeNodes(this.tree(uid)).find(n=>n.id===id);if(!model)return;
   let request={unit_id:uid,node_id:id,operation:action};
   if(fromSelection){
+   if(this.selectionContext&&!this.selectionValid()){this.selection=null;this.selectionContext=null;throw Error('The selected source changed. Select its wording again.');}
    if(!this.selection||this.selection.unit_id!==uid||this.selection.node_id!==id)throw Error('Select the original wording in this group first.');
    request={...request,...this.selection,field:button.dataset.field};
   }
   if(action==='preset'){this.rangeModes.set(id,false);request.operation='quantity';request.quantity=quantityPreset(button.dataset.preset,model.children.length);e.quantityDrafts.delete('tree:'+uid+':'+id);}
-  if(action==='group')request.selected=[...element.querySelectorAll(':scope > .rq-tree-body > .rq-tree-children > li > [data-structure-pick]:checked')].map(n=>n.dataset.structurePick);
+  if(action==='group')request.selected=this.picked(uid,model);
   if(action==='link'){const link=button.closest('.rq-tree-link');request.target_id=link.querySelector('[data-structure-reference]').value;request.field=link.dataset.referenceRole;if(!request.target_id)throw Error('Choose another Requirement to link.');}
-  e.selected=uid;await this.apply(request);this.selection=null;
+  if(fromSelection)this.selectionContext=this.selectionStamp();
+  e.selected=uid;const ok=await this.apply(request);
+  if(ok){for(const key of removed)e.quantityDrafts.delete(key);this.selection=null;this.selectionContext=null;this.prunePicks();e.render(true);}
+  else if(fromSelection)this.restoreSelection();
+  return ok;
  }
 }

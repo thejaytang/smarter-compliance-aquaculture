@@ -1,0 +1,1187 @@
+{
+  "actor": "Weijie Tang",
+  "catalog_snapshot": {
+    "actor": null,
+    "fields": [],
+    "revision": 0,
+    "schema": "site-field-catalog/1"
+  },
+  "check_design": {
+    "schema": "requirement-check-design/2",
+    "groups": {
+      "condition": {
+        "id": "condition",
+        "condition": "AND",
+        "rules": [
+          {
+            "concept_ids": [
+              "equipment"
+            ],
+            "expression": "After a storm affecting the equipment.",
+            "id": "conditionrule",
+            "interpretation_field": "condition"
+          }
+        ]
+      },
+      "demand": {
+        "id": "demand",
+        "condition": "AND",
+        "rules": [
+          {
+            "concept_ids": [
+              "equipment"
+            ],
+            "expression": "Trained staff check the equipment.",
+            "id": "demandrule",
+            "interpretation_field": "demand"
+          }
+        ]
+      },
+      "scope": {
+        "id": "scope",
+        "condition": "AND",
+        "rules": [
+          {
+            "concept_ids": [
+              "equipment"
+            ],
+            "expression": "Equipment covered by this inspection.",
+            "id": "scoperule",
+            "interpretation_field": "scope"
+          }
+        ]
+      }
+    },
+    "object_type": "Equipment",
+    "assessment_context": "The same storm and equipment",
+    "identity_field": "",
+    "concepts": [
+      {
+        "id": "equipment",
+        "kind": "concept",
+        "label": "Equipment",
+        "references": [
+          {
+            "id": "9caf586c2ea3676b7f2857e9901bd876:synthetic-passage",
+            "quote": "equipment"
+          }
+        ],
+        "status": "confirmed"
+      }
+    ],
+    "based_on": null
+  },
+  "context_fingerprint": "703306a2fd5e6b17522e088b60b0a355bf7021daf96219869984997e5a51cb9d",
+  "context_manifest": [
+    {
+      "id": "9caf586c2ea3676b7f2857e9901bd876",
+      "revision": 1,
+      "source": {
+        "assessment_id": null,
+        "content_hash": "1a44b9dbea81afe28e4105d30c3746efe5e36f3c38a42897e4907fcdaa233f69",
+        "download_status": "SUCCESS",
+        "file_format": "html",
+        "operator_selection_decision": "INCLUDE",
+        "parsing_copy_of": null,
+        "registry_kind": "sqlite_snapshot",
+        "registry_sha256": "a66be31e0b15e983866bd13333ca55c1d5548b7f83ec7bcc9ea0f64388f02724",
+        "relative_path": "C_Certification_Scheme/CS901-001_Synthetic.html",
+        "selection_origin": "human",
+        "selection_status": "INCLUDE",
+        "snapshot_id": "CS901-001",
+        "snapshot_status": "STORED",
+        "source_id": "CS901",
+        "source_status": "CURRENT"
+      }
+    }
+  ],
+  "context_snapshot": {
+    "citations": [
+      {
+        "block_id": null,
+        "id": "9caf586c2ea3676b7f2857e9901bd876:document-information:0",
+        "material_id": "9caf586c2ea3676b7f2857e9901bd876",
+        "source_refs": [
+          {
+            "anchor": "original-a5676cd2e0dff813",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > article:nth-of-type(1) > h1:nth-of-type(1)"
+          }
+        ],
+        "text": "Inspection"
+      },
+      {
+        "block_id": "synthetic-passage",
+        "id": "9caf586c2ea3676b7f2857e9901bd876:synthetic-passage",
+        "material_id": "9caf586c2ea3676b7f2857e9901bd876",
+        "source_refs": [
+          {
+            "anchor": "original-document",
+            "scope_id": "html:document"
+          }
+        ],
+        "text": "Trained staff must check equipment after a storm."
+      }
+    ],
+    "materials": [
+      {
+        "blocks": [
+          {
+            "id": "synthetic-passage",
+            "source_refs": [
+              {
+                "anchor": "original-document",
+                "scope_id": "html:document"
+              }
+            ],
+            "text": "Trained staff must check equipment after a storm.",
+            "type": "text"
+          }
+        ],
+        "confidential": false,
+        "document_information": {
+          "fields": [],
+          "origin": "saved-original",
+          "title": {
+            "anchor": "original-a5676cd2e0dff813",
+            "label": "Title",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > article:nth-of-type(1) > h1:nth-of-type(1)",
+            "value": "Inspection"
+          }
+        },
+        "id": "9caf586c2ea3676b7f2857e9901bd876",
+        "review_status": "draft",
+        "revision": 1,
+        "source": {
+          "assessment_id": null,
+          "content_hash": "1a44b9dbea81afe28e4105d30c3746efe5e36f3c38a42897e4907fcdaa233f69",
+          "download_status": "SUCCESS",
+          "file_format": "html",
+          "operator_selection_decision": "INCLUDE",
+          "parsing_copy_of": null,
+          "registry_kind": "sqlite_snapshot",
+          "registry_sha256": "a66be31e0b15e983866bd13333ca55c1d5548b7f83ec7bcc9ea0f64388f02724",
+          "relative_path": "C_Certification_Scheme/CS901-001_Synthetic.html",
+          "selection_origin": "human",
+          "selection_status": "INCLUDE",
+          "snapshot_id": "CS901-001",
+          "snapshot_status": "STORED",
+          "source_id": "CS901",
+          "source_status": "CURRENT"
+        },
+        "source_stale": false,
+        "title": "Synthetic test source 1"
+      }
+    ],
+    "origin": {
+      "block_id": "synthetic-passage",
+      "chapter": "",
+      "material_id": "9caf586c2ea3676b7f2857e9901bd876",
+      "material_revision": 1,
+      "quality": "captured",
+      "session_id": "d4c48b63-f17c-52a7-aa59-7808f5b3226b",
+      "session_revision": 1,
+      "source": {
+        "assessment_id": null,
+        "content_hash": "1a44b9dbea81afe28e4105d30c3746efe5e36f3c38a42897e4907fcdaa233f69",
+        "download_status": "SUCCESS",
+        "file_format": "html",
+        "operator_selection_decision": "INCLUDE",
+        "parsing_copy_of": null,
+        "registry_kind": "sqlite_snapshot",
+        "registry_sha256": "a66be31e0b15e983866bd13333ca55c1d5548b7f83ec7bcc9ea0f64388f02724",
+        "relative_path": "C_Certification_Scheme/CS901-001_Synthetic.html",
+        "selection_origin": "human",
+        "selection_status": "INCLUDE",
+        "snapshot_id": "CS901-001",
+        "snapshot_status": "STORED",
+        "source_id": "CS901",
+        "source_status": "CURRENT"
+      },
+      "source_refs": [
+        {
+          "anchor": "original-document",
+          "scope_id": "html:document"
+        }
+      ],
+      "source_segments": [
+        {
+          "block_id": "synthetic-passage",
+          "end": 49,
+          "source_refs": [
+            {
+              "anchor": "original-document",
+              "scope_id": "html:document"
+            }
+          ],
+          "start": 0,
+          "text": "Trained staff must check equipment after a storm."
+        }
+      ],
+      "span": [
+        0,
+        49
+      ],
+      "text": "Trained staff must check equipment after a storm."
+    },
+    "sessions": [
+      {
+        "id": "d4c48b63-f17c-52a7-aa59-7808f5b3226b",
+        "revision": 1,
+        "roots": [
+          1,
+          "ea3b7786-8c98-525c-ab73-0cf81762d4cc"
+        ],
+        "units": {
+          "ea3b7786-8c98-525c-ab73-0cf81762d4cc": {
+            "Main Verb": null,
+            "Modal Verb": null,
+            "Object": null,
+            "Subject": null,
+            "conditions": null,
+            "exceptions": null,
+            "id": "ea3b7786-8c98-525c-ab73-0cf81762d4cc",
+            "subrequirement": null,
+            "text": "Trained staff must check equipment after a storm."
+          }
+        }
+      }
+    ]
+  },
+  "edited_by": "Weijie Tang",
+  "fields": {
+    "condition": {
+      "basis": "interpretation",
+      "gaps": [],
+      "references": [
+        {
+          "end": 49,
+          "id": "9caf586c2ea3676b7f2857e9901bd876:synthetic-passage",
+          "quote": "Trained staff must check equipment after a storm.",
+          "start": 0
+        }
+      ],
+      "value": "After a storm affecting the equipment."
+    },
+    "condition_information": {
+      "basis": "interpretation",
+      "gaps": [],
+      "references": [
+        {
+          "end": 49,
+          "id": "9caf586c2ea3676b7f2857e9901bd876:synthetic-passage",
+          "quote": "Trained staff must check equipment after a storm.",
+          "start": 0
+        }
+      ],
+      "value": "Identify the associated storm."
+    },
+    "demand": {
+      "basis": "interpretation",
+      "gaps": [],
+      "references": [
+        {
+          "end": 49,
+          "id": "9caf586c2ea3676b7f2857e9901bd876:synthetic-passage",
+          "quote": "Trained staff must check equipment after a storm.",
+          "start": 0
+        }
+      ],
+      "value": "Trained staff check the equipment."
+    },
+    "scope": {
+      "basis": "interpretation",
+      "gaps": [],
+      "references": [
+        {
+          "end": 49,
+          "id": "9caf586c2ea3676b7f2857e9901bd876:synthetic-passage",
+          "quote": "Trained staff must check equipment after a storm.",
+          "start": 0
+        }
+      ],
+      "value": "Equipment"
+    },
+    "scope_information": {
+      "basis": "interpretation",
+      "gaps": [],
+      "references": [
+        {
+          "end": 49,
+          "id": "9caf586c2ea3676b7f2857e9901bd876:synthetic-passage",
+          "quote": "Trained staff must check equipment after a storm.",
+          "start": 0
+        }
+      ],
+      "value": "Identify the same equipment."
+    },
+    "verification": {
+      "basis": "interpretation",
+      "gaps": [],
+      "references": [
+        {
+          "end": 49,
+          "id": "9caf586c2ea3676b7f2857e9901bd876:synthetic-passage",
+          "quote": "Trained staff must check equipment after a storm.",
+          "start": 0
+        }
+      ],
+      "value": "Check evidence for the same equipment and storm."
+    }
+  },
+  "linked_material_ids": [],
+  "logic": {
+    "boundary": "Check design only. Distinguish evidence of failure from insufficient information; no site assessment has been performed.",
+    "exceptions": [],
+    "executable": false,
+    "gaps": [],
+    "handoff": {
+      "assessment_context": "The same storm and equipment",
+      "composition": {
+        "left": "B",
+        "operator": "subset_of",
+        "right": "C"
+      },
+      "concepts": [
+        {
+          "id": "equipment",
+          "kind": "concept",
+          "label": "Equipment",
+          "references": [
+            {
+              "id": "9caf586c2ea3676b7f2857e9901bd876:synthetic-passage",
+              "quote": "equipment"
+            }
+          ],
+          "status": "confirmed"
+        }
+      ],
+      "executable": false,
+      "gaps": [
+        "scope: Unmapped predicate: Equipment covered by this inspection.",
+        "condition: Unmapped predicate: After a storm affecting the equipment.",
+        "demand: Unmapped predicate: Trained staff check the equipment.",
+        "Identity field is not specified.",
+        "Confirm mappings against the current Logic, source context and catalog."
+      ],
+      "identity_field": "",
+      "mapping_status": "incomplete",
+      "object_type": "Equipment",
+      "querybuilder": {
+        "condition": null,
+        "demand": null,
+        "scope": null
+      },
+      "schema": "requirement-set-handoff/1",
+      "sets": {
+        "A": {
+          "definition": "(Equipment covered by this inspection.)",
+          "input": "U",
+          "interpretation_field": "scope",
+          "references": [
+            {
+              "end": 49,
+              "id": "9caf586c2ea3676b7f2857e9901bd876:synthetic-passage",
+              "quote": "Trained staff must check equipment after a storm.",
+              "start": 0
+            }
+          ],
+          "resolved": true,
+          "rules": {
+            "condition": "AND",
+            "id": "scope",
+            "rules": [
+              {
+                "concept_ids": [
+                  "equipment"
+                ],
+                "expression": "Equipment covered by this inspection.",
+                "id": "scoperule",
+                "interpretation_field": "scope"
+              }
+            ]
+          }
+        },
+        "B": {
+          "definition": "(After a storm affecting the equipment.)",
+          "input": "A",
+          "interpretation_field": "condition",
+          "references": [
+            {
+              "end": 49,
+              "id": "9caf586c2ea3676b7f2857e9901bd876:synthetic-passage",
+              "quote": "Trained staff must check equipment after a storm.",
+              "start": 0
+            }
+          ],
+          "resolved": true,
+          "rules": {
+            "condition": "AND",
+            "id": "condition",
+            "rules": [
+              {
+                "concept_ids": [
+                  "equipment"
+                ],
+                "expression": "After a storm affecting the equipment.",
+                "id": "conditionrule",
+                "interpretation_field": "condition"
+              }
+            ]
+          }
+        },
+        "C": {
+          "definition": "(Trained staff check the equipment.)",
+          "input": "U",
+          "interpretation_field": "demand",
+          "references": [
+            {
+              "end": 49,
+              "id": "9caf586c2ea3676b7f2857e9901bd876:synthetic-passage",
+              "quote": "Trained staff must check equipment after a storm.",
+              "start": 0
+            }
+          ],
+          "resolved": true,
+          "rules": {
+            "condition": "AND",
+            "id": "demand",
+            "rules": [
+              {
+                "concept_ids": [
+                  "equipment"
+                ],
+                "expression": "Trained staff check the equipment.",
+                "id": "demandrule",
+                "interpretation_field": "demand"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "rule": "B is a subset of A. In the same assessment context, check B \u2286 C, where C contains objects with sufficient evidence of meeting Demand.",
+    "source_structure": {
+      "requirement": {
+        "Main Verb": null,
+        "Modal Verb": null,
+        "Object": null,
+        "Subject": null,
+        "conditions": null,
+        "exceptions": null,
+        "id": "ea3b7786-8c98-525c-ab73-0cf81762d4cc",
+        "subrequirement": null,
+        "text": "Trained staff must check equipment after a storm."
+      },
+      "sessions": [
+        {
+          "id": "d4c48b63-f17c-52a7-aa59-7808f5b3226b",
+          "revision": 1,
+          "roots": [
+            1,
+            "ea3b7786-8c98-525c-ab73-0cf81762d4cc"
+          ],
+          "units": {
+            "ea3b7786-8c98-525c-ab73-0cf81762d4cc": {
+              "Main Verb": null,
+              "Modal Verb": null,
+              "Object": null,
+              "Subject": null,
+              "conditions": null,
+              "exceptions": null,
+              "id": "ea3b7786-8c98-525c-ab73-0cf81762d4cc",
+              "subrequirement": null,
+              "text": "Trained staff must check equipment after a storm."
+            }
+          }
+        }
+      ]
+    },
+    "steps": [
+      {
+        "description": "(Equipment covered by this inspection.)",
+        "information": "Identify the same equipment.",
+        "title": "Identify Set A"
+      },
+      {
+        "description": "(After a storm affecting the equipment.)",
+        "information": "Identify the associated storm.",
+        "title": "Determine Set B within A"
+      },
+      {
+        "description": "(Trained staff check the equipment.)",
+        "information": "Check evidence for the same equipment and storm.",
+        "title": "Check Demand for each object in B"
+      }
+    ],
+    "version": 2
+  },
+  "mapping_issues": [],
+  "material_id": "9caf586c2ea3676b7f2857e9901bd876",
+  "reviewed": true,
+  "revision": 3,
+  "schema": "requirement-interpretation/1",
+  "session_id": "d4c48b63-f17c-52a7-aa59-7808f5b3226b",
+  "session_revision": 1,
+  "unit_id": "ea3b7786-8c98-525c-ab73-0cf81762d4cc",
+  "updated_at": "2026-09-21T13:45:37.698506+00:00",
+  "lineage": {
+    "actor": "Weijie Tang",
+    "unit_id": "ea3b7786-8c98-525c-ab73-0cf81762d4cc",
+    "revision": 3,
+    "session_id": "d4c48b63-f17c-52a7-aa59-7808f5b3226b",
+    "session_revision": 1,
+    "material_id": "9caf586c2ea3676b7f2857e9901bd876",
+    "material_revision": 1,
+    "block_id": "synthetic-passage",
+    "source_id": "CS901",
+    "chapter": "",
+    "start": 0,
+    "end": 49,
+    "original_text": "Trained staff must check equipment after a storm.",
+    "source_refs": [
+      {
+        "anchor": "original-document",
+        "scope_id": "html:document"
+      }
+    ],
+    "quality": "captured",
+    "source": {
+      "assessment_id": null,
+      "content_hash": "1a44b9dbea81afe28e4105d30c3746efe5e36f3c38a42897e4907fcdaa233f69",
+      "download_status": "SUCCESS",
+      "file_format": "html",
+      "operator_selection_decision": "INCLUDE",
+      "parsing_copy_of": null,
+      "registry_kind": "sqlite_snapshot",
+      "registry_sha256": "a66be31e0b15e983866bd13333ca55c1d5548b7f83ec7bcc9ea0f64388f02724",
+      "relative_path": "C_Certification_Scheme/CS901-001_Synthetic.html",
+      "selection_origin": "human",
+      "selection_status": "INCLUDE",
+      "snapshot_id": "CS901-001",
+      "snapshot_status": "STORED",
+      "source_id": "CS901",
+      "source_status": "CURRENT"
+    },
+    "source_segments": [
+      {
+        "block_id": "synthetic-passage",
+        "start": 0,
+        "end": 49,
+        "text": "Trained staff must check equipment after a storm.",
+        "source_refs": [
+          {
+            "anchor": "original-document",
+            "scope_id": "html:document"
+          }
+        ]
+      }
+    ],
+    "fields": [
+      {
+        "key": "condition",
+        "value": "After a storm affecting the equipment.",
+        "basis": "interpretation",
+        "references": [
+          {
+            "id": "9caf586c2ea3676b7f2857e9901bd876:synthetic-passage",
+            "material_id": "9caf586c2ea3676b7f2857e9901bd876",
+            "material_revision": 1,
+            "block_id": "synthetic-passage",
+            "source": {
+              "assessment_id": null,
+              "content_hash": "1a44b9dbea81afe28e4105d30c3746efe5e36f3c38a42897e4907fcdaa233f69",
+              "download_status": "SUCCESS",
+              "file_format": "html",
+              "operator_selection_decision": "INCLUDE",
+              "parsing_copy_of": null,
+              "registry_kind": "sqlite_snapshot",
+              "registry_sha256": "a66be31e0b15e983866bd13333ca55c1d5548b7f83ec7bcc9ea0f64388f02724",
+              "relative_path": "C_Certification_Scheme/CS901-001_Synthetic.html",
+              "selection_origin": "human",
+              "selection_status": "INCLUDE",
+              "snapshot_id": "CS901-001",
+              "snapshot_status": "STORED",
+              "source_id": "CS901",
+              "source_status": "CURRENT"
+            },
+            "source_refs": [
+              {
+                "anchor": "original-document",
+                "scope_id": "html:document"
+              }
+            ],
+            "quote": "Trained staff must check equipment after a storm.",
+            "start": 0,
+            "end": 49,
+            "anchor_status": "exact"
+          }
+        ]
+      },
+      {
+        "key": "condition_information",
+        "value": "Identify the associated storm.",
+        "basis": "interpretation",
+        "references": [
+          {
+            "id": "9caf586c2ea3676b7f2857e9901bd876:synthetic-passage",
+            "material_id": "9caf586c2ea3676b7f2857e9901bd876",
+            "material_revision": 1,
+            "block_id": "synthetic-passage",
+            "source": {
+              "assessment_id": null,
+              "content_hash": "1a44b9dbea81afe28e4105d30c3746efe5e36f3c38a42897e4907fcdaa233f69",
+              "download_status": "SUCCESS",
+              "file_format": "html",
+              "operator_selection_decision": "INCLUDE",
+              "parsing_copy_of": null,
+              "registry_kind": "sqlite_snapshot",
+              "registry_sha256": "a66be31e0b15e983866bd13333ca55c1d5548b7f83ec7bcc9ea0f64388f02724",
+              "relative_path": "C_Certification_Scheme/CS901-001_Synthetic.html",
+              "selection_origin": "human",
+              "selection_status": "INCLUDE",
+              "snapshot_id": "CS901-001",
+              "snapshot_status": "STORED",
+              "source_id": "CS901",
+              "source_status": "CURRENT"
+            },
+            "source_refs": [
+              {
+                "anchor": "original-document",
+                "scope_id": "html:document"
+              }
+            ],
+            "quote": "Trained staff must check equipment after a storm.",
+            "start": 0,
+            "end": 49,
+            "anchor_status": "exact"
+          }
+        ]
+      },
+      {
+        "key": "demand",
+        "value": "Trained staff check the equipment.",
+        "basis": "interpretation",
+        "references": [
+          {
+            "id": "9caf586c2ea3676b7f2857e9901bd876:synthetic-passage",
+            "material_id": "9caf586c2ea3676b7f2857e9901bd876",
+            "material_revision": 1,
+            "block_id": "synthetic-passage",
+            "source": {
+              "assessment_id": null,
+              "content_hash": "1a44b9dbea81afe28e4105d30c3746efe5e36f3c38a42897e4907fcdaa233f69",
+              "download_status": "SUCCESS",
+              "file_format": "html",
+              "operator_selection_decision": "INCLUDE",
+              "parsing_copy_of": null,
+              "registry_kind": "sqlite_snapshot",
+              "registry_sha256": "a66be31e0b15e983866bd13333ca55c1d5548b7f83ec7bcc9ea0f64388f02724",
+              "relative_path": "C_Certification_Scheme/CS901-001_Synthetic.html",
+              "selection_origin": "human",
+              "selection_status": "INCLUDE",
+              "snapshot_id": "CS901-001",
+              "snapshot_status": "STORED",
+              "source_id": "CS901",
+              "source_status": "CURRENT"
+            },
+            "source_refs": [
+              {
+                "anchor": "original-document",
+                "scope_id": "html:document"
+              }
+            ],
+            "quote": "Trained staff must check equipment after a storm.",
+            "start": 0,
+            "end": 49,
+            "anchor_status": "exact"
+          }
+        ]
+      },
+      {
+        "key": "scope",
+        "value": "Equipment",
+        "basis": "interpretation",
+        "references": [
+          {
+            "id": "9caf586c2ea3676b7f2857e9901bd876:synthetic-passage",
+            "material_id": "9caf586c2ea3676b7f2857e9901bd876",
+            "material_revision": 1,
+            "block_id": "synthetic-passage",
+            "source": {
+              "assessment_id": null,
+              "content_hash": "1a44b9dbea81afe28e4105d30c3746efe5e36f3c38a42897e4907fcdaa233f69",
+              "download_status": "SUCCESS",
+              "file_format": "html",
+              "operator_selection_decision": "INCLUDE",
+              "parsing_copy_of": null,
+              "registry_kind": "sqlite_snapshot",
+              "registry_sha256": "a66be31e0b15e983866bd13333ca55c1d5548b7f83ec7bcc9ea0f64388f02724",
+              "relative_path": "C_Certification_Scheme/CS901-001_Synthetic.html",
+              "selection_origin": "human",
+              "selection_status": "INCLUDE",
+              "snapshot_id": "CS901-001",
+              "snapshot_status": "STORED",
+              "source_id": "CS901",
+              "source_status": "CURRENT"
+            },
+            "source_refs": [
+              {
+                "anchor": "original-document",
+                "scope_id": "html:document"
+              }
+            ],
+            "quote": "Trained staff must check equipment after a storm.",
+            "start": 0,
+            "end": 49,
+            "anchor_status": "exact"
+          }
+        ]
+      },
+      {
+        "key": "scope_information",
+        "value": "Identify the same equipment.",
+        "basis": "interpretation",
+        "references": [
+          {
+            "id": "9caf586c2ea3676b7f2857e9901bd876:synthetic-passage",
+            "material_id": "9caf586c2ea3676b7f2857e9901bd876",
+            "material_revision": 1,
+            "block_id": "synthetic-passage",
+            "source": {
+              "assessment_id": null,
+              "content_hash": "1a44b9dbea81afe28e4105d30c3746efe5e36f3c38a42897e4907fcdaa233f69",
+              "download_status": "SUCCESS",
+              "file_format": "html",
+              "operator_selection_decision": "INCLUDE",
+              "parsing_copy_of": null,
+              "registry_kind": "sqlite_snapshot",
+              "registry_sha256": "a66be31e0b15e983866bd13333ca55c1d5548b7f83ec7bcc9ea0f64388f02724",
+              "relative_path": "C_Certification_Scheme/CS901-001_Synthetic.html",
+              "selection_origin": "human",
+              "selection_status": "INCLUDE",
+              "snapshot_id": "CS901-001",
+              "snapshot_status": "STORED",
+              "source_id": "CS901",
+              "source_status": "CURRENT"
+            },
+            "source_refs": [
+              {
+                "anchor": "original-document",
+                "scope_id": "html:document"
+              }
+            ],
+            "quote": "Trained staff must check equipment after a storm.",
+            "start": 0,
+            "end": 49,
+            "anchor_status": "exact"
+          }
+        ]
+      },
+      {
+        "key": "verification",
+        "value": "Check evidence for the same equipment and storm.",
+        "basis": "interpretation",
+        "references": [
+          {
+            "id": "9caf586c2ea3676b7f2857e9901bd876:synthetic-passage",
+            "material_id": "9caf586c2ea3676b7f2857e9901bd876",
+            "material_revision": 1,
+            "block_id": "synthetic-passage",
+            "source": {
+              "assessment_id": null,
+              "content_hash": "1a44b9dbea81afe28e4105d30c3746efe5e36f3c38a42897e4907fcdaa233f69",
+              "download_status": "SUCCESS",
+              "file_format": "html",
+              "operator_selection_decision": "INCLUDE",
+              "parsing_copy_of": null,
+              "registry_kind": "sqlite_snapshot",
+              "registry_sha256": "a66be31e0b15e983866bd13333ca55c1d5548b7f83ec7bcc9ea0f64388f02724",
+              "relative_path": "C_Certification_Scheme/CS901-001_Synthetic.html",
+              "selection_origin": "human",
+              "selection_status": "INCLUDE",
+              "snapshot_id": "CS901-001",
+              "snapshot_status": "STORED",
+              "source_id": "CS901",
+              "source_status": "CURRENT"
+            },
+            "source_refs": [
+              {
+                "anchor": "original-document",
+                "scope_id": "html:document"
+              }
+            ],
+            "quote": "Trained staff must check equipment after a storm.",
+            "start": 0,
+            "end": 49,
+            "anchor_status": "exact"
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "id": "condition",
+        "group": "condition",
+        "parent_id": null,
+        "field_key": null,
+        "rule": {
+          "condition": "AND",
+          "id": "condition",
+          "rules": [
+            {
+              "concept_ids": [
+                "equipment"
+              ],
+              "expression": "After a storm affecting the equipment.",
+              "id": "conditionrule",
+              "interpretation_field": "condition"
+            }
+          ]
+        }
+      },
+      {
+        "id": "conditionrule",
+        "group": "condition",
+        "parent_id": "condition",
+        "field_key": "condition",
+        "rule": {
+          "concept_ids": [
+            "equipment"
+          ],
+          "expression": "After a storm affecting the equipment.",
+          "id": "conditionrule",
+          "interpretation_field": "condition"
+        }
+      },
+      {
+        "id": "demand",
+        "group": "demand",
+        "parent_id": null,
+        "field_key": null,
+        "rule": {
+          "condition": "AND",
+          "id": "demand",
+          "rules": [
+            {
+              "concept_ids": [
+                "equipment"
+              ],
+              "expression": "Trained staff check the equipment.",
+              "id": "demandrule",
+              "interpretation_field": "demand"
+            }
+          ]
+        }
+      },
+      {
+        "id": "demandrule",
+        "group": "demand",
+        "parent_id": "demand",
+        "field_key": "demand",
+        "rule": {
+          "concept_ids": [
+            "equipment"
+          ],
+          "expression": "Trained staff check the equipment.",
+          "id": "demandrule",
+          "interpretation_field": "demand"
+        }
+      },
+      {
+        "id": "scope",
+        "group": "scope",
+        "parent_id": null,
+        "field_key": null,
+        "rule": {
+          "condition": "AND",
+          "id": "scope",
+          "rules": [
+            {
+              "concept_ids": [
+                "equipment"
+              ],
+              "expression": "Equipment covered by this inspection.",
+              "id": "scoperule",
+              "interpretation_field": "scope"
+            }
+          ]
+        }
+      },
+      {
+        "id": "scoperule",
+        "group": "scope",
+        "parent_id": "scope",
+        "field_key": "scope",
+        "rule": {
+          "concept_ids": [
+            "equipment"
+          ],
+          "expression": "Equipment covered by this inspection.",
+          "id": "scoperule",
+          "interpretation_field": "scope"
+        }
+      }
+    ],
+    "concepts": [
+      {
+        "id": "equipment",
+        "kind": "concept",
+        "label": "Equipment",
+        "references": [
+          {
+            "id": "9caf586c2ea3676b7f2857e9901bd876:synthetic-passage",
+            "quote": "equipment"
+          }
+        ],
+        "status": "confirmed"
+      }
+    ],
+    "context_manifest": [
+      {
+        "id": "9caf586c2ea3676b7f2857e9901bd876",
+        "revision": 1,
+        "source": {
+          "assessment_id": null,
+          "content_hash": "1a44b9dbea81afe28e4105d30c3746efe5e36f3c38a42897e4907fcdaa233f69",
+          "download_status": "SUCCESS",
+          "file_format": "html",
+          "operator_selection_decision": "INCLUDE",
+          "parsing_copy_of": null,
+          "registry_kind": "sqlite_snapshot",
+          "registry_sha256": "a66be31e0b15e983866bd13333ca55c1d5548b7f83ec7bcc9ea0f64388f02724",
+          "relative_path": "C_Certification_Scheme/CS901-001_Synthetic.html",
+          "selection_origin": "human",
+          "selection_status": "INCLUDE",
+          "snapshot_id": "CS901-001",
+          "snapshot_status": "STORED",
+          "source_id": "CS901",
+          "source_status": "CURRENT"
+        }
+      }
+    ],
+    "status": "saved",
+    "text_kind": "saved-extracted-passage"
+  },
+  "impact": {
+    "status": "current",
+    "items": [],
+    "message": "Review affected fields and mappings. Uncited context changes still require a contextual review; no automatic semantic decision is made."
+  },
+  "catalog": {
+    "schema": "site-field-catalog/1",
+    "revision": 0,
+    "fields": [],
+    "actor": null
+  },
+  "querybuilder": {
+    "condition": null,
+    "demand": null,
+    "scope": null
+  },
+  "stale": false,
+  "context": {
+    "requirement": {
+      "Main Verb": null,
+      "Modal Verb": null,
+      "Object": null,
+      "Subject": null,
+      "conditions": null,
+      "exceptions": null,
+      "id": "ea3b7786-8c98-525c-ab73-0cf81762d4cc",
+      "subrequirement": null,
+      "text": "Trained staff must check equipment after a storm."
+    },
+    "session_id": "d4c48b63-f17c-52a7-aa59-7808f5b3226b",
+    "session_revision": 1,
+    "material_id": "9caf586c2ea3676b7f2857e9901bd876",
+    "materials": [
+      {
+        "id": "9caf586c2ea3676b7f2857e9901bd876",
+        "title": "Synthetic test source 1",
+        "source": {
+          "assessment_id": null,
+          "content_hash": "1a44b9dbea81afe28e4105d30c3746efe5e36f3c38a42897e4907fcdaa233f69",
+          "download_status": "SUCCESS",
+          "file_format": "html",
+          "operator_selection_decision": "INCLUDE",
+          "parsing_copy_of": null,
+          "registry_kind": "sqlite_snapshot",
+          "registry_sha256": "a66be31e0b15e983866bd13333ca55c1d5548b7f83ec7bcc9ea0f64388f02724",
+          "relative_path": "C_Certification_Scheme/CS901-001_Synthetic.html",
+          "selection_origin": "human",
+          "selection_status": "INCLUDE",
+          "snapshot_id": "CS901-001",
+          "snapshot_status": "STORED",
+          "source_id": "CS901",
+          "source_status": "CURRENT"
+        },
+        "revision": 1,
+        "review_status": "draft",
+        "source_stale": false,
+        "blocks": [
+          {
+            "id": "synthetic-passage",
+            "source_refs": [
+              {
+                "anchor": "original-document",
+                "scope_id": "html:document"
+              }
+            ],
+            "text": "Trained staff must check equipment after a storm.",
+            "type": "text"
+          }
+        ],
+        "document_information": {
+          "title": {
+            "label": "Title",
+            "value": "Inspection",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > article:nth-of-type(1) > h1:nth-of-type(1)",
+            "anchor": "original-a5676cd2e0dff813"
+          },
+          "fields": [],
+          "origin": "saved-original"
+        },
+        "confidential": false
+      }
+    ],
+    "citations": [
+      {
+        "id": "9caf586c2ea3676b7f2857e9901bd876:document-information:0",
+        "text": "Inspection",
+        "material_id": "9caf586c2ea3676b7f2857e9901bd876",
+        "block_id": null,
+        "source_refs": [
+          {
+            "anchor": "original-a5676cd2e0dff813",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > article:nth-of-type(1) > h1:nth-of-type(1)"
+          }
+        ]
+      },
+      {
+        "id": "9caf586c2ea3676b7f2857e9901bd876:synthetic-passage",
+        "text": "Trained staff must check equipment after a storm.",
+        "material_id": "9caf586c2ea3676b7f2857e9901bd876",
+        "block_id": "synthetic-passage",
+        "source_refs": [
+          {
+            "anchor": "original-document",
+            "scope_id": "html:document"
+          }
+        ]
+      }
+    ],
+    "sessions": [
+      {
+        "id": "d4c48b63-f17c-52a7-aa59-7808f5b3226b",
+        "revision": 1,
+        "units": {
+          "ea3b7786-8c98-525c-ab73-0cf81762d4cc": {
+            "Main Verb": null,
+            "Modal Verb": null,
+            "Object": null,
+            "Subject": null,
+            "conditions": null,
+            "exceptions": null,
+            "id": "ea3b7786-8c98-525c-ab73-0cf81762d4cc",
+            "subrequirement": null,
+            "text": "Trained staff must check equipment after a storm."
+          }
+        },
+        "roots": [
+          1,
+          "ea3b7786-8c98-525c-ab73-0cf81762d4cc"
+        ]
+      }
+    ],
+    "exceptions": [],
+    "limitations": [
+      "Saved text is not proof of complete or reviewed legislation. Missing annexes and unresolved references must remain gaps."
+    ],
+    "origin": {
+      "session_id": "d4c48b63-f17c-52a7-aa59-7808f5b3226b",
+      "session_revision": 1,
+      "material_id": "9caf586c2ea3676b7f2857e9901bd876",
+      "material_revision": 1,
+      "block_id": "synthetic-passage",
+      "source": {
+        "assessment_id": null,
+        "content_hash": "1a44b9dbea81afe28e4105d30c3746efe5e36f3c38a42897e4907fcdaa233f69",
+        "download_status": "SUCCESS",
+        "file_format": "html",
+        "operator_selection_decision": "INCLUDE",
+        "parsing_copy_of": null,
+        "registry_kind": "sqlite_snapshot",
+        "registry_sha256": "a66be31e0b15e983866bd13333ca55c1d5548b7f83ec7bcc9ea0f64388f02724",
+        "relative_path": "C_Certification_Scheme/CS901-001_Synthetic.html",
+        "selection_origin": "human",
+        "selection_status": "INCLUDE",
+        "snapshot_id": "CS901-001",
+        "snapshot_status": "STORED",
+        "source_id": "CS901",
+        "source_status": "CURRENT"
+      },
+      "chapter": "",
+      "span": [
+        0,
+        49
+      ],
+      "text": "Trained staff must check equipment after a storm.",
+      "source_refs": [
+        {
+          "anchor": "original-document",
+          "scope_id": "html:document"
+        }
+      ],
+      "quality": "captured",
+      "source_segments": [
+        {
+          "block_id": "synthetic-passage",
+          "end": 49,
+          "source_refs": [
+            {
+              "anchor": "original-document",
+              "scope_id": "html:document"
+            }
+          ],
+          "start": 0,
+          "text": "Trained staff must check equipment after a storm."
+        }
+      ]
+    },
+    "fingerprint": "703306a2fd5e6b17522e088b60b0a355bf7021daf96219869984997e5a51cb9d"
+  },
+  "history": [
+    {
+      "revision": 3,
+      "action": "review",
+      "at": "2026-09-21T13:45:37.699050+00:00",
+      "edited_by": "Weijie Tang"
+    },
+    {
+      "revision": 2,
+      "action": "save",
+      "at": "2026-09-21T13:45:20.559873+00:00",
+      "edited_by": "Weijie Tang"
+    },
+    {
+      "revision": 1,
+      "action": "save",
+      "at": "2026-09-21T13:40:33.033085+00:00",
+      "edited_by": "Weijie Tang"
+    }
+  ],
+  "provider": {
+    "revision": 0,
+    "enabled": false,
+    "endpoint": "",
+    "model": "",
+    "max_bytes": 500000,
+    "timeout": 90,
+    "has_key": false,
+    "available": false,
+    "status": "Not connected",
+    "destination": "",
+    "reason": "Set up the shared API in Settings \u2192 AI service. Manual editing remains available."
+  },
+  "runs": []
+}

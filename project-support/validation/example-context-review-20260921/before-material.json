@@ -1,0 +1,2019 @@
+{
+  "association_review_required": false,
+  "blocks": [
+    {
+      "dependencies": [],
+      "id": "block-4bd701c877bda45724384ff6",
+      "level": 1,
+      "markdown_source": "# example",
+      "numbering": "",
+      "parent_id": null,
+      "source_refs": [
+        {
+          "anchor": "original-50b64e4a372c9bb4",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > h1:nth-of-type(1)",
+          "scope_id": "html:document"
+        }
+      ],
+      "text": "example",
+      "type": "heading"
+    },
+    {
+      "dependencies": [
+        "block-4bd701c877bda45724384ff6"
+      ],
+      "id": "block-9b2367c1618248920aee26a8",
+      "level": 1,
+      "markdown_source": "Three English excerpts for Workbench training. These working translations are not official English legal texts.",
+      "numbering": "",
+      "parent_id": "block-4bd701c877bda45724384ff6",
+      "source_refs": [
+        {
+          "anchor": "original-ba8bfb5569299e4e",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > p:nth-of-type(1)",
+          "scope_id": "html:document"
+        }
+      ],
+      "text": "Three English excerpts for Workbench training. These working translations are not official English legal texts.",
+      "type": "text"
+    },
+    {
+      "dependencies": [
+        "block-4bd701c877bda45724384ff6"
+      ],
+      "id": "block-4e225735ccca99d6e7fcb6dc",
+      "level": 2,
+      "markdown_source": "## Example 1. Sea lice",
+      "numbering": "",
+      "parent_id": "block-4bd701c877bda45724384ff6",
+      "source_refs": [
+        {
+          "anchor": "original-6137062c739696d1",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > h2:nth-of-type(1)",
+          "scope_id": "html:document"
+        }
+      ],
+      "text": "Example 1. Sea lice",
+      "type": "heading"
+    },
+    {
+      "dependencies": [
+        "block-4e225735ccca99d6e7fcb6dc"
+      ],
+      "id": "block-b6adb4f2418740a1cb408287",
+      "level": 1,
+      "markdown_source": "Seawater temperature at a depth of three metres shall be measured at least once every week.",
+      "numbering": "",
+      "parent_id": "block-4e225735ccca99d6e7fcb6dc",
+      "source_refs": [
+        {
+          "anchor": "original-8cfee12b17715ab8",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > p:nth-of-type(1)",
+          "scope_id": "html:document"
+        }
+      ],
+      "text": "Seawater temperature at a depth of three metres shall be measured at least once every week.",
+      "type": "text"
+    },
+    {
+      "dependencies": [
+        "block-4e225735ccca99d6e7fcb6dc"
+      ],
+      "id": "block-48d3e390b9e89451b0b69527",
+      "markdown": {
+        "baseline": "The number of sea lice shall be counted at least every 7 days at temperatures equal to or above 4\u00b0C, and at least every 14 days at temperatures below 4\u00b0C. Broodstock are exempt from the counting requirement at temperatures below 4\u00b0C. Sea lice counting shall be carried out in accordance with the requirements of Annex 1.",
+        "original": {
+          "dependencies": [
+            "block-4e225735ccca99d6e7fcb6dc"
+          ],
+          "id": "block-48d3e390b9e89451b0b69527",
+          "level": 1,
+          "markdown_source": "The number of sea lice shall be counted at least every 7 days at temperatures equal to or above 4\u00b0C, and at least every 14 days at temperatures below 4\u00b0C. Broodstock are exempt from the counting requirement at temperatures below 4\u00b0C. Sea lice counting shall be carried out in accordance with the requirements of Annex 1.",
+          "numbering": "",
+          "parent_id": "block-4e225735ccca99d6e7fcb6dc",
+          "source_refs": [
+            {
+              "anchor": "original-44e53a8f85f208e3",
+              "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > p:nth-of-type(2)",
+              "scope_id": "html:document"
+            }
+          ],
+          "text": "The number of sea lice shall be counted at least every 7 days at temperatures equal to or above 4\u00b0C, and at least every 14 days at temperatures below 4\u00b0C. Broodstock are exempt from the counting requirement at temperatures below 4\u00b0C. Sea lice counting shall be carried out in accordance with the requirements of Annex 1.",
+          "type": "text"
+        },
+        "source": "The number of sea lice shall be counted at least every 7 days at temperatures equal to or above 4\u00b0C, and at least every 14 days at temperatures below 4\u00b0C.",
+        "version": 1
+      },
+      "markdown_source": "The number of sea lice shall be counted at least every 7 days at temperatures equal to or above 4\u00b0C, and at least every 14 days at temperatures below 4\u00b0C. Broodstock are exempt from the counting requirement at temperatures below 4\u00b0C. Sea lice counting shall be carried out in accordance with the requirements of Annex 1.",
+      "numbering": "",
+      "parent_id": "block-4e225735ccca99d6e7fcb6dc",
+      "source_refs": [
+        {
+          "anchor": "original-44e53a8f85f208e3",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > p:nth-of-type(2)",
+          "scope_id": "html:document"
+        }
+      ],
+      "text": "The number of sea lice shall be counted at least every 7 days at temperatures equal to or above 4\u00b0C, and at least every 14 days at temperatures below 4\u00b0C.",
+      "type": "text"
+    },
+    {
+      "dependencies": [],
+      "id": "56a328f1-72ea-4fc1-a6fc-fb7339115a21",
+      "markdown": {
+        "added": true,
+        "baseline": "",
+        "source": "Broodstock are exempt from the counting requirement at temperatures below 4\u00b0C.",
+        "version": 1
+      },
+      "numbering": "",
+      "parent_id": "block-4e225735ccca99d6e7fcb6dc",
+      "source_refs": [
+        {
+          "anchor": "original-44e53a8f85f208e3",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > p:nth-of-type(2)",
+          "scope_id": "html:document"
+        }
+      ],
+      "text": "Broodstock are exempt from the counting requirement at temperatures below 4\u00b0C.",
+      "type": "text"
+    },
+    {
+      "dependencies": [],
+      "id": "a4b3376d-7e22-43c5-aea1-027b5e4453d5",
+      "markdown": {
+        "added": true,
+        "baseline": "",
+        "source": "Sea lice counting shall be carried out in accordance with the requirements of Annex 1.",
+        "version": 1
+      },
+      "numbering": "",
+      "parent_id": "block-4e225735ccca99d6e7fcb6dc",
+      "source_refs": [
+        {
+          "anchor": "original-44e53a8f85f208e3",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > p:nth-of-type(2)",
+          "scope_id": "html:document"
+        }
+      ],
+      "text": "Sea lice counting shall be carried out in accordance with the requirements of Annex 1.",
+      "type": "text"
+    },
+    {
+      "dependencies": [
+        "block-4bd701c877bda45724384ff6"
+      ],
+      "id": "block-a73175fc735c5457147c15b2",
+      "level": 2,
+      "markdown_source": "## Example 2. Operational journal",
+      "numbering": "",
+      "parent_id": "block-4bd701c877bda45724384ff6",
+      "source_refs": [
+        {
+          "anchor": "original-64db7926573dc818",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > h2:nth-of-type(1)",
+          "scope_id": "html:document"
+        }
+      ],
+      "text": "Example 2. Operational journal",
+      "type": "heading"
+    },
+    {
+      "dependencies": [
+        "block-a73175fc735c5457147c15b2"
+      ],
+      "id": "block-944b2ab386bd1cae0a9ac4ee",
+      "level": 1,
+      "markdown_source": "For aquaculture establishments that are not subject to specific record-keeping provisions in Chapters 4, 5 and 6, the operational journal shall at a minimum contain updated information on:",
+      "numbering": "",
+      "parent_id": "block-a73175fc735c5457147c15b2",
+      "source_refs": [
+        {
+          "anchor": "original-aebe7e5b5c113a35",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > p:nth-of-type(1)",
+          "scope_id": "html:document"
+        }
+      ],
+      "text": "For aquaculture establishments that are not subject to specific record-keeping provisions in Chapters 4, 5 and 6, the operational journal shall at a minimum contain updated information on:",
+      "type": "text"
+    },
+    {
+      "dependencies": [
+        "block-a73175fc735c5457147c15b2"
+      ],
+      "id": "block-9c43189559dd3d1a7922b890",
+      "level": 1,
+      "list_depth": 0,
+      "markdown_source": "- aquaculture animals and aquaculture animal products brought into and removed from the aquaculture establishment, including place of origin and place of destination,",
+      "numbering": "",
+      "parent_id": "block-a73175fc735c5457147c15b2",
+      "source_refs": [
+        {
+          "anchor": "original-aba48ed293d13d3a",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "scope_id": "html:document"
+        }
+      ],
+      "text": "aquaculture animals and aquaculture animal products brought into and removed from the aquaculture establishment, including place of origin and place of destination,",
+      "type": "text"
+    },
+    {
+      "dependencies": [
+        "block-a73175fc735c5457147c15b2"
+      ],
+      "id": "block-0600dc88c124c7aba766cf8f",
+      "level": 1,
+      "list_depth": 0,
+      "markdown_source": "- mortality per production unit relevant to the production method, and",
+      "numbering": "",
+      "parent_id": "block-a73175fc735c5457147c15b2",
+      "source_refs": [
+        {
+          "anchor": "original-55ea4842d395456f",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(2)",
+          "scope_id": "html:document"
+        }
+      ],
+      "text": "mortality per production unit relevant to the production method, and",
+      "type": "text"
+    },
+    {
+      "dependencies": [
+        "block-a73175fc735c5457147c15b2"
+      ],
+      "id": "block-b0c9bb1aaab00f045c28d8ff",
+      "level": 1,
+      "list_depth": 0,
+      "markdown_source": "- results of completed health inspections: number of completed health inspections, sampling, examinations performed, diagnoses and treatments carried out.",
+      "numbering": "",
+      "parent_id": "block-a73175fc735c5457147c15b2",
+      "source_refs": [
+        {
+          "anchor": "original-d6402813b47d9650",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(3)",
+          "scope_id": "html:document"
+        }
+      ],
+      "text": "results of completed health inspections: number of completed health inspections, sampling, examinations performed, diagnoses and treatments carried out.",
+      "type": "text"
+    },
+    {
+      "dependencies": [
+        "block-4bd701c877bda45724384ff6"
+      ],
+      "id": "block-6f978817febd1fed19b12594",
+      "level": 2,
+      "markdown_source": "## Example 3. Internal control",
+      "numbering": "",
+      "parent_id": "block-4bd701c877bda45724384ff6",
+      "source_refs": [
+        {
+          "anchor": "original-fcd4b52b242747ff",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > h2:nth-of-type(1)",
+          "scope_id": "html:document"
+        }
+      ],
+      "text": "Example 3. Internal control",
+      "type": "heading"
+    },
+    {
+      "dependencies": [
+        "block-6f978817febd1fed19b12594"
+      ],
+      "id": "block-4809101dc7369b38b3b0f9f8",
+      "level": 3,
+      "markdown_source": "### \u00a7 5. Content of internal control",
+      "numbering": "\u00a7 5",
+      "parent_id": "block-6f978817febd1fed19b12594",
+      "source_refs": [
+        {
+          "anchor": "original-02d6932150a98b3d",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > h3:nth-of-type(1)",
+          "scope_id": "html:document"
+        }
+      ],
+      "text": "\u00a7 5. Content of internal control",
+      "type": "heading"
+    },
+    {
+      "dependencies": [
+        "block-4809101dc7369b38b3b0f9f8"
+      ],
+      "id": "block-2706fe2a996db40cc06c2428",
+      "level": 1,
+      "markdown_source": "Internal control shall be adapted to the nature, activities, risk conditions and size of the undertaking to the extent necessary to comply with requirements laid down in or pursuant to aquaculture legislation.",
+      "numbering": "",
+      "parent_id": "block-4809101dc7369b38b3b0f9f8",
+      "source_refs": [
+        {
+          "anchor": "original-f96d1b6b0032ede1",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > p:nth-of-type(1)",
+          "scope_id": "html:document"
+        }
+      ],
+      "text": "Internal control shall be adapted to the nature, activities, risk conditions and size of the undertaking to the extent necessary to comply with requirements laid down in or pursuant to aquaculture legislation.",
+      "type": "text"
+    },
+    {
+      "dependencies": [
+        "block-4809101dc7369b38b3b0f9f8"
+      ],
+      "id": "block-8f1718a95932981281fd1922",
+      "level": 1,
+      "markdown_source": "If the undertaking consists of several operating units, internal control shall be adapted to each individual operating unit.",
+      "numbering": "",
+      "parent_id": "block-4809101dc7369b38b3b0f9f8",
+      "source_refs": [
+        {
+          "anchor": "original-b9e49529aa46c8e8",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > p:nth-of-type(2)",
+          "scope_id": "html:document"
+        }
+      ],
+      "text": "If the undertaking consists of several operating units, internal control shall be adapted to each individual operating unit.",
+      "type": "text"
+    },
+    {
+      "dependencies": [
+        "block-4809101dc7369b38b3b0f9f8"
+      ],
+      "id": "block-7196a3868a1f624d4aea9da0",
+      "level": 1,
+      "markdown_source": "Internal control entails:",
+      "numbering": "",
+      "parent_id": "block-4809101dc7369b38b3b0f9f8",
+      "source_refs": [
+        {
+          "anchor": "original-22a170b94009b55f",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > p:nth-of-type(3)",
+          "scope_id": "html:document"
+        }
+      ],
+      "text": "Internal control entails:",
+      "type": "text"
+    },
+    {
+      "dependencies": [
+        "block-4809101dc7369b38b3b0f9f8"
+      ],
+      "id": "block-8057218d71950708280e4541",
+      "level": 1,
+      "list_depth": 0,
+      "markdown_source": "1. ensuring that the acts and regulations within aquaculture legislation that apply to the undertaking are available, and maintaining an overview of the requirements that apply to the undertaking;",
+      "numbering": "",
+      "parent_id": "block-4809101dc7369b38b3b0f9f8",
+      "source_refs": [
+        {
+          "anchor": "original-d6372e5897584050",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > ol:nth-of-type(1) > li:nth-of-type(1)",
+          "scope_id": "html:document"
+        }
+      ],
+      "text": "ensuring that the acts and regulations within aquaculture legislation that apply to the undertaking are available, and maintaining an overview of the requirements that apply to the undertaking;",
+      "type": "text"
+    },
+    {
+      "dependencies": [
+        "block-4809101dc7369b38b3b0f9f8"
+      ],
+      "id": "block-f706eb4bb8d07e1be36c26f6",
+      "level": 1,
+      "list_depth": 0,
+      "markdown_source": "2. maintaining an overview of the undertaking's organisation, including how responsibilities, tasks and authority relating to compliance with aquaculture legislation are allocated within the undertaking;",
+      "numbering": "",
+      "parent_id": "block-4809101dc7369b38b3b0f9f8",
+      "source_refs": [
+        {
+          "anchor": "original-768a1f7c21f345fe",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > ol:nth-of-type(1) > li:nth-of-type(2)",
+          "scope_id": "html:document"
+        }
+      ],
+      "text": "maintaining an overview of the undertaking's organisation, including how responsibilities, tasks and authority relating to compliance with aquaculture legislation are allocated within the undertaking;",
+      "type": "text"
+    },
+    {
+      "dependencies": [
+        "block-4809101dc7369b38b3b0f9f8"
+      ],
+      "id": "block-cb25c878e2566ec7f15d9049",
+      "level": 1,
+      "list_depth": 0,
+      "markdown_source": "3. ensuring that employees have sufficient and up-to-date knowledge and skills relating to the undertaking's internal control;",
+      "numbering": "",
+      "parent_id": "block-4809101dc7369b38b3b0f9f8",
+      "source_refs": [
+        {
+          "anchor": "original-a5aa7019adca39b9",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > ol:nth-of-type(1) > li:nth-of-type(3)",
+          "scope_id": "html:document"
+        }
+      ],
+      "text": "ensuring that employees have sufficient and up-to-date knowledge and skills relating to the undertaking's internal control;",
+      "type": "text"
+    },
+    {
+      "dependencies": [
+        "block-4809101dc7369b38b3b0f9f8"
+      ],
+      "id": "block-98770d3898f779fe2a6f480d",
+      "level": 1,
+      "list_depth": 0,
+      "markdown_source": "4. ensuring that employees participate so that their collective knowledge and experience are utilised;",
+      "numbering": "",
+      "parent_id": "block-4809101dc7369b38b3b0f9f8",
+      "source_refs": [
+        {
+          "anchor": "original-c5a7c12e93b93d0d",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > ol:nth-of-type(1) > li:nth-of-type(4)",
+          "scope_id": "html:document"
+        }
+      ],
+      "text": "ensuring that employees participate so that their collective knowledge and experience are utilised;",
+      "type": "text"
+    },
+    {
+      "dependencies": [
+        "block-4809101dc7369b38b3b0f9f8"
+      ],
+      "id": "block-9be5ecb84d18a382735efef5",
+      "level": 1,
+      "list_depth": 0,
+      "markdown_source": "5. establishing overall objectives with corresponding specific and evaluable sub-objectives for internal control work, and drawing up plans and measures to achieve those objectives;",
+      "numbering": "",
+      "parent_id": "block-4809101dc7369b38b3b0f9f8",
+      "source_refs": [
+        {
+          "anchor": "original-7df54b852971d63a",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > ol:nth-of-type(1) > li:nth-of-type(5)",
+          "scope_id": "html:document"
+        }
+      ],
+      "text": "establishing overall objectives with corresponding specific and evaluable sub-objectives for internal control work, and drawing up plans and measures to achieve those objectives;",
+      "type": "text"
+    },
+    {
+      "dependencies": [
+        "block-4809101dc7369b38b3b0f9f8"
+      ],
+      "id": "block-b9acb390095d1fb4bd8eb291",
+      "level": 1,
+      "list_depth": 0,
+      "markdown_source": "6. identifying hazards and problems and, on that basis, assessing risk, and drawing up corresponding plans and measures to reduce the risks;",
+      "numbering": "",
+      "parent_id": "block-4809101dc7369b38b3b0f9f8",
+      "source_refs": [
+        {
+          "anchor": "original-dd41343ff507eedb",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > ol:nth-of-type(1) > li:nth-of-type(6)",
+          "scope_id": "html:document"
+        }
+      ],
+      "text": "identifying hazards and problems and, on that basis, assessing risk, and drawing up corresponding plans and measures to reduce the risks;",
+      "type": "text"
+    },
+    {
+      "dependencies": [
+        "block-4809101dc7369b38b3b0f9f8"
+      ],
+      "id": "block-44ca090aa0781d8fb2e9693c",
+      "level": 1,
+      "list_depth": 0,
+      "markdown_source": "7. implementing procedures to prevent, detect and correct non-compliance with requirements laid down in or pursuant to aquaculture legislation; and",
+      "numbering": "",
+      "parent_id": "block-4809101dc7369b38b3b0f9f8",
+      "source_refs": [
+        {
+          "anchor": "original-8ae36b07094eeb7a",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > ol:nth-of-type(1) > li:nth-of-type(7)",
+          "scope_id": "html:document"
+        }
+      ],
+      "text": "implementing procedures to prevent, detect and correct non-compliance with requirements laid down in or pursuant to aquaculture legislation; and",
+      "type": "text"
+    },
+    {
+      "dependencies": [
+        "block-4809101dc7369b38b3b0f9f8"
+      ],
+      "id": "block-5c3e6fc1c6452791bf5c3dc0",
+      "level": 1,
+      "list_depth": 0,
+      "markdown_source": "8. systematically monitoring and reviewing internal control to ensure that it functions as intended.",
+      "numbering": "",
+      "parent_id": "block-4809101dc7369b38b3b0f9f8",
+      "source_refs": [
+        {
+          "anchor": "original-e6cb9036eefb3cf2",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > ol:nth-of-type(1) > li:nth-of-type(8)",
+          "scope_id": "html:document"
+        }
+      ],
+      "text": "systematically monitoring and reviewing internal control to ensure that it functions as intended.",
+      "type": "text"
+    },
+    {
+      "dependencies": [
+        "block-4809101dc7369b38b3b0f9f8"
+      ],
+      "id": "block-1c71d63fa9abd71301a371e1",
+      "level": 1,
+      "markdown_source": "Internal control shall be documented in the form and to the extent necessary in light of the nature, activities, risk conditions and size of the undertaking. Documentation required by or pursuant to aquaculture legislation, such as instructions, permits, certificates of competence, certificates and the like, shall be included.",
+      "numbering": "",
+      "parent_id": "block-4809101dc7369b38b3b0f9f8",
+      "source_refs": [
+        {
+          "anchor": "original-3b38361d8fc0cbae",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > p:nth-of-type(4)",
+          "scope_id": "html:document"
+        }
+      ],
+      "text": "Internal control shall be documented in the form and to the extent necessary in light of the nature, activities, risk conditions and size of the undertaking. Documentation required by or pursuant to aquaculture legislation, such as instructions, permits, certificates of competence, certificates and the like, shall be included.",
+      "type": "text"
+    },
+    {
+      "dependencies": [
+        "block-4809101dc7369b38b3b0f9f8"
+      ],
+      "id": "block-140a915d43a902811c212ad2",
+      "level": 1,
+      "markdown_source": "Requirements arising from the second and third paragraphs shall be documented in writing.",
+      "numbering": "",
+      "parent_id": "block-4809101dc7369b38b3b0f9f8",
+      "source_refs": [
+        {
+          "anchor": "original-3048b2a2cd64d5b3",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > p:nth-of-type(5)",
+          "scope_id": "html:document"
+        }
+      ],
+      "text": "Requirements arising from the second and third paragraphs shall be documented in writing.",
+      "type": "text"
+    }
+  ],
+  "checked_scope": [
+    "html:document"
+  ],
+  "collaboration_provenance": [
+    {
+      "actor": null,
+      "at": "2026-09-18T08:01:09.509941+00:00",
+      "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+      "content_revision": 1,
+      "origin": "machine",
+      "path": "/blocks/block-4bd701c877bda45724384ff6",
+      "selected_by": "Weijie Tang",
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "source_refs": [
+        {
+          "anchor": "original-50b64e4a372c9bb4",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > h1:nth-of-type(1)",
+          "scope_id": "html:document"
+        }
+      ],
+      "status": "human_reviewed",
+      "reviewers": [
+        "Weijie Tang"
+      ],
+      "reviewer": "Weijie Tang"
+    },
+    {
+      "actor": null,
+      "at": "2026-09-18T08:01:09.509941+00:00",
+      "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+      "content_revision": 1,
+      "origin": "machine",
+      "path": "/blocks/block-9b2367c1618248920aee26a8",
+      "selected_by": "Weijie Tang",
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "source_refs": [
+        {
+          "anchor": "original-ba8bfb5569299e4e",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > p:nth-of-type(1)",
+          "scope_id": "html:document"
+        }
+      ],
+      "status": "human_reviewed",
+      "reviewers": [
+        "Weijie Tang"
+      ],
+      "reviewer": "Weijie Tang"
+    },
+    {
+      "actor": null,
+      "at": "2026-09-18T08:01:09.509941+00:00",
+      "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+      "content_revision": 1,
+      "origin": "machine",
+      "path": "/blocks/block-4e225735ccca99d6e7fcb6dc",
+      "selected_by": "Weijie Tang",
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "source_refs": [
+        {
+          "anchor": "original-6137062c739696d1",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > h2:nth-of-type(1)",
+          "scope_id": "html:document"
+        }
+      ],
+      "status": "human_reviewed",
+      "reviewers": [
+        "Weijie Tang"
+      ],
+      "reviewer": "Weijie Tang"
+    },
+    {
+      "actor": null,
+      "at": "2026-09-18T08:01:09.509941+00:00",
+      "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+      "content_revision": 1,
+      "origin": "machine",
+      "path": "/blocks/block-b6adb4f2418740a1cb408287",
+      "selected_by": "Weijie Tang",
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "source_refs": [
+        {
+          "anchor": "original-8cfee12b17715ab8",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > p:nth-of-type(1)",
+          "scope_id": "html:document"
+        }
+      ],
+      "status": "human_reviewed",
+      "reviewers": [
+        "Weijie Tang"
+      ],
+      "reviewer": "Weijie Tang"
+    },
+    {
+      "actor": null,
+      "at": "2026-09-18T08:01:09.509941+00:00",
+      "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+      "content_revision": 1,
+      "origin": "machine",
+      "path": "/blocks/block-a73175fc735c5457147c15b2",
+      "selected_by": "Weijie Tang",
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "source_refs": [
+        {
+          "anchor": "original-64db7926573dc818",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > h2:nth-of-type(1)",
+          "scope_id": "html:document"
+        }
+      ],
+      "status": "human_reviewed",
+      "reviewers": [
+        "Weijie Tang"
+      ],
+      "reviewer": "Weijie Tang"
+    },
+    {
+      "actor": null,
+      "at": "2026-09-18T08:01:09.509941+00:00",
+      "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+      "content_revision": 1,
+      "origin": "machine",
+      "path": "/blocks/block-944b2ab386bd1cae0a9ac4ee",
+      "selected_by": "Weijie Tang",
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "source_refs": [
+        {
+          "anchor": "original-aebe7e5b5c113a35",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > p:nth-of-type(1)",
+          "scope_id": "html:document"
+        }
+      ],
+      "status": "human_reviewed",
+      "reviewers": [
+        "Weijie Tang"
+      ],
+      "reviewer": "Weijie Tang"
+    },
+    {
+      "actor": null,
+      "at": "2026-09-18T08:01:09.509941+00:00",
+      "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+      "content_revision": 1,
+      "origin": "machine",
+      "path": "/blocks/block-9c43189559dd3d1a7922b890",
+      "selected_by": "Weijie Tang",
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "source_refs": [
+        {
+          "anchor": "original-aba48ed293d13d3a",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "scope_id": "html:document"
+        }
+      ],
+      "status": "human_reviewed",
+      "reviewers": [
+        "Weijie Tang"
+      ],
+      "reviewer": "Weijie Tang"
+    },
+    {
+      "actor": null,
+      "at": "2026-09-18T08:01:09.509941+00:00",
+      "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+      "content_revision": 1,
+      "origin": "machine",
+      "path": "/blocks/block-0600dc88c124c7aba766cf8f",
+      "selected_by": "Weijie Tang",
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "source_refs": [
+        {
+          "anchor": "original-55ea4842d395456f",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(2)",
+          "scope_id": "html:document"
+        }
+      ],
+      "status": "human_reviewed",
+      "reviewers": [
+        "Weijie Tang"
+      ],
+      "reviewer": "Weijie Tang"
+    },
+    {
+      "actor": null,
+      "at": "2026-09-18T08:01:09.509941+00:00",
+      "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+      "content_revision": 1,
+      "origin": "machine",
+      "path": "/blocks/block-b0c9bb1aaab00f045c28d8ff",
+      "selected_by": "Weijie Tang",
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "source_refs": [
+        {
+          "anchor": "original-d6402813b47d9650",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(3)",
+          "scope_id": "html:document"
+        }
+      ],
+      "status": "human_reviewed",
+      "reviewers": [
+        "Weijie Tang"
+      ],
+      "reviewer": "Weijie Tang"
+    },
+    {
+      "actor": null,
+      "at": "2026-09-18T08:01:09.509941+00:00",
+      "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+      "content_revision": 1,
+      "origin": "machine",
+      "path": "/blocks/block-6f978817febd1fed19b12594",
+      "selected_by": "Weijie Tang",
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "source_refs": [
+        {
+          "anchor": "original-fcd4b52b242747ff",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > h2:nth-of-type(1)",
+          "scope_id": "html:document"
+        }
+      ],
+      "status": "human_reviewed",
+      "reviewers": [
+        "Weijie Tang"
+      ],
+      "reviewer": "Weijie Tang"
+    },
+    {
+      "actor": null,
+      "at": "2026-09-18T08:01:09.509941+00:00",
+      "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+      "content_revision": 1,
+      "origin": "machine",
+      "path": "/blocks/block-4809101dc7369b38b3b0f9f8",
+      "selected_by": "Weijie Tang",
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "source_refs": [
+        {
+          "anchor": "original-02d6932150a98b3d",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > h3:nth-of-type(1)",
+          "scope_id": "html:document"
+        }
+      ],
+      "status": "human_reviewed",
+      "reviewers": [
+        "Weijie Tang"
+      ],
+      "reviewer": "Weijie Tang"
+    },
+    {
+      "actor": null,
+      "at": "2026-09-18T08:01:09.509941+00:00",
+      "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+      "content_revision": 1,
+      "origin": "machine",
+      "path": "/blocks/block-2706fe2a996db40cc06c2428",
+      "selected_by": "Weijie Tang",
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "source_refs": [
+        {
+          "anchor": "original-f96d1b6b0032ede1",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > p:nth-of-type(1)",
+          "scope_id": "html:document"
+        }
+      ],
+      "status": "human_reviewed",
+      "reviewers": [
+        "Weijie Tang"
+      ],
+      "reviewer": "Weijie Tang"
+    },
+    {
+      "actor": null,
+      "at": "2026-09-18T08:01:09.509941+00:00",
+      "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+      "content_revision": 1,
+      "origin": "machine",
+      "path": "/blocks/block-8f1718a95932981281fd1922",
+      "selected_by": "Weijie Tang",
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "source_refs": [
+        {
+          "anchor": "original-b9e49529aa46c8e8",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > p:nth-of-type(2)",
+          "scope_id": "html:document"
+        }
+      ],
+      "status": "human_reviewed",
+      "reviewers": [
+        "Weijie Tang"
+      ],
+      "reviewer": "Weijie Tang"
+    },
+    {
+      "actor": null,
+      "at": "2026-09-18T08:01:09.509941+00:00",
+      "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+      "content_revision": 1,
+      "origin": "machine",
+      "path": "/blocks/block-7196a3868a1f624d4aea9da0",
+      "selected_by": "Weijie Tang",
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "source_refs": [
+        {
+          "anchor": "original-22a170b94009b55f",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > p:nth-of-type(3)",
+          "scope_id": "html:document"
+        }
+      ],
+      "status": "human_reviewed",
+      "reviewers": [
+        "Weijie Tang"
+      ],
+      "reviewer": "Weijie Tang"
+    },
+    {
+      "actor": null,
+      "at": "2026-09-18T08:01:09.509941+00:00",
+      "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+      "content_revision": 1,
+      "origin": "machine",
+      "path": "/blocks/block-8057218d71950708280e4541",
+      "selected_by": "Weijie Tang",
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "source_refs": [
+        {
+          "anchor": "original-d6372e5897584050",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > ol:nth-of-type(1) > li:nth-of-type(1)",
+          "scope_id": "html:document"
+        }
+      ],
+      "status": "human_reviewed",
+      "reviewers": [
+        "Weijie Tang"
+      ],
+      "reviewer": "Weijie Tang"
+    },
+    {
+      "actor": null,
+      "at": "2026-09-18T08:01:09.509941+00:00",
+      "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+      "content_revision": 1,
+      "origin": "machine",
+      "path": "/blocks/block-f706eb4bb8d07e1be36c26f6",
+      "selected_by": "Weijie Tang",
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "source_refs": [
+        {
+          "anchor": "original-768a1f7c21f345fe",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > ol:nth-of-type(1) > li:nth-of-type(2)",
+          "scope_id": "html:document"
+        }
+      ],
+      "status": "human_reviewed",
+      "reviewers": [
+        "Weijie Tang"
+      ],
+      "reviewer": "Weijie Tang"
+    },
+    {
+      "actor": null,
+      "at": "2026-09-18T08:01:09.509941+00:00",
+      "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+      "content_revision": 1,
+      "origin": "machine",
+      "path": "/blocks/block-cb25c878e2566ec7f15d9049",
+      "selected_by": "Weijie Tang",
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "source_refs": [
+        {
+          "anchor": "original-a5aa7019adca39b9",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > ol:nth-of-type(1) > li:nth-of-type(3)",
+          "scope_id": "html:document"
+        }
+      ],
+      "status": "human_reviewed",
+      "reviewers": [
+        "Weijie Tang"
+      ],
+      "reviewer": "Weijie Tang"
+    },
+    {
+      "actor": null,
+      "at": "2026-09-18T08:01:09.509941+00:00",
+      "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+      "content_revision": 1,
+      "origin": "machine",
+      "path": "/blocks/block-98770d3898f779fe2a6f480d",
+      "selected_by": "Weijie Tang",
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "source_refs": [
+        {
+          "anchor": "original-c5a7c12e93b93d0d",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > ol:nth-of-type(1) > li:nth-of-type(4)",
+          "scope_id": "html:document"
+        }
+      ],
+      "status": "human_reviewed",
+      "reviewers": [
+        "Weijie Tang"
+      ],
+      "reviewer": "Weijie Tang"
+    },
+    {
+      "actor": null,
+      "at": "2026-09-18T08:01:09.509941+00:00",
+      "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+      "content_revision": 1,
+      "origin": "machine",
+      "path": "/blocks/block-9be5ecb84d18a382735efef5",
+      "selected_by": "Weijie Tang",
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "source_refs": [
+        {
+          "anchor": "original-7df54b852971d63a",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > ol:nth-of-type(1) > li:nth-of-type(5)",
+          "scope_id": "html:document"
+        }
+      ],
+      "status": "human_reviewed",
+      "reviewers": [
+        "Weijie Tang"
+      ],
+      "reviewer": "Weijie Tang"
+    },
+    {
+      "actor": null,
+      "at": "2026-09-18T08:01:09.509941+00:00",
+      "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+      "content_revision": 1,
+      "origin": "machine",
+      "path": "/blocks/block-b9acb390095d1fb4bd8eb291",
+      "selected_by": "Weijie Tang",
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "source_refs": [
+        {
+          "anchor": "original-dd41343ff507eedb",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > ol:nth-of-type(1) > li:nth-of-type(6)",
+          "scope_id": "html:document"
+        }
+      ],
+      "status": "human_reviewed",
+      "reviewers": [
+        "Weijie Tang"
+      ],
+      "reviewer": "Weijie Tang"
+    },
+    {
+      "actor": null,
+      "at": "2026-09-18T08:01:09.509941+00:00",
+      "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+      "content_revision": 1,
+      "origin": "machine",
+      "path": "/blocks/block-44ca090aa0781d8fb2e9693c",
+      "selected_by": "Weijie Tang",
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "source_refs": [
+        {
+          "anchor": "original-8ae36b07094eeb7a",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > ol:nth-of-type(1) > li:nth-of-type(7)",
+          "scope_id": "html:document"
+        }
+      ],
+      "status": "human_reviewed",
+      "reviewers": [
+        "Weijie Tang"
+      ],
+      "reviewer": "Weijie Tang"
+    },
+    {
+      "actor": null,
+      "at": "2026-09-18T08:01:09.509941+00:00",
+      "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+      "content_revision": 1,
+      "origin": "machine",
+      "path": "/blocks/block-5c3e6fc1c6452791bf5c3dc0",
+      "selected_by": "Weijie Tang",
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "source_refs": [
+        {
+          "anchor": "original-e6cb9036eefb3cf2",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > ol:nth-of-type(1) > li:nth-of-type(8)",
+          "scope_id": "html:document"
+        }
+      ],
+      "status": "human_reviewed",
+      "reviewers": [
+        "Weijie Tang"
+      ],
+      "reviewer": "Weijie Tang"
+    },
+    {
+      "actor": null,
+      "at": "2026-09-18T08:01:09.509941+00:00",
+      "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+      "content_revision": 1,
+      "origin": "machine",
+      "path": "/blocks/block-1c71d63fa9abd71301a371e1",
+      "selected_by": "Weijie Tang",
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "source_refs": [
+        {
+          "anchor": "original-3b38361d8fc0cbae",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > p:nth-of-type(4)",
+          "scope_id": "html:document"
+        }
+      ],
+      "status": "human_reviewed",
+      "reviewers": [
+        "Weijie Tang"
+      ],
+      "reviewer": "Weijie Tang"
+    },
+    {
+      "actor": null,
+      "at": "2026-09-18T08:01:09.509941+00:00",
+      "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+      "content_revision": 1,
+      "origin": "machine",
+      "path": "/blocks/block-140a915d43a902811c212ad2",
+      "selected_by": "Weijie Tang",
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "source_refs": [
+        {
+          "anchor": "original-3048b2a2cd64d5b3",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > p:nth-of-type(5)",
+          "scope_id": "html:document"
+        }
+      ],
+      "status": "human_reviewed",
+      "reviewers": [
+        "Weijie Tang"
+      ],
+      "reviewer": "Weijie Tang"
+    },
+    {
+      "actor": "Weijie Tang",
+      "at": "2026-09-18T08:10:39.447069+00:00",
+      "attribution_scope": "whole_block",
+      "candidate_id": null,
+      "content_revision": 2,
+      "origin": "human",
+      "path": "/blocks/block-48d3e390b9e89451b0b69527",
+      "reason": "Structure or original association changed; finer correspondence is not assumed.",
+      "scope_review_required": true,
+      "selected_by": null,
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "source_refs": [
+        {
+          "anchor": "original-44e53a8f85f208e3",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > p:nth-of-type(2)",
+          "scope_id": "html:document"
+        }
+      ],
+      "status": "human_reviewed",
+      "reviewers": [
+        "Weijie Tang"
+      ],
+      "reviewer": "Weijie Tang"
+    },
+    {
+      "actor": "Weijie Tang",
+      "at": "2026-09-18T08:10:39.447069+00:00",
+      "candidate_id": null,
+      "content_revision": 2,
+      "origin": "human",
+      "path": "/blocks/56a328f1-72ea-4fc1-a6fc-fb7339115a21",
+      "selected_by": null,
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "source_refs": [
+        {
+          "anchor": "original-44e53a8f85f208e3",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > p:nth-of-type(2)",
+          "scope_id": "html:document"
+        }
+      ],
+      "status": "human_reviewed",
+      "reviewers": [
+        "Weijie Tang"
+      ],
+      "reviewer": "Weijie Tang"
+    },
+    {
+      "actor": "Weijie Tang",
+      "at": "2026-09-18T08:10:39.447069+00:00",
+      "candidate_id": null,
+      "content_revision": 2,
+      "origin": "human",
+      "path": "/blocks/a4b3376d-7e22-43c5-aea1-027b5e4453d5",
+      "selected_by": null,
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "source_refs": [
+        {
+          "anchor": "original-44e53a8f85f208e3",
+          "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > p:nth-of-type(2)",
+          "scope_id": "html:document"
+        }
+      ],
+      "status": "human_reviewed",
+      "reviewers": [
+        "Weijie Tang"
+      ],
+      "reviewer": "Weijie Tang"
+    }
+  ],
+  "confirmation": null,
+  "content_revision": 2,
+  "content_status": "review_in_progress",
+  "created_at": "2026-09-18T07:14:38.714365+00:00",
+  "id": "f5e03bbd741dc49d6cf1e7541fe58593",
+  "issues": [],
+  "last_action": {
+    "actor": "Weijie Tang",
+    "at": "2026-09-18T08:52:01.851386+00:00",
+    "kind": "saved"
+  },
+  "last_candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+  "legacy": null,
+  "provenance_version": 1,
+  "requirement_status": "not_connected",
+  "review_checks": {
+    "html:document": {
+      "actor": "Weijie Tang",
+      "at": "2026-09-18T08:10:39.558909+00:00",
+      "content_revision": 2,
+      "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475"
+    }
+  },
+  "review_impact": {
+    "affected_blocks": [
+      "56a328f1-72ea-4fc1-a6fc-fb7339115a21",
+      "a4b3376d-7e22-43c5-aea1-027b5e4453d5",
+      "block-0600dc88c124c7aba766cf8f",
+      "block-140a915d43a902811c212ad2",
+      "block-1c71d63fa9abd71301a371e1",
+      "block-2706fe2a996db40cc06c2428",
+      "block-44ca090aa0781d8fb2e9693c",
+      "block-4809101dc7369b38b3b0f9f8",
+      "block-48d3e390b9e89451b0b69527",
+      "block-4bd701c877bda45724384ff6",
+      "block-4e225735ccca99d6e7fcb6dc",
+      "block-5c3e6fc1c6452791bf5c3dc0",
+      "block-6f978817febd1fed19b12594",
+      "block-7196a3868a1f624d4aea9da0",
+      "block-8057218d71950708280e4541",
+      "block-8f1718a95932981281fd1922",
+      "block-944b2ab386bd1cae0a9ac4ee",
+      "block-98770d3898f779fe2a6f480d",
+      "block-9b2367c1618248920aee26a8",
+      "block-9be5ecb84d18a382735efef5",
+      "block-9c43189559dd3d1a7922b890",
+      "block-a73175fc735c5457147c15b2",
+      "block-b0c9bb1aaab00f045c28d8ff",
+      "block-b6adb4f2418740a1cb408287",
+      "block-b9acb390095d1fb4bd8eb291",
+      "block-cb25c878e2566ec7f15d9049",
+      "block-f706eb4bb8d07e1be36c26f6"
+    ],
+    "affected_scope": [
+      "html:document"
+    ],
+    "from_content_revision": 1,
+    "full_review_required": false,
+    "reason": "structure_or_dependency_changed",
+    "retained_scope": [],
+    "structural": true
+  },
+  "revision": 12,
+  "scope": [
+    {
+      "id": "html:document",
+      "kind": "html",
+      "label": "Complete saved HTML document",
+      "location": {
+        "anchor": "original-document"
+      }
+    }
+  ],
+  "source": {
+    "assessment_id": null,
+    "content_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+    "download_status": "SUCCESS",
+    "file_format": "html",
+    "operator_selection_decision": "INCLUDE",
+    "parsing_copy_of": null,
+    "registry_kind": "sqlite_snapshot",
+    "registry_sha256": "bbb02b4a662a43e03653b5c8b13c337ff0cc7453964f5f034e62e226c78bea52",
+    "relative_path": "E_Project_Engineering/PE001-004_example.html",
+    "selection_origin": "human",
+    "selection_status": "INCLUDE",
+    "snapshot_id": "PE001-004",
+    "snapshot_status": "STORED",
+    "source_id": "PE001",
+    "source_status": "CURRENT"
+  },
+  "source_stale": false,
+  "title": "example",
+  "updated_at": "2026-09-18T08:52:01.851386+00:00",
+  "candidates": [
+    {
+      "actor": "Weijie Tang",
+      "complete": true,
+      "error": null,
+      "finished_at": "2026-09-18T07:53:52.864793+00:00",
+      "id": "ef90de4e-cf92-450f-99d8-d5e04acc3e36",
+      "input_revision": 0,
+      "material_id": "f5e03bbd741dc49d6cf1e7541fe58593",
+      "replacement": {
+        "at": "2026-09-18T07:58:19.549987+00:00",
+        "candidate_id": "f77de165-916b-4dd7-b94e-743b2c04f5a8",
+        "reason": "requested_machine_preview_refresh"
+      },
+      "replaces_candidate_id": null,
+      "request_id": "c3a25fb4-24d2-4e89-8390-f47d64afcbad",
+      "result_hash": "89764779b0d6004d56fc21cf1773214fc7ce3358ab64d4d7b0e92a45c77765a4",
+      "source": {
+        "assessment_id": null,
+        "content_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "download_status": "SUCCESS",
+        "file_format": "html",
+        "operator_selection_decision": "INCLUDE",
+        "parsing_copy_of": null,
+        "registry_kind": "sqlite_snapshot",
+        "registry_sha256": "bbb02b4a662a43e03653b5c8b13c337ff0cc7453964f5f034e62e226c78bea52",
+        "relative_path": "E_Project_Engineering/PE001-004_example.html",
+        "selection_origin": "human",
+        "selection_status": "INCLUDE",
+        "snapshot_id": "PE001-004",
+        "snapshot_status": "STORED",
+        "source_id": "PE001",
+        "source_status": "CURRENT"
+      },
+      "started_at": "2026-09-18T07:53:51.793663+00:00",
+      "status": "superseded",
+      "warnings": [
+        "The saved HTML has no supported template profile; the complete static DOM is retained as a generic structural candidate for manual review."
+      ],
+      "extraction": {
+        "parser_status": "candidate_available",
+        "parser_version": "material-structural-parser/9",
+        "processed_scope_count": 1,
+        "usable_scope_count": 1,
+        "unprocessed_scope_count": 0,
+        "unresolved_count": 0
+      },
+      "block_count": 25,
+      "warning_count": 1,
+      "stale": true
+    },
+    {
+      "actor": "Weijie Tang",
+      "complete": true,
+      "error": null,
+      "finished_at": "2026-09-18T07:58:19.549913+00:00",
+      "id": "f77de165-916b-4dd7-b94e-743b2c04f5a8",
+      "input_revision": 0,
+      "material_id": "f5e03bbd741dc49d6cf1e7541fe58593",
+      "replacement": {
+        "at": "2026-09-18T08:01:07.480818+00:00",
+        "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+        "reason": "requested_machine_preview_refresh"
+      },
+      "replaces_candidate_id": "ef90de4e-cf92-450f-99d8-d5e04acc3e36",
+      "request_id": "40d9ee84-b3b6-4de9-88be-8bb058afc484",
+      "result_hash": "89764779b0d6004d56fc21cf1773214fc7ce3358ab64d4d7b0e92a45c77765a4",
+      "source": {
+        "assessment_id": null,
+        "content_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "download_status": "SUCCESS",
+        "file_format": "html",
+        "operator_selection_decision": "INCLUDE",
+        "parsing_copy_of": null,
+        "registry_kind": "sqlite_snapshot",
+        "registry_sha256": "bbb02b4a662a43e03653b5c8b13c337ff0cc7453964f5f034e62e226c78bea52",
+        "relative_path": "E_Project_Engineering/PE001-004_example.html",
+        "selection_origin": "human",
+        "selection_status": "INCLUDE",
+        "snapshot_id": "PE001-004",
+        "snapshot_status": "STORED",
+        "source_id": "PE001",
+        "source_status": "CURRENT"
+      },
+      "started_at": "2026-09-18T07:58:17.638356+00:00",
+      "status": "superseded",
+      "warnings": [
+        "The saved HTML has no supported template profile; the complete static DOM is retained as a generic structural candidate for manual review."
+      ],
+      "extraction": {
+        "parser_status": "candidate_available",
+        "parser_version": "material-structural-parser/9",
+        "processed_scope_count": 1,
+        "usable_scope_count": 1,
+        "unprocessed_scope_count": 0,
+        "unresolved_count": 0
+      },
+      "block_count": 25,
+      "warning_count": 1,
+      "stale": true
+    },
+    {
+      "actor": "Weijie Tang",
+      "complete": true,
+      "error": null,
+      "finished_at": "2026-09-18T08:01:07.480751+00:00",
+      "id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+      "input_revision": 0,
+      "material_id": "f5e03bbd741dc49d6cf1e7541fe58593",
+      "replaces_candidate_id": "f77de165-916b-4dd7-b94e-743b2c04f5a8",
+      "request_id": "ad6d000a-175c-4914-bae9-bc2201c7cf73",
+      "resolution": {
+        "action": "save_personal_draft",
+        "actor": "Weijie Tang",
+        "at": "2026-09-18T08:01:09.515404+00:00",
+        "reviewed_against_source": false
+      },
+      "result_hash": "89764779b0d6004d56fc21cf1773214fc7ce3358ab64d4d7b0e92a45c77765a4",
+      "source": {
+        "assessment_id": null,
+        "content_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "download_status": "SUCCESS",
+        "file_format": "html",
+        "operator_selection_decision": "INCLUDE",
+        "parsing_copy_of": null,
+        "registry_kind": "sqlite_snapshot",
+        "registry_sha256": "bbb02b4a662a43e03653b5c8b13c337ff0cc7453964f5f034e62e226c78bea52",
+        "relative_path": "E_Project_Engineering/PE001-004_example.html",
+        "selection_origin": "human",
+        "selection_status": "INCLUDE",
+        "snapshot_id": "PE001-004",
+        "snapshot_status": "STORED",
+        "source_id": "PE001",
+        "source_status": "CURRENT"
+      },
+      "started_at": "2026-09-18T08:01:05.820890+00:00",
+      "status": "merged",
+      "warnings": [
+        "The saved HTML has no supported template profile; the complete static DOM is retained as a generic structural candidate for manual review."
+      ],
+      "extraction": {
+        "parser_status": "candidate_available",
+        "parser_version": "material-structural-parser/9",
+        "processed_scope_count": 1,
+        "usable_scope_count": 1,
+        "unprocessed_scope_count": 0,
+        "unresolved_count": 0
+      },
+      "block_count": 25,
+      "warning_count": 1,
+      "stale": true
+    }
+  ],
+  "conflicts": [
+    {
+      "actor": "Weijie Tang",
+      "at": "2026-09-18T07:59:58.982675+00:00",
+      "current_revision": 4,
+      "id": "d825ce8c-f5e2-4307-a7b8-9b25b09c3e56",
+      "material_id": "f5e03bbd741dc49d6cf1e7541fe58593"
+    }
+  ],
+  "related_versions": [],
+  "source_issues": [],
+  "collaboration": {
+    "mode": "coordinator",
+    "view": "personal",
+    "draft_revision": 12,
+    "coordinator": "Weijie Tang",
+    "master_digest": "81dd24db73c4dfa87984948daa3f05e4842509e1387cb06d3c72ed6b7fba112f",
+    "provenance": [
+      {
+        "actor": null,
+        "at": "2026-09-18T08:01:09.509941+00:00",
+        "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+        "content_revision": 1,
+        "origin": "machine",
+        "path": "/blocks/block-4bd701c877bda45724384ff6",
+        "selected_by": "Weijie Tang",
+        "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "source_refs": [
+          {
+            "anchor": "original-50b64e4a372c9bb4",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > h1:nth-of-type(1)",
+            "scope_id": "html:document"
+          }
+        ],
+        "status": "human_reviewed",
+        "reviewers": [
+          "Weijie Tang"
+        ],
+        "reviewer": "Weijie Tang"
+      },
+      {
+        "actor": null,
+        "at": "2026-09-18T08:01:09.509941+00:00",
+        "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+        "content_revision": 1,
+        "origin": "machine",
+        "path": "/blocks/block-9b2367c1618248920aee26a8",
+        "selected_by": "Weijie Tang",
+        "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "source_refs": [
+          {
+            "anchor": "original-ba8bfb5569299e4e",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > p:nth-of-type(1)",
+            "scope_id": "html:document"
+          }
+        ],
+        "status": "human_reviewed",
+        "reviewers": [
+          "Weijie Tang"
+        ],
+        "reviewer": "Weijie Tang"
+      },
+      {
+        "actor": null,
+        "at": "2026-09-18T08:01:09.509941+00:00",
+        "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+        "content_revision": 1,
+        "origin": "machine",
+        "path": "/blocks/block-4e225735ccca99d6e7fcb6dc",
+        "selected_by": "Weijie Tang",
+        "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "source_refs": [
+          {
+            "anchor": "original-6137062c739696d1",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > h2:nth-of-type(1)",
+            "scope_id": "html:document"
+          }
+        ],
+        "status": "human_reviewed",
+        "reviewers": [
+          "Weijie Tang"
+        ],
+        "reviewer": "Weijie Tang"
+      },
+      {
+        "actor": null,
+        "at": "2026-09-18T08:01:09.509941+00:00",
+        "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+        "content_revision": 1,
+        "origin": "machine",
+        "path": "/blocks/block-b6adb4f2418740a1cb408287",
+        "selected_by": "Weijie Tang",
+        "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "source_refs": [
+          {
+            "anchor": "original-8cfee12b17715ab8",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > p:nth-of-type(1)",
+            "scope_id": "html:document"
+          }
+        ],
+        "status": "human_reviewed",
+        "reviewers": [
+          "Weijie Tang"
+        ],
+        "reviewer": "Weijie Tang"
+      },
+      {
+        "actor": null,
+        "at": "2026-09-18T08:01:09.509941+00:00",
+        "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+        "content_revision": 1,
+        "origin": "machine",
+        "path": "/blocks/block-a73175fc735c5457147c15b2",
+        "selected_by": "Weijie Tang",
+        "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "source_refs": [
+          {
+            "anchor": "original-64db7926573dc818",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > h2:nth-of-type(1)",
+            "scope_id": "html:document"
+          }
+        ],
+        "status": "human_reviewed",
+        "reviewers": [
+          "Weijie Tang"
+        ],
+        "reviewer": "Weijie Tang"
+      },
+      {
+        "actor": null,
+        "at": "2026-09-18T08:01:09.509941+00:00",
+        "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+        "content_revision": 1,
+        "origin": "machine",
+        "path": "/blocks/block-944b2ab386bd1cae0a9ac4ee",
+        "selected_by": "Weijie Tang",
+        "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "source_refs": [
+          {
+            "anchor": "original-aebe7e5b5c113a35",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > p:nth-of-type(1)",
+            "scope_id": "html:document"
+          }
+        ],
+        "status": "human_reviewed",
+        "reviewers": [
+          "Weijie Tang"
+        ],
+        "reviewer": "Weijie Tang"
+      },
+      {
+        "actor": null,
+        "at": "2026-09-18T08:01:09.509941+00:00",
+        "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+        "content_revision": 1,
+        "origin": "machine",
+        "path": "/blocks/block-9c43189559dd3d1a7922b890",
+        "selected_by": "Weijie Tang",
+        "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "source_refs": [
+          {
+            "anchor": "original-aba48ed293d13d3a",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1)",
+            "scope_id": "html:document"
+          }
+        ],
+        "status": "human_reviewed",
+        "reviewers": [
+          "Weijie Tang"
+        ],
+        "reviewer": "Weijie Tang"
+      },
+      {
+        "actor": null,
+        "at": "2026-09-18T08:01:09.509941+00:00",
+        "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+        "content_revision": 1,
+        "origin": "machine",
+        "path": "/blocks/block-0600dc88c124c7aba766cf8f",
+        "selected_by": "Weijie Tang",
+        "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "source_refs": [
+          {
+            "anchor": "original-55ea4842d395456f",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(2)",
+            "scope_id": "html:document"
+          }
+        ],
+        "status": "human_reviewed",
+        "reviewers": [
+          "Weijie Tang"
+        ],
+        "reviewer": "Weijie Tang"
+      },
+      {
+        "actor": null,
+        "at": "2026-09-18T08:01:09.509941+00:00",
+        "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+        "content_revision": 1,
+        "origin": "machine",
+        "path": "/blocks/block-b0c9bb1aaab00f045c28d8ff",
+        "selected_by": "Weijie Tang",
+        "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "source_refs": [
+          {
+            "anchor": "original-d6402813b47d9650",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(3)",
+            "scope_id": "html:document"
+          }
+        ],
+        "status": "human_reviewed",
+        "reviewers": [
+          "Weijie Tang"
+        ],
+        "reviewer": "Weijie Tang"
+      },
+      {
+        "actor": null,
+        "at": "2026-09-18T08:01:09.509941+00:00",
+        "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+        "content_revision": 1,
+        "origin": "machine",
+        "path": "/blocks/block-6f978817febd1fed19b12594",
+        "selected_by": "Weijie Tang",
+        "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "source_refs": [
+          {
+            "anchor": "original-fcd4b52b242747ff",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > h2:nth-of-type(1)",
+            "scope_id": "html:document"
+          }
+        ],
+        "status": "human_reviewed",
+        "reviewers": [
+          "Weijie Tang"
+        ],
+        "reviewer": "Weijie Tang"
+      },
+      {
+        "actor": null,
+        "at": "2026-09-18T08:01:09.509941+00:00",
+        "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+        "content_revision": 1,
+        "origin": "machine",
+        "path": "/blocks/block-4809101dc7369b38b3b0f9f8",
+        "selected_by": "Weijie Tang",
+        "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "source_refs": [
+          {
+            "anchor": "original-02d6932150a98b3d",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > h3:nth-of-type(1)",
+            "scope_id": "html:document"
+          }
+        ],
+        "status": "human_reviewed",
+        "reviewers": [
+          "Weijie Tang"
+        ],
+        "reviewer": "Weijie Tang"
+      },
+      {
+        "actor": null,
+        "at": "2026-09-18T08:01:09.509941+00:00",
+        "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+        "content_revision": 1,
+        "origin": "machine",
+        "path": "/blocks/block-2706fe2a996db40cc06c2428",
+        "selected_by": "Weijie Tang",
+        "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "source_refs": [
+          {
+            "anchor": "original-f96d1b6b0032ede1",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > p:nth-of-type(1)",
+            "scope_id": "html:document"
+          }
+        ],
+        "status": "human_reviewed",
+        "reviewers": [
+          "Weijie Tang"
+        ],
+        "reviewer": "Weijie Tang"
+      },
+      {
+        "actor": null,
+        "at": "2026-09-18T08:01:09.509941+00:00",
+        "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+        "content_revision": 1,
+        "origin": "machine",
+        "path": "/blocks/block-8f1718a95932981281fd1922",
+        "selected_by": "Weijie Tang",
+        "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "source_refs": [
+          {
+            "anchor": "original-b9e49529aa46c8e8",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > p:nth-of-type(2)",
+            "scope_id": "html:document"
+          }
+        ],
+        "status": "human_reviewed",
+        "reviewers": [
+          "Weijie Tang"
+        ],
+        "reviewer": "Weijie Tang"
+      },
+      {
+        "actor": null,
+        "at": "2026-09-18T08:01:09.509941+00:00",
+        "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+        "content_revision": 1,
+        "origin": "machine",
+        "path": "/blocks/block-7196a3868a1f624d4aea9da0",
+        "selected_by": "Weijie Tang",
+        "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "source_refs": [
+          {
+            "anchor": "original-22a170b94009b55f",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > p:nth-of-type(3)",
+            "scope_id": "html:document"
+          }
+        ],
+        "status": "human_reviewed",
+        "reviewers": [
+          "Weijie Tang"
+        ],
+        "reviewer": "Weijie Tang"
+      },
+      {
+        "actor": null,
+        "at": "2026-09-18T08:01:09.509941+00:00",
+        "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+        "content_revision": 1,
+        "origin": "machine",
+        "path": "/blocks/block-8057218d71950708280e4541",
+        "selected_by": "Weijie Tang",
+        "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "source_refs": [
+          {
+            "anchor": "original-d6372e5897584050",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > ol:nth-of-type(1) > li:nth-of-type(1)",
+            "scope_id": "html:document"
+          }
+        ],
+        "status": "human_reviewed",
+        "reviewers": [
+          "Weijie Tang"
+        ],
+        "reviewer": "Weijie Tang"
+      },
+      {
+        "actor": null,
+        "at": "2026-09-18T08:01:09.509941+00:00",
+        "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+        "content_revision": 1,
+        "origin": "machine",
+        "path": "/blocks/block-f706eb4bb8d07e1be36c26f6",
+        "selected_by": "Weijie Tang",
+        "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "source_refs": [
+          {
+            "anchor": "original-768a1f7c21f345fe",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > ol:nth-of-type(1) > li:nth-of-type(2)",
+            "scope_id": "html:document"
+          }
+        ],
+        "status": "human_reviewed",
+        "reviewers": [
+          "Weijie Tang"
+        ],
+        "reviewer": "Weijie Tang"
+      },
+      {
+        "actor": null,
+        "at": "2026-09-18T08:01:09.509941+00:00",
+        "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+        "content_revision": 1,
+        "origin": "machine",
+        "path": "/blocks/block-cb25c878e2566ec7f15d9049",
+        "selected_by": "Weijie Tang",
+        "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "source_refs": [
+          {
+            "anchor": "original-a5aa7019adca39b9",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > ol:nth-of-type(1) > li:nth-of-type(3)",
+            "scope_id": "html:document"
+          }
+        ],
+        "status": "human_reviewed",
+        "reviewers": [
+          "Weijie Tang"
+        ],
+        "reviewer": "Weijie Tang"
+      },
+      {
+        "actor": null,
+        "at": "2026-09-18T08:01:09.509941+00:00",
+        "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+        "content_revision": 1,
+        "origin": "machine",
+        "path": "/blocks/block-98770d3898f779fe2a6f480d",
+        "selected_by": "Weijie Tang",
+        "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "source_refs": [
+          {
+            "anchor": "original-c5a7c12e93b93d0d",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > ol:nth-of-type(1) > li:nth-of-type(4)",
+            "scope_id": "html:document"
+          }
+        ],
+        "status": "human_reviewed",
+        "reviewers": [
+          "Weijie Tang"
+        ],
+        "reviewer": "Weijie Tang"
+      },
+      {
+        "actor": null,
+        "at": "2026-09-18T08:01:09.509941+00:00",
+        "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+        "content_revision": 1,
+        "origin": "machine",
+        "path": "/blocks/block-9be5ecb84d18a382735efef5",
+        "selected_by": "Weijie Tang",
+        "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "source_refs": [
+          {
+            "anchor": "original-7df54b852971d63a",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > ol:nth-of-type(1) > li:nth-of-type(5)",
+            "scope_id": "html:document"
+          }
+        ],
+        "status": "human_reviewed",
+        "reviewers": [
+          "Weijie Tang"
+        ],
+        "reviewer": "Weijie Tang"
+      },
+      {
+        "actor": null,
+        "at": "2026-09-18T08:01:09.509941+00:00",
+        "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+        "content_revision": 1,
+        "origin": "machine",
+        "path": "/blocks/block-b9acb390095d1fb4bd8eb291",
+        "selected_by": "Weijie Tang",
+        "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "source_refs": [
+          {
+            "anchor": "original-dd41343ff507eedb",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > ol:nth-of-type(1) > li:nth-of-type(6)",
+            "scope_id": "html:document"
+          }
+        ],
+        "status": "human_reviewed",
+        "reviewers": [
+          "Weijie Tang"
+        ],
+        "reviewer": "Weijie Tang"
+      },
+      {
+        "actor": null,
+        "at": "2026-09-18T08:01:09.509941+00:00",
+        "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+        "content_revision": 1,
+        "origin": "machine",
+        "path": "/blocks/block-44ca090aa0781d8fb2e9693c",
+        "selected_by": "Weijie Tang",
+        "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "source_refs": [
+          {
+            "anchor": "original-8ae36b07094eeb7a",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > ol:nth-of-type(1) > li:nth-of-type(7)",
+            "scope_id": "html:document"
+          }
+        ],
+        "status": "human_reviewed",
+        "reviewers": [
+          "Weijie Tang"
+        ],
+        "reviewer": "Weijie Tang"
+      },
+      {
+        "actor": null,
+        "at": "2026-09-18T08:01:09.509941+00:00",
+        "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+        "content_revision": 1,
+        "origin": "machine",
+        "path": "/blocks/block-5c3e6fc1c6452791bf5c3dc0",
+        "selected_by": "Weijie Tang",
+        "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "source_refs": [
+          {
+            "anchor": "original-e6cb9036eefb3cf2",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > ol:nth-of-type(1) > li:nth-of-type(8)",
+            "scope_id": "html:document"
+          }
+        ],
+        "status": "human_reviewed",
+        "reviewers": [
+          "Weijie Tang"
+        ],
+        "reviewer": "Weijie Tang"
+      },
+      {
+        "actor": null,
+        "at": "2026-09-18T08:01:09.509941+00:00",
+        "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+        "content_revision": 1,
+        "origin": "machine",
+        "path": "/blocks/block-1c71d63fa9abd71301a371e1",
+        "selected_by": "Weijie Tang",
+        "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "source_refs": [
+          {
+            "anchor": "original-3b38361d8fc0cbae",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > p:nth-of-type(4)",
+            "scope_id": "html:document"
+          }
+        ],
+        "status": "human_reviewed",
+        "reviewers": [
+          "Weijie Tang"
+        ],
+        "reviewer": "Weijie Tang"
+      },
+      {
+        "actor": null,
+        "at": "2026-09-18T08:01:09.509941+00:00",
+        "candidate_id": "1aa8e0b7-68ef-46ee-bd48-e51e644d5d39",
+        "content_revision": 1,
+        "origin": "machine",
+        "path": "/blocks/block-140a915d43a902811c212ad2",
+        "selected_by": "Weijie Tang",
+        "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "source_refs": [
+          {
+            "anchor": "original-3048b2a2cd64d5b3",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > p:nth-of-type(5)",
+            "scope_id": "html:document"
+          }
+        ],
+        "status": "human_reviewed",
+        "reviewers": [
+          "Weijie Tang"
+        ],
+        "reviewer": "Weijie Tang"
+      },
+      {
+        "actor": "Weijie Tang",
+        "at": "2026-09-18T08:10:39.447069+00:00",
+        "attribution_scope": "whole_block",
+        "candidate_id": null,
+        "content_revision": 2,
+        "origin": "human",
+        "path": "/blocks/block-48d3e390b9e89451b0b69527",
+        "reason": "Structure or original association changed; finer correspondence is not assumed.",
+        "scope_review_required": true,
+        "selected_by": null,
+        "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "source_refs": [
+          {
+            "anchor": "original-44e53a8f85f208e3",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > p:nth-of-type(2)",
+            "scope_id": "html:document"
+          }
+        ],
+        "status": "human_reviewed",
+        "reviewers": [
+          "Weijie Tang"
+        ],
+        "reviewer": "Weijie Tang"
+      },
+      {
+        "actor": "Weijie Tang",
+        "at": "2026-09-18T08:10:39.447069+00:00",
+        "candidate_id": null,
+        "content_revision": 2,
+        "origin": "human",
+        "path": "/blocks/56a328f1-72ea-4fc1-a6fc-fb7339115a21",
+        "selected_by": null,
+        "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "source_refs": [
+          {
+            "anchor": "original-44e53a8f85f208e3",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > p:nth-of-type(2)",
+            "scope_id": "html:document"
+          }
+        ],
+        "status": "human_reviewed",
+        "reviewers": [
+          "Weijie Tang"
+        ],
+        "reviewer": "Weijie Tang"
+      },
+      {
+        "actor": "Weijie Tang",
+        "at": "2026-09-18T08:10:39.447069+00:00",
+        "candidate_id": null,
+        "content_revision": 2,
+        "origin": "human",
+        "path": "/blocks/a4b3376d-7e22-43c5-aea1-027b5e4453d5",
+        "selected_by": null,
+        "source_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+        "source_refs": [
+          {
+            "anchor": "original-44e53a8f85f208e3",
+            "locator": "html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > p:nth-of-type(2)",
+            "scope_id": "html:document"
+          }
+        ],
+        "status": "human_reviewed",
+        "reviewers": [
+          "Weijie Tang"
+        ],
+        "reviewer": "Weijie Tang"
+      }
+    ]
+  }
+}

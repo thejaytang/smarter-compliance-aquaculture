@@ -1,0 +1,2715 @@
+[
+  {
+    "key": "purpose",
+    "blocks": [
+      "s1-1"
+    ],
+    "kind": "purpose",
+    "scope": "Interpretation of this regulation and its effects on farmed fish, wild salmonids and lice resistance.",
+    "condition": "Use when interpreting the regulation; this provision states its purpose.",
+    "demand": null,
+    "verification": "Read together with the specific duties. Do not invent a numeric threshold or standalone pass/fail test from a general purpose.",
+    "needs": "",
+    "gaps": [],
+    "extra": [],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "Subject",
+            "Formålet med forskriften"
+          ],
+          [
+            "Main Verb",
+            "er"
+          ],
+          [
+            "Object",
+            "å redusere forekomsten av lakselus slik at skadevirkningene på fisk i akvakulturanlegg og i viltlevende bestander av laksefisk minimaliseres, samt redusere og bekjempe resistensutvikling hos lakselus"
+          ]
+        ],
+        "span": [
+          0,
+          228
+        ]
+      }
+    ],
+    "text": "Formålet med forskriften er å redusere forekomsten av lakselus slik at skadevirkningene på fisk i akvakulturanlegg og i viltlevende bestander av laksefisk minimaliseres, samt redusere og bekjempe resistensutvikling hos lakselus."
+  },
+  {
+    "key": "scope",
+    "blocks": [
+      "s2-1"
+    ],
+    "kind": "scope",
+    "scope": "Norwegian seawater aquaculture facilities with salmonids, under § 2; exclude slaughter cages at slaughterhouses except where § 5 or the final paragraph of § 9 expressly applies.",
+    "condition": "General scope: facilities with salmonids in seawater. For slaughter cages at slaughterhouses, only § 5 and the final paragraph of § 9 apply.",
+    "demand": null,
+    "verification": "Apply the slaughter-cage carve-out per provision, not as a total exemption from the entire regulation.",
+    "needs": "",
+    "gaps": [],
+    "extra": [],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "Subject",
+            "Forskriften"
+          ],
+          [
+            "Main Verb",
+            "gjelder"
+          ],
+          [
+            "Object",
+            "akvakulturanlegg med laksefisk i sjø"
+          ]
+        ],
+        "span": [
+          0,
+          62
+        ]
+      },
+      {
+        "start": "For slaktemerder",
+        "marks": [
+          [
+            "conditions",
+            "For slaktemerder ved slakteri"
+          ],
+          [
+            "Main Verb",
+            "gjelder"
+          ],
+          [
+            "conditions",
+            "kun"
+          ],
+          [
+            "Object",
+            "§ 5 og § 9 siste ledd"
+          ]
+        ],
+        "span": [
+          62,
+          126
+        ]
+      }
+    ],
+    "text": "Forskriften gjelder for akvakulturanlegg med laksefisk i sjø. For slaktemerder ved slakteri gjelder kun § 5 og § 9 siste ledd."
+  },
+  {
+    "key": "addressee",
+    "blocks": [
+      "s2-2"
+    ],
+    "kind": "scope",
+    "scope": "Anyone holding or required to hold the approvals identified in § 2.",
+    "condition": "Approval obligation or existing approval under the named instruments identifies the addressee.",
+    "demand": null,
+    "verification": "Confirm applicable approval status using the cited instruments. Do not substitute a named operator that is not stated in the source.",
+    "needs": "",
+    "gaps": [
+      "The cross-referenced approval regulations are not substantively analysed in this example."
+    ],
+    "extra": [],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "Subject",
+            "Forskriften"
+          ],
+          [
+            "Main Verb",
+            "retter seg mot"
+          ],
+          [
+            "Object",
+            "enhver som har eller plikter å ha godkjenning etter forskrift 17. juni 2008 nr. 823 om etablering og utvidelse av akvakulturanlegg, zoobutikker m.m. eller dyrehelseforskriften 6. april 2022 nr. 631 og akvabiosikkerhetsforskriften 5. april 2022 nr. 624"
+          ]
+        ],
+        "span": [
+          0,
+          279
+        ]
+      }
+    ],
+    "text": "Forskriften retter seg mot enhver som har eller plikter å ha godkjenning etter forskrift 17. juni 2008 nr. 823 om etablering og utvidelse av akvakulturanlegg, zoobutikker m.m. eller dyrehelseforskriften 6. april 2022 nr. 631 og akvabiosikkerhetsforskriften 5. april 2022 nr. 624."
+  },
+  {
+    "key": "definitions",
+    "blocks": [
+      "s3-1",
+      "s3-2",
+      "s3-3",
+      "s3-4",
+      "s3-5",
+      "s3-6",
+      "s3-7",
+      "s3-8"
+    ],
+    "kind": "definition",
+    "scope": "The seven defined terms used throughout this regulation.",
+    "condition": "Apply each definition whenever its corresponding term occurs.",
+    "demand": null,
+    "verification": "Preserve all seven definitions. Cleaner fish are expressly excluded from treatment. Sea lice is Lepeophtheirus salmonis; adult female lice include females with or without egg strings. Moving and attached stages are distinct. Resistance concerns heritable reduced susceptibility, not every ineffective treatment.",
+    "needs": "",
+    "gaps": [],
+    "extra": [],
+    "clauses": [
+      {
+        "start": "a. Behandling: Medikamentell avlusning ved bad eller gjennom fôret, eller andre metoder som fjerner lakselus, herunder mekanisk fjerning. Bruk av rensefisk regnes ikke som behandling.",
+        "marks": [
+          [
+            "Subject",
+            "Behandling"
+          ],
+          [
+            "Object",
+            "Medikamentell avlusning ved bad eller gjennom fôret, eller andre metoder som fjerner lakselus, herunder mekanisk fjerning. Bruk av rensefisk regnes ikke som behandling."
+          ]
+        ],
+        "span": [
+          0,
+          211
+        ]
+      },
+      {
+        "start": "b. Bevegelige stadier: Voksne hannlus og halvvoksne (preadulte) stadier av lakselus.",
+        "marks": [
+          [
+            "Subject",
+            "Bevegelige stadier"
+          ],
+          [
+            "Object",
+            "Voksne hannlus og halvvoksne (preadulte) stadier av lakselus."
+          ]
+        ],
+        "span": [
+          211,
+          297
+        ]
+      },
+      {
+        "start": "c. Fastsittende stadier: Copepoditt- og chalimusstadier av lakselus.",
+        "marks": [
+          [
+            "Subject",
+            "Fastsittende stadier"
+          ],
+          [
+            "Object",
+            "Copepoditt- og chalimusstadier av lakselus."
+          ]
+        ],
+        "span": [
+          297,
+          367
+        ]
+      },
+      {
+        "start": "d. Lakselus: Hoppekreps av arten Lepeophtheirus salmonis.",
+        "marks": [
+          [
+            "Subject",
+            "Lakselus"
+          ],
+          [
+            "Object",
+            "Hoppekreps av arten Lepeophtheirus salmonis."
+          ]
+        ],
+        "span": [
+          367,
+          426
+        ]
+      },
+      {
+        "start": "e. Resistens: Mangelfull behandlingseffekt som skyldes at deler av eller hele den aktuelle lakselusepopulasjonen har arvbar nedsatt følsomhet for det farmasøytiske virkestoff som benyttes, slik at deler av eller hele populasjonen kan overleve en dose legemiddel som er dødelig for majoriteten av individene i en normalt følsom populasjon.",
+        "marks": [
+          [
+            "Subject",
+            "Resistens"
+          ],
+          [
+            "Object",
+            "Mangelfull behandlingseffekt som skyldes at deler av eller hele den aktuelle lakselusepopulasjonen har arvbar nedsatt følsomhet for det farmasøytiske virkestoff som benyttes, slik at deler av eller hele populasjonen kan overleve en dose legemiddel som er dødelig for majoriteten av individene i en normalt følsom populasjon."
+          ]
+        ],
+        "span": [
+          426,
+          766
+        ]
+      },
+      {
+        "start": "f. Rensefisk: Fisk som er ment for eller brukes til å redusere antall parasitter på fisk i akvakulturanlegg.",
+        "marks": [
+          [
+            "Subject",
+            "Rensefisk"
+          ],
+          [
+            "Object",
+            "Fisk som er ment for eller brukes til å redusere antall parasitter på fisk i akvakulturanlegg."
+          ]
+        ],
+        "span": [
+          766,
+          876
+        ]
+      },
+      {
+        "start": "g. Voksen hunnlus: Kjønnsmoden hunnlus med eller uten eggstrenger.",
+        "marks": [
+          [
+            "Subject",
+            "Voksen hunnlus"
+          ],
+          [
+            "Object",
+            "Kjønnsmoden hunnlus med eller uten eggstrenger."
+          ]
+        ],
+        "span": [
+          876,
+          942
+        ]
+      }
+    ],
+    "text": "I forskriften menes med:\n\na. Behandling: Medikamentell avlusning ved bad eller gjennom fôret, eller andre metoder som fjerner lakselus, herunder mekanisk fjerning. Bruk av rensefisk regnes ikke som behandling.\n\nb. Bevegelige stadier: Voksne hannlus og halvvoksne (preadulte) stadier av lakselus.\n\nc. Fastsittende stadier: Copepoditt- og chalimusstadier av lakselus.\n\nd. Lakselus: Hoppekreps av arten Lepeophtheirus salmonis.\n\ne. Resistens: Mangelfull behandlingseffekt som skyldes at deler av eller hele den aktuelle lakselusepopulasjonen har arvbar nedsatt følsomhet for det farmasøytiske virkestoff som benyttes, slik at deler av eller hele populasjonen kan overleve en dose legemiddel som er dødelig for majoriteten av individene i en normalt følsom populasjon.\n\nf. Rensefisk: Fisk som er ment for eller brukes til å redusere antall parasitter på fisk i akvakulturanlegg.\n\ng. Voksen hunnlus: Kjønnsmoden hunnlus med eller uten eggstrenger."
+  },
+  {
+    "key": "plan-basis",
+    "blocks": [
+      "s4-1"
+    ],
+    "kind": "obligation",
+    "scope": "Norwegian seawater aquaculture facilities with salmonids, under § 2; exclude slaughter cages at slaughterhouses except where § 5 or the final paragraph of § 9 expressly applies.",
+    "condition": "Applies continuously to the scoped facilities. Coordination is with other facilities in a defined geographical area.",
+    "demand": "Have a plan for effective lice control; coordinate it with other facilities in the defined area; choose that area from hydrographic conditions and facility locations so it is suitable for effective control.",
+    "verification": "Inspect the current plan, participating facilities and evidence supporting the hydrographic/geographical boundary. All three duties apply; no fixed radius is stated.",
+    "needs": "Plan identity, participating facilities, hydrographic evidence and geographic boundary.",
+    "gaps": [],
+    "extra": [],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "Subject",
+            "Akvakulturanleggene"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Main Verb",
+            "ha"
+          ],
+          [
+            "Object",
+            "en plan for effektiv kontroll og bekjempelse av lakselus"
+          ]
+        ],
+        "span": [
+          0,
+          86
+        ]
+      },
+      {
+        "start": "Planen skal",
+        "marks": [
+          [
+            "Subject",
+            "Planen"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Main Verb",
+            "være samordnet"
+          ],
+          [
+            "conditions",
+            "med andre akvakulturanlegg innenfor et nærmere bestemt geografisk område"
+          ]
+        ],
+        "span": [
+          86,
+          187
+        ]
+      },
+      {
+        "start": "Omfanget på",
+        "marks": [
+          [
+            "Subject",
+            "Omfanget på det geografiske området"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Main Verb",
+            "bestemmes"
+          ],
+          [
+            "conditions",
+            "ut fra hydrografiske forhold og plasseringen av akvakulturanlegg"
+          ],
+          [
+            "conditions",
+            "slik at området er egnet for å få til en effektiv kontroll og bekjempelse"
+          ]
+        ],
+        "span": [
+          187,
+          378
+        ]
+      }
+    ],
+    "text": "Akvakulturanleggene skal ha en plan for effektiv kontroll og bekjempelse av lakselus. Planen skal være samordnet med andre akvakulturanlegg innenfor et nærmere bestemt geografisk område. Omfanget på det geografiske området skal bestemmes ut fra hydrografiske forhold og plasseringen av akvakulturanlegg, slik at området er egnet for å få til en effektiv kontroll og bekjempelse."
+  },
+  {
+    "key": "plan-content",
+    "blocks": [
+      "s4-2",
+      "s4-3",
+      "s4-4",
+      "s4-5",
+      "s4-6",
+      "s4-7"
+    ],
+    "kind": "obligation",
+    "scope": "Norwegian seawater aquaculture facilities with salmonids, under § 2; exclude slaughter cages at slaughterhouses except where § 5 or the final paragraph of § 9 expressly applies.",
+    "condition": "When drawing up or maintaining the coordinated plan; especially periods critical to wild salmon and sea trout.",
+    "demand": "Describe coordinated measures protecting wild stocks and minimising infective lice during critical periods. Include every item a–e: facility names/site numbers/contact details; area rationale; lice/resistance measures including coordinated stocking/fallowing; treatment coordination periods and intervention thresholds; information exchange including treatments, susceptibility results and counts.",
+    "verification": "Check all five minimum content items and the protection measures. Keep the source reference to § 7 visible: § 7 is repealed in this snapshot, so do not reconstruct its former spring-treatment rules.",
+    "needs": "Current plan, all covered facilities, critical wild-stock periods, coordination procedures and exchanged information.",
+    "gaps": [
+      "§ 4 item d still refers to § 7, which is marked repealed. Human legal review must decide the effect of this residual reference; no former § 7 obligation has been invented."
+    ],
+    "extra": [
+      "s7-0",
+      "s7-1"
+    ],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "Subject",
+            "Planen"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Main Verb",
+            "beskrive"
+          ],
+          [
+            "Object",
+            "samordnede tiltak som gjennomføres for å ivareta hensyn til ville bestander"
+          ]
+        ],
+        "span": [
+          0,
+          98
+        ]
+      },
+      {
+        "start": "og skal spesielt omfatte",
+        "marks": [
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Main Verb",
+            "omfatte"
+          ],
+          [
+            "Object",
+            "tiltak som sikrer lavest mulig forekomst av infektive stadier av lakselus i sjøen"
+          ],
+          [
+            "conditions",
+            "i perioder som er kritiske for ville bestander av laks og sjøørret"
+          ]
+        ],
+        "span": [
+          98,
+          273
+        ]
+      },
+      {
+        "start": "Planen skal minst",
+        "marks": [
+          [
+            "Subject",
+            "Planen"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "conditions",
+            "minst"
+          ],
+          [
+            "Main Verb",
+            "inneholde"
+          ],
+          [
+            "Object",
+            "a. navn, lokalitetsnummer og kontaktdetaljer for akvakulturanlegg som er omfattet av det geografiske området med samordnet plan,"
+          ],
+          [
+            "Object",
+            "b. begrunnelse for valg av områdets omfang,"
+          ],
+          [
+            "Object",
+            "c. tiltak som gjennomføres i akvakulturanlegg i området for å begrense forekomsten av lakselus og utviklingen av resistens, herunder rutiner for samordnet utsett i og brakklegging av akvakulturanlegg,"
+          ],
+          [
+            "Object",
+            "d. rutiner for samordning av behandlinger gjennom året med tidsrom og tiltaksgrense for disse behandlingene. Dette gjelder også samordnede behandlinger om våren, jf. § 7,"
+          ],
+          [
+            "Object",
+            "e. rutiner for utveksling av informasjon mellom akvakulturanlegg innenfor området som er nødvendig for å gjennomføre samordnet kontroll og bekjempelse. Informasjonsutvekslingen skal minst inneholde opplysninger om gjennomførte behandlinger, resultater fra følsomhetsundersøkelser og tellinger av lakselus."
+          ]
+        ],
+        "span": [
+          273,
+          1166
+        ]
+      }
+    ],
+    "text": "Planen skal beskrive samordnede tiltak som gjennomføres for å ivareta hensyn til ville bestander, og skal spesielt omfatte tiltak som sikrer lavest mulig forekomst av infektive stadier av lakselus i sjøen i perioder som er kritiske for ville bestander av laks og sjøørret. Planen skal minst inneholde følgende:\n\na. navn, lokalitetsnummer og kontaktdetaljer for akvakulturanlegg som er omfattet av det geografiske området med samordnet plan,\n\nb. begrunnelse for valg av områdets omfang,\n\nc. tiltak som gjennomføres i akvakulturanlegg i området for å begrense forekomsten av lakselus og utviklingen av resistens, herunder rutiner for samordnet utsett i og brakklegging av akvakulturanlegg,\n\nd. rutiner for samordning av behandlinger gjennom året med tidsrom og tiltaksgrense for disse behandlingene. Dette gjelder også samordnede behandlinger om våren, jf. § 7,\n\ne. rutiner for utveksling av informasjon mellom akvakulturanlegg innenfor området som er nødvendig for å gjennomføre samordnet kontroll og bekjempelse. Informasjonsutvekslingen skal minst inneholde opplysninger om gjennomførte behandlinger, resultater fra følsomhetsundersøkelser og tellinger av lakselus."
+  },
+  {
+    "key": "plan-maintenance",
+    "blocks": [
+      "s4-8"
+    ],
+    "kind": "obligation",
+    "scope": "Norwegian seawater aquaculture facilities with salmonids, under § 2; exclude slaughter cages at slaughterhouses except where § 5 or the final paragraph of § 9 expressly applies.",
+    "condition": "Continuously for maintenance and implementation; annually for submission; whenever the plan changes for notification.",
+    "demand": "Keep the plan current at all times and implement its measures. Keep it available at the facility, submit it annually to Mattilsynet by 1 October, and notify Mattilsynet immediately of changes.",
+    "verification": "Check current version and practice, on-site availability, annual submission evidence and change notifications. Do not turn immediately into an invented fixed number of hours.",
+    "needs": "Assessment year, plan versions/change times, implemented measures and submission/notification records.",
+    "gaps": [],
+    "extra": [],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "Subject",
+            "Planen"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "conditions",
+            "til enhver tid"
+          ],
+          [
+            "Main Verb",
+            "være oppdatert"
+          ]
+        ],
+        "span": [
+          0,
+          43
+        ]
+      },
+      {
+        "start": "og tiltak skal",
+        "marks": [
+          [
+            "Subject",
+            "tiltak"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Main Verb",
+            "gjennomføres"
+          ],
+          [
+            "conditions",
+            "i samsvar med planen"
+          ]
+        ],
+        "span": [
+          43,
+          93
+        ]
+      },
+      {
+        "start": "Planen skal være tilgjengelig",
+        "marks": [
+          [
+            "Subject",
+            "Planen"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Main Verb",
+            "være tilgjengelig"
+          ],
+          [
+            "conditions",
+            "på akvakulturanlegget"
+          ]
+        ],
+        "span": [
+          93,
+          145
+        ]
+      },
+      {
+        "start": "og oversendes",
+        "marks": [
+          [
+            "Main Verb",
+            "oversendes"
+          ],
+          [
+            "conditions",
+            "årlig"
+          ],
+          [
+            "Object",
+            "til Mattilsynet"
+          ],
+          [
+            "conditions",
+            "innen 1. oktober"
+          ]
+        ],
+        "span": [
+          145,
+          199
+        ]
+      },
+      {
+        "start": "Endringer av planen",
+        "marks": [
+          [
+            "Subject",
+            "Endringer av planen"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "conditions",
+            "umiddelbart"
+          ],
+          [
+            "Main Verb",
+            "varsles inn"
+          ],
+          [
+            "Object",
+            "til Mattilsynet"
+          ]
+        ],
+        "span": [
+          199,
+          264
+        ]
+      }
+    ],
+    "text": "Planen skal til enhver tid være oppdatert, og tiltak skal gjennomføres i samsvar med planen. Planen skal være tilgjengelig på akvakulturanlegget og oversendes årlig til Mattilsynet innen 1. oktober. Endringer av planen skal umiddelbart varsles inn til Mattilsynet."
+  },
+  {
+    "key": "zone-power",
+    "blocks": [
+      "s5-1",
+      "s5-2",
+      "s5-3",
+      "s5-4",
+      "s5-5",
+      "s5-6",
+      "s5-7"
+    ],
+    "kind": "power",
+    "scope": "Mattilsynet exercising zone-regulation powers; affected facilities can include slaughter cages under § 2.",
+    "condition": "The § 4 plan is considered insufficient to achieve the regulation’s purpose.",
+    "demand": null,
+    "verification": "This authorises, rather than compels, Mattilsynet to make a zone regulation. Items a–f are non-exhaustive possible subjects, not six automatically imposed facility duties. Locate any actual applicable zone regulation before applying additional limits or biomass requirements.",
+    "needs": "Authority assessment of plan sufficiency, geographical zone and any adopted zone regulation.",
+    "gaps": [
+      "Any separate zone regulations applicable to a real facility must be supplied and reviewed."
+    ],
+    "extra": [],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "conditions",
+            "Dersom planen etter § 4 ikke anses tilstrekkelig til å oppfylle forskriftens formål"
+          ],
+          [
+            "Modal Verb",
+            "kan"
+          ],
+          [
+            "Subject",
+            "Mattilsynet"
+          ],
+          [
+            "Main Verb",
+            "fastsette"
+          ],
+          [
+            "Object",
+            "forskrift om sone"
+          ],
+          [
+            "conditions",
+            "for å sikre gjennomføring av nødvendige tiltak"
+          ]
+        ],
+        "span": [
+          0,
+          177
+        ]
+      },
+      {
+        "start": "Slik forskrift",
+        "marks": [
+          [
+            "Subject",
+            "Slik forskrift"
+          ],
+          [
+            "Modal Verb",
+            "kan"
+          ],
+          [
+            "conditions",
+            "blant annet"
+          ],
+          [
+            "Main Verb",
+            "omfatte"
+          ],
+          [
+            "Object",
+            "a. tidspunkt og grenseverdier for gjennomføring av samordnede behandlinger,"
+          ],
+          [
+            "Object",
+            "b. egne grenser for lakselus,"
+          ],
+          [
+            "Object",
+            "c. reduksjon av biomasse,"
+          ],
+          [
+            "Object",
+            "d. bruk av slaktemerder,"
+          ],
+          [
+            "Object",
+            "e. godkjenning av planer for forebygging og bekjempelse av lakselus, og"
+          ],
+          [
+            "Object",
+            "f. ytterligere krav til telling av lakselus i akvakulturanlegg."
+          ]
+        ],
+        "span": [
+          177,
+          523
+        ]
+      }
+    ],
+    "text": "Dersom planen etter § 4 ikke anses tilstrekkelig til å oppfylle forskriftens formål, kan Mattilsynet fastsette forskrift om sone for å sikre gjennomføring av nødvendige tiltak. Slik forskrift kan blant annet omfatte krav om:\n\na. tidspunkt og grenseverdier for gjennomføring av samordnede behandlinger,\n\nb. egne grenser for lakselus,\n\nc. reduksjon av biomasse,\n\nd. bruk av slaktemerder,\n\ne. godkjenning av planer for forebygging og bekjempelse av lakselus, og\n\nf. ytterligere krav til telling av lakselus i akvakulturanlegg."
+  },
+  {
+    "key": "temperature",
+    "blocks": [
+      "s6-1"
+    ],
+    "kind": "obligation",
+    "scope": "Norwegian seawater aquaculture facilities with salmonids, under § 2; exclude slaughter cages at slaughterhouses except where § 5 or the final paragraph of § 9 expressly applies.",
+    "condition": "No additional event or temperature trigger. B = A within the selected assessment period. The counting exemptions do not remove this duty.",
+    "demand": "Measure seawater temperature at the facility at a depth of three metres at least once every week. Depth and frequency qualify Demand, not Scope.",
+    "verification": "Check facility, measurement timestamp and three-metre depth for each weekly assessment interval. The source does not define the weekly boundary here; document the operational convention before automation. Do not silently replace weekly with a rolling seven-day deadline.",
+    "needs": "Facility identity, measurement depth, dates and agreed weekly assessment windows.",
+    "gaps": [],
+    "extra": [
+      "s6-2",
+      "s6-3"
+    ],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "Subject",
+            "Sjøtemperaturen"
+          ],
+          [
+            "conditions",
+            "på tre meters dyp"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Main Verb",
+            "måles"
+          ],
+          [
+            "conditions",
+            "minst hver uke"
+          ]
+        ],
+        "span": [
+          0,
+          60
+        ]
+      }
+    ],
+    "text": "Sjøtemperaturen på tre meters dyp skal måles minst hver uke."
+  },
+  {
+    "key": "counting",
+    "blocks": [
+      "s6-2"
+    ],
+    "kind": "obligation",
+    "scope": "Norwegian seawater aquaculture facilities with salmonids, under § 2; exclude slaughter cages at slaughterhouses except where § 5 or the final paragraph of § 9 expressly applies. Assess fish groups within the facility so broodstock exemption does not exempt non-broodstock in a mixed facility.",
+    "condition": "B = A ∩ NOT S ∩ ((T ≥ 4°C) OR (T < 4°C AND NOT broodstock)), where S is the facility-wide slaughter-out exemption in § 6 third paragraph. At exactly 4°C the seven-day branch applies, including broodstock.",
+    "demand": "Count sea lice at least every 7 days when T ≥ 4°C and at least every 14 days when T < 4°C for non-exempt fish; use Annex 1. Keep the frequency/temperature pairs together. Broodstock below 4°C are exempt, not prohibited from being counted.",
+    "verification": "Establish branch and exemption facts, then check count intervals and every applicable Annex 1 requirement. Missing temperature or exemption facts remain unresolved. Do not invent a rule for restarting the interval when temperature changes.",
+    "needs": "Applicable temperature history, fish-group broodstock status, due/previous counts and facility-wide slaughter-out plan.",
+    "gaps": [],
+    "extra": [
+      "s6-3",
+      "s3-5",
+      "annex-1",
+      "annex-5",
+      "annex-6",
+      "annex-7",
+      "annex-8",
+      "annex-9",
+      "annex-10"
+    ],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "Subject",
+            "Antallet lakselus"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Main Verb",
+            "telles"
+          ],
+          [
+            "conditions",
+            "minst hver 7. dag ved temperaturer lik eller over 4 °C"
+          ],
+          [
+            "conditions",
+            "og minst hver 14. dag ved temperaturer under 4 °C"
+          ]
+        ],
+        "span": [
+          0,
+          137
+        ]
+      },
+      {
+        "start": "Stamfisk er",
+        "marks": [
+          [
+            "Subject",
+            "Stamfisk"
+          ],
+          [
+            "Main Verb",
+            "er unntatt"
+          ],
+          [
+            "Object",
+            "fra krav om telling"
+          ],
+          [
+            "conditions",
+            "ved temperaturer under 4 °C"
+          ]
+        ],
+        "span": [
+          137,
+          206
+        ]
+      },
+      {
+        "start": "Telling av lakselus",
+        "marks": [
+          [
+            "Subject",
+            "Telling av lakselus"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Main Verb",
+            "gjennomføres"
+          ],
+          [
+            "conditions",
+            "i henhold til kravene i vedlegg 1"
+          ]
+        ],
+        "span": [
+          206,
+          278
+        ]
+      }
+    ],
+    "text": "Antallet lakselus skal telles minst hver 7. dag ved temperaturer lik eller over 4 °C, og minst hver 14. dag ved temperaturer under 4 °C. Stamfisk er unntatt fra krav om telling ved temperaturer under 4 °C. Telling av lakselus skal gjennomføres i henhold til kravene i vedlegg 1."
+  },
+  {
+    "key": "slaughter-exemption",
+    "blocks": [
+      "s6-3"
+    ],
+    "kind": "exemption",
+    "scope": "Norwegian seawater aquaculture facilities with salmonids, under § 2; exclude slaughter cages at slaughterhouses except where § 5 or the final paragraph of § 9 expressly applies. The relevant counting occasion and all fish in the facility.",
+    "condition": "All fish in the facility are to be slaughtered out within 14 days after the date the count should have taken place.",
+    "demand": null,
+    "verification": "Apply as an exception to counting, not as a duty to slaughter and not as an exemption from temperature measurement. Verify complete stock coverage, the due counting date and the planned slaughter-out date; using today as the time origin is incorrect.",
+    "needs": "Otherwise applicable due count date, whole-facility fish inventory and evidenced slaughter-out plan.",
+    "gaps": [],
+    "extra": [
+      "s6-1",
+      "s6-2"
+    ],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "Subject",
+            "Kravene til telling"
+          ],
+          [
+            "Main Verb",
+            "gjelder ikke"
+          ],
+          [
+            "conditions",
+            "dersom all fisken i akvakulturanlegget skal slaktes ut innen 14 dager etter at telling skulle vært gjennomført"
+          ]
+        ],
+        "span": [
+          0,
+          144
+        ]
+      }
+    ],
+    "text": "Kravene til telling gjelder ikke dersom all fisken i akvakulturanlegget skal slaktes ut innen 14 dager etter at telling skulle vært gjennomført."
+  },
+  {
+    "key": "repealed",
+    "blocks": [
+      "s7-0",
+      "s7-1"
+    ],
+    "kind": "repealed",
+    "scope": "§ 7 as a repealed provision in this consolidated snapshot.",
+    "condition": "Repeal shown by the amendment note referring to the regulation of 6 March 2017 No. 275.",
+    "demand": null,
+    "verification": "Retain the repeal marker and history. Do not recover former obligations from the surviving cross-reference in § 4.",
+    "needs": "",
+    "gaps": [],
+    "extra": [],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "Subject",
+            "§ 7."
+          ],
+          [
+            "Main Verb",
+            "Opphevet"
+          ]
+        ],
+        "span": [
+          0,
+          105
+        ]
+      }
+    ],
+    "text": "§ 7. (Opphevet)\n\n0 Endret ved forskrift 14 mars 2016 nr. 242, opphevet ved forskrift 6 mars 2017 nr. 275."
+  },
+  {
+    "key": "limit-south",
+    "blocks": [
+      "s8-1"
+    ],
+    "kind": "obligation",
+    "scope": "Norwegian seawater aquaculture facilities with salmonids, under § 2; exclude slaughter cages at slaughterhouses except where § 5 or the final paragraph of § 9 expressly applies. Region: Nord-Trøndelag and southwards.",
+    "condition": "Regional date branch: Monday week 16 through Sunday week 21, inclusive; the other branch runs Monday week 22 through Sunday week 15. Only an actual applicable permission under § 8 fourth paragraph can change the broodstock limit.",
+    "demand": "Keep the average adult female sea-lice count per fish strictly below 0.2 at all times in the first period and strictly below 0.5 at all times in the other period. Exactly 0.2 or 0.5 does not satisfy its respective less-than limit.",
+    "verification": "Use the Annex 1 mean-of-cage-means method and § 3 adult-female definition. Count observations do not establish an unobserved continuous history; distinguish evidence gaps from measured exceedances. Region names are those in the source.",
+    "needs": "Source-defined region, date/week boundary, adult-female counts, cage means and any actual higher-limit permission.",
+    "gaps": [],
+    "extra": [
+      "s8-4",
+      "s3-8",
+      "annex-9"
+    ],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "conditions",
+            "I Nord-Trøndelag og sørover"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Subject",
+            "det"
+          ],
+          [
+            "conditions",
+            "fra og med mandag i uke 16 til og med søndag i uke 21 til en hver tid"
+          ],
+          [
+            "Main Verb",
+            "være"
+          ],
+          [
+            "Object",
+            "færre enn 0,2 voksen hunnlus av lakselus i gjennomsnitt per fisk i akvakulturanlegget. "
+          ]
+        ],
+        "span": [
+          0,
+          199
+        ]
+      },
+      {
+        "start": "Fra og med mandag",
+        "marks": [
+          [
+            "conditions",
+            "Fra og med mandag i uke 22 til og med søndag i uke 15 "
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Subject",
+            "det"
+          ],
+          [
+            "conditions",
+            "til en hver tid"
+          ],
+          [
+            "Main Verb",
+            "være"
+          ],
+          [
+            "Object",
+            "færre enn 0,5 voksen hunnlus av lakselus i gjennomsnitt per fisk i akvakulturanlegget"
+          ]
+        ],
+        "span": [
+          199,
+          369
+        ]
+      }
+    ],
+    "text": "I Nord-Trøndelag og sørover skal det fra og med mandag i uke 16 til og med søndag i uke 21 til en hver tid være færre enn 0,2 voksen hunnlus av lakselus i gjennomsnitt per fisk i akvakulturanlegget. Fra og med mandag i uke 22 til og med søndag i uke 15 skal det til en hver tid være færre enn 0,5 voksen hunnlus av lakselus i gjennomsnitt per fisk i akvakulturanlegget."
+  },
+  {
+    "key": "limit-north",
+    "blocks": [
+      "s8-2"
+    ],
+    "kind": "obligation",
+    "scope": "Norwegian seawater aquaculture facilities with salmonids, under § 2; exclude slaughter cages at slaughterhouses except where § 5 or the final paragraph of § 9 expressly applies. Region: Nordland, Troms and Finnmark.",
+    "condition": "Regional date branch: Monday week 21 through Sunday week 26, inclusive; the other branch runs Monday week 27 through Sunday week 20. Only an actual applicable permission under § 8 fourth paragraph can change the broodstock limit.",
+    "demand": "Keep the average adult female sea-lice count per fish strictly below 0.2 at all times in the first period and strictly below 0.5 at all times in the other period. Exactly 0.2 or 0.5 does not satisfy its respective less-than limit.",
+    "verification": "Use the Annex 1 mean-of-cage-means method and § 3 adult-female definition. Count observations do not establish an unobserved continuous history; distinguish evidence gaps from measured exceedances. Region names are those in the source.",
+    "needs": "Source-defined region, date/week boundary, adult-female counts, cage means and any actual higher-limit permission.",
+    "gaps": [],
+    "extra": [
+      "s8-4",
+      "s3-8",
+      "annex-9"
+    ],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "conditions",
+            "I Nordland, Troms og Finnmark"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Subject",
+            "det"
+          ],
+          [
+            "conditions",
+            "fra og med mandag i uke 21 til og med søndag i uke 26 til en hver tid"
+          ],
+          [
+            "Main Verb",
+            "være"
+          ],
+          [
+            "Object",
+            "færre enn 0,2 voksen hunnlus av lakselus i gjennomsnitt per fisk i akvakulturanlegget. "
+          ]
+        ],
+        "span": [
+          0,
+          201
+        ]
+      },
+      {
+        "start": "Fra og med mandag",
+        "marks": [
+          [
+            "conditions",
+            "Fra og med mandag i uke 27 til og med søndag i uke 20 "
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Subject",
+            "det"
+          ],
+          [
+            "conditions",
+            "til en hver tid"
+          ],
+          [
+            "Main Verb",
+            "være"
+          ],
+          [
+            "Object",
+            "færre enn 0,5 voksen hunnlus av lakselus i gjennomsnitt per fisk i akvakulturanlegget"
+          ]
+        ],
+        "span": [
+          201,
+          371
+        ]
+      }
+    ],
+    "text": "I Nordland, Troms og Finnmark skal det fra og med mandag i uke 21 til og med søndag i uke 26 til en hver tid være færre enn 0,2 voksen hunnlus av lakselus i gjennomsnitt per fisk i akvakulturanlegget. Fra og med mandag i uke 27 til og med søndag i uke 20 skal det til en hver tid være færre enn 0,5 voksen hunnlus av lakselus i gjennomsnitt per fisk i akvakulturanlegget."
+  },
+  {
+    "key": "limit-action",
+    "blocks": [
+      "s8-3"
+    ],
+    "kind": "obligation",
+    "scope": "Norwegian seawater aquaculture facilities with salmonids, under § 2; exclude slaughter cages at slaughterhouses except where § 5 or the final paragraph of § 9 expressly applies.",
+    "condition": "Applies to keeping lice within the regional limits, not only after a recorded breach. Slaughter-out is included where necessary.",
+    "demand": "Implement measures to ensure lice quantities do not exceed the limits in § 8 first and second paragraphs, including slaughtering fish where necessary.",
+    "verification": "Assess implemented measures against the applicable strict less-than limit. Do not weaken <0.2/<0.5 to ≤ using the wording of this paragraph. Necessity of slaughter-out needs a case-specific basis.",
+    "needs": "Applicable regional limit, monitoring history, implemented measures and their effectiveness/necessity.",
+    "gaps": [],
+    "extra": [
+      "s8-1",
+      "s8-2"
+    ],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "Subject",
+            "Det"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Main Verb",
+            "gjennomføres"
+          ],
+          [
+            "Object",
+            "tiltak"
+          ],
+          [
+            "conditions",
+            "for å sikre at mengden lakselus ikke overskrider grensene i første og andre ledd"
+          ],
+          [
+            "conditions",
+            "herunder om nødvendig utslakting av fisk"
+          ]
+        ],
+        "span": [
+          0,
+          152
+        ]
+      }
+    ],
+    "text": "Det skal gjennomføres tiltak for å sikre at mengden lakselus ikke overskrider grensene i første og andre ledd, herunder om nødvendig utslakting av fisk."
+  },
+  {
+    "key": "broodstock-permission",
+    "blocks": [
+      "s8-4"
+    ],
+    "kind": "power",
+    "scope": "Mattilsynet and an individual permission concerning broodstock in its last half-year in seawater.",
+    "condition": "Broodstock are in their last six months in seawater; a higher limit requires permission from Mattilsynet.",
+    "demand": null,
+    "verification": "This is a discretionary power, not an automatic higher lice limit for all broodstock. The provision does not supply the permitted numeric limit. Apply the standard limit unless a relevant permission establishes otherwise.",
+    "needs": "Broodstock production timeline and the actual permission, including its limit, conditions and validity.",
+    "gaps": [],
+    "extra": [],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "Subject",
+            "Mattilsynet"
+          ],
+          [
+            "Modal Verb",
+            "kan"
+          ],
+          [
+            "Main Verb",
+            "gi"
+          ],
+          [
+            "Object",
+            "tillatelse til en høyere grense for lakselus"
+          ],
+          [
+            "conditions",
+            "for stamfisk det siste halve året den står i sjøen"
+          ]
+        ],
+        "span": [
+          0,
+          115
+        ]
+      }
+    ],
+    "text": "Mattilsynet kan gi tillatelse til en høyere grense for lakselus for stamfisk det siste halve året den står i sjøen."
+  },
+  {
+    "key": "medicine",
+    "blocks": [
+      "s9-1"
+    ],
+    "kind": "obligation",
+    "scope": "Norwegian seawater aquaculture facilities with salmonids, under § 2; exclude slaughter cages at slaughterhouses except where § 5 or the final paragraph of § 9 expressly applies. Medicinal lice-treatment episodes.",
+    "condition": "Medicine is used against lice. Treat all production units unless it can be documented that treatment of every unit is clearly unnecessary.",
+    "demand": "Use medicine expected to be effective based on relevant susceptibility examinations. Carry out treatment in all production units except where the stated documented exception is established.",
+    "verification": "Inspect susceptibility findings, medicine selection, unit inventory and treatment coverage. A partial treatment requires documentation of obvious lack of need for all-unit treatment; mere absence of records is not an exception. Apply Annex 1 point 7 to all-unit counting before partial treatment.",
+    "needs": "Treatment/medicine, relevant susceptibility results, all production units and any documented exception.",
+    "gaps": [],
+    "extra": [
+      "s3-2",
+      "s3-6",
+      "annex-10"
+    ],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "conditions",
+            "Ved bruk av legemiddel i behandling mot lakselus"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Subject",
+            "behandlingen"
+          ],
+          [
+            "Main Verb",
+            "gjennomføres"
+          ],
+          [
+            "Object",
+            "med et legemiddel som forventes å ha god effekt"
+          ],
+          [
+            "conditions",
+            "basert på relevante følsomhetsundersøkelser"
+          ]
+        ],
+        "span": [
+          0,
+          173
+        ]
+      },
+      {
+        "start": "Behandlingen skal",
+        "marks": [
+          [
+            "Subject",
+            "Behandlingen"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Main Verb",
+            "gjennomføres"
+          ],
+          [
+            "conditions",
+            "i alle produksjonsenhetene i akvakulturanlegget"
+          ],
+          [
+            "conditions",
+            "med mindre det kan dokumenteres at behandling av alle produksjonsenhetene er åpenbart unødvendig"
+          ]
+        ],
+        "span": [
+          173,
+          350
+        ]
+      }
+    ],
+    "text": "Ved bruk av legemiddel i behandling mot lakselus skal behandlingen gjennomføres med et legemiddel som forventes å ha god effekt basert på relevante følsomhetsundersøkelser. Behandlingen skal gjennomføres i alle produksjonsenhetene i akvakulturanlegget, med mindre det kan dokumenteres at behandling av alle produksjonsenhetene er åpenbart unødvendig."
+  },
+  {
+    "key": "treatment-method",
+    "blocks": [
+      "s9-2"
+    ],
+    "kind": "obligation",
+    "scope": "Norwegian seawater aquaculture facilities with salmonids, under § 2; exclude slaughter cages at slaughterhouses except where § 5 or the final paragraph of § 9 expressly applies. Bath-treatment and oral-treatment episodes.",
+    "condition": "For bath treatment: closed-unit duty unless the medicine is authorised for another treatment form. For oral treatment: prohibition applies when appetite is failing.",
+    "demand": "Carry out bath treatment in a closed treatment unit unless the stated medicine-authorisation exception applies. Do not carry out oral treatment when appetite is failing.",
+    "verification": "Keep these two branches separate. Verify containment and the medicine’s actual authorised treatment form; verify appetite evidence before oral treatment. No invented appetite threshold or blanket exemption for every authorised medicine.",
+    "needs": "Treatment route, medicine authorisation, treatment-unit containment and contemporaneous appetite assessment.",
+    "gaps": [],
+    "extra": [],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "Subject",
+            "Badebehandling"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Main Verb",
+            "gjennomføres"
+          ],
+          [
+            "conditions",
+            "i lukket behandlingsenhet"
+          ],
+          [
+            "conditions",
+            "med mindre legemidlet er godkjent for annen form for behandling"
+          ]
+        ],
+        "span": [
+          0,
+          124
+        ]
+      },
+      {
+        "start": "Oral behandling",
+        "marks": [
+          [
+            "Subject",
+            "Oral behandling"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Main Verb",
+            "ikke gjennomføres"
+          ],
+          [
+            "conditions",
+            "ved sviktende appetitt"
+          ]
+        ],
+        "span": [
+          124,
+          186
+        ]
+      }
+    ],
+    "text": "Badebehandling skal gjennomføres i lukket behandlingsenhet med mindre legemidlet er godkjent for annen form for behandling. Oral behandling skal ikke gjennomføres ved sviktende appetitt."
+  },
+  {
+    "key": "treatment-evaluation",
+    "blocks": [
+      "s9-3"
+    ],
+    "kind": "obligation",
+    "scope": "Norwegian seawater aquaculture facilities with salmonids, under § 2; exclude slaughter cages at slaughterhouses except where § 5 or the final paragraph of § 9 expressly applies. Each completed medicinal treatment and the authorised animal-health personnel performing the stated work.",
+    "condition": "Evaluate after every completed medicinal treatment. Inadequate effect triggers immediate investigation of causes and a specific susceptibility examination.",
+    "demand": "Evaluate effect after each medicinal treatment; if effect is inadequate, immediately investigate causes and specifically examine medicine susceptibility. Authorised animal-health personnel must perform the evaluation, investigation and examination.",
+    "verification": "Check every treatment’s evaluation, its result, follow-up timing and personnel authorisation. Do not require a cause investigation only when resistance is already proven; inadequate effect is the trigger. Do not invent an hours deadline for immediately.",
+    "needs": "Completed medicinal treatments, outcomes, investigation/examination records and personnel credentials.",
+    "gaps": [],
+    "extra": [],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "Subject",
+            "Behandlingseffekten"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Main Verb",
+            "evalueres"
+          ],
+          [
+            "conditions",
+            "etter hver gjennomført behandling med legemiddel"
+          ]
+        ],
+        "span": [
+          0,
+          85
+        ]
+      },
+      {
+        "start": "Ved mangelfull effekt",
+        "marks": [
+          [
+            "conditions",
+            "Ved mangelfull effekt av gjennomført behandling"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Subject",
+            "årsaksforhold"
+          ],
+          [
+            "conditions",
+            "umiddelbart"
+          ],
+          [
+            "Main Verb",
+            "utredes"
+          ],
+          [
+            "conditions",
+            "og følsomhet for legemiddel skal undersøkes spesifikt"
+          ]
+        ],
+        "nested": true,
+        "span": [
+          85,
+          228
+        ]
+      },
+      {
+        "start": "Slik evaluering",
+        "marks": [
+          [
+            "Subject",
+            "Slik evaluering, utredning og undersøkelse"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Main Verb",
+            "gjennomføres"
+          ],
+          [
+            "conditions",
+            "av autorisert dyrehelsepersonell"
+          ]
+        ],
+        "span": [
+          228,
+          322
+        ]
+      }
+    ],
+    "text": "Behandlingseffekten skal evalueres etter hver gjennomført behandling med legemiddel. Ved mangelfull effekt av gjennomført behandling skal årsaksforhold umiddelbart utredes, og følsomhet for legemiddel skal undersøkes spesifikt. Slik evaluering, utredning og undersøkelse skal gjennomføres av autorisert dyrehelsepersonell."
+  },
+  {
+    "key": "resistance-action",
+    "blocks": [
+      "s9-4"
+    ],
+    "kind": "obligation",
+    "scope": "Facilities with salmonids in seawater AND slaughter cages at slaughterhouses: § 2 expressly includes the final paragraph of § 9 for slaughter cages.",
+    "condition": "Resistant sea-lice populations require measures; slaughter-out and extended fallowing are included where necessary.",
+    "demand": "Implement measures to combat resistant sea-lice populations, including slaughtering fish and extending fallowing where necessary.",
+    "verification": "Use the resistance definition in § 3. Inspect measures and justification for necessity. Do not exclude slaughter cages here, or infer genetic resistance from every single ineffective treatment.",
+    "needs": "Resistance evidence, facility/slaughter-cage identity and measures including necessary slaughter-out/fallowing.",
+    "gaps": [],
+    "extra": [
+      "s3-6"
+    ],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "Subject",
+            "Det"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Main Verb",
+            "iverksettes"
+          ],
+          [
+            "Object",
+            "tiltak for å bekjempe resistente lakseluspopulasjoner"
+          ],
+          [
+            "conditions",
+            "herunder om nødvendig utslakting av fisk og forlenget brakklegging"
+          ]
+        ],
+        "span": [
+          0,
+          143
+        ]
+      }
+    ],
+    "text": "Det skal iverksettes tiltak for å bekjempe resistente lakseluspopulasjoner, herunder om nødvendig utslakting av fisk og forlenget brakklegging."
+  },
+  {
+    "key": "weekly-report",
+    "blocks": [
+      "s10-1",
+      "s10-2",
+      "s10-3",
+      "s10-4",
+      "s10-5",
+      "s10-6",
+      "s10-7"
+    ],
+    "kind": "obligation",
+    "scope": "Norwegian seawater aquaculture facilities with salmonids, under § 2; exclude slaughter cages at slaughterhouses except where § 5 or the final paragraph of § 9 expressly applies. Weekly facility reporting periods.",
+    "condition": "For every week; deadline is during Tuesday of the immediately following week.",
+    "demand": "Report to Mattilsynet using the prescribed form by the following Tuesday: seawater temperature; lice treatments; active substances and quantities used; susceptibility results; suspected resistance; counts of adult female, moving and attached lice stages.",
+    "verification": "Verify reporting period, recipient, submission time, prescribed form and every required information category. The counting exemptions do not expressly waive this separate reporting paragraph. Do not fabricate fresh count results where counting was validly exempt.",
+    "needs": "Reporting weeks, submission records, current prescribed form and the six information categories.",
+    "gaps": [
+      "The prescribed reporting form is referenced but not included in this saved law; current field conventions and handling of an exempt/no-count week need human confirmation."
+    ],
+    "extra": [],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "conditions",
+            "For hver uke"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Subject",
+            "følgende opplysninger"
+          ],
+          [
+            "Main Verb",
+            "rapporteres"
+          ],
+          [
+            "Object",
+            "til Mattilsynet"
+          ],
+          [
+            "conditions",
+            "senest i løpet av tirsdag i nærmeste påfølgende uke"
+          ]
+        ],
+        "span": [
+          0,
+          121
+        ]
+      },
+      {
+        "start": "Rapportering skjer",
+        "marks": [
+          [
+            "Subject",
+            "Rapportering"
+          ],
+          [
+            "Main Verb",
+            "skjer"
+          ],
+          [
+            "conditions",
+            "i henhold til fastsatt skjema"
+          ]
+        ],
+        "span": [
+          121,
+          170
+        ]
+      },
+      {
+        "start": "og skal angi",
+        "marks": [
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Main Verb",
+            "angi"
+          ],
+          [
+            "Object",
+            "a. sjøtemperatur,"
+          ],
+          [
+            "Object",
+            "b. behandling mot lakselus,"
+          ],
+          [
+            "Object",
+            "c. hvilke virkestoff og mengde virkestoff som er benyttet ved behandling mot lakselus,"
+          ],
+          [
+            "Object",
+            "d. resultater av følsomhetsundersøkelser,"
+          ],
+          [
+            "Object",
+            "e. mistanke om resistens, og"
+          ],
+          [
+            "Object",
+            "f. antallet lakselus av voksen hunnlus, bevegelige og fastsittende stadier."
+          ]
+        ],
+        "span": [
+          170,
+          469
+        ]
+      }
+    ],
+    "text": "For hver uke skal følgende opplysninger rapporteres til Mattilsynet senest i løpet av tirsdag i nærmeste påfølgende uke. Rapportering skjer i henhold til fastsatt skjema og skal angi:\n\na. sjøtemperatur,\n\nb. behandling mot lakselus,\n\nc. hvilke virkestoff og mengde virkestoff som er benyttet ved behandling mot lakselus,\n\nd. resultater av følsomhetsundersøkelser,\n\ne. mistanke om resistens, og\n\nf. antallet lakselus av voksen hunnlus, bevegelige og fastsittende stadier."
+  },
+  {
+    "key": "supervision",
+    "blocks": [
+      "s11-1"
+    ],
+    "kind": "power",
+    "scope": "Mattilsynet exercising supervision and decision-making powers.",
+    "condition": "To secure compliance with provisions made in or under this regulation.",
+    "demand": null,
+    "verification": "Retain the distinction between supervision, necessary decisions under Food Act §§ 19/23 and individual decisions under §§ 24–26. No automatic site duty or finding arises without the applicable substantive rule or decision.",
+    "needs": "Authority action, applicable legal basis and actual individual decision.",
+    "gaps": [
+      "Food Act §§ 19 and 23–26 are cross-referenced, not analysed here."
+    ],
+    "extra": [],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "Subject",
+            "Mattilsynet"
+          ],
+          [
+            "Main Verb",
+            "fører tilsyn"
+          ]
+        ],
+        "span": [
+          0,
+          25
+        ]
+      },
+      {
+        "start": "og kan fatte",
+        "marks": [
+          [
+            "Modal Verb",
+            "kan"
+          ],
+          [
+            "Main Verb",
+            "fatte"
+          ],
+          [
+            "Object",
+            "nødvendige vedtak"
+          ],
+          [
+            "conditions",
+            "jf. matloven § 19 og § 23"
+          ],
+          [
+            "conditions",
+            "for å oppnå etterlevelse av bestemmelser gitt i eller i medhold av denne forskriften"
+          ]
+        ],
+        "span": [
+          25,
+          170
+        ]
+      },
+      {
+        "start": "Mattilsynet kan også",
+        "marks": [
+          [
+            "Subject",
+            "Mattilsynet"
+          ],
+          [
+            "Modal Verb",
+            "kan"
+          ],
+          [
+            "Main Verb",
+            "fatte"
+          ],
+          [
+            "Object",
+            "enkeltvedtak"
+          ],
+          [
+            "conditions",
+            "i henhold til matloven § 24 til § 26"
+          ]
+        ],
+        "span": [
+          170,
+          247
+        ]
+      }
+    ],
+    "text": "Mattilsynet fører tilsyn og kan fatte nødvendige vedtak, jf. matloven § 19 og § 23, for å oppnå etterlevelse av bestemmelser gitt i eller i medhold av denne forskriften. Mattilsynet kan også fatte enkeltvedtak i henhold til matloven § 24 til § 26."
+  },
+  {
+    "key": "coercive-fine",
+    "blocks": [
+      "s12-1"
+    ],
+    "kind": "power",
+    "scope": "Mattilsynet considering a running daily coercive fine for a non-complying undertaking/facility.",
+    "condition": "The undertaking fails to comply with an individual decision by its specified deadline.",
+    "demand": null,
+    "verification": "Discretionary power: the stated daily rate is ceil(number of fish / 10,000) × the national-insurance basic amount / 36.5. A started block of 10,000 counts as a block. A real charge requires the applicable decision and legally applicable basic amount; this example calculates no payable sum.",
+    "needs": "Actual decision/deadline, non-compliance facts, fish population and applicable national-insurance basic amount.",
+    "gaps": [
+      "The applicable monetary basic amount and actual fine decision are not supplied."
+    ],
+    "extra": [],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "conditions",
+            "Dersom virksomhetene unnlater å etterkomme enkeltvedtak innen fastsatt frist"
+          ],
+          [
+            "Modal Verb",
+            "kan"
+          ],
+          [
+            "Subject",
+            "Mattilsynet"
+          ],
+          [
+            "conditions",
+            "for hver påbegynte 10 000 fisk i akvakulturanlegget"
+          ],
+          [
+            "Main Verb",
+            "fastsette"
+          ],
+          [
+            "Object",
+            "løpende dagmulkt til folketrygdens grunnbeløp dividert med 36,5"
+          ]
+        ],
+        "span": [
+          0,
+          220
+        ]
+      }
+    ],
+    "text": "Dersom virksomhetene unnlater å etterkomme enkeltvedtak innen fastsatt frist, kan Mattilsynet for hver påbegynte 10 000 fisk i akvakulturanlegget fastsette løpende dagmulkt til folketrygdens grunnbeløp dividert med 36,5."
+  },
+  {
+    "key": "fine-period",
+    "blocks": [
+      "s12-2"
+    ],
+    "kind": "legal-effect",
+    "scope": "A coercive fine imposed by Mattilsynet under § 12.",
+    "condition": "There is an applicable fine/order and its compliance deadline expires; accrual continues until the unlawful condition is corrected.",
+    "demand": null,
+    "verification": "The fine may be fixed together with the order; it runs from the day the deadline expires until correction. This describes a legal effect, not a new automatic duty to impose a fine.",
+    "needs": "Order/fine decision, deadline expiry and correction date.",
+    "gaps": [],
+    "extra": [
+      "s12-1"
+    ],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "Subject",
+            "Tvangsmulkten"
+          ],
+          [
+            "Modal Verb",
+            "kan"
+          ],
+          [
+            "Main Verb",
+            "fastsettes"
+          ],
+          [
+            "conditions",
+            "i forbindelse med pålegget"
+          ]
+        ],
+        "span": [
+          0,
+          57
+        ]
+      },
+      {
+        "start": "Tvangsmulkten løper",
+        "marks": [
+          [
+            "Subject",
+            "Tvangsmulkten"
+          ],
+          [
+            "Main Verb",
+            "løper"
+          ],
+          [
+            "conditions",
+            "fra den dagen fristen løper ut og inntil det forhold som er i strid med forskriften er rettet"
+          ]
+        ],
+        "span": [
+          57,
+          171
+        ]
+      }
+    ],
+    "text": "Tvangsmulkten kan fastsettes i forbindelse med pålegget. Tvangsmulkten løper fra den dagen fristen løper ut og inntil det forhold som er i strid med forskriften er rettet."
+  },
+  {
+    "key": "penalty",
+    "blocks": [
+      "s13-1"
+    ],
+    "kind": "legal-effect",
+    "scope": "Violations of this regulation or individual decisions made under it.",
+    "condition": "A violation falling within the cross-referenced Food Act penalty provision.",
+    "demand": null,
+    "verification": "Do not infer guilt, a sanction amount or a penalty range from this cross-reference alone. Retain its legal basis for human review.",
+    "needs": "Alleged conduct, applicable provision/decision and Food Act § 28.",
+    "gaps": [
+      "Food Act § 28 and case-specific penalty conditions are outside the saved text."
+    ],
+    "extra": [],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "Subject",
+            "Overtredelse av bestemmelser gitt i denne forskriften eller enkeltvedtak gitt i medhold av forskriften"
+          ],
+          [
+            "Main Verb",
+            "er straffbart"
+          ],
+          [
+            "conditions",
+            "i henhold til matloven § 28"
+          ]
+        ],
+        "span": [
+          0,
+          145
+        ]
+      }
+    ],
+    "text": "Overtredelse av bestemmelser gitt i denne forskriften eller enkeltvedtak gitt i medhold av forskriften er straffbart i henhold til matloven § 28."
+  },
+  {
+    "key": "dispensation",
+    "blocks": [
+      "s14-1"
+    ],
+    "kind": "power",
+    "scope": "Mattilsynet deciding a particular dispensation from this regulation.",
+    "condition": "A special case, provided a dispensation would not conflict with Norway’s international obligations, including the EEA Agreement.",
+    "demand": null,
+    "verification": "A power to grant dispensation is not an automatic exemption. Any downstream exception requires an actual applicable decision and its limits. Verify the international-obligation condition rather than assume it.",
+    "needs": "Special-case facts, actual dispensation and its conditions/validity.",
+    "gaps": [
+      "Relevant international obligations and any individual dispensation must be checked outside this example."
+    ],
+    "extra": [],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "Subject",
+            "Mattilsynet"
+          ],
+          [
+            "Modal Verb",
+            "kan"
+          ],
+          [
+            "conditions",
+            "i særskilte tilfelle"
+          ],
+          [
+            "Main Verb",
+            "dispensere"
+          ],
+          [
+            "Object",
+            "fra bestemmelsene i denne forskriften"
+          ],
+          [
+            "conditions",
+            "forutsatt at det ikke vil stride mot Norges internasjonale forpliktelser, herunder EØS-avtalen"
+          ]
+        ],
+        "span": [
+          0,
+          182
+        ]
+      }
+    ],
+    "text": "Mattilsynet kan i særskilte tilfelle dispensere fra bestemmelsene i denne forskriften, forutsatt at det ikke vil stride mot Norges internasjonale forpliktelser, herunder EØS-avtalen."
+  },
+  {
+    "key": "commencement",
+    "blocks": [
+      "s15-1"
+    ],
+    "kind": "legal-effect",
+    "scope": "Temporal applicability of this regulation and the repealed 2009 regulation.",
+    "condition": "This regulation takes effect on 1 January 2013; the regulation of 18 August 2009 No. 1095 is repealed at the same time.",
+    "demand": null,
+    "verification": "Do not apply the repealed 2009 text as the current rule. Keep historical temporal analysis separate from current facility obligations.",
+    "needs": "",
+    "gaps": [],
+    "extra": [],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "Subject",
+            "Denne forskriften"
+          ],
+          [
+            "Main Verb",
+            "trer i kraft"
+          ],
+          [
+            "conditions",
+            "1. januar 2013"
+          ]
+        ],
+        "span": [
+          0,
+          47
+        ]
+      },
+      {
+        "start": "Samtidig oppheves",
+        "marks": [
+          [
+            "conditions",
+            "Samtidig"
+          ],
+          [
+            "Main Verb",
+            "oppheves"
+          ],
+          [
+            "Subject",
+            "forskrift 18. august 2009 nr. 1095 om bekjempelse av lus i akvakulturanlegg"
+          ]
+        ],
+        "span": [
+          47,
+          141
+        ]
+      }
+    ],
+    "text": "Denne forskriften trer i kraft 1. januar 2013. Samtidig oppheves forskrift 18. august 2009 nr. 1095 om bekjempelse av lus i akvakulturanlegg."
+  },
+  {
+    "key": "transition",
+    "blocks": [
+      "s16-1"
+    ],
+    "kind": "historical-obligation",
+    "scope": "Norwegian seawater aquaculture facilities with salmonids, under § 2; exclude slaughter cages at slaughterhouses except where § 5 or the final paragraph of § 9 expressly applies. Plans for coordinated treatments in spring 2013 under § 4.",
+    "condition": "Only the spring-2013 transitional obligation; deadline 15 February 2013. This is not a recurring current-year deadline.",
+    "demand": "Submit the specified spring-2013 plans to Mattilsynet by 15 February 2013.",
+    "verification": "Assess only against the historical scope/date and retained submission evidence. Do not flag all present facilities as overdue or roll the date into the current year.",
+    "needs": "Spring-2013 plan applicability and historical submission records.",
+    "gaps": [],
+    "extra": [],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "Subject",
+            "Planer for gjennomføring av samordnede behandlinger våren 2013 i henhold til § 4"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Main Verb",
+            "sendes inn"
+          ],
+          [
+            "Object",
+            "til Mattilsynet"
+          ],
+          [
+            "conditions",
+            "innen 15. februar 2013"
+          ]
+        ],
+        "span": [
+          0,
+          136
+        ]
+      }
+    ],
+    "text": "Planer for gjennomføring av samordnede behandlinger våren 2013 i henhold til § 4 skal sendes inn til Mattilsynet innen 15. februar 2013."
+  },
+  {
+    "key": "annex-stages",
+    "blocks": [
+      "annex-1",
+      "annex-2",
+      "annex-3",
+      "annex-4"
+    ],
+    "kind": "obligation",
+    "scope": "Norwegian seawater aquaculture facilities with salmonids, under § 2; exclude slaughter cages at slaughterhouses except where § 5 or the final paragraph of § 9 expressly applies. Sea-lice counting occasions governed by § 6 and Annex 1.",
+    "condition": "When counting is required for the occasion after the § 6 applicability/exemption assessment.",
+    "demand": "Count all three stage groups separately: adult females, moving stages and attached stages.",
+    "verification": "Verify that all three groups are represented, using § 3 definitions. Do not count only adult females because the numerical limit in § 8 concerns that group.",
+    "needs": "Counting occasion, individual fish counts and stage classification.",
+    "gaps": [],
+    "extra": [
+      "s3-3",
+      "s3-4",
+      "s3-8",
+      "s6-2",
+      "s6-3"
+    ],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "Subject",
+            "Det"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Main Verb",
+            "telles"
+          ],
+          [
+            "Object",
+            "lakselus"
+          ],
+          [
+            "conditions",
+            "i følgende tre stadiegrupper"
+          ],
+          [
+            "Object",
+            "a. voksen hunnlus,"
+          ],
+          [
+            "Object",
+            "b. bevegelige stadier, og"
+          ],
+          [
+            "Object",
+            "c. fastsittende stadier."
+          ]
+        ],
+        "span": [
+          0,
+          130
+        ]
+      }
+    ],
+    "text": "1. Det skal telles lakselus i følgende tre stadiegrupper:\n\na. voksen hunnlus,\n\nb. bevegelige stadier, og\n\nc. fastsittende stadier."
+  },
+  {
+    "key": "annex-south",
+    "blocks": [
+      "annex-5"
+    ],
+    "kind": "obligation",
+    "scope": "Norwegian seawater aquaculture facilities with salmonids, under § 2; exclude slaughter cages at slaughterhouses except where § 5 or the final paragraph of § 9 expressly applies. Counting occasions in Nord-Trøndelag and southwards.",
+    "condition": "At each applicable count: Monday week 14 through Sunday week 21, inclusive; the other interval is Monday week 22 through Sunday week 13.",
+    "demand": "Count lice on at least 20 randomly selected fish from every cage during the first period and at least 10 from every cage during the other period. Base reporting on the average from all cages.",
+    "verification": "Sample-size spring periods differ from the lower-limit periods in § 8. Check each cage, not a facility-wide sample total. At the exact period boundaries use the correct inclusive branch. Calculate the facility average by Annex 1 point 6.",
+    "needs": "Source-defined region, count date/week and cage inventory with randomly selected fish per cage.",
+    "gaps": [],
+    "extra": [
+      "annex-9",
+      "s6-2",
+      "s6-3"
+    ],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "conditions",
+            "I Nord-Trøndelag og sørover"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Subject",
+            "det"
+          ],
+          [
+            "conditions",
+            "fra og med mandag i uke 14 til og med søndag i uke 21"
+          ],
+          [
+            "Main Verb",
+            "telles"
+          ],
+          [
+            "Object",
+            "lakselus"
+          ],
+          [
+            "conditions",
+            "på minst 20 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling"
+          ]
+        ],
+        "span": [
+          0,
+          194
+        ]
+      },
+      {
+        "start": "Fra og med",
+        "marks": [
+          [
+            "conditions",
+            "Fra og med mandag i uke 22 til og med søndag i uke 13"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Subject",
+            "det"
+          ],
+          [
+            "Main Verb",
+            "telles"
+          ],
+          [
+            "Object",
+            "lakselus"
+          ],
+          [
+            "conditions",
+            "på minst 10 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling"
+          ]
+        ],
+        "span": [
+          194,
+          357
+        ]
+      },
+      {
+        "start": "Snitt fra",
+        "marks": [
+          [
+            "Subject",
+            "Snitt fra telling i alle merder"
+          ],
+          [
+            "Main Verb",
+            "legges til grunn"
+          ],
+          [
+            "conditions",
+            "ved innrapportering av lus"
+          ]
+        ],
+        "span": [
+          357,
+          433
+        ]
+      }
+    ],
+    "text": "2. I Nord-Trøndelag og sørover skal det fra og med mandag i uke 14 til og med søndag i uke 21 telles lakselus på minst 20 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Fra og med mandag i uke 22 til og med søndag i uke 13 skal det telles lakselus på minst 10 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Snitt fra telling i alle merder legges til grunn ved innrapportering av lus."
+  },
+  {
+    "key": "annex-north",
+    "blocks": [
+      "annex-6"
+    ],
+    "kind": "obligation",
+    "scope": "Norwegian seawater aquaculture facilities with salmonids, under § 2; exclude slaughter cages at slaughterhouses except where § 5 or the final paragraph of § 9 expressly applies. Counting occasions in Nordland, Troms and Finnmark.",
+    "condition": "At each applicable count: Monday week 19 through Sunday week 26, inclusive; the other interval is Monday week 27 through Sunday week 18.",
+    "demand": "Count lice on at least 20 randomly selected fish from every cage during the first period and at least 10 from every cage during the other period. Base reporting on the average from all cages.",
+    "verification": "Sample-size spring periods differ from the lower-limit periods in § 8. Check each cage, not a facility-wide sample total. At the exact period boundaries use the correct inclusive branch. Calculate the facility average by Annex 1 point 6.",
+    "needs": "Source-defined region, count date/week and cage inventory with randomly selected fish per cage.",
+    "gaps": [],
+    "extra": [
+      "annex-9",
+      "s6-2",
+      "s6-3"
+    ],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "conditions",
+            "I Nordland, Troms og Finnmark"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Subject",
+            "det"
+          ],
+          [
+            "conditions",
+            "fra og med mandag i uke 19 til og med søndag i uke 26"
+          ],
+          [
+            "Main Verb",
+            "telles"
+          ],
+          [
+            "Object",
+            "lakselus"
+          ],
+          [
+            "conditions",
+            "på minst 20 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling"
+          ]
+        ],
+        "span": [
+          0,
+          196
+        ]
+      },
+      {
+        "start": "Fra og med",
+        "marks": [
+          [
+            "conditions",
+            "Fra og med mandag i uke 27 til og med søndag i uke 18"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Subject",
+            "det"
+          ],
+          [
+            "Main Verb",
+            "telles"
+          ],
+          [
+            "Object",
+            "lakselus"
+          ],
+          [
+            "conditions",
+            "på minst 10 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling"
+          ]
+        ],
+        "span": [
+          196,
+          359
+        ]
+      },
+      {
+        "start": "Snitt fra",
+        "marks": [
+          [
+            "Subject",
+            "Snitt fra telling i alle merder"
+          ],
+          [
+            "Main Verb",
+            "legges til grunn"
+          ],
+          [
+            "conditions",
+            "ved innrapportering av lus"
+          ]
+        ],
+        "span": [
+          359,
+          435
+        ]
+      }
+    ],
+    "text": "3. I Nordland, Troms og Finnmark skal det fra og med mandag i uke 19 til og med søndag i uke 26 telles lakselus på minst 20 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Fra og med mandag i uke 27 til og med søndag i uke 18 skal det telles lakselus på minst 10 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Snitt fra telling i alle merder legges til grunn ved innrapportering av lus."
+  },
+  {
+    "key": "annex-procedure",
+    "blocks": [
+      "annex-7"
+    ],
+    "kind": "obligation",
+    "scope": "Norwegian seawater aquaculture facilities with salmonids, under § 2; exclude slaughter cages at slaughterhouses except where § 5 or the final paragraph of § 9 expressly applies. Fish sampled for sea-lice counting.",
+    "condition": "At an applicable counting occasion.",
+    "demand": "Catch using a crowding net or another representative sampling method; anaesthetise before counting; examine fish carefully one at a time; also count lice that fall into the anaesthetic bath.",
+    "verification": "Inspect the sampling method, anaesthesia and examination practice, including bath-lice capture in the count. The alternative is another representative method, not arbitrary convenient sampling.",
+    "needs": "Sampling/examination procedure and evidence of its use during the count.",
+    "gaps": [],
+    "extra": [
+      "s6-2",
+      "s6-3"
+    ],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "Subject",
+            "Fisken"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Main Verb",
+            "fanges inn"
+          ],
+          [
+            "conditions",
+            "med orkastnot eller annen metode som sikrer et representativt utvalg av fisk"
+          ]
+        ],
+        "span": [
+          0,
+          104
+        ]
+      },
+      {
+        "start": "Fisken skal bedøves",
+        "marks": [
+          [
+            "Subject",
+            "Fisken"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Main Verb",
+            "bedøves"
+          ],
+          [
+            "conditions",
+            "før telling"
+          ]
+        ],
+        "span": [
+          104,
+          137
+        ]
+      },
+      {
+        "start": "En og en fisk",
+        "marks": [
+          [
+            "Subject",
+            "En og en fisk"
+          ],
+          [
+            "Main Verb",
+            "tas opp og undersøkes"
+          ],
+          [
+            "conditions",
+            "nøye"
+          ]
+        ],
+        "span": [
+          137,
+          179
+        ]
+      },
+      {
+        "start": "Lus som detter",
+        "marks": [
+          [
+            "Subject",
+            "Lus som detter av i bedøvelseskaret"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Main Verb",
+            "telles med"
+          ]
+        ],
+        "span": [
+          179,
+          236
+        ]
+      }
+    ],
+    "text": "4. Fisken skal fanges inn med orkastnot eller annen metode som sikrer et representativt utvalg av fisk. Fisken skal bedøves før telling. En og en fisk tas opp og undersøkes nøye. Lus som detter av i bedøvelseskaret skal også telles med."
+  },
+  {
+    "key": "annex-records",
+    "blocks": [
+      "annex-8"
+    ],
+    "kind": "obligation",
+    "scope": "Norwegian seawater aquaculture facilities with salmonids, under § 2; exclude slaughter cages at slaughterhouses except where § 5 or the final paragraph of § 9 expressly applies. Per-fish and per-cage records for each counting occasion.",
+    "condition": "When fish and cages are included in an applicable count.",
+    "demand": "Record lice by stage group for every fish on the purpose-made form. On the same form record cage number, cage size (circumference/side), depth of straight walls, fish population and mean fish weight.",
+    "verification": "Check fish-level stage counts and all cage attributes. The cage fish population is not automatically the number of sampled fish. A purpose-made form is required; this clause does not provide its exact layout.",
+    "needs": "Fish/cage identifiers, stage counts, cage dimensions, population, mean fish weight and forms.",
+    "gaps": [],
+    "extra": [
+      "s6-2",
+      "s6-3"
+    ],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "conditions",
+            "For hver fisk"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Subject",
+            "antall lakselus i de forskjellige stadiegruppene"
+          ],
+          [
+            "Main Verb",
+            "føres inn"
+          ],
+          [
+            "Object",
+            "i skjema laget til formålet"
+          ]
+        ],
+        "span": [
+          0,
+          110
+        ]
+      },
+      {
+        "start": "For hver merd",
+        "marks": [
+          [
+            "conditions",
+            "For hver merd"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Subject",
+            "følgende opplysninger"
+          ],
+          [
+            "Main Verb",
+            "noteres"
+          ],
+          [
+            "conditions",
+            "på samme skjema"
+          ],
+          [
+            "Object",
+            "Merdnummer, merdens størrelse (omkrets/side) og dybde (rette vegger), antall fisk og gjennomsnittsvekt av fisk"
+          ]
+        ],
+        "span": [
+          110,
+          292
+        ]
+      }
+    ],
+    "text": "5. For hver fisk skal antall lakselus i de forskjellige stadiegruppene føres inn i skjema laget til formålet. For hver merd skal følgende opplysninger også noteres på samme skjema: Merdnummer, merdens størrelse (omkrets/side) og dybde (rette vegger), antall fisk og gjennomsnittsvekt av fisk."
+  },
+  {
+    "key": "annex-averages",
+    "blocks": [
+      "annex-9"
+    ],
+    "kind": "obligation",
+    "scope": "Norwegian seawater aquaculture facilities with salmonids, under § 2; exclude slaughter cages at slaughterhouses except where § 5 or the final paragraph of § 9 expressly applies. Cage and facility stage-specific count averages.",
+    "condition": "For every cage and stage group, and for the facility and each stage group.",
+    "demand": "Cage mean = total lice of the stage on all examined fish in the cage / number of examined fish in that cage. Facility mean = sum of the cage means for the stage / number of cages.",
+    "verification": "Recalculate both levels. The facility calculation is the unweighted mean of cage means, not a pooled fish-weighted mean. Do not manufacture a value when an examined-fish denominator is zero or cages are missing.",
+    "needs": "Per-fish stage counts, sample size per cage, complete cage inventory and stage-specific cage means.",
+    "gaps": [],
+    "extra": [
+      "s3-3",
+      "s3-4",
+      "s3-8",
+      "s6-2",
+      "s6-3"
+    ],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "conditions",
+            "For hver merd"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Subject",
+            "gjennomsnittet"
+          ],
+          [
+            "Main Verb",
+            "beregnes"
+          ],
+          [
+            "conditions",
+            "for hver stadiegruppe"
+          ],
+          [
+            "conditions",
+            "ved å legge sammen alle lakselus i gruppen fra all fisk som er undersøkt i merden, delt på antall undersøkte fisk"
+          ]
+        ],
+        "span": [
+          0,
+          183
+        ]
+      },
+      {
+        "start": "For akvakulturanlegget",
+        "marks": [
+          [
+            "conditions",
+            "For akvakulturanlegget"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Subject",
+            "gjennomsnittet for hver stadiegruppe"
+          ],
+          [
+            "Main Verb",
+            "beregnes"
+          ],
+          [
+            "conditions",
+            "ved å legge sammen gjennomsnittene fra hver merd delt på antall merder"
+          ]
+        ],
+        "span": [
+          183,
+          328
+        ]
+      }
+    ],
+    "text": "6. For hver merd skal gjennomsnittet beregnes for hver stadiegruppe ved å legge sammen alle lakselus i gruppen fra all fisk som er undersøkt i merden, delt på antall undersøkte fisk. For akvakulturanlegget skal gjennomsnittet for hver stadiegruppe beregnes ved å legge sammen gjennomsnittene fra hver merd delt på antall merder."
+  },
+  {
+    "key": "annex-pre-treatment",
+    "blocks": [
+      "annex-10"
+    ],
+    "kind": "obligation",
+    "scope": "Norwegian seawater aquaculture facilities with salmonids, under § 2; exclude slaughter cages at slaughterhouses except where § 5 or the final paragraph of § 9 expressly applies. A treatment episode covering only some production units.",
+    "condition": "Before lice treatment covering only selected production units; cleaner fish are not treatment under § 3.",
+    "demand": "Complete sea-lice counts in all production units in the facility before the partial treatment.",
+    "verification": "Verify the treated-unit subset, full facility unit inventory and that every unit was counted before treatment. No numeric maximum age for that count is stated in this point. A valid exception allowing partial treatment does not itself waive this counting condition.",
+    "needs": "Treatment start, treated units, all production units and dated count evidence.",
+    "gaps": [],
+    "extra": [
+      "s3-2",
+      "s9-1"
+    ],
+    "clauses": [
+      {
+        "start": null,
+        "marks": [
+          [
+            "conditions",
+            "Forut for behandling mot lakselus som kun omfatter enkelte produksjonsenheter"
+          ],
+          [
+            "Modal Verb",
+            "skal"
+          ],
+          [
+            "Subject",
+            "det"
+          ],
+          [
+            "Main Verb",
+            "være gjennomført"
+          ],
+          [
+            "Object",
+            "lakselustelling"
+          ],
+          [
+            "conditions",
+            "i alle produksjonsenheter i akvakulturanlegget"
+          ]
+        ],
+        "span": [
+          0,
+          171
+        ]
+      }
+    ],
+    "text": "7. Forut for behandling mot lakselus som kun omfatter enkelte produksjonsenheter, skal det være gjennomført lakselustelling i alle produksjonsenheter i akvakulturanlegget."
+  }
+]

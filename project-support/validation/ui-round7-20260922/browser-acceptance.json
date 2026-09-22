@@ -1,0 +1,25 @@
+{
+  "status": "functional browser and isolated owner save/reopen passed; native zoom pending",
+  "platform": "darwin",
+  "native_windows": false,
+  "native_200_percent_zoom": false,
+  "saved_revision": 3,
+  "source_unchanged": true,
+  "reviewed": false,
+  "card_reviews": {},
+  "verified": {
+    "R7-01": "Competing revision 2 rejected expected revision 1; comparison showed exact local rule and remote verification. Cancel retained local. Explicit local continuation followed by separate Save used expected revision 2 and reopened revision 3.",
+    "R7-02": "Lost simulated start response retried byte-equivalent body and request_id 2d2a5875-e0ec-4000-94c2-74ae92bb3cf5; one synthetic run, no provider call.",
+    "R7-03": "Status failure retained run; Retry status read the same run ID and returned three separate candidates. Human rule edited while unavailable remained unchanged.",
+    "R7-04": "Rejected merge preview retained open dialog and exact Second human combined title; next explicit successful preview closed it.",
+    "R7-06": "Keyboard-cleared numeric field remained empty and focused with validation, no merge request. Explicit zero was applied to preview. Earlier CUA empty-fill did not clear the field; only keyboard-verified empty state counted.",
+    "R7-07": "Selector distinguished unresolved, edited, suggested, current and matching states. Resolving score retained selected score identity and removed the now-empty unresolved group.",
+    "R7-10": "Material and Source editors reopened the actual combined result after second correction; base/current/submitted evidence remained distinct.",
+    "R7-05": "Unknown Keep current response retained one decision. Retry while delayed disabled opposing decisions; closing/reopening showed its later pending receipt and enabled retry. Final terminal receipt disabled old choices. Three attempts used identical request 24097723-b356-4b6d-aef1-7d4776c77631 and digest-2.",
+    "R7-08": "Unknown freeze retained both selected items and exact summary across close/reopen; retry body/id 48578b16-ccee-43a3-8aa3-1a4d38a09b1a was identical. Successful result identified captured scope and immutable download link. Next explicit same selection used new id bd644fe1-eff2-4f75-a703-bac0ccae4f2a. Pending control locking is also covered by unit tests. Reopened error feedback was corrected and directly retested with exact retained selection/summary and Retry notice.",
+    "R7-09": "Definitive digest-1 rejection disabled adoption and exposed Refresh comparison. Explicit refresh displayed current task revision 2, preserved submitted evidence and reset the confirmation checkbox before any new decision."
+  },
+  "remaining": [
+    "Native 200 percent zoom"
+  ]
+}

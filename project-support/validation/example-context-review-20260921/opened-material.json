@@ -1,0 +1,63 @@
+{
+  "association_review_required": false,
+  "blocks": [],
+  "checked_scope": [],
+  "collaboration_provenance": [],
+  "confirmation": null,
+  "content_revision": 0,
+  "content_status": "not_extracted",
+  "created_at": "2026-09-21T09:01:18.958893+00:00",
+  "id": "1fb63aa470cd9c61db1115c486b0405d",
+  "issues": [],
+  "last_action": {
+    "actor": "source_intake",
+    "at": "2026-09-21T09:01:18.958896+00:00",
+    "kind": "opened"
+  },
+  "legacy": null,
+  "provenance_version": 1,
+  "requirement_status": "not_connected",
+  "revision": 0,
+  "scope": [
+    {
+      "id": "html:document",
+      "kind": "html",
+      "label": "Complete saved HTML document",
+      "location": {
+        "anchor": "original-document"
+      }
+    }
+  ],
+  "source": {
+    "assessment_id": null,
+    "content_hash": "5d1255b90c63579d62192a526129daa1213a14a4cdd9208884b8b8805a24a211",
+    "download_status": "SUCCESS",
+    "file_format": "html",
+    "operator_selection_decision": "INCLUDE",
+    "parsing_copy_of": null,
+    "registry_kind": "sqlite_snapshot",
+    "registry_sha256": "17ffa90215095174789083c4826dd6dceba2154cdb4ef297f8b03fa54e3f127d",
+    "relative_path": "E_Project_Engineering/PE001-005_example.html",
+    "selection_origin": "human",
+    "selection_status": "INCLUDE",
+    "snapshot_id": "PE001-005",
+    "snapshot_status": "STORED",
+    "source_id": "PE001",
+    "source_status": "CURRENT"
+  },
+  "source_stale": false,
+  "title": "example",
+  "updated_at": "2026-09-21T09:01:18.958896+00:00",
+  "candidates": [],
+  "conflicts": [],
+  "related_versions": [],
+  "source_issues": [],
+  "collaboration": {
+    "mode": "coordinator",
+    "view": "personal",
+    "draft_revision": 0,
+    "coordinator": "Weijie Tang",
+    "master_digest": "bd143c8c3daf4b598e9358c56b4d1ecd62812b65386ba28ee2955400ec1762a2",
+    "provenance": []
+  }
+}

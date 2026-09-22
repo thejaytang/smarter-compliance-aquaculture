@@ -15,7 +15,7 @@ test('history retains distinct actions for one source and orders newest first',(
 test('registered source detail renders ratings and authoritative read-only values without a personal-draft leak',()=>{
  const view=Object.create(SourceWorkspace.prototype),host={innerHTML:''};
  Object.assign(view,{category:'records',data:{tasks:[],can_apply:true},detail:{source:{source_id:'S1',source_title:'Original',issuer:'Publisher',effective_selection:'INCLUDE',authority_quality:'HIGH'},fields:[{key:'issuer',label:'Publisher'}],score_fields:['authority_quality'],issues:[]},request:{source_review:{scores:{authority_quality:'LOW'},fields:{issuer:'Unadopted'},selection:'EXCLUDE'}},q:()=>host,showDetail(){},loadOriginal(){},wireResize(){}});
- view.renderDetail();assert.match(host.innerHTML,/Read only/);assert.match(host.innerHTML,/value="HIGH" checked/);assert.doesNotMatch(host.innerHTML,/Unadopted/);assert.match(host.innerHTML,/Request review/);
+ view.renderDetail();assert.match(host.innerHTML,/Read only/);assert.match(host.innerHTML,/value="HIGH" checked/);assert.doesNotMatch(host.innerHTML,/Unadopted/);assert.match(host.innerHTML,/Request review/);assert.match(host.innerHTML,/aria-label="High"/);assert.match(host.innerHTML,/aria-label="Medium"/);assert.match(host.innerHTML,/aria-label="Low"/);assert.match(host.innerHTML,/Previous: High/);assert.match(host.innerHTML,/H = High/);
 });
 
 test('navigation can deactivate source workspace before its first mount',()=>{const view=Object.create(SourceWorkspace.prototype);view.token=0;view.leave();assert.equal(view.active,false);assert.equal(view.token,1);});

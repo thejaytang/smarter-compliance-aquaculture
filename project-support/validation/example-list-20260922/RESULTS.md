@@ -1,0 +1,7 @@
+# Permanent Example list correction
+
+2026-09-22. The live Material review list now contains one Example: PE002, `Example：Forskrift om bekjempelse av lakselus i akvakulturanlegg`, material `c3fd36db7f5b246d56f3c1bbd3f21ca5`, revision 3. Verified through the owning queue API and the actual Chrome page by searching `example` (one result).
+
+The two old rows were historical PE001 versions. System1 already excluded PE001; its older material snapshots still recorded their original INCLUDE decision. The pending queue now consults current authoritative source selection before pagination. Excluded sources leave active review work; archive/history and original bytes remain available. If the source snapshot is unavailable, saved work remains visible. Re-inclusion restores its eligible pending rows.
+
+Twenty queue tests passed, including exclusion before pagination, history retention, re-inclusion and unavailable-source fallback. `before.json` and `after.json` record the live result and retained identities. The old materials still expose revisions 0–2 and 0–13. Opening the first historical material observed its already-changed source version and refreshed stale/review-impact metadata from revision 1 to 2; its content was unchanged. System2 therefore changed during history inspection; the other three business stores remained byte-identical. The queue correction itself required no data deletion, source re-import or schema migration.

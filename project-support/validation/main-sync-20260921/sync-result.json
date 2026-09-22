@@ -1,0 +1,39 @@
+{
+  "date": "2026-09-21",
+  "before_head": "6fe77f9d99ffcf21f3609fa3e6fa48b17aa4512c",
+  "remote_main": "b221b162b767c6f93a46ea9886cff472b52a695e",
+  "merged_head": "badc2ce05ba4dd6c2a4fa734bba9478bbbcfbdd6",
+  "remaining_main_commits": 0,
+  "merge_conflicts": false,
+  "stopped_merge_local_files_unchanged": 9,
+  "stopped_merge_protected_files_unchanged": 9,
+  "post_restart_protected_file_changes": [],
+  "environment_check": "pass, three Python 3.12.12 environments",
+  "workspace_integrity": "pass, four stores and saved source bindings verified while stopped",
+  "boundary_check": "pass, development index",
+  "tests": {
+    "workbench": 32,
+    "system1": 12,
+    "system2": 33
+  },
+  "test_note": "First System2 collection omitted its shared fixture directory; rerun with PYTHONPATH=workbench/tests/system2 passed without changing tests.",
+  "runtime": {
+    "url": "http://127.0.0.1:62742/",
+    "pid": 66772,
+    "root_matches": true,
+    "instance_matches": true
+  },
+  "browser_reopen": {
+    "material": "PE001",
+    "revision": 12,
+    "status": "Saved",
+    "requirements": [
+      "R1",
+      "R2",
+      "R3"
+    ],
+    "four_pane_order": "preserved"
+  },
+  "published": false,
+  "fourth_pane_implemented": false
+}

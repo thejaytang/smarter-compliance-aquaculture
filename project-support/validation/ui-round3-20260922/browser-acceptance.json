@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "platform": "darwin",
+  "browser": "Chrome",
+  "native_windows": false,
+  "source_id": "PE002",
+  "source_sha256": "9334a78a021971411e5c8826a2bb16aab1db707d778f6249c9a36b0afc90a4a1",
+  "scope": "isolated restored Example, no live restart",
+  "strict_html_csp": "default-src 'none'; img-src data:; style-src 'unsafe-inline'; script-src 'none'; connect-src 'none'; form-action 'none'; base-uri 'none'; frame-ancestors 'self'; sandbox",
+  "business_databases_byte_identical": {
+    "system2.sqlite": true,
+    "system3_scd.sqlite": true,
+    "system3_requirements.sqlite": true,
+    "system1.sqlite": true
+  },
+  "browser_verified": [
+    "R3-01",
+    "R3-02",
+    "R3-03",
+    "R3-04",
+    "R3-05",
+    "R3-06",
+    "R3-08",
+    "R3-09",
+    "R3-10"
+  ],
+  "automated_layer_recovery": "R3-07",
+  "frontend_passed": 416,
+  "system2_reader_passed": 51,
+  "http_passed": 27
+}

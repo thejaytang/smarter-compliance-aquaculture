@@ -1,0 +1,18 @@
+{
+  "source_id": "PE002",
+  "material_id": "c3fd36db7f5b246d56f3c1bbd3f21ca5",
+  "source_export_id": "8ca47f11-7bd3-4539-b7ea-4dbee796cd6c",
+  "package_id": "0ce10e43-1c6e-4e75-b481-dab4e74b6bc4",
+  "keys": [
+    "material:c3fd36db7f5b246d56f3c1bbd3f21ca5",
+    "requirements:shared",
+    "review:PE002",
+    "source:PE002"
+  ],
+  "originals": 1,
+  "sessions_including_history": 36,
+  "active_requirements": 21,
+  "interpretations_including_history": 36,
+  "bytes": 2144941,
+  "sha256": "2843373219fd04457b59445496ceb01caeac6623b343cedb7515f34e983c7c86"
+}

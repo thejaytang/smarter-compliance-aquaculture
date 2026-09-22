@@ -1,0 +1,8 @@
+{
+  "workbench/workspace/databases/system1.excel.json": true,
+  "workbench/workspace/databases/system2.sqlite": true,
+  "workbench/workspace/databases/system3_scd.sqlite": true,
+  "workbench/workspace/databases/system3_requirements.sqlite": true,
+  "workbench/workspace/databases/system1.excel-worker.json": true,
+  "workbench/workspace/databases/system1.sqlite": true
+}

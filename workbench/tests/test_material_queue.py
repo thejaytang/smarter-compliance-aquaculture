@@ -172,6 +172,39 @@ class MaterialQueueTests(unittest.TestCase):
         with self.db() as db:db.execute('DELETE FROM material_read_index WHERE id=?',(new['id'],))
         self.assertEqual(self.q.listing(A,'pending')['materials'][0]['id'],old['id'])
 
+    def test_excluded_source_versions_leave_pending_but_keep_saved_work_and_archive(self):
+        old = deepcopy(self.material)
+        old.update(source_stale=True)
+        old['source']['selection_status'] = 'INCLUDE'  # Retained source binding predates exclusion.
+        self.write(old)
+        another = deepcopy(old)
+        another.update(id='b'*32, confirmation=None, content_status='draft', last_action={'kind':'opened'})
+        self.write(another)
+        replacement = deepcopy(another)
+        replacement.update(id='c'*32, source_stale=False)
+        replacement['source']['source_id'] = 'TS002'
+        self.write(replacement)
+        self.app.snapshot = lambda: {'sources': [
+            {'source_id':'TS001','effective_selection':'EXCLUDE','selection_status':'INCLUDE'},
+            {'source_id':'TS002','effective_selection':'INCLUDE'}], 'tasks':[]}
+        page = self.q.listing(A, 'pending', limit=1)
+        self.assertEqual(page['total'], 1)
+        self.assertEqual(page['materials'][0]['id'], replacement['id'])
+        self.assertFalse(page['has_more'])
+        self.assertEqual(self.q.listing(A, 'archive')['materials'][0]['id'], old['id'])
+        for material in (old, another):
+            self.assertEqual(self.app.system2.call('material_read', material_id=material['id']), material)
+        self.app.snapshot = lambda: {'sources': [{'source_id':'TS001','effective_selection':'INCLUDE'}], 'tasks':[]}
+        self.assertEqual(self.q.listing(A, 'pending')['total'], 3)
+
+    def test_unavailable_source_selection_does_not_hide_saved_work(self):
+        material=deepcopy(self.material)
+        material.update(source_stale=True)
+        self.write(material)
+        def unavailable(): raise RuntimeError('Source service unavailable')
+        self.app.snapshot=unavailable
+        self.assertEqual(self.q.listing(A,'pending')['materials'][0]['id'],material['id'])
+
     def test_unchanged_empty_personal_copy_is_not_labelled_saved_work(self):
         material=deepcopy(self.material)
         material.update(revision=0,content_revision=0,content_status='not_extracted',confirmation=None,blocks=[],last_action={'kind':'opened'})

@@ -8,6 +8,23 @@ from check_app_boundary import business_file, development_file, naming_issues
 
 
 class AppBoundaryTests(unittest.TestCase):
+    def test_only_current_permanent_example_is_allowed_in_product(self):
+        for path in ['workbench/resources/examples/example.html',
+                     'workbench/resources/examples/example-seed-20260922.zip',
+                     'workbench/resources/examples/example-work-20260922.zip.sha256',
+                     '.github/README.zh-CN.md', '.github/assets/cover.svg']:
+            self.assertFalse(business_file(path),path)
+        for path in ['workbench/initial-data/workspace-20260917.zip',
+                     'workbench/initial-data/workspace-20260922.zip',
+                     'workbench/resources/examples/example-work-20260918.zip']:
+            self.assertTrue(business_file(path),path)
+            self.assertTrue(development_file(path),path)
+        for path in ['workbench/initial-data/unaudited.zip',
+                     'workbench/resources/examples/another-source.zip',
+                     '.github/workflows/unapproved.yml']:
+            self.assertTrue(business_file(path),path)
+            self.assertFalse(development_file(path),path)
+
     def test_development_branch_includes_evidence_but_not_credentials_or_runtime(self):
         for path in ['PROJECT_STATE.md','project-support/design/visuals/diagram.png','workbench/tests/test_app_boundary.py']:
             self.assertTrue(development_file(path),path)

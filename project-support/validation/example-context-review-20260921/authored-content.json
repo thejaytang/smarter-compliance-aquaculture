@@ -1,0 +1,112 @@
+[
+  [
+    "title",
+    "h1",
+    "example"
+  ],
+  [
+    "translation-note",
+    "p",
+    "One English training example: sea lice. The English text below is an authored working translation and summary, not an official English publication. Context and annotations were checked against the Norwegian regulation on 21 September 2026."
+  ],
+  [
+    "context-heading",
+    "h2",
+    "Legal context for Example 1"
+  ],
+  [
+    "legal-source",
+    "p",
+    "Source: Forskrift om bekjempelse av lakselus i akvakulturanlegg, FOR-2012-12-05-1140. This example uses § 2 (scope), the relevant definitions in § 3, § 6 (temperature measurement and sea-lice counting), and Annex 1. The Norwegian text is authoritative."
+  ],
+  [
+    "legal-scope",
+    "p",
+    "§ 2 — Scope. The regulation applies to aquaculture facilities with salmonids in seawater. For slaughter cages at slaughterhouses, only § 5 and the final paragraph of § 9 apply; the § 6 duties in this example therefore do not apply to those slaughter cages."
+  ],
+  [
+    "legal-addressee",
+    "p",
+    "§ 2 — Persons addressed. The regulation addresses anyone who holds, or is required to hold, approval under the regulation of 17 June 2008 No. 823 on the establishment and expansion of aquaculture facilities, pet shops, etc., or under the Animal Health Regulation of 6 April 2022 No. 631 and the Aquaculture Biosecurity Regulation of 5 April 2022 No. 624. The duty holder is distinct from the facility to which the assessment relates."
+  ],
+  [
+    "lice-definition",
+    "p",
+    "§ 3 — Relevant definitions. Sea lice means Lepeophtheirus salmonis. Adult female lice are sexually mature females with or without egg strings. Moving stages comprise adult males and preadult stages; attached stages comprise copepodid and chalimus stages."
+  ],
+  [
+    "annex-heading",
+    "h3",
+    "Annex 1 context: requirements for routine sea-lice counting"
+  ],
+  [
+    "annex-stages",
+    "p",
+    "Annex 1, point 1. Count all three stage groups: adult female lice, moving stages and attached stages."
+  ],
+  [
+    "annex-south",
+    "p",
+    "Annex 1, point 2. In Nord-Trøndelag and southwards, count at least 20 randomly selected fish from every cage at each count from Monday in week 14 through Sunday in week 21. From Monday in week 22 through Sunday in week 13, count at least 10 randomly selected fish from every cage at each count. Reporting is based on the average from counts in all cages."
+  ],
+  [
+    "annex-north",
+    "p",
+    "Annex 1, point 3. In Nordland, Troms and Finnmark, count at least 20 randomly selected fish from every cage at each count from Monday in week 19 through Sunday in week 26. From Monday in week 27 through Sunday in week 18, count at least 10 randomly selected fish from every cage at each count. Reporting is based on the average from counts in all cages. These are the regional names used in the source."
+  ],
+  [
+    "annex-method",
+    "p",
+    "Annex 1, point 4. Catch fish with a crowding net or another method that ensures a representative sample. Anaesthetise the fish before counting; take out and carefully examine one fish at a time. Include lice that fall off into the anaesthetic bath."
+  ],
+  [
+    "annex-records",
+    "p",
+    "Annex 1, point 5. Record the number of lice in each stage group for each fish on a form designed for this purpose. On the same form, record each cage number, cage size (circumference/side), depth (straight walls), number of fish and average fish weight."
+  ],
+  [
+    "annex-averages",
+    "p",
+    "Annex 1, point 6. For each cage and each stage group, divide the total lice counted on the fish examined by the number of fish examined in that cage. For the facility and each stage group, add the cage averages and divide by the number of cages."
+  ],
+  [
+    "annex-treatment",
+    "p",
+    "Annex 1, point 7. Before treatment against sea lice that covers only some production units, sea-lice counting must have been carried out in all production units in the facility."
+  ],
+  [
+    "example-heading",
+    "h2",
+    "Example 1. Sea lice"
+  ],
+  [
+    "section-heading",
+    "h3",
+    "§ 6. Measurement of seawater temperature and counting of sea lice"
+  ],
+  [
+    "temperature",
+    "p",
+    "Seawater temperature at a depth of three metres shall be measured at least once every week."
+  ],
+  [
+    "counting",
+    "p",
+    "The number of sea lice shall be counted at least every 7 days at temperatures equal to or above 4°C, and at least every 14 days at temperatures below 4°C."
+  ],
+  [
+    "broodstock",
+    "p",
+    "Broodstock are exempt from the counting requirement at temperatures below 4°C."
+  ],
+  [
+    "count-method",
+    "p",
+    "Sea lice counting shall be carried out in accordance with the requirements of Annex 1."
+  ],
+  [
+    "slaughter-exemption",
+    "p",
+    "The counting requirements do not apply if all the fish in the aquaculture facility are to be slaughtered out within 14 days after the date on which counting should have been carried out."
+  ]
+]

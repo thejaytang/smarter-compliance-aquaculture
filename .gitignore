@@ -1,7 +1,7 @@
 # Jay development branch includes code, development documents, tests and evidence.
-# Active data is preserved by the versioned initial-data snapshot.
-# The immutable workbench/initial-data snapshot is the authorized first-handoff exception.
-/.github/
+# Full snapshots belong only to development; main carries the permanent PE002 Example.
+# Exact package and presentation paths are checked by check_app_boundary.py.
+/.github/workflows/
 /workbench/reviewer-workspace/
 /system1/
 /system2/

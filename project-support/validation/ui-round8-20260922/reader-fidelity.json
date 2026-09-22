@@ -1,0 +1,15 @@
+{
+  "source_sha256": "9334a78a021971411e5c8826a2bb16aab1db707d778f6249c9a36b0afc90a4a1",
+  "checks": {
+    "anchors": true,
+    "navigation_anchors": true,
+    "document_information": true,
+    "default_anchor": true,
+    "display_fidelity": true,
+    "visible_body_text_unchanged": true,
+    "table_text_and_order_unchanged": true,
+    "source_bytes_unchanged": true
+  },
+  "source_anchor_count": 811,
+  "safe_local_links": 1
+}

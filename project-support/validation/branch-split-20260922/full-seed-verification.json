@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "restoration": {
+    "schema": "workbench-layout/1",
+    "status": "restored",
+    "initial_package_id": "8ca47f11-7bd3-4539-b7ea-4dbee796cd6c",
+    "initial_sha256": "cd5d033e4cfa10ae91838589b773720d9388918122cb43058d1fa61f9bb05bc0",
+    "verified_originals": 76,
+    "verified_bindings": 157
+  },
+  "verified_originals": 76,
+  "verified_bindings": 157,
+  "stores": [
+    "system1.sqlite",
+    "system2.sqlite",
+    "system3_requirements.sqlite",
+    "system3_scd.sqlite"
+  ],
+  "existing_work_rejected_unchanged": true,
+  "platform": "darwin",
+  "native_windows": false
+}

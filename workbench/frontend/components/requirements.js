@@ -22,7 +22,7 @@ export class RequirementsEditor {
     const host=this.host;if(!host||!this.m.material)return;
     const key=this.key();
     if(key!==this.context) {
-      this.context=key;this.closedUnits.clear();this.quantityDrafts.clear();this.sessionCollapsed=false;this.doc=null;this.sessions=[];this.selected=null;this.results=[];this.notice='Loading saved splitting work…';this.lastRender=null;this.loading=true;this.dirty=false;this.edits=[];
+      this.context=key;this.groupEditor.reset();this.readTicket=null;this.closedUnits.clear();this.quantityDrafts.clear();this.sessionCollapsed=false;this.doc=null;this.sessions=[];this.selected=null;this.results=[];this.notice='Loading saved splitting work…';this.lastRender=null;this.loading=true;this.dirty=false;this.edits=[];
       this.loadList(key);
     }
     const signature=[key,this.doc?.revision,this.selected,this.pending,this.m.busy,this.m.opening,this.m.dirty,this.notice,this.loading,this.results.length,this.m.collaboration.readonly].join('|');
@@ -51,15 +51,34 @@ export class RequirementsEditor {
       this.sessions=result.sessions||[];this.deleted=result.deleted||[];this.notice='';this.loading=false;
       let remembered;try{remembered=sessionStorage.getItem('requirement-session:'+context);}catch{}
       const id=this.sessions.find(s=>s.id===remembered)?.id||this.sessions.at(-1)?.id;
-      if(id)await this.open(id,null);else this.render(true);
+      if(id)await this.open(id);else this.render(true);
     }catch(e){if(context===this.context){this.loading=false;this.notice=`Saved splitting work could not be loaded. ${e.message}`;this.render(true);}}
   }
-  async open(id,selectedId=undefined) {
-    if(this.pending||this.retryRequest)return;
-    if(this.dirty){this.m.unsavedDialog?.();return;}
+  async readSession(id) {
     const context=this.context,ticket=this.readTicket={};this.loading=true;this.notice='Opening saved splitting work…';this.render(true);
-    try{const doc=await this.m.api('/api/requirements/session?'+new URLSearchParams({id}));if(context!==this.context||ticket!==this.readTicket)return;this.doc=doc;this.sessionCollapsed=false;this.results=[];this.searchPerformed=false;this.selected=selectedId===null?null:selectedId||this.unitIds()[0];for(const id of doc.done)this.closedUnits.add(id);this.notice=doc.stale?'Source content changed. This saved session is read-only. Bring the current passage to start a new session.':'';try{sessionStorage.setItem('requirement-session:'+context,id);}catch{}}
-    catch(e){this.showError(e);}finally{if(context===this.context&&ticket===this.readTicket){this.loading=false;this.render(true);void this.syncInterpretation();}}
+    try {
+      const doc=await this.m.api('/api/requirements/session?'+new URLSearchParams({id}));
+      if(context!==this.context||ticket!==this.readTicket)return null;
+      if(doc.id!==id)throw Error('The requested Requirement could not be opened.');
+      return {doc,context,ticket};
+    } catch(e){if(context===this.context&&ticket===this.readTicket)this.showError(e);return null;}
+    finally{if(context===this.context&&ticket===this.readTicket){this.loading=false;this.render(true);}}
+  }
+  currentRead(read){return !!read&&read.context===this.context&&read.ticket===this.readTicket&&!this.pending&&!this.retryRequest&&!this.dirty;}
+  acceptSession(doc,selectedId=undefined){
+    if(selectedId!=null&&!doc.units?.[selectedId]){this.showError(Error('The saved annotation no longer identifies a Requirement in this entry.'));return false;}
+    if(this.doc?.id!==doc.id){this.groupEditor.reset();this.closedUnits.clear();}
+    this.doc=doc;this.sessionCollapsed=false;this.results=[];this.searchPerformed=false;this.selected=selectedId===null?null:selectedId||this.unitIds()[0];
+    for(const id of doc.done)this.closedUnits.add(id);
+    this.notice=doc.stale?'Source content changed. This saved session is read-only. Bring the current passage to start a new session.':'';
+    try{sessionStorage.setItem('requirement-session:'+this.context,doc.id);}catch{}
+    this.render(true);void this.syncInterpretation();return true;
+  }
+  async open(id,selectedId=undefined) {
+    if(this.pending||this.retryRequest)return false;
+    if(this.dirty){this.m.unsavedDialog?.();return false;}
+    const read=await this.readSession(id);
+    return this.currentRead(read)?this.acceptSession(read.doc,selectedId):false;
   }
   showError(error) {this.notice=error.message||String(error);this.render(true);}
   async start(blockId,combine=false) {
@@ -67,11 +86,27 @@ export class RequirementsEditor {
     if(this.dirty){this.m.unsavedDialog?.();return;}
     const block=this.m.draft.blocks.find(b=>b.id===blockId);if(!block||block.role==='document_information')return;
     const existing=this.sessions.find(s=>s.block_id===blockId&&s.text===block.text);
-    if(!combine&&existing&&!this.doc?.stale)return this.open(existing.id);
+    if(!combine&&existing){
+      const read=await this.readSession(existing.id);if(!this.currentRead(read))return false;const candidate=read.doc;
+      if(!candidate.stale)return this.acceptSession(candidate);
+    }
     if(!combine)return this.step('start',{material_id:this.m.id,material_revision:this.m.material.revision,block_id:blockId});
-    const choices=this.m.draft.blocks.filter(b=>b.role!=='document_information'&&['text','heading'].includes(b.type)&&b.text?.trim());
-    this.m.dialog(`<h2>Source passages for this Requirement</h2><p>Select one or more passages. Their original order and individual source links are retained.</p>${choices.map(b=>`<label class="mw-check"><input type="checkbox" data-source-block="${esc(b.id)}" ${b.id===blockId?'checked':''}><span>${esc(b.text)}</span></label>`).join('')}<button data-create-requirement>Create Requirement entry</button>`,dialog=>{
-      dialog.querySelector('[data-create-requirement]').onclick=async()=>{const ids=[...dialog.querySelectorAll('[data-source-block]:checked')].map(n=>n.dataset.sourceBlock);if(!ids.length)return;dialog.close();await this.step('start',{material_id:this.m.id,material_revision:this.m.material.revision,block_ids:ids});};
+    const context=this.context,session=this.doc?.id,choices=this.m.draft.blocks.filter(b=>b.role!=='document_information'&&['text','heading'].includes(b.type)&&b.text?.trim());
+    this.m.dialog(`<h2>Source passages for this Requirement</h2><p>Select one or more passages. Their original order and individual source links are retained.</p>${choices.map(b=>`<label class="mw-check"><input type="checkbox" data-source-block="${esc(b.id)}" ${b.id===blockId?'checked':''}><span>${esc(b.text)}</span></label>`).join('')}<p data-source-count role="status" aria-live="polite"></p><p data-source-error role="alert" hidden></p><button data-create-requirement>Create Requirement entry</button>`,dialog=>{
+      const checks=[...dialog.querySelectorAll('[data-source-block]')],create=dialog.querySelector('[data-create-requirement]'),error=dialog.querySelector('[data-source-error]'),count=dialog.querySelector('[data-source-count]');
+      const selected=()=>{const ids=new Set(checks.filter(n=>n.checked).map(n=>n.dataset.sourceBlock));return choices.filter(b=>ids.has(b.id));};
+      const update=()=>{const parts=selected(),size=parts.reduce((n,b)=>n+Array.from(b.text).length,Math.max(0,parts.length-1)*2);count.textContent=`${parts.length} / 100 passages · ${size.toLocaleString()} / 100,000 characters`;error.hidden=true;return {parts,size};};
+      checks.forEach(n=>n.onchange=update);update();
+      create.onclick=async()=>{
+        if(this.pending||this.retryRequest)return;
+        const {parts,size}=update();
+        const message=context!==this.context||session!==this.doc?.id?'The open source changed. Close this picker and select its current passages.':!parts.length?'Select at least one passage.':parts.length>100?'Choose at most 100 distinct passages.':size>100000?'These passages exceed 100,000 characters. Choose fewer paragraphs.':'';
+        if(message){error.textContent=message;error.hidden=false;return;}
+        create.disabled=true;checks.forEach(n=>n.disabled=true);
+        const ok=await this.step('start',{material_id:this.m.id,material_revision:this.m.material.revision,block_ids:parts.map(b=>b.id)});
+        if(ok||this.retryRequest){dialog.close();return;}
+        create.disabled=false;checks.forEach(n=>n.disabled=false);error.textContent=this.notice;error.hidden=false;
+      };
     });
   }
 
@@ -93,7 +128,7 @@ export class RequirementsEditor {
 
       if(context!==this.context)return;
       if(result.status==='conflict')throw Object.assign(Error(result.error),{status:409,definitive:true});
-      this.retryRequest=null;this.doc=result.document;this.sessionCollapsed=false;
+      this.retryRequest=null;if(this.doc?.id!==result.document.id)this.groupEditor.reset();this.doc=result.document;this.sessionCollapsed=false;
       if(this.doc.deleted){this.doc=null;this.selected=null;await this.loadList(context);return;}
       for(const id of this.doc.done)if(!previousDone.has(id))this.closedUnits.add(id);
       if(this.doc.phase==='complete'&&isDirect){this.sessionCollapsed=true;this.selected=null;}
@@ -126,7 +161,9 @@ export class RequirementsEditor {
       for(const id of this.unitIds())if(!this.doc.done.includes(id))steps.push({request_id:crypto.randomUUID(),action:'done',unit_id:id});
       steps.push({request_id:crypto.randomUUID(),action:'phase',phase:'complete'});
     }
-    return this.step('save-draft',{session_id:hasEdits?this.baseSession:this.doc.id,expected_revision:hasEdits?this.baseRevision:this.doc.revision,steps});
+    const ok=await this.step('save-draft',{session_id:hasEdits?this.baseSession:this.doc.id,expected_revision:hasEdits?this.baseRevision:this.doc.revision,steps});
+    if(close&&ok===false&&!this.retryRequest)this.groupEditor.locatePending();
+    return ok;
   }
   confirmDiscard(){
     if(!this.dirty||this.pending||this.retryRequest)return;
@@ -137,7 +174,14 @@ export class RequirementsEditor {
   }
   discard(){this.edits=[];this.dirty=false;this.retryRequest=null;this.doc=null;this.baseSession=null;void this.loadList();}
   async navigateAnnotation(refs){
-    const jump=async s=>{await this.open(s.session_id);this.selected=s.unit_id;this.closedUnits.delete(s.unit_id);this.render(true);this.m.revealPane?.('requirements');const card=this.host.querySelector(`[data-unit="${s.unit_id}"]`);const field=card?.querySelector(`[data-field="${s.field}"]`)||card;field?.scrollIntoView({block:'nearest'});field?.focus();};
+    const jump=async s=>{
+      if(!(await this.open(s.session_id,s.unit_id))||this.doc?.id!==s.session_id||!this.doc.units?.[s.unit_id])return false;
+      this.closedUnits.delete(s.unit_id);this.selected=s.unit_id;this.sessionCollapsed=false;
+      if(s.node_id)return this.groupEditor.reveal(s.unit_id,s.node_id,s.relationship?'relationship':'node');
+      this.render(true);this.m.revealPane?.('requirements');
+      const card=this.host.querySelector(`[data-unit="${s.unit_id}"]`),field=[...(card?.querySelectorAll('[data-field]')||[])].find(n=>n.dataset.field===s.field)||card;
+      field?.setAttribute('tabindex','-1');field?.scrollIntoView({block:'nearest'});field?.focus();return true;
+    };
     if(refs.length===1)return jump(refs[0]);
     this.m.dialog(`<h2>Referenced fields</h2><p>Select the field to locate. All relationships covering this text are retained.</p>${refs.map((s,i)=>`<button type="button" data-ann-choice="${i}">${esc(s.field)} · ${esc(s.label)} · ${esc(s.unit_id)}</button>`).join('')}`);
     this.m.q('#mw-dialog').querySelectorAll('[data-ann-choice]').forEach(b=>b.onclick=()=>{this.m.q('#mw-dialog').close();void jump(refs[Number(b.dataset.annChoice)]);});
@@ -227,7 +271,6 @@ export class RequirementsEditor {
       input.onbeforeinput=e=>{if(e.data&&!/^\d+$/.test(e.data))e.preventDefault();};
       input.oninput=()=>{
         if(!/^\d*$/.test(input.value)){input.value=input.dataset.previous;return;}
-        if(input.value!=='')input.value=String(Math.min(count,Number(input.value)));
         input.dataset.previous=input.value;changed=true;this.quantityDrafts.set(key,inputs.map(i=>i.value));this.m.updateNavigationLock?.();preview();
         row.querySelectorAll('[data-preset]').forEach(b=>b.setAttribute('aria-pressed','false'));
       };

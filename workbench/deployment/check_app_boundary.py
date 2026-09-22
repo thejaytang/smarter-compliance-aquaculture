@@ -7,20 +7,24 @@ import subprocess
 import sys
 
 ROOT_FILES={'.gitattributes','.gitignore','.python-version','README.md','USER_GUIDE.md','ENVIRONMENT.md','AGENTS.md','deployment.py','Open Workbench (Windows).cmd','Open Workbench (macOS).command'}
+PRESENTATION_FILES={'.github/'+name for name in ('README.md','README.zh-CN.md','assets/cover.svg','assets/cover.zh-CN.svg','assets/lang-en.svg','assets/lang-zh.svg')}
 WORKBENCH_FILES={'workbench/pyproject.toml','workbench/workspace/README.txt','workbench/runtime/README.txt'}
 PREFIXES=('workbench/frontend/','workbench/backend/application/','workbench/backend/shared/','workbench/backend/system3/',
  'workbench/backend/system1/src/','workbench/backend/system1/deployment/',
  'workbench/backend/system2/src/','workbench/backend/system2/config/','workbench/backend/system2/ui/',
  'workbench/contracts/','workbench/config/','workbench/deployment/')
-INITIAL_DATA_FILES={'workbench/initial-data/'+name for name in ('README.md','manifest.json','workspace-20260917.zip','workspace-20260917.zip.sha256')}
-TRAINING_FILES={'workbench/resources/examples/example.html','workbench/resources/examples/README.md',
+EXAMPLE_FILES={'workbench/resources/examples/'+name for name in ('README.md','example.html',
+ 'example-work-20260922.zip','example-work-20260922.zip.sha256','example-seed-20260922.zip','example-seed-20260922.zip.sha256')}
+DEVELOPMENT_DATA_FILES={'workbench/initial-data/'+name for name in ('README.md','manifest.json',
+ 'workspace-20260917.zip','workspace-20260917.zip.sha256','manifest-20260922.json',
+ 'workspace-20260922.zip','workspace-20260922.zip.sha256')} | {
  'workbench/resources/examples/example-work-20260918.zip','workbench/resources/examples/example-work-20260918.zip.sha256'}
 COMPONENT_FILES={'workbench/backend/__init__.py','workbench/backend/system2/pyproject.toml','workbench/backend/system2/uv.lock','workbench/backend/system2/USER_GUIDE.md'}
 
 def business_file(path):
     p=PurePosixPath(path)
     if p.name=='.DS_Store':return True
-    if path in ROOT_FILES|WORKBENCH_FILES|COMPONENT_FILES|INITIAL_DATA_FILES|TRAINING_FILES:return False
+    if path in ROOT_FILES|WORKBENCH_FILES|COMPONENT_FILES|EXAMPLE_FILES|PRESENTATION_FILES:return False
     if not path.startswith(PREFIXES):return True
     if any(x in p.parts for x in ('.venv','node_modules','__pycache__','.cache','runtime','workspace','tests','project-support')):return True
     if p.name.startswith('.env') and p.name!='.env.example':return True
@@ -29,6 +33,7 @@ def business_file(path):
 
 def development_file(path):
     p=PurePosixPath(path)
+    if path in DEVELOPMENT_DATA_FILES:return True
     if path=='PROJECT_STATE.md':return True
     if not path.startswith(('project-support/','workbench/tests/','workbench/examples/','workbench/scripts/')):return False
     if any(x in p.parts for x in ('.git','.venv','node_modules','__pycache__','.cache','cache','runtime','tmp')):return False

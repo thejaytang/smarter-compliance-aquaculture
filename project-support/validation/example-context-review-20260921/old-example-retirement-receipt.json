@@ -1,0 +1,24 @@
+{
+  "status": "adopted",
+  "request_id": "d7e4db75-c415-504e-8a19-f6725fa2d047",
+  "merge_id": "e0c182c4-462c-4436-993c-132409e5ef06",
+  "source_status": "applied",
+  "source_receipt": {
+    "status": "applied",
+    "request_id": "15d921c1-ac15-51d6-92dd-19b266954252",
+    "operation_id": "COLLAB-15d921c1-ac15-51d6-92dd-19b266954252",
+    "source_id": "PE001",
+    "source_revision": "871abdc760bfc7649962",
+    "effective_selection": "EXCLUDE",
+    "unresolved_reasons": [],
+    "submission_id": "90fbd12b-1293-550f-bc23-78448475d7f8",
+    "contributor": "Weijie Tang",
+    "actor": "Weijie Tang"
+  },
+  "material_status": "not_present",
+  "material": null,
+  "submission_id": "90fbd12b-1293-550f-bc23-78448475d7f8",
+  "actor": "Weijie Tang",
+  "contributor": "Weijie Tang",
+  "at": "2026-09-21T09:21:00.610679+00:00"
+}

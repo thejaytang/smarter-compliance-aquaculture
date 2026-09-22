@@ -143,3 +143,5 @@ body.mw-focus-active{overflow:hidden}body.mw-focus-active>.rail,body.mw-focus-ac
 .material-workbench .mw-close-material:hover{background:#e8edf3;color:var(--ink)}
 
 .version-diff{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.65}.version-passage{border-bottom:1px solid var(--border,#ccd3db);padding:12px 0}.version-unchanged{display:block;margin:8px 0;color:var(--muted,#555)}.version-choice{position:sticky;bottom:0;background:var(--surface,#fff);padding:12px 0}.mw-preference{border-left:3px solid #547267;padding:8px 12px}
+
+#mw-reader-location-error{color:var(--danger,#923327);margin:4px 0}#mw-original-toolbar [aria-invalid=true]{border-color:var(--danger,#923327)}

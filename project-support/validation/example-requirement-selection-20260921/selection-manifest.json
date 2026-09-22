@@ -1,0 +1,533 @@
+[
+  {
+    "key": "purpose",
+    "old_label": "R1",
+    "new_label": null,
+    "old_session_id": "1c75d7d1-0d8c-5d34-b32a-b15d15fa4b9b",
+    "old_unit_id": "df7fa1c6-aa70-5cc2-87c1-5877399d4f04",
+    "blocks": [
+      "s1-1"
+    ],
+    "classification": "purpose",
+    "action": "context-only",
+    "reason": "Purpose guiding interpretation; no independent operator duty."
+  },
+  {
+    "key": "scope",
+    "old_label": "R2",
+    "new_label": null,
+    "old_session_id": "2897c375-f52f-57bc-a261-3cb380ce2a7e",
+    "old_unit_id": "b8639c54-02df-5103-ba9b-4a1b35401762",
+    "blocks": [
+      "s2-1"
+    ],
+    "classification": "scope",
+    "action": "context-only",
+    "reason": "Applicability and slaughter-cage carve-out; retain as source context."
+  },
+  {
+    "key": "addressee",
+    "old_label": "R3",
+    "new_label": null,
+    "old_session_id": "549fd316-dfa0-580f-887f-58438cac7d0d",
+    "old_unit_id": "2a3669e4-ee7d-5ac7-b84c-43f4f3f15bec",
+    "blocks": [
+      "s2-2"
+    ],
+    "classification": "scope",
+    "action": "context-only",
+    "reason": "Identifies regulated approval holders; retain as source context."
+  },
+  {
+    "key": "definitions",
+    "old_label": "R4",
+    "new_label": null,
+    "old_session_id": "1256bcc2-a476-511f-9ea9-81d78af23537",
+    "old_unit_id": "cc5fb434-2b23-5849-8206-828ed389964f",
+    "blocks": [
+      "s3-1",
+      "s3-2",
+      "s3-3",
+      "s3-4",
+      "s3-5",
+      "s3-6",
+      "s3-7",
+      "s3-8"
+    ],
+    "classification": "definition",
+    "action": "context-only",
+    "reason": "Definitions constrain meanings of related obligations."
+  },
+  {
+    "key": "plan-basis",
+    "old_label": "R5",
+    "new_label": "R1",
+    "old_session_id": "02cc8936-4882-54e1-b7ed-e60288d04a7c",
+    "old_unit_id": "19331f2c-7359-5195-af83-5cba9b532dc2",
+    "blocks": [
+      "s4-1"
+    ],
+    "classification": "obligation",
+    "action": "keep",
+    "reason": "Source states an operational duty.",
+    "new_session_id": "02cc8936-4882-54e1-b7ed-e60288d04a7c",
+    "new_unit_id": "19331f2c-7359-5195-af83-5cba9b532dc2"
+  },
+  {
+    "key": "plan-content",
+    "old_label": "R6",
+    "new_label": "R2",
+    "old_session_id": "734be2f2-db08-5983-b9fb-57f7d7c74792",
+    "old_unit_id": "866c1ea4-a05a-53aa-b153-69a92f8cd0e7",
+    "blocks": [
+      "s4-2",
+      "s4-3",
+      "s4-4",
+      "s4-5",
+      "s4-6",
+      "s4-7"
+    ],
+    "classification": "obligation",
+    "action": "keep",
+    "reason": "Source states an operational duty.",
+    "new_session_id": "734be2f2-db08-5983-b9fb-57f7d7c74792",
+    "new_unit_id": "866c1ea4-a05a-53aa-b153-69a92f8cd0e7"
+  },
+  {
+    "key": "plan-maintenance",
+    "old_label": "R7",
+    "new_label": "R3",
+    "old_session_id": "92f9b33e-f52c-5854-a589-697910ba5ce9",
+    "old_unit_id": "8e11d268-4a4e-58cf-945b-9f30d71a028e",
+    "blocks": [
+      "s4-8"
+    ],
+    "classification": "obligation",
+    "action": "keep",
+    "reason": "Source states an operational duty.",
+    "new_session_id": "92f9b33e-f52c-5854-a589-697910ba5ce9",
+    "new_unit_id": "8e11d268-4a4e-58cf-945b-9f30d71a028e"
+  },
+  {
+    "key": "zone-power",
+    "old_label": "R8",
+    "new_label": null,
+    "old_session_id": "40d21dd1-142b-5571-973b-20dd2212a52c",
+    "old_unit_id": "1d64db9c-7008-5268-8a3a-124b6aa61538",
+    "blocks": [
+      "s5-1",
+      "s5-2",
+      "s5-3",
+      "s5-4",
+      "s5-5",
+      "s5-6",
+      "s5-7"
+    ],
+    "classification": "power",
+    "action": "context-only",
+    "reason": "Power to enact zone rules; no actual zone regulation or exercised decision supplied."
+  },
+  {
+    "key": "temperature",
+    "old_label": "R9",
+    "new_label": "R4",
+    "old_session_id": "964923d2-7f83-5c42-a3e2-aa38846bce97",
+    "old_unit_id": "e0660b90-6d65-5c8d-a91d-04145628fe5f",
+    "blocks": [
+      "s6-1"
+    ],
+    "classification": "obligation",
+    "action": "keep",
+    "reason": "Source states an operational duty.",
+    "new_session_id": "964923d2-7f83-5c42-a3e2-aa38846bce97",
+    "new_unit_id": "e0660b90-6d65-5c8d-a91d-04145628fe5f"
+  },
+  {
+    "key": "counting",
+    "old_label": "R10",
+    "new_label": "R5",
+    "old_session_id": "6dc96829-7200-548d-9bcb-b13fc720b19b",
+    "old_unit_id": "f6a4a72f-9c05-5b3d-9859-122fe89cbe87",
+    "blocks": [
+      "s6-2"
+    ],
+    "classification": "obligation",
+    "action": "replace",
+    "reason": "Replaced by one source-bound entry covering s6-2 and s6-3, with both exemptions attached to counting.",
+    "new_session_id": "29103b10-0559-5578-86e5-693502ff417b",
+    "new_unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+    "merged_blocks": [
+      "s6-2",
+      "s6-3"
+    ]
+  },
+  {
+    "key": "slaughter-exemption",
+    "old_label": "R11",
+    "new_label": "R5",
+    "old_session_id": "b40818e4-4c86-5b71-9461-1d66cc16f0f9",
+    "old_unit_id": "8a5e7d3f-cf30-50c8-b31d-d4953993b64c",
+    "blocks": [
+      "s6-3"
+    ],
+    "classification": "exemption",
+    "action": "merge",
+    "reason": "Merged into counting as a negative applicability condition, not a standalone slaughter duty.",
+    "new_session_id": "29103b10-0559-5578-86e5-693502ff417b",
+    "new_unit_id": "5797b497-d085-5359-a4cb-329234bced4f"
+  },
+  {
+    "key": "repealed",
+    "old_label": "R12",
+    "new_label": null,
+    "old_session_id": "e268adf9-b397-570c-8697-6031e12e5214",
+    "old_unit_id": "5af5b781-7a21-5527-978b-4bdb342f6e29",
+    "blocks": [
+      "s7-0",
+      "s7-1"
+    ],
+    "classification": "repealed",
+    "action": "context-only",
+    "reason": "Repealed provision and amendment metadata; no operative duty."
+  },
+  {
+    "key": "limit-south",
+    "old_label": "R13",
+    "new_label": "R6",
+    "old_session_id": "be6541f4-a93c-53ce-b552-b2da71de0004",
+    "old_unit_id": "d2dd9117-5434-58ad-ae0c-6fcc8bb36b81",
+    "blocks": [
+      "s8-1"
+    ],
+    "classification": "obligation",
+    "action": "keep",
+    "reason": "Source states an operational duty.",
+    "new_session_id": "be6541f4-a93c-53ce-b552-b2da71de0004",
+    "new_unit_id": "d2dd9117-5434-58ad-ae0c-6fcc8bb36b81"
+  },
+  {
+    "key": "limit-north",
+    "old_label": "R14",
+    "new_label": "R7",
+    "old_session_id": "d6d98c85-ecd6-5dc6-be01-d438230462d1",
+    "old_unit_id": "25df1030-eaae-579e-b8a5-967372cc4bb5",
+    "blocks": [
+      "s8-2"
+    ],
+    "classification": "obligation",
+    "action": "keep",
+    "reason": "Source states an operational duty.",
+    "new_session_id": "d6d98c85-ecd6-5dc6-be01-d438230462d1",
+    "new_unit_id": "25df1030-eaae-579e-b8a5-967372cc4bb5"
+  },
+  {
+    "key": "limit-action",
+    "old_label": "R15",
+    "new_label": "R8",
+    "old_session_id": "3c5740f7-f2d0-5191-a24e-d4c2e1cbae3e",
+    "old_unit_id": "441599b9-ce31-5b0a-a66b-b7204a914686",
+    "blocks": [
+      "s8-3"
+    ],
+    "classification": "obligation",
+    "action": "keep",
+    "reason": "Source states an operational duty.",
+    "new_session_id": "3c5740f7-f2d0-5191-a24e-d4c2e1cbae3e",
+    "new_unit_id": "441599b9-ce31-5b0a-a66b-b7204a914686"
+  },
+  {
+    "key": "broodstock-permission",
+    "old_label": "R16",
+    "new_label": null,
+    "old_session_id": "6d1074dc-4153-5256-a2a5-31ebdc1007d5",
+    "old_unit_id": "fe5c1a2b-e0f7-5459-a2d4-d9287aad14ba",
+    "blocks": [
+      "s8-4"
+    ],
+    "classification": "power",
+    "action": "context-only",
+    "reason": "Discretionary higher-limit permission; actual permission and terms still required."
+  },
+  {
+    "key": "medicine",
+    "old_label": "R17",
+    "new_label": "R9",
+    "old_session_id": "6ee9ee40-3eb1-507a-bca6-9f7ea18650a3",
+    "old_unit_id": "4b963ba1-4583-5801-8d45-55d9ce7a4f20",
+    "blocks": [
+      "s9-1"
+    ],
+    "classification": "obligation",
+    "action": "keep",
+    "reason": "Source states an operational duty.",
+    "new_session_id": "6ee9ee40-3eb1-507a-bca6-9f7ea18650a3",
+    "new_unit_id": "4b963ba1-4583-5801-8d45-55d9ce7a4f20"
+  },
+  {
+    "key": "treatment-method",
+    "old_label": "R18",
+    "new_label": "R10",
+    "old_session_id": "525ad84f-82bf-5ac2-a542-4ce8bffdd21c",
+    "old_unit_id": "82374df7-8906-5184-b6a1-d20325679630",
+    "blocks": [
+      "s9-2"
+    ],
+    "classification": "obligation",
+    "action": "keep",
+    "reason": "Source states an operational duty.",
+    "new_session_id": "525ad84f-82bf-5ac2-a542-4ce8bffdd21c",
+    "new_unit_id": "82374df7-8906-5184-b6a1-d20325679630"
+  },
+  {
+    "key": "treatment-evaluation",
+    "old_label": "R19",
+    "new_label": "R11",
+    "old_session_id": "322e0054-a2b7-52cf-984b-4e33ad78bef7",
+    "old_unit_id": "479cfa59-4c27-56c6-9a5a-47b2e9788043",
+    "blocks": [
+      "s9-3"
+    ],
+    "classification": "obligation",
+    "action": "keep",
+    "reason": "Source states an operational duty.",
+    "new_session_id": "322e0054-a2b7-52cf-984b-4e33ad78bef7",
+    "new_unit_id": "479cfa59-4c27-56c6-9a5a-47b2e9788043"
+  },
+  {
+    "key": "resistance-action",
+    "old_label": "R20",
+    "new_label": "R12",
+    "old_session_id": "a5c5bcef-62ca-5538-b35c-fe02368a1999",
+    "old_unit_id": "3b5dc28e-be9d-51fb-b272-2ace22fa8172",
+    "blocks": [
+      "s9-4"
+    ],
+    "classification": "obligation",
+    "action": "keep",
+    "reason": "Source states an operational duty.",
+    "new_session_id": "a5c5bcef-62ca-5538-b35c-fe02368a1999",
+    "new_unit_id": "3b5dc28e-be9d-51fb-b272-2ace22fa8172"
+  },
+  {
+    "key": "weekly-report",
+    "old_label": "R21",
+    "new_label": "R13",
+    "old_session_id": "5efd9898-f950-5b56-a929-e0a3a2c779d1",
+    "old_unit_id": "7df3c3e6-6132-5973-917c-dd4433c59cd3",
+    "blocks": [
+      "s10-1",
+      "s10-2",
+      "s10-3",
+      "s10-4",
+      "s10-5",
+      "s10-6",
+      "s10-7"
+    ],
+    "classification": "obligation",
+    "action": "keep",
+    "reason": "Source states an operational duty.",
+    "new_session_id": "5efd9898-f950-5b56-a929-e0a3a2c779d1",
+    "new_unit_id": "7df3c3e6-6132-5973-917c-dd4433c59cd3"
+  },
+  {
+    "key": "supervision",
+    "old_label": "R22",
+    "new_label": null,
+    "old_session_id": "4e923ab3-fc0d-587e-9007-800894c9d284",
+    "old_unit_id": "0140358e-b014-5170-afac-af9693fa9d5d",
+    "blocks": [
+      "s11-1"
+    ],
+    "classification": "power",
+    "action": "context-only",
+    "reason": "Regulatory supervision and enforcement powers, not a facility action requirement."
+  },
+  {
+    "key": "coercive-fine",
+    "old_label": "R23",
+    "new_label": null,
+    "old_session_id": "2f4b425f-94c0-558d-b701-859e35dc0470",
+    "old_unit_id": "0a46e8c7-141c-5ddb-8b0e-e4a14ecf4cd3",
+    "blocks": [
+      "s12-1"
+    ],
+    "classification": "power",
+    "action": "context-only",
+    "reason": "Power to impose a coercive fine, not a standalone facility action requirement."
+  },
+  {
+    "key": "fine-period",
+    "old_label": "R24",
+    "new_label": null,
+    "old_session_id": "6535d331-1847-5328-9b05-fa1abbab335d",
+    "old_unit_id": "060f6d24-01ce-52e9-a129-39016b011677",
+    "blocks": [
+      "s12-2"
+    ],
+    "classification": "legal-effect",
+    "action": "context-only",
+    "reason": "Legal timing/effect of an imposed fine, retained as context."
+  },
+  {
+    "key": "penalty",
+    "old_label": "R25",
+    "new_label": null,
+    "old_session_id": "90ae32e6-c5b6-5593-9a46-056502a08707",
+    "old_unit_id": "2c0fd278-c219-5786-99f8-f3296593a617",
+    "blocks": [
+      "s13-1"
+    ],
+    "classification": "legal-effect",
+    "action": "context-only",
+    "reason": "Sanction/legal consequences, not a standalone operational duty."
+  },
+  {
+    "key": "dispensation",
+    "old_label": "R26",
+    "new_label": null,
+    "old_session_id": "5b0d784e-27c7-58ea-ac86-7bf038ef476f",
+    "old_unit_id": "4fd162b5-14ed-573f-9304-2b01eb917e9e",
+    "blocks": [
+      "s14-1"
+    ],
+    "classification": "power",
+    "action": "context-only",
+    "reason": "Discretionary authority to grant exemptions; no automatic exemption inferred."
+  },
+  {
+    "key": "commencement",
+    "old_label": "R27",
+    "new_label": null,
+    "old_session_id": "3efd3539-8d30-508e-9937-7d07c37af73e",
+    "old_unit_id": "ad14d904-596d-5d9e-8f3d-f7b69b0186fc",
+    "blocks": [
+      "s15-1"
+    ],
+    "classification": "legal-effect",
+    "action": "context-only",
+    "reason": "Commencement and repeal effects; retained as temporal context."
+  },
+  {
+    "key": "transition",
+    "old_label": "R28",
+    "new_label": "R14",
+    "old_session_id": "cf8a17ef-ae63-5609-95e8-3ae4ae057d5e",
+    "old_unit_id": "5a6deb26-fee1-5ba7-b1df-ddbdc28a8263",
+    "blocks": [
+      "s16-1"
+    ],
+    "classification": "historical-obligation",
+    "action": "keep",
+    "reason": "Historical spring-2013 duty; retain the exact 15 February 2013 deadline, not recurring.",
+    "new_session_id": "cf8a17ef-ae63-5609-95e8-3ae4ae057d5e",
+    "new_unit_id": "5a6deb26-fee1-5ba7-b1df-ddbdc28a8263"
+  },
+  {
+    "key": "annex-stages",
+    "old_label": "R29",
+    "new_label": "R15",
+    "old_session_id": "cffdb6e3-f3e4-54a5-959b-b308df656aea",
+    "old_unit_id": "a77fcc32-e51b-5092-91a7-56ac7189437c",
+    "blocks": [
+      "annex-1",
+      "annex-2",
+      "annex-3",
+      "annex-4"
+    ],
+    "classification": "obligation",
+    "action": "keep",
+    "reason": "Source states an operational duty.",
+    "new_session_id": "cffdb6e3-f3e4-54a5-959b-b308df656aea",
+    "new_unit_id": "a77fcc32-e51b-5092-91a7-56ac7189437c"
+  },
+  {
+    "key": "annex-south",
+    "old_label": "R30",
+    "new_label": "R16",
+    "old_session_id": "12dfdfc3-8b52-59d6-9f61-b50441486915",
+    "old_unit_id": "79962b9b-2971-5754-800e-578dc6019d84",
+    "blocks": [
+      "annex-5"
+    ],
+    "classification": "obligation",
+    "action": "keep",
+    "reason": "Source states an operational duty.",
+    "new_session_id": "12dfdfc3-8b52-59d6-9f61-b50441486915",
+    "new_unit_id": "79962b9b-2971-5754-800e-578dc6019d84"
+  },
+  {
+    "key": "annex-north",
+    "old_label": "R31",
+    "new_label": "R17",
+    "old_session_id": "7617fdd6-618e-5121-b2bd-733391cecc85",
+    "old_unit_id": "7d8ab0d5-c219-51c8-9773-6154672182db",
+    "blocks": [
+      "annex-6"
+    ],
+    "classification": "obligation",
+    "action": "keep",
+    "reason": "Source states an operational duty.",
+    "new_session_id": "7617fdd6-618e-5121-b2bd-733391cecc85",
+    "new_unit_id": "7d8ab0d5-c219-51c8-9773-6154672182db"
+  },
+  {
+    "key": "annex-procedure",
+    "old_label": "R32",
+    "new_label": "R18",
+    "old_session_id": "a6c612b4-d3ee-5e38-863e-a4d58526dd03",
+    "old_unit_id": "2c5a8a96-9298-536b-a8b4-10d37483a554",
+    "blocks": [
+      "annex-7"
+    ],
+    "classification": "obligation",
+    "action": "keep",
+    "reason": "Source states an operational duty.",
+    "new_session_id": "a6c612b4-d3ee-5e38-863e-a4d58526dd03",
+    "new_unit_id": "2c5a8a96-9298-536b-a8b4-10d37483a554"
+  },
+  {
+    "key": "annex-records",
+    "old_label": "R33",
+    "new_label": "R19",
+    "old_session_id": "0ad25e43-150f-51da-a741-063b2402e862",
+    "old_unit_id": "f16cbfb4-264c-5621-aa10-bcbc619160a4",
+    "blocks": [
+      "annex-8"
+    ],
+    "classification": "obligation",
+    "action": "keep",
+    "reason": "Source states an operational duty.",
+    "new_session_id": "0ad25e43-150f-51da-a741-063b2402e862",
+    "new_unit_id": "f16cbfb4-264c-5621-aa10-bcbc619160a4"
+  },
+  {
+    "key": "annex-averages",
+    "old_label": "R34",
+    "new_label": "R20",
+    "old_session_id": "6a0f405d-332d-5545-b04b-c160d39aabfa",
+    "old_unit_id": "0e5ecb9a-8dfd-527c-9b80-460818be7aa5",
+    "blocks": [
+      "annex-9"
+    ],
+    "classification": "obligation",
+    "action": "keep",
+    "reason": "Source states an operational duty.",
+    "new_session_id": "6a0f405d-332d-5545-b04b-c160d39aabfa",
+    "new_unit_id": "0e5ecb9a-8dfd-527c-9b80-460818be7aa5"
+  },
+  {
+    "key": "annex-pre-treatment",
+    "old_label": "R35",
+    "new_label": "R21",
+    "old_session_id": "49769009-1630-591d-a337-04de0c849a5d",
+    "old_unit_id": "cc86ab74-baf3-5caf-9fbc-63a406c954eb",
+    "blocks": [
+      "annex-10"
+    ],
+    "classification": "obligation",
+    "action": "keep",
+    "reason": "Source states an operational duty.",
+    "new_session_id": "49769009-1630-591d-a337-04de0c849a5d",
+    "new_unit_id": "cc86ab74-baf3-5caf-9fbc-63a406c954eb"
+  }
+]

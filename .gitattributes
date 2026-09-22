@@ -4,8 +4,8 @@
 *.command text eol=lf
 *.cmd text eol=crlf
 
-# Keep the checksummed training example identical on Windows and macOS.
-workbench/resources/examples/example.html text eol=lf
+# Preserve the complete legal original byte-for-byte on every platform.
+workbench/resources/examples/example.html -text
 
 # Preserve original and bundled third-party bytes.
 workbench/workspace/** -text

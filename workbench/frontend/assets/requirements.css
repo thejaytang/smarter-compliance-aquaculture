@@ -171,7 +171,8 @@
 .material-workbench .rq-entry-actions button { padding:4px 8px; min-height:32px; font-size:12px; white-space:nowrap; }
 
 .rq-reference-picker { margin:10px 0; padding:10px; border-radius:6px; }
-.rq-tree-link { display:flex; align-items:end; gap:8px; }
+.rq-tree-link { display:flex; flex-wrap:wrap; align-items:end; gap:8px; }
+.rq-tree-link [data-reference-preview] { flex-basis:100%; overflow-wrap:anywhere; white-space:pre-wrap; }
 .material-workbench .rq-tree-link > label { flex:1; min-width:0; margin:0; font-size:12px; }
 .material-workbench .rq-tree-link select { display:block; width:100%; height:32px; min-height:32px; margin:0; padding:4px 8px; }
 .material-workbench .rq-tree-link > button { height:32px; min-height:32px; padding:4px 8px; flex:none; }

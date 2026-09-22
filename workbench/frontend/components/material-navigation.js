@@ -16,12 +16,22 @@ export function regionFromPoints(start,end,rect) {
   const region={x0:Math.min(x(start.x),x(end.x)),y0:Math.min(y(start.y),y(end.y)),x1:Math.max(x(start.x),x(end.x)),y1:Math.max(y(start.y),y(end.y))};
   return region.x1>region.x0&&region.y1>region.y0?region:null;
 }
-function cellRange(value) {const m=String(value||'').match(/^([A-Z]+)(\d+)(?::([A-Z]+)(\d+))?$/i);if(!m)return null;const col=v=>[...v.toUpperCase()].reduce((n,c)=>n*26+c.charCodeAt(0)-64,0);return {x0:col(m[1]),y0:+m[2],x1:col(m[3]||m[1]),y1:+(m[4]||m[2])};}
+export function cellRange(value){
+ const m=String(value??'').trim().match(/^\$?([A-Z]+)\$?([1-9]\d*)(?::\$?([A-Z]+)\$?([1-9]\d*))?$/i);if(!m)return null;
+ const col=v=>[...v.toUpperCase()].reduce((n,c)=>n*26+c.charCodeAt(0)-64,0),range={x0:col(m[1]),y0:Number(m[2]),x1:col(m[3]||m[1]),y1:Number(m[4]||m[2])};
+ return Object.values(range).every(Number.isSafeInteger)&&range.x1>=range.x0&&range.y1>=range.y0?range:null;
+}
+export function sourcePage(ref){
+ if(ref?.page!=null)return Number.isSafeInteger(ref.page)&&ref.page>0?ref.page:null;
+ if(ref?.page_index!=null)return Number.isSafeInteger(ref.page_index)&&ref.page_index>=0&&ref.page_index<Number.MAX_SAFE_INTEGER?ref.page_index+1:null;
+ const scope=/^page:([1-9]\d*)$/.exec(ref?.scope_id||'');return scope&&Number.isSafeInteger(Number(scope[1]))?Number(scope[1]):null;
+}
+
 export function refsForLocation(blocks,location) {
   return blocks.flatMap((block,index)=>{
     const refs=[...(block.source_refs||[]),...(block.image?.source_ref?[block.image.source_ref]:[])];
     const matches=refs.some(ref=>{
-      if(location.page!=null)return (ref.page??(ref.page_index!=null?ref.page_index+1:null))===location.page;
+      if(location.page!=null)return sourcePage(ref)===location.page;
       if(location.sheet){if(ref.sheet!==location.sheet)return false;if(!location.cell_range)return true;const a=cellRange(ref.cell_range),b=cellRange(location.cell_range);return !!a&&!!b&&a.x0<=b.x1&&a.x1>=b.x0&&a.y0<=b.y1&&a.y1>=b.y0;}
       if(location.anchor||location.locator)return !!((location.anchor&&ref.anchor===location.anchor)||(location.locator&&ref.locator===location.locator));
       return false;

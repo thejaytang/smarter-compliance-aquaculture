@@ -137,6 +137,27 @@ class InterpretationTests(unittest.TestCase):
    self.assertEqual(json.loads(seen[0]['messages'][1]['content'])['materials'][0]['blocks'][0]['text'],TEXT)
    self.assertEqual(self.s.read(ACTOR,self.uid)['fields']['condition']['value'],'')
    self.assertEqual(result['suggestions']['condition']['value'],'after a storm')
+   from backend.system3.check_design import empty_design
+   response['check_design']=empty_design(2);response['check_design']['concepts']=[dict(id='storm',label='Storm',kind='event',status='confirmed',references=[dict(id='a'*32+':b',quote='storm')])]
+   for k in ('scope','condition','demand'):
+    response['check_design']['groups'][k]=dict(id=k,condition='AND',rules=[dict(id=k+'rule',expression='Example '+k,interpretation_field=k,concept_ids=['storm'])])
+   req.update(request_id=str(uuid.uuid4()),structured=True);run=self.s.generate(ACTOR,req)
+   deadline=time.time()+5
+   while time.time()<deadline:
+    result=self.s.run(ACTOR,run['id'])
+    if result['status']!='running':break
+    time.sleep(.02)
+   self.assertEqual(result['status'],'ready',result);self.assertEqual(result['check_design']['concepts'][0]['status'],'proposed')
+   self.assertEqual(self.s.read(ACTOR,self.uid)['revision'],0)
+   save=self.request(check_design=result['check_design'],approve_cards={'scope':run['id']});save['fields']=result['suggestions']
+   self.s.save(ACTOR,save);saved=self.s.read(ACTOR,self.uid)
+   self.assertEqual(saved['adopted_candidates']['scope'],[run['id']]);self.assertTrue(saved['card_review_status']['scope'])
+   save.update(request_id=str(uuid.uuid4()),expected_revision=1,approve_cards={'scope':None})
+   save['check_design']['groups']['scope']['rules'][0]['expression']='Human correction'
+   self.s.save(ACTOR,save);saved=self.s.read(ACTOR,self.uid)
+   self.assertIsNone(saved['card_reviews']['scope']['candidate_run_id'])
+   self.assertEqual(saved['adopted_candidates']['scope'],[run['id']])
+
   finally:server.shutdown();server.server_close();thread.join()
 
  def test_late_candidate_is_stale_and_timeout_keeps_formal_work(self):
@@ -177,10 +198,36 @@ class InterpretationTests(unittest.TestCase):
  def test_review_saved_then_edit_clears_review(self):
   req=self.request()
   for k in KEYS:req['fields'][k].update(value='Manual interpretation needing no automatic inference',basis='interpretation')
-  self.s.save(ACTOR,req)
+  self.s.save(ACTOR,dict(req,approve_cards={k:None for k in ('scope','condition','demand')}))
   reviewed=self.s.save(ACTOR,dict(req,request_id=str(uuid.uuid4()),expected_revision=1,action='review'))
   self.assertEqual(reviewed['revision'],2);self.assertTrue(self.s.read(ACTOR,self.uid)['reviewed'])
   self.s.save(ACTOR,dict(req,request_id=str(uuid.uuid4()),expected_revision=2));self.assertFalse(self.s.read(ACTOR,self.uid)['reviewed'])
+
+ def test_individual_approvals_survive_replay_but_not_edited_content_or_source(self):
+  from backend.system3.interpretations import validate_card_reviews
+  req=self.request()
+  for f in req['fields'].values():f.update(value='Human interpretation',basis='interpretation')
+  req['approve_cards']={'scope':None}
+  result=self.s.save(ACTOR,req);self.assertEqual(result,self.s.save(ACTOR,req))
+  doc=self.s.read(ACTOR,self.uid);self.assertEqual(doc['card_review_status'],dict(scope=True,condition=False,demand=False))
+  self.assertEqual(doc['card_reviews']['scope']['approved_by'],ACTOR)
+  with self.assertRaisesRegex(ValueError,'individually'):
+   self.s.save(ACTOR,dict(req,request_id=str(uuid.uuid4()),expected_revision=1,approve_cards={},action='review'))
+  req.update(request_id=str(uuid.uuid4()),expected_revision=1,approve_cards={'condition':None,'demand':None})
+  self.s.save(ACTOR,req)
+  doc=self.s.read(ACTOR,self.uid);validate_card_reviews(doc)
+  self.assertTrue(all(doc['card_review_status'].values()));self.assertFalse(doc['reviewed'])
+  tampered=deepcopy(doc);tampered['fields']['condition']['value']='Unreviewed replacement'
+  with self.assertRaisesRegex(ValueError,'do not match'):validate_card_reviews(tampered)
+  req.update(request_id=str(uuid.uuid4()),expected_revision=2,approve_cards={})
+  req['fields']['condition']['value']='Changed by human'
+  self.s.save(ACTOR,req);doc=self.s.read(ACTOR,self.uid)
+  self.assertEqual(doc['card_review_status'],dict(scope=True,condition=False,demand=True))
+  with self.assertRaisesRegex(ValueError,'candidate changed'):
+   self.s.save(ACTOR,dict(req,request_id=str(uuid.uuid4()),expected_revision=3,approve_cards={'condition':str(uuid.uuid4())}))
+  self.material['revision']=2
+  req.update(request_id=str(uuid.uuid4()),expected_revision=3,context_fingerprint=self.s.context(ACTOR,self.uid)['fingerprint'])
+  self.s.save(ACTOR,req);self.assertFalse(any(self.s.read(ACTOR,self.uid)['card_review_status'].values()))
 
  def test_interrupted_run_is_readable_after_restart_without_overwriting_work(self):
   rid=str(uuid.uuid4())

@@ -22,7 +22,7 @@ from ..intake.system1 import read_system1
 from ..intake.registry import build_manifest, read_snapshot
 from ..review.materials import MaterialStore
 from ..review.material_reads import compact_candidate
-from ..evidence.material_reader import inspect_original, read_material
+from ..evidence.material_reader import inspect_original, read_material, read_html_original
 
 
 class MaterialService:
@@ -260,10 +260,14 @@ def main():
     envelope = json.load(sys.stdin)
     try:
         with contextlib.redirect_stdout(io.StringIO()):
-            service = MaterialService(envelope['root'], envelope['system1'], envelope.get('system1_config'))
             command = envelope['command'].removeprefix('material_')
+            if command != 'source-html':
+                service = MaterialService(envelope['root'], envelope['system1'], envelope.get('system1_config'))
             payload = envelope.get('request', {})
-            if command in {'sync', 'sync-validate'}:
+            if command == 'source-html':
+                # The HTTP owner resolves this path from a registered Source ID.
+                result = read_html_original(envelope['path'], envelope['expected_hash'])
+            elif command in {'sync', 'sync-validate'}:
                 from .material_sync import command as sync_command
                 result = sync_command(service, command, payload)
             elif command in {'seed', 'export', 'validate', 'adopt-master', 'repeat-resolution'}:

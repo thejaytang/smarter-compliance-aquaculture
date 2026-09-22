@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "synthetic_only": true,
+  "browser_save_and_reload": true,
+  "source_subject_preserved": true,
+  "facility_scope_citation_preserved": true,
+  "depth_and_frequency_in_demand": true,
+  "unstated_condition_unresolved": true,
+  "unmapped_predicate_projection_blocked": true,
+  "mapping_confirmation_retained": true,
+  "review_not_implicitly_completed": true,
+  "real_business_package_round_trip": true,
+  "receiver_reexport": true,
+  "two_peer_restart_readback": true,
+  "no_external_models": true
+}

@@ -284,3 +284,49 @@ def test_partial_scope_evidence_survives_worker_restart_and_keeps_human_overlay(
     assert current['candidates'][0]['extraction']['parser_status'] == 'partial'
     assert current['candidates'][0]['extraction']['unresolved_count'] == 1
     assert restarted.store.candidate_detail(saved['id'], result['candidate']['id'])['metadata']['unresolved'] == evidence['unresolved']
+
+
+def test_caption_and_cell_edits_survive_actual_save_and_reopen(integration, monkeypatch, tmp_path):
+    import json
+    import subprocess
+    service, handoff = integration
+    opened = service.open(request(source_id='TS001'))
+    original = service._path(opened['source'])
+    raw_before = original.read_bytes()
+    attachment = tmp_path / 'synthetic-attachment.png'
+    attachment.write_bytes(base64.b64decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jlp8AAAAASUVORK5CYII='))
+    attachment_before = attachment.read_bytes()
+    ref = {'scope_id':'html:document', 'anchor':'original-document'}
+    blocks = [
+        {'id':'image-r4','type':'image','text':'Original caption', 'source_refs':[ref],
+         'image':{'attachment':attachment.name,'attribution':'Synthetic credited image','source_ref':ref}},
+        {'id':'table-r4','type':'table','text':'Retained table caption','source_refs':[ref],
+         'table':{'rows':[['Header',''],['Old cell','Unchanged']],
+                  'merges':[{'row':0,'col':0,'rowspan':1,'colspan':2}], 'notes':['Retained table note']}}
+    ]
+    saved = service.mutate('save', request(opened, blocks=blocks))['material']
+    root = Path(__file__).resolve().parents[3]
+    script = '''import fs from 'node:fs';
+import {blockMarkdown,updateMarkdownBlock,MarkdownNotebook} from './workbench/frontend/components/markdown-content.js';
+const original=JSON.parse(fs.readFileSync(0,'utf8'));
+const current=updateMarkdownBlock(original,'image-r4',blockMarkdown(original[0]).replace('Original caption','Corrected caption'));
+const owner={draft:{blocks:current},collaboration:{readonly:false},changed(){}};
+const notebook=new MarkdownNotebook(owner);
+notebook.change('table-r4',blockMarkdown(current[1]).replace('Old cell','Corrected cell'));
+process.stdout.write(JSON.stringify(owner.draft.blocks));'''
+    edited = json.loads(subprocess.run(['node','--input-type=module','-e',script],input=json.dumps(blocks),
+        text=True,capture_output=True,cwd=root,check=True).stdout)
+    updated = service.mutate('save', request(saved, blocks=edited))['material']
+    reopened = MaterialService(service.root, service.system1)
+    monkeypatch.setattr(reopened, 'handoff', lambda: handoff)
+    actual = reopened.read(updated['id'])
+    assert actual['revision'] == saved['revision'] + 1
+    assert actual['blocks'][0]['type'] == 'image'
+    assert actual['blocks'][0]['text'] == 'Corrected caption'
+    assert actual['blocks'][0]['image'] == blocks[0]['image']
+    assert actual['blocks'][0]['source_refs'] == blocks[0]['source_refs']
+    assert actual['blocks'][1]['table'] == dict(blocks[1]['table'], rows=[['Header',''],['Corrected cell','Unchanged']])
+    assert actual['blocks'][1]['text'] == blocks[1]['text']
+    assert actual['blocks'][1]['source_refs'] == blocks[1]['source_refs']
+    assert original.read_bytes() == raw_before and attachment.read_bytes() == attachment_before
+    assert actual.get('confirmation') is None

@@ -205,6 +205,42 @@ class HTTPBoundaryTests(unittest.TestCase):
         self.assertEqual(self.request(info['url'])[0],400)
         self.assertEqual(self.request(info['url']+'?path=/etc/passwd')[0],404)
 
+    def test_registered_html_preview_calls_only_full_document_reader_with_bound_hash(self):
+        original = self.root / 'source.htm'
+        original.write_bytes(b'<h1>Saved original</h1>')
+        fingerprint = hashlib.sha256(original.read_bytes()).hexdigest()
+        calls = []
+        def artifact(command, **kwargs):
+            self.assertEqual((command, kwargs), ('artifact', {'source_id': 'FX001'}))
+            return {'path': str(original), 'hash': fingerprint}
+        def reader(command, **kwargs):
+            calls.append((command, kwargs))
+            return {'kind': 'html', 'html': '<html><body><h1>Saved original</h1></body></html>', 'source_sha256': fingerprint}
+        self.app.adapter = SimpleNamespace(call=artifact)
+        self.app.system2 = SimpleNamespace(call=reader)
+        status, result, _ = self.request('/api/preview/FX001?expected_hash='+fingerprint+'&path=/untrusted/path')
+        self.assertEqual(status, 200)
+        self.assertEqual(result['kind'], 'html')
+        self.assertIn('Simplified HTML', result['label'])
+        self.assertEqual(calls, [('material_source-html', {'path': str(original), 'expected_hash': fingerprint})])
+        client = http.client.HTTPConnection('127.0.0.1', self.server.server_port)
+        client.request('GET', '/api/preview/FX001?view=html&expected_hash='+fingerprint)
+        response = client.getresponse()
+        self.assertEqual(response.status, 200)
+        self.assertEqual(response.getheader('Content-Type'), 'text/html; charset=utf-8')
+        policy = response.getheader('Content-Security-Policy')
+        for directive in ("default-src 'none'", "script-src 'none'", "style-src 'unsafe-inline'", "form-action 'none'", "frame-ancestors 'self'", 'sandbox'):
+            self.assertIn(directive, policy)
+        self.assertIn(b'<h1>Saved original</h1>', response.read())
+        client.close()
+        original.write_bytes(b'<h1>Changed</h1>')
+        status, result, _ = self.request('/api/preview/FX001?expected_hash='+fingerprint)
+        self.assertEqual(status, 400)
+        self.assertIn('version changed', result['error'])
+        self.assertEqual(len(calls), 2)
+        self.assertEqual(self.request('/api/preview/FX001?view=html&expected_hash='+fingerprint)[0], 400)
+        self.assertEqual(len(calls), 2)
+
 
 class PDFEvidenceTests(unittest.TestCase):
     def test_range_boundaries(self):

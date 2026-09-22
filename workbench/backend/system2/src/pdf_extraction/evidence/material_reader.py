@@ -15,10 +15,11 @@ import json
 import os
 import tempfile
 import math
+from urllib.parse import unquote
 
 from .review_preview import sanitized_region
 
-VERSION = 'material-reader/12'
+VERSION = 'material-reader/13'
 PDF_RENDER_LIMITS = dict(max_dimension=4096, max_pixels=12_000_000,
                          max_requested_width=32768, width_step=64)
 MAX_BYTES = 128 * 1024 * 1024
@@ -223,12 +224,21 @@ def _html(raw):
     from lxml import html, etree
     soup = BeautifulSoup(raw, 'lxml')
     anchors = []
+    source_ids, local_links = {}, {}
     original_paths = {id(el): dom_path(el) for el in soup.find_all(True)}
     document_information = _document_information(soup, original_paths)
     navigation_anchors, default_anchor = _html_navigation(soup, original_paths)
     for element in soup.find_all(True):
         locator = original_paths[id(element)]
         anchor = html_anchor(locator)
+        if element.get('id'):
+            source_ids.setdefault(element['id'], []).append(anchor)
+        href = element.get('href', '')
+        if element.name == 'a' and href.startswith('#') and len(href) > 1:
+            try:
+                local_links[anchor] = unquote(href[1:], errors='strict')
+            except UnicodeDecodeError:
+                pass
         element['data-original-anchor'] = anchor
         if element.name == 'form':
             element.name = 'div'  # Retain readable source text while removing form behavior.
@@ -262,7 +272,15 @@ def _html(raw):
                     element.drop_tag()
             continue
         anchor = element.get('data-original-anchor')
-        safe = {k: v for k, v in element.attrib.items() if k in {'rowspan', 'colspan', 'scope', 'alt', 'title', 'start', 'value', 'src'}}
+        safe = {k: v for k, v in element.attrib.items() if k in {'rowspan', 'colspan', 'scope', 'alt', 'title', 'src'}}
+        number = 'start' if tag == 'ol' else 'value' if tag == 'li' else None
+        if number and re.fullmatch(r'\s*[+-]?[0-9]+\s*', element.get(number, '')):
+            safe[number] = element.get(number)
+        if tag == 'ol':
+            if element.get('type') in {'1', 'a', 'A', 'i', 'I'}:
+                safe['type'] = element.get('type')
+            if 'reversed' in element.attrib:
+                safe['reversed'] = 'reversed'
         if 'src' in safe and not re.fullmatch(r'data:image/(?:png|jpeg|gif|webp);base64,[A-Za-z0-9+/=\s]+', safe['src'], re.I):
             del safe['src']
         element.attrib.clear()
@@ -280,11 +298,15 @@ def _html(raw):
     # Only offer targets that survived sanitization. Full source anchor lookup is
     # retained below for compatibility; the outline is not a completeness claim.
     rendered_ids = {element.get('id') for element in body.iter()}
+    for link in body.iter('a'):
+        targets = source_ids.get(local_links.get(link.get('id')), [])
+        if len(targets) == 1 and targets[0] in rendered_ids:
+            link.set('href', '#' + targets[0])
     navigation_anchors = [item for item in navigation_anchors if item['id'] in rendered_ids]
     if default_anchor not in rendered_ids:
         default_anchor = 'original-document'
     csp = "default-src 'none'; img-src data:; style-src 'unsafe-inline'; script-src 'none'; connect-src 'none'; form-action 'none'; base-uri 'none'"
-    trusted_style = 'body{font:16px/1.6 system-ui,sans-serif;color:#1e293b;padding:20px;overflow-wrap:anywhere}table{border-collapse:collapse;max-width:100%}td,th{border:1px solid #9ca3af;padding:7px;vertical-align:top}img{max-width:100%}pre{white-space:pre-wrap}:target{outline:3px solid #3977bd;scroll-margin-top:12px}'
+    trusted_style = 'body{font:16px/1.6 system-ui,sans-serif;color:#1e293b;padding:20px;overflow-wrap:break-word}table{border-collapse:collapse;max-width:100%}td,th{border:1px solid #9ca3af;padding:7px;vertical-align:top}img{max-width:100%}pre{white-space:pre-wrap}:target{outline:3px solid #3977bd;scroll-margin-top:12px}'
     output = '<!doctype html><html><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="' + csp + '"><style>' + trusted_style + '</style></head>' + html.tostring(body, encoding='unicode') + '</html>'
     warnings.append('Isolated complete saved markup with selectable text. Source scripts, styles and external assets are disabled; all static disclosure content is opened. This reading view does not claim native website styling fidelity.')
     return {'html': output, 'anchors': anchors, 'navigation_anchors': navigation_anchors,
@@ -348,6 +370,15 @@ def _pdf(raw, page, render_width=None):
             'text_layer': 'native_unverified' if native_text.strip() else 'unavailable',
             'label': 'Bound original PDF page ' + str(page),
             'page_warning': 'Native text assistance is selectable but not independently verified against visible marks.' if native_text.strip() else 'No native text is available on this page. Use the page image and manually transcribe or supplement missing content. No OCR has run.'}
+
+
+def read_html_original(path, expected_hash):
+    """Read a registered HTML original without creating a material or disk cache."""
+    if Path(path).suffix.lower() not in {'.html', '.htm'}:
+        raise ValueError('original_html_required')
+    raw = _bytes(path, expected_hash)
+    return {'kind': 'html', 'schema_version': VERSION,
+            'source_sha256': expected_hash, **_html(raw)}
 
 
 def read_material(path, expected_hash, *, sheet=None, row=1, column=1, row_count=80, column_count=24, page=1, render_width=None):

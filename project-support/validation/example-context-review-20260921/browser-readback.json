@@ -1,0 +1,15 @@
+{
+  "source": "PE002",
+  "title": "Example：Forskrift om bekjempelse av lakselus i akvakulturanlegg",
+  "personal_revision": 3,
+  "state": "Saved",
+  "requirement_entries": 35,
+  "selected_entry": "R9",
+  "source_subject": "Sjøtemperaturen",
+  "scope": "Norwegian seawater aquaculture facilities with salmonids, under § 2; exclude slaughter cages at slaughterhouses except where § 5 or the final paragraph of § 9 expressly applies.",
+  "material_human_declarations": [
+    false,
+    false
+  ],
+  "saved_interpretation_visible": true
+}

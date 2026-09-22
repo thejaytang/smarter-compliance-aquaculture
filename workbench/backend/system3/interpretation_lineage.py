@@ -127,4 +127,8 @@ def read(db, actor, uid, revision):
         result['fields'].append(dict(key=field,value=value,basis=basis,references=refs))
     result['rules']=[dict(id=r[0],group=r[1],parent_id=r[2],field_key=r[3],rule=json.loads(r[4])) for r in db.execute(
         'SELECT node_id,group_key,parent_id,field_key,body FROM interpretation_rule_nodes WHERE actor=? AND unit_id=? AND revision=?',key)]
+    saved=db.execute('SELECT body FROM interpretation_history WHERE actor=? AND unit_id=? AND revision=?',key).fetchone()
+    if saved:
+        doc=json.loads(saved[0]);result['concepts']=doc.get('check_design',{}).get('concepts',[])
+        result['context_manifest']=doc.get('context_manifest',[])
     result['status']='saved';result['text_kind']='saved-extracted-passage';return result

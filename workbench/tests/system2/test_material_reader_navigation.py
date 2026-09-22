@@ -113,3 +113,111 @@ def test_journal_title_and_head_only_document_title(tmp_path):
     head=read_snapshot(tmp_path,b'<html><head><title>Aquaculture guidance</title></head><body><p>Guidance</p></body></html>')
     assert head['document_information']['title']['value']=='Aquaculture guidance'
     assert head['document_information']['title']['anchor'] is None
+
+
+def test_registered_html_reader_uses_full_sanitizer_without_store_or_cache(tmp_path, monkeypatch, capsys):
+    import io
+    import json
+    from pdf_extraction.orchestration import material_service
+    raw = b'''<html><head><script>window.SCRIPT_RAN=true</script><style>body{display:none}</style>
+    <link href="https://external.invalid/style"><base href="https://external.invalid/"></head><body>
+    <h1>Fixture scope</h1><ul><li>All facilities</li></ul><table><tr><td>3 metres</td></tr></table>
+    <form action="https://external.invalid/submit"><p>Readable form text</p><input><button>Submit</button></form>
+    <img src="https://external.invalid/pixel" onerror="UNSAFE()" alt="source image">
+    <iframe src="https://external.invalid/frame"></iframe><svg onload="UNSAFE()"></svg>
+    <a href="javascript:UNSAFE()">Readable link</a></body></html>'''
+    path = tmp_path / 'original.htm'
+    path.write_bytes(raw)
+    expected = sha256(raw).hexdigest()
+    def forbidden(*args, **kwargs):
+        raise AssertionError('Preview must not initialize MaterialService or business stores')
+    monkeypatch.setattr(material_service, 'MaterialService', forbidden)
+    monkeypatch.setattr(material_service.sys, 'stdin', io.StringIO(json.dumps({
+        'command': 'material_source-html', 'path': str(path), 'expected_hash': expected})))
+    assert material_service.main() == 0
+    envelope = json.loads(capsys.readouterr().out)
+    assert envelope['ok'] is True
+    result = envelope['data']
+    assert result['kind'] == 'html' and result['source_sha256'] == expected
+    rendered = html.document_fromstring(result['html'])
+    assert rendered.xpath('//h1')[0].text == 'Fixture scope'
+    assert rendered.xpath('//li')[0].text == 'All facilities'
+    assert rendered.xpath('//td')[0].text == '3 metres'
+    assert 'Readable form text' in rendered.text_content() and 'Readable link' in rendered.text_content()
+    assert not rendered.xpath('//script | //form | //iframe | //svg | //input | //button | //base | //link | //@href | //@onerror')
+    assert 'external.invalid' not in result['html'] and 'SCRIPT_RAN' not in result['html']
+    assert "default-src 'none'" in result['html'] and "form-action 'none'" in result['html']
+    assert list(tmp_path.iterdir()) == [path] and path.read_bytes() == raw
+    path.write_bytes(b'<h1>Changed</h1>')
+    monkeypatch.setattr(material_service.sys, 'stdin', io.StringIO(json.dumps({
+        'command': 'material_source-html', 'path': str(path), 'expected_hash': expected})))
+    assert material_service.main() == 1
+    assert json.loads(capsys.readouterr().out)['error'] == 'original_version_changed'
+
+
+def test_registered_html_crosses_owning_adapter_without_creating_runtime(tmp_path):
+    from pathlib import Path
+    from local_workbench.adapter import System2
+    original = tmp_path / 'registered.html'
+    original.write_bytes(b'<h1>Registered fixture</h1><p>Original source.</p>')
+    fingerprint = sha256(original.read_bytes()).hexdigest()
+    component = Path(__file__).resolve().parents[2] / 'backend/system2'
+    adapter = System2(component, tmp_path / 'unused-system1', runtime=tmp_path / 'untouched-runtime')
+    result = adapter.call('material_source-html', path=str(original), expected_hash=fingerprint)
+    assert result['kind'] == 'html' and result['source_sha256'] == fingerprint
+    assert 'Registered fixture' in result['html']
+    assert not (tmp_path / 'untouched-runtime').exists()
+    assert not (tmp_path / '.reader-cache').exists()
+    assert sha256(original.read_bytes()).hexdigest() == fingerprint
+
+
+def test_local_references_only_reach_unique_surviving_original_targets(tmp_path):
+    raw = '''<html><head><meta charset="utf-8"></head><body>
+    <p id="reference"><a href="#note" onclick="UNSAFE()">Footnote</a></p>
+    <p id="note">Exact note <a href="#reference">Return</a></p>
+    <p id="blå">Unicode note</p><a href="#bl%C3%A5">Unicode reference</a>
+    <p id="duplicate">First</p><p id="duplicate">Second</p>
+    <script id="removed">UNSAFE()</script><form id="form"><p>Retained form text</p></form>
+    <a href="#duplicate">Ambiguous</a><a href="#missing">Missing</a>
+    <a href="#removed">Removed</a><a href="#%FF">Invalid encoding</a>
+    <a href="https://example.invalid/#note">External</a>
+    <a href="file:///tmp/original.html#note">File</a>
+    <a href="javascript:UNSAFE()">Script</a><a href="//example.invalid/#note">Protocol relative</a>
+    <a href="#form">Readable transformed target</a></body></html>'''.encode()
+    result = read_snapshot(tmp_path, raw)
+    original = BeautifulSoup(raw, 'lxml')
+    rendered = html.document_fromstring(result['html'])
+    expected = {'Footnote': 'note', 'Return': 'reference',
+                'Unicode reference': 'blå', 'Readable transformed target': 'form'}
+    links = {link.text_content(): link for link in rendered.xpath('//a')}
+    for label, source_id in expected.items():
+        target = html_anchor(dom_path(original.find(id=source_id)))
+        assert links[label].get('href') == '#' + target
+        assert rendered.get_element_by_id(target) is not None
+    assert all(link.get('href') is None for label, link in links.items() if label not in expected)
+    assert not rendered.xpath('//script | //form | //@onclick | //@target | //@download')
+    assert 'example.invalid' not in result['html'] and 'file:' not in result['html']
+    assert "script-src 'none'" in result['html'] and "base-uri 'none'" in result['html']
+    assert result == read_material(tmp_path / 'original.html', sha256(raw).hexdigest())
+
+
+def test_ordered_list_numbering_retains_only_applicable_declarative_attributes(tmp_path):
+    raw = b'''<main><ol type="a" start="4" reversed><li>Fourth</li><li value="2">Second</li></ol>
+    <ol type="I" start="9"><li>Ninth</li></ol><ol type="A"><li>Upper letter</li></ol>
+    <ol type="i" reversed="false"><li>Lower roman</li></ol><ol type="1" start="-2"><li>Negative</li></ol>
+    <ol type="url(javascript:bad)" start="1px" style="display:none"><li value="2.5">Invalid</li></ol>
+    <ul type="a" start="5" reversed><li type="I" start="9" reversed value="+7">Unordered</li></ul>
+    <p start="3" value="4" type="a" reversed>Paragraph</p></main>'''
+    result = read_snapshot(tmp_path, raw)
+    rendered = html.document_fromstring(result['html'])
+    lists = rendered.xpath('//ol')
+    assert [node.get('type') for node in lists] == ['a', 'I', 'A', 'i', '1', None]
+    assert [node.get('start') for node in lists] == ['4', '9', None, None, '-2', None]
+    assert [node.get('reversed') is not None for node in lists] == [True, False, False, True, False, False]
+    assert lists[0][1].get('value') == '2' and lists[5][0].get('value') is None
+    assert rendered.xpath('//ul/li')[0].get('value') == '+7'
+    for node in rendered.xpath('//ul | //ul/li | //p'):
+        assert not any(name in node.attrib for name in ('type', 'start', 'reversed'))
+    assert 'value' not in rendered.xpath('//p')[0].attrib
+    assert not rendered.xpath('//*[@style or @onclick]')
+    assert 'url(javascript:bad)' not in result['html']

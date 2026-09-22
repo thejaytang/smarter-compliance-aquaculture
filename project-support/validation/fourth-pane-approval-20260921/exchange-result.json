@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "revision": 4,
+  "individual_approvals": 3,
+  "reviewed": true,
+  "history_revisions": 4,
+  "shared_reviewer_readback": true,
+  "package_import_reexport_restart": true,
+  "old_candidate_retirement_preserved": true,
+  "receiver_rebound_requirement_revision": 2,
+  "receiver_requires_renewed_source_review": true
+}

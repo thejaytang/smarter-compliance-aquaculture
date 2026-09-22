@@ -1,0 +1,60 @@
+# Reviewable draft only. Not installed under .github/workflows or executed.
+name: Manual Windows compatibility check
+on:
+  workflow_dispatch:
+    inputs:
+      revision:
+        description: Exact development commit to verify (40-character SHA)
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-2022
+    timeout-minutes: 45
+    env:
+      PYTHONUTF8: '1'
+      HF_HUB_OFFLINE: '1'
+      TRANSFORMERS_OFFLINE: '1'
+      TARGET_REVISION: ${{ inputs.revision }}
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check out exact public revision into a short path
+        shell: pwsh
+        run: |
+          if ($env:TARGET_REVISION -notmatch '^[0-9a-f]{40}$') { throw 'A full commit SHA is required.' }
+          git -c core.longpaths=true clone --no-checkout https://github.com/thejaytang/smarter-compliance-aquaculture.git C:\sc
+          if ($LASTEXITCODE -ne 0) { throw 'Clone failed.' }
+          git -C C:\sc config core.longpaths true
+          git -C C:\sc checkout --detach $env:TARGET_REVISION
+          if ($LASTEXITCODE -ne 0) { throw 'Exact revision checkout failed.' }
+      - name: Install declared component environments
+        shell: pwsh
+        working-directory: C:\sc
+        run: |
+          python -m venv workbench/runtime/cache/bootstrap
+          if ($LASTEXITCODE -ne 0) { throw 'Bootstrap environment failed.' }
+          workbench/runtime/cache/bootstrap/Scripts/python.exe -m pip install uv
+          if ($LASTEXITCODE -ne 0) { throw 'Dependency manager setup failed.' }
+          $env:PATH = "C:\sc\workbench\runtime\cache\bootstrap\Scripts;$env:PATH"
+          python deployment.py install
+          if ($LASTEXITCODE -ne 0) { throw 'Declared environment install failed.' }
+          $env:UV_CACHE_DIR = 'C:\sc\workbench\runtime\cache\uv'
+          uv sync --project workbench/backend/system2 --locked --no-editable --inexact --extra dev
+          if ($LASTEXITCODE -ne 0) { throw 'Declared test dependencies failed.' }
+      - name: Native suites and synthetic two-peer handoff
+        shell: pwsh
+        working-directory: C:\sc
+        run: |
+          python -c "import os,sys; assert os.name == 'nt' and sys.platform == 'win32'; print(sys.version)"
+          if ($LASTEXITCODE -ne 0) { throw 'This is not a native Windows runtime.' }
+          python deployment.py check
+          if ($LASTEXITCODE -ne 0) { throw 'Environment check failed.' }
+          workbench/.venv/Scripts/python.exe workbench/tests/run_checks.py all
+          if ($LASTEXITCODE -ne 0) { throw 'Windows compatibility checks failed.' }

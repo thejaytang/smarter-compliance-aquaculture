@@ -1,26 +1,36 @@
-# Workbench training example
+# Full-law Workbench example
 
-Open [example.html](example.html) in a browser. It contains three English excerpts: sea lice, operational journal records, and § 5 on internal control. These are working translations for training, not official English legal texts. The sea-lice text includes the previously supplied temperature measurement, counting branches, broodstock exemption and Annex 1 reference. The operational journal excerpt is unchanged. All eight duties and the documentation requirements from the supplied § 5 are included.
+[example.html](example.html) is a complete Norwegian HTML copy of **Forskrift om bekjempelse av lakselus i akvakulturanlegg**, FOR-2012-12-05-1140, including §§ 1–16, Annex 1, document metadata and amendment notes. The original document language and bytes are preserved. It is not an anonymised or abridged fixture.
 
-## Use in an existing Workbench
+The source already exists as **PA015-001**, “Regulation on control of salmon lice in aquaculture facilities”, from [Lovdata](https://lovdata.no/dokument/SF/forskrift/2012-12-05-1140). The saved consolidation identifies the last amendment as FOR-2023-12-14-2087. SHA-256: `9334a78a021971411e5c8826a2bb16aab1db707d778f6249c9a36b0afc90a4a1`.
 
-Pulling application updates downloads this file; it does not replace local sources, databases or annotations. The initial-data archive is unchanged. Do not restore that archive over an existing workspace.
+## Permanent Example
 
-1. Save any browser edits. In **Sources**, open **example (PE001)** in the source register and choose **Request review**. Enter that you are updating the training example, then choose **Create pending review**.
-2. Open its pending source-review task and choose **Supply authorised original**. Select `workbench/resources/examples/example.html` (on Windows, `workbench\resources\examples\example.html`).
-3. Check the file, confirm its identity and permission, explain that this is the three-excerpt training update, and choose **Confirm and apply**.
-4. Return to **Materials** and open **example** from the list to use the current source version. Older saved work remains bound to its previous source version; it is not silently transferred.
+On 2026-09-21 the user requested a permanent, separate copy in the library. This workspace registers it as **PE002-001**, titled **Example：Forskrift om bekjempelse av lakselus i akvakulturanlegg**, linked to primary source **PA015**. The Example prefix is register metadata; the retained original itself is unchanged. Do not treat this saved library entry or its annotations as disposable test data. PA015 remains unchanged.
 
-Use the named reviewer authorised to apply source updates on your installation. Colleagues can also exchange the updated source through the existing Collaboration review process. Do not copy SQLite files between installations.
+The local copy has model-prepared extracted content for the complete legal body, 21 active source-bound Requirement entries and 21 matching fourth-pane interpretations. Purpose, applicability, definitions, authority powers and legal effects remain source context rather than independent Requirements. R1 starts with the coordinated-plan duty in § 4; R4 covers temperature measurement; R5 combines counting with its broodstock and slaughter-out exemptions. The dated spring-2013 transition duty remains explicitly historical. Twenty retained entries keep their original identities and annotations; the combined counting entry has a new identity, while its two predecessors and thirteen context-only entries remain recoverable in Removed entries with all prior interpretation/history records preserved. Original Norwegian wording stays in panes two/three; fourth-pane interpretation is English. Human review remains pending, including the explicit source-reference gaps. No Site Model mapping or compliance execution is claimed. The older PE001 excerpts and history remain retained, with PE001 excluded from active source selection.
 
-This file matches local demonstration snapshot PE001-004 from 2026-09-18. SHA-256: `307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475`. A receiving installation allocates its own next source-version identifier.
+## Fresh installation
 
-The repository fixes this HTML file to LF line endings on Windows and macOS so that Git checkout preserves the documented checksum, including when `core.autocrlf` is enabled. This rule does not rewrite existing registered originals or saved material versions.
+[example-seed-20260922.zip](example-seed-20260922.zip) initializes the four business stores with **only PE002** and its saved work. Its SHA-256 is `ddae83dde9a29f456fee1de78d270896d7e1304d3637ab961dfd4d4f4df688c2`; [checksum file](example-seed-20260922.zip.sha256).
 
-## Saved annotation work, 2026-09-18
+After installing dependencies, run from the repository root:
 
-[example-work-20260918.zip](example-work-20260918.zip) is a scoped Collaboration package captured at **2026-09-18 08:54:14 UTC**. It includes only PE001 example source/review records, its current and preceding retained HTML, material revision **12** with **27 blocks**, and **3 saved Requirements** with **7 historical saved versions** in total. Requirement UUIDs, source spans, Groups, constraints, links, editor attribution and saved completion states are preserved. Two Requirements remain in progress. There were **no saved fourth-pane interpretations** at capture time. No unsaved browser edits are included.
+```sh
+python3.12 deployment.py restore-initial --archive workbench/resources/examples/example-seed-20260922.zip --sha256 ddae83dde9a29f456fee1de78d270896d7e1304d3637ab961dfd4d4f4df688c2
+python3.12 deployment.py verify
+```
 
-After pulling main, open **Collaboration**, import this ZIP, inspect the preview and explicitly apply it. Resolve any local/incoming conflicts before applying; existing unrelated work is retained. Reopen **Materials → example** from the material list afterwards. Use this package to bring in the saved annotation work; uploading `example.html` alone only updates the source. Do not unpack it over workspace files or restore the initial-data archive.
+On Windows use `py -3.12` instead of `python3.12`. Initial restoration refuses a workspace with existing business data. It does not enable schedules, configure model credentials or approve the prepared annotations.
 
-The application accepts this package through its existing logical snapshot import. It contains no raw databases, credentials, runtime configuration or unrelated materials. The accompanying `.sha256` file verifies the ZIP. This is a saved work-in-progress snapshot, not a completed legal review or compliance finding.
+## Existing installation
+
+Use [example-work-20260922.zip](example-work-20260922.zip), SHA-256 `2843373219fd04457b59445496ceb01caeac6623b343cedb7515f34e983c7c86`; [checksum file](example-work-20260922.zip.sha256). Open **Collaboration**, import the ZIP, inspect the preview and explicitly apply it. Resolve any local/incoming conflict before applying. Existing unrelated sources and saved work are retained.
+
+The package preserves PE002's source/version identities, material revision 3, all 85 legal-body blocks, 21 active Requirements and 21 matching interpretations. Removed entries and their saved histories remain recoverable. Purpose, applicability and definitions remain context. Prepared interpretations still require individual human approval; no completed compliance finding is included.
+
+The package includes only PE002 source/review records, its material and its source-bound Requirement/interpretation history. Original source bytes, source spans, Group structure, quantities, author/time and saved bindings are preserved. It contains no credentials, runtime configuration or unrelated business records.
+
+After applying, reopen **Materials → Example：Forskrift om bekjempelse av lakselus i akvakulturanlegg**. An application update alone does not import annotations. Uploading `example.html` alone supplies the original document, not its saved work. Do not unpack a package over workspace files or restore the seed over an existing installation.
+
+The earlier 2026-09-18 PE001 excerpt package is retained only on the development branch and in history. It is not the current Example and is not included in the product checkout. Updating the product does not delete local historical PE001 work.

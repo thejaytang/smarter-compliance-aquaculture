@@ -1,6 +1,6 @@
 import unittest
 from copy import deepcopy
-from backend.system3.check_design import empty_design,validate_design,querybuilder_projection
+from backend.system3.check_design import empty_design,validate_design,querybuilder_projection,set_handoff,FIELD_KEYS
 
 class CheckDesignTests(unittest.TestCase):
  def design(self):
@@ -27,3 +27,31 @@ class CheckDesignTests(unittest.TestCase):
   with self.assertRaises(ValueError):validate_design(d)
  def test_unmapped_groups_are_not_true_filters(self):
   self.assertEqual(querybuilder_projection(None),{'scope':None,'condition':None,'demand':None})
+ def test_set_handoff_preserves_unmapped_semantics_and_requires_current_confirmation(self):
+  d=empty_design(2);d.update(object_type='Component',identity_field='component.id',assessment_context='The same storm event and assessment period')
+  fields={k:dict(value=k,basis='interpretation',references=[],gaps=[]) for k in FIELD_KEYS}
+  catalog=dict(revision=1,fields=[dict(field='component.id',type='string',operators=['equal'])])
+  for key in d['groups']:
+   d['groups'][key]=dict(id=key,condition='AND',rules=[dict(id=key+'r',field='component.id',type='string',operator='equal',value='s1',interpretation_field=key)])
+  def confirm():d['based_on']=dict(fields={k:f['value'] for k,f in fields.items()},context_fingerprint='fp',catalog_revision=1,design=deepcopy({k:v for k,v in d.items() if k!='based_on'}))
+  confirm();h=set_handoff(fields,d,'fp',catalog)
+  self.assertEqual(h['mapping_status'],'ready_for_consumer_validation');self.assertFalse(h['executable'])
+  self.assertEqual(h['sets']['B']['input'],'A');self.assertEqual(h['composition'],dict(operator='subset_of',left='B',right='C'))
+  self.assertEqual(set_handoff(fields,d,'new context',catalog)['mapping_status'],'incomplete')
+  self.assertEqual(set_handoff(fields,d,'fp',dict(catalog,revision=2))['mapping_status'],'incomplete')
+  fields['scope']['value']='Changed scope';self.assertEqual(set_handoff(fields,d,'fp',catalog)['mapping_status'],'incomplete');confirm()
+  d['groups']['scope']['rules'][0]['value']='s2';self.assertEqual(set_handoff(fields,d,'fp',catalog)['mapping_status'],'incomplete')
+  d['groups']['demand']['condition']='OR';d['groups']['demand']['rules'].append(dict(id='predicate',expression='Integrity check or replacement for the same component after the event',interpretation_field='demand'))
+  confirm();h=set_handoff(fields,d,'fp',catalog);self.assertIsNone(h['querybuilder']['demand']);self.assertIn('Integrity check',h['sets']['C']['rules']['rules'][1]['expression'])
+  d['groups']['scope']['not']=True;self.assertIsNone(querybuilder_projection(d)['scope'])
+ def test_concept_identity_references_and_semantic_handoff(self):
+  d=empty_design(2);d['concepts']=[dict(id='anchor',label='Anchor line',kind='concept',status='proposed',references=[dict(id='b',quote='anchoring line')])]
+  d['groups']['scope']=dict(id='g',condition='AND',rules=[dict(id='r',expression='partOf some Anchor Line',interpretation_field='scope',concept_ids=['anchor'])])
+  self.assertEqual(validate_design(d,[dict(id='b',text='part of the anchoring line')]),d)
+  with self.assertRaisesRegex(ValueError,'quotation'):validate_design(d,[dict(id='b',text='different source')])
+  for ids in (['missing'],['anchor','anchor'],[{}]):
+   bad=deepcopy(d);bad['groups']['scope']['rules'][0]['concept_ids']=ids
+   with self.assertRaises(ValueError):validate_design(bad)
+  f={k:dict(value='Previous explanation',basis='interpretation',references=[],gaps=[]) for k in FIELD_KEYS}
+  handoff=set_handoff(f,d,'fp',{'fields':[]});self.assertEqual(handoff['sets']['A']['definition'],'(partOf some Anchor Line)')
+  self.assertEqual(f['scope']['value'],'Previous explanation');self.assertEqual(handoff['concepts'],d['concepts']);self.assertIsNone(handoff['querybuilder']['scope'])

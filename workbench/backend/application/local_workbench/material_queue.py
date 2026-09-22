@@ -77,12 +77,17 @@ class MaterialQueue:
             # Mutation/confirmation routes still resolve fresh owning evidence.
             snapshot = self.c.app.snapshot()
             issue_sources = {t.get('source_id') for t in snapshot.get('tasks', []) if t.get('human_issue')}
+            excluded_sources = {s['source_id'] for s in snapshot.get('sources', [])
+                if (s.get('effective_selection') or s.get('selection_status')) == 'EXCLUDE'}
         except (OSError, ValueError, RuntimeError):
             issue_sources = set()
+            excluded_sources = set()
         rows = []
         current_ids = {m['id'] for m in current}
         live_sources = {m['source']['source_id'] for m in current if not m.get('source_stale')}
         for master in current:
+            if bucket == 'pending' and master['source']['source_id'] in excluded_sources:
+                continue  # Retain saved versions; exclusion removes only active review work.
             if bucket == 'pending' and (master.get('newer_material_id') in current_ids or
                     (master.get('source_stale') and master['source']['source_id'] in live_sources)):
                 continue  # Superseded originals remain accessible through related versions.

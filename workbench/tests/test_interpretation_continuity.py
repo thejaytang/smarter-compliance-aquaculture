@@ -31,7 +31,9 @@ class ContinuityTests(unittest.TestCase):
  def test_not_stated_review_does_not_create_unconditional_condition(self):
   fields=self.fields()
   for f in fields.values():f.update(state='not_stated',absence_reason='Not explicit in this reviewed passage.')
-  req=self.request();req.update(fields=fields,action='review')
+  req=self.request();req.update(fields=fields,approve_cards={k:None for k in ('scope','condition','demand')})
+  self.s.save(A,req)
+  req.update(request_id=str(uuid.uuid4()),expected_revision=1,approve_cards={},action='review')
   self.s.save(A,req);saved=self.s.read(A,self.uid)
   self.assertTrue(saved['reviewed']);self.assertEqual(len(saved['logic']['gaps']),6)
   self.assertIn('Not explicitly stated',saved['logic']['steps'][1]['description'])
@@ -94,6 +96,24 @@ class ContinuityTests(unittest.TestCase):
   with self.assertRaises(ValueError):delivery.validate(bad)
   bad=deepcopy(payload);d=bad['sessions'][0]['document'];d['units'][self.uid]['exceptions']=[1,str(uuid.uuid4())];bad['sessions'][0]['steps'][-1]['document']=deepcopy(d)
   with self.assertRaises(ValueError):delivery.validate(bad)
+ def test_mixed_set_versions_round_trip_restore_and_tampered_handoff(self):
+  self.s.save(A,self.request())
+  req=self.request();req.update(expected_revision=1,check_design=empty_design(2))
+  req['fields']['scope'].update(value='Components installed as part of an anchoring line',basis='interpretation')
+  req['check_design']['groups']['scope']=dict(id='scope',condition='AND',rules=[dict(id='partof',expression='partOf some Anchor Line',interpretation_field='scope')])
+  self.s.save(A,req);saved=self.s.read(A,self.uid)
+  self.assertEqual(saved['logic']['handoff']['sets']['A']['definition'],req['fields']['scope']['value'])
+  self.assertEqual(next(r for r in self.s.trace(A,self.uid)['rules'] if r['id']=='partof')['field_key'],'scope')
+  delivery=Delivery(self.c);payload=list(delivery.capture())[0]['value'];delivery.validate(payload)
+  incoming=Delivery(self.other());incoming.apply(payload,str(uuid.uuid4()));incoming.validate(list(incoming.capture())[0]['value'])
+  received=Interpretations(incoming.c).read(A,self.uid)
+  self.assertEqual(received['logic'],saved['logic']);self.assertEqual([x['revision'] for x in received['history']],[2,1])
+  bad=deepcopy(payload);bad['interpretations'][0]['history'][-1]['document']['logic']['handoff']['composition']['operator']='union'
+  with self.assertRaises(ValueError):delivery.validate(bad)
+  self.s.save(A,dict(req,request_id=str(uuid.uuid4()),expected_revision=2,action='restore',history_revision=1))
+  self.assertEqual(self.s.read(A,self.uid)['logic']['version'],1)
+  self.s.save(A,dict(req,request_id=str(uuid.uuid4()),expected_revision=3,action='restore',history_revision=2))
+  self.assertEqual(self.s.read(A,self.uid)['logic']['handoff'],saved['logic']['handoff'])
  def test_divergent_versions_retain_both_histories_and_require_choice(self):
   delivery=Delivery(self.c);payload=list(delivery.capture())[0]['value'];peer=self.other();other=Delivery(peer);other.apply(payload,str(uuid.uuid4()))
   self.step('assign',field='Subject',start=0,end=48)
@@ -144,3 +164,30 @@ class ContinuityTests(unittest.TestCase):
   received=Interpretations(peer.c).read(A,self.uid)
   self.assertEqual(received['logic']['source_structure'],saved['logic']['source_structure'])
   self.assertEqual(received['querybuilder']['condition'],None)
+
+ def test_concepts_save_trace_replay_export_restore_and_reject_forged_citation(self):
+  self.s.save(A,self.request())
+  req=self.request();req.update(expected_revision=1,check_design=empty_design(2))
+  design=req['check_design'];design['concepts']=[dict(id='storm',label='Storm',kind='event',status='proposed',references=[dict(id=self.material['id']+':b',quote='storm')])]
+  design['groups']['condition']=dict(id='c',condition='AND',rules=[dict(id='event',expression='after a storm affecting this component',interpretation_field='condition',concept_ids=['storm'])])
+  self.s.save(A,req);self.s.save(A,req)
+  saved=self.s.read(A,self.uid);self.assertEqual(saved['revision'],2);self.assertFalse(saved['reviewed']);self.assertEqual(saved['fields'],req['fields'])
+  self.assertEqual(self.s.trace(A,self.uid)['concepts'],design['concepts']);self.assertEqual(saved['logic']['handoff']['sets']['B']['definition'],'(after a storm affecting this component)')
+  bad=deepcopy(req);bad.update(request_id=str(uuid.uuid4()),expected_revision=2);bad['check_design']['concepts'][0]['references'][0]['quote']='invented deadline'
+  with self.assertRaisesRegex(ValueError,'quotation'):self.s.save(A,bad)
+  delivery=Delivery(self.c);payload=list(delivery.capture())[0]['value'];delivery.validate(payload)
+  incoming=Delivery(self.other());incoming.apply(payload,str(uuid.uuid4()));incoming.validate(list(incoming.capture())[0]['value'])
+  self.assertEqual(Interpretations(incoming.c).read(A,self.uid)['check_design'],design)
+  self.s.save(A,dict(req,request_id=str(uuid.uuid4()),expected_revision=2,action='restore',history_revision=1))
+  self.assertNotIn('concepts',self.s.read(A,self.uid)['check_design'])
+  self.s.save(A,dict(req,request_id=str(uuid.uuid4()),expected_revision=3,action='restore',history_revision=2))
+  self.assertEqual(self.s.read(A,self.uid)['check_design'],design)
+
+ def test_context_change_identifies_rules_citing_only_through_a_concept(self):
+  self.material['blocks'].append(dict(id='context',type='text',text='Storm means the local weather event.',source_refs=[]))
+  req=self.request();req['check_design']=empty_design(2);design=req['check_design']
+  design['concepts']=[dict(id='storm',label='Storm',kind='event',status='confirmed',references=[dict(id=self.material['id']+':context',quote='local weather event')])]
+  design['groups']['condition']=dict(id='c',condition='AND',rules=[dict(id='event',expression='after the storm',interpretation_field='condition',concept_ids=['storm'])])
+  self.s.save(A,req);self.material['blocks'][-1]['text']='The contextual definition changed.'
+  items=self.s.read(A,self.uid)['impact']['items'];item=next(x for x in items if x.get('block_id')=='context')
+  self.assertEqual(item['fields'],['condition']);self.assertEqual(item['rules'],['event'])

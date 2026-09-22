@@ -89,3 +89,44 @@ test('automatic comparison suggestions never claim a recorded human selection',(
  const edited=differenceMarkup({id:'edit',path:'/blocks/b/text',resolution:'edit',current:'A',incoming:'B'});
  assert.match(edited,/Selected: Edited result/);
 });
+
+test('Archive toolbar and confirmation describe content without inventing Requirement status',()=>{
+ const w=workspace(),c=new Collaboration(w);c.state={mode:'coordinator'};w.material.collaboration.view='archive';c.renderToolbar();assert.match(w.q('#mw-collaboration').innerHTML,/Content finalized/);assert.doesNotMatch(w.q('#mw-collaboration').innerHTML,/Requirements unfinished/);
+ let dialog;w.dialog=html=>{dialog=html;};w.material.collaboration.view='master';c.confirmMaster();assert.match(dialog,/Content finalized/);assert.doesNotMatch(dialog,/Requirements unfinished/);assert.match(dialog,/does not complete Requirement structuring/);assert.equal(w.material.revision,2);
+});
+
+test('blank numeric merge edits remain invalid while zero decimal null and untouched values survive',()=>{
+ for(const raw of ['', '   ']){let focused=false;const el={dataset:{valuePath:'["count"]',valueType:'number'},value:raw,focus(){focused=true;}};assert.throws(()=>collectEditedValue({querySelectorAll:()=>[el]},{count:12,keep:'same'}),/valid number/);assert.equal(el.value,raw);assert.equal(focused,true);}
+ for(const raw of ['0','2.75'])assert.equal(collectEditedValue({querySelectorAll:()=>[{dataset:{valuePath:'[]',valueType:'number'},value:raw}]},12),Number(raw));
+ assert.equal(collectEditedValue({querySelectorAll:()=>[{dataset:{valuePath:'[]',valueType:'null'},value:''}]},null),null);
+});
+test('combined result resolves exact source paths and reordered stable block IDs without incoming fallback',async()=>{
+ const {combinedValue}=await import('../frontend/components/collaboration.js');const p={source_review:{fields:{'a/b':'Source edit'}},material:{blocks:[{id:'second',text:'Other'},{id:'a/b',text:'Human edit',table:{cells:[[12]]}}]}};
+ const diff={id:'x',path:'/blocks/a~1b/text',resolution:'edit',base:'base',current:'current',incoming:'submitted'},before=structuredClone(diff);
+ assert.equal(combinedValue(p,diff),'Human edit');assert.equal(combinedValue(p,{path:'/source_review/fields/a~1b'}),'Source edit');assert.equal(combinedValue(p,{path:'/blocks/a~1b/table/cells/0/0'}),12);
+ assert.match(differenceMarkup(diff,{preview:p}),/Edited combined result[\s\S]*Human edit/);assert.deepEqual(diff,before);
+ for(const path of ['/blocks/removed/text','/blocks/0/text','/source_review/missing','/source_review/fields/a~2b'])assert.throws(()=>combinedValue(p,{path}),/unavailable/);
+});
+test('generic merge edit retains corrections on busy changed or rejected previews and closes only on accepted result',async()=>{
+ const w=workspace(),c=new Collaboration(w);c.state={mode:'coordinator'};const diff={id:'d',path:'/blocks/b/text',resolution:'edit',incoming:'Submitted'},merge={merge_id:'m',differences:[diff],material:{blocks:[{id:'b',text:'Edited first'}]}};c.merge=merge;
+ const input={dataset:{valuePath:'[]',valueType:'string'},value:'Edited twice'},nodes=new Map(),dialog={querySelector(s){if(s==='#collab-value-edit')return {querySelectorAll:()=>[input]};if(!nodes.has(s))nodes.set(s,{textContent:'',disabled:false});return nodes.get(s);},close(){this.closed=(this.closed||0)+1;}};
+ w.dialog=(html,bind)=>{assert.match(html,/Edited first/);assert.doesNotMatch(html,/Submitted/);bind(dialog);};c.editDifference('d');const save=dialog.querySelector('#collab-value-save');let calls=0;w.api=async()=>{calls++;throw Error('Rejected');};
+ w.busy=true;await save.onclick();assert.equal(calls,0);assert.equal(dialog.closed,undefined);assert.equal(input.value,'Edited twice');w.busy=false;
+ c.merge={...merge};await save.onclick();assert.equal(calls,0);assert.match(dialog.querySelector('#collab-value-error').textContent,/changed/);c.merge=merge;
+ await save.onclick();assert.equal(calls,1);assert.equal(dialog.closed,undefined);assert.match(dialog.querySelector('#collab-value-error').textContent,/Rejected/);
+ w.api=async(_,body)=>{calls++;assert.equal(body.decisions.d.value,'Edited twice');return {...merge};};c.showPreview=async p=>c.merge=p;await save.onclick();assert.equal(dialog.closed,1);
+});
+test('difference selector distinguishes outstanding decisions and keeps stable choice through preview redraw',async()=>{
+ const w=workspace(),c=new Collaboration(w);c.state={mode:'coordinator'};const differences=['unresolved','current','incoming','edit','auto_current','auto_incoming','same'].map((resolution,i)=>({id:'d'+i,path:'/source_review/field'+i,...(i?{resolution}:{}),conflict:i===0}));
+ c.merge={merge_id:'m',unresolved:['d0'],differences};w.q('#collab-difference-nav').value='d3';await c.showPreview({...c.merge});let html=c.mergeSummary();assert.match(html,/<optgroup label="Outstanding">/);assert.match(html,/value="d3" selected/);for(const label of ['Current selected','Submitted selected','Edited result','Current suggested','Submitted suggested','Versions match'])assert.ok(html.includes(label));
+ await c.showPreview({...c.merge,unresolved:[],differences:differences.map(d=>d.id==='d0'?{...d,resolution:'current'}:d)});html=c.mergeSummary();assert.doesNotMatch(html,/optgroup label="Outstanding"/);assert.match(html,/value="d3" selected/);
+});
+
+test('comparison renders valid recorded merge geometry and retains every contradictory stored cell visibly',async()=>{
+ const {tableComparisonMarkup}=await import('../frontend/components/collaboration.js'),table={rows:[['Merged heading',''],['left','right']],merges:[{row:0,col:0,rowspan:1,colspan:2}],notes:['Original note']},before=structuredClone(table);let html=tableComparisonMarkup(table);assert.match(html,/rowspan="1" colspan="2"/);assert.match(html,/Original note/);assert.match(html,/Recorded merged-cell layout/);assert.deepEqual(table,before);
+ for(const bad of [{...table,rows:[['Merged heading','Covered value'],['left','right']]},{...table,merges:[...table.merges,{row:0,col:1,rowspan:2,colspan:1}]},{...table,merges:[{row:0,col:0,rowspan:9,colspan:2}]},{...table,merges:[{row:0,col:0,rowspan:1,colspan:0}]}]){html=tableComparisonMarkup(bad);assert.match(html,/Stored grid retained/);assert.doesNotMatch(html,/<td rowspan=/);for(const value of bad.rows.flat().filter(Boolean))assert.ok(html.includes(value));assert.match(html,/Original table details/);}
+});
+test('comparison source pages follow valid one-based precedence and zero-based indices without guessing',async()=>{
+ const {blockComparisonMarkup,orderMarkup}=await import('../frontend/components/collaboration.js');for(const [ref,label]of [[{page_index:0},'Page 1'],[{page_index:2},'Page 3'],[{page:8,page_index:2},'Page 8']]){const block={id:'b',type:'text',text:'Passage',source_refs:[ref]},before=structuredClone(block);assert.match(blockComparisonMarkup(block),new RegExp(label));assert.match(orderMarkup(['b'],{b:block}),new RegExp(label));assert.deepEqual(block,before);}
+ for(const page_index of [-1,1.5,'2',null]){const html=blockComparisonMarkup({id:'b',text:'Unknown location',source_refs:[{page_index}]});assert.doesNotMatch(html,/>Page \d/);}
+});

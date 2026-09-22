@@ -1,0 +1,303 @@
+{
+  "request_id": "5d25c2c0-2d0b-4590-b19c-b6a0d95e87ee",
+  "action": "save-draft",
+  "steps": [
+    {
+      "action": "start",
+      "request_id": "8009ed8e-025d-4547-829f-c1d00db9766f",
+      "material_id": "c3fd36db7f5b246d56f3c1bbd3f21ca5",
+      "material_revision": 3,
+      "block_ids": [
+        "s6-2",
+        "s6-3"
+      ]
+    },
+    {
+      "action": "structure",
+      "operation": "add-group",
+      "node_id": "5797b497-d085-5359-a4cb-329234bced4f/structure",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "b18a8e3b-c832-4b5c-a700-564e9650fbdc",
+      "start": 0,
+      "end": 137
+    },
+    {
+      "action": "structure",
+      "operation": "add",
+      "node_id": "834952f9-bfe4-5876-b9d8-4ce5a8fe8eda",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "8f4de846-0cd1-4fe4-879b-8ce0539ffaea",
+      "field": "Subject",
+      "start": 0,
+      "end": 17
+    },
+    {
+      "action": "structure",
+      "operation": "add",
+      "node_id": "834952f9-bfe4-5876-b9d8-4ce5a8fe8eda",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "82f5e8d4-1301-41dc-85f1-0a4c55a44730",
+      "field": "Modal Verb",
+      "start": 18,
+      "end": 22
+    },
+    {
+      "action": "structure",
+      "operation": "add",
+      "node_id": "834952f9-bfe4-5876-b9d8-4ce5a8fe8eda",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "aee81fe1-bf91-41ff-9aec-4bcee50ba643",
+      "field": "Main Verb",
+      "start": 23,
+      "end": 29
+    },
+    {
+      "action": "structure",
+      "operation": "add-group",
+      "node_id": "834952f9-bfe4-5876-b9d8-4ce5a8fe8eda",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "a99f6efe-27bd-40c2-aa45-c77d34f850e9",
+      "start": 30,
+      "end": 84
+    },
+    {
+      "action": "structure",
+      "operation": "add",
+      "node_id": "abd70b4d-7018-5cbb-a0e9-0eaec2b60325",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "308b412e-5e54-445f-896e-15a891d9417f",
+      "field": "conditions",
+      "start": 30,
+      "end": 47
+    },
+    {
+      "action": "structure",
+      "operation": "add",
+      "node_id": "abd70b4d-7018-5cbb-a0e9-0eaec2b60325",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "7c9c3bdd-8241-42fc-b4df-61157a723eb8",
+      "field": "conditions",
+      "start": 48,
+      "end": 84
+    },
+    {
+      "action": "structure",
+      "operation": "quantity",
+      "node_id": "c6d83d87-c991-5cb9-b113-500708d37dc2",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "15f98761-9d10-46ac-9eb7-8303479faa40",
+      "quantity": 2
+    },
+    {
+      "action": "structure",
+      "operation": "add-group",
+      "node_id": "834952f9-bfe4-5876-b9d8-4ce5a8fe8eda",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "883133ec-754a-48de-8049-409fa1e83d2b",
+      "start": 89,
+      "end": 135
+    },
+    {
+      "action": "structure",
+      "operation": "add",
+      "node_id": "1e59b804-8143-526e-bb1a-d2f507b8841b",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "56669dbb-522e-4e86-8b05-b71317ff3069",
+      "field": "conditions",
+      "start": 89,
+      "end": 107
+    },
+    {
+      "action": "structure",
+      "operation": "add",
+      "node_id": "1e59b804-8143-526e-bb1a-d2f507b8841b",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "fe5ff1d8-f955-4c3a-8214-c7a799409a5d",
+      "field": "conditions",
+      "start": 108,
+      "end": 135
+    },
+    {
+      "action": "structure",
+      "operation": "quantity",
+      "node_id": "7910ac1e-a0ac-562c-ad79-d27ede62b0cd",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "1d7f16d2-f13f-49a5-82b5-cedf25ff1258",
+      "quantity": 2
+    },
+    {
+      "action": "structure",
+      "operation": "quantity",
+      "node_id": "c0c13da6-913e-5307-8dba-8b5c733704ec",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "205d5d8d-e3c2-464f-bb32-40030fa1ce39",
+      "quantity": 2
+    },
+    {
+      "action": "structure",
+      "operation": "add-group",
+      "node_id": "5797b497-d085-5359-a4cb-329234bced4f/structure",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "29efae46-b1a3-45a4-8978-5f22f3735b00",
+      "start": 206,
+      "end": 278
+    },
+    {
+      "action": "structure",
+      "operation": "add",
+      "node_id": "237df9c2-df46-552f-a536-1cc293072ca7",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "eea0b611-0cee-44a5-ad38-860194d511be",
+      "field": "Subject",
+      "start": 206,
+      "end": 225
+    },
+    {
+      "action": "structure",
+      "operation": "add",
+      "node_id": "237df9c2-df46-552f-a536-1cc293072ca7",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "136ea9cb-7de2-4f65-aaef-168cceb90b5b",
+      "field": "Modal Verb",
+      "start": 226,
+      "end": 230
+    },
+    {
+      "action": "structure",
+      "operation": "add",
+      "node_id": "237df9c2-df46-552f-a536-1cc293072ca7",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "b9aeead9-b6fb-40e4-b1e7-0ea41705a0d5",
+      "field": "Main Verb",
+      "start": 231,
+      "end": 243
+    },
+    {
+      "action": "structure",
+      "operation": "add",
+      "node_id": "237df9c2-df46-552f-a536-1cc293072ca7",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "ff52c8da-eea3-43fd-bcd8-a8ce7ab4a2c1",
+      "field": "conditions",
+      "start": 244,
+      "end": 277
+    },
+    {
+      "action": "structure",
+      "operation": "quantity",
+      "node_id": "e07e74d4-816f-5099-b8f5-818959412371",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "7afc9a1d-43c5-4e16-b04d-4a355034681f",
+      "quantity": 2
+    },
+    {
+      "action": "structure",
+      "operation": "add",
+      "node_id": "5797b497-d085-5359-a4cb-329234bced4f/structure",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "1ab168a9-43b8-48cc-a2a2-a27b20fd9ec4",
+      "field": "conditions",
+      "start": 137,
+      "end": 205
+    },
+    {
+      "action": "structure",
+      "operation": "add",
+      "node_id": "5797b497-d085-5359-a4cb-329234bced4f/structure",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "4ac3e9f9-8e12-4260-b0d5-b1c8725a5526",
+      "field": "conditions",
+      "start": 280,
+      "end": 424
+    },
+    {
+      "action": "structure",
+      "operation": "quantity",
+      "node_id": "d09114e3-a6de-582a-8ad1-d7c43c1485c0",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "9847cb3a-1f0e-438e-84c8-2fcf87084ec6",
+      "quantity": 2
+    },
+    {
+      "action": "structure",
+      "operation": "link",
+      "node_id": "5797b497-d085-5359-a4cb-329234bced4f/structure",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "b8785a47-a05a-4e0a-b814-5a4bcca37dc9",
+      "field": "subrequirement",
+      "target_id": "a77fcc32-e51b-5092-91a7-56ac7189437c"
+    },
+    {
+      "action": "structure",
+      "operation": "link",
+      "node_id": "5797b497-d085-5359-a4cb-329234bced4f/structure",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "93ae13b4-269f-4cbb-825c-ac4c934d8c92",
+      "field": "subrequirement",
+      "target_id": "79962b9b-2971-5754-800e-578dc6019d84"
+    },
+    {
+      "action": "structure",
+      "operation": "link",
+      "node_id": "5797b497-d085-5359-a4cb-329234bced4f/structure",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "ed2c9404-3f71-4b78-b567-f9c0dc68ffb0",
+      "field": "subrequirement",
+      "target_id": "7d8ab0d5-c219-51c8-9773-6154672182db"
+    },
+    {
+      "action": "structure",
+      "operation": "link",
+      "node_id": "5797b497-d085-5359-a4cb-329234bced4f/structure",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "7f93e5a8-3627-4cc8-a22a-8b3b237d3914",
+      "field": "subrequirement",
+      "target_id": "2c5a8a96-9298-536b-a8b4-10d37483a554"
+    },
+    {
+      "action": "structure",
+      "operation": "link",
+      "node_id": "5797b497-d085-5359-a4cb-329234bced4f/structure",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "da43b0f8-9963-43e7-b620-fe391d4bdc8c",
+      "field": "subrequirement",
+      "target_id": "f16cbfb4-264c-5621-aa10-bcbc619160a4"
+    },
+    {
+      "action": "structure",
+      "operation": "link",
+      "node_id": "5797b497-d085-5359-a4cb-329234bced4f/structure",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "af7e3a0a-2361-46e6-8ff4-c662fdbcb2ae",
+      "field": "subrequirement",
+      "target_id": "0e5ecb9a-8dfd-527c-9b80-460818be7aa5"
+    },
+    {
+      "action": "structure",
+      "operation": "link",
+      "node_id": "5797b497-d085-5359-a4cb-329234bced4f/structure",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "fcfb5110-dca0-451b-bc0d-11f7482434a4",
+      "field": "subrequirement",
+      "target_id": "cc86ab74-baf3-5caf-9fbc-63a406c954eb"
+    },
+    {
+      "action": "structure",
+      "operation": "quantity",
+      "node_id": "6c142d6b-95d3-5a4c-87eb-b92df1323c1d",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+      "request_id": "c3beff13-6c87-423d-b644-a97a63ab272b",
+      "quantity": 7
+    },
+    {
+      "action": "done",
+      "request_id": "eb6ae785-af7e-4fd0-b528-db4eb9780709",
+      "unit_id": "5797b497-d085-5359-a4cb-329234bced4f"
+    },
+    {
+      "action": "phase",
+      "request_id": "cd194980-226d-47eb-9529-f1a1088a3f09",
+      "phase": "fields"
+    }
+  ]
+}

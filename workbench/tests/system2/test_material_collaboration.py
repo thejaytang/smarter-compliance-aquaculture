@@ -205,3 +205,21 @@ def test_candidate_evidence_from_other_material_rejected_before_seed(integration
         command(reviewer, 'seed', dict(data, original_path=data['original']['path']))
     assert reviewer.store.list() == []
     assert not (reviewer.root/'material-originals').exists()
+
+
+def test_superseded_candidate_history_roundtrips_without_restarting(integration, tmp_path):
+    service, _ = integration
+    data = exported(integration)
+    service.mutate('extract', request(data['material']))
+    data = command(service, 'export', {'material_id': data['material']['id']})
+    candidate = data['candidate_evidence'][0]
+    candidate['status'] = 'superseded'
+    candidate['replacement'] = {'candidate_id': str(uuid.uuid4()), 'reason': 'requested_machine_preview_refresh'}
+    reviewer = clone(service, tmp_path)
+    command(reviewer, 'seed', dict(data, original_path=data['original']['path']))
+    restored = command(reviewer, 'export', {'material_id': data['material']['id']})
+    assert restored['candidate_evidence'] == data['candidate_evidence']
+    assert reviewer.store.pending_candidates() == []
+    candidate['status'] = 'invented_status'
+    with pytest.raises(ValueError, match='input or status'):
+        command(service, 'validate', data)

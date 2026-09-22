@@ -1,0 +1,618 @@
+{
+  "request_id": "1fa67439-ea21-4864-9865-f0eec7ab2281",
+  "unit_id": "5797b497-d085-5359-a4cb-329234bced4f",
+  "expected_revision": 0,
+  "context_fingerprint": "07867a55c210cdec6ce1b3a3f94c4b3e8c96ed209c18f3c13fa9abc8662f095a",
+  "fields": {
+    "condition": {
+      "absence_reason": "",
+      "basis": "interpretation",
+      "gaps": [],
+      "references": [
+        {
+          "end": 278,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s6-2",
+          "quote": "Antallet lakselus skal telles minst hver 7. dag ved temperaturer lik eller over 4 °C, og minst hver 14. dag ved temperaturer under 4 °C. Stamfisk er unntatt fra krav om telling ved temperaturer under 4 °C. Telling av lakselus skal gjennomføres i henhold til kravene i vedlegg 1.",
+          "start": 0
+        },
+        {
+          "end": 126,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s2-1",
+          "quote": "Forskriften gjelder for akvakulturanlegg med laksefisk i sjø. For slaktemerder ved slakteri gjelder kun § 5 og § 9 siste ledd.",
+          "start": 0
+        },
+        {
+          "end": 279,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s2-2",
+          "quote": "Forskriften retter seg mot enhver som har eller plikter å ha godkjenning etter forskrift 17. juni 2008 nr. 823 om etablering og utvidelse av akvakulturanlegg, zoobutikker m.m. eller dyrehelseforskriften 6. april 2022 nr. 631 og akvabiosikkerhetsforskriften 5. april 2022 nr. 624.",
+          "start": 0
+        },
+        {
+          "end": 144,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s6-3",
+          "quote": "Kravene til telling gjelder ikke dersom all fisken i akvakulturanlegget skal slaktes ut innen 14 dager etter at telling skulle vært gjennomført.",
+          "start": 0
+        },
+        {
+          "end": 57,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s3-5",
+          "quote": "d. Lakselus: Hoppekreps av arten Lepeophtheirus salmonis.",
+          "start": 0
+        },
+        {
+          "end": 57,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-1",
+          "quote": "1. Det skal telles lakselus i følgende tre stadiegrupper:",
+          "start": 0
+        },
+        {
+          "end": 433,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-5",
+          "quote": "2. I Nord-Trøndelag og sørover skal det fra og med mandag i uke 14 til og med søndag i uke 21 telles lakselus på minst 20 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Fra og med mandag i uke 22 til og med søndag i uke 13 skal det telles lakselus på minst 10 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Snitt fra telling i alle merder legges til grunn ved innrapportering av lus.",
+          "start": 0
+        },
+        {
+          "end": 435,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-6",
+          "quote": "3. I Nordland, Troms og Finnmark skal det fra og med mandag i uke 19 til og med søndag i uke 26 telles lakselus på minst 20 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Fra og med mandag i uke 27 til og med søndag i uke 18 skal det telles lakselus på minst 10 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Snitt fra telling i alle merder legges til grunn ved innrapportering av lus.",
+          "start": 0
+        },
+        {
+          "end": 236,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-7",
+          "quote": "4. Fisken skal fanges inn med orkastnot eller annen metode som sikrer et representativt utvalg av fisk. Fisken skal bedøves før telling. En og en fisk tas opp og undersøkes nøye. Lus som detter av i bedøvelseskaret skal også telles med.",
+          "start": 0
+        },
+        {
+          "end": 292,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-8",
+          "quote": "5. For hver fisk skal antall lakselus i de forskjellige stadiegruppene føres inn i skjema laget til formålet. For hver merd skal følgende opplysninger også noteres på samme skjema: Merdnummer, merdens størrelse (omkrets/side) og dybde (rette vegger), antall fisk og gjennomsnittsvekt av fisk.",
+          "start": 0
+        },
+        {
+          "end": 328,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-9",
+          "quote": "6. For hver merd skal gjennomsnittet beregnes for hver stadiegruppe ved å legge sammen alle lakselus i gruppen fra all fisk som er undersøkt i merden, delt på antall undersøkte fisk. For akvakulturanlegget skal gjennomsnittet for hver stadiegruppe beregnes ved å legge sammen gjennomsnittene fra hver merd delt på antall merder.",
+          "start": 0
+        },
+        {
+          "end": 171,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-10",
+          "quote": "7. Forut for behandling mot lakselus som kun omfatter enkelte produksjonsenheter, skal det være gjennomført lakselustelling i alle produksjonsenheter i akvakulturanlegget.",
+          "start": 0
+        }
+      ],
+      "state": "specified",
+      "value": "B = A ∩ NOT S ∩ ((T ≥ 4°C) OR (T < 4°C AND NOT broodstock)), where S is the facility-wide slaughter-out exemption in § 6 third paragraph. At exactly 4°C the seven-day branch applies, including broodstock."
+    },
+    "condition_information": {
+      "absence_reason": "",
+      "basis": "interpretation",
+      "gaps": [],
+      "references": [
+        {
+          "end": 278,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s6-2",
+          "quote": "Antallet lakselus skal telles minst hver 7. dag ved temperaturer lik eller over 4 °C, og minst hver 14. dag ved temperaturer under 4 °C. Stamfisk er unntatt fra krav om telling ved temperaturer under 4 °C. Telling av lakselus skal gjennomføres i henhold til kravene i vedlegg 1.",
+          "start": 0
+        },
+        {
+          "end": 126,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s2-1",
+          "quote": "Forskriften gjelder for akvakulturanlegg med laksefisk i sjø. For slaktemerder ved slakteri gjelder kun § 5 og § 9 siste ledd.",
+          "start": 0
+        },
+        {
+          "end": 279,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s2-2",
+          "quote": "Forskriften retter seg mot enhver som har eller plikter å ha godkjenning etter forskrift 17. juni 2008 nr. 823 om etablering og utvidelse av akvakulturanlegg, zoobutikker m.m. eller dyrehelseforskriften 6. april 2022 nr. 631 og akvabiosikkerhetsforskriften 5. april 2022 nr. 624.",
+          "start": 0
+        },
+        {
+          "end": 144,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s6-3",
+          "quote": "Kravene til telling gjelder ikke dersom all fisken i akvakulturanlegget skal slaktes ut innen 14 dager etter at telling skulle vært gjennomført.",
+          "start": 0
+        },
+        {
+          "end": 57,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s3-5",
+          "quote": "d. Lakselus: Hoppekreps av arten Lepeophtheirus salmonis.",
+          "start": 0
+        },
+        {
+          "end": 57,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-1",
+          "quote": "1. Det skal telles lakselus i følgende tre stadiegrupper:",
+          "start": 0
+        },
+        {
+          "end": 433,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-5",
+          "quote": "2. I Nord-Trøndelag og sørover skal det fra og med mandag i uke 14 til og med søndag i uke 21 telles lakselus på minst 20 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Fra og med mandag i uke 22 til og med søndag i uke 13 skal det telles lakselus på minst 10 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Snitt fra telling i alle merder legges til grunn ved innrapportering av lus.",
+          "start": 0
+        },
+        {
+          "end": 435,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-6",
+          "quote": "3. I Nordland, Troms og Finnmark skal det fra og med mandag i uke 19 til og med søndag i uke 26 telles lakselus på minst 20 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Fra og med mandag i uke 27 til og med søndag i uke 18 skal det telles lakselus på minst 10 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Snitt fra telling i alle merder legges til grunn ved innrapportering av lus.",
+          "start": 0
+        },
+        {
+          "end": 236,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-7",
+          "quote": "4. Fisken skal fanges inn med orkastnot eller annen metode som sikrer et representativt utvalg av fisk. Fisken skal bedøves før telling. En og en fisk tas opp og undersøkes nøye. Lus som detter av i bedøvelseskaret skal også telles med.",
+          "start": 0
+        },
+        {
+          "end": 292,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-8",
+          "quote": "5. For hver fisk skal antall lakselus i de forskjellige stadiegruppene føres inn i skjema laget til formålet. For hver merd skal følgende opplysninger også noteres på samme skjema: Merdnummer, merdens størrelse (omkrets/side) og dybde (rette vegger), antall fisk og gjennomsnittsvekt av fisk.",
+          "start": 0
+        },
+        {
+          "end": 328,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-9",
+          "quote": "6. For hver merd skal gjennomsnittet beregnes for hver stadiegruppe ved å legge sammen alle lakselus i gruppen fra all fisk som er undersøkt i merden, delt på antall undersøkte fisk. For akvakulturanlegget skal gjennomsnittet for hver stadiegruppe beregnes ved å legge sammen gjennomsnittene fra hver merd delt på antall merder.",
+          "start": 0
+        },
+        {
+          "end": 171,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-10",
+          "quote": "7. Forut for behandling mot lakselus som kun omfatter enkelte produksjonsenheter, skal det være gjennomført lakselustelling i alle produksjonsenheter i akvakulturanlegget.",
+          "start": 0
+        }
+      ],
+      "state": "specified",
+      "value": "Applicable temperature history, fish-group broodstock status, due/previous counts and facility-wide slaughter-out plan."
+    },
+    "demand": {
+      "absence_reason": "",
+      "basis": "interpretation",
+      "gaps": [],
+      "references": [
+        {
+          "end": 278,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s6-2",
+          "quote": "Antallet lakselus skal telles minst hver 7. dag ved temperaturer lik eller over 4 °C, og minst hver 14. dag ved temperaturer under 4 °C. Stamfisk er unntatt fra krav om telling ved temperaturer under 4 °C. Telling av lakselus skal gjennomføres i henhold til kravene i vedlegg 1.",
+          "start": 0
+        },
+        {
+          "end": 126,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s2-1",
+          "quote": "Forskriften gjelder for akvakulturanlegg med laksefisk i sjø. For slaktemerder ved slakteri gjelder kun § 5 og § 9 siste ledd.",
+          "start": 0
+        },
+        {
+          "end": 279,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s2-2",
+          "quote": "Forskriften retter seg mot enhver som har eller plikter å ha godkjenning etter forskrift 17. juni 2008 nr. 823 om etablering og utvidelse av akvakulturanlegg, zoobutikker m.m. eller dyrehelseforskriften 6. april 2022 nr. 631 og akvabiosikkerhetsforskriften 5. april 2022 nr. 624.",
+          "start": 0
+        },
+        {
+          "end": 144,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s6-3",
+          "quote": "Kravene til telling gjelder ikke dersom all fisken i akvakulturanlegget skal slaktes ut innen 14 dager etter at telling skulle vært gjennomført.",
+          "start": 0
+        },
+        {
+          "end": 57,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s3-5",
+          "quote": "d. Lakselus: Hoppekreps av arten Lepeophtheirus salmonis.",
+          "start": 0
+        },
+        {
+          "end": 57,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-1",
+          "quote": "1. Det skal telles lakselus i følgende tre stadiegrupper:",
+          "start": 0
+        },
+        {
+          "end": 433,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-5",
+          "quote": "2. I Nord-Trøndelag og sørover skal det fra og med mandag i uke 14 til og med søndag i uke 21 telles lakselus på minst 20 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Fra og med mandag i uke 22 til og med søndag i uke 13 skal det telles lakselus på minst 10 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Snitt fra telling i alle merder legges til grunn ved innrapportering av lus.",
+          "start": 0
+        },
+        {
+          "end": 435,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-6",
+          "quote": "3. I Nordland, Troms og Finnmark skal det fra og med mandag i uke 19 til og med søndag i uke 26 telles lakselus på minst 20 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Fra og med mandag i uke 27 til og med søndag i uke 18 skal det telles lakselus på minst 10 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Snitt fra telling i alle merder legges til grunn ved innrapportering av lus.",
+          "start": 0
+        },
+        {
+          "end": 236,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-7",
+          "quote": "4. Fisken skal fanges inn med orkastnot eller annen metode som sikrer et representativt utvalg av fisk. Fisken skal bedøves før telling. En og en fisk tas opp og undersøkes nøye. Lus som detter av i bedøvelseskaret skal også telles med.",
+          "start": 0
+        },
+        {
+          "end": 292,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-8",
+          "quote": "5. For hver fisk skal antall lakselus i de forskjellige stadiegruppene føres inn i skjema laget til formålet. For hver merd skal følgende opplysninger også noteres på samme skjema: Merdnummer, merdens størrelse (omkrets/side) og dybde (rette vegger), antall fisk og gjennomsnittsvekt av fisk.",
+          "start": 0
+        },
+        {
+          "end": 328,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-9",
+          "quote": "6. For hver merd skal gjennomsnittet beregnes for hver stadiegruppe ved å legge sammen alle lakselus i gruppen fra all fisk som er undersøkt i merden, delt på antall undersøkte fisk. For akvakulturanlegget skal gjennomsnittet for hver stadiegruppe beregnes ved å legge sammen gjennomsnittene fra hver merd delt på antall merder.",
+          "start": 0
+        },
+        {
+          "end": 171,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-10",
+          "quote": "7. Forut for behandling mot lakselus som kun omfatter enkelte produksjonsenheter, skal det være gjennomført lakselustelling i alle produksjonsenheter i akvakulturanlegget.",
+          "start": 0
+        }
+      ],
+      "state": "specified",
+      "value": "Count sea lice at least every 7 days when T ≥ 4°C and at least every 14 days when T < 4°C for non-exempt fish; use Annex 1. Keep the frequency/temperature pairs together. Broodstock below 4°C are exempt, not prohibited from being counted."
+    },
+    "scope": {
+      "absence_reason": "",
+      "basis": "interpretation",
+      "gaps": [],
+      "references": [
+        {
+          "end": 278,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s6-2",
+          "quote": "Antallet lakselus skal telles minst hver 7. dag ved temperaturer lik eller over 4 °C, og minst hver 14. dag ved temperaturer under 4 °C. Stamfisk er unntatt fra krav om telling ved temperaturer under 4 °C. Telling av lakselus skal gjennomføres i henhold til kravene i vedlegg 1.",
+          "start": 0
+        },
+        {
+          "end": 126,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s2-1",
+          "quote": "Forskriften gjelder for akvakulturanlegg med laksefisk i sjø. For slaktemerder ved slakteri gjelder kun § 5 og § 9 siste ledd.",
+          "start": 0
+        },
+        {
+          "end": 279,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s2-2",
+          "quote": "Forskriften retter seg mot enhver som har eller plikter å ha godkjenning etter forskrift 17. juni 2008 nr. 823 om etablering og utvidelse av akvakulturanlegg, zoobutikker m.m. eller dyrehelseforskriften 6. april 2022 nr. 631 og akvabiosikkerhetsforskriften 5. april 2022 nr. 624.",
+          "start": 0
+        },
+        {
+          "end": 144,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s6-3",
+          "quote": "Kravene til telling gjelder ikke dersom all fisken i akvakulturanlegget skal slaktes ut innen 14 dager etter at telling skulle vært gjennomført.",
+          "start": 0
+        },
+        {
+          "end": 57,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s3-5",
+          "quote": "d. Lakselus: Hoppekreps av arten Lepeophtheirus salmonis.",
+          "start": 0
+        },
+        {
+          "end": 57,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-1",
+          "quote": "1. Det skal telles lakselus i følgende tre stadiegrupper:",
+          "start": 0
+        },
+        {
+          "end": 433,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-5",
+          "quote": "2. I Nord-Trøndelag og sørover skal det fra og med mandag i uke 14 til og med søndag i uke 21 telles lakselus på minst 20 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Fra og med mandag i uke 22 til og med søndag i uke 13 skal det telles lakselus på minst 10 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Snitt fra telling i alle merder legges til grunn ved innrapportering av lus.",
+          "start": 0
+        },
+        {
+          "end": 435,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-6",
+          "quote": "3. I Nordland, Troms og Finnmark skal det fra og med mandag i uke 19 til og med søndag i uke 26 telles lakselus på minst 20 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Fra og med mandag i uke 27 til og med søndag i uke 18 skal det telles lakselus på minst 10 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Snitt fra telling i alle merder legges til grunn ved innrapportering av lus.",
+          "start": 0
+        },
+        {
+          "end": 236,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-7",
+          "quote": "4. Fisken skal fanges inn med orkastnot eller annen metode som sikrer et representativt utvalg av fisk. Fisken skal bedøves før telling. En og en fisk tas opp og undersøkes nøye. Lus som detter av i bedøvelseskaret skal også telles med.",
+          "start": 0
+        },
+        {
+          "end": 292,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-8",
+          "quote": "5. For hver fisk skal antall lakselus i de forskjellige stadiegruppene føres inn i skjema laget til formålet. For hver merd skal følgende opplysninger også noteres på samme skjema: Merdnummer, merdens størrelse (omkrets/side) og dybde (rette vegger), antall fisk og gjennomsnittsvekt av fisk.",
+          "start": 0
+        },
+        {
+          "end": 328,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-9",
+          "quote": "6. For hver merd skal gjennomsnittet beregnes for hver stadiegruppe ved å legge sammen alle lakselus i gruppen fra all fisk som er undersøkt i merden, delt på antall undersøkte fisk. For akvakulturanlegget skal gjennomsnittet for hver stadiegruppe beregnes ved å legge sammen gjennomsnittene fra hver merd delt på antall merder.",
+          "start": 0
+        },
+        {
+          "end": 171,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-10",
+          "quote": "7. Forut for behandling mot lakselus som kun omfatter enkelte produksjonsenheter, skal det være gjennomført lakselustelling i alle produksjonsenheter i akvakulturanlegget.",
+          "start": 0
+        }
+      ],
+      "state": "specified",
+      "value": "Norwegian seawater aquaculture facilities with salmonids, under § 2; exclude slaughter cages at slaughterhouses except where § 5 or the final paragraph of § 9 expressly applies. Assess fish groups within the facility so broodstock exemption does not exempt non-broodstock in a mixed facility."
+    },
+    "scope_information": {
+      "absence_reason": "",
+      "basis": "interpretation",
+      "gaps": [],
+      "references": [
+        {
+          "end": 278,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s6-2",
+          "quote": "Antallet lakselus skal telles minst hver 7. dag ved temperaturer lik eller over 4 °C, og minst hver 14. dag ved temperaturer under 4 °C. Stamfisk er unntatt fra krav om telling ved temperaturer under 4 °C. Telling av lakselus skal gjennomføres i henhold til kravene i vedlegg 1.",
+          "start": 0
+        },
+        {
+          "end": 126,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s2-1",
+          "quote": "Forskriften gjelder for akvakulturanlegg med laksefisk i sjø. For slaktemerder ved slakteri gjelder kun § 5 og § 9 siste ledd.",
+          "start": 0
+        },
+        {
+          "end": 279,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s2-2",
+          "quote": "Forskriften retter seg mot enhver som har eller plikter å ha godkjenning etter forskrift 17. juni 2008 nr. 823 om etablering og utvidelse av akvakulturanlegg, zoobutikker m.m. eller dyrehelseforskriften 6. april 2022 nr. 631 og akvabiosikkerhetsforskriften 5. april 2022 nr. 624.",
+          "start": 0
+        },
+        {
+          "end": 144,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s6-3",
+          "quote": "Kravene til telling gjelder ikke dersom all fisken i akvakulturanlegget skal slaktes ut innen 14 dager etter at telling skulle vært gjennomført.",
+          "start": 0
+        },
+        {
+          "end": 57,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s3-5",
+          "quote": "d. Lakselus: Hoppekreps av arten Lepeophtheirus salmonis.",
+          "start": 0
+        },
+        {
+          "end": 57,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-1",
+          "quote": "1. Det skal telles lakselus i følgende tre stadiegrupper:",
+          "start": 0
+        },
+        {
+          "end": 433,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-5",
+          "quote": "2. I Nord-Trøndelag og sørover skal det fra og med mandag i uke 14 til og med søndag i uke 21 telles lakselus på minst 20 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Fra og med mandag i uke 22 til og med søndag i uke 13 skal det telles lakselus på minst 10 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Snitt fra telling i alle merder legges til grunn ved innrapportering av lus.",
+          "start": 0
+        },
+        {
+          "end": 435,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-6",
+          "quote": "3. I Nordland, Troms og Finnmark skal det fra og med mandag i uke 19 til og med søndag i uke 26 telles lakselus på minst 20 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Fra og med mandag i uke 27 til og med søndag i uke 18 skal det telles lakselus på minst 10 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Snitt fra telling i alle merder legges til grunn ved innrapportering av lus.",
+          "start": 0
+        },
+        {
+          "end": 236,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-7",
+          "quote": "4. Fisken skal fanges inn med orkastnot eller annen metode som sikrer et representativt utvalg av fisk. Fisken skal bedøves før telling. En og en fisk tas opp og undersøkes nøye. Lus som detter av i bedøvelseskaret skal også telles med.",
+          "start": 0
+        },
+        {
+          "end": 292,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-8",
+          "quote": "5. For hver fisk skal antall lakselus i de forskjellige stadiegruppene føres inn i skjema laget til formålet. For hver merd skal følgende opplysninger også noteres på samme skjema: Merdnummer, merdens størrelse (omkrets/side) og dybde (rette vegger), antall fisk og gjennomsnittsvekt av fisk.",
+          "start": 0
+        },
+        {
+          "end": 328,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-9",
+          "quote": "6. For hver merd skal gjennomsnittet beregnes for hver stadiegruppe ved å legge sammen alle lakselus i gruppen fra all fisk som er undersøkt i merden, delt på antall undersøkte fisk. For akvakulturanlegget skal gjennomsnittet for hver stadiegruppe beregnes ved å legge sammen gjennomsnittene fra hver merd delt på antall merder.",
+          "start": 0
+        },
+        {
+          "end": 171,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-10",
+          "quote": "7. Forut for behandling mot lakselus som kun omfatter enkelte produksjonsenheter, skal det være gjennomført lakselustelling i alle produksjonsenheter i akvakulturanlegget.",
+          "start": 0
+        }
+      ],
+      "state": "specified",
+      "value": "Identify facility, salmonid stock, seawater setting, unit purpose and the approval holder/person required to hold approval under § 2. Keep the duty holder distinct from the facility and retain the source-version identity."
+    },
+    "verification": {
+      "absence_reason": "",
+      "basis": "interpretation",
+      "gaps": [],
+      "references": [
+        {
+          "end": 278,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s6-2",
+          "quote": "Antallet lakselus skal telles minst hver 7. dag ved temperaturer lik eller over 4 °C, og minst hver 14. dag ved temperaturer under 4 °C. Stamfisk er unntatt fra krav om telling ved temperaturer under 4 °C. Telling av lakselus skal gjennomføres i henhold til kravene i vedlegg 1.",
+          "start": 0
+        },
+        {
+          "end": 126,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s2-1",
+          "quote": "Forskriften gjelder for akvakulturanlegg med laksefisk i sjø. For slaktemerder ved slakteri gjelder kun § 5 og § 9 siste ledd.",
+          "start": 0
+        },
+        {
+          "end": 279,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s2-2",
+          "quote": "Forskriften retter seg mot enhver som har eller plikter å ha godkjenning etter forskrift 17. juni 2008 nr. 823 om etablering og utvidelse av akvakulturanlegg, zoobutikker m.m. eller dyrehelseforskriften 6. april 2022 nr. 631 og akvabiosikkerhetsforskriften 5. april 2022 nr. 624.",
+          "start": 0
+        },
+        {
+          "end": 144,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s6-3",
+          "quote": "Kravene til telling gjelder ikke dersom all fisken i akvakulturanlegget skal slaktes ut innen 14 dager etter at telling skulle vært gjennomført.",
+          "start": 0
+        },
+        {
+          "end": 57,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:s3-5",
+          "quote": "d. Lakselus: Hoppekreps av arten Lepeophtheirus salmonis.",
+          "start": 0
+        },
+        {
+          "end": 57,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-1",
+          "quote": "1. Det skal telles lakselus i følgende tre stadiegrupper:",
+          "start": 0
+        },
+        {
+          "end": 433,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-5",
+          "quote": "2. I Nord-Trøndelag og sørover skal det fra og med mandag i uke 14 til og med søndag i uke 21 telles lakselus på minst 20 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Fra og med mandag i uke 22 til og med søndag i uke 13 skal det telles lakselus på minst 10 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Snitt fra telling i alle merder legges til grunn ved innrapportering av lus.",
+          "start": 0
+        },
+        {
+          "end": 435,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-6",
+          "quote": "3. I Nordland, Troms og Finnmark skal det fra og med mandag i uke 19 til og med søndag i uke 26 telles lakselus på minst 20 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Fra og med mandag i uke 27 til og med søndag i uke 18 skal det telles lakselus på minst 10 tilfeldige fisk fra alle merdene i akvakulturanlegget ved hver telling. Snitt fra telling i alle merder legges til grunn ved innrapportering av lus.",
+          "start": 0
+        },
+        {
+          "end": 236,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-7",
+          "quote": "4. Fisken skal fanges inn med orkastnot eller annen metode som sikrer et representativt utvalg av fisk. Fisken skal bedøves før telling. En og en fisk tas opp og undersøkes nøye. Lus som detter av i bedøvelseskaret skal også telles med.",
+          "start": 0
+        },
+        {
+          "end": 292,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-8",
+          "quote": "5. For hver fisk skal antall lakselus i de forskjellige stadiegruppene føres inn i skjema laget til formålet. For hver merd skal følgende opplysninger også noteres på samme skjema: Merdnummer, merdens størrelse (omkrets/side) og dybde (rette vegger), antall fisk og gjennomsnittsvekt av fisk.",
+          "start": 0
+        },
+        {
+          "end": 328,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-9",
+          "quote": "6. For hver merd skal gjennomsnittet beregnes for hver stadiegruppe ved å legge sammen alle lakselus i gruppen fra all fisk som er undersøkt i merden, delt på antall undersøkte fisk. For akvakulturanlegget skal gjennomsnittet for hver stadiegruppe beregnes ved å legge sammen gjennomsnittene fra hver merd delt på antall merder.",
+          "start": 0
+        },
+        {
+          "end": 171,
+          "id": "c3fd36db7f5b246d56f3c1bbd3f21ca5:annex-10",
+          "quote": "7. Forut for behandling mot lakselus som kun omfatter enkelte produksjonsenheter, skal det være gjennomført lakselustelling i alle produksjonsenheter i akvakulturanlegget.",
+          "start": 0
+        }
+      ],
+      "state": "specified",
+      "value": "Establish branch and exemption facts, then check count intervals and every applicable Annex 1 requirement. Missing temperature or exemption facts remain unresolved. Do not invent a rule for restarting the interval when temperature changes."
+    }
+  },
+  "check_design": {
+    "schema": "requirement-check-design/2",
+    "groups": {
+      "condition": {
+        "id": "count-applicable",
+        "condition": "AND",
+        "rules": [
+          {
+            "id": "count-no-slaughter",
+            "condition": "AND",
+            "rules": [
+              {
+                "expression": "all fish in the facility are to be slaughtered out within 14 days after this count was due",
+                "id": "count-slaughter",
+                "interpretation_field": "condition"
+              }
+            ],
+            "not": true
+          },
+          {
+            "id": "count-temp-branches",
+            "condition": "OR",
+            "rules": [
+              {
+                "expression": "applicable seawater temperature >= 4 degrees Celsius",
+                "id": "count-ge4",
+                "interpretation_field": "condition"
+              },
+              {
+                "id": "count-low",
+                "condition": "AND",
+                "rules": [
+                  {
+                    "expression": "applicable seawater temperature < 4 degrees Celsius",
+                    "id": "count-lt4",
+                    "interpretation_field": "condition"
+                  },
+                  {
+                    "id": "count-no-broodstock",
+                    "condition": "AND",
+                    "rules": [
+                      {
+                        "expression": "fish group is broodstock",
+                        "id": "count-broodstock",
+                        "interpretation_field": "condition"
+                      }
+                    ],
+                    "not": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "demand": {
+        "id": "count-demand",
+        "condition": "AND",
+        "rules": [
+          {
+            "id": "count-frequency",
+            "condition": "OR",
+            "rules": [
+              {
+                "id": "count-high-frequency",
+                "condition": "AND",
+                "rules": [
+                  {
+                    "expression": "applicable temperature >= 4 degrees Celsius",
+                    "id": "count-demand-ge4",
+                    "interpretation_field": "demand"
+                  },
+                  {
+                    "expression": "counts at least every 7 days",
+                    "id": "count-days7",
+                    "interpretation_field": "demand"
+                  }
+                ]
+              },
+              {
+                "id": "count-low-frequency",
+                "condition": "AND",
+                "rules": [
+                  {
+                    "expression": "applicable temperature < 4 degrees Celsius",
+                    "id": "count-demand-lt4",
+                    "interpretation_field": "demand"
+                  },
+                  {
+                    "expression": "counts at least every 14 days",
+                    "id": "count-days14",
+                    "interpretation_field": "demand"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "expression": "all applicable Annex 1 requirements are satisfied by qualifying counts",
+            "id": "count-annex",
+            "interpretation_field": "demand"
+          }
+        ]
+      },
+      "scope": {
+        "id": "counting-scope",
+        "condition": "AND",
+        "rules": [
+          {
+            "expression": "Norwegian seawater aquaculture facilities with salmonids, under § 2; exclude slaughter cages at slaughterhouses except where § 5 or the final paragraph of § 9 expressly applies. Assess fish groups within the facility so broodstock exemption does not exempt non-broodstock in a mixed facility.",
+            "id": "counting-scope-predicate",
+            "interpretation_field": "scope"
+          }
+        ]
+      }
+    },
+    "object_type": "Facility-linked fish-group/counting-cycle assessment",
+    "assessment_context": "Draft prepared by the model for user review. Use the same object identity, source version, time period and activity in A, B and C. No actual Site Model or observed compliance result is supplied.",
+    "based_on": null,
+    "identity_field": ""
+  },
+  "linked_material_ids": [],
+  "catalog_revision": 0,
+  "action": "save"
+}

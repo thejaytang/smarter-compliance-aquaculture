@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 import sys
 import pytest
-from test_material_service import integration, request
+from .test_material_service import integration, request
 from pdf_extraction.orchestration.material_job import compute
 from backend.shared.component_process import ComponentPool
 from backend.shared.material_work import pending_work

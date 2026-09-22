@@ -1,0 +1,109 @@
+{
+  "upload": {
+    "upload_id": "53a819aa-2067-4ee6-8fea-9e0c0e6a0e76",
+    "hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+    "size": 4685,
+    "message": "File staged and format check passed. Verify its identity, completeness and permissions before submitting."
+  },
+  "reopen_request": {
+    "request_id": "abe90693-c3df-4561-8446-7ec919c51f59",
+    "source_id": "PE001",
+    "expected_source_revision": "a52247121960aead66ca",
+    "note": "User requests three English examples in the example HTML: sea lice, existing operational journal excerpt, and supplied internal-control section 5."
+  },
+  "reopen": {
+    "status": "opened",
+    "operation_id": "REOPEN-abe90693-c3df-4561-8446-7ec919c51f59"
+  },
+  "manual_request": {
+    "request_id": "92d64a38-4ccf-470f-a619-da9653114562",
+    "task_id": "REOPEN-abe90693-c3df-4561-8446-7ec919c51f59",
+    "revision": "8e860bf5d04a60c1132e84703922813f21495f41fd2a0f8589155b333a058ec0",
+    "source_revision": "a52247121960aead66ca",
+    "action": "manual",
+    "note": "User-authorized update of the locally authored demonstration: three English excerpts. Sea-lice text matches the previously supplied English translation including seawater measurement, broodstock exemption and Annex 1; existing operational journal wording and chapter links are unchanged; section 5 is a working translation of the supplied Norwegian text, retaining a-h and the final paragraph references. Training only, not an official English legal publication. Prior source versions remain in history.",
+    "upload_id": "53a819aa-2067-4ee6-8fea-9e0c0e6a0e76",
+    "identity_verified": true,
+    "permission_verified": true,
+    "explicit_confirmation": true
+  },
+  "manual": {
+    "status": "applied",
+    "message": "决定已写入，来源待办及统计已更新。"
+  },
+  "source": {
+    "source_id": "PE001",
+    "source_title": "example",
+    "snapshot_id": "PE001-004",
+    "stored_filename": "PE001-004_example.html",
+    "content_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+    "effective_selection": "INCLUDE"
+  },
+  "open_request": {
+    "request_id": "a3b27093-6816-4361-bb43-4b136cc70bc8",
+    "source_id": "PE001"
+  },
+  "material": {
+    "association_review_required": false,
+    "blocks": [],
+    "checked_scope": [],
+    "collaboration_provenance": [],
+    "confirmation": null,
+    "content_revision": 0,
+    "content_status": "not_extracted",
+    "created_at": "2026-09-18T07:14:38.714365+00:00",
+    "id": "f5e03bbd741dc49d6cf1e7541fe58593",
+    "issues": [],
+    "last_action": {
+      "actor": "source_intake",
+      "at": "2026-09-18T07:14:38.716015+00:00",
+      "kind": "opened"
+    },
+    "legacy": null,
+    "provenance_version": 1,
+    "requirement_status": "not_connected",
+    "revision": 0,
+    "scope": [
+      {
+        "id": "html:document",
+        "kind": "html",
+        "label": "Complete saved HTML document",
+        "location": {
+          "anchor": "original-document"
+        }
+      }
+    ],
+    "source": {
+      "assessment_id": null,
+      "content_hash": "307a53d4645e6c5569b1b66fd169f770236fc90ae2630567718eaff8fe0d0475",
+      "download_status": "SUCCESS",
+      "file_format": "html",
+      "operator_selection_decision": "INCLUDE",
+      "parsing_copy_of": null,
+      "registry_kind": "sqlite_snapshot",
+      "registry_sha256": "bbb02b4a662a43e03653b5c8b13c337ff0cc7453964f5f034e62e226c78bea52",
+      "relative_path": "E_Project_Engineering/PE001-004_example.html",
+      "selection_origin": "human",
+      "selection_status": "INCLUDE",
+      "snapshot_id": "PE001-004",
+      "snapshot_status": "STORED",
+      "source_id": "PE001",
+      "source_status": "CURRENT"
+    },
+    "source_stale": false,
+    "title": "example",
+    "updated_at": "2026-09-18T07:14:38.716015+00:00",
+    "candidates": [],
+    "conflicts": [],
+    "related_versions": [],
+    "source_issues": [],
+    "collaboration": {
+      "mode": "coordinator",
+      "view": "personal",
+      "draft_revision": 0,
+      "coordinator": "Weijie Tang",
+      "master_digest": "81dd24db73c4dfa87984948daa3f05e4842509e1387cb06d3c72ed6b7fba112f",
+      "provenance": []
+    }
+  }
+}

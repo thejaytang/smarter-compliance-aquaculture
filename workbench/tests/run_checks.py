@@ -23,7 +23,7 @@ def main():
         'workbench': [(ROOT, [python(WORKBENCH), '-m', 'unittest', *[p.stem for p in sorted(TESTS.glob('test_*.py'))]], TESTS)],
         'system1': [(ROOT, [python(BACKEND/'system1'), '-m', 'unittest', 'discover', '-s', TESTS/'system1'], BACKEND/'system1/src', TESTS/'system1')],
         'system2': [(BACKEND/'system2', [python(BACKEND/'system2'), '-m', 'pytest', '-c', 'pyproject.toml'], BACKEND/'system2/src')],
-        'frontend': [(ROOT, ['node', '--test', *sorted(TESTS.glob('test_*.mjs'))])],
+        'frontend': [(ROOT, ['node', '--test', *sorted({*TESTS.glob('test_*.mjs'), *TESTS.glob('*.test.mjs')})])],
         'integration': [(ROOT, [python(WORKBENCH), TESTS/'integration'/name], TESTS/'integration')
                         for name in ['architecture_migration.py', 'colleague_handoff.py']],
     }

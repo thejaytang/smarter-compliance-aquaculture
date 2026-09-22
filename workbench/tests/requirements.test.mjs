@@ -174,11 +174,12 @@ function quantityFixture(){
  const row={dataset:{count:'2',current:'2'},closest:()=>group,parentElement:{querySelector:()=>error},querySelectorAll:s=>s==='input'?inputs:[],querySelector:()=>output,contains:node=>inputs.includes(node)};
  editor.bindQuantity(row);return {editor,m,row,inputs,output,error};
 }
-test('range input previews immediately, rejects non-digits, clamps, and warns before leaving',async()=>{
+test('range input previews immediately, rejects non-digits, retains invalid values, and warns before leaving',async()=>{
  const {editor,row,inputs,output,error}=quantityFixture();let sent=0;editor.action=async()=>{sent++;return true;};
  inputs[0].value='0';inputs[0].oninput();assert.equal(output.textContent,'[0, 2]');assert.equal(editor.dirty,true);
- inputs[1].value='99';inputs[1].oninput();assert.equal(inputs[1].value,'2');
- inputs[1].value='-1';inputs[1].oninput();assert.equal(inputs[1].value,'2');
+ inputs[1].value='99';inputs[1].oninput();assert.equal(inputs[1].value,'99');
+ assert.equal(await row.commitQuantity(),false);assert.equal(sent,0);assert.equal(error.hidden,false);
+ inputs[1].value='-1';inputs[1].oninput();assert.equal(inputs[1].value,'99');
  let prevented=false;inputs[0].onbeforeinput({data:'e',preventDefault(){prevented=true;}});assert.ok(prevented);
  row.onfocusout({relatedTarget:inputs[1]});assert.equal(sent,0);
  inputs[1].value='';inputs[1].oninput();assert.equal(await row.commitQuantity(),false);assert.equal(sent,0);assert.equal(error.hidden,false);
@@ -297,4 +298,72 @@ test('an uncertain completion save retries its exact atomic request and retains 
  const {editor,m,host}=fixture();editor.doc=documentFixture();editor.edits=[{request_id:'edit',action:'assign'}];editor.dirty=true;editor.baseSession='s';editor.baseRevision=2;editor.render=()=>{};host.querySelectorAll=()=>[];let attempted;
  m.api=async(p,b)=>{attempted=b;throw Error('Network interrupted');};await editor.saveDraft(true);assert.equal(editor.dirty,true);assert.equal(editor.sessionCollapsed,false);assert.deepEqual(editor.retryRequest,attempted);
  m.api=async(p,b)=>{assert.deepEqual(b,attempted);return {document:{...editor.doc,revision:3,phase:'complete',done:['u','v']}};};await editor.step('',{},editor.retryRequest);assert.equal(editor.dirty,false);assert.equal(editor.sessionCollapsed,true);assert.equal(editor.selected,null);
+});
+
+test('reopening a saved material selects its Requirement for the fourth pane',async()=>{
+ const {editor,m}=fixture();m.api=async()=>({sessions:[{id:'saved',units:{u:{text:'Source'}}}],deleted:[]});let args;
+ editor.open=async(...values)=>{args=values;};await editor.loadList();assert.deepEqual(args,['saved']);
+});
+
+test('annotation navigation preserves the current document and selection when dirty, pending or rejected',async()=>{
+ for(const reason of ['dirty','pending','rejected','missing-unit']){
+  const {editor,m}=fixture();editor.doc=documentFixture();editor.selected='u';editor.closedUnits.add('v');editor.render=()=>{};let reads=0,sync=0;
+  m.unsavedDialog=()=>{};editor.syncInterpretation=()=>sync++;
+  if(reason==='dirty')editor.dirty=true;if(reason==='pending')editor.pending=true;
+  m.api=async()=>{reads++;if(reason==='rejected')throw Error('Read failed');return {...documentFixture(),id:'other'};};
+  await editor.navigateAnnotation([{session_id:'other',unit_id:'missing',field:'Subject'}]);
+  assert.equal(editor.doc.id,'s',reason);assert.equal(editor.selected,'u',reason);assert.equal(editor.closedUnits.has('v'),true);assert.equal(sync,0);assert.equal(reads,['dirty','pending'].includes(reason)?0:1);
+ }
+});
+test('an out-of-order annotation read cannot overwrite the later accepted destination',async()=>{
+ const {editor,m}=fixture();editor.doc=documentFixture();editor.selected='u';editor.render=()=>{};const resolves={};m.api=p=>new Promise(resolve=>resolves[new URL(p,'http://local').searchParams.get('id')]=resolve);editor.syncInterpretation=()=>{};
+ const old=editor.navigateAnnotation([{session_id:'slow',unit_id:'v',field:'Subject'}]),later=editor.open('new','u');
+ resolves.new({...documentFixture(),id:'new'});assert.equal(await later,true);resolves.slow({...documentFixture(),id:'slow'});assert.equal(await old,false);assert.equal(editor.doc.id,'new');assert.equal(editor.selected,'u');
+});
+test('a delayed failed read does not replace the newer destination feedback',async()=>{
+ const {editor,m}=fixture();editor.doc=documentFixture();editor.render=()=>{};editor.syncInterpretation=()=>{};let reject;
+ m.api=()=>new Promise((_,r)=>reject=r);const read=editor.open('slow');m.api=async()=>({...documentFixture(),id:'fast'});await editor.open('fast');editor.notice='Current message';reject(Error('Old read failure'));await read;assert.equal(editor.doc.id,'fast');assert.equal(editor.notice,'Current message');
+});
+test('matching candidate source status is read independently of an unrelated stale open entry',async()=>{
+ for(const stale of [false,true]){
+  const {editor,m}=fixture();editor.doc={...documentFixture(),id:'unrelated',stale:!stale};editor.sessions=[{id:'match',block_id:'b',text:m.draft.blocks[0].text}];editor.render=()=>{};editor.syncInterpretation=()=>{};let starts=0,reads=0;
+  m.api=async()=>{reads++;return {...documentFixture(),id:'match',stale};};editor.step=async(action)=>{assert.equal(action,'start');starts++;return true;};
+  await editor.start('b');assert.equal(reads,1);assert.equal(starts,stale?1:0);assert.equal(editor.doc.id,stale?'unrelated':'match');
+ }
+});
+test('failed or superseded candidate reads cannot create a duplicate entry',async()=>{
+ const {editor,m}=fixture();editor.doc={...documentFixture(),id:'old'};editor.sessions=[{id:'match',block_id:'b',text:m.draft.blocks[0].text}];editor.render=()=>{};editor.step=()=>assert.fail('No start');m.api=async()=>{throw Error('Read failed');};await editor.start('b');assert.equal(editor.doc.id,'old');
+ let resolve;m.api=()=>new Promise(r=>resolve=r);const task=editor.start('b');editor.context='changed-material';resolve({...documentFixture(),id:'match',stale:true});assert.equal(await task,false);assert.equal(editor.doc.id,'old');
+});
+function combinedFixture(blocks){
+ const f=fixture();f.m.draft.blocks=blocks;f.editor.render=()=>{};const checks=blocks.map(b=>({dataset:{sourceBlock:b.id},checked:false})),create={},count={},error={};let closed=0;
+ const dialog={querySelectorAll:()=>checks,querySelector:s=>s==='[data-create-requirement]'?create:s==='[data-source-count]'?count:error,close:()=>closed++};
+ f.m.dialog=(html,bind)=>{assert.match(html,/data-source-count/);bind(dialog);};return {...f,checks,create,count,error,closed:()=>closed};
+}
+test('combined passage picker retains zero, 101 and 100001-codepoint selections without a request',async()=>{
+ for(const scenario of ['empty','count','unicode']){
+  const blocks=scenario==='count'?Array.from({length:101},(_,i)=>({id:'b'+i,type:'text',text:'x'})):[{id:'b',type:'text',text:'🐟'.repeat(50000)},{id:'c',type:'text',text:'🐟'.repeat(49999)}];
+  const f=combinedFixture(blocks);f.editor.step=()=>assert.fail('Invalid selection must not request preview');await f.editor.start(blocks[0].id,true);
+  f.checks.forEach(n=>n.checked=scenario!=='empty');await f.create.onclick();assert.equal(f.error.hidden,false);assert.equal(f.closed(),0);assert.equal(f.checks.filter(n=>n.checked).length,scenario==='empty'?0:blocks.length);
+  if(scenario==='unicode')assert.match(f.count.textContent,/100,001/);
+ }
+});
+test('combined picker sends original source-ordered IDs, retains definitive failures and closes for exact Retry',async()=>{
+ const f=combinedFixture([{id:'a',type:'text',text:'🐟 A'},{id:'b',type:'text',text:'B'}]);await f.editor.start('a',true);f.checks.reverse().forEach(n=>n.checked=true);let sent;
+ f.editor.step=async(a,b)=>{sent=b;f.editor.notice='Rejected original range';return false;};await f.create.onclick();assert.deepEqual(sent.block_ids,['a','b']);assert.equal(f.closed(),0);assert.equal(f.checks.every(n=>n.checked&&!n.disabled),true);assert.match(f.error.textContent,/Rejected/);assert.match(f.count.textContent,/6 \/ 100,000/);
+ f.editor.step=async()=>{f.editor.retryRequest={request_id:'exact'};return false;};await f.create.onclick();assert.equal(f.closed(),1);assert.equal(f.editor.retryRequest.request_id,'exact');
+});
+test('Save & close locates server-defined pending structures after rejection while ordinary Save stays available',async()=>{
+ for(const kind of ['empty','quantity','relationship']){
+  const {editor,host,m}=fixture();editor.doc=documentFixture();editor.doc.units={u:editor.doc.units.u};editor.doc.roots=[1,'u'];editor.doc.spans={u:[0,16]};editor.render=()=>{};host.querySelectorAll=()=>[];
+  const fragment={kind:'fragment',id:'f',role:'Subject',text:'Fish',span:[0,4]};const node={kind:'group',id:'pending',role:'Subject',span:[0,16],quantity:kind==='quantity'?null:1,children:kind==='empty'?[]:[fragment]};if(kind==='relationship')node.relationship={span:[5,10],text:'shall'};
+  editor.doc.structures={u:{id:'root',kind:'clause',span:[0,16],children:[node]}};editor.closedUnits.add('u');editor.groupEditor.closed.add('pending');let calls=0;
+  m.api=async()=>{calls++;throw Object.assign(Error('The structure is incomplete.'),{definitive:true});};assert.equal(await editor.saveDraft(true),false);assert.equal(calls,1);assert.equal(editor.groupEditor.closed.has('pending'),false);assert.equal(editor.closedUnits.has('u'),false);assert.match(editor.notice,/G\d+:/);
+  editor.dirty=true;editor.edits=[{action:'structure'}];let steps;editor.step=async(a,b)=>{steps=b.steps;return true;};await editor.saveDraft();assert.equal(steps.some(s=>s.action==='phase'||s.action==='done'),false);
+ }
+});
+test('an already-open matching candidate still reads authoritative source status before reuse',async()=>{
+ const {editor,m}=fixture();editor.doc={...documentFixture(),block_id:'b',text:m.draft.blocks[0].text,stale:false};editor.sessions=[editor.doc];editor.render=()=>{};let reads=0,starts=0;
+ m.api=async()=>{reads++;return {...editor.doc,stale:true};};editor.step=async action=>{assert.equal(action,'start');starts++;return true;};
+ await editor.start('b');assert.equal(reads,1);assert.equal(starts,1);
 });

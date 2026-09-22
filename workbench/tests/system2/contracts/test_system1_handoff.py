@@ -1,7 +1,6 @@
 from hashlib import sha256
 import json
 from pathlib import Path
-from types import SimpleNamespace
 import pytest
 from openpyxl import Workbook
 
@@ -18,10 +17,10 @@ def fixture(tmp_path, monkeypatch, effective='INCLUDE'):
     store(root/'Data',source())
     reply={'ok':True,'data':{'revision':'b'*64,'sources':[dict(record,effective_selection=effective,source_revision='revision-1')]}}
     calls=[]
-    def call(command,**kwargs):
-        calls.append((command,kwargs))
-        return SimpleNamespace(returncode=0,stdout=json.dumps(reply))
-    monkeypatch.setattr(system1.subprocess,'run',call)
+    def call(python,module,cwd,env,payload,**kwargs):
+        calls.append((python,module,cwd,env,payload,kwargs))
+        return json.loads(json.dumps(reply))
+    monkeypatch.setattr(system1._bridge_pool,'request',call)
     return root,registry,reply,calls
 
 
@@ -35,10 +34,12 @@ def test_authority_supplies_selection_when_cache_is_empty_without_writes(tmp_pat
     manifest=build_manifest(handoff.records,handoff.registry_sha256,handoff.source_root,{'PA001'})
     assert len(manifest['items'])==1 and not manifest['rejected']
     assert registry.read_bytes()==before and handoff.registry_sha256==sha256(before).hexdigest()
-    command,kwargs=calls[0]
-    assert command==[str(root/('Code/.venv/Scripts/python.exe' if __import__('os').name == 'nt' else 'Code/.venv/bin/python')),'-m','system1.workbench_bridge']
-    assert json.loads(kwargs['input'])=={'command':'read','config':str(root/'Code/config/config.json')}
-    assert kwargs['env']['PYTHONPATH'].split(__import__('os').pathsep)[0]==str(root/'Code/src')
+    python,module,cwd,env,payload,kwargs=calls[0]
+    assert Path(python)==root/('Code/.venv/Scripts/python.exe' if __import__('os').name == 'nt' else 'Code/.venv/bin/python')
+    assert module=='system1.workbench_bridge' and cwd==root/'Code'
+    assert payload=={'command':'read','config':str(root/'Code/config/config.json')}
+    assert env['PYTHONPATH'].split(__import__('os').pathsep)[0]==str(root/'Code/src')
+    assert kwargs['timeout']==60
     assert handoff.evidence['sources']['PA001']['source_revision']=='revision-1'
 
 
@@ -58,7 +59,10 @@ def test_malformed_authority_receipt_is_rejected(tmp_path,monkeypatch,mutation):
     elif mutation=='missing_revision':reply['data']['sources'][0].pop('source_revision')
     elif mutation=='wrong_identity':reply['data']['sources'][0]['source_id']='PA002'
     elif mutation=='failure':reply['ok']=False
-    else:monkeypatch.setattr(system1.subprocess,'run',lambda *a,**k:SimpleNamespace(returncode=0,stdout='broken'))
+    else:
+        def invalid_receipt(*args,**kwargs):
+            raise RuntimeError('Invalid JSON component receipt')
+        monkeypatch.setattr(system1._bridge_pool,'request',invalid_receipt)
     with pytest.raises(IntakeError,match='invalid_read_receipt'):system1.read_system1(root)
 
 
@@ -66,8 +70,8 @@ def test_changed_authority_is_not_published(tmp_path,monkeypatch):
     root,registry,reply,_=fixture(tmp_path,monkeypatch)
     def changed(*args,**kwargs):
         registry.write_bytes(b'external change')
-        return SimpleNamespace(returncode=0,stdout=json.dumps(reply))
-    monkeypatch.setattr(system1.subprocess,'run',changed)
+        return json.loads(json.dumps(reply))
+    monkeypatch.setattr(system1._bridge_pool,'request',changed)
     with pytest.raises(IntakeError,match='changed_during_handoff'):system1.read_system1(root)
 
 
@@ -89,10 +93,9 @@ def test_database_handoff_ignores_excel_and_guards_logical_versions(tmp_path,mon
     values=json.loads(config.read_text());values['governance_db']='state.sqlite';config.write_text(json.dumps(values))
     version={'revision':1,'import_sha256':'a'*64,'assessment_sha256':'b'*64}
     reply['data']['authority']={'kind':'sqlite','revision':1,'version':dict(version),'state_sha256':'c'*64}
-    def call(command,**kwargs):
-        request=json.loads(kwargs['input'])
-        return SimpleNamespace(returncode=0,stdout=json.dumps({'ok':True,'data':version} if request['command']=='authority_version' else reply))
-    monkeypatch.setattr(system1.subprocess,'run',call)
+    def call(python,module,cwd,env,payload,**kwargs):
+        return json.loads(json.dumps({'ok':True,'data':version} if payload['command']=='authority_version' else reply))
+    monkeypatch.setattr(system1._bridge_pool,'request',call)
     registry.write_bytes(b'Unsubmitted derived Excel edit: not a workbook')
     handoff=system1.read_system1(root)
     assert handoff.registry_sha256=='c'*64

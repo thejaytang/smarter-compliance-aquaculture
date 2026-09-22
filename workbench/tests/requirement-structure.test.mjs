@@ -254,3 +254,52 @@ test('Split keeps one visible same-field Group without rewriting its implicit wr
  assert.doesNotMatch(html,/data-structure-node="holder"/);assert.match(html,/data-structure-node="split"/);assert.doesNotMatch(html,/data-straction="group"/);assert.equal(JSON.stringify(tree),before);
  wrapper.quantity=[0,1];assert.match(editor.nodeMarkup(tree,e.doc.units.u,tree,editor.labels(tree),false,true),/data-structure-node="holder"/);
 });
+
+test('Group MIN–MAX keeps invalid and two-digit human input until explicitly corrected',async()=>{
+ const {editor,e,tree}=editorFixture();const model=tree.children[1];const inputs=['1','2'].map(value=>({value,dataset:{},setAttribute(k,v){this[k]=v;},removeAttribute(k){delete this[k];}})),error={hidden:true},output={},node={dataset:{owner:'u',structureNode:model.id}};
+ const row={closest:()=>node,querySelector:s=>s==='[data-rq-min]'?inputs[0]:s==='[data-rq-max]'?inputs[1]:output,parentElement:{querySelector:()=>error}};let calls=0;editor.apply=async()=>{calls++;return true;};editor.bindQC(row);
+ inputs[1].value='99';inputs[1].oninput();assert.equal(inputs[1].value,'99');assert.equal(inputs[1]['aria-invalid'],'true');assert.equal(await row.commitQuantity(),false);assert.equal(calls,0);assert.deepEqual(e.quantityDrafts.get('tree:u:branches'),['1','99']);
+ inputs[1].value='2';inputs[1].oninput();assert.equal(await row.commitQuantity(),true);assert.equal(calls,1);assert.equal(error.hidden,true);
+ model.children=Array.from({length:10},(_,i)=>fragment('f'+i,'Object','x',[i,i+1]));editor.bindQC(row);inputs[1].value='1';inputs[1].oninput();inputs[1].value='10';inputs[1].oninput();assert.equal(inputs[1].value,'10');assert.equal(error.hidden,true);
+});
+test('checked siblings survive presentation redraw and grouping uses original direct-child order',async()=>{
+ const {editor,e,tree}=editorFixture();const node=tree.children[1];node.children.push(clause('c',[],[25,30]));e.host={querySelectorAll:()=>[],querySelector:()=>null};editor.picks.set(editor.pickKey('u',node.id),new Set(['c','a']));let sent;e.step=async(a,b)=>{sent=b;return true;};
+ const button=action=>({dataset:{straction:action},closest:()=>({dataset:{owner:'u',structureNode:node.id}})});
+ await editor.action(button('range-mode'));await editor.action(button('show-link'));const html=editor.nodeMarkup(node,e.doc.units.u,tree,editor.labels(tree),false);
+ assert.match(html,/data-structure-pick="a"[^>]*checked/);assert.match(html,/data-structure-pick="c"[^>]*checked/);assert.doesNotMatch(html,/data-structure-pick="b"[^>]*checked/);assert.match(html,/Group selected \(2\)/);assert.equal(sent,undefined);
+ await editor.action(button('group'));assert.deepEqual(sent.selected,['a','c']);node.children=node.children.filter(n=>n.id!=='a');editor.prunePicks();assert.deepEqual(editor.picked('u',node),['c']);editor.reset();assert.deepEqual(editor.picked('u',node),[]);
+});
+test('failed removal retains target quantity drafts; successful removal clears only removed descendants',async()=>{
+ for(const outcome of ['invalid-other','rejected','uncertain','success']){
+  const {editor,e}=editorFixture();e.quantityDrafts.set('tree:u:a',['0','1']);e.quantityDrafts.set('tree:u:sa',['0','1']);e.quantityDrafts.set('tree:u:branches',['0','99']);let sent=0;
+  e.host={querySelectorAll:()=>[{commitQuantity:async()=>outcome!=='invalid-other'}]};editor.apply=async()=>{sent++;if(outcome==='uncertain')e.retryRequest={};return outcome==='success';};
+  await editor.action({dataset:{straction:'remove'},closest:()=>({dataset:{owner:'u',structureNode:'a'},contains:()=>false})});
+  assert.equal(e.quantityDrafts.has('tree:u:a'),outcome!=='success',outcome);assert.equal(e.quantityDrafts.has('tree:u:sa'),outcome!=='success',outcome);assert.deepEqual(e.quantityDrafts.get('tree:u:branches'),['0','99']);assert.equal(sent,outcome==='invalid-other'?0:1);
+ }
+});
+test('annotation reveal focuses exact stable nested node and connector, leaving unrelated Groups closed',()=>{
+ const {editor,e}=relationshipFixture();let focused,scrolled;const target=id=>({dataset:{owner:'u',structureNode:id},setAttribute(){},scrollIntoView(){scrolled=id;},focus(){focused=id;},querySelector:()=>target('relationship-row')});
+ e.host={querySelectorAll:()=>[target('owner'),target('c')]};editor.closed=new Set(['owner','objects','unrelated']);e.closedUnits.add('u');e.showError=err=>e.notice=err.message;
+ assert.equal(editor.reveal('u','c'),true);assert.equal(focused,'c');assert.equal(scrolled,'c');assert.equal(editor.closed.has('unrelated'),true);assert.equal(editor.closed.has('objects'),false);
+ assert.equal(editor.reveal('u','owner','relationship'),true);assert.equal(focused,'relationship-row');assert.equal(editor.reveal('u','stale'),false);assert.match(e.notice,/no longer be located/);
+});
+test('link picker shows full literal source wording and clears it before any Link action',()=>{
+ const {editor,e}=editorFixture();const prefix='Identical '.repeat(15),targets=[{id:'v',text:prefix+'first <script>alert(1)</script>'},{id:'w',text:prefix+'second exact source'}];e.completeRequirements=()=>targets;const preview={},linkButton={},link={querySelector:s=>s==='[data-reference-preview]'?preview:linkButton};const select={value:'v',closest:s=>s==='.rq-tree-link'?link:{dataset:{owner:'u'}}};const host={querySelectorAll:s=>s==='[data-structure-reference]'?[select]:[]};editor.bind(host);
+ select.onchange();assert.equal(preview.textContent,'v · v\n'+targets[0].text);assert.equal(preview.hidden,false);assert.equal(linkButton.disabled,false);select.value='w';select.onchange();assert.match(preview.textContent,/second exact source$/);select.value='';select.onchange();assert.equal(preview.textContent,'');assert.equal(preview.hidden,true);assert.equal(linkButton.disabled,true);
+ const html=editor.linkMarkup(e.doc.units.u,editor.tree('u'));assert.match(html,/aria-describedby="rq-link-u-root/);assert.doesNotMatch(html,/<script>/);
+});
+test('definitively rejected source annotation retains exact range; source change invalidates it and uncertain results stay locked',async()=>{
+ for(const outcome of ['rejected','changed','uncertain','success']){
+  const {editor,e}=editorFixture();e.doc.units.u.text='🐟 exact words';e.host={querySelectorAll:()=>[]};editor.selection={unit_id:'u',node_id:'root',start:2,end:7};
+  editor.apply=async()=>{if(outcome==='changed')e.doc.units.u.text='Changed source';if(outcome==='uncertain'){e.retryRequest={request_id:'exact'};e.locked=true;}return outcome==='success';};
+  await editor.action({dataset:{straction:'add',field:'Object'},closest:()=>null});
+  if(['changed','success'].includes(outcome))assert.equal(editor.selection,null);else{assert.deepEqual(editor.selection,{unit_id:'u',node_id:'root',start:2,end:7});assert.equal(editor.selectionValid(),true);}
+  if(outcome==='uncertain')assert.equal(e.locked,true);
+ }
+});
+test('ordinary binding does not restore an earlier rejected range or steal quantity focus',()=>{
+ const {editor}=editorFixture();editor.selection={unit_id:'u',node_id:'root',start:0,end:1};editor.selectionContext=editor.selectionStamp();editor.restoreSelection=()=>assert.fail('Only a rejected action may restore the range');editor.bind({querySelectorAll:()=>[]});
+});
+
+test('source toolbar follows viewport changes and disappears when its original selection leaves view',()=>{const {editor,e}=editorFixture(),prior=globalThis.window,listeners=new Map();globalThis.window={innerWidth:1200,innerHeight:800,addEventListener:(key,fn)=>listeners.set(key,fn),removeEventListener:key=>listeners.delete(key)};const bar={isConnected:true,hidden:false,style:{},offsetWidth:320,offsetHeight:90},source={isConnected:true,closest:()=>({getBoundingClientRect:()=>({left:0,right:1200,top:0,bottom:700})})};let rect={left:880,right:990,top:300,bottom:320};const range={cloneRange(){return this;},getBoundingClientRect:()=>rect};const before=JSON.stringify(e.doc);editor.selectionValid=()=>true;try{editor.trackSelection({},source,bar,range);assert.equal(bar.style.left,'872px');window.innerWidth=500;rect={left:350,right:420,top:300,bottom:320};listeners.get('resize')();assert.equal(bar.style.left,'172px');assert.equal(bar.hidden,false);rect={left:40,right:90,top:300,bottom:320};editor.trackSelection({},source,bar,range);rect={left:40,right:90,top:-200,bottom:-50};listeners.get('scroll')();assert.equal(bar.hidden,true);assert.equal(listeners.size,0);assert.equal(JSON.stringify(e.doc),before);}finally{editor.stopSelectionTracking();globalThis.window=prior;}});
+test('source toolbar Escape restores source focus and removes placement listeners without an edit',()=>{const {editor,e}=editorFixture(),bar={hidden:false},host={querySelectorAll:()=>[]};editor.bind(host);host.querySelectorAll=()=>[bar];const source={focus(){this.focused=true;}};editor.selectionSource=source;let removed=false;editor.selectionTracking=()=>removed=true;host.onkeydown({key:'Escape',target:{closest:()=>bar},preventDefault(){}});assert.equal(source.focused,true);assert.equal(bar.hidden,true);assert.equal(removed,true);assert.equal(editor.selectionSource,null);});

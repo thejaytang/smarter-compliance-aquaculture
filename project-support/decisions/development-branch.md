@@ -1,11 +1,13 @@
 # Jay development branch
 
-Decision date: 2026-09-17. The user explicitly selected the maintained development scope after reviewing the size and purpose of historical runtime backups.
+Decision updated: 2026-09-22. The user chose the same public repository for complete development content and an Example-only product `main`. Earlier publication permissions remain historical; they do not keep full business snapshots on the current `main` tree.
 
-- `main`: the shared Windows/macOS colleague product and the already authorized initial business snapshot. On 2026-09-18, the user authorized promoting Windows commit `d1e8aab` and synchronizing the Mac development checkout. Product integration `2458352` includes those fixes and corrected worker diagnostics. See the [integration checks](../validation/windows-sync-20260918/RESULTS.md).
-- `developing-only-jay`: the product plus project state, design/decision/plan documents, development tools, tests, verification reports, diagrams and retained reference evidence. Both branches are public.
+Original decision date: 2026-09-17. The user explicitly selected the maintained development scope after reviewing the size and purpose of historical runtime backups.
+
+- `main`: the shared Windows/macOS colleague product and only the permanent PE002 Example, its fresh seed and saved annotation package. On 2026-09-18, the user authorized promoting Windows commit `d1e8aab` and synchronizing the Mac development checkout. Product integration `2458352` includes those fixes and corrected worker diagnostics. See the [integration checks](../validation/windows-sync-20260918/RESULTS.md).
+- `developing-only-jay`: the product plus complete dated business snapshots, project state, design/decision/plan documents, development tools, tests, verification reports, diagrams and retained reference evidence. Both branches are public.
 - Local only: environments, caches, private credentials, login state, retained recovery evidence and machine-specific fixture links. The user subsequently authorized cleanup of obsolete database copies, runtime backups and isolated test outputs on 2026-09-17. The latest verified complete recovery, original migration checkpoint, active data and referenced development fixtures are retained; see the [cleanup record](../validation/local-storage-cleanup-20260917/RESULTS.md).
-- Active business files remain local. The complete four-store initial snapshot with originals and human history is already versioned under `workbench/initial-data`; normal updates never restore it automatically.
+- Active business files remain local. The complete four-store initial snapshot with originals and human history is versioned under `workbench/initial-data` only on development; normal updates never restore it automatically.
 - Publish selected application changes to `main` through a separate checkout. Never merge this development branch wholesale into `main`, because its file policy and records have a different audience.
 - Integrate product updates from `main` into `developing-only-jay` while retaining development files. `developing-win` remains the original Windows handoff reference; colleagues should use `main` for subsequent product updates.
 

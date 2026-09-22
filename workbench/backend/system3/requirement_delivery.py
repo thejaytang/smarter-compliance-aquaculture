@@ -12,10 +12,10 @@ from backend.shared.identities import named
 from backend.shared.records import fingerprint, encoded, now
 from backend.system3.requirements import Requirements, FIELDS, RELATIONS, leaves
 from backend.system3 import requirement_structure as tree_structure
-from backend.system3.interpretations import Interpretations, KEYS, checking_logic
+from backend.system3.interpretations import Interpretations, KEYS, checking_logic, validate_card_reviews
 from backend.system3 import interpretation_lineage as lineage
 from backend.system3.requirement_relations import project as project_relations
-from backend.system3.check_design import validate_design
+from backend.system3.check_design import validate_design, logic_fields, concept_issues
 from backend.system3.interpretation_continuity import review_ready
 
 SCHEMA='requirement-delivery/2'
@@ -166,13 +166,15 @@ class Delivery:
                     legacy=deepcopy(d['fields'])
                     for f in legacy.values():f['references']=[];f['basis']='interpretation'
                     self.s.validate_fields(legacy,ctx)
-                validate_design(d.get('check_design'))
+                validate_design(d.get('check_design'), ctx['citations'] if ctx['citations'] else None)
                 logic=d.get('logic',{})
                 structure=logic.get('source_structure',{})
                 if structure.get('requirement') is not None and structure['requirement']!=split['units'][d['unit_id']]:raise ValueError('Checking logic points to different Requirement structure.')
                 if (structure.get('structure') is not None and structure['structure']!=tree_structure.legacy(split,d['unit_id'])) or (d['unit_id'] in split.get('structures',{}) and structure.get('structure') is None):raise ValueError('Checking logic differs from the saved group structure.')
-                if logic!=checking_logic(d['fields'],logic.get('exceptions',[]),structure):raise ValueError('Imported checking logic must be the deterministic, non-executable design.')
-                if type(d.get('reviewed')) is not bool or d['reviewed'] and not all(review_ready(f) for f in d['fields'].values()):raise ValueError('Invalid interpretation review state.')
+                if logic!=checking_logic(d['fields'],logic.get('exceptions',[]),structure,
+                    design=d.get('check_design'), context_fingerprint=d.get('context_fingerprint',''), catalog=d.get('catalog_snapshot')):raise ValueError('Imported checking logic must be the deterministic, non-executable design.')
+                if type(d.get('reviewed')) is not bool or d['reviewed'] and (not all(review_ready(f) for f in logic_fields(d['fields'],d.get('check_design')).values()) or concept_issues(d.get('check_design') or {})):raise ValueError('Invalid interpretation review state.')
+                validate_card_reviews(d)
             if item['head_revision'] not in heads:raise ValueError('Missing interpretation head.')
         seen_runs=set()
         for run in v['candidates']:
@@ -180,6 +182,7 @@ class Delivery:
             uuid.UUID(run['id'])
             if run['id'] in seen_runs or run['unit_id'] not in {u for d in steps.values() for u in d['units']}:raise ValueError('Invalid candidate identity.')
             seen_runs.add(run['id'])
+            if run.get('check_design'): validate_design(run['check_design'], run['context']['citations'])
             if run.get('suggestions'):
                 fields={k:run['suggestions'].get(k,dict(value='',basis='unresolved',references=[],gaps=[])) for k in KEYS}
                 self.s.validate_fields(fields,run['context'])

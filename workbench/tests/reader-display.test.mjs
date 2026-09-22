@@ -5,7 +5,7 @@ import {Materials} from '../frontend/components/materials.js';
 
 function fixture(){
  const x=new Materials(),nodes=new Map(),image={src:'old-image',style:{width:'100%'},naturalWidth:675,getBoundingClientRect:()=>({width:f.cssWidth})},host={scrollTop:143,scrollLeft:31},f={x,cssWidth:600,calls:[],image,host};
- x.q=s=>s==='.mw-pdf-page-image'?image:s==='.mw-pdf-image-scroll'?host:nodes.get(s)||nodes.set(s,{innerHTML:'',textContent:'',hidden:true,style:{},classList:{toggle(){},remove(){}}}).get(s);
+ x.q=s=>s==='.mw-pdf-page-image'?image:s==='.mw-pdf-image-scroll'?host:nodes.get(s)||nodes.set(s,{innerHTML:'',textContent:'',hidden:true,attributes:{},setAttribute(k,v){this.attributes[k]=v;},focus(){this.focused=true;},insertAdjacentHTML(where,html){this.innerHTML+=html;},style:{},classList:{toggle(){},remove(){}}}).get(s);
  x.root={querySelectorAll:()=>[]};x.material={id:'material-1',source:{content_hash:'source-hash'},collaboration:{view:'personal'}};x.id='material-1';x.token={};x.readerTicket={};x.pdfDisplaySession={};x.reader={kind:'pdf',page:2,pages:5,width:600,height:800,source_sha256:'source-hash',image:'old-image',image_width:675,image_height:900};
  f.result=(width,overrides={})=>({...x.reader,image:'new-image',image_width:width,image_height:Math.round(width*4/3),render_width_requested:width,render_limited:false,...overrides});
  x.openingRequest=async url=>{f.calls.push(url);return f.result(Number(new URL(url,'http://local').searchParams.get('render_width')));};
@@ -87,9 +87,9 @@ test('interactive PDF page messages cannot change source, view or page through a
  try{
   const f=fixture(),frame=f.x.q('.mw-interactive-pdf');frame.contentWindow={};f.x.reader.interactive_pdf_reader='pdfjs-6.3.289';
   f.x.renderReader(f.x.reader);assert.match(f.x.q('#mw-reader').innerHTML,/Original PDF reader/);assert.equal(f.calls.length,0);
-  const accept=listeners.get('message'),valid={origin:'http://local',source:frame.contentWindow,data:{type:'saved-pdf-page',id:f.x.id,view:'personal',page:3}};
-  for(const change of [{origin:'https://foreign.example'},{source:{}},{data:{...valid.data,id:'other'}},{data:{...valid.data,view:'master'}},{data:{...valid.data,page:6}},{data:{...valid.data,page:2.5}}]){accept({...valid,...change});assert.equal(f.x.reader.page,2);}
-  accept(valid);assert.equal(f.x.reader.page,3);assert.match(f.x.q('.mw-open-pdf-reader').href,/page=3/);assert.equal(f.x.material.source.content_hash,'source-hash');
+  const accept=listeners.get('message'),valid={origin:'http://local',source:frame.contentWindow,data:{type:'saved-pdf-page',id:f.x.id,view:'personal',page:3,zoom:'1.5',rotation:90}};
+  for(const change of [{origin:'https://foreign.example'},{source:{}},{data:{...valid.data,id:'other'}},{data:{...valid.data,view:'master'}},{data:{...valid.data,page:6}},{data:{...valid.data,page:2.5}},{data:{...valid.data,zoom:'javascript:bad'}},{data:{...valid.data,rotation:'90'}},{data:{...valid.data,rotation:45}}]){accept({...valid,...change});assert.equal(f.x.reader.page,2);}
+  accept(valid);assert.equal(f.x.reader.page,3);assert.match(f.x.q('.mw-open-pdf-reader').href,/page=3&zoom=1.5&rotation=90/);assert.equal(f.x.material.source.content_hash,'source-hash');
   f.x.stopPdfDisplay();assert.equal(listeners.size,0);
  }finally{for(const [key,value] of Object.entries(saved))if(value===undefined)delete globalThis[key];else globalThis[key]=value;}
 });
@@ -99,4 +99,61 @@ test('switching reader modes explicitly reloads only the currently selected page
  await f.x.readerAction('reader-pdf-mode');assert.equal(f.x.pdfImageFallback,true);
  await f.x.readerAction('reader-pdf-mode');assert.equal(f.x.pdfImageFallback,false);
  assert.deepEqual(pages,[{page:2},{page:2}]);assert.equal(f.x.draft,draft);assert.equal(f.calls.length,0);
+});
+
+test('horizontal worksheet navigation preserves its row, source and sheet',async()=>{
+ const f=fixture(),reads=[];f.x.reader={kind:'spreadsheet',sheet:'Æ test',row:121,column:25,row_count:80,column_count:24,rows:200,columns:60};f.x.loadReader=async args=>reads.push(args);
+ await f.x.readerAction('reader-left');await f.x.readerAction('reader-right');assert.deepEqual(reads,[{sheet:'Æ test',row:121,column:1},{sheet:'Æ test',row:121,column:49}]);assert.equal(f.x.material.source.content_hash,'source-hash');
+});
+test('explicit material page and cell jumps reject invalid values without a read',async()=>{
+ const f=fixture(),reads=[];f.x.loadReader=async args=>reads.push(args);
+ for(const value of ['', '0', '-1', '2.5', '6']){f.x.q('#mw-page').value=value;await f.x.readerAction('reader-page');assert.equal(reads.length,0);assert.equal(f.x.reader.page,2);assert.equal(f.x.q('#mw-page').focused,true);assert.match(f.x.q('#mw-reader-location-error').textContent,/1 to 5/);}
+ for(const value of ['1','5']){f.x.q('#mw-page').value=value;await f.x.readerAction('reader-page');}assert.deepEqual(reads,[{page:1},{page:5}]);reads.length=0;
+ f.x.reader={kind:'spreadsheet',row:121,column:25,rows:200,columns:60};f.x.q('#mw-sheet').value='Sheet Æ';
+ for(const key of ['row','column'])for(const value of ['', '0', '-1', '2.5', '201']){f.x.q('#mw-row').value='121';f.x.q('#mw-column').value='25';f.x.q('#mw-'+key).value=value;await f.x.readerAction('reader-cells');assert.equal(reads.length,0);assert.equal(f.x.q('#mw-'+key).focused,true);assert.equal(f.x.reader.row,121);}
+ for(const [row,column] of [[1,1],[200,60]]){f.x.q('#mw-row').value=String(row);f.x.q('#mw-column').value=String(column);await f.x.readerAction('reader-cells');}
+ assert.deepEqual(reads,[{sheet:'Sheet Æ',row:1,column:1},{sheet:'Sheet Æ',row:200,column:60}]);assert.equal(f.x.q('#mw-reader-location-error').hidden,true);
+});
+
+function sheetFixture(){
+ const x=new Materials(),nodes=new Map(),root={querySelectorAll:()=>[]},node=()=>({innerHTML:'',scrollTop:170,scrollLeft:20,disabled:false,hidden:false,classList:{toggle(){},remove(){}},insertAdjacentHTML(_,html){this.innerHTML+=html;},remove(){this.removed=true;}});
+ x.q=s=>s==='#mw-document-information'?null:nodes.get(s)||null;for(const s of ['#mw-reader','#mw-original-toolbar','#mw-sheet-window','#mw-next-rows','#mw-reader-location-error'])nodes.set(s,node());
+ x.root=root;x.id='sheet-material';x.token={};x.material={source:{content_hash:'sheet-hash'},collaboration:{view:'personal'}};x.reader={kind:'spreadsheet',sheet:'Water',row:1,column:1,row_count:80,column_count:4,rows:160,columns:4,cells:[],source_sha256:'sheet-hash'};x.readerTicket={};x.captureDisclosures=()=>{};const rendered=[];x.renderReader=(reader,append)=>{rendered.push({reader,append});if(append)nodes.get('#mw-reader').innerHTML+=' rows '+reader.row;else nodes.get('#mw-reader').innerHTML='rows '+reader.row;};nodes.get('#mw-reader').innerHTML='rows 1–80';return {x,nodes,rendered};
+}
+test('worksheet append failure retains rows scroll selection and exact append retry without duplicate reads',async()=>{
+ const {x,nodes,rendered}=sheetFixture();x.selectedCell='C23';const original=x.reader;let finish,calls=0;x.openingRequest=()=>{calls++;return new Promise((_,reject)=>finish=reject);};const pending=x.readerAction('reader-next-rows');await x.readerAction('reader-next-rows');assert.equal(calls,1);nodes.get('#mw-sheet-window').scrollTop=250;finish(Error('Offline'));await pending;
+ assert.equal(nodes.get('#mw-reader').innerHTML,'rows 1–80');assert.equal(nodes.get('#mw-sheet-window').scrollTop,250);assert.equal(nodes.get('#mw-sheet-window').scrollLeft,20);assert.equal(x.selectedCell,'C23');assert.equal(x.reader,original);assert.match(nodes.get('#mw-sheet-window').innerHTML,/Already-read rows remain/);assert.equal(x.readerRetry.append,true);
+ x.openingRequest=async url=>{calls++;assert.equal(new URL(url,'http://local').searchParams.get('row'),'81');return {...original,row:81};};await x.readerAction('reader-retry');assert.equal(calls,2);assert.equal(rendered.length,1);assert.equal(rendered[0].append,true);assert.equal(x.reader.row,81);assert.equal(x.selectedCell,'C23');assert.equal(x.readerRetry,null);
+});
+test('late or mismatched worksheet continuation cannot append into another bound window',async()=>{
+ for(const change of [x=>x.id='other',x=>x.token={},x=>x.material.collaboration.view='archive',x=>x.readerTicket={}]){
+  const {x,rendered}=sheetFixture(),reader=x.reader;let finish;x.openingRequest=()=>new Promise(r=>finish=r);const pending=x.readerAction('reader-next-rows');change(x);finish({...reader,row:81});await pending;assert.equal(rendered.length,0);
+ }
+ for(const fields of [{sheet:'Other'},{column:2},{source_sha256:'changed'},{row:1},{column_count:2}]){
+  const {x,rendered}=sheetFixture(),reader=x.reader;x.openingRequest=async()=>({...reader,row:81,...fields});await x.readerAction('reader-next-rows');assert.equal(rendered.length,0);assert.equal(x.reader,reader);assert.equal(x.readerRetry.append,true);x.reader={...reader,sheet:'Other'};let called=false;x.openingRequest=async()=>called=true;await x.readerAction('reader-retry');assert.equal(called,false);
+ }
+});
+test('selected original cell remains an exact linked scope after continuation and clears when no longer visible',()=>{
+ const {x}=sheetFixture(),classes=new Map(),cells=['C23','C81'].map(id=>({dataset:{originalCell:id},classList:{toggle(_,value){classes.set(id,value);}}}));x.root.querySelectorAll=()=>cells;x.selectedCell='C23';x.syncSelectedCells();assert.equal(classes.get('C23'),true);assert.equal(classes.get('C81'),false);x.draft={blocks:[{text:'Selected cell only',source_refs:[{sheet:'Water',cell_range:'C23'}]},{text:'Other cell',source_refs:[{sheet:'Water',cell_range:'C81'}]}]};let html;x.dialog=value=>html=value;x.reader={...x.reader,row:81};x.showLinkedBlocks();assert.match(html,/Selected cell only/);assert.doesNotMatch(html,/Other cell/);
+ x.reader={...x.reader,sheet:'Other'};x.root.querySelectorAll=()=>[];x.syncSelectedCells();assert.equal(x.selectedCell,null);
+});
+test('absolute A1 range parser rejects partial or reversed references and exact matching retains saved wording',async()=>{
+ const {cellRange,refsForLocation}=await import('../frontend/components/material-navigation.js');for(const [raw,range]of [['C121',{x0:3,y0:121,x1:3,y1:121}],['$C$121:$D122',{x0:3,y0:121,x1:4,y1:122}],['AA$2:$AB3',{x0:27,y0:2,x1:28,y1:3}]])assert.deepEqual(cellRange(raw),range);
+ for(const raw of ['A0','C3:A1','A3:A2','A1 trailing','$A$$1','A1:B2:Z9','1A','A01','A999999999999999999999'])assert.equal(cellRange(raw),null,raw);
+ const refs=[{source_refs:[{sheet:'Water',cell_range:'$C$121:$D$122'}]}],before=structuredClone(refs);assert.deepEqual(refsForLocation(refs,{sheet:'Water',cell_range:'D122'}),[0]);assert.deepEqual(refs,before);
+});
+test('valid absolute locations navigate precisely while malformed and known out-of-bounds ranges keep the reader',async()=>{
+ const savedWindow=globalThis.window;globalThis.window={innerWidth:1200};try{
+  const {x,nodes}=sheetFixture(),reads=[];x.reader.rows=150;x.reader.columns=30;x.root.querySelectorAll=()=>[{dataset:{originalCell:'C121'},classList:{toggle(){}}}];x.loadReader=async(params,append,options)=>{reads.push({params,options});x.reader={...x.reader,sheet:params.sheet};return true;};
+  const ref={sheet:'Water',cell_range:'$C$121:$D$122'},before=structuredClone(ref);await x.locate(ref);assert.deepEqual(reads[0].params,{sheet:'Water',row:121,column:3});assert.equal(x.selectedCell,'$C$121:$D$122');assert.deepEqual(ref,before);
+  for(const value of ['C121junk','A0','D4:C5','A151','$AE$1',12]){const count=reads.length;await x.locate({sheet:'Water',cell_range:value});assert.equal(reads.length,count);assert.equal(nodes.get('#mw-reader-location-error').hidden,false);assert.equal(x.selectedCell,'$C$121:$D$122');}
+  await x.locate({sheet:'Water'});assert.deepEqual(reads.at(-1).params,{sheet:'Water',row:1,column:1});assert.equal(x.selectedCell,null);
+ }finally{globalThis.window=savedWindow;}
+});
+test('authoritative dimensions reject an unknown-sheet range without clearing an already visible original',async()=>{
+ const {x,nodes,rendered}=sheetFixture(),old=x.reader;x.openingRequest=async()=>({...old,sheet:'Other',row:1,column:1,rows:10,columns:2});const result=await x.loadReader({sheet:'Other',row:121,column:3},false,{locationRange:{x0:3,y0:121,x1:4,y1:122}});assert.equal(result,false);assert.equal(x.reader,old);assert.equal(nodes.get('#mw-reader').innerHTML,'rows 1–80');assert.equal(rendered.length,0);assert.match(nodes.get('#mw-reader-location-error').textContent,/outside/);
+});
+
+test('failed location retaining a sheet releases its superseded continuation without appending a late response',async()=>{
+ const {x,nodes,rendered}=sheetFixture(),original=x.reader,responses=[];x.selectedCell='C23';x.openingRequest=()=>new Promise((resolve,reject)=>responses.push({resolve,reject}));const append=x.readerAction('reader-next-rows');assert.equal(nodes.get('#mw-next-rows').disabled,true);const locate=x.loadReader({sheet:'Unknown',row:1,column:1},false,{locationRange:{x0:1,y0:1,x1:1,y1:1}});responses[1].reject(Error('New location unavailable'));await locate;responses[0].resolve({...original,row:81});await append;assert.equal(x.reader,original);assert.equal(x.selectedCell,'C23');assert.equal(rendered.length,0);assert.equal(x.readerAppendPending,null);assert.equal(nodes.get('#mw-next-rows').disabled,false);assert.equal(nodes.get('#mw-reader').innerHTML,'rows 1–80');
 });

@@ -4,3 +4,5 @@
 #source{font-weight:600;overflow-wrap:anywhere;margin-bottom:5px}body[data-embedded=true] #source{display:none}
 
 footer{flex-wrap:wrap}footer a{color:var(--accent);white-space:nowrap}#status{min-width:90px}body[data-embedded=true] #workbench{display:none}
+
+#page-error{color:#923327;flex-basis:100%}[aria-invalid=true]{border-color:#923327}

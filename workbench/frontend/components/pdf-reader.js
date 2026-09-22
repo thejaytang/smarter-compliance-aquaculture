@@ -13,6 +13,7 @@ function keepReadingPosition() {
   url.searchParams.set('zoom', $('zoom').value);
   url.searchParams.set('rotation', String(viewer.pagesRotation));
   history.replaceState(null, '', url);
+  notify(viewer.currentPageNumber);
 }
 function status(text, error = false) {
   $('status').textContent = text;
@@ -20,29 +21,43 @@ function status(text, error = false) {
   $('retry').hidden = !error;
 }
 function notify(page) {
-  if (parent !== window) parent.postMessage({type:'saved-pdf-page',id,view,page},location.origin);
+  if (parent !== window) parent.postMessage({type:'saved-pdf-page',id,view,page,zoom:$('zoom').value,rotation:viewer.pagesRotation},location.origin);
 }
 function pageStatus() {
   if(!documentPdf||!viewer)return;
   const page=viewer.currentPageNumber,state=pageStates.get(page)||{};
-  if(state.error)return status('Page '+page+': '+state.error+' Retry or use Page image / Open original.',true);
+  const error=state.renderError||state.textError||state.annotationError;
+  if(error)return status('Page '+page+': '+error+' Retry or use Page image / Open original.',true);
   if(!state.rendered)return status('Rendering original page '+page+'…');
   status('Page '+page+' of '+documentPdf.numPages+' · '+(state.selectable===false?'No selectable text; read the page image':state.selectable?'Select original text to copy':'Preparing text selection…'));
 }
-function find(again = false) {
-  if (!bus || !documentPdf) return;
+function find(again = false, previous = false) {
+  if (!bus || !documentPdf || !$('query').value) return;
   bus.dispatch('find',{source:window,type:again?'again':'',query:$('query').value,
-    caseSensitive:false,entireWord:false,highlightAll:true,findPrevious:false,matchDiacritics:false});
+    caseSensitive:false,entireWord:false,highlightAll:true,findPrevious:previous,matchDiacritics:false});
 }
 $('retry').onclick = () => location.reload();
-$('search').onsubmit = event => {event.preventDefault();find();};
+let composing=false;
+function searchAvailability(){for(const id of ['find-next','find-previous'])$(id).disabled=!documentPdf||!$('query').value;}
+$('query').oncompositionstart=()=>{composing=true;};
+$('query').oncompositionend=()=>{composing=false;searchChanged();};
+$('search').onsubmit = event => {event.preventDefault();if(!composing&&!event.isComposing)find();};
+$('query').onkeydown=event=>{if(event.key!=='Enter')return;if(composing||event.isComposing||event.keyCode===229){event.preventDefault();return;}if(event.shiftKey){event.preventDefault();find(true,true);}};
 $('find-next').onclick = () => find(true);
+$('find-previous').onclick = () => find(true,true);
+function searchChanged(){
+  searchAvailability();
+  if(!$('query').value){$('matches').textContent='';if(bus&&documentPdf)bus.dispatch('findbarclose',{source:window});}
+}
+$('query').oninput=searchChanged;
 $('previous').onclick = () => {if(viewer)viewer.currentPageNumber=Math.max(1,viewer.currentPageNumber-1);};
 $('next').onclick = () => {if(viewer)viewer.currentPageNumber=Math.min(documentPdf.numPages,viewer.currentPageNumber+1);};
 $('page').onchange = () => {
-  const page=Number($('page').value);
-  if(viewer&&Number.isInteger(page)&&page>=1&&page<=documentPdf.numPages)viewer.currentPageNumber=page;
-  else if(viewer)$('page').value=viewer.currentPageNumber;
+  if(!viewer||!documentPdf)return;
+  const input=$('page'),page=Number(input.value),valid=String(input.value).trim()!==''&&Number.isInteger(page)&&page>=1&&page<=documentPdf.numPages;
+  input.setAttribute('aria-invalid',String(!valid));$('page-error').hidden=valid;
+  if(!valid){$('page-error').textContent='Enter a whole page number from 1 to '+documentPdf.numPages+'.';input.focus();return;}
+  viewer.currentPageNumber=page;
 };
 $('zoom').onchange = () => {if(viewer){const page=viewer.currentPageNumber;viewer.currentScaleValue=$('zoom').value;viewer.currentPageNumber=page;keepReadingPosition();}};
 $('rotate').onclick = () => {if(viewer){const page=viewer.currentPageNumber;viewer.pagesRotation=(viewer.pagesRotation+90)%360;viewer.currentPageNumber=page;keepReadingPosition();}};
@@ -78,33 +93,36 @@ async function open() {
     const requested=Number(query.get('page')||1);
     viewer.currentPageNumber=Number.isInteger(requested)?Math.max(1,Math.min(documentPdf.numPages,requested)):1;
     for(const element of document.querySelectorAll('header [disabled]'))element.disabled=false;
+    searchAvailability();
     $('pages').textContent='of '+documentPdf.numPages;
     updatePage(viewer.currentPageNumber);
   });
   function updatePage(page) {
     $('page').value=page;$('page').max=documentPdf.numPages;
+    $('page').setAttribute('aria-invalid','false');$('page-error').hidden=true;
     $('previous').disabled=page<=1;$('next').disabled=page>=documentPdf.numPages;
     keepReadingPosition();
-    notify(page);
     pageStatus();
   }
   bus.on('pagechanging',event=>{if(documentPdf)updatePage(event.pageNumber);});
   bus.on('pagerendered',event=>{
     const state=pageStates.get(event.pageNumber)||{};
-    state.rendered=!event.error;if(event.error)state.error='Could not render the complete page.';
+    state.rendered=!event.error;state.renderError=event.error?'Could not render the complete page.':null;
     pageStates.set(event.pageNumber,state);pageStatus();
   });
   bus.on('textlayerrendered',event=>{
     const state=pageStates.get(event.pageNumber)||{};
-    if(event.error)state.error='Text selection is unavailable.';
-    else state.selectable=!!viewer.getPageView(event.pageNumber-1)?.textLayer?.div?.textContent?.trim();
+    state.textError=event.error?'Text selection is unavailable.':null;
+    if(!event.error)state.selectable=!!viewer.getPageView(event.pageNumber-1)?.textLayer?.div?.textContent?.trim();
     pageStates.set(event.pageNumber,state);pageStatus();
   });
-  bus.on('annotationlayerrendered',event=>{if(event.error){const state=pageStates.get(event.pageNumber)||{};state.error='Some PDF annotations could not be displayed.';pageStates.set(event.pageNumber,state);pageStatus();}});
+  bus.on('annotationlayerrendered',event=>{const state=pageStates.get(event.pageNumber)||{};state.annotationError=event.error?'Some PDF annotations could not be displayed.':null;pageStates.set(event.pageNumber,state);pageStatus();});
   bus.on('updatefindmatchescount',event=>{
+    if(!$('query').value)return;
     const count=event.matchesCount;$('matches').textContent=count.total?count.current+' / '+count.total:'No matches';
   });
   bus.on('updatefindcontrolstate',event=>{
+    if(!$('query').value)return;
     if(event.state===1)$('matches').textContent='No matches';
     else if(event.state===3)$('matches').textContent='Searching…';
     else if(event.matchesCount)$('matches').textContent=event.matchesCount.total?event.matchesCount.current+' / '+event.matchesCount.total:'';
@@ -122,7 +140,7 @@ async function open() {
   }).catch(()=>{$('source').textContent='Saved original PDF · material '+id;});
   if(documentPdf.isPureXfa)throw Error('This PDF uses an unsupported XFA form. Open the original in a compatible reader.');
   linkService.setDocument(documentPdf,null);viewer.setDocument(documentPdf);
-  const resize=new ResizeObserver(()=>{if(viewer?.pagesCount&&$('zoom').value.startsWith('page-'))viewer.currentScaleValue=$('zoom').value;});
+  const resize=new ResizeObserver(()=>{if(viewer?.pagesCount&&$('zoom').value.startsWith('page-')){const page=viewer.currentPageNumber;viewer.currentScaleValue=$('zoom').value;viewer.currentPageNumber=page;keepReadingPosition();}});
   resize.observe($('viewerContainer'));
   window.addEventListener('pagehide',()=>resize.disconnect(),{once:true});
 }

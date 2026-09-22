@@ -51,7 +51,7 @@ def mapping_issues(design,catalog):
         if not n:return
         if 'rules' in n:
             for child in n['rules']:walk(child)
-        else:
+        elif 'expression' not in n:
             field=by_id.get(n['field'])
             if not field or n['type']!=field['type'] or n['operator'] not in field['operators']:
                 issues.append(dict(rule_id=n['id'],field=n['field'],message='Mapping is absent from the current catalog or its type/operator changed.'))
