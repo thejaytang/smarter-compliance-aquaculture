@@ -1,8 +1,0 @@
-{
-  "id": "borderless-merged-figure",
-  "exit_code": 0,
-  "stdout": "{\"id\": \"borderless-merged-figure\", \"status\": \"candidate_available\", \"block_count\": 16, \"block_types\": {\"text\": 15, \"table\": 1}, \"covered_scope\": [\"page:1\"], \"total_scope_count\": 1, \"warnings\": [\"Native text can differ from visible page marks. Compare it with the original page image. Scanned pages may require manual transcription; no OCR is run when viewing.\", \"PDF candidate uses the existing positioned native parser in mapped three-page windows. Ruled-table grids use existing local geometry assembly. Reading order, headings and unruled tables may need manual correction; source page images and complete native evidence are retained. No Requirement classifier, semantic processor, OCR model or external service runs.\"], \"unresolved\": [], \"requirement_status\": \"not_connected\", \"candidate_path\": \"pdfium-diagnostic/borderless-merged-figure/candidate.json\", \"mode\": \"pdfium-diagnostic\", \"baseline_equivalent\": false}\n",
-  "stderr": "",
-  "status": "returned",
-  "elapsed_seconds": 0.289
-}

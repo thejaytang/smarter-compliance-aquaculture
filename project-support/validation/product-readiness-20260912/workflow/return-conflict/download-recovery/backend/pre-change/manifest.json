@@ -1,5 +1,0 @@
-{
-  "workbench/src/local_workbench/server.py": "97805b2d63ab2fec189b1c6743d074067f691d9c102233a9201dbf7e24dff886",
-  "workbench/tests/test_frontend_module_routes.py": "3887c17ff6e08ef71a629da721fe786d6f5a8647cf1fc431ff0f173e4f5c98e0",
-  "new_test_file": "workbench/tests/test_collection_download_http.py (did not exist)"
-}

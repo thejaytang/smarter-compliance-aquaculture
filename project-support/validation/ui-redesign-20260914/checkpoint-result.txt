@@ -1,1 +1,0 @@
-{"status": "complete", "code_files": 706, "stores": 6, "scope": "Same-workstation code rollback and SQLite snapshots; excludes historical assets. Not a portable full recovery package."}

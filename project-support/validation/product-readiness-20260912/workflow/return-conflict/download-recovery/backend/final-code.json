@@ -1,5 +1,0 @@
-{
-  "workbench/src/local_workbench/server.py": "fabaf8713318fa6c7619a60b025bdb35ac56911d7fdf2502d4c90772a3c7b599",
-  "workbench/tests/test_collection_download_http.py": "d10006de420ef8e519fb80126c76cba2a02bb60ff1b2dcffc42e5b79cc0e4fe3",
-  "workbench/tests/test_frontend_module_routes.py": "0e7ab4f87b64ed8ab997310541aa867f2fa21bde12e07e8675bb1a76f25e6343"
-}

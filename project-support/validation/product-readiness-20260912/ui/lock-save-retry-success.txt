@@ -1,6 +1,0 @@
-{
-  "status": [
-    "Material saved. Content review is not confirmed by saving."
-  ],
-  "input": "SCANNED ORIGINAL FIXTURE\nManual transcription: water checked daily.\n[ENGINEERING LOCK-RETRY: input retained]"
-}

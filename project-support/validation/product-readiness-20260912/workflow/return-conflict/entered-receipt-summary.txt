@@ -1,2 +1,0 @@
-ENGINEERING HANDOFF: isolated text conflict combined into master revision 4.
-Content review remains incomplete; archive revision 2 and both contributors are retained.

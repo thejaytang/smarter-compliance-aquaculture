@@ -1,8 +1,0 @@
-{
-  "workbench/ui/materials.js": "9555a0e6f7b9a51f933fd35ff8375c4e4a7c34bc87c47e0d5a1471fae8f830f3",
-  "workbench/ui/materials.css": "ed9251b0d4e96967316499ae9347f49ca842eb457f8608e55988ceabd5ebaa38",
-  "workbench/tests/materials-ui.test.mjs": "d79b18b76a766c624b82deb4af961c567fd951346981b112510de37883c687c4",
-  "workbench/tests/material-navigation.test.mjs": "1d7d1ae91f90b43258e4c996102b3ed8a34130f7b3d0d7aae4d5216a3968c30d",
-  "workbench/tests/material-redesign.test.mjs": "9e389671f1767bc7e6005c5f3f22f4166315eb89b41a9cd66727aa93a6cbbc81",
-  "workbench/tests/numbered-labels.test.mjs": "fa3e0a52e509395affad2ce8e32f76a495f3e375f6c80b30201fbe48a1f44974"
-}

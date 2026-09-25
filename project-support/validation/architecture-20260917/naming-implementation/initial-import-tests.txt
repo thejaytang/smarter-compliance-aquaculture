@@ -1,1 +1,0 @@
-{"fresh_restore": true, "interruption_retry": true, "database_bytes_preserved": true, "refuse_overwrite": true, "sources": 88, "originals": 73}

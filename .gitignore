@@ -1,4 +1,4 @@
-# Jay development branch includes code, development documents, tests and evidence.
+# The main branch contains only product files and the permanent PE002 Example.
 # Full snapshots belong only to development; main carries the permanent PE002 Example.
 # Exact package and presentation paths are checked by check_app_boundary.py.
 /.github/workflows/
@@ -77,3 +77,13 @@
 
 # Historical recovery archives.
 /project-support/**/*backup*.zip
+
+# Product-only main: preserve local copies but never include them in this branch.
+/PROJECT_STATE.md
+/project-support/
+/workbench/tests/
+/workbench/initial-data/
+/workbench/examples/
+/workbench/scripts/
+/workbench/resources/examples/example-work-20260918.zip
+/workbench/resources/examples/example-work-20260918.zip.sha256

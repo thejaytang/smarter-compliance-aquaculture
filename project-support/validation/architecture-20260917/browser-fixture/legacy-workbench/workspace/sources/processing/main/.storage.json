@@ -1,6 +1,0 @@
-{
-  "workflow.sqlite": {
-    "database": "../../../databases/system2.sqlite",
-    "prefix": ""
-  }
-}

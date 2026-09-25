@@ -1,9 +1,0 @@
-{
-  "base": "95ca3903ea172357208ddc2f247b700c4a50d432",
-  "branch": "codex/record-macos-git-sync-20260914",
-  "commit": "9778980501c7042a42860aad4fba342f1e94fc46",
-  "files": [
-    "project-support/git-sync-20260914/RESULTS.md"
-  ],
-  "blob": "6f64bf50fb845566fbddb9ea4eee1cba0ea72460"
-}

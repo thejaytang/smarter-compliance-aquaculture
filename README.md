@@ -1,10 +1,10 @@
 # Smarter Compliance Workbench
 
-This is Jay’s `developing-only-jay` branch. It retains the application, business snapshot and development materials. Colleagues should use `main` for product updates. This branch is in the same public repository; its name does not make it private.
+This is the `main` product branch. It contains the application and the permanent PE002 Example. Complete business snapshots and development materials belong to the separate public `developing` branch.
 
 A local, human-led workspace for governing sources and preparing traceable Requirements and check designs. It runs on your own computer and opens in a browser.
 
-Use `main` for shared product installations and updates on Windows and macOS. Jay's `developing-only-jay` branch also includes development documents and tests. The Windows fixes are part of `main`; a separate operating-system branch is not required.
+Use `main` for shared product installations and updates on Windows and macOS. Jay's `developing` branch also includes development documents and tests. The Windows fixes are part of `main`; a separate operating-system branch is not required.
 
 This directory is the application root. The product checkout contains the four root guides, the two launchers, `deployment.py` and `workbench/`. Development checkouts additionally contain `PROJECT_STATE.md` and `project-support/`; they are not needed to run the product.
 
@@ -37,4 +37,4 @@ Collaboration exchanges saved work through a preview and explicit decisions. A d
 
 ## 3. Development and product branches
 
-Keep full business snapshots and development evidence on `developing-only-jay`. `main` carries only the product and permanent PE002 Example. Publish selected application changes to `main`; do not merge this branch wholesale into `main`. Both branches and previously published Git history are public. Active workspaces remain local and use validated snapshots for handoff. Environments, credentials and caches are rebuilt or configured locally.
+Keep full business snapshots and development evidence on `developing`. `main` carries only the product and permanent PE002 Example. Publish selected application changes to `main`; do not merge this branch wholesale into `main`. Both branches and previously published Git history are public. Active workspaces remain local and use validated snapshots for handoff. Environments, credentials and caches are rebuilt or configured locally.
