@@ -53,7 +53,7 @@ class SplitStoreTests(SharedRequirementsTests):
         from backend.shared.workspace_storage import alias, operational_root
         branch=self.layout.workspace/'sources/processing/personal'
         alias(branch,'workflow.sqlite',self.layout.database('system2'),'branch_test__')
-        self.assertEqual(operational_root(branch),self.layout.runtime/'state/system2/branch_test__')
+        self.assertEqual(operational_root(branch),(self.layout.runtime/'state/system2/branch_test__').resolve())
         self.assertEqual(operational_root(self.root/'legacy'),self.root/'legacy')
         self.assertFalse(operational_root(branch).exists())
 

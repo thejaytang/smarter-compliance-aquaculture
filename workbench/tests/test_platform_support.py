@@ -12,6 +12,14 @@ from backend.shared import platform_support as platform
 
 
 class PlatformTests(unittest.TestCase):
+    def test_windows_native_paths_round_trip_without_leaking_namespace(self):
+        from backend.shared.filesystem import logical_path, windows_io_path
+        for path in (r'C:\sc-dev\源文件\a.txt', r'\\server\share\资料\b.pdf'):
+            native = windows_io_path(path)
+            self.assertTrue(native.startswith('\\\\?\\'))
+            self.assertEqual(logical_path(native), path)
+            self.assertEqual(windows_io_path(native), native)
+
     def test_native_lock_excludes_another_process_and_releases(self):
         with tempfile.TemporaryDirectory(prefix='review space ') as temporary:
             lock = Path(temporary)/'材料'/'.writer.lock'

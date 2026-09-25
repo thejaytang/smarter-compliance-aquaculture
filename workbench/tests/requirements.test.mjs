@@ -312,7 +312,8 @@ test('annotation navigation preserves the current document and selection when di
   if(reason==='dirty')editor.dirty=true;if(reason==='pending')editor.pending=true;
   m.api=async()=>{reads++;if(reason==='rejected')throw Error('Read failed');return {...documentFixture(),id:'other'};};
   await editor.navigateAnnotation([{session_id:'other',unit_id:'missing',field:'Subject'}]);
-  assert.equal(editor.doc.id,'s',reason);assert.equal(editor.selected,'u',reason);assert.equal(editor.closedUnits.has('v'),true);assert.equal(sync,0);assert.equal(reads,['dirty','pending'].includes(reason)?0:1);
+  assert.equal(editor.doc.id,'s',reason);assert.equal(editor.selected,'u',reason);assert.equal(editor.closedUnits.has('v'),true);assert.equal(sync,0);assert.equal(reads,reason==='pending'?0:1);
+  if(reason==='dirty')assert.equal(editor.working.get('s').dirty,true);
  }
 });
 test('an out-of-order annotation read cannot overwrite the later accepted destination',async()=>{

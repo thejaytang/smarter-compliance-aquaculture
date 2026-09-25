@@ -13,20 +13,23 @@ test('temporary material list requires an explicit unsaved decision before leavi
  let warned=0;w.unsavedDialog=()=>warned++;w.showList();assert.equal(warned,1);assert.equal(classes.has('list-mode'),false);assert.equal(w.dirty,true);assert.equal(w.draft,draft);w.dirty=false;w.showList();assert.equal(classes.has('list-mode'),true);
  await w.action('open',{dataset:{id:'m'}});assert.equal(classes.has('detail-mode'),true);assert.equal(w.draft,draft);assert.equal(calls,0);
 });
-test('archive from a personal draft saves first then opens a guarded preview without automatic adoption or confirmation',async()=>{
- const {w}=workspace(),calls=[];w.collaboration.state={mode:'coordinator'};
- w.save=async()=>{calls.push('save');w.dirty=false;return true;};w.collaboration.runPreview=async(path,body)=>calls.push({path,body});w.collaboration.confirmMaster=()=>calls.push('confirm');
- await w.archiveContent();assert.equal(calls[0],'save');assert.deepEqual(calls[1],{path:'/api/collaboration/prepare-own',body:{source_id:'s',material_id:'m'}});assert.equal(calls.length,2);assert.equal(w.finishIntent,'m');
+test('archive waits for saved page and all three completed panes before preview',async()=>{
+ const {w}=workspace(),calls=[];w.collaboration.state={mode:'coordinator'};w.reviewReady=()=>true;
+ w.pageWorkflow={dirty:()=>w.dirty,refresh:async()=>{},state:{archive_ready:false}};
+ w.collaboration.runPreview=async(path,body)=>calls.push({path,body});w.collaboration.confirmMaster=()=>calls.push('confirm');
+ await w.archiveContent();assert.equal(calls.length,0);
+ w.dirty=false;await w.archiveContent();assert.equal(calls.length,0);
+ w.pageWorkflow.state.archive_ready=true;await w.archiveContent();assert.deepEqual(calls[0],{path:'/api/collaboration/prepare-own',body:{source_id:'s',material_id:'m'}});assert.equal(calls.length,1);assert.equal(w.finishIntent,'m');
 });
-test('failed material save prevents the archive preparation request',async()=>{
- const {w}=workspace();w.collaboration.state={mode:'coordinator'};let previews=0;w.save=async()=>false;w.collaboration.runPreview=async()=>previews++;
+test('unsaved material prevents the archive preparation request',async()=>{
+ const {w}=workspace();w.collaboration.state={mode:'coordinator'};let previews=0;w.collaboration.runPreview=async()=>previews++;
  await w.archiveContent();assert.equal(previews,0);assert.equal(w.dirty,true);
 });
 test('reviewer finish cannot invoke master archive preparation',async()=>{
- const {w}=workspace();w.dirty=false;w.collaboration.state={mode:'reviewer'};let reviews=0,previews=0;w.reviewDialog=()=>reviews++;w.collaboration.runPreview=async()=>previews++;
+ const {w}=workspace();w.dirty=false;w.collaboration.state={mode:'reviewer'};w.reviewReady=()=>true;w.pageWorkflow={dirty:()=>false,refresh:async()=>{},state:{archive_ready:true}};let reviews=0,previews=0;w.reviewDialog=()=>reviews++;w.collaboration.runPreview=async()=>previews++;
  await w.archiveContent();assert.equal(reviews,1);assert.equal(previews,0);
 });
 test('master archive opens explicit confirmation and does not repeat adoption',async()=>{
- const {w}=workspace();w.dirty=false;w.collaboration.state={mode:'coordinator'};w.material.collaboration.view='master';let confirmations=0,previews=0;w.collaboration.confirmMaster=()=>confirmations++;w.collaboration.runPreview=async()=>previews++;
+ const {w}=workspace();w.dirty=false;w.collaboration.state={mode:'coordinator'};w.reviewReady=()=>true;w.pageWorkflow={dirty:()=>false,refresh:async()=>{},state:{archive_ready:true}};w.material.collaboration.view='master';let confirmations=0,previews=0;w.collaboration.confirmMaster=()=>confirmations++;w.collaboration.runPreview=async()=>previews++;
  await w.archiveContent();assert.equal(confirmations,1);assert.equal(previews,0);
 });

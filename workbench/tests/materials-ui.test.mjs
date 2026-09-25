@@ -12,17 +12,17 @@ function instance(){
 }
 test('save sends one material snapshot and never confirms or extracts', async()=>{
   const x=instance(),calls=[];x.api=async(path,body)=>{calls.push({path,body});return {status:'applied',material:{...material(),revision:5}};};
-  await x.save();assert.equal(calls.length,1);assert.equal(calls[0].path,'/api/material/save');assert.equal(calls[0].body.material_id,'one');assert.equal(calls[0].body.expected_revision,4);assert.equal(calls[0].body.blocks[0].text,'Human correction');assert.equal('actor' in calls[0].body,false);assert.equal(x.dirty,false);assert.equal(x.material.content_status,'draft');
+  await x.saveContent();assert.equal(calls.length,1);assert.equal(calls[0].path,'/api/material/save');assert.equal(calls[0].body.material_id,'one');assert.equal(calls[0].body.expected_revision,4);assert.equal(calls[0].body.blocks[0].text,'Human correction');assert.equal('actor' in calls[0].body,false);assert.equal(x.dirty,false);assert.equal(x.material.content_status,'draft');
 });
 test('in-flight save prevents navigation and makes editor inert',async()=>{
-  const x=instance();let complete;x.api=()=>new Promise(resolve=>complete=resolve);const request=x.save();assert.equal(x.busy,true);assert.equal(x.canLeave(),false);assert.equal(x.q('#mw-content').inert,true);complete({status:'applied',material:{...material(),revision:5}});await request;assert.equal(x.q('#mw-content').inert,false);assert.equal(x.canLeave(),true);
+  const x=instance();let complete;x.api=()=>new Promise(resolve=>complete=resolve);const request=x.saveContent();assert.equal(x.busy,true);assert.equal(x.canLeave(),false);assert.equal(x.q('#mw-content').inert,true);complete({status:'applied',material:{...material(),revision:5}});await request;assert.equal(x.q('#mw-content').inert,false);assert.equal(x.canLeave(),true);
 });
 test('a conflicting save preserves local changes and original revision guard',async()=>{
-  const x=instance(),original=x.draft;x.api=async()=>({status:'conflict',conflict_id:'durable-1',material:{...material(),revision:6}});assert.equal(await x.save(),false);assert.equal(x.draft,original);assert.equal(x.localBase,4);assert.equal(x.dirty,true);assert.equal(x.localConflict,true);assert.match(x.lastMessage.text,/retained/);
+  const x=instance(),original=x.draft;x.api=async()=>({status:'conflict',conflict_id:'durable-1',material:{...material(),revision:6}});assert.equal(await x.saveContent(),false);assert.equal(x.draft,original);assert.equal(x.localBase,4);assert.equal(x.dirty,true);assert.equal(x.localConflict,true);assert.match(x.lastMessage.text,/retained/);
 });
 test('retry after uncertain save reuses request identity',async()=>{
   const x=instance(),calls=[];let first=true;x.api=async(path,body)=>{calls.push(body);if(first){first=false;throw Error('Connection interrupted');}return {status:'applied',material:{...material(),revision:5}};};
-  await x.save();assert.equal(x.dirty,true);await x.save();assert.equal(calls[0].request_id,calls[1].request_id);assert.equal(calls[0].expected_revision,calls[1].expected_revision);
+  await x.saveContent();assert.equal(x.dirty,true);await x.saveContent();assert.equal(calls[0].request_id,calls[1].request_id);assert.equal(calls[0].expected_revision,calls[1].expected_revision);
 });
 test('editing content clears declarations so changed work must be reviewed again',()=>{
   const x=instance();x.draft.checked_scope=['page:1'];x.draft.association_reviewed=true;x.changed(true);assert.deepEqual(x.draft.checked_scope,[]);assert.equal(x.bodyChanged,true);assert.equal(x.draft.association_reviewed,false);assert.equal(x.dirty,true);
@@ -71,10 +71,10 @@ test('PDF zoom changes only page image width and preserves fit-width option',()=
 test('HTTP 409 thrown by the real API helper opens conflict recovery without discarding draft',async()=>{
   storage.clear();const x=instance(),draft=x.draft,newer={...material(),revision:5};x.renderContent=()=>x.conflictControlsRendered=x.localConflict;
   x.api=async()=>{const error=Error('newer_material_revision_saved_draft_preserved');error.current=newer;error.status=409;error.definitive=true;error.conflict_id='durable-http-conflict';error.details={status:'conflict',material:newer,conflict_id:'durable-http-conflict'};throw error;};
-  assert.equal(await x.save(),false);assert.equal(x.draft,draft);assert.equal(x.localBase,4);assert.equal(x.localConflict,true);assert.equal(x.conflictControlsRendered,true);assert.equal(x.conflictResult.conflict_id,'durable-http-conflict');assert.match(x.lastMessage.text,/Compare saved and local/);assert.doesNotMatch(x.lastMessage.text,/newer_material_revision/);assert.equal(storage.size,0);
+  assert.equal(await x.saveContent(),false);assert.equal(x.draft,draft);assert.equal(x.localBase,4);assert.equal(x.localConflict,true);assert.equal(x.conflictControlsRendered,true);assert.equal(x.conflictResult.conflict_id,'durable-http-conflict');assert.match(x.lastMessage.text,/Compare saved and local/);assert.doesNotMatch(x.lastMessage.text,/newer_material_revision/);assert.equal(storage.size,0);
 });
 test('legacy Error.current shape is also recoverable as a guarded conflict',async()=>{
-  const x=instance();x.api=async()=>{const error=Error('newer_material_revision_saved_draft_preserved');error.current={...material(),revision:6};error.definitive=true;throw error;};await x.save();assert.equal(x.localConflict,true);assert.equal(x.draft.blocks[0].text,'Human correction');assert.equal(x.localBase,4);
+  const x=instance();x.api=async()=>{const error=Error('newer_material_revision_saved_draft_preserved');error.current={...material(),revision:6};error.definitive=true;throw error;};await x.saveContent();assert.equal(x.localConflict,true);assert.equal(x.draft.blocks[0].text,'Human correction');assert.equal(x.localBase,4);
 });
 test('conflict merge preserves newer unique blocks, local edits and unresolved issues',()=>{
   const x=instance();x.draft.issues=[{id:'issue',message:'Previously checked',resolved:true}];const newer={...material(),revision:5,blocks:[{id:'new-heading',type:'heading',text:'New heading',level:1},{id:'text-1',type:'text',text:'Other reviewer edit'},{id:'new-tail',type:'text',text:'New unseen paragraph'}],issues:[{id:'issue',message:'Reopened issue',resolved:false},{id:'new-issue',message:'New source issue',resolved:false}]};
@@ -97,7 +97,7 @@ test('list and right pane qualify preserved confirmations consistently',()=>{
   x.material=x.items[2];x.dirty=false;x.updateBar();assert.match(x.q('#mw-requirement-state').innerHTML,/Previous content confirmation retained/);assert.match(x.q('#mw-requirement-state').innerHTML,/Candidate reconciliation pending/);assert.doesNotMatch(x.q('#mw-requirement-state').innerHTML,/class="mw-state"/);assert.equal(x.q('[data-action="review"]').disabled,true);
 });
 
-test('old client upgrade response preserves local draft and gives recovery direction',async()=>{const x=instance(),before=x.draft;x.api=async()=>{const e=Error('material_api_version_required');e.status=426;e.definitive=true;throw e;};assert.equal(await x.save(),false);assert.equal(x.draft,before);assert.equal(x.dirty,true);assert.match(x.lastMessage.text,/Reload this browser page to recover/);});
+test('old client upgrade response preserves local draft and gives recovery direction',async()=>{const x=instance(),before=x.draft;x.api=async()=>{const e=Error('material_api_version_required');e.status=426;e.definitive=true;throw e;};assert.equal(await x.saveContent(),false);assert.equal(x.draft,before);assert.equal(x.dirty,true);assert.match(x.lastMessage.text,/Reload this browser page to recover/);});
 test('pending source open cannot extract or save the previously active material',async()=>{const x=instance();x.dirty=false;x.q('#mw-source').value='other';x.loadReader=async()=>{};const calls=[];let finishOpen;x.api=async(path,body)=>{calls.push({path,body});if(path==='/api/material/open')return new Promise(resolve=>finishOpen=resolve);return {...material(),id:'two'};};const request=x.action('open-source',{dataset:{},closest:()=>null});assert.equal(x.opening,true);assert.equal(x.q('[data-action="extract"]').disabled,true);assert.equal(x.q('#mw-source').disabled,true);assert.equal(x.q('[data-action="open-source"]').disabled,true);assert.equal(x.canLeave(),false);assert.equal(await x.mutate('/api/material/extract',{},'should not run'),false);finishOpen({...material(),id:'two'});await request;assert.equal(x.id,'two');assert.equal(x.opening,false);assert.equal(calls.some(c=>c.path==='/api/material/extract'),false);});
 test('pending saved material read locks old actions and errors restore previous context',async()=>{const x=instance();x.dirty=false;let reject;x.api=()=>new Promise((_,fail)=>reject=fail);const request=x.open('two');assert.equal(x.opening,true);assert.equal(x.q('#mw-content').inert,true);assert.equal(x.q('[data-action="save"]').disabled,true);assert.equal(await x.mutate('/api/material/extract',{},''),false);reject(Error('Unavailable fixture read'));await request;assert.equal(x.id,'one');assert.equal(x.opening,false);assert.equal(x.q('#mw-content').inert,false);assert.match(x.lastMessage.text,/Unavailable fixture read/);});
 test('switching materials clears prior original before draft recovery completes',async()=>{const x=instance();x.dirty=false;x.q('#mw-original-toolbar').innerHTML='Old sheet controls';x.q('#mw-reader').innerHTML='Old source table';x.reader={kind:'xlsx',sheet:'Previous'};let recover;x.recoverDraft=()=>new Promise(resolve=>recover=resolve);x.api=async()=>({...material(),id:'two'});x.loadReader=async()=>{};const request=x.open('two');await Promise.resolve();await Promise.resolve();await Promise.resolve();assert.equal(x.id,'two');assert.equal(x.reader,null);assert.equal(x.q('#mw-original-toolbar').innerHTML,'');assert.doesNotMatch(x.q('#mw-reader').innerHTML,/Old source/);assert.match(x.q('#mw-reader').innerHTML,/Opening saved original/);recover(null);await request;});
@@ -111,7 +111,7 @@ async function candidateClock(run){
 }
 test('reopening a running extraction resumes status checks without another Extract',async()=>candidateClock(async clock=>{
   storage.clear();const x=instance();x.dirty=false;const calls=[];x.api=async path=>{calls.push(path);return {...material(),candidates:[{id:'candidate',status:'running'}]};};x.loadReader=async()=>{};
-  await x.open('one');assert.equal(clock.count,1);await clock.next();assert.equal(clock.count,1);assert.ok(calls.every(p=>p.startsWith('/api/material?id=')));assert.equal(x.dirty,false);
+  await x.open('one');assert.equal(clock.count,1);await clock.next();assert.equal(clock.count,1);assert.ok(calls.every(p=>p.startsWith('/api/material?id=')||p.startsWith('/api/material-progress?')));assert.equal(x.dirty,false);
 }));
 test('candidate status progresses while preserving dirty draft body checks and revision guard',async()=>candidateClock(async clock=>{
   const x=instance(),draft=x.draft;x.draft.blocks[0].text='Unsaved local correction';x.draft.checked_scope=['page:1'];x.material.candidates=[{id:'candidate',status:'running'}];let status='running';
@@ -183,7 +183,7 @@ test('processing detail exposes retained unresolved locations without altering h
 test('material open and save preserve inspection and submission routes from the queue',async()=>{
   storage.clear();const x=instance(),queue={bucket:'pending',inspection_only:false,incoming_submission:true,open_inspections:[{id:'check',assignee:'Weijie Tang',status:'pending'}]};
   x.items=[{...material(),queue}];x.dirty=false;x.loadReader=async()=>{};x.api=async()=>({...material(),revision:5});await x.open('one');assert.deepEqual(x.items[0].queue,queue);
-  x.dirty=true;x.api=async()=>({material:{...material(),revision:6}});await x.save();assert.deepEqual(x.items[0].queue,queue);
+  x.dirty=true;x.api=async()=>({material:{...material(),revision:6}});await x.saveContent();assert.deepEqual(x.items[0].queue,queue);
   x.renderList();assert.match(x.q('#mw-material-list').innerHTML,/Submitted changes await review/);assert.match(x.q('#mw-material-list').innerHTML,/data-action="inspection-open" data-task="check"/);
   let opened;x.inspections.open=async id=>opened=id;await x.action('inspection-open',{dataset:{task:'check'}});assert.equal(opened,'check');
 });
@@ -281,25 +281,26 @@ test('empty panes contain only the content extraction entry, with no review decl
 test('Archive requires all declarations but Save allows an unchecked dirty personal draft',()=>{
  const x=instance();x.updateBar();assert.equal(x.q('[data-action="save"]').disabled,false);assert.equal(x.q('[data-action="review"]').disabled,true);
  x.draft.checked_scope=['page:1'];x.updateBar();assert.equal(x.q('[data-action="review"]').disabled,true);
- x.draft.association_reviewed=true;x.updateBar();assert.equal(x.q('[data-action="review"]').disabled,false);
+ x.draft.association_reviewed=true;x.updateBar();assert.equal(x.q('[data-action="review"]').disabled,true);
+ x.dirty=false;x.pageWorkflow={state:{archive_ready:true},dirty:()=>false,draw(){}};x.updateBar();assert.equal(x.q('[data-action="review"]').disabled,false);
  x.draft.issues=[{id:'a',message:'Missing paragraph',resolved:false}];x.updateBar();assert.equal(x.q('[data-action="review"]').disabled,true);
 });
 test('ready first extraction can be declared and saved before archive, but other candidates still block',()=>{
- const x=instance();x.initialCandidate='c';x.material.candidates=[{id:'c',status:'ready'}];x.draft.checked_scope=['page:1'];x.draft.association_reviewed=true;x.updateBar();assert.equal(x.q('[data-action="review"]').disabled,false);
+ const x=instance();x.initialCandidate='c';x.material.candidates=[{id:'c',status:'ready'}];x.draft.checked_scope=['page:1'];x.draft.association_reviewed=true;x.dirty=false;x.pageWorkflow={state:{archive_ready:true},dirty:()=>false,draw(){}};x.updateBar();assert.equal(x.q('[data-action="review"]').disabled,false);
  x.material.candidates.push({id:'different',status:'ready'});x.updateBar();assert.equal(x.q('[data-action="review"]').disabled,true);
 });
 test('checked changed draft is persisted before checks are stamped on the identical returned body',async()=>{
  const x=instance(),calls=[];x.bodyChanged=true;x.draft.checked_scope=['page:1'];x.draft.association_reviewed=true;
  x.api=async(path,body)=>{calls.push({path,body});return {status:'applied',material:{...material(),revision:4+calls.length,checked_scope:calls.length===2?['page:1']:[],association_review_required:calls.length!==2}};};
- assert.equal(await x.save(),true);assert.equal(calls.length,2);assert.equal('checked_scope' in calls[0].body,false);assert.equal(calls[1].body.expected_revision,5);assert.deepEqual(calls[1].body.checked_scope,['page:1']);assert.ok(calls.every(c=>c.path==='/api/material/save'));assert.equal(x.dirty,false);assert.equal(x.reviewReady(),true);
+ assert.equal(await x.saveContent(),true);assert.equal(calls.length,2);assert.equal('checked_scope' in calls[0].body,false);assert.equal(calls[1].body.expected_revision,5);assert.deepEqual(calls[1].body.checked_scope,['page:1']);assert.ok(calls.every(c=>c.path==='/api/material/save'));assert.equal(x.dirty,false);assert.equal(x.reviewReady(),true);
 });
 test('changed save response cannot receive declarations for a different body',async()=>{
  const x=instance();x.bodyChanged=true;x.draft.checked_scope=['page:1'];x.draft.association_reviewed=true;let writes=0;
- x.api=async()=>{writes++;const m=material();m.blocks[0].text='Different saved body';return {status:'applied',material:m};};await x.save();assert.equal(writes,1);assert.equal(x.reviewReady(),false);
+ x.api=async()=>{writes++;const m=material();m.blocks[0].text='Different saved body';return {status:'applied',material:m};};await x.saveContent();assert.equal(writes,1);assert.equal(x.reviewReady(),false);
 });
 test('a failed second save retains explicit declarations as a recoverable personal draft',async()=>{
  const x=instance();x.bodyChanged=true;x.draft.checked_scope=['page:1'];x.draft.association_reviewed=true;let writes=0;x.api=async()=>{if(++writes===2)throw Error('Disconnected');return {status:'applied',material:{...material(),revision:5}};};
- assert.equal(await x.save(),false);assert.equal(x.dirty,true);assert.equal(x.localBase,5);assert.deepEqual(x.draft.checked_scope,['page:1']);assert.equal(x.draft.association_reviewed,true);
+ assert.equal(await x.saveContent(),false);assert.equal(x.dirty,true);assert.equal(x.localBase,5);assert.deepEqual(x.draft.checked_scope,['page:1']);assert.equal(x.draft.association_reviewed,true);
 });
 test('manual passage entry keeps source wording and does not invoke extraction',()=>{
  const x=instance();x.material.scope=[];const block={id:'p',type:'text',text:'The human shall act.',source_refs:[]};x.draft.blocks=[block];
@@ -317,7 +318,7 @@ test('editing an issue invalidates declarations even when its resolved flag stay
  x.editInput({target:{dataset:{issueText:'0'},value:'Changed note',closest:()=>null}});assert.equal(x.draft.issues[0].message,'Changed note');assert.equal(x.reviewReady(),false);assert.deepEqual(x.draft.checked_scope,[]);
 });
 test('a changed original identity cannot inherit declarations through a save response',async()=>{
- const x=instance();x.bodyChanged=true;x.draft.checked_scope=['page:1'];x.draft.association_reviewed=true;let writes=0;x.api=async()=>{writes++;return {status:'applied',material:{...material(),source:{source_id:'fixture',snapshot_id:'snapshot-2'}}};};await x.save();assert.equal(writes,1);assert.equal(x.reviewReady(),false);
+ const x=instance();x.bodyChanged=true;x.draft.checked_scope=['page:1'];x.draft.association_reviewed=true;let writes=0;x.api=async()=>{writes++;return {status:'applied',material:{...material(),source:{source_id:'fixture',snapshot_id:'snapshot-2'}}};};await x.saveContent();assert.equal(writes,1);assert.equal(x.reviewReady(),false);
 });
 test('Archive refuses undeclared content before invoking save or preview',async()=>{
  const x=instance();let writes=0;x.save=async()=>{writes++;return true;};await x.archiveContent();assert.equal(writes,0);assert.match(x.lastMessage.text,/declaration/);
