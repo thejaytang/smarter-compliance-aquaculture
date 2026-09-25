@@ -1,4 +1,4 @@
-# Jay development branch includes code, development documents, tests and evidence.
+# The developing branch includes code, development documents, tests and evidence.
 # Full snapshots belong only to development; main carries the permanent PE002 Example.
 # Exact package and presentation paths are checked by check_app_boundary.py.
 /.github/workflows/

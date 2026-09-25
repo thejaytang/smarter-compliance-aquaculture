@@ -64,7 +64,7 @@ def naming_issues(paths, *, style=True):
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--development',action='store_true',help='Allow Jay development documents and tests; retain credential/runtime exclusions.')
+    parser.add_argument('--development',action='store_true',help='Allow development documents and tests; retain credential/runtime exclusions.')
     development=parser.parse_args().development
     paths=subprocess.check_output(['git','ls-files','-z']).decode('utf-8').split('\0')
     paths=[p for p in paths if p]
