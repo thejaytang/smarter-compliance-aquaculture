@@ -101,6 +101,7 @@ export class InterpretationEditor{
   const selected=entries.find(s=>s.units?.[r?.selected]);
   const ids=selected?(r.rootIds?r.rootIds(selected):Object.keys(selected.units||{})):[];
   host.innerHTML=this.loading?'<p role="status">Loading interpretation…</p>':valid?`<section class="ip-requirement ip-current" aria-label="Interpretation for ${esc(r.label(d.unit_id))}">${ids.length>1?`<div class="ip-clause-choices">${ids.map(uid=>`<button data-ip-select="${uid}" aria-pressed="${d.unit_id===uid}">${esc(r.internalLabel?.(uid)||r.label(uid))}</button>`).join('')}</div>`:''}${this.editorMarkup(d)}</section>`:'<p class="ip-empty">Select a Requirement in the third pane to review its interpretation.</p>';
+  this.m.pageWorkflow?.draw();
   this.renderedKey=valid&&!this.loading?this.active:null;
   host.querySelectorAll?.('details[data-disclosure]')?.forEach(el=>{if(d?.disclosures?.includes(el.dataset.disclosure))el.open=true;});
   host.querySelectorAll?.('[data-ip-select]')?.forEach(n=>n.onclick=async e=>{e.preventDefault();await r.selectFromInterpretation(n.dataset.ipSelect);});
@@ -112,7 +113,7 @@ export class InterpretationEditor{
    this.changed();
   });
   host.querySelectorAll?.('[data-field-gaps]')?.forEach(el=>el.oninput=()=>{d.fields[el.dataset.fieldGaps].gaps=el.value.split('\n').map(s=>s.trim()).filter(Boolean);this.changed();});
-  host.onkeydown=e=>{if(['Enter',' '].includes(e.key)&&inspectTerm(e))return;if(!e.isComposing&&(e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'&&!this.m.q?.('dialog[open]')){e.preventDefault();e.stopPropagation();void this.save('save',{}).catch(error=>{this.notice=error.message;this.render();});}};
+  host.onkeydown=e=>{if(['Enter',' '].includes(e.key)&&inspectTerm(e))return;if(!e.isComposing&&(e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'&&!this.m.q?.('dialog[open]')){e.preventDefault();e.stopPropagation();void this.m.save().catch(error=>{this.notice=error.message;this.render();});}};
   host.querySelectorAll?.('[data-ip-citation],[data-ip-quote]')?.forEach(input=>input.oninput=()=>{
    const el=input.closest('[data-ip-field]'),key=el.dataset.ipField;d.citationDrafts||={};d.citationDrafts[key]={id:el.querySelector('[data-ip-citation]').value,quote:el.querySelector('[data-ip-quote]').value};this.m.updateNavigationLock?.();
    const save=host.querySelector('[data-ip="save"]');if(save)save.disabled=!!(this.pending||d.retry||this.m.collaboration.readonly||(!d.dirty&&d.revision&&!this.hasQuotation(d)));
@@ -132,7 +133,6 @@ export class InterpretationEditor{
  editorMarkup(d){
   const derived=sourceSections(d.context),blocked=this.pending||this.loading||d.retry||this.m.collaboration.readonly,disabled=blocked?'disabled':'',editDisabled=this.m.collaboration.readonly?'disabled':'',r=this.m.requirements;
   const design=d.check_design=setDesign(d.check_design||emptyDesign());
-  const canConfirm=d.revision&&!d.reviewed&&!d.dirty&&!d.stale&&!d.sourceChanged&&cardKeys.every(k=>cardApproved(d,k))&&!conceptIssues(design).length&&interpretationKeys.every(k=>reviewReady(logicFields(d.fields,design)[k]));
   const notice=this.notice==='Saved and reviewed are separate states.'?'':this.notice;
   return `<div class="ip-heading"><p class="ip-state">${esc(r.label(d.unit_id))} · ${d.dirty?'Unsaved changes':d.revision?'Saved':'Not saved'} · ${d.reviewed&&!d.stale&&!d.sourceChanged?'Confirmed':'Review pending'}</p></div><p class="ip-notice" role="status">${esc(notice)}</p>
    ${d.context_error?`<p class="ip-warning" role="status">${esc(d.context_error)} Saved interpretation text is retained; current source wording is unavailable.</p>`:''}
@@ -145,7 +145,7 @@ export class InterpretationEditor{
     </details>
     ${d.designUI?.undo?.root===key?`<p class="ip-caption" data-rd-path="${key}">Removed from this Set. <button data-rd="undo-remove" ${disabled}>Undo removal</button></p>`:''}<div class="ip-card-review"><span class="ip-caption" data-card-status="${key}" tabindex="-1">${cardApproved(d,key)?'Approved'+(Object.hasOwn(d.pendingApprovals||{},key)?' · save pending':''):'Not approved'}</span><button data-ip="approve-card" data-field="${key}" ${disabled||cardApproved(d,key)||(!logicText(design.groups[key])&&!d.fields[key].value?.trim()&&fieldState(d.fields[key])!=='not_stated')?'disabled':''}>Approve ${key}</button></div>${this.cardCandidate(d,key,i,disabled)}</section>`).join('')}
    <p class="rd-error" role="alert">${esc(d.designUI?.error||'')}</p><section class="ip-logic ip-set-output" aria-label="Checking relationship">${logicMarkup()}</section>
-   <div class="ip-save"><button data-ip="save" ${disabled||(!d.dirty&&d.revision&&!this.hasQuotation(d))?'disabled':''}>Save</button>${canConfirm?`<button data-ip="review" ${disabled}>Confirm interpretation</button>`:''}${d.retry?'<button data-ip="retry">Retry save</button>':''}</div>`;
+   <div class="ip-save" role="status">${d.dirty||d.retry?'Unsaved changes ? use Save at the top of the page.':'Saved draft ? confirm completion below after reviewing every Requirement.'}</div>`;
  }
 
  async suggestLogic(k){
@@ -172,7 +172,7 @@ export class InterpretationEditor{
   for(const key of cardKeys){if(!cardApproved(d,key)){delete d.approvalSnapshots?.[key];delete d.pendingApprovals?.[key];}const label=this.host?.querySelector?.(`[data-card-status="${key}"]`),button=this.host?.querySelector?.(`[data-ip="approve-card"][data-field="${key}"]`);if(label)label.textContent=cardApproved(d,key)?'Approved'+(Object.hasOwn(d.pendingApprovals||{},key)?' · save pending':''):'Not approved';if(button)button.disabled=!!(this.pending||this.loading||this.m.collaboration?.readonly||cardApproved(d,key)||(!logicText(d.check_design.groups[key])&&!d.fields[key].value?.trim()&&fieldState(d.fields[key])!=='not_stated'));}
   const approvalNotice=/^(Scope|Condition|Demand) approved in this draft\. Save to record your approval\.$/.exec(this.notice);
   if(approvalNotice&&!cardApproved(d,approvalNotice[1].toLowerCase())){const old=this.notice;this.notice='';const feedback=this.host?.querySelector?.('.ip-notice');if(feedback?.textContent===old)feedback.textContent='';}
-  this.refreshOutput();const save=this.host?.querySelector?.('[data-ip="save"]');if(save)save.disabled=!!(this.pending||this.loading||d.retry||this.m.collaboration?.readonly);}
+  this.m.updateBar?.();this.refreshOutput();const save=this.host?.querySelector?.('[data-ip="save"]');if(save)save.disabled=!!(this.pending||this.loading||d.retry||this.m.collaboration?.readonly);}
  approveCard(key,runId=null){
   const d=this.draft;if(!cardKeys.includes(key))throw Error('Choose Scope, Condition or Demand.');
   if(this.pending||this.m.collaboration.readonly)throw Error('This interpretation is not editable right now.');
@@ -278,7 +278,7 @@ export class InterpretationEditor{
   const d=this.draft,key=this.active;if(this.pending)return;
   if(d.designUI)d.designUI.undo=null;
   if(action==='save'&&!d.dirty&&d.revision&&this.hasQuotation(d)){this.notice='The quotation has not been added. Use Add citation before saving it.';this.render();return;}
-  if(this.m.requirements?.dirty)throw Error('Save Requirement splitting before saving its interpretation.');if(d.savingWorking)throw Error('Working copy is still saving. Retry in a moment.');clearTimeout(d.autosaveTimer);
+  if(this.m.requirements?.dirty&&!this.m.pageSaving)throw Error('Save Requirement splitting before saving its interpretation.');if(d.savingWorking)throw Error('Working copy is still saving. Retry in a moment.');clearTimeout(d.autosaveTimer);
   const invalid=this.host?.querySelector(':invalid');if(invalid&&action!=='retry')throw Error(invalid.validationMessage||'Correct the rule value before saving.');
   if(d.conflict&&action!=='retry')throw Error('Compare the saved interpretation and local draft before saving again.');
   if((d.stale||d.sourceChanged)&&action!=='retry')throw Error('Refresh the context, then review your fields before saving.');
