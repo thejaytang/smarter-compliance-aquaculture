@@ -14,9 +14,30 @@ export class RequirementsEditor {
   constructor(materials) { this.m=materials; this.sessions=[]; this.results=[]; this.closedUnits=new Set(); this.quantityDrafts=new Map();this.rangeModes=new Map();this.groupEditor=new StructureEditor(this); this.sessionCollapsed=false; }
   get dirty() { return !!this._dirty || this.quantityDrafts.size>0; }
   set dirty(value) { this._dirty=value;if(!value)this.quantityDrafts.clear(); }
+  hasUnsaved(){return this.dirty||[...(this.working?.values()||[])].some(s=>s.dirty);}
+  stash(){
+    this.working??=new Map();if(!this.doc)return;
+    if(!this.dirty){this.working.delete(this.doc.id);return;}
+    this.working.set(this.doc.id,{doc:this.doc,edits:this.edits,baseSession:this.baseSession,baseRevision:this.baseRevision,
+      selected:this.selected,dirty:true,quantities:new Map(this.quantityDrafts),closedUnits:new Set(this.closedUnits)});
+  }
+  resume(saved){
+    Object.assign(this,{doc:saved.doc,edits:saved.edits,baseSession:saved.baseSession,baseRevision:saved.baseRevision,selected:saved.selected,_dirty:saved.dirty});
+    this.quantityDrafts=new Map(saved.quantities);this.closedUnits=new Set(saved.closedUnits);this.sessionCollapsed=false;this.groupEditor.reset();this.render(true);
+  }
+  async saveAll(){
+    this.stash();const selected=this.doc?.id;
+    for(const [id,saved] of this.working){
+      this.resume(saved);await this.saveDraft();
+      if(this.dirty||this.retryRequest){this.stash();return false;}
+      this.working.delete(id);
+    }
+    if(selected){const saved=this.sessions.find(s=>s.id===selected);if(saved)this.acceptSession(saved);}
+    return true;
+  }
   quantityKey(group) { return [this.doc.id,group.dataset.owner||null,group.dataset.field,group.dataset.path||''].join(':'); }
   get host() { return this.m.q('#mw-requirement-content'); }
-  get locked() { return this.loading || this.pending || this.m.busy || this.m.opening || this.m.dirty || this.doc?.stale || !!this.retryRequest || this.m.collaboration.readonly; }
+  get locked() { return this.loading || this.pending || this.m.busy || this.m.opening || (this.m.dirty&&!this.m.pageSaving) || this.doc?.stale || !!this.retryRequest || this.m.collaboration.readonly; }
   key() { return `${this.m.state?.actor?.id || ''}:${this.m.id}:${this.m.material?.revision}:${this.m.material?.collaboration?.view || ''}`; }
   render(force=false) {
     const host=this.host;if(!host||!this.m.material)return;
@@ -39,6 +60,7 @@ export class RequirementsEditor {
     // Native disclosure is presentation only; retain it across each saved-step render.
     host.querySelectorAll?.('[data-unit]').forEach(card=>card.ontoggle=()=>{if(!card.isConnected)return;if(card.open)this.closedUnits.delete(card.dataset.unit);else this.closedUnits.add(card.dataset.unit);});
     if(this.pending)host.setAttribute('aria-busy','true');else host.removeAttribute('aria-busy');
+    this.m.pageWorkflow?.draw();
   }
   orderedSessions() {
     const order=new Map((this.m.draft?.blocks||[]).map((b,i)=>[b.id,i]));
@@ -76,17 +98,24 @@ export class RequirementsEditor {
   }
   async open(id,selectedId=undefined) {
     if(this.pending||this.retryRequest)return false;
-    if(this.dirty){this.m.unsavedDialog?.();return false;}
+    this.stash();
+    if(this.working?.has(id)){this.resume(this.working.get(id));if(selectedId)this.selected=selectedId;this.render(true);void this.syncInterpretation();return true;}
+    const previous=this.doc?.id;this.dirty=false;this.edits=[];
     const read=await this.readSession(id);
-    return this.currentRead(read)?this.acceptSession(read.doc,selectedId):false;
+    if(!read&&this.working?.has(previous)){this.resume(this.working.get(previous));return false;}
+    if(!this.currentRead(read))return false;
+    const accepted=this.acceptSession(read.doc,selectedId);
+    if(!accepted&&this.working?.has(previous))this.resume(this.working.get(previous));
+    return accepted;
   }
   showError(error) {this.notice=error.message||String(error);this.render(true);}
   async start(blockId,combine=false) {
     if(this.pending||this.m.busy||this.m.opening||this.m.dirty||this.retryRequest||this.m.collaboration.readonly||this.loading)return;
-    if(this.dirty){this.m.unsavedDialog?.();return;}
+    this.stash();this.dirty=false;this.edits=[];
     const block=this.m.draft.blocks.find(b=>b.id===blockId);if(!block||block.role==='document_information')return;
     const existing=this.sessions.find(s=>s.block_id===blockId&&s.text===block.text);
     if(!combine&&existing){
+      if(this.working?.has(existing.id))return this.open(existing.id);
       const read=await this.readSession(existing.id);if(!this.currentRead(read))return false;const candidate=read.doc;
       if(!candidate.stale)return this.acceptSession(candidate);
     }
@@ -124,7 +153,7 @@ export class RequirementsEditor {
       const result=await this.m.api('/api/requirements/step',payload);
       if(context!==this.context)return;
       if(result.status!=='conflict'&&!isDirect){if(!(this.edits||[]).length&&request.action!=='start'){this.baseSession=request.session_id;this.baseRevision=request.expected_revision;}this.edits=edits;this.dirty=true;}
-      if(result.status!=='conflict'&&request.action==='save-draft'){this.edits=[];this.dirty=false;this.baseSession=result.document.id;this.baseRevision=result.document.revision;}
+      if(result.status!=='conflict'&&request.action==='save-draft'){this.working?.delete(result.document.id);this.edits=[];this.dirty=false;this.baseSession=result.document.id;this.baseRevision=result.document.revision;}
 
       if(context!==this.context)return;
       if(result.status==='conflict')throw Object.assign(Error(result.error),{status:409,definitive:true});
@@ -143,12 +172,12 @@ export class RequirementsEditor {
       if(!e.definitive)this.retryRequest=request;
       this.notice=e.status===409?'Another tab saved a newer step. Your attempted step was not applied. Reopen this saved passage to continue.':`${e.message}${this.retryRequest?' Retry to confirm the result before leaving.':''}`;
       return false;
-    } finally {this.pending=false;this.render(true);this.m.updateNavigationLock?.();}
+    } finally {this.pending=false;this.render(true);this.m.updateNavigationLock?.();this.m.updateBar?.();}
   }
   saveBarMarkup() {
     if(!this.doc||(!this.dirty&&this.sessionCollapsed&&!this.notice))return '';
     const disabled=this.locked?'disabled':'';
-    return `<div class="rq-save-bar" aria-label="Requirement saving">${this.notice?`<span class="rq-save-feedback" role="status" aria-live="polite">${esc(this.notice)}</span>`:`<span>${this.dirty?'Unsaved changes':''}</span>`}<div>${this.retryRequest?button('retry','Retry',this.pending?'disabled':''):''}${this.dirty?button('discard-draft','Discard',disabled):''}${button('save-draft','Save',this.dirty?disabled:'disabled')}${button('save-close','Save &amp; close',disabled)}</div></div>`;
+    return `<div class="rq-save-bar" aria-label="Requirement progress"><span role="status">${esc(this.notice|| (this.hasUnsaved()?'Unsaved changes · use Save at the top of the page.':''))}</span></div>`;
   }
   async saveDraft(close=false){
     if(this.pending||this.retryRequest||this.locked||!this.doc||(!this.dirty&&!close))return;
@@ -172,7 +201,7 @@ export class RequirementsEditor {
       dialog.querySelector('[data-discard-requirement]').onclick=()=>{dialog.close();this.discard();};
     });
   }
-  discard(){this.edits=[];this.dirty=false;this.retryRequest=null;this.doc=null;this.baseSession=null;void this.loadList();}
+  discard(){this.working?.delete(this.doc?.id);this.edits=[];this.dirty=false;this.retryRequest=null;this.doc=null;this.baseSession=null;return this.loadList();}
   async navigateAnnotation(refs){
     const jump=async s=>{
       if(!(await this.open(s.session_id,s.unit_id))||this.doc?.id!==s.session_id||!this.doc.units?.[s.unit_id])return false;
@@ -271,7 +300,7 @@ export class RequirementsEditor {
       input.onbeforeinput=e=>{if(e.data&&!/^\d+$/.test(e.data))e.preventDefault();};
       input.oninput=()=>{
         if(!/^\d*$/.test(input.value)){input.value=input.dataset.previous;return;}
-        input.dataset.previous=input.value;changed=true;this.quantityDrafts.set(key,inputs.map(i=>i.value));this.m.updateNavigationLock?.();preview();
+        input.dataset.previous=input.value;changed=true;this.quantityDrafts.set(key,inputs.map(i=>i.value));this.m.updateNavigationLock?.();this.m.updateBar?.();preview();
         row.querySelectorAll('[data-preset]').forEach(b=>b.setAttribute('aria-pressed','false'));
       };
       input.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();void commit().catch(e=>this.showError(e));}if(e.key==='Escape'){e.preventDefault();const q=JSON.parse(row.dataset.current),values=Array.isArray(q)?q:[q,q];inputs.forEach((i,n)=>{i.value=String(values[n]);i.dataset.previous=i.value;});output.textContent=quantityPreview(q);error.hidden=true;inputs.forEach(i=>i.removeAttribute('aria-invalid'));changed=false;this.quantityDrafts.delete(key);this.m.updateNavigationLock?.();}};

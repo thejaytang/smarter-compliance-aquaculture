@@ -8,8 +8,8 @@ from contextlib import closing
 import json
 import re
 import sqlite3
-from pathlib import Path
-from urllib.parse import urlsplit
+from .filesystem import FilePath as Path, sqlite_uri, logical_path
+from urllib.parse import urlsplit, parse_qs
 from urllib.request import url2pathname
 
 TOKEN = re.compile(r"('(?:''|[^'])*'|\"(?:\"\"|[^\"])*\"|\[(?:[^\]])*\]|--[^\n]*|/\*[\s\S]*?\*/|\b[A-Za-z_][A-Za-z_0-9]*\b)")
@@ -84,11 +84,22 @@ class Connection(sqlite3.Connection):
 
 def connect(database, *args, **kwargs):
     original=str(database)
+    memory_uri=kwargs.get('uri') and original.startswith('file:') and (
+        urlsplit(original).path==':memory:' or parse_qs(urlsplit(original).query).get('mode')==['memory'])
+    if original in ('', ':memory:') or memory_uri:
+        kwargs['factory']=Connection
+        db=sqlite3.connect(database,*args,**kwargs)
+        db.execute('PRAGMA foreign_keys=ON')
+        return db
     if original.startswith('file:'):
         uri=urlsplit(original)
         authority='//'+uri.netloc if uri.netloc and uri.netloc!='localhost' else ''
-        path=Path(url2pathname(authority+uri.path))
+        path=Path(logical_path(url2pathname(authority+uri.path)))
     else:path=Path(original)
+    if original.startswith('file:') and kwargs.get('uri'):
+        database=sqlite_uri(path)+('?' + uri.query if uri.query else '')
+    elif not original.startswith('file:') and original not in ('', ':memory:'):
+        database=path
     marker=path.parent/'.storage.json'
     names={};routed=False
     if marker.is_file():
@@ -99,7 +110,7 @@ def connect(database, *args, **kwargs):
             target=(marker.parent/entry['database']).resolve()
             if kwargs.get('uri'):
                 query=urlsplit(original).query
-                database=target.as_uri()+('?' + query if query else '')
+                database=sqlite_uri(target)+('?' + query if query else '')
             else:database=target
             prefix=entry.get('prefix','')
             if prefix:names={n:prefix+n for n in SYSTEM2_TABLES|SYSTEM2_INDEXES}
@@ -134,7 +145,7 @@ def alias(folder, filename, database, prefix=''):
     folder=Path(folder);folder.mkdir(parents=True,exist_ok=True)
     path=folder/'.storage.json'
     value=json.loads(path.read_text()) if path.exists() else {}
-    value[filename]={'database':os.path.relpath(database,folder),'prefix':prefix}
+    value[filename]={'database':os.path.relpath(str(database),str(folder)),'prefix':prefix}
     raw=json.dumps(value,indent=2)+'\n'
     if not path.exists() or path.read_text()!=raw:
         temporary=path.with_suffix('.tmp');temporary.write_text(raw);temporary.replace(path)

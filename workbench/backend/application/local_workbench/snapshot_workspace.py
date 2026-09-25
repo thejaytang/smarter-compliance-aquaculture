@@ -72,7 +72,7 @@ class SnapshotWorkspace:
   yield from Delivery(c).capture()
   # Task/inspection histories travel as immutable evidence. Personal proposals
   # remain separate records and are never executed during synchronization.
-  for kind in ('source_task_draft','material_inspection','adoption_receipt','collection_adoption','received_adoption'):
+  for kind in ('source_task_draft','material_inspection','adoption_receipt','collection_adoption','received_adoption','material_progress_confirmation','material_archive_progress'):
    for record in c.all(kind):
     identity=record.get('id') or record.get('request_id') or fingerprint(record)
     yield {'key':'history:'+kind+':'+identity,'value':record,'actor':record.get('actor',actor)}
@@ -93,6 +93,10 @@ class SnapshotWorkspace:
    from backend.system3.requirement_delivery import Delivery, key_for
    Delivery(self.c).validate(value)
    if key!=key_for(value['actor']):raise ValueError('Requirement reviewer identity differs.')
+  elif key.startswith('history:material_progress_confirmation:'):
+   from local_workbench.material_progress import validate_confirmation
+   validate_confirmation(value)
+   if key.rsplit(':',1)[1]!=value['id']:raise ValueError('Processing confirmation identity differs.')
   elif not key.startswith('history:'):raise ValueError('Unsupported record in snapshot.')
  def validate(self,m,files):
   for n in m['nodes'].values():self.validate_value(n['key'],n['value'])

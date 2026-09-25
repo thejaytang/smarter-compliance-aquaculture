@@ -219,17 +219,17 @@ $('#workspace-selector').onchange=()=>{const next=navigation.forWorkspace($('#wo
 $('#actor-form').onsubmit=async e=>{
  e.preventDefault();if(switchingActor||navigating)return;const name=$('#actor').value;
  if(!name||name===state.actor.name){$('#application-menu').open=false;return;}
- if(!sources.canLeave()||!materials.canLeave()){notice('Your current work is retained. Finish or save it before switching reviewer.');return;}
+ if(!sources.canLeave()||!await materials.canLeave()){notice('Your current work is retained. Finish or save it before switching reviewer.');return;}
  switchingActor=true;$('#actor-save').disabled=true;renderNavigation();
  try{await saveDraft();await api('/api/actor',{name});await refresh(false);await loadDraft();externalActorChange=false;main.inert=false;notice('');$('#application-menu').open=false;await renderView();}
  catch(error){notice(error.message);}finally{switchingActor=false;$('#actor-save').disabled=false;renderNavigation();}
 };
-$('#stop').onclick=async()=>{if(!sources.canLeave()||!materials.canLeave())return;try{await saveDraft();await api('/api/stop',{});notice('Workbench stopped. Double-click the launcher to continue.');clearInterval(poll);}catch(error){notice(error.message);}};
+$('#stop').onclick=async()=>{if(!sources.canLeave()||!await materials.canLeave())return;try{await saveDraft();await api('/api/stop',{});notice('Workbench stopped. Double-click the launcher to continue.');clearInterval(poll);}catch(error){notice(error.message);}};
 const showActivity=()=>{$('#application-menu').open=false;$('#activity-dialog').showModal();};
 $('#show-activity').onclick=showActivity;
 $('#activity-close').onclick=()=>$('#activity-dialog').close();
 $('#show-attention').onclick=async()=>{
- if(externalActorChange){if(!sources.canLeave()||!materials.canLeave())return;externalActorChange=false;main.inert=false;notice('');await renderView();updateShellAttention();return;}
+ if(externalActorChange){if(!sources.canLeave()||!await materials.canLeave())return;externalActorChange=false;main.inert=false;notice('');await renderView();updateShellAttention();return;}
  if(['degraded','failed','unavailable'].includes($('#runtime-status').dataset.state))$('#runtime-status').click();else showActivity();
 };
 document.addEventListener('pointerdown',event=>{const menu=$('#application-menu');if(menu.open&&!menu.contains(event.target))menu.open=false;});

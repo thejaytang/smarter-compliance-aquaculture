@@ -12,14 +12,23 @@ def confirm(collaboration,actor,request):
   if prior:return prior
   pending=c.get('peer_confirmation_pending',rid)
   adapter=c.personal_adapter(actor,request['material_id'])
+  if pending and pending.get('processing_progress'):
+   current=adapter.call('material_read',material_id=request['material_id'])
+   if current['revision']==request['expected_revision']:
+    from local_workbench.material_progress import MaterialProgress
+    checked=MaterialProgress(c).require_complete(actor,request['material_id'])
+    if checked['version']!=pending['processing_progress']['version']:
+     raise ValueError('Processing confirmations changed before Archive finished. Start a new Archive request.')
   if not pending:
+   from local_workbench.material_progress import MaterialProgress
+   processing=MaterialProgress(c).require_complete(actor,request['material_id'])
    workspace=c.workspace(actor,request['material_id']);current=c.app.system2.call('material_read',material_id=request['material_id'])
    personal=adapter.call('material_read',material_id=request['material_id'])
    if any(i['status'] in ('running','ready','partial') for i in current.get('candidates',[])):
     raise ValueError('Resolve the shared extraction candidate before archiving.')
    if body(current)!=body(workspace['base_material']) and body(current)!=body(personal):
     raise ValueError('Another saved shared version differs. Synchronize and resolve its changes before archiving.')
-   pending={'confirm_request':dict(request,actor=actor),'shared_revision':current['revision']}
+   pending={'confirm_request':dict(request,actor=actor),'shared_revision':current['revision'],'processing_progress':processing}
    c.put('peer_confirmation_pending',rid,pending)
   result=adapter.call('material_confirm',request=pending['confirm_request'])
   if result.get('status')=='conflict':return result
@@ -44,5 +53,9 @@ def confirm(collaboration,actor,request):
   c.put_many([('sync_node',n['id'],n) for n in (base,personal,shared_node)]+[
    ('sync_observed',key+':'+actor,{'head':personal['id']}),('sync_observed',key+':master',{'head':shared_node['id']})])
   result['material']=c.annotate(actor,result['material'])
+  if pending.get('processing_progress'):
+   identity=request['material_id']+':'+str(shared['material']['revision'])
+   c.put('material_archive_progress',identity,dict(id=identity,material_id=request['material_id'],
+    actor=actor,progress=pending['processing_progress']))
   c.put('peer_confirmation_receipt',rid,result)
   return result

@@ -16,7 +16,7 @@ This is the single Agent entry point, including for local VS Code Copilot. Read 
 - Inspect current code, Git changes, runtime identity and applicable evidence before acting. Keep user changes and unrelated historical files.
 - Use each component's declared local environment. Root `deployment.py` owns install, rebuild, checks, explicit migration and launch. Never install project packages globally or copy virtual environments across operating systems.
 - Preserve stable persistent IDs, source hashes/versions/spans, author/time, exact Group nesting, relationships, quantities and Requirement links. R1/G1 labels are presentation only.
-- Unsaved browser edits stay in memory with leave warnings. Only explicit save appends a business revision. Save, candidate adoption, review and archive remain distinct.
+- Unsaved browser edits stay in memory with leave warnings. Whole-page Save stores all editable-pane drafts; the three-second leave countdown only delays discard and never saves automatically. Only explicit save appends a business revision. Named pane-completion records remain separate from body revisions; Archive requires all three current confirmations. Save, candidate adoption, review and archive remain distinct.
 - Named reviewers share saved Requirement/SCD work; keep creator identity and actual editor history. Enforce expected versions, idempotent requests, stale-result rejection and explicit conflict decisions.
 - S/C/D remains bound to the exact saved Requirement revision used to create it. A later split makes it stale and does not rewrite human text.
 - Preserve source-supported wording, inference and unknowns separately. No invented deadline, responsible party, exception, threshold or inspection standard. Check designs are not executed compliance results. Site Model grounding belongs to its consumer.
@@ -25,6 +25,7 @@ This is the single Agent entry point, including for local VS Code Copilot. Read 
 - Keep loopback Host/Origin/CSRF and server-bound actor checks. Serve registered source IDs, not client paths. Active original HTML is download-only; previews are sanitized and sandboxed with restrictive CSP.
 - Run relevant local tests and source/JSON checks. Cross-module changes need integration, conflict, replay, failure-recovery and UI checks. Label unrun Windows/native/real-model checks explicitly. Passing tests are not source-fidelity, compliance or release acceptance.
 - Preserve both Windows and macOS launchers. Account for Unicode, drive roots, newline differences, file locks, explicit connection/process closure, case-insensitive paths and portable ZIP names.
+- Use `backend.shared.filesystem` for storage/package native file access and temporary staging. Keep extended Windows namespaces out of persisted identities and portable URIs; write checksummed cross-platform text with explicit encoding and newline bytes.
 - Update current product guides/contracts and local development state after material changes; archive superseded explanations locally. Do not make product guides depend on excluded development files.
 
 ## 3. Source and parsing protections

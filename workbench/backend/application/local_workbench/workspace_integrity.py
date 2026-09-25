@@ -3,7 +3,7 @@ from contextlib import ExitStack, closing
 import hashlib
 import json
 import sqlite3
-from pathlib import Path
+from backend.shared.filesystem import FilePath as Path, sqlite_uri
 from backend.shared.workspace import DATABASES
 from local_workbench.workspace_migration import sha
 
@@ -31,7 +31,7 @@ def validate_logical(databases, payload, manifest):
     with ExitStack() as stack:
         stores={}
         for name in DATABASES:
-            db=stack.enter_context(closing(sqlite3.connect((Path(databases)/(name+'.sqlite')).resolve().as_uri()+'?mode=ro&immutable=1',uri=True)))
+            db=stack.enter_context(closing(sqlite3.connect(sqlite_uri((Path(databases)/(name+'.sqlite')).resolve())+'?mode=ro&immutable=1',uri=True)))
             db.row_factory=sqlite3.Row;db.execute('PRAGMA trusted_schema=OFF');db.execute('PRAGMA query_only=ON')
             stores[name]=db
         s1,s2,req,scd=(stores[n] for n in DATABASES)
@@ -71,7 +71,7 @@ def inspect(databases, sources=None):
         stores={}
         for name in DATABASES:
             path=Path(databases)/(name+'.sqlite')
-            db=stack.enter_context(closing(sqlite3.connect(path.resolve().as_uri()+'?mode=ro&immutable=1',uri=True)))
+            db=stack.enter_context(closing(sqlite3.connect(sqlite_uri(path.resolve())+'?mode=ro&immutable=1',uri=True)))
             db.row_factory=sqlite3.Row
             db.execute('PRAGMA trusted_schema=OFF');db.execute('PRAGMA query_only=ON')
             if db.execute('PRAGMA integrity_check').fetchone()[0]!='ok':raise ValueError('Database integrity failed: '+name)

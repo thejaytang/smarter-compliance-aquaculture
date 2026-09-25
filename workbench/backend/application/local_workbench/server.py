@@ -60,6 +60,8 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("Cache-Control","no-store")
         self.send_header("X-Content-Type-Options","nosniff")
         self.send_header("Referrer-Policy","no-referrer")
+        if self.close_connection:
+            self.send_header("Connection", "close")
         headers = dict(headers or {})
         policy = headers.pop("Content-Security-Policy", "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; frame-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'")
         self.send_header("Content-Security-Policy", policy)
@@ -67,6 +69,22 @@ class Handler(BaseHTTPRequestHandler):
             self.send_header(k,v)
         self.end_headers()
         self.wfile.write(data)
+        if status >= 400 and self.command == 'POST' and self.close_connection:
+            # Deliver rejection before closing a Windows socket with unread
+            # request bytes. Never parse them; bound both drain size and time.
+            self.wfile.flush()
+            try:
+                self.connection.shutdown(socket.SHUT_WR)
+                self.connection.settimeout(.2)
+                remaining = 65536
+                deadline = time.monotonic() + .2
+                while remaining and time.monotonic() < deadline:
+                    data = self.connection.recv(min(8192, remaining))
+                    if not data:
+                        break
+                    remaining -= len(data)
+            except OSError:
+                pass
 
     def valid_host(self):
         return self.headers.get("Host") == f"127.0.0.1:{self.server.server_port}"
@@ -254,6 +272,12 @@ class Handler(BaseHTTPRequestHandler):
                 if parsed.path.endswith('/search'):
                     return self.send(200, service.search(actor, query.get('q', [''])[0]))
                 return self.send(200, service.listing(actor, query.get('material_id', [''])[0]))
+            if parsed.path == '/api/material-progress':
+                from local_workbench.material_progress import MaterialProgress
+                query = parse_qs(parsed.query)
+                return self.send(200, MaterialProgress(self.app.collaboration).inspect(
+                    self.current_session()['name'], query.get('material_id', [''])[0], query.get('view', ['personal'])[0],
+                    int(query['revision'][0]) if 'revision' in query else None))
             if parsed.path == '/api/materials':
                 query = parse_qs(parsed.query)
                 options = {key: int(query[key][0]) for key in ('offset', 'limit') if key in query}
@@ -486,7 +510,7 @@ class Handler(BaseHTTPRequestHandler):
                     "/markdown-content.js":"markdown-content.js", "/markdown-content.css":"markdown-content.css", "/vendor/markdown/tools.mjs":"vendor/markdown/tools.mjs",
                     "/requirements.js":"requirements.js", "/requirement-structure.js":"requirement-structure.js", "/quantity.js":"quantity.js", "/requirement-source.js":"requirement-source.js", "/requirements.css":"requirements.css", "/materials.js":"materials.js", "/materials.css":"materials.css",
                     "/interpretations.js":"interpretations.js", "/check-design.js":"check-design.js", "/site-catalog.js":"site-catalog.js", "/version-comparison.js":"version-comparison.js", "/pane-layout.js":"pane-layout.js", "/four-pane.css":"four-pane.css", "/global-settings.js":"global-settings.js", "/requirement-comparison.js":"requirement-comparison.js", "/global-settings.css":"global-settings.css", "/collaboration.js":"collaboration.js", "/collaboration-relationships.js":"collaboration-relationships.js", "/collaboration.css":"collaboration.css",
-                    "/material-editing.js":"material-editing.js", "/source-workspace.js":"source-workspace.js", "/shell-navigation.js":"shell-navigation.js", "/source-workspace.css":"source-workspace.css", "/submission-drawer.js":"submission-drawer.js", "/material-inspection.js":"material-inspection.js", "/material-navigation.js":"material-navigation.js", "/runtime-status.js":"runtime-status.js",
+                    "/page-workflow.js":"page-workflow.js", "/material-editing.js":"material-editing.js", "/source-workspace.js":"source-workspace.js", "/shell-navigation.js":"shell-navigation.js", "/source-workspace.css":"source-workspace.css", "/submission-drawer.js":"submission-drawer.js", "/material-inspection.js":"material-inspection.js", "/material-navigation.js":"material-navigation.js", "/runtime-status.js":"runtime-status.js",
                     "/evidence-viewer.js":"evidence-viewer.js", "/pdf-repairs.js":"pdf-repairs.js", "/pdf-table-editor.js":"pdf-table-editor.js", "/pdf-table-rows.js":"pdf-table-rows.js", "/pdf-pages.js":"pdf-pages.js","/review-state.js":"review-state.js", "/source-check.js":"source-check.js", "/export-status.js":"export-status.js",
                     "/dashboard.js":"dashboard.js", "/qa-chart.js":"qa-chart.js", "/pdf-references.js":"pdf-references.js", "/pdf-assessments.js":"pdf-assessments.js",
                     "/extraction.js":"extraction.js", "/extraction.css":"extraction.css",
@@ -592,6 +616,12 @@ class Handler(BaseHTTPRequestHandler):
                     result=Drafts(self.app.collaboration).save(session['name'],body)
                 else:raise ValueError('Unknown interpretation action.')
                 return self.send(409 if result.get('status')=='conflict' else 200,result)
+            if self.path == '/api/material-progress':
+                if getattr(self.app, 'read_only_restored', False):
+                    return self.send(403, {'error': 'Restored inspection is read-only.'})
+                from local_workbench.material_progress import MaterialProgress
+                result = MaterialProgress(self.app.collaboration).confirm(session['name'], body)
+                return self.send(409 if result.get('status') == 'conflict' else 200, result)
             if self.path == '/api/requirements/step':
                 from backend.system3.requirements import Requirements
                 result = Requirements(self.app.collaboration).apply(session['name'], body)
