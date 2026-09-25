@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "status": "ready for atomic publication",
+  "status": "published and verified",
   "base": "c13398c38dd3151f16ff432d101f9bb5ba2eb8ee",
   "remote_before": {
     "refs/heads/codex/record-macos-git-sync-20260914": "9778980501c7042a42860aad4fba342f1e94fc46",
@@ -9146,5 +9146,16 @@
     "existing_work_refused_unchanged": true,
     "platform": "darwin"
   },
-  "main_commit": "b97764e623994ef0f77719978676b5abb6b82da1"
+  "main_commit": "b97764e623994ef0f77719978676b5abb6b82da1",
+  "remote_after": {
+    "refs/heads/developing": "f44134659dc3b807623809a57d774d6bc507b3e1",
+    "refs/heads/main": "b97764e623994ef0f77719978676b5abb6b82da1"
+  },
+  "local_branches": [
+    "developing",
+    "main"
+  ],
+  "github_main_tree_paths": 727,
+  "github_main_boundary": "passed",
+  "default_branch": "main"
 }
