@@ -10,6 +10,8 @@ This directory is the application root. The product checkout contains the four r
 
 ## 1. Start here
 
+For a new Windows installation with Jay’s complete saved workspace, follow [the development installation steps](workbench/initial-data/README.md). The current seed is from the stopped 6 October 2026 snapshot and is restored by the application, without manually unpacking Appendix F. The product-only installation and PE002 Example are on [`main`](https://github.com/thejaytang/smarter-compliance-aquaculture/tree/main).
+
 - [User guide](USER_GUIDE.md): daily review, manual saves, Collaboration and fixed deliveries.
 - [Environment guide](ENVIRONMENT.md): first installation, migration, updates and recovery.
 - [Agent instructions](AGENTS.md): the single guide for local VS Code Copilot and other coding assistants.

@@ -15,6 +15,16 @@ Run commands from this repository root. Install Python matching [.python-version
 
 ## 2. First installation
 
+### Windows download and extraction
+
+Prefer `git clone -c core.longpaths=true --branch main --single-branch https://github.com/thejaytang/smarter-compliance-aquaculture.git C:\sc` in Command Prompt. Use a new short local path outside OneDrive; choose another short path if `C:\sc` already exists or is not writable. Git downloads the application directly, so the Appendix F ZIP does not need to be extracted.
+
+The published Appendix F archive passed its integrity check on 8 October 2026, but some internal paths are 269 characters long before adding the destination directory. This can prevent extraction with Windows tools that retain the traditional path limit. The reported company-computer extraction failure has no captured error message, so its exact cause is unconfirmed. Do not rename source files or shorten their internal folders: saved records depend on those paths.
+
+Keep the bundled seed ZIP compressed. `deployment.py restore-initial` checks its hash and restores it through the application's long-path-aware filesystem code. It never overwrites an existing business workspace. Python 3.12, `uv`, Git and access to the dependency downloads are prerequisites; use company-approved installations on managed computers.
+
+The 8 October checks covered a fresh macOS installation, restoration and startup. Native Windows execution still requires acceptance on the receiving computer.
+
 Windows Command Prompt:
 
 ```bat

@@ -1,3 +1,7 @@
+# Current synchronization: 8 October 2026
+
+The complete stopped 6 October saved workspace is now prepared as `workbench/initial-data/workspace-20261006.zip` for the existing initial-data importer. Four authoritative databases, originals and saved histories are preserved; runtime coordination is rebuilt locally. Windows clone/install steps are in `workbench/initial-data/README.md`. Fresh macOS restore, HTTP startup, browser Example readback, 15 targeted tests and Windows dependency resolution passed. Native company Windows acceptance remains unrun. See [verification](project-support/validation/github-sync-20261008/RESULTS.md). Earlier results below are historical.
+
 # Workbench current state
 
 Updated 2026-09-25. This checkout is the complete `developing` branch. Local `main` is at `a57c94eff407d19bd70467e91eee430436f1e8a9`; its product changes are integrated into `developing` without removing development files. The repository retains exactly `main` and `developing`, with product-only main. Branch cleanup verification is recorded below.

@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-08",
+  "repository": "https://github.com/thejaytang/smarter-compliance-aquaculture",
+  "source_snapshot_at": "2026-10-06T17:42:50.629428+00:00",
+  "source_appendix_sha256": "6a0c67267910b0c53d6d647ed191ce3d86a08d2692540e3a158f6cecf6359f8f",
+  "new_seed_sha256": "4146707902341cd30290a70baffd9b58249db6ed610c286499adf4b4d76b0160",
+  "source_tree_notes": "Downloaded the published appendix and GitHub branches. All packaged application source bytes match the existing branches; resident local product files match after accounting for Windows launcher line endings. Local cloud-only files were not assumed freshly inspected. No runtime application code changed.",
+  "extraction_diagnosis": "The published ZIP is valid. Its longest member path is 269 characters before the destination directory; this is an observed Windows extraction risk, not a confirmed company-machine root cause.",
+  "unit_tests": {
+    "passed": 15,
+    "failed": 0
+  },
+  "acceptance_groups": {
+    "appendix_download_sha256_and_zip_integrity": "PASS",
+    "application_code_matches_existing_product_branches": "PASS",
+    "fresh_install_example_restore_and_http_start": "PASS",
+    "complete_seed_manifest_and_four_database_rows_preserved": "PASS",
+    "complete_restore_overwrite_guard_http_and_browser_example": "PASS",
+    "15_existing_deployment_initial_data_and_platform_tests": "PASS",
+    "windows_dependency_resolution_all_three_environments": "PASS",
+    "branch_boundaries_push_and_remote_file_verification": "PENDING",
+    "native_company_windows_install_and_interaction": "NOT_RUN"
+  },
+  "limitations": [
+    "No native Windows host connected; dependency resolution and emulated platform branches are not native execution.",
+    "Real model/API processing and native OCR tools were not invoked.",
+    "The full seed contains four authoritative business stores; runtime coordination databases are recreated. The original six-store appendix is unchanged."
+  ]
+}

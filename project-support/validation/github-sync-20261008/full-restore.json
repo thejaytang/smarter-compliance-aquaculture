@@ -1,0 +1,10 @@
+{
+  "restored": "restored",
+  "sources": 89,
+  "originals": 76,
+  "bindings": 157,
+  "example_blocks": 85,
+  "example_requirements": 21,
+  "example_interpretations": 21,
+  "existing_workspace_overwrite_rejected": true
+}

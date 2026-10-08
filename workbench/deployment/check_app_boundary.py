@@ -17,7 +17,8 @@ EXAMPLE_FILES={'workbench/resources/examples/'+name for name in ('README.md','ex
  'example-work-20260922.zip','example-work-20260922.zip.sha256','example-seed-20260922.zip','example-seed-20260922.zip.sha256')}
 DEVELOPMENT_DATA_FILES={'workbench/initial-data/'+name for name in ('README.md','manifest.json',
  'workspace-20260917.zip','workspace-20260917.zip.sha256','manifest-20260922.json',
- 'workspace-20260922.zip','workspace-20260922.zip.sha256')} | {
+ 'workspace-20260922.zip','workspace-20260922.zip.sha256',
+ 'workspace-20261006.zip','workspace-20261006.zip.sha256','manifest-20261006.json')} | {
  'workbench/resources/examples/example-work-20260918.zip','workbench/resources/examples/example-work-20260918.zip.sha256'}
 COMPONENT_FILES={'workbench/backend/__init__.py','workbench/backend/system2/pyproject.toml','workbench/backend/system2/uv.lock','workbench/backend/system2/USER_GUIDE.md'}
 

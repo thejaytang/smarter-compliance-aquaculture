@@ -1,0 +1,13 @@
+{
+  "four_business_databases_all_table_rows_unchanged": {
+    "system1": true,
+    "system2": true,
+    "system3_requirements": true,
+    "system3_scd": true
+  },
+  "http_health": {
+    "example": "coordinator",
+    "complete": "coordinator"
+  },
+  "html_served": true
+}
