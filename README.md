@@ -10,6 +10,23 @@ This directory is the application root. The product checkout contains the four r
 
 ## 1. Start here
 
+### Windows: install from GitHub
+
+Use a short local directory outside OneDrive. With Git, Python 3.12 and `uv` installed, run these commands in Command Prompt for a **new installation**:
+
+```bat
+git clone -c core.longpaths=true --branch main --single-branch https://github.com/thejaytang/smarter-compliance-aquaculture.git C:\sc
+cd /d C:\sc
+py -3.12 deployment.py install
+py -3.12 deployment.py restore-initial --archive workbench/resources/examples/example-seed-20260922.zip --sha256 ddae83dde9a29f456fee1de78d270896d7e1304d3637ab961dfd4d4f4df688c2
+py -3.12 deployment.py verify
+py -3.12 deployment.py start
+```
+
+Run each command only after the previous one succeeds. After setup, use `Open Workbench (Windows).cmd`. Initial restoration refuses existing work; updates use the procedure in [ENVIRONMENT.md](ENVIRONMENT.md).
+
+This installs the application and saved PE002 Example. For Jay's complete saved workspace from 6 October 2026, use the [`developing` installation instructions](https://github.com/thejaytang/smarter-compliance-aquaculture/blob/developing/workbench/initial-data/README.md). The Appendix F ZIP is a separate handoff, not a prerequisite for either installation.
+
 - [User guide](USER_GUIDE.md): daily review, manual saves, Collaboration and fixed deliveries.
 - [Environment guide](ENVIRONMENT.md): first installation, migration, updates and recovery.
 - [Agent instructions](AGENTS.md): the single guide for local VS Code Copilot and other coding assistants.
