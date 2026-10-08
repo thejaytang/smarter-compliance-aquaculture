@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-08",
+  "repository": "https://github.com/thejaytang/smarter-compliance-aquaculture",
+  "delivery_commits": {
+    "main": "80ba7e284a7293f54333bf7bdcd62b7d8de4f7f1",
+    "developing": "cbed1ae1d48a9eba47a20b4a4440f0cd8cb9f580"
+  },
+  "anonymous_remote_download_bytes": 72627607,
+  "anonymous_remote_download_sha256": "4146707902341cd30290a70baffd9b58249db6ed610c286499adf4b4d76b0160",
+  "zip_integrity": "PASS",
+  "zip_members": 210,
+  "remote_file_comparisons": {
+    "main:README.md": "PASS",
+    "main:ENVIRONMENT.md": "PASS",
+    "developing:README.md": "PASS",
+    "developing:ENVIRONMENT.md": "PASS",
+    "developing:workbench/initial-data/README.md": "PASS",
+    "developing:workbench/initial-data/manifest-20261006.json": "PASS",
+    "developing:workbench/initial-data/workspace-20261006.zip.sha256": "PASS"
+  },
+  "native_windows": "NOT_RUN"
+}

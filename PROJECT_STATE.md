@@ -1,6 +1,6 @@
 # Current synchronization: 8 October 2026
 
-The complete stopped 6 October saved workspace is now prepared as `workbench/initial-data/workspace-20261006.zip` for the existing initial-data importer. Four authoritative databases, originals and saved histories are preserved; runtime coordination is rebuilt locally. Windows clone/install steps are in `workbench/initial-data/README.md`. Fresh macOS restore, HTTP startup, browser Example readback, 15 targeted tests and Windows dependency resolution passed. Native company Windows acceptance remains unrun. See [verification](project-support/validation/github-sync-20261008/RESULTS.md). Earlier results below are historical.
+The complete stopped 6 October saved workspace was published to GitHub as `workbench/initial-data/workspace-20261006.zip` for the existing initial-data importer. Four authoritative databases, originals and saved histories are preserved; runtime coordination is rebuilt locally. Windows clone/install steps are in `workbench/initial-data/README.md`. Fresh macOS restore, HTTP startup, browser Example readback, 15 targeted tests and Windows dependency resolution passed. Native company Windows acceptance remains unrun. See [verification](project-support/validation/github-sync-20261008/RESULTS.md). Earlier results below are historical.
 
 # Workbench current state
 

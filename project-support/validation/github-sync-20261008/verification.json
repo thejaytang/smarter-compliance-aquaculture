@@ -18,12 +18,13 @@
     "complete_restore_overwrite_guard_http_and_browser_example": "PASS",
     "15_existing_deployment_initial_data_and_platform_tests": "PASS",
     "windows_dependency_resolution_all_three_environments": "PASS",
-    "branch_boundaries_push_and_remote_file_verification": "PENDING",
+    "branch_boundaries_push_and_remote_file_verification": "PASS",
     "native_company_windows_install_and_interaction": "NOT_RUN"
   },
   "limitations": [
     "No native Windows host connected; dependency resolution and emulated platform branches are not native execution.",
     "Real model/API processing and native OCR tools were not invoked.",
     "The full seed contains four authoritative business stores; runtime coordination databases are recreated. The original six-store appendix is unchanged."
-  ]
+  ],
+  "publication_evidence": "publication.json"
 }
