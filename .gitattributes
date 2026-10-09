@@ -11,6 +11,7 @@ workbench/resources/examples/example.html -text
 workbench/workspace/** -text
 workbench/frontend/assets/vendor/** -text
 *.zip -text
+workbench/initial-data/windows-20261009/*.zip.* -text
 
 # Preserve PDF byte offsets and treat PDF assets as binary.
 *.pdf binary

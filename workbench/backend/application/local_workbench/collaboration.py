@@ -380,6 +380,9 @@ class Collaboration:
 
     def material_action(self, actor, action, request):
         actor = named(actor)
+        if action == 'confirm' and not getattr(self.app, 'peer_sync', False):
+            from local_workbench.material_progress import MaterialProgress
+            MaterialProgress(self).require_complete(actor, request['material_id'])
         if action == 'confirm' and getattr(self.app,'peer_sync',False):
             from local_workbench.peer_review import confirm
             return confirm(self, actor, request)
@@ -974,9 +977,31 @@ class Collaboration:
 
     def _confirm_master(self, actor, request):
         self.coordinator(actor)
+        from local_workbench.material_progress import MaterialProgress
+        rid = str(uuid.UUID(request['request_id']))
+        self.claim_request('master-confirmation', rid, fingerprint(request), actor)
+        prior = self.get('master_confirmation_receipt', rid)
+        if prior:
+            return prior
         if request.get('omissions_checked') is not True or request.get('dependencies_checked') is not True:
             raise ValueError('Confirm complete omissions and association checks explicitly.')
+        pending = self.get('master_confirmation_pending', rid)
+        if pending:
+            current = self.app.system2.call('material_read', material_id=request['material_id'])
+            if current['revision'] == request['expected_revision']:
+                checked = MaterialProgress(self).require_complete(actor, request['material_id'], 'master')
+                if checked['version'] != pending['progress']['version']:
+                    raise ValueError('Processing confirmations changed. Start a new Archive request.')
+            processing = pending['progress']
+        else:
+            processing = MaterialProgress(self).require_complete(actor, request['material_id'], 'master')
+            self.put('master_confirmation_pending', rid, {'progress': processing})
         result = self.app.system2.call('material_confirm', request=dict(request, actor=actor))
         if result.get('material'):
+            if result.get('status') != 'conflict':
+                identity = request['material_id'] + ':' + str(result['material']['revision'])
+                self.put('material_archive_progress', identity, dict(id=identity, material_id=request['material_id'], actor=actor, progress=processing))
             result['material'] = self.annotate(actor, result['material'], 'master')
+        if result.get('status') != 'conflict':
+            self.put('master_confirmation_receipt', rid, result)
         return result

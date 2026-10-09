@@ -270,11 +270,12 @@ def apply(config_path, req, *, scoped=False):
 
 
 def artifact(config_path, source_id):
+    from backend.shared.filesystem import FilePath
     cfg = u.read_config(config_path)
     source = next((s for s in read(config_path)["sources"] if s["source_id"] == source_id), None)
     if not source:
         raise ValueError("来源不存在。")
-    root = cfg["source_root"].resolve()
+    root = FilePath(cfg["source_root"]).resolve()
     path = (root / str(source["folder_code"]) / str(source["stored_filename"])).resolve()
     if root not in path.parents or not path.is_file():
         raise ValueError("当前没有可用的本地原件。")

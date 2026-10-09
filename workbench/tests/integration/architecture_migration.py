@@ -1,6 +1,5 @@
 """Populated legacy migration and fault recovery using real owning services."""
-from pathlib import Path
-from tempfile import TemporaryDirectory
+from backend.shared.filesystem import FilePath as Path, temporary_directory as TemporaryDirectory
 from contextlib import closing
 from unittest.mock import patch
 import json
@@ -40,7 +39,7 @@ def exercise(root):
     import local_workbench.workspace_migration as migration
     copy=migration.clone_file
     def fault(src,dst):
-        if str(dst).endswith('workspace/databases/system2.sqlite'):raise OSError('injected interruption')
+        if Path(dst).parts[-3:]==('workspace','databases','system2.sqlite'):raise OSError('injected interruption')
         return copy(src,dst)
     with patch.object(migration,'clone_file',side_effect=fault):
         try:migrate(source,wb,config=config,system2=workflow)

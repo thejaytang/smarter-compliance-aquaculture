@@ -2,12 +2,12 @@
 from contextlib import closing
 from datetime import datetime, timezone
 from io import BytesIO
-from pathlib import Path, PurePosixPath
+from pathlib import PurePosixPath
+from backend.shared.filesystem import FilePath as Path, temporary_directory
 import hashlib
 import json
 import os
 import sqlite3
-import tempfile
 import uuid
 import zipfile
 from backend.shared.workspace import DATABASES, Workspace
@@ -57,7 +57,7 @@ def capture(c,actor,identity,kind='collaboration'):
     if not w:raise ValueError('Migrate this workspace before exporting four business databases.')
     from local_workbench.server import Application
     from local_workbench.full_snapshot import FullSnapshot, SCHEMA as LOGICAL_SCHEMA, PROJECT
-    with c.lock,tempfile.TemporaryDirectory(prefix='business-snapshot-',dir=w.runtime/'cache') as temporary:
+    with c.lock,temporary_directory(prefix='wbs-') as temporary:
         stage=Path(temporary);export=stage/'export';frozen=Workspace(stage/'workbench')
         (export/'databases').mkdir(parents=True)
         # Every write reservation is held until every DB and source is copied.
@@ -99,7 +99,7 @@ def capture(c,actor,identity,kind='collaboration'):
         (export/'logical-workspace.zip').write_bytes(logical)
         (export/'logs').mkdir()
         for name,events in report.pop('history').items():
-            (export/'logs'/(name+'.jsonl')).write_text(''.join(canonical(e)+'\n' for e in events),encoding='utf-8')
+            (export/'logs'/(name+'.jsonl')).write_bytes(''.join(canonical(e)+'\n' for e in events).encode('utf-8'))
         readme='''WORKBENCH SAVED BUSINESS SNAPSHOT
 
 Read the four databases with any SQLite reader in read-only mode; Workbench is
@@ -178,7 +178,7 @@ def validate(raw,allow_delivery=False):
             files[name]=data
         required={'databases/'+n+'.sqlite' for n in DATABASES}
         if {n for n in files if n.startswith('databases/')}!=required:raise ValueError('Four declared business databases are required.')
-        with tempfile.TemporaryDirectory(prefix='workbench-package-verify-') as temp:
+        with temporary_directory(prefix='wbv-') as temp:
             root=Path(temp)
             for name,data in files.items():
                 if name.startswith(('databases/','sources/')):

@@ -3,7 +3,7 @@
 A snapshot does not dispatch imported tasks. Their complete evidence is retained
 in the import operation. Existing local open issues/tasks retain their gates.
 """
-from pathlib import Path
+from backend.shared.filesystem import FilePath as Path
 from hashlib import sha256
 import json,uuid
 import human_operations as h
@@ -40,7 +40,7 @@ def apply(config_path,request):
     if sha256(raw).hexdigest()!=source.get('content_hash'):raise ValueError('Snapshot original fingerprint differs.')
     folder=source.get('folder_code');filename=source.get('stored_filename')
     if any(not isinstance(v,str) or not v or '/' in v or '\\' in v or v in ('.','..') for v in (folder,filename)):raise ValueError('Unsafe original filename.')
-    destination=(cfg['source_root']/folder/filename).resolve()
+    destination=(Path(cfg['source_root'])/folder/filename).resolve()
     if not destination.is_relative_to(cfg['source_root'].resolve()):raise ValueError('Original destination leaves managed storage.')
     if destination.exists() and destination.read_bytes()!=raw:
      raise ValueError('An existing original has the same filename but different content. Both originals are retained; reconcile source naming first.')

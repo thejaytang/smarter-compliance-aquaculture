@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 import hashlib
 import json
 import os
-from pathlib import Path
+from backend.shared.filesystem import FilePath as Path
 import shutil
 import sqlite3
 from backend.shared.sqlite_support import connect as connect_sqlite
@@ -212,7 +212,7 @@ def snapshot_code(root, destination, manifest):
 
 
 def backup(root, destination):
-    root = root.resolve(); destination = destination.resolve()
+    root = Path(root).resolve(); destination = Path(destination).resolve()
     if destination.exists(): raise ValueError('Backup destination must be new; previous packages are preserved.')
     info = layout(root)
     source_inventory(root)  # Fail before creating a package if reproducibility inputs are absent.
@@ -263,7 +263,7 @@ def backup(root, destination):
 
 
 def verify(package):
-    package = package.resolve(); manifest = json.loads((package/'manifest.json').read_text())
+    package = Path(package).resolve(); manifest = json.loads((package/'manifest.json').read_text())
     if manifest.get('format') not in {'workbench-recovery-v1', 'workbench-recovery-v2','workbench-recovery-v3'} or manifest.get('status') != 'complete': raise ValueError('Recovery package is incomplete or unsupported.')
     assets = package/'files'
     entries = list(assets.rglob('*'))

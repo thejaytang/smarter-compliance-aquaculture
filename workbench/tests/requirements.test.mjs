@@ -32,6 +32,16 @@ test('loading another saved passage locks all mutation steps until it is bound',
 });
 
 function documentFixture(){return {id:'s',revision:2,phase:'relationships',text:'Fish shall swim. Nets shall hold.',chapter:'Chapter 2',material_revision:3,block_id:'b',units:{u:{id:'u',text:'Fish shall swim.'},v:{id:'v',text:'Nets shall hold.'}},done:[],roots:[2,'u','v'],spans:{u:[0,16],v:[16,33]},roles:{u:'requirement',v:'requirement'},reference_evidence:{},source_refs:[]};}
+test('switching entries retains independent unsaved steps and whole-page Save stores both',async()=>{
+ const {editor,m}=fixture();editor.render=()=>{};editor.syncInterpretation=()=>{};
+ editor.doc=documentFixture();editor.selected='u';editor.sessions=[editor.doc];editor.edits=[{action:'assign',field:'Subject'}];editor.baseSession='s';editor.baseRevision=1;editor.dirty=true;
+ m.api=async()=>({...documentFixture(),id:'other'});
+ assert.equal(await editor.open('other'),true);assert.equal(editor.working.get('s').edits[0].field,'Subject');
+ editor.edits=[{action:'assign',field:'Object'}];editor.baseSession='other';editor.baseRevision=2;editor.dirty=true;editor.sessions.push(editor.doc);
+ assert.equal(await editor.open('s'),true);assert.equal(editor.edits[0].field,'Subject');assert.equal(editor.working.get('other').edits[0].field,'Object');
+ const saved=[];editor.saveDraft=async()=>{saved.push([editor.doc.id,editor.edits[0].field]);editor.edits=[];editor.dirty=false;return true;};
+ assert.equal(await editor.saveAll(),true);assert.deepEqual(saved,[['s','Subject'],['other','Object']]);assert.equal(editor.hasUnsaved(),false);assert.equal(editor.doc.id,'s');
+});
 test('all units expose inline fields without phase navigation; finished units collapse',()=>{
  const {editor,host}=fixture();editor.doc=documentFixture();editor.doc.done=['u'];editor.closedUnits.add('u');editor.sessions=[editor.doc];editor.render();
  assert.doesNotMatch(host.innerHTML,/Current unit|rq-steps|Whole source passage|Saved passages|Continue to unit fields/);
@@ -312,7 +322,7 @@ test('annotation navigation preserves the current document and selection when di
   if(reason==='dirty')editor.dirty=true;if(reason==='pending')editor.pending=true;
   m.api=async()=>{reads++;if(reason==='rejected')throw Error('Read failed');return {...documentFixture(),id:'other'};};
   await editor.navigateAnnotation([{session_id:'other',unit_id:'missing',field:'Subject'}]);
-  assert.equal(editor.doc.id,'s',reason);assert.equal(editor.selected,'u',reason);assert.equal(editor.closedUnits.has('v'),true);assert.equal(sync,0);assert.equal(reads,['dirty','pending'].includes(reason)?0:1);
+  assert.equal(editor.doc.id,'s',reason);assert.equal(editor.selected,'u',reason);assert.equal(editor.closedUnits.has('v'),true);assert.equal(sync,0);assert.equal(reads,reason==='pending'?0:1);if(reason==='dirty'){assert.equal(editor.dirty,true);assert.equal(editor.working.has('s'),true);}
  }
 });
 test('an out-of-order annotation read cannot overwrite the later accepted destination',async()=>{

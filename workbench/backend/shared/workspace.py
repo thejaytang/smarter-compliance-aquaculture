@@ -1,6 +1,6 @@
 """Owning workspace paths and coordinated System3 transactions."""
 from contextlib import ExitStack, contextmanager, closing
-from pathlib import Path
+from .filesystem import FilePath as Path
 import json
 import os
 import re
@@ -47,7 +47,7 @@ def validate_system3(db):
 
 class Workspace:
     def __init__(self, workbench):
-        self.root=Path(workbench).resolve()
+        self.root=Path(workbench).absolute()
         self.workspace=self.root/'workspace'
         self.runtime=self.root/'runtime'
         self.databases=self.workspace/'databases'
@@ -75,7 +75,7 @@ class Workspace:
         db.execute('PRAGMA foreign_keys=ON')
         db.execute('PRAGMA synchronous=FULL')
         for name,schema in (('system1','sources'),('system2','materials'),('system3_requirements','requirements'),('system3_scd','scd')):
-            db.execute(f'ATTACH DATABASE ? AS {schema}',(str(self.database(name)),))
+            db.execute(f'ATTACH DATABASE ? AS {schema}',(os.fspath(self.database(name)),))
             db.execute(f'PRAGMA {schema}.synchronous=FULL')
         db.validator=validate_system3
         return db

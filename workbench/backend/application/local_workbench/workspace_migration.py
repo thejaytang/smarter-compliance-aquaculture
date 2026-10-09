@@ -1,6 +1,6 @@
 """Explicit stopped-service migration; old files are retained as recovery evidence."""
 from contextlib import ExitStack, closing
-from pathlib import Path
+from backend.shared.filesystem import FilePath as Path, check_file_paths
 from datetime import datetime, timezone
 import hashlib
 import json
@@ -27,10 +27,12 @@ def sha(path):
 
 def promotion_temp(target):
     """Same-directory atomic promotion without extending original filenames."""
-    return target.with_name('.migration-'+hashlib.sha256(target.name.encode('utf-8')).hexdigest()+'.tmp')
+    return Path(target).with_name('.migration-'+hashlib.sha256(target.name.encode('utf-8')).hexdigest()[:24]+'.tmp')
 
 
 def clone_file(source,target):
+    source,target=Path(source),Path(target)
+    check_file_paths([target,promotion_temp(target)])
     target.parent.mkdir(parents=True,exist_ok=True)
     if target.exists():
         if sha(source)!=sha(target):raise ValueError('Migration destination already differs: '+str(target))
@@ -141,7 +143,7 @@ def migrate(project, workbench=None, system1=None, config=None, system2=None, le
                     'manual_intake_archive_root':w.workspace/'sources/intake-history','backup_root':w.runtime/'backups/system1',
                     'log_root':w.runtime/'state/system1','workbook':w.runtime/'cache/Requirement_Source_Registry.xlsx',
                     'discovery_candidate_inbox':w.runtime/'state/system1/discovery_candidates.json','governance_db':w.database('system1')}
-                newcfg[key]=os.path.relpath(locations[key],w.source_config.parent)
+                newcfg[key]=os.path.relpath(str(locations[key]),str(w.source_config.parent))
             newcfg['assessment_db']=newcfg['governance_db']
             w.source_config.parent.mkdir(parents=True,exist_ok=True)
             cfg_target=stage/'config.json';cfg_target.write_text(json.dumps(newcfg,indent=2)+'\n')

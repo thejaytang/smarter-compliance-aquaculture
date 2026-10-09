@@ -3,23 +3,19 @@ from io import BytesIO
 import os
 import hashlib
 import json
-from pathlib import Path, PurePosixPath
+from pathlib import PurePosixPath
+from backend.shared.filesystem import FilePath as Path, check_file_paths
 import sys
 import zipfile
 
 def check_destination_paths(paths, *, windows=None):
-    """Check conservative native Windows limits before preparing any files."""
+    """Check native limits; file operations use the shared long-path boundary."""
     if not (os.name == 'nt' if windows is None else windows):return
-    for path in paths:
-        path=Path(path).absolute()
-        units=lambda value:len(str(value).encode('utf-16-le'))//2
-        if units(path)>=260 or units(path.parent)>=248:
-            raise ValueError('Initial import path exceeds portable Windows limits. '
-                             'Use a shorter checkout path before retrying: '+str(path))
+    check_file_paths(paths)
 
 
 def restore(root,archive,expected_sha256):
-    root=Path(root).resolve();wb=root/'workbench'
+    root=Path(root).absolute();wb=root/'workbench'
     if Path(archive).stat().st_size>512*1024*1024:raise ValueError('Initial data is too large.')
     raw=Path(archive).read_bytes()
     if hashlib.sha256(raw).hexdigest()!=expected_sha256.strip().lower():raise ValueError('Initial data checksum differs.')
@@ -117,7 +113,7 @@ def restore_business(root, raw, digest):
             'manual_intake_archive_root':w.workspace/'sources/intake-history','backup_root':w.runtime/'backups/system1',
             'log_root':w.runtime/'state/system1','workbook':w.runtime/'cache/Requirement_Source_Registry.xlsx',
             'discovery_candidate_inbox':w.runtime/'state/system1/discovery_candidates.json','governance_db':w.database('system1')}
-        cfg.update({key:os.path.relpath(value,w.source_config.parent) for key,value in locations.items()})
+        cfg.update({key:os.path.relpath(str(value),str(w.source_config.parent)) for key,value in locations.items()})
         cfg['assessment_db']=cfg['governance_db'];cfg.setdefault('random_qa',{})['enabled']=False
         w.source_config.parent.mkdir(parents=True,exist_ok=True)
         if not w.source_config.exists():w.source_config.write_text(json.dumps(cfg,indent=2))

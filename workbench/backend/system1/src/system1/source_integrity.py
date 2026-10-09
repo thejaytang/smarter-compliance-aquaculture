@@ -1,6 +1,6 @@
 """Read-only checks of the original explicitly bound to a source record."""
 from hashlib import sha256
-from pathlib import Path
+from backend.shared.filesystem import FilePath as Path
 
 def original_ready(cfg,record,verify_hash=False):
  if record.get('download_status')!='SUCCESS' or record.get('snapshot_status')!='STORED':return False

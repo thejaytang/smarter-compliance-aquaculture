@@ -2,6 +2,7 @@ import {paneNames,paneMinimums,minimumWorkspaceWidth,resizePair} from './pane-la
 import {versionComparison} from './version-comparison.js';
 import {MarkdownNotebook,renderMarkdown,markdownText} from './markdown-content.js';
 import {RequirementsEditor} from './requirements.js';
+import {PageWorkflow,savePage} from './page-workflow.js';
 import {InterpretationEditor} from './interpretations.js';
 import {changeHeadingLevel,tableAxis,rebuildTableDialog} from './material-editing.js';
 import {MaterialInspection} from './material-inspection.js';
@@ -64,33 +65,27 @@ export function locationLabel(ref,reader){
 export class Materials {
   constructor(){this.notebook=new MarkdownNotebook(this);this.requirements=new RequirementsEditor(this);this.interpretations=new InterpretationEditor(this);this.inspections=new MaterialInspection(this);this.collaboration=new Collaboration(this);this.opening=false;this.editingBlocks=new Set();this.tableWindows={};this.continuousEdit=false;this.listQuery='';this.listVisible=true;}
   canLeave(){
-    if(!this.interpretations.canLeave())return false;
+    this.pageWorkflow??=new PageWorkflow(this);
+    if(this.pageSaving||this.interpretations.pending)return false;
     if(this.requirements?.pending||this.requirements?.retryRequest){this.message('Wait for the requirement step to finish saving.','warning');return false;}
     if(!this.inspections.canLeave()||!this.collaboration.canLeave())return false;
     if(this.opening){this.message('Wait for the selected material to finish opening.','warning');return false;}
     if(this.busy){this.message('Wait for the current material request to finish.','warning');return false;}
-    if(this.dirty||this.requirements?.dirty){this.unsavedDialog();return false;}
+    if(this.pageWorkflow.dirty())return this.unsavedDialog()||false;
     return true;
   }
-  unsavedDialog(){
-    this.dialog('<h2>Unsaved work will be lost</h2><p>Your changes exist only in this page. Leaving, reloading or closing without saving will lose them. No automatic copy is stored.</p><p id="mw-unsaved-status" role="status"></p><div class="mw-tools"><button data-unsaved="save" class="primary">Save changes</button><button data-unsaved="discard">Discard unsaved changes</button><button data-unsaved="stay">Continue editing</button></div>',d=>{
-      d.querySelector('[data-unsaved="stay"]').onclick=()=>d.close();
-      d.querySelector('[data-unsaved="discard"]').onclick=()=>{this.draft=this.fromMaterial(this.material);this.dirty=false;this.bodyChanged=false;this.notebook.reset();this.requirements.discard?.();this.interpretations.drafts.clear();this.interpretations.active=null;this.renderMaterial();d.close();this.message('Unsaved changes discarded. You can now leave this material.');};
-      d.querySelector('[data-unsaved="save"]').onclick=async()=>{
-        try{if(this.dirty&&this.requirements?.dirty){d.querySelector('#mw-unsaved-status').textContent='Save the Requirement splitting first, then save the changed source content and review its affected splitting.';return;}
-          if(this.requirements?.dirty)await this.requirements.saveDraft();
-          if(this.dirty)await this.save();
-          for(const [key,draft] of this.interpretations.drafts)if(key.startsWith(this.interpretations.owner()+':')&&(draft.dirty||draft.retry)){this.interpretations.active=key;this.interpretations.render();await this.interpretations.save(draft.retry?'retry':'save',{});}
-          if(this.dirty||this.requirements?.dirty||this.interpretations.hasUnsaved()){d.querySelector('#mw-unsaved-status').textContent='Some changes are still unsaved. Keep this page open and resolve the indicated save problem.';return;}d.close();this.message('Changes saved. You can now leave this material.');
-        }catch(e){d.querySelector('#mw-unsaved-status').textContent=e.message;}
-      };
-    });
+  unsavedDialog(){this.pageWorkflow??=new PageWorkflow(this);return this.pageWorkflow.leaveDialog();}
+  async discardPage(){
+    this.draft=this.fromMaterial(this.material);this.dirty=false;this.bodyChanged=false;this.pendingMerge=null;this.initialCandidate=null;
+    this.notebook.reset();this.requirements.working?.clear();await this.requirements.discard?.();
+    for(const key of this.interpretations.drafts.keys())if(key.startsWith(this.interpretations.owner()+':'))this.interpretations.drafts.delete(key);
+    this.interpretations.active=null;this.renderMaterial();
   }
   leave(){this.requirements?.groupEditor?.stopSelectionTracking();if(this.toolsOutside)window.removeEventListener('pointerdown',this.toolsOutside);this.listComposing=false;if(this.root&&this.listVisible){this.listScroll=this.q('.mw-library')?.scrollTop||0;this.rememberView();}if(this.apiSettingsChanged)window.removeEventListener('workbench-ai-settings-changed',this.apiSettingsChanged);this.finishIntent=null;this.stopPdfDisplay();this.candidateWatch=null;clearTimeout(this.candidateTimer);this.setFocusMode(false);if(this.saveKey)window.removeEventListener('keydown',this.saveKey);this.resizeObserver?.disconnect();clearTimeout(this.listSearchTimer);this.persistDraft();this.token=null;this.readerTicket=null;if(this.beforeUnload)window.removeEventListener('beforeunload',this.beforeUnload);}
   async mount(root,{api,state,onSourceIssue,onSourceReview,onLegacy,onCategory,history=false}){
     this.listComposing=false;this.apiSettingsChanged=()=>{void this.interpretations.refreshProvider();};window.addEventListener('workbench-ai-settings-changed',this.apiSettingsChanged);
     this.root=root;const owner=await getDocumentDraftOwner();this.tabIdentity=owner.id;this.recoveryOwner=owner.recoveryOwner;this.savedRecoveryMaterials=owner.savedMaterials??=new Set();this.api=api;this.state=state;this.onSourceIssue=onSourceIssue;this.onSourceReview=onSourceReview;this.onLegacy=onLegacy;this.onCategory=onCategory;if(this.history!==history){this.id=null;this.material=null;this.listQuery='';this.listVisible=true;}this.history=history;const contextKey='material-view-v1:'+state.actor?.id+':'+(history?'archive':'review');if(this.contextKey!==contextKey){this.contextKey=contextKey;this.material=null;this.id=null;this.listVisible=true;this.listQuery='';this.taskFilter='';this.listOffset=0;this.listScroll=0;this.loadedListContext=null;this.restoredInspection=null;this.restoredView=null;try{const context=JSON.parse(sessionStorage.getItem(contextKey)||'null');if(context){this.id=context.id||null;this.restoredInspection=context.inspection||null;this.restoredView=context.view||null;this.listQuery=context.query||'';this.taskFilter=context.taskFilter||'';this.listScroll=context.listScroll||0;this.listOffset=Number.isInteger(context.listOffset)&&context.listOffset>=0?context.listOffset:0;this.listVisible=context.listVisible!==false;}}catch{}}this.inspections.clear();this.token={};this.dirty=false;this.busy=false;this.opening=false;this.activePane='content';this.continuousEdit=false;this.editingBlocks=new Set();this.tableWindows={};
-    this.saveKey=e=>this.saveFromKeyboard(e);window.addEventListener('keydown',this.saveKey);this.beforeUnload=e=>{if(this.dirty||this.collaboration.sourceDirty||this.inspections.dirty||this.interpretations.needsRecovery()||this.requirements?.dirty){e.preventDefault();e.returnValue='';}};window.addEventListener('beforeunload',this.beforeUnload);
+    this.saveKey=e=>this.saveFromKeyboard(e);window.addEventListener('keydown',this.saveKey);this.beforeUnload=e=>{if(this.pageWorkflow?.dirty()||this.dirty||this.collaboration.sourceDirty||this.inspections.dirty||this.interpretations.needsRecovery()||this.requirements?.dirty){e.preventDefault();e.returnValue='';}};window.addEventListener('beforeunload',this.beforeUnload);
     if(state.collaboration?.mode&&!state.actor?.id&&!state.collaboration.read_only){root.innerHTML='<p role="status">Choose your reviewer name above to open personal work. Master source and content remain unchanged.</p>';return;}root.innerHTML='<p role="status">Opening materials…</p>';
     try{const token=this.token;const result=await api('/api/material-queue?'+new URLSearchParams({bucket:history?'archive':'pending',offset:this.listOffset||0,limit:50,query:this.listQuery||'',task_type:history?'':this.taskFilter||''}));if(token!==this.token)return;this.items=Array.isArray(result)?result:result.materials||[];this.listPage=result;this.listOffset=result.offset??this.listOffset??0;this.loadedListContext=this.listContext();this.sources=result.sources||state.sources||[];this.shell();if(this.listVisible&&this.q('.mw-library'))this.q('.mw-library').scrollTop=this.listScroll||0;await this.collaboration.load();if(this.pendingInspectionId){const id=this.pendingInspectionId;this.pendingInspectionId=null;await this.inspections.open(id);}else if(this.id&&!this.listVisible){if(this.restoredInspection)await this.inspections.open(this.restoredInspection.id,this.restoredInspection.current);else await this.open(this.id,false,history?'archive':this.restoredView==='master'?'master':'personal');}}
     catch(e){if(this.token)root.innerHTML=`<div class="mw-alert">${esc(e.message)}</div>`;}
@@ -102,8 +97,6 @@ export class Materials {
   saveFromKeyboard(e){
     if(e.defaultPrevented||e.isComposing||!(e.metaKey||e.ctrlKey)||e.key.toLowerCase()!=='s'||this.q('dialog[open]'))return;
     e.preventDefault();if(this.listVisible||!this.material||this.busy||this.opening)return;
-    if(e.target?.closest?.('.mw-requirements'))return Promise.resolve(this.requirements.saveDraft()).catch(error=>this.requirements.showError(error));
-    if(e.target?.closest?.('.mw-interpretation'))return Promise.resolve(this.interpretations.save('save',{})).catch(error=>{this.interpretations.notice=error.message;this.interpretations.render();});
     if(this.inspections.selected)return this.inspections.action('save',{});if(!this.collaboration.readonly)return this.save();
   }
   bindTools(){
@@ -114,8 +107,8 @@ export class Materials {
     this.toolsOutside=e=>this.root.querySelectorAll(selector).forEach(popover=>{if(popover.open&&!popover.contains(e.target))dismiss(popover);});window.addEventListener('pointerdown',this.toolsOutside);
   }
   async toolAction(action,node){const popover=node.closest?.('details.mw-record-menu,details.mw-content-menu,details.mw-reader-more');await this.action(action,node);if(!popover?.isConnected||!popover.open||popover.querySelector('[aria-invalid="true"],:invalid'))return;popover.open=false;if(!this.q('dialog[open]')&&popover.contains(document.activeElement))popover.querySelector('summary')?.focus();}
-  showList(){
-    if(!this.canLeave())return;
+  async showList(){
+    const leave=this.canLeave();if(!(leave?.then?await leave:leave))return;
     if(this.busy||this.opening||this.requirements?.pending||this.requirements?.retryRequest)return;
     this.listVisible=true;const shell=this.q('.material-workbench');shell?.classList?.add('list-mode');shell?.classList?.remove('detail-mode');
     const back=this.q('[data-action="resume-material"]');if(back)back.hidden=!this.material;
@@ -132,7 +125,9 @@ export class Materials {
     if(!this.material||this.busy||this.opening)return;
     if(this.inspections.selected)return this.inspections.action(this.inspections.current?'resolve':'pass',{});
     if(!this.collaboration.merge&&!this.reviewReady())return this.message('Complete the reviewer declaration below the content before archiving.','warning');
-    if(this.dirty){if(!await this.save())return;}
+    if(this.pageWorkflow?.dirty())return this.message('Save the page and confirm all three processing stages before Archive.','warning');
+    await this.pageWorkflow?.refresh();
+    if(!this.collaboration.merge&&!this.pageWorkflow?.state?.archive_ready)return this.message('Confirm completion at the bottom of panes 2, 3 and 4 before Archive.','warning');
     if(!this.collaboration.merge&&!this.reviewReady())return this.message('The saved content needs a fresh reviewer declaration.','warning');
     if(this.state.collaboration?.peer_sync||!this.collaboration.coordinator)return this.reviewDialog();
     if(this.localConflict)return this.message('Resolve the saved-version conflict before archiving. Your draft is retained.','warning');
@@ -162,12 +157,12 @@ export class Materials {
   }
   async openingRequest(path,body){let timeout;try{return await Promise.race([this.api(path,body),new Promise((_,reject)=>{timeout=setTimeout(()=>reject(Error('Reading the selected material timed out. Saved content remains protected; check service status and retry.')),30000);})]);}finally{clearTimeout(timeout);}}
   async open(id,fromSource=false,view='personal',revision=null){
-    if(this.inspections.dirty&&!this.inspections.canLeave())return;if(!fromSource&&this.opening&&!this.canLeave())return;if(this.busy&&!this.canLeave())return;if(!fromSource&&id!==this.id&&!this.canLeave())return;if(id===this.id&&this.dirty)return this.message('This material already has an open local draft. Save it before reloading.','warning');const token=this.token,ticket=this.openTicket={};this.candidateWatch=null;clearTimeout(this.candidateTimer);this.opening=true;this.updateBar();this.message('Opening selected material…');
+    if(this.inspections.dirty&&!this.inspections.canLeave())return;if((!fromSource&&this.opening)||this.busy||(!fromSource&&id!==this.id)){const leave=this.canLeave();if(!(leave?.then?await leave:leave))return;}if(id===this.id&&this.dirty)return this.message('This material already has an open local draft. Save it before reloading.','warning');const token=this.token,ticket=this.openTicket={};this.candidateWatch=null;clearTimeout(this.candidateTimer);this.opening=true;this.updateBar();this.message('Opening selected material…');
     try{const result=await this.openingRequest('/api/material?id='+encodeURIComponent(id)+(view!=='personal'?'&view='+view:'')+(revision!=null?'&revision='+revision:''));if(token!==this.token||ticket!==this.openTicket)return;this.inspections.clear();this.notebook.reset();this.collaboration.merge=null;this.clearReader();this.material=result.material||result;this.id=this.material.id;this.draft=this.fromMaterial(this.material);this.dirty=false;this.reader=null;this.activeCandidate=null;this.initialCandidate=null;this.blockPage=0;this.contentQuery='';this.editingBlocks=new Set();this.tableWindows={};this.bodyChanged=false;this.message('');const listed=this.items?.findIndex(m=>m.id===this.id);if(listed>=0&&view!=='master')this.rememberMaterialDetail(this.material);
       const saved=view!=='personal'?null:await this.recoverDraft(id);if(token!==this.token||ticket!==this.openTicket)return;this.draftTouched=false;
       if(saved?.draft){this.draft=saved.draft;this.bodyChanged=JSON.stringify(this.draft.blocks)!==JSON.stringify(this.material.blocks||[]);this.pendingMerge=saved.pendingMerge||null;this.initialCandidate=saved.initialCandidate||null;this.conflictResult=saved.conflict_id?{conflict_id:saved.conflict_id}:null;this.dirty=true;this.localBase=saved.expected_revision;this.localConflict=saved.expected_revision!==this.material.revision;}
       else{this.localBase=this.material.revision;this.localConflict=false;this.pendingMerge=null;}
-      this.collapseLibraryOnNarrow();this.renderMaterial();await this.loadReader();await this.previewEmptyCandidate();
+      this.pageWorkflow??=new PageWorkflow(this);this.pageWorkflow.state=null;this.collapseLibraryOnNarrow();this.renderMaterial();void this.pageWorkflow.refresh();await this.loadReader();await this.previewEmptyCandidate();
       if(this.recoveryReadFailed&&!saved?.draft)this.message('Some browser recovery records could not be read. The server version is displayed; keep other editing tabs open and check storage availability.','warning');
       if(saved?.draft)this.message(this.localConflict?'Recovered local work from an earlier version. Review the newer saved version before merging; your local draft is protected.':'Recovered an unsaved local draft. Use Save material to save it on the server.','warning');
     }catch(e){this.message(errorText(e.message),'error');}finally{if(ticket===this.openTicket){this.opening=false;this.updateBar();if(view==='personal'&&(this.material?.candidates||[]).some(c=>c.status==='running'))this.watchCandidate();}}
@@ -185,15 +180,16 @@ export class Materials {
     const source=this.q('#mw-source'),opener=this.q('#mw-source-opener');if(opener)opener.disabled=locked||!source?.value||!(this.sources||[]).some(s=>(s.source_id||s.id)===source.value);
   }
   updateBar(){
-    this.updateNavigationLock();
+    this.updateNavigationLock();this.pageWorkflow?.draw();const panes=this.q('.mw-panes');if(panes)panes.inert=!!this.pageSaving;
     this.collaboration.renderToolbar();if(!this.material)return;const m=this.material,status=materialStatus(m);this.q('#mw-title').textContent=m.title||m.id;
     const view=m.collaboration?.view||'personal';
     this.q('#mw-version').textContent=`${m.source?.source_id||m.id} · ${['archive','inspection'].includes(view)?'Finalized':view==='master'?'Master':view==='merge'?'Comparison':'Personal'} revision ${m.revision} · ${this.busy?'Saving / updating…':this.inspections.dirty?'Unsaved check progress':this.dirty?'Unsaved changes':view==='inspection'?'Spot-check · '+(this.inspections.selected?.status||'pending').replaceAll('_',' '):view==='archive'?'Content finalized':'Saved'}${status.qualification?' · '+status.qualification:''}`;
+    if(this.pageWorkflow?.state?.material_id===this.id)this.q('#mw-version').textContent+=` ? Processing ${this.pageWorkflow.completed()}/3`;
     this.q('#mw-version').title=`${status.content} · ${status.processing}${this.journalState?' · browser recovery '+this.journalState:''}`;
     this.q('#mw-content').inert=this.busy||this.opening;this.q('#mw-content-tools').inert=this.busy||this.opening;
     const writing=this.q('[data-writing-document]');if(writing)writing.contentEditable=String(!this.busy&&!this.opening&&!this.collaboration.readonly);
-    this.q('[data-action="save"]').disabled=this.busy||this.opening||!this.state.actor?.id||this.collaboration.readonly;
-    this.q('[data-action="review"]').disabled=this.busy||this.opening||!this.reviewReady()||!this.state.actor?.id||!!m.source_check_error||m.source_stale||(m.source_issues||[]).length>0||(m.candidates||[]).some(c=>['running','ready','partial'].includes(c.status)&&c.id!==this.initialCandidate);
+    this.q('[data-action="save"]').disabled=this.pageSaving||this.busy||this.opening||!this.state.actor?.id||this.collaboration.readonly;
+    this.q('[data-action="review"]').disabled=this.pageSaving||this.pageWorkflow?.dirty()||!this.pageWorkflow?.state?.archive_ready||this.busy||this.opening||!this.reviewReady()||!this.state.actor?.id||!!m.source_check_error||m.source_stale||(m.source_issues||[]).length>0||(m.candidates||[]).some(c=>['running','ready','partial'].includes(c.status)&&c.id!==this.initialCandidate);
     this.q('[data-action="extract"]').disabled=this.busy||this.opening||(this.dirty&&!this.initialCandidate)||!this.state.actor?.id||this.collaboration.readonly;
     const mode=this.q('#mw-content-mode');if(mode)mode.textContent=this.collaboration.merge?'Resolve inline differences':this.collaboration.readonly?'Read-only':'Editable personal draft';
     const reviewButton=this.q('[data-action="review"]'),saveButton=this.q('[data-action="save"]'),archived=['archive','inspection'].includes(view);
@@ -354,7 +350,7 @@ export class Materials {
       if(action==='back-list'||action==='toggle-list'){this.showList();return;}
       if(action==='resume-material'){this.showDetail();return;}
       if(action==='review-checklist'){const list=this.q('#mw-checks');if(list){list.scrollIntoView({block:'nearest'});list.querySelector('#mw-complete-original')?.focus();}return;}
-      if(action==='continue-work'){if(!this.canLeave())return;const m=this.material;await this.api('/api/material/continue',{material_id:m.id,expected_master_revision:m.collaboration?.master_revision??m.revision,request_id:uid()});if(this.onCategory)await this.onCategory(false);await this.open(m.id);return;}
+      if(action==='continue-work'){const leave=this.canLeave();if(!(leave?.then?await leave:leave))return;const m=this.material;await this.api('/api/material/continue',{material_id:m.id,expected_master_revision:m.collaboration?.master_revision??m.revision,request_id:uid()});if(this.onCategory)await this.onCategory(false);await this.open(m.id);return;}
       if(action==='focus'){this.setFocusMode(!this.focusMode);return;}if(action==='focus-tools'){this.focusTools=!this.focusTools;this.q('.material-workbench').classList.toggle('mw-show-tools',this.focusTools);node.textContent=this.focusTools?'Hide tools':'More tools';node.setAttribute('aria-expanded',String(this.focusTools));return;}if(action==='collapse-pane'){const pane=node.dataset.target;this.collapsedPanes??=[];this.collapsedPanes=this.collapsedPanes.includes(pane)?this.collapsedPanes.filter(x=>x!==pane):[...this.collapsedPanes,pane];this.applyPaneWidths(true);return;}if(action==='requirements-help')return this.requirements.showHelp();
     if(action==='reset-widths'){this.paneWeights=[1,1.25,1,1.15];this.collapsedPanes=[];this.applyPaneWidths(true);return;}
       if(action.startsWith('inspection-'))return await this.inspections.action(action.slice(11),node);
@@ -365,9 +361,9 @@ export class Materials {
       if(action.startsWith('readonly-table-')){const state=this.readonlyTables.get(node.dataset.table);if(action.endsWith('up'))state.row-=40;if(action.endsWith('down'))state.row+=40;if(action.endsWith('left'))state.column-=10;if(action.endsWith('right'))state.column+=10;node.closest('[data-readonly-table]').innerHTML=this.readonlyTableWindow(node.dataset.table);return;}
       if(action==='toggle-list'){const hidden=this.q('.mw-library').classList.toggle('collapsed');node.setAttribute('aria-expanded',String(!hidden));return;}
       if(action==='pane'){this.activePane=node.dataset.pane;this.q('.mw-panes').dataset.active=this.activePane;this.root.querySelectorAll('[data-action="pane"]').forEach(n=>n.setAttribute('aria-pressed',String(n.dataset.pane===this.activePane)));return;}
-      if(action==='open'){if(node.dataset.id===this.id&&this.material&&this.listVisible){this.showDetail();return;}if(!this.canLeave())return;const row=this.items.find(m=>m.id===node.dataset.id);if(!this.history&&row?.queue?.inspection_only)return this.inspections.open(row.queue.open_inspections[0].id);return await this.open(node.dataset.id,false,this.history?'archive':'personal',this.history?row?.queue?.archive_revision:null);}
+      if(action==='open'){if(node.dataset.id===this.id&&this.material&&this.listVisible){this.showDetail();return;}const leave=this.canLeave();if(!(leave?.then?await leave:leave))return;const row=this.items.find(m=>m.id===node.dataset.id);if(!this.history&&row?.queue?.inspection_only)return this.inspections.open(row.queue.open_inspections[0].id);return await this.open(node.dataset.id,false,this.history?'archive':'personal',this.history?row?.queue?.archive_revision:null);}
       if(action==='open-source'){
-        if(!this.canLeave())return;const source_id=node.dataset.sourceId||this.q('#mw-source').value;if(!source_id)return this.message('Choose a registered source.');
+        const leave=this.canLeave();if(!(leave?.then?await leave:leave))return;const source_id=node.dataset.sourceId||this.q('#mw-source').value;if(!source_id)return this.message('Choose a registered source.');
         const token=this.token,ticket=this.sourceOpenTicket={};this.opening=true;this.updateBar();this.message('Opening selected material…');try{const result=await this.openingRequest('/api/material/open',{source_id,request_id:uid()});if(token!==this.token||ticket!==this.sourceOpenTicket)return;const m=result.material||result;this.rememberOpenedMaterial(m);return await this.open(m.id,true);}finally{if(token===this.token&&ticket===this.sourceOpenTicket){this.opening=false;this.updateBar();}}
       }
       if(action==='list-prev'||action==='list-next'){if(this.listComposing)return;clearTimeout(this.listSearchTimer);const same=JSON.stringify(this.loadedListContext)===JSON.stringify(this.listContext());return this.loadList(same?Math.max(0,(this.listPage?.offset||0)+(action==='list-next'?50:-50)):0,{pageChange:true});}
@@ -386,11 +382,11 @@ export class Materials {
       if(action==='process'||action==='reprocess')return this.requirementsExtract(action==='reprocess');
       if(action==='extract'||action==='auto-extract')return await this.extractContent();
       if(action==='refresh-candidate'){this.message('Checking extraction status. Your draft is retained.');this.watchCandidate();return;}
-      if(action==='reload'){if(this.dirty)return this.message('Your unsaved draft is retained. Save it or use the version comparison to reconcile first.','warning');return await this.open(this.id);}
+      if(action==='reload'){const leave=this.canLeave();if(!(leave?.then?await leave:leave))return;return await this.open(this.id);}
       if(action==='history')return await this.historyDialog();
       if(action==='conflict')return await this.conflictDialog();
       if(action==='processing-details')return await this.processingDetails(node.dataset.id);
-      if(action==='compare-candidate'){if(this.collaboration.enabled){if(!this.canLeave())return;return await this.collaboration.runPreview('/api/collaboration/machine-preview',{material_id:this.id,candidate_id:node.dataset.id});}return await this.candidateDialog(node.dataset.id);}
+      if(action==='compare-candidate'){if(this.collaboration.enabled){const leave=this.canLeave();if(!(leave?.then?await leave:leave))return;return await this.collaboration.runPreview('/api/collaboration/machine-preview',{material_id:this.id,candidate_id:node.dataset.id});}return await this.candidateDialog(node.dataset.id);}
       if(action==='image-preview')return await this.previewImage(b,block);
       if(action==='import-legacy'){if(this.dirty)return this.message('Save the material before importing existing content as a candidate.','warning');return await this.mutate('/api/material/import-legacy',{},'Existing human content imported as a candidate. Review and adopt explicitly; its old decisions remain historical.');}
       if(action==='report-source')return this.collaboration.enabled?this.collaboration.sourceForm(this.material.source.source_id):this.sourceIssueDialog();
@@ -433,7 +429,7 @@ export class Materials {
     else this.items.push(material);
   }
   async mutate(path,extra,message){
-    if(this.requirements?.dirty){this.message('Save or discard the unsaved Requirement splitting before changing the saved material.','warning');return false;}
+    if(this.requirements?.hasUnsaved?.()||this.requirements?.dirty){this.message('Save or discard the unsaved Requirement splitting before changing the saved material.','warning');return false;}
     if(this.collaboration.readonly){this.message('Master and merge previews cannot be changed by a personal save.','warning');return false;}
     if(this.busy||this.opening)return false;const id=this.id,token=this.token;
     const body={material_id:id,expected_revision:this.localBase,...extra};const signature=JSON.stringify({path,body});this.pending??=new Map();const request_id=this.pending.get(signature)||uid();this.pending.set(signature,request_id);
@@ -492,17 +488,17 @@ export class Materials {
     const schedule=delay=>{if(current())this.candidateTimer=setTimeout(poll,delay);};
     const poll=async()=>{
       if(!current())return;
-      if(this.busy||this.opening){schedule(1800);return;}
+      if(this.busy||this.opening||this.pageSaving){schedule(1800);return;}
       try{
         const result=await this.api('/api/material?id='+encodeURIComponent(context.id)),latest=result.material||result;
         if(!current())return;
-        if(this.busy||this.opening){schedule(1800);return;}
+        if(this.busy||this.opening||this.pageSaving){schedule(1800);return;}
         if(latest.id!==context.id||JSON.stringify(latest.source)!==context.source)throw Error('The returned extraction status does not match this saved original.');
         if(latest.revision<this.material.revision){if((this.material.candidates||[]).some(c=>c.status==='running'))schedule(1800);return;}
         const recovering=failures.count>0;failures.count=0;
         // Polling can refresh candidate status, never replace a person's draft.
         const unchanged=JSON.stringify(this.fromMaterial(latest))===JSON.stringify(this.fromMaterial(this.material))&&latest.content_revision===this.material.content_revision;
-        if(!this.dirty&&!this.requirements?.dirty&&unchanged){this.material=latest;this.localBase=latest.revision;this.renderMaterial();await this.previewEmptyCandidate();}
+        if(!this.dirty&&!this.requirements?.dirty&&!this.requirements?.hasUnsaved?.()&&!this.interpretations?.hasUnsaved()&&unchanged){this.material=latest;this.localBase=latest.revision;this.renderMaterial();await this.previewEmptyCandidate();}
         else{this.material.candidates=clone(latest.candidates||[]);for(const key of ['source_stale','source_check_error','source_issues']){if(key in latest)this.material[key]=clone(latest[key]);}this.updateBar();if(!this.dirty&&!unchanged)this.message('A newer saved content version exists. Use Reload saved to read it. Extraction status is current; your displayed content has not been replaced.','warning');}
         if(!current())return;
         if(recovering)this.message('Extraction status is available again. Your draft is retained.');
@@ -524,7 +520,8 @@ export class Materials {
     if(result.input_revision!==this.material.content_revision||result.source?.content_hash!==this.material.source.content_hash)return;
     this.initialCandidate=c.id;this.draft.blocks=clone(result.blocks||[]);this.draft.checked_scope=[];this.draft.association_reviewed=false;this.changed(true);this.renderContent();this.message('Candidate preview · edit and save your personal draft. No content review has been confirmed.');
   }
-  async save(){
+  async save(){this.pageWorkflow??=new PageWorkflow(this);return savePage(this);}
+  async saveContent(){
     const before=bodyIdentity({source:this.material?.source,blocks:this.draft.blocks,issues:this.draft.issues}),checks=clone(this.draft.checked_scope),associations=this.draft.association_reviewed;
     const ok=await this.saveDraft();if(!ok)return false;
     if(before!==bodyIdentity({source:this.material?.source,blocks:this.draft.blocks,issues:this.draft.issues}))return true;
@@ -534,7 +531,7 @@ export class Materials {
     }return true;
   }
   async saveDraft(){
-    if(this.requirements?.dirty){this.message('Save or discard the unsaved Requirement splitting before saving changed source content.','warning');return false;}
+    if(this.requirements?.hasUnsaved?.()||this.requirements?.dirty){this.message('Save or discard the unsaved Requirement splitting before saving changed source content.','warning');return false;}
     if(this.initialCandidate){const id=this.initialCandidate;const ok=await this.mutate('/api/material/candidate-draft',{...this.draft,candidate_id:id},'Personal candidate draft saved. Human review is still required.');if(ok){this.initialCandidate=null;this.renderContent();}return ok;}
     if(this.pendingMerge)return this.mergeSaveDialog();
     const body=clone(this.draft);if(this.bodyChanged){delete body.checked_scope;delete body.association_reviewed;}return this.mutate('/api/material/save',body,'Material saved. Content review is not confirmed by saving.');
@@ -547,7 +544,7 @@ export class Materials {
     const candidates=(m.candidates||[]).filter(c=>['running','ready','partial'].includes(c.status));
     const sourceBlocked=!!m.source_stale||!!m.source_check_error||!!m.source_issues?.length;
     const ready=!missing.length&&!issues.length&&this.draft.association_reviewed&&!candidates.length&&!sourceBlocked;
-    this.dialog(`<h2>${this.collaboration.enabled?'Confirm content review':'Confirm content review'}</h2>${this.collaboration.enabled?(this.state.collaboration?.peer_sync?'<p>This confirms the saved content you reviewed. Its original author and time are retained when the work is synchronized.</p>':'<p>This confirms your personal content work only. Coordinator adoption and master confirmation are separate.</p>'):''}<p>This named human confirmation applies to saved content revision ${esc(m.content_revision)}. It does not complete Requirement structuring.</p><p>Reviewer: <strong>${esc(this.state.actor?.name||'Select reviewer')}</strong></p><ul><li>${missing.length} original ranges not checked${missing.length?': '+missing.slice(0,8).map(s=>esc(s.label||s.id)).join(', ')+(missing.length>8?' …':''):''}</li><li>${issues.length} unresolved issues</li><li>Associations and dependencies: ${this.draft.association_reviewed?'checked':'not checked'}</li>${candidates.length?`<li>${candidates.length} extraction candidates still require completion or an explicit comparison decision.</li>`:''}${sourceBlocked?'<li>The current original or its follow-up status must be checked in Source Management System.</li>':''}</ul>${ready?'':'<p class="mw-alert">Complete the remaining checks and save them before confirming. Opening the checklist does not mark anything reviewed.</p>'}<button id="mw-open-checklist" type="button">Open review checklist</button><label class="mw-check"><input id="mw-final-confirm" type="checkbox">I have read all original ranges, checked omissions and dependencies, and confirm this saved content is complete and faithful.</label><button id="mw-confirm-submit" class="primary" disabled>Confirm content review complete</button>`,d=>{
+    this.dialog(`<h2>Archive material</h2>${this.collaboration.enabled?(this.state.collaboration?.peer_sync?'<p>This confirms the saved content you reviewed. Its original author and time are retained when the work is synchronized.</p>':'<p>This confirms your personal content work only. Coordinator adoption and master confirmation are separate.</p>'):''}<p>This named human confirmation applies to saved content revision ${esc(m.content_revision)}. Archive also requires current completion confirmations for content, Requirements and interpretation.</p><p>Reviewer: <strong>${esc(this.state.actor?.name||'Select reviewer')}</strong></p><ul><li>${missing.length} original ranges not checked${missing.length?': '+missing.slice(0,8).map(s=>esc(s.label||s.id)).join(', ')+(missing.length>8?' …':''):''}</li><li>${issues.length} unresolved issues</li><li>Associations and dependencies: ${this.draft.association_reviewed?'checked':'not checked'}</li>${candidates.length?`<li>${candidates.length} extraction candidates still require completion or an explicit comparison decision.</li>`:''}${sourceBlocked?'<li>The current original or its follow-up status must be checked in Source Management System.</li>':''}</ul>${ready?'':'<p class="mw-alert">Complete the remaining checks and save them before confirming. Opening the checklist does not mark anything reviewed.</p>'}<button id="mw-open-checklist" type="button">Open review checklist</button><label class="mw-check"><input id="mw-final-confirm" type="checkbox">I have read all original ranges, checked omissions and dependencies, and confirm this saved content is complete and faithful.</label><button id="mw-confirm-submit" class="primary" disabled>Archive material</button>`,d=>{
       d.querySelector('#mw-open-checklist').onclick=()=>{
         d.close();const checklist=this.q('#mw-checks');if(!checklist)return;
         checklist.open=true;checklist.scrollIntoView({block:'start'});

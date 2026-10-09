@@ -133,11 +133,11 @@ test('previously adopted candidates stay retired after later human corrections',
  d.candidate.id='new-run';assert.match(e.cardCandidate(d,'scope',0,''),/Approve scope candidate/);
 });
 
-test('final confirmation only appears for all three saved approvals with resolved review notes',()=>{
+test('per-interpretation Save and final confirmation are replaced by page and pane controls',()=>{
  const {e,d}=fixture();assert.doesNotMatch(e.editorMarkup(d),/data-ip="review"/);
  for(const key of ['scope','condition','demand'])e.approveCard(key);
  assert.doesNotMatch(e.editorMarkup(d),/data-ip="review"/);
- d.dirty=false;d.pendingApprovals={};assert.match(e.editorMarkup(d),/data-ip="review"/);
+ d.dirty=false;d.pendingApprovals={};assert.doesNotMatch(e.editorMarkup(d),/data-ip="(?:review|save)"/);assert.match(e.editorMarkup(d),/confirm completion below/);
  d.fields.verification.gaps=['Need a criterion'];assert.doesNotMatch(e.editorMarkup(d),/data-ip="review"/);
 });
 

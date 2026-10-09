@@ -1,5 +1,7 @@
 # Smarter Compliance Workbench
 
+This `windows` branch is the user-requested 2026-10-09 preservation of the local Windows project and its business state. See the [current state](PROJECT_STATE.md) and [complete evidence archive with its known validation limitation](workbench/initial-data/windows-20261009/README.md). The developing-branch introduction below describes this checkout's lineage; `main` remains the product-update branch.
+
 This is Jay’s `developing` branch. It retains the application, business snapshot and development materials. Colleagues should use `main` for product updates. This branch is in the same public repository; its name does not make it private.
 
 A local, human-led workspace for governing sources and preparing traceable Requirements and check designs. It runs on your own computer and opens in a browser.

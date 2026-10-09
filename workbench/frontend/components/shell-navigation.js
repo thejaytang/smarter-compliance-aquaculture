@@ -35,7 +35,7 @@ export function createNavigation(storage) {
 
 // A blocked or failed transition preserves the active module and return location.
 export async function guardedNavigation({canLeave,prepare,commit}) {
-  if(!canLeave())return false;
+  if(!await canLeave())return false;
   await prepare();
   await commit();
   return true;

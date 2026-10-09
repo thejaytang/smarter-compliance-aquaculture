@@ -37,7 +37,9 @@ Double-click `Open Workbench (Windows).cmd` or `Open Workbench (macOS).command` 
 
 ## 3. Updating an existing installation
 
-Current business-seed restoration prepares files under `workbench/runtime/staging/seed/`. Durable import receipts remain under `runtime/backups/initial-import/`; existing `prepared/` files there are retained and compared with the verified package on retry. Only inventoried files are promoted. Atomic copies use same-directory hashed temporary names instead of extending original filenames. Windows restoration checks staged, final and promotion-temporary paths before writing package files and reports when a shorter checkout is required. This does not enable system-wide long paths. Neither normal startup nor updates restore the seed.
+Current business-seed restoration prepares files under `workbench/runtime/staging/seed/`. Durable import receipts remain under `runtime/backups/initial-import/`; existing `prepared/` files there are retained and compared with the verified package on retry. Only inventoried files are promoted. Atomic copies use compact same-directory hashed temporary names. Shared storage, migration, recovery and package file access use Windows extended-length paths at the filesystem boundary while retaining ordinary path spelling in identities, descriptors and package manifests. Native SQLite URIs preserve read-only options and aliases. Restoration checks native component and total limits before preparing package files. This works without changing the system-wide long-path setting; external tools still have their own path limits. Neither normal startup nor updates restore the seed.
+
+Business snapshot preparation and validation use short, unique directories in the operating system's temporary area; cleanup supports long paths and read-only temporary files. Snapshot history is encoded as UTF-8 with explicit LF bytes on both platforms, so Windows newline conversion cannot invalidate history checksums. Original evidence bytes and names are unchanged. For Git operations on a Windows development checkout, set `git config --local core.longpaths true` once; this affects only the repository's Git operations.
 
 On Windows, System2 declares its own `tzdata` dependency for Oslo weekly-QA dates. Installing time-zone data only in the application environment is insufficient; use `deployment.py rebuild` after updating this declaration. Runtime storage health checks inspect the coordination journal and all four owning business stores in the current layout.
 
@@ -52,6 +54,10 @@ python3.12 deployment.py migrate --legacy-system1 /path/to/old/system1 --legacy-
 On Windows replace `python3.12` with `py -3.12` and use quoted Windows paths. For an in-place upgrade with the original directories still present, `deployment.py migrate` finds them automatically. Stop the old service before migration. The new process refuses ordinary startup until a valid layout marker exists.
 
 Migration snapshots old databases with SQLite backup, stages the four new stores, validates rows and source bindings, and promotes resumably. Original data is retained. A retry completes the same prepared migration; a conflicting destination is rejected. Never delete a destination merely to bypass a migration error.
+
+Collaboration source import also uses the shared Windows long-path boundary when publishing and verifying originals. Immutable publication uses a compact temporary filename in the destination directory and retains exclusive creation and same-byte retry checks. An interrupted import resumes its existing receipt through Collaboration; do not restore a seed over the partially synchronized workspace.
+
+The database-backed source compatibility adapter preserves full JSON operation evidence, including values longer than Excel's 32,767-character cell limit. SQLite and immutable incoming packages remain authoritative. Do not repair source history by editing the derived Excel export.
 
 ## 4. Verification and recovery
 
@@ -96,6 +102,8 @@ Set `UV_CACHE_DIR` to a project-local cache when running `uv` directly. OCR and 
 To rebuild shipped Markdown tools, run `npm ci` and `npm run build` inside `workbench/frontend`. PDF.js vendor files and license notices must remain in the product. Tests and development evidence are included on `developing` and excluded from `main` product updates. On a development checkout, run `workbench/.venv/bin/python workbench/tests/run_checks.py all` (Windows: `workbench\.venv\Scripts\python.exe workbench\tests\run_checks.py all`). The helper selects each suite’s owning environment and explicit source paths. Standard `PYTHONPYCACHEPREFIX` is respected when a local validation cache outside a cloud-synchronized folder is necessary.
 
 Native Windows launch, filesystem locking, migration and exchange must be checked on Windows. macOS passes and simulated platform tests do not prove Windows acceptance.
+
+The local check runner uses the same tool discovery as `deployment.py`, including tools installed under `workbench/runtime/cache/tools`. System2 development checks require its `dev` extra; native verification also needs Poppler and Tesseract, and the img2table integration requires its optional dependency. Requirement regression checks depend on retained `project-support/validation/legacy-layout/system2/outputs/runs/goal04-round*` inputs. These generated historical outputs are excluded from Git, so a development clone alone does not reproduce those checks. Restore the exact retained fixtures before claiming a full suite pass; do not regenerate or change Gold to hide missing evidence.
 
 
 ## 6. Jay development checkout

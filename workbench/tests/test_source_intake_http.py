@@ -62,6 +62,13 @@ class SourceIntakeHTTPTests(unittest.TestCase):
   for actor,headers in ((None,{}),(B,{}),(A,{'X-CSRF-Token':'wrong'}),(A,{'Origin':'https://untrusted.example'})):
    status,_,_=self.request('/api/sources/intake','POST',self.intake(),actor,headers);self.assertGreaterEqual(status,400)
   self.assertEqual(self.calls,[])
+ def test_rejected_post_delivers_response_and_closes_without_dispatch(self):
+  for _ in range(12):
+   status,data,headers=self.request('/api/sources/intake','POST',self.intake(),A,{'Origin':'https://untrusted.example'})
+   self.assertEqual(status,403)
+   self.assertEqual(headers['Connection'],'close')
+   self.assertIn('Invalid request origin',json.loads(data)['error'])
+  self.assertEqual(self.calls,[])
  def test_upload_owner_replay_binding_and_duplicate_receipt(self):
   upload=self.upload(B);req=self.intake(upload_id=upload['upload_id'])
   status,_,_=self.request('/api/sources/intake','POST',req);self.assertGreaterEqual(status,400);self.assertEqual(self.calls,[])

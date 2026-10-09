@@ -20,6 +20,8 @@ DEVELOPMENT_DATA_FILES={'workbench/initial-data/'+name for name in ('README.md',
  'workspace-20260922.zip','workspace-20260922.zip.sha256')} | {
  'workbench/resources/examples/example-work-20260918.zip','workbench/resources/examples/example-work-20260918.zip.sha256'}
 COMPONENT_FILES={'workbench/backend/__init__.py','workbench/backend/system2/pyproject.toml','workbench/backend/system2/uv.lock','workbench/backend/system2/USER_GUIDE.md'}
+DEVELOPMENT_DATA_FILES |= {'workbench/initial-data/windows-20261009/' + name for name in (
+ 'README.md', 'manifest.json', 'windows-workspace-20261009.zip.001', 'windows-workspace-20261009.zip.002')}
 
 def business_file(path):
     p=PurePosixPath(path)

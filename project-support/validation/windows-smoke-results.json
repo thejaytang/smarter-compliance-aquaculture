@@ -1,0 +1,34 @@
+{
+  "platform": "win32",
+  "checks": {
+    "tracked_source_syntax": {
+      "status": "passed",
+      "details": {
+        "python": 310,
+        "json": 18
+      }
+    },
+    "initial_package_validation": {
+      "status": "passed",
+      "details": {
+        "files": 172,
+        "databases": 4,
+        "originals": 73,
+        "bindings": 0
+      }
+    },
+    "native_dependencies": {
+      "status": "passed",
+      "details": "PDF render, OpenCV, NumPy, lxml, Excel roundtrip passed"
+    }
+  },
+  "long_paths_enabled": 0,
+  "optional_tools": {
+    "tesseract": null,
+    "pdftoppm": null,
+    "node": null,
+    "npm": null
+  },
+  "layout_ready": false,
+  "automated_suite_included": false
+}

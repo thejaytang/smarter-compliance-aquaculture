@@ -206,7 +206,11 @@ def prepare_human_workbook(wb, ws, headers: dict[str, int]) -> None:
 def append_operation(ws, headers: dict[str, int], values: dict[str, Any]) -> int:
     row = last_operation_row(ws, headers) + 1
     for name in HUMAN_HEADERS:
-        ws.cell(row, headers[name], values.get(name))
+        if getattr(ws.parent, '_governance_path', None):
+            from system1.governance_store import set_business_value
+            set_business_value(ws.cell(row, headers[name]), values.get(name))
+        else:
+            ws.cell(row, headers[name], values.get(name))
     ws.row_dimensions[row].hidden = str(values.get("program_status") or "").upper() in FINAL_STATUSES
     apply_operation_validation(ws, row, headers, str(values.get("operation_type") or ""))
     update_operation_table(ws, row)

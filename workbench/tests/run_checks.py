@@ -1,5 +1,6 @@
 """Run local checks in their owning environments, without touching real data."""
 import argparse
+import importlib.util
 import os
 from pathlib import Path
 import subprocess
@@ -9,6 +10,9 @@ ROOT = Path(__file__).resolve().parents[2]
 WORKBENCH = ROOT / 'workbench'
 BACKEND = WORKBENCH / 'backend'
 TESTS = WORKBENCH / 'tests'
+spec = importlib.util.spec_from_file_location('workbench_deployment', ROOT/'deployment.py')
+deployment = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(deployment)
 
 
 def python(component):
@@ -31,7 +35,7 @@ def main():
         if selected not in ('all', name): continue
         print('Checking ' + name, flush=True)
         for cwd, command, *sources in commands:
-            env = dict(os.environ, PYTHONUTF8='1', PYTHONPYCACHEPREFIX=os.environ.get('PYTHONPYCACHEPREFIX',str(WORKBENCH/'runtime/cache/python')),
+            env = dict(deployment.environment(),
                        PYTHONPATH=os.pathsep.join(map(str, [WORKBENCH, BACKEND/'application', *sources])))
             subprocess.run(list(map(str, command)), cwd=cwd, env=env, check=True)
 

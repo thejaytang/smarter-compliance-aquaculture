@@ -7,7 +7,7 @@ import shutil
 import subprocess
 import sys
 
-ROOT=Path(__file__).resolve().parent
+ROOT=Path(__file__).absolute().parent
 BACKEND=ROOT/'workbench/backend'
 
 def interpreter(component,windows=None):

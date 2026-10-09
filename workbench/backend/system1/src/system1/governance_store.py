@@ -13,6 +13,7 @@ from tempfile import NamedTemporaryFile
 from copy import copy
 from functools import lru_cache
 from pathlib import Path
+from backend.shared.filesystem import FilePath, logical_path
 import sqlite3
 from system1.sqlite_support import connect as connect_sqlite
 
@@ -49,14 +50,26 @@ def digest(data):
     return sha256(data).hexdigest()
 
 
+def set_business_value(cell, value):
+    """Keep SQLite text intact in the in-memory Excel compatibility adapter."""
+    cell.value = value
+    if isinstance(value, str) and len(value) > 32767 and cell.data_type == 's':
+        from openpyxl.cell.cell import ILLEGAL_CHARACTERS_RE, IllegalCharacterError
+        if ILLEGAL_CHARACTERS_RE.search(value):
+            raise IllegalCharacterError('Invalid control character in business text')
+        cell._value = value
+
+
 def publish_bytes(path, raw):
     """Publish an immutable companion exclusively; a matching prior retry is safe."""
+    path = FilePath(path)
     if path.exists():
         if path.read_bytes() != raw: raise ValueError('Immutable archive identity conflict')
         return
     path.parent.mkdir(parents=True, exist_ok=True)
-    with NamedTemporaryFile(dir=path.parent, prefix='.'+path.name, delete=False) as handle:
-        temporary = Path(handle.name)
+    prefix = '.immutable-' + sha256(path.name.encode('utf-8')).hexdigest()[:16] + '-'
+    with NamedTemporaryFile(dir=path.parent, prefix=prefix, delete=False) as handle:
+        temporary = FilePath(logical_path(handle.name))
         handle.write(raw); handle.flush(); os.fsync(handle.fileno())
     try:
         try: os.link(temporary, path)
@@ -257,7 +270,7 @@ class GovernanceStore:
             old = db.execute('SELECT sha256 FROM source_versions WHERE source_id=? AND snapshot_id=? AND path=?', identity).fetchone()
             if old and old[0] != rec.get('content_hash'): raise ValueError('Existing source-version hash cannot be rewritten')
             if old is None and config is not None and rec.get('snapshot_status') == 'STORED':
-                root = config['source_root'].resolve(); original = (root/path).resolve()
+                root = FilePath(config['source_root']).resolve(); original = (root/path).resolve()
                 if root not in original.parents or not original.is_file() or digest(original.read_bytes()) != rec.get('content_hash'):
                     raise ValueError('New stored source version must match its managed original')
                 known = db.execute('SELECT sha256 FROM artifacts WHERE path=?', (path,)).fetchone()
@@ -299,7 +312,7 @@ class GovernanceStore:
                     if not data_only and key in info['formulas']:
                         formula,origin=info['formulas'][key]
                         cell.value=Translator(formula,origin=origin).translate_formula(cell.coordinate)
-                    else:cell.value=value
+                    else:set_business_value(cell,value)
         wb._governance_revision=snap['state']['revision'];wb._governance_path=str(self.path)
         return wb
 

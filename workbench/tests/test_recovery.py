@@ -10,6 +10,21 @@ import unittest
 from local_workbench.recovery import backup, restore, verify, digest, extract_code, source_inventory, SOURCE_REQUIRED
 
 class RecoveryTests(unittest.TestCase):
+    @unittest.skipUnless(os.name == 'nt', 'Native Windows path boundary')
+    def test_plain_path_arguments_preserve_long_recovery_files(self):
+        import shutil
+        from backend.shared.filesystem import FilePath, windows_io_path
+        package = Path(self.temp.name) / ('backup-' + 'x' * 180)
+        self.assertEqual(package.resolve().parent, Path(self.temp.name).resolve())
+        try:
+            backup(self.root, package)
+            manifest = verify(package)
+            self.assertTrue(any(len(str(package / 'files' / name)) > 260 for name in manifest['files']))
+            self.assertEqual(manifest['status'], 'complete')
+        finally:
+            if FilePath(package).exists():
+                shutil.rmtree(windows_io_path(str(package)))
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory(); self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)/'project'; self.root.mkdir()

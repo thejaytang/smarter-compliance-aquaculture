@@ -9,12 +9,11 @@ from hashlib import sha256
 from http.client import HTTPConnection
 import json
 import os
-from pathlib import Path
+from backend.shared.filesystem import FilePath as Path, temporary_directory as TemporaryDirectory
 import shutil
 import sqlite3
 import subprocess
 import sys
-from tempfile import TemporaryDirectory
 import time
 import uuid
 import zipfile
